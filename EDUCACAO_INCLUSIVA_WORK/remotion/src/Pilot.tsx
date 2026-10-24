@@ -10,13 +10,14 @@ import { SetBack, SetFront, Cam, camT, stairsProfile, groundAt, PORCH_Y } from '
 import { keys, ss, sm, outBack, blinkAt } from './lib/anim';
 import { lerp, clamp, f } from './lib/paths';
 import { TIMING } from './timing';
+import { Sunburst, BigWord, SeriesBadge, SpeedLines, Confetti, KineticCaptions, RedPulse, Flash } from './hook/Hook';
 
 export const PILOT_DUR = 10.6;
 
 // ---------- fonts ----------
 const fontHandle = typeof document !== 'undefined' ? delayRender('fonts') : 0;
 if (typeof document !== 'undefined') {
-  const faces = [new FontFace('Poppins', `url(${staticFile('Poppins-ExtraBold.ttf')})`, { weight: '800' }), new FontFace('Poppins', `url(${staticFile('Poppins-Bold.ttf')})`, { weight: '700' })];
+  const faces = [new FontFace('Poppins', `url(${staticFile('Poppins-ExtraBold.ttf')})`, { weight: '800' }), new FontFace('Poppins', `url(${staticFile('Poppins-Bold.ttf')})`, { weight: '700' }), new FontFace('Poppins', `url(${staticFile('Poppins-Black.ttf')})`, { weight: '900' })];
   Promise.all(faces.map((ff) => ff.load())).then((l) => { l.forEach((ff) => (document as any).fonts.add(ff)); continueRender(fontHandle); }).catch(() => continueRender(fontHandle));
 }
 
@@ -111,16 +112,20 @@ function kidPose(t: number, base: { x: number; scale: number; walk: Walk; phase:
   };
   return { x, y, scale: s, bob, lean, head, armL, armR, legL: ws.moving ? legL : leg0, legR: ws.moving ? legR : leg0, expr, skirt: base.rig === 'd' ? 1.2 * Math.sin(t * 2.2) + (ws.moving ? 3 * step : 0) : 0 };
 }
-const GIRL_B = { x: 640, scale: TIMING.GIRL_SCALE, walk: { t0: 99, x0: 640, x1: 640, dur: 1, stride: 0.33 }, phase: 1.3, wave: [1.45, 3.05] as [number, number], rig: 'd' as const, waveSide: 'L' as const };
-const GAB_B = { x: 850, scale: TIMING.GAB_SCALE, walk: { t0: 99, x0: 850, x1: 850, dur: 1, stride: 0.33 }, phase: 0, wave: [1.15, 2.9] as [number, number], rig: 'g' as const, waveSide: 'R' as const };
+const GIRL_B = { x: 640, scale: TIMING.GIRL_SCALE, walk: { t0: 99, x0: 640, x1: 640, dur: 1, stride: 0.33 }, phase: 1.3, wave: [1.95, 3.55] as [number, number], rig: 'd' as const, waveSide: 'L' as const };
+const GAB_B = { x: 850, scale: TIMING.GAB_SCALE, walk: { t0: 99, x0: 850, x1: 850, dur: 1, stride: 0.33 }, phase: 0, wave: [1.8, 3.45] as [number, number], rig: 'g' as const, waveSide: 'R' as const };
 
 // ---------- camera ----------
 function camAt(t: number): Cam {
-  const c = keys<number[]>(t, [
-    [0, [430, -440, 0.93]], [3.6, [420, -415, 0.96]], [4.6, [393, -392, 0.955]], [6.7, [390, -385, 0.975]],
+  const follow = [theoX(t) + 120, -300, 1.5];
+  const c0 = keys<number[]>(t, [
+    [0, [430, -440, 0.93]], [2.5, [430, -440, 0.93]], [3.6, [420, -415, 0.96]], [4.6, [393, -392, 0.955]], [6.7, [390, -385, 0.975]],
     [7.2, [110, -330, 1.55]], [8.65, [105, -335, 1.6]], [9.5, [392, -425, 0.96]], [10.6, [395, -430, 0.94]],
   ]);
-  return { x: c[0] + 5 * Math.sin(t * 0.7) + 2 * Math.sin(t * 1.9), y: c[1] + 4 * Math.sin(t * 0.9 + 1) + 2 * Math.sin(t * 2.3), zoom: c[2] };
+  const b = sm((t - 1.55) / 0.95);             // swoop from the follow shot to the wide reveal
+  const c = [lerp(follow[0], c0[0], b), lerp(follow[1], c0[1], b) - 160 * Math.sin(b * Math.PI) * 0.6, lerp(follow[2], c0[2], b)];
+  let shake = 0; for (const t0 of [5.04, 5.72]) { const d = t - t0; if (d > 0 && d < 0.4) shake += Math.sin(d * 80) * 7 * (1 - d / 0.4); }
+  return { x: c[0] + 5 * Math.sin(t * 0.7) + 2 * Math.sin(t * 1.9) + shake, y: c[1] + 4 * Math.sin(t * 0.9 + 1) + 2 * Math.sin(t * 2.3), zoom: c[2] };
 }
 
 const CUES: [number, number, React.ReactNode][] = [
@@ -162,14 +167,14 @@ export const Pilot: React.FC<{ subs?: boolean }> = ({ subs = true }) => {
         </g>
         <SetFront cam={cam} t={t} />
       </svg>
-      {subs ? <div style={{ position: 'absolute', left: 60, width: 960, top: 1400, height: 170 }}>
-        {CUES.map(([s, e, node], i) => {
-          const a = ss((t - s) / 0.16) * (1 - ss((t - (e - 0.12)) / 0.12));
-          if (a <= 0) return null;
-          return <div key={i} style={{ position: 'absolute', left: 0, right: 0, top: '50%', transform: `translateY(calc(-50% + ${f((1 - ss((t - s) / 0.16)) * 14)}px))`, textAlign: 'center', opacity: a,
-            fontFamily: 'Poppins', fontWeight: 700, fontSize: 52, lineHeight: 1.22, color: '#fff', WebkitTextStroke: '11px #190C3C', paintOrder: 'stroke fill', textShadow: '0 5px 12px rgba(0,0,0,.35)', whiteSpace: 'nowrap' } as React.CSSProperties}>{node}</div>;
-        })}
-      </div> : null}
+      <SpeedLines t={t} a={ss((t - 0.9) / 0.1) * (1 - ss((t - 1.55) / 0.35))} />
+      <RedPulse t={t} times={[5.04, 5.72]} />
+      <Confetti t={t} t0={2.05} ox={600} oy={1000} />
+      <Sunburst t={t} />
+      <BigWord t={t} word="IMAGINE" t0={0.12} t1={0.85} y={640} size={190} color="#FFEB00" />
+      <Flash t={t} t0={0.97} />
+      <SeriesBadge t={t} />
+      {subs ? <KineticCaptions t={t} endT={PILOT_DUR} hideBefore={0.95} /> : null}
     </AbsoluteFill>
   );
 };

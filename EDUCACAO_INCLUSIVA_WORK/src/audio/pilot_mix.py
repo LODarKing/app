@@ -30,6 +30,14 @@ put(pop(500, 1200), T['QUESTION'], 0.1, 0.8, 'question mark')
 for who, pan in (('GIRL_WALK', 0.05), ('GAB_WALK', 0.3)):
     t0, d, st = T[who]; k = 0
     while t0 + k * st < min(DUR, t0 + d): put(step(), t0 + k * st + 0.12, pan, 0.9, 'footstep'); k += 1
+# abertura chamativa: letras de IMAGINE, título, revelação, câmera, confete, palavra-chave
+for i in range(7): put(pop(520 + 70 * i, 1100 + 120 * i, 0.08), 0.12 + i * 0.045, (i - 3) * 0.12, 0.5, 'letra')
+put(G['shimmer']() * 0.7, 0.75, 0.0, 0.8, 'titulo')
+put(add(whoosh(0.45, 300, 6000), thud(90, 0.2, 0.25)), 0.86, 0.0, 1.0, 'revelacao')
+put(whoosh(0.9, 200, 2500, up=False), 1.5, 0.2, 0.9, 'camera sobe')
+for i in range(6): put(pop(700 + 150 * i, 1500 + 200 * i, 0.06), 2.05 + i * 0.05, 0.3 + 0.05 * i, 0.45, 'confete')
+put(chime(1568, 3, 0.05) * 0.6, 3.02, 0.0, 0.7, 'participar')
+put(whoosh(0.5, 600, 5000) * 0.6, 3.25, 0.0, 0.6, 'selo vai ao canto')
 sfx = np.stack([G['L'], G['R']], 1)[:N]
 
 def fit(x):
