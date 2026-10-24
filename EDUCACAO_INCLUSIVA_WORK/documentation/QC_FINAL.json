@@ -1,0 +1,72 @@
+{
+ "EDUCACAO_INCLUSIVA_FINAL": {
+  "probe": {
+   "file": "deliverables/EDUCACAO_INCLUSIVA_FINAL.mp4",
+   "size_mb": 72.9,
+   "duration": 180.0,
+   "bitrate_kbps": 3238,
+   "video": {
+    "codec": "h264",
+    "profile": "High",
+    "w": 1080,
+    "h": 1920,
+    "fps": "60/1",
+    "pix_fmt": "yuv420p",
+    "frames": 10800,
+    "color": "bt709"
+   },
+   "audio": {
+    "codec": "aac",
+    "sr": 48000,
+    "ch": 2,
+    "bitrate_kbps": 258
+   }
+  },
+  "loudness": {
+   "integrated_lufs": -14.0,
+   "lra": 2.0,
+   "true_peak_dbtp": -1.3
+  },
+  "detect": {
+   "black": [],
+   "freeze": []
+  },
+  "av_offset_ms": 0.0
+ },
+ "EDUCACAO_INCLUSIVA_SEM_LEGENDAS": {
+  "probe": {
+   "file": "deliverables/EDUCACAO_INCLUSIVA_SEM_LEGENDAS.mp4",
+   "size_mb": 71.0,
+   "duration": 180.0,
+   "bitrate_kbps": 3156,
+   "video": {
+    "codec": "h264",
+    "profile": "High",
+    "w": 1080,
+    "h": 1920,
+    "fps": "60/1",
+    "pix_fmt": "yuv420p",
+    "frames": 10800,
+    "color": "bt709"
+   },
+   "audio": {
+    "codec": "aac",
+    "sr": 48000,
+    "ch": 2,
+    "bitrate_kbps": 258
+   }
+  },
+  "loudness": {
+   "integrated_lufs": -14.0,
+   "lra": 2.0,
+   "true_peak_dbtp": -1.3
+  },
+  "detect": {
+   "black": [],
+   "freeze": [
+    "74.8833"
+   ]
+  },
+  "av_offset_ms": 0.0
+ }
+}

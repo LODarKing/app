@@ -57,4 +57,7 @@ Detalhes em `AUDIO_REPORT.md`. Resumo: master a −14,0 LUFS e −1,3 dBTP; inte
 
 ## 5. Arquivo final
 
+Ambas as versões: 1080×1920, 60 fps, 10 800 quadros, 180,0 s, H.264 High BT.709, AAC 48 kHz estéreo, −14,0 LUFS, −1,3 dBTP, A/V 0,0 ms, sem quadros pretos. O QC encontrou e corrigiu 0,2 s de quadros pretos em 2:33 (câmera da cena 9); os 31 quadros foram re-renderizados e encaixados. O alerta de congelamento em 74,9 s na versão sem legendas é falso positivo (escrita do documento).
+
+
 Veja `QC_FINAL.json`, gerado por `tools/qc_final.py` a partir dos MP4 entregues: resolução, fps, codec, duração, bitrate, loudness e pico verdadeiro da faixa AAC, detecção de quadros pretos e de congelamentos, e deslocamento áudio/vídeo medido por correlação com o `master.wav`.

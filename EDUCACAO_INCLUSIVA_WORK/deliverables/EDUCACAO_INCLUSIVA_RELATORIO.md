@@ -91,6 +91,7 @@ O detalhamento está em `documentation/QUALITY_REPORT.md`.
 5. `Limiter` do Pedalboard aplicava ganho implícito → limitador de pico verdadeiro próprio.
 6. Ajuste fino da aceleração: na frase "e a audição", "e a" se fundia → mapa de tempo local (×1,05).
 7. As duas primeiras renderizações foram canceladas quando o terminal de comando terminou → renderizações em processo de segundo plano gerenciado.
+8. Quadros pretos em 2:33 (cena 9), detectados no QC do arquivo final → câmera corrigida e 31 quadros re-renderizados e encaixados.
 
 ## 11. Limitações (declaradas)
 
@@ -100,6 +101,17 @@ O detalhamento está em `documentation/QUALITY_REPORT.md`.
 - **Libras:** não há interpretação em Libras.
 - **Uniformes:** representação estilizada (camisa clara, calça ou saia azul-marinho, lenço amarelo), sem insígnias oficiais.
 
-## 12. Resultado final
+## 12. Resultado final (medido nos arquivos entregues — `documentation/QC_FINAL.json`)
 
-Veja a seção 13, preenchida depois da codificação e do QC dos arquivos finais.
+| | EDUCACAO_INCLUSIVA_FINAL.mp4 | EDUCACAO_INCLUSIVA_SEM_LEGENDAS.mp4 |
+|---|---|---|
+| Vídeo | H.264 High · 1080×1920 · 60 fps · 10 800 quadros · BT.709 | idem |
+| Duração | 180,0 s | 180,0 s |
+| Tamanho / bitrate | 72,9 MB · ~3,2 Mb/s | 71,0 MB · ~3,2 Mb/s |
+| Áudio | AAC-LC 48 kHz estéreo 256 kb/s | idem |
+| Loudness / pico verdadeiro | **−14,0 LUFS · −1,3 dBTP** | **−14,0 LUFS · −1,3 dBTP** |
+| Quadros pretos | nenhum | nenhum |
+| Congelamento (≥ 2,5 s) | nenhum | 74,9–77,7 s: falso positivo. O documento da Convenção está sendo escrito e assinado (mudanças pequenas, abaixo do limiar do detector); na versão com legendas não há alerta |
+| Deslocamento áudio/vídeo | 0,0 ms | 0,0 ms |
+
+Renderização: HyperFrames, cerca de 44–46 min por versão (4 workers, SwiftShader). O controle de qualidade do arquivo final encontrou **0,2 s de quadros pretos em 2:33** (cena 9: a câmera ainda estava na posição vazia enquanto o quadro já seguia a câmera da sala de aula). A câmera foi corrigida, os 31 quadros afetados foram re-renderizados em resolução total pela mesma página e encaixados com exatidão de quadro (`tools/patch_frames.cjs`). Diferença média em relação aos quadros vizinhos do render: ≈2/255. Folhas de quadros por cena (primeiro, 25%, 50%, 75%, último e transições): `renders/scenes/cena_NN_qc.png`; clipes por cena: `renders/scenes/cena_NN.mp4`.
