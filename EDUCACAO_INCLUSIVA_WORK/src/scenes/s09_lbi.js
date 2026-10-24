@@ -89,9 +89,10 @@ export function update(S, t) {
     b.position.set(hx + (hx > 0 ? 1 : -1) * k * 2.5, hy - k * 6 + Math.sin(k * Math.PI) * 1.2, 0);
     b.rotation.z = k * (i % 2 ? 1.5 : -1.5); b.visible = k < 0.98 && t > 9.0; setOpacity(b, 1 - k);
   });
-  const cam = t < 9.1 ? { x: 0, y: 2.0, zoom: 1.5 } : camAt([[9.1, [SX - 1.6, 2.4, 1.45]], [12.6, [SX - 0.5, 2.45, 1.32]], [16.1, [SX - 0.45, 2.45, 1.3]]], t);
-  if (t < 9.1) { S.ui.lock(cam); S.B.visible = true; S.B.position.y = 0; }
-  else { S.ui.lock(cam); S.B.visible = out < 1; S.B.position.y = out * 21; }
-  if (t > 8.9 && t < 9.6) { S.ui.lock({ x: SX - 1.6, y: 2.4, zoom: 1.45 }); }
-  return t < 9.1 ? cam : cam;
+  // the opaque board is locked to the camera, so the camera can sit on the classroom from the start
+  const cam = camAt([[0, [SX - 1.6, 2.4, 1.45]], [9.1, [SX - 1.6, 2.4, 1.45]], [12.6, [SX - 0.5, 2.45, 1.32]], [16.1, [SX - 0.45, 2.45, 1.3]]], t);
+  S.ui.lock(cam);
+  S.B.visible = out < 1; S.B.position.y = out * 21;
+  return cam;
+
 }
