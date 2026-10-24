@@ -1,54 +1,59 @@
-# Remotion — piloto (v3)
+# Remotion — vídeo piloto (versão 3)
 
-Pilot of the first 10.6 s of scene 1, rebuilt in **Remotion** (React + SVG) after the user's feedback.
-It covers the full narration line "Imagine chegar ao seu clube… Hoje, vamos descobrir", so the cut doesn't land mid-word.
+Piloto dos primeiros 10,6 s da cena 1 ("Imagine chegar ao seu clube… Hoje, vamos descobrir"), refeito no **Remotion** (React + SVG) a partir do retorno do usuário.
+A duração foi estendida de 10 s para 10,6 s para não cortar a palavra "descobrir" no meio.
 
-## Characters
-The user's own model sheets (in `assets/researched_references/`) are vectorized by `tools/vectorize.py`. The pipeline:
+## Personagens
 
-1. k-means color quantization in Lab space, then a majority filter.
-2. Optional edge-preserving smoothing.
-3. The source is split into rig parts by polygons. The settings live in `tools/vectorize_configs.py`.
-4. Each color region is traced with potrace into stacked SVG layers. Layers are unioned with the ones above them, so no hairline gaps appear between colors.
+As folhas de personagem enviadas pelo usuário (`assets/researched_references/`) são vetorizadas por `tools/vectorize.py`:
 
-What stays parametric, so it can be animated:
+1. **Redução de cores:** cada imagem é reduzida às cores reais do desenho (agrupamento k-means no espaço de cor Lab), seguida de um filtro que remove pixels isolados.
+2. **Suavização (opcional):** suavização que preserva as bordas, usada no Theo, cuja referência tem degradês suaves.
+3. **Divisão em partes:** a imagem é dividida nas partes do boneco por polígonos definidos em `tools/vectorize_configs.py`.
+4. **Contorno:** cada área de cor é contornada com o potrace e vira uma camada vetorial (SVG). As camadas se sobrepõem levemente, para que nunca apareçam frestas entre as cores.
 
-| Element | Character | File |
+| Personagem | Referência usada | Vista |
 |---|---|---|
-| Eyes (blink, gaze), brows, mouth (smile/open/worry) | all | `src/chars/Face.tsx`, `src/chars/Theo.tsx` |
-| Open hand for waving | Gabriel, Desbravadora | `src/chars/rigs.tsx` |
-| Rear wheel and caster (they roll with the distance travelled) | Theo | `src/chars/Theo.tsx` |
-| Uniform insignia (the 1254-px profile sheet was too soft to trace them cleanly) | Theo | `src/chars/Theo.tsx` |
+| Gabriel | `gabriel/00_referencia_original.jpeg` | frente |
+| Desbravadora | `desbravadora/guia_consistencia.png` (figura grande, vetorizada em 2×) | frente |
+| Theo | `theo/03_perfil_original.png` (vetorizado em 2×) | perfil, cadeira de rodas manual |
 
-| Character | Sheet | View |
+**O que é desenhado por parâmetros, para poder ser animado:**
+
+| Elemento | Personagem | Arquivo |
 |---|---|---|
-| Gabriel | `gabriel/00_referencia_original.jpeg` | front |
-| Desbravadora | `desbravadora/guia_consistencia.png` (left figure, traced at 2×) | front |
-| Theo | `theo/03_perfil_original.png` (traced at 2×) | profile, manual wheelchair |
+| Olhos (piscar, direção do olhar), sobrancelhas e boca (sorriso, abertura, preocupação) | todos | `src/chars/Face.tsx` e `src/chars/Theo.tsx` |
+| Mão aberta para o aceno | Gabriel e Desbravadora | `src/chars/rigs.tsx` |
+| Roda traseira e rodinha dianteira (giram conforme a distância percorrida) | Theo | `src/chars/Theo.tsx` |
+| Insígnias da camisa (a imagem de perfil é suave demais para contorná-las com nitidez) | Theo | `src/chars/Theo.tsx` |
 
-Rigs:
+**Articulações (rig):**
 
-- **Gabriel and the Desbravadora:** head, torso, hips/skirt, legs, and arms split at shoulder, elbow and wrist. Joint patches hide the seams.
-- **Theo:** torso lean, head, and an arm on 2-bone IK whose hand stays locked to the push rim while pushing. The wheel rotation equals the distance travelled divided by the radius, so the wheel never slips.
+- **Gabriel e Desbravadora:** cabeça, tronco, quadril ou saia, pernas, e braços divididos em ombro, cotovelo e punho, com "remendos" nas juntas para esconder as emendas.
+- **Theo:** inclinação do tronco, cabeça e braço calculado por cinemática inversa de 2 ossos. A mão fica presa ao aro durante o impulso, e a rotação da roda é igual à distância dividida pelo raio, sem patinar.
 
-## Set
-`src/scene/Clubhouse.tsx` holds the clubhouse with a porch 4 steps high and no ramp. The stairs are the barrier and are what gets highlighted, never the person.
+## Cenário
 
-The set has parallax layers: sky, clouds, hills, tree line, trees, fence, building, and foreground bushes with light.
+`src/scene/Clubhouse.tsx` desenha a sede do clube com varanda de 4 degraus e **sem rampa**: a escada é a barreira, e só ela é destacada, nunca a pessoa.
 
-## Audio
-`src/audio/pilot_mix.py` builds `public/piloto_mix.wav`:
+O cenário tem camadas com profundidade (paralaxe): céu, nuvens, morros, fileira de árvores, árvores, cerca, prédio, e arbustos e luz em primeiro plano.
 
-- **Voice:** the user's restored voice (`audio/voice_edited.wav`, 0–10.6 s).
-- **Music:** ducked under the voice.
-- **Effects:** synthesized and synced to `src/timing.json` (pushes, braking, the barrier, the question mark, footsteps).
-- **Master:** −14 LUFS, true peak ≤ −1 dBTP.
+## Áudio
 
-## Render
+`src/audio/pilot_mix.py` gera `public/piloto_mix.wav`:
+
+- **Voz:** a voz tratada do narrador (`audio/voice_edited.wav`, 0–10,6 s).
+- **Música:** abaixada automaticamente durante a fala.
+- **Efeitos sonoros:** sintetizados e sincronizados com `src/timing.json` (impulsos na roda, frenagem, a barreira, o "?" e os passos).
+- **Volume final:** −14 LUFS, pico real ≤ −1 dBTP.
+
+## Como gerar
+
 ```sh
 python3 tools/vectorize.py gabriel && python3 tools/vectorize.py girl && python3 tools/vectorize.py theo
 python3 src/audio/pilot_mix.py
 cd remotion && npm install
 npx remotion render src/index.ts Piloto out/piloto_raw.mp4 --codec=h264 --crf=16 --concurrency=4
 ```
-`remotion.config.ts` points Remotion at the pre-installed Chromium headless shell.
+
+O arquivo `remotion.config.ts` aponta o Remotion para o navegador Chromium já instalado no ambiente.
