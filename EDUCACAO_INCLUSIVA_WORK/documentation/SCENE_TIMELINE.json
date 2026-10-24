@@ -1,0 +1,2108 @@
+{
+ "fps": 60,
+ "width": 1080,
+ "height": 1920,
+ "duration": 180.0,
+ "time_rule": "t = frame / fps; all motion is a pure function of t",
+ "scenes": [
+  {
+   "scene": 1,
+   "start": 0.0,
+   "end": 13.066,
+   "duration": 13.066,
+   "voice": [
+    0.214,
+    12.843
+   ],
+   "transition_in": null,
+   "narration": "Imagine chegar ao seu clube, cheio de vontade de participar, mas encontrar uma barreira que impede você de entrar. Será que isso é inclusão? Hoje, vamos descobrir por que ninguém deve ficar de fora.",
+   "shots_local_time": [
+    "0.0 tracking: Pedro rolls into the club, Lucas jogs and climbs the steps, João carries a pennant inside",
+    "4.4 Pedro stops at the steps; push-in on the steps highlighted in red + warning sign (the barrier is the problem)",
+    "7.0 slow-down: Ana notices, \"?\" appears",
+    "9.6 wide, then two-shot: Ana walks down the steps and stands beside Pedro"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 0.25,
+     "t1": 4.7,
+     "kind": "title",
+     "text": "E SE FOSSE VOCÊ?"
+    },
+    {
+     "t0": 9.0,
+     "t1": 12.95,
+     "kind": "title",
+     "text": "INCLUSÃO É PARA TODOS!"
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 0.164,
+     "e": 2.51,
+     "lines": [
+      [
+       "Imagine",
+       "chegar",
+       "ao"
+      ],
+      [
+       "seu",
+       "clube,",
+       "cheio",
+       "de"
+      ]
+     ]
+    },
+    {
+     "s": 2.53,
+     "e": 4.61,
+     "lines": [
+      [
+       "vontade",
+       "de",
+       "participar,"
+      ],
+      [
+       "mas",
+       "encontrar"
+      ]
+     ]
+    },
+    {
+     "s": 4.63,
+     "e": 7.07,
+     "lines": [
+      [
+       "uma",
+       "barreira",
+       "que"
+      ],
+      [
+       "impede",
+       "você",
+       "de",
+       "entrar."
+      ]
+     ]
+    },
+    {
+     "s": 7.09,
+     "e": 8.75,
+     "lines": [
+      [
+       "Será",
+       "que",
+       "isso",
+       "é",
+       "inclusão?"
+      ]
+     ]
+    },
+    {
+     "s": 8.77,
+     "e": 11.07,
+     "lines": [
+      [
+       "Hoje,",
+       "vamos"
+      ],
+      [
+       "descobrir",
+       "por",
+       "que"
+      ]
+     ]
+    },
+    {
+     "s": 11.09,
+     "e": 12.62,
+     "lines": [
+      [
+       "ninguém",
+       "deve",
+       "ficar",
+       "de",
+       "fora."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 12.716,
+     "sfx": "transition into scene 2"
+    },
+    {
+     "t": 0.25,
+     "sfx": "wheelchair rolling"
+    },
+    {
+     "t": 0.35,
+     "sfx": "footstep"
+    },
+    {
+     "t": 0.77,
+     "sfx": "footstep"
+    },
+    {
+     "t": 1.19,
+     "sfx": "footstep"
+    },
+    {
+     "t": 1.61,
+     "sfx": "footstep"
+    },
+    {
+     "t": 2.03,
+     "sfx": "footstep"
+    },
+    {
+     "t": 2.45,
+     "sfx": "footstep"
+    },
+    {
+     "t": 2.87,
+     "sfx": "footstep"
+    },
+    {
+     "t": 3.29,
+     "sfx": "footstep"
+    },
+    {
+     "t": 5.15,
+     "sfx": "warning sign pop"
+    },
+    {
+     "t": 7.15,
+     "sfx": "question mark pop"
+    }
+   ]
+  },
+  {
+   "scene": 2,
+   "start": 13.066,
+   "end": 33.704,
+   "duration": 20.638,
+   "voice": [
+    13.288,
+    33.482
+   ],
+   "transition_in": "dissolve 0.5 s",
+   "narration": "Ter uma deficiência não significa ser incapaz. Muitas dificuldades surgem quando a sociedade cria barreiras. A Organização Mundial da Saúde utiliza a CIF para compreender a relação entre saúde, ambiente e participação. E a Convenção da ONU defende direitos e oportunidades para todos.",
+   "shots_local_time": [
+    "0.15 the steps give way to a gentle ramp with handrails (sparkles)",
+    "1.3 Pedro rolls up the ramp and enters by himself; Ana walks ahead (no pushing)",
+    "3.35 board slides in: person -> brick barrier -> accessibility bridge -> participation",
+    "9.6 CIF triangle: saúde / ambiente / participação (OMS)",
+    "15.4 UN Convention card + rights / opportunities / everyone icons"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 13.966,
+     "t1": 16.366,
+     "kind": "chip",
+     "text": "DEFICIÊNCIA ≠ INCAPACIDADE"
+    },
+    {
+     "t0": 16.966,
+     "t1": 19.566,
+     "kind": "label",
+     "text": "PESSOA"
+    },
+    {
+     "t0": 17.166,
+     "t1": 22.366,
+     "kind": "label",
+     "text": "PARTICIPAÇÃO"
+    },
+    {
+     "t0": 19.666,
+     "t1": 20.416,
+     "kind": "label",
+     "text": "BARREIRA"
+    },
+    {
+     "t0": 20.666,
+     "t1": 22.366,
+     "kind": "label",
+     "text": "ACESSIBILIDADE"
+    },
+    {
+     "t0": 23.366,
+     "t1": 28.366,
+     "kind": "chip",
+     "text": "OMS • CIF"
+    },
+    {
+     "t0": 23.516,
+     "t1": 28.366,
+     "kind": "big",
+     "text": "CIF"
+    },
+    {
+     "t0": 25.916,
+     "t1": 28.366,
+     "kind": "label",
+     "text": "SAÚDE"
+    },
+    {
+     "t0": 26.816,
+     "t1": 28.366,
+     "kind": "label",
+     "text": "AMBIENTE"
+    },
+    {
+     "t0": 27.716,
+     "t1": 28.366,
+     "kind": "label",
+     "text": "PARTICIPAÇÃO"
+    },
+    {
+     "t0": 28.666,
+     "t1": 33.566,
+     "kind": "chip",
+     "text": "CONVENÇÃO DA ONU (2006)"
+    },
+    {
+     "t0": 31.666,
+     "t1": 33.616,
+     "kind": "title",
+     "text": "ACESSIBILIDADE • PARTICIPAÇÃO • DIREITOS"
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 13.238,
+     "e": 16.61,
+     "lines": [
+      [
+       "Ter",
+       "uma",
+       "deficiência",
+       "não"
+      ],
+      [
+       "significa",
+       "ser",
+       "incapaz."
+      ]
+     ]
+    },
+    {
+     "s": 16.63,
+     "e": 18.490000000000002,
+     "lines": [
+      [
+       "Muitas",
+       "dificuldades"
+      ],
+      [
+       "surgem",
+       "quando"
+      ]
+     ]
+    },
+    {
+     "s": 18.51,
+     "e": 20.43,
+     "lines": [
+      [
+       "a",
+       "sociedade",
+       "cria",
+       "barreiras."
+      ]
+     ]
+    },
+    {
+     "s": 20.45,
+     "e": 23.21,
+     "lines": [
+      [
+       "A",
+       "Organização",
+       "Mundial"
+      ],
+      [
+       "da",
+       "Saúde",
+       "utiliza"
+      ]
+     ]
+    },
+    {
+     "s": 23.23,
+     "e": 25.55,
+     "lines": [
+      [
+       "a",
+       "CIF",
+       "para"
+      ],
+      [
+       "compreender",
+       "a",
+       "relação"
+      ]
+     ]
+    },
+    {
+     "s": 25.57,
+     "e": 28.41,
+     "lines": [
+      [
+       "entre",
+       "saúde,"
+      ],
+      [
+       "ambiente",
+       "e",
+       "participação."
+      ]
+     ]
+    },
+    {
+     "s": 28.43,
+     "e": 30.73,
+     "lines": [
+      [
+       "E",
+       "a",
+       "Convenção",
+       "da",
+       "ONU",
+       "defende"
+      ]
+     ]
+    },
+    {
+     "s": 30.75,
+     "e": 33.3,
+     "lines": [
+      [
+       "direitos",
+       "e",
+       "oportunidades"
+      ],
+      [
+       "para",
+       "todos."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 12.716,
+     "sfx": "transition into scene 2"
+    },
+    {
+     "t": 33.354,
+     "sfx": "transition into scene 3"
+    },
+    {
+     "t": 13.466,
+     "sfx": "ramp appears"
+    },
+    {
+     "t": 14.366,
+     "sfx": "rolling up the ramp"
+    },
+    {
+     "t": 16.366,
+     "sfx": "board slides in"
+    },
+    {
+     "t": 19.516,
+     "sfx": "bricks drop"
+    },
+    {
+     "t": 19.816,
+     "sfx": "blocked"
+    },
+    {
+     "t": 20.316,
+     "sfx": "bricks scatter"
+    },
+    {
+     "t": 20.466,
+     "sfx": "accessibility bridge"
+    },
+    {
+     "t": 25.916,
+     "sfx": "node saúde"
+    },
+    {
+     "t": 26.816,
+     "sfx": "node ambiente"
+    },
+    {
+     "t": 27.716,
+     "sfx": "node participação"
+    },
+    {
+     "t": 28.466,
+     "sfx": "document"
+    },
+    {
+     "t": 30.666,
+     "sfx": "icon"
+    },
+    {
+     "t": 31.516,
+     "sfx": "icon"
+    },
+    {
+     "t": 32.666,
+     "sfx": "icon"
+    }
+   ]
+  },
+  {
+   "scene": 3,
+   "start": 33.704,
+   "end": 51.557,
+   "duration": 17.853,
+   "voice": [
+    33.926,
+    51.335
+   ],
+   "transition_in": "diagonal wipe (yellow band) 0.7 s",
+   "narration": "Existem deficiências físicas, visuais, auditivas, intelectuais e múltiplas. Também existem condições e deficiências que não são imediatamente visíveis. Cada pessoa tem as suas próprias habilidades e necessidades. O importante é respeitar as diferenças.",
+   "shots_local_time": [
+    "knot board (Pedro, físicas) -> Braille card (Clara, visuais) -> signal flags (Rafael, auditivas) -> tent with picture steps (Bia, intelectuais) -> AAC quiz (Theo, múltiplas)",
+    "6.9 Lia paints the banner; close-up on the sunflower lanyard (hidden disabilities)",
+    "10.75 group of seven with skill badges; 16.2 everyone cheers"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 35.754,
+     "t1": 36.654,
+     "kind": "chip",
+     "text": "DEFICIÊNCIA FÍSICA"
+    },
+    {
+     "t0": 36.684,
+     "t1": 37.554,
+     "kind": "chip",
+     "text": "DEFICIÊNCIA VISUAL"
+    },
+    {
+     "t0": 37.584,
+     "t1": 38.554,
+     "kind": "chip",
+     "text": "DEFICIÊNCIA AUDITIVA"
+    },
+    {
+     "t0": 38.584,
+     "t1": 39.554,
+     "kind": "chip",
+     "text": "DEFICIÊNCIA INTELECTUAL"
+    },
+    {
+     "t0": 39.584,
+     "t1": 40.304,
+     "kind": "chip",
+     "text": "DEFICIÊNCIA MÚLTIPLA"
+    },
+    {
+     "t0": 40.604,
+     "t1": 44.304,
+     "kind": "chip",
+     "text": "DEFICIÊNCIAS NÃO VISÍVEIS"
+    },
+    {
+     "t0": 42.304,
+     "t1": 44.104,
+     "kind": "label",
+     "text": "Cordão de girassol • Lei 14.624/2023"
+    },
+    {
+     "t0": 48.004,
+     "t1": 51.504,
+     "kind": "title",
+     "text": "DIFERENTES HABILIDADES. MESMOS DIREITOS."
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 34.15,
+     "e": 37.51,
+     "lines": [
+      [
+       "Existem",
+       "deficiências"
+      ],
+      [
+       "físicas,",
+       "visuais,"
+      ]
+     ]
+    },
+    {
+     "s": 37.53,
+     "e": 40.089999999999996,
+     "lines": [
+      [
+       "auditivas,"
+      ],
+      [
+       "intelectuais",
+       "e",
+       "múltiplas."
+      ]
+     ]
+    },
+    {
+     "s": 40.11,
+     "e": 42.709999999999994,
+     "lines": [
+      [
+       "Também",
+       "existem"
+      ],
+      [
+       "condições",
+       "e",
+       "deficiências"
+      ]
+     ]
+    },
+    {
+     "s": 42.73,
+     "e": 44.57,
+     "lines": [
+      [
+       "que",
+       "não",
+       "são"
+      ],
+      [
+       "imediatamente",
+       "visíveis."
+      ]
+     ]
+    },
+    {
+     "s": 44.59,
+     "e": 46.449999999999996,
+     "lines": [
+      [
+       "Cada",
+       "pessoa",
+       "tem"
+      ],
+      [
+       "as",
+       "suas",
+       "próprias"
+      ]
+     ]
+    },
+    {
+     "s": 46.47,
+     "e": 47.97,
+     "lines": [
+      [
+       "habilidades",
+       "e",
+       "necessidades."
+      ]
+     ]
+    },
+    {
+     "s": 47.99,
+     "e": 51.2,
+     "lines": [
+      [
+       "O",
+       "importante",
+       "é"
+      ],
+      [
+       "respeitar",
+       "as",
+       "diferenças."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 33.354,
+     "sfx": "transition into scene 3"
+    },
+    {
+     "t": 51.207,
+     "sfx": "transition into scene 4"
+    },
+    {
+     "t": 39.754,
+     "sfx": "quiz correct"
+    },
+    {
+     "t": 42.304,
+     "sfx": "sunflower lanyard"
+    },
+    {
+     "t": 50.004,
+     "sfx": "group cheer"
+    }
+   ]
+  },
+  {
+   "scene": 4,
+   "start": 51.557,
+   "end": 69.965,
+   "duration": 18.408,
+   "voice": [
+    51.779,
+    69.743
+   ],
+   "transition_in": "iris 0.8 s",
+   "narration": "Discriminação acontece quando alguém sofre tratamento desigual ou tem seus direitos negados. Já o bullying envolve agressões intencionais e repetidas, como humilhações, apelidos ofensivos, exclusão e ataques virtuais. Tudo isso precisa ser combatido.",
+   "shots_local_time": [
+    "0 team cards handed to everyone except Rafael (≠, padlock)",
+    "5.9 Caio and Nina point at João repeatedly (calendar marks), scribbled insults (no words)",
+    "13.35 exclusion card; 14.45 phone with aggressive messages",
+    "15.85 Ana says stop, Lucas stands with João, the director arrives and listens"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 51.857,
+     "t1": 57.357,
+     "kind": "chip",
+     "text": "DISCRIMINAÇÃO"
+    },
+    {
+     "t0": 54.257,
+     "t1": 57.357,
+     "kind": "label",
+     "text": "tratamento desigual"
+    },
+    {
+     "t0": 58.257,
+     "t1": 64.907,
+     "kind": "chip",
+     "text": "BULLYING"
+    },
+    {
+     "t0": 59.857,
+     "t1": 64.907,
+     "kind": "label",
+     "text": "intencional e repetido"
+    },
+    {
+     "t0": 65.007,
+     "t1": 65.957,
+     "kind": "chip",
+     "text": "EXCLUSÃO"
+    },
+    {
+     "t0": 66.107,
+     "t1": 67.357,
+     "kind": "chip",
+     "text": "ATAQUES VIRTUAIS"
+    },
+    {
+     "t0": 67.657,
+     "t1": 69.907,
+     "kind": "title",
+     "text": "RESPEITO NÃO É OPCIONAL!"
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 51.729,
+     "e": 54.169999999999995,
+     "lines": [
+      [
+       "Discriminação",
+       "acontece"
+      ],
+      [
+       "quando",
+       "alguém",
+       "sofre"
+      ]
+     ]
+    },
+    {
+     "s": 54.19,
+     "e": 57.309999999999995,
+     "lines": [
+      [
+       "tratamento",
+       "desigual",
+       "ou"
+      ],
+      [
+       "tem",
+       "seus",
+       "direitos",
+       "negados."
+      ]
+     ]
+    },
+    {
+     "s": 57.33,
+     "e": 60.709999999999994,
+     "lines": [
+      [
+       "Já",
+       "o",
+       "bullying",
+       "envolve"
+      ],
+      [
+       "agressões",
+       "intencionais"
+      ]
+     ]
+    },
+    {
+     "s": 60.73,
+     "e": 63.75,
+     "lines": [
+      [
+       "e",
+       "repetidas,",
+       "como"
+      ],
+      [
+       "humilhações,",
+       "apelidos"
+      ]
+     ]
+    },
+    {
+     "s": 63.77,
+     "e": 67.25,
+     "lines": [
+      [
+       "ofensivos,",
+       "exclusão"
+      ],
+      [
+       "e",
+       "ataques",
+       "virtuais."
+      ]
+     ]
+    },
+    {
+     "s": 67.27,
+     "e": 69.46,
+     "lines": [
+      [
+       "Tudo",
+       "isso",
+       "precisa"
+      ],
+      [
+       "ser",
+       "combatido."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 51.207,
+     "sfx": "transition into scene 4"
+    },
+    {
+     "t": 69.615,
+     "sfx": "transition into scene 5"
+    },
+    {
+     "t": 54.307,
+     "sfx": "unequal"
+    },
+    {
+     "t": 56.357,
+     "sfx": "padlock"
+    },
+    {
+     "t": 56.357,
+     "sfx": "padlock thud"
+    },
+    {
+     "t": 60.807,
+     "sfx": "tally"
+    },
+    {
+     "t": 61.027,
+     "sfx": "tally"
+    },
+    {
+     "t": 61.247,
+     "sfx": "tally"
+    },
+    {
+     "t": 66.107,
+     "sfx": "notification"
+    },
+    {
+     "t": 66.307,
+     "sfx": "notification"
+    },
+    {
+     "t": 66.507,
+     "sfx": "notification"
+    },
+    {
+     "t": 66.707,
+     "sfx": "notification"
+    },
+    {
+     "t": 66.907,
+     "sfx": "notification"
+    },
+    {
+     "t": 67.757,
+     "sfx": "stand up for respect"
+    }
+   ]
+  },
+  {
+   "scene": 5,
+   "start": 69.965,
+   "end": 88.873,
+   "duration": 18.908,
+   "voice": [
+    70.188,
+    88.651
+   ],
+   "transition_in": "vertical push 0.6 s",
+   "narration": "Em 1999, países das Américas adotaram a Convenção para combater a discriminação contra pessoas com deficiência. Ela defende igualdade, participação e respeito. Conheça esse documento, debata suas propostas e prepare um resumo do que aprendeu.",
+   "shots_local_time": [
+    "0 calendar flips to 1999",
+    "2.1 globe, the Americas highlighted",
+    "4.2 convention document written, signed and sealed (OEA, Guatemala 1999)",
+    "9.7 igualdade / participação / respeito",
+    "12.65 Pathfinders read (Ana), debate (Rafael, Theo via AAC) and write a summary (Lucas)"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 70.315,
+     "t1": 72.265,
+     "kind": "big",
+     "text": "1999"
+    },
+    {
+     "t0": 72.865,
+     "t1": 74.165,
+     "kind": "chip",
+     "text": "PAÍSES DAS AMÉRICAS"
+    },
+    {
+     "t0": 74.315,
+     "t1": 79.465,
+     "kind": "chip",
+     "text": "CONVENÇÃO INTERAMERICANA"
+    },
+    {
+     "t0": 74.565,
+     "t1": 79.465,
+     "kind": "label",
+     "text": "OEA • Guatemala, 7 de junho de 1999"
+    },
+    {
+     "t0": 79.765,
+     "t1": 82.665,
+     "kind": "label",
+     "text": "IGUALDADE"
+    },
+    {
+     "t0": 80.965,
+     "t1": 82.665,
+     "kind": "label",
+     "text": "PARTICIPAÇÃO"
+    },
+    {
+     "t0": 82.165,
+     "t1": 82.665,
+     "kind": "label",
+     "text": "RESPEITO"
+    },
+    {
+     "t0": 82.815,
+     "t1": 88.815,
+     "kind": "chip",
+     "text": "① CONHEÇA"
+    },
+    {
+     "t0": 84.865,
+     "t1": 88.815,
+     "kind": "chip",
+     "text": "② DEBATA"
+    },
+    {
+     "t0": 86.465,
+     "t1": 88.815,
+     "kind": "chip",
+     "text": "③ RESUMA"
+    },
+    {
+     "t0": 85.365,
+     "t1": 88.815,
+     "kind": "title",
+     "text": "DIREITOS NÃO SÃO FAVORES."
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 70.138,
+     "e": 71.74,
+     "lines": [
+      [
+       "Em",
+       "1999,"
+      ]
+     ]
+    },
+    {
+     "s": 72.35,
+     "e": 75.79,
+     "lines": [
+      [
+       "países",
+       "das",
+       "Américas",
+       "adotaram"
+      ],
+      [
+       "a",
+       "Convenção",
+       "para",
+       "combater"
+      ]
+     ]
+    },
+    {
+     "s": 75.81,
+     "e": 78.63000000000001,
+     "lines": [
+      [
+       "a",
+       "discriminação",
+       "contra"
+      ],
+      [
+       "pessoas",
+       "com",
+       "deficiência."
+      ]
+     ]
+    },
+    {
+     "s": 78.65,
+     "e": 82.65,
+     "lines": [
+      [
+       "Ela",
+       "defende",
+       "igualdade,"
+      ],
+      [
+       "participação",
+       "e",
+       "respeito."
+      ]
+     ]
+    },
+    {
+     "s": 82.67,
+     "e": 86.11,
+     "lines": [
+      [
+       "Conheça",
+       "esse",
+       "documento,"
+      ],
+      [
+       "debata",
+       "suas",
+       "propostas"
+      ]
+     ]
+    },
+    {
+     "s": 86.13,
+     "e": 88.48,
+     "lines": [
+      [
+       "e",
+       "prepare",
+       "um",
+       "resumo"
+      ],
+      [
+       "do",
+       "que",
+       "aprendeu."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 69.615,
+     "sfx": "transition into scene 5"
+    },
+    {
+     "t": 88.523,
+     "sfx": "transition into scene 6"
+    },
+    {
+     "t": 70.065,
+     "sfx": "calendar page"
+    },
+    {
+     "t": 70.395,
+     "sfx": "calendar page"
+    },
+    {
+     "t": 70.725,
+     "sfx": "calendar page"
+    },
+    {
+     "t": 71.055,
+     "sfx": "calendar page"
+    },
+    {
+     "t": 72.065,
+     "sfx": "globe"
+    },
+    {
+     "t": 74.165,
+     "sfx": "document"
+    },
+    {
+     "t": 75.965,
+     "sfx": "signature"
+    },
+    {
+     "t": 77.665,
+     "sfx": "seal"
+    },
+    {
+     "t": 79.665,
+     "sfx": "value icon"
+    },
+    {
+     "t": 80.865,
+     "sfx": "value icon"
+    },
+    {
+     "t": 82.065,
+     "sfx": "value icon"
+    },
+    {
+     "t": 82.565,
+     "sfx": "board out"
+    },
+    {
+     "t": 86.265,
+     "sfx": "writing summary"
+    }
+   ]
+  },
+  {
+   "scene": 6,
+   "start": 88.873,
+   "end": 108.73,
+   "duration": 19.857,
+   "voice": [
+    89.095,
+    108.507
+   ],
+   "transition_in": "iris 0.9 s",
+   "narration": "Em João 5, Jesus encontrou um homem que vivia com uma limitação havia 38 anos. Jesus o ouviu, falou com ele e realizou uma cura. Enquanto alguns líderes questionaram o ocorrido no sábado, Jesus demonstrou atenção à pessoa e à sua necessidade. O que podemos aprender com isso?",
+   "shots_local_time": [
+    "0 Bible opens at João 5",
+    "1.3 pool of Bethesda (colonnades); the man sits on his mat; Jesus approaches",
+    "5.9 Jesus kneels at eye level, listens and talks",
+    "9.35 the man rises carrying his mat (gentle light)",
+    "10.4 leaders object (Sabbath sun)",
+    "14 Jesus and the man face to face; wide closing shot"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 89.223,
+     "t1": 90.323,
+     "kind": "big",
+     "text": "JOÃO 5:1–18"
+    },
+    {
+     "t0": 90.473,
+     "t1": 95.073,
+     "kind": "chip",
+     "text": "JOÃO 5:1–18"
+    },
+    {
+     "t0": 93.473,
+     "t1": 95.173,
+     "kind": "label",
+     "text": "38 anos"
+    },
+    {
+     "t0": 101.673,
+     "t1": 103.173,
+     "kind": "chip",
+     "text": "SÁBADO"
+    },
+    {
+     "t0": 106.373,
+     "t1": 108.673,
+     "kind": "title",
+     "text": "OLHAR PARA AS PESSOAS."
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 89.045,
+     "e": 91.39,
+     "lines": [
+      [
+       "Em",
+       "João",
+       "5,",
+       "Jesus"
+      ],
+      [
+       "encontrou",
+       "um",
+       "homem",
+       "que"
+      ]
+     ]
+    },
+    {
+     "s": 91.41,
+     "e": 95.25,
+     "lines": [
+      [
+       "vivia",
+       "com",
+       "uma",
+       "limitação"
+      ],
+      [
+       "havia",
+       "38",
+       "anos."
+      ]
+     ]
+    },
+    {
+     "s": 95.27,
+     "e": 99.25,
+     "lines": [
+      [
+       "Jesus",
+       "o",
+       "ouviu,",
+       "falou",
+       "com"
+      ],
+      [
+       "ele",
+       "e",
+       "realizou",
+       "uma",
+       "cura."
+      ]
+     ]
+    },
+    {
+     "s": 99.27,
+     "e": 101.15,
+     "lines": [
+      [
+       "Enquanto",
+       "alguns"
+      ],
+      [
+       "líderes",
+       "questionaram"
+      ]
+     ]
+    },
+    {
+     "s": 101.17,
+     "e": 103.51,
+     "lines": [
+      [
+       "o",
+       "ocorrido",
+       "no",
+       "sábado,"
+      ],
+      [
+       "Jesus",
+       "demonstrou"
+      ]
+     ]
+    },
+    {
+     "s": 103.53,
+     "e": 106.61,
+     "lines": [
+      [
+       "atenção",
+       "à",
+       "pessoa",
+       "e"
+      ],
+      [
+       "à",
+       "sua",
+       "necessidade."
+      ]
+     ]
+    },
+    {
+     "s": 106.63,
+     "e": 108.3,
+     "lines": [
+      [
+       "O",
+       "que",
+       "podemos"
+      ],
+      [
+       "aprender",
+       "com",
+       "isso?"
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 88.523,
+     "sfx": "transition into scene 6"
+    },
+    {
+     "t": 108.38,
+     "sfx": "transition into scene 7"
+    },
+    {
+     "t": 89.073,
+     "sfx": "bible opens"
+    },
+    {
+     "t": 97.773,
+     "sfx": "healing (gentle)"
+    }
+   ]
+  },
+  {
+   "scene": 7,
+   "start": 108.73,
+   "end": 129.87,
+   "duration": 21.14,
+   "voice": [
+    108.952,
+    129.648
+   ],
+   "transition_in": "dissolve 0.8 s",
+   "narration": "Em Segunda Samuel 9, Davi procurou Mefibosete, filho de Jônatas, que tinha deficiência nos pés. Mesmo demonstrando insegurança diante do rei, Mefibosete recebeu acolhimento e um lugar permanente à mesa. Davi nos ensina que incluir também é reconhecer o valor e a dignidade de alguém.",
+   "shots_local_time": [
+    "0 scroll: 2 Samuel 9",
+    "2.0 David on the throne sends the messenger",
+    "4.45 Lo-Debar: the messenger finds Mefibosete seated by his house",
+    "7.55 Mefibosete kneels before the king, insecure; David rises and welcomes him",
+    "13.35 banquet: Mefibosete at the king's table"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 109.08,
+     "t1": 110.63,
+     "kind": "big",
+     "text": "2 SAMUEL 9"
+    },
+    {
+     "t0": 110.73,
+     "t1": 116.13,
+     "kind": "chip",
+     "text": "2 SAMUEL 9"
+    },
+    {
+     "t0": 113.33,
+     "t1": 116.13,
+     "kind": "label",
+     "text": "Lo-Debar"
+    },
+    {
+     "t0": 123.23,
+     "t1": 129.78,
+     "kind": "title",
+     "text": "TODOS À MESMA MESA."
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 108.902,
+     "e": 113.19,
+     "lines": [
+      [
+       "Em",
+       "Segunda",
+       "Samuel",
+       "9,"
+      ],
+      [
+       "Davi",
+       "procurou",
+       "Mefibosete,"
+      ]
+     ]
+    },
+    {
+     "s": 113.21,
+     "e": 116.35000000000001,
+     "lines": [
+      [
+       "filho",
+       "de",
+       "Jônatas,",
+       "que"
+      ],
+      [
+       "tinha",
+       "deficiência",
+       "nos",
+       "pés."
+      ]
+     ]
+    },
+    {
+     "s": 116.37,
+     "e": 118.63000000000001,
+     "lines": [
+      [
+       "Mesmo",
+       "demonstrando"
+      ],
+      [
+       "insegurança",
+       "diante"
+      ]
+     ]
+    },
+    {
+     "s": 118.65,
+     "e": 121.61,
+     "lines": [
+      [
+       "do",
+       "rei,",
+       "Mefibosete"
+      ],
+      [
+       "recebeu",
+       "acolhimento"
+      ]
+     ]
+    },
+    {
+     "s": 121.63,
+     "e": 123.77000000000001,
+     "lines": [
+      [
+       "e",
+       "um",
+       "lugar"
+      ],
+      [
+       "permanente",
+       "à",
+       "mesa."
+      ]
+     ]
+    },
+    {
+     "s": 123.79,
+     "e": 126.45,
+     "lines": [
+      [
+       "Davi",
+       "nos",
+       "ensina",
+       "que"
+      ],
+      [
+       "incluir",
+       "também",
+       "é"
+      ]
+     ]
+    },
+    {
+     "s": 126.47,
+     "e": 129.44,
+     "lines": [
+      [
+       "reconhecer",
+       "o",
+       "valor",
+       "e"
+      ],
+      [
+       "a",
+       "dignidade",
+       "de",
+       "alguém."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 108.38,
+     "sfx": "transition into scene 7"
+    },
+    {
+     "t": 129.52,
+     "sfx": "transition into scene 8"
+    },
+    {
+     "t": 108.83,
+     "sfx": "scroll unrolls"
+    }
+   ]
+  },
+  {
+   "scene": 8,
+   "start": 129.87,
+   "end": 144.537,
+   "duration": 14.667,
+   "voice": [
+    130.092,
+    144.315
+   ],
+   "transition_in": "dissolve 0.8 s",
+   "narration": "Helen Keller perdeu a visão e a audição ainda pequena. Com educação acessível e apoio, tornou-se escritora, formou-se na universidade e defendeu direitos. Sua história mostra a importância de oportunidades reais.",
+   "shots_local_time": [
+    "0 Helen as a child in the garden of her family home",
+    "3.8 Anne Sullivan spells W-A-T-E-R into Helen's hand while water runs over the other",
+    "5.45 adult Helen writing at a typewriter",
+    "7.25 Radcliffe graduation 1904",
+    "9.25 Helen speaks for rights, Anne beside her"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 130.17,
+     "t1": 133.47,
+     "kind": "chip",
+     "text": "HELEN KELLER (1880–1968)"
+    },
+    {
+     "t0": 133.82,
+     "t1": 135.27,
+     "kind": "letter",
+     "text": "W"
+    },
+    {
+     "t0": 134.07,
+     "t1": 135.27,
+     "kind": "letter",
+     "text": "A"
+    },
+    {
+     "t0": 134.32,
+     "t1": 135.27,
+     "kind": "letter",
+     "text": "T"
+    },
+    {
+     "t0": 134.57,
+     "t1": 135.27,
+     "kind": "letter",
+     "text": "E"
+    },
+    {
+     "t0": 134.82,
+     "t1": 135.27,
+     "kind": "letter",
+     "text": "R"
+    },
+    {
+     "t0": 133.77,
+     "t1": 135.27,
+     "kind": "label",
+     "text": "Anne Sullivan • alfabeto manual tátil"
+    },
+    {
+     "t0": 135.37,
+     "t1": 137.07,
+     "kind": "chip",
+     "text": "ESCRITORA"
+    },
+    {
+     "t0": 137.17,
+     "t1": 139.07,
+     "kind": "chip",
+     "text": "Radcliffe College, 1904"
+    },
+    {
+     "t0": 139.17,
+     "t1": 140.27,
+     "kind": "chip",
+     "text": "DEFENDEU DIREITOS"
+    },
+    {
+     "t0": 140.37,
+     "t1": 144.47,
+     "kind": "title",
+     "text": "EDUCAÇÃO TRANSFORMA."
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 130.042,
+     "e": 131.73,
+     "lines": [
+      [
+       "Helen",
+       "Keller",
+       "perdeu",
+       "a",
+       "visão"
+      ]
+     ]
+    },
+    {
+     "s": 131.75,
+     "e": 133.53,
+     "lines": [
+      [
+       "e",
+       "a",
+       "audição",
+       "ainda",
+       "pequena."
+      ]
+     ]
+    },
+    {
+     "s": 133.55,
+     "e": 137.13,
+     "lines": [
+      [
+       "Com",
+       "educação",
+       "acessível",
+       "e"
+      ],
+      [
+       "apoio,",
+       "tornou-se",
+       "escritora,"
+      ]
+     ]
+    },
+    {
+     "s": 137.15,
+     "e": 140.14999999999998,
+     "lines": [
+      [
+       "formou-se",
+       "na",
+       "universidade"
+      ],
+      [
+       "e",
+       "defendeu",
+       "direitos."
+      ]
+     ]
+    },
+    {
+     "s": 140.17,
+     "e": 142.51,
+     "lines": [
+      [
+       "Sua",
+       "história",
+       "mostra"
+      ],
+      [
+       "a",
+       "importância"
+      ]
+     ]
+    },
+    {
+     "s": 142.53,
+     "e": 144.06,
+     "lines": [
+      [
+       "de",
+       "oportunidades",
+       "reais."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 129.52,
+     "sfx": "transition into scene 8"
+    },
+    {
+     "t": 144.187,
+     "sfx": "transition into scene 9"
+    },
+    {
+     "t": 133.62,
+     "sfx": "water pump"
+    },
+    {
+     "t": 133.82,
+     "sfx": "letter"
+    },
+    {
+     "t": 134.07,
+     "sfx": "letter"
+    },
+    {
+     "t": 134.32,
+     "sfx": "letter"
+    },
+    {
+     "t": 134.57,
+     "sfx": "letter"
+    },
+    {
+     "t": 134.82,
+     "sfx": "letter"
+    },
+    {
+     "t": 135.37,
+     "sfx": "typewriter"
+    },
+    {
+     "t": 137.02,
+     "sfx": "typewriter bell"
+    },
+    {
+     "t": 137.87,
+     "sfx": "caps tossed"
+    }
+   ]
+  },
+  {
+   "scene": 9,
+   "start": 144.537,
+   "end": 160.605,
+   "duration": 16.068,
+   "voice": [
+    144.759,
+    160.453
+   ],
+   "transition_in": "diagonal wipe 0.7 s",
+   "narration": "No Brasil, a Lei Brasileira de Inclusão garante direitos, acessibilidade, educação e participação em igualdade de condições. Ela nos lembra que a sociedade deve eliminar barreiras para que todas as pessoas possam participar.",
+   "shots_local_time": [
+    "0 map of Brazil + Lei 13.146/2015",
+    "3.45 icons: direitos, acessibilidade, educação, participação, igualdade",
+    "9.0 school behind a brick wall; 11.55 the wall crumbles",
+    "12.5 ramp, captioned video, AAC, picture instructions; everyone raises hands"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 145.437,
+     "t1": 153.537,
+     "kind": "title",
+     "text": "LEI BRASILEIRA DE INCLUSÃO"
+    },
+    {
+     "t0": 146.037,
+     "t1": 153.537,
+     "kind": "chip",
+     "text": "Lei nº 13.146/2015"
+    },
+    {
+     "t0": 157.137,
+     "t1": 160.437,
+     "kind": "label",
+     "text": "RAMPA"
+    },
+    {
+     "t0": 157.437,
+     "t1": 160.437,
+     "kind": "label",
+     "text": "LEGENDAS"
+    },
+    {
+     "t0": 157.737,
+     "t1": 160.437,
+     "kind": "label",
+     "text": "COMUNICAÇÃO ALTERNATIVA"
+    },
+    {
+     "t0": 158.037,
+     "t1": 160.437,
+     "kind": "label",
+     "text": "INSTRUÇÕES ADAPTADAS"
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 144.709,
+     "e": 147.36999999999998,
+     "lines": [
+      [
+       "No",
+       "Brasil,",
+       "a",
+       "Lei"
+      ],
+      [
+       "Brasileira",
+       "de",
+       "Inclusão"
+      ]
+     ]
+    },
+    {
+     "s": 147.39,
+     "e": 150.76999999999998,
+     "lines": [
+      [
+       "garante",
+       "direitos,"
+      ],
+      [
+       "acessibilidade,",
+       "educação"
+      ]
+     ]
+    },
+    {
+     "s": 150.79,
+     "e": 153.54999999999998,
+     "lines": [
+      [
+       "e",
+       "participação",
+       "em"
+      ],
+      [
+       "igualdade",
+       "de",
+       "condições."
+      ]
+     ]
+    },
+    {
+     "s": 153.57,
+     "e": 156.67,
+     "lines": [
+      [
+       "Ela",
+       "nos",
+       "lembra",
+       "que",
+       "a"
+      ],
+      [
+       "sociedade",
+       "deve",
+       "eliminar"
+      ]
+     ]
+    },
+    {
+     "s": 156.69,
+     "e": 160.32,
+     "lines": [
+      [
+       "barreiras",
+       "para",
+       "que",
+       "todas",
+       "as"
+      ],
+      [
+       "pessoas",
+       "possam",
+       "participar."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 144.187,
+     "sfx": "transition into scene 9"
+    },
+    {
+     "t": 160.255,
+     "sfx": "transition into scene 10"
+    },
+    {
+     "t": 144.587,
+     "sfx": "map"
+    },
+    {
+     "t": 145.487,
+     "sfx": "pin"
+    },
+    {
+     "t": 147.987,
+     "sfx": "rights icon"
+    },
+    {
+     "t": 148.987,
+     "sfx": "rights icon"
+    },
+    {
+     "t": 149.987,
+     "sfx": "rights icon"
+    },
+    {
+     "t": 151.087,
+     "sfx": "rights icon"
+    },
+    {
+     "t": 152.187,
+     "sfx": "rights icon"
+    },
+    {
+     "t": 153.537,
+     "sfx": "board out"
+    },
+    {
+     "t": 156.087,
+     "sfx": "barrier crumbles"
+    }
+   ]
+  },
+  {
+   "scene": 10,
+   "start": 160.605,
+   "end": 180.0,
+   "duration": 19.395,
+   "voice": [
+    160.757,
+    178.2
+   ],
+   "transition_in": "iris 0.9 s",
+   "narration": "E o seu Clube de Desbravadores? Ele é inclusivo? Observe as barreiras, proponha melhorias e apresente suas ideias à diretoria. Porque inclusão não é apenas receber alguém, é garantir que essa pessoa participe. Seja você parte dessa mudança.",
+   "shots_local_time": [
+    "0 the club (now with the ramp): \"is it inclusive?\"",
+    "3.0 Lucas inspects barriers: ramp OK, narrow gate not OK",
+    "5.0 Ana writes proposals; 6.6 the group presents them to the director",
+    "8.9 flag raised together (low rope cleat, Pedro pulls, Clara holds, Theo counts down on AAC)",
+    "14.85 final line-up with equal prominence; end titles"
+   ],
+   "on_screen_text": [
+    {
+     "t0": 160.905,
+     "t1": 163.605,
+     "kind": "title",
+     "text": "SEU CLUBE É INCLUSIVO?"
+    },
+    {
+     "t0": 163.705,
+     "t1": 165.605,
+     "kind": "chip",
+     "text": "① OBSERVE AS BARREIRAS"
+    },
+    {
+     "t0": 165.605,
+     "t1": 167.205,
+     "kind": "chip",
+     "text": "② PROPONHA MELHORIAS"
+    },
+    {
+     "t0": 167.205,
+     "t1": 169.505,
+     "kind": "chip",
+     "text": "③ APRESENTE À DIRETORIA"
+    },
+    {
+     "t0": 169.805,
+     "t1": 175.405,
+     "kind": "chip",
+     "text": "TODOS PARTICIPAM"
+    },
+    {
+     "t0": 175.605,
+     "t1": 180.0,
+     "kind": "title",
+     "text": "EDUCAÇÃO INCLUSIVA"
+    },
+    {
+     "t0": 176.205,
+     "t1": 180.0,
+     "kind": "title",
+     "text": "NINGUÉM FICA DE FORA!"
+    },
+    {
+     "t0": 178.355,
+     "t1": 180.0,
+     "kind": "chip",
+     "text": "DESBRAVADORES — INCLUIR É NOSSA MISSÃO."
+    },
+    {
+     "t0": 178.505,
+     "t1": 180.0,
+     "kind": "label",
+     "text": "Especialidade de Educação Inclusiva • AM-055"
+    }
+   ],
+   "subtitle_cues": [
+    {
+     "s": 160.707,
+     "e": 162.04999999999998,
+     "lines": [
+      [
+       "E",
+       "o",
+       "seu",
+       "Clube",
+       "de"
+      ],
+      [
+       "Desbravadores?"
+      ]
+     ]
+    },
+    {
+     "s": 162.07,
+     "e": 163.60999999999999,
+     "lines": [
+      [
+       "Ele",
+       "é",
+       "inclusivo?"
+      ]
+     ]
+    },
+    {
+     "s": 163.63,
+     "e": 166.86999999999998,
+     "lines": [
+      [
+       "Observe",
+       "as",
+       "barreiras,"
+      ],
+      [
+       "proponha",
+       "melhorias"
+      ]
+     ]
+    },
+    {
+     "s": 166.89,
+     "e": 169.41,
+     "lines": [
+      [
+       "e",
+       "apresente",
+       "suas"
+      ],
+      [
+       "ideias",
+       "à",
+       "diretoria."
+      ]
+     ]
+    },
+    {
+     "s": 169.43,
+     "e": 172.60999999999999,
+     "lines": [
+      [
+       "Porque",
+       "inclusão",
+       "não",
+       "é"
+      ],
+      [
+       "apenas",
+       "receber",
+       "alguém,"
+      ]
+     ]
+    },
+    {
+     "s": 172.63,
+     "e": 175.42999999999998,
+     "lines": [
+      [
+       "é",
+       "garantir",
+       "que",
+       "essa"
+      ],
+      [
+       "pessoa",
+       "participe."
+      ]
+     ]
+    },
+    {
+     "s": 175.45,
+     "e": 178.38,
+     "lines": [
+      [
+       "Seja",
+       "você",
+       "parte"
+      ],
+      [
+       "dessa",
+       "mudança."
+      ]
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "t": 160.255,
+     "sfx": "transition into scene 10"
+    },
+    {
+     "t": 162.005,
+     "sfx": "question"
+    },
+    {
+     "t": 164.055,
+     "sfx": "ramp ok"
+    },
+    {
+     "t": 165.105,
+     "sfx": "gate too narrow"
+    },
+    {
+     "t": 165.605,
+     "sfx": "writing proposals"
+    },
+    {
+     "t": 168.505,
+     "sfx": "proposal handed over"
+    },
+    {
+     "t": 174.205,
+     "sfx": "flag at the top"
+    },
+    {
+     "t": 175.605,
+     "sfx": "finale"
+    },
+    {
+     "t": 178.205,
+     "sfx": "end card"
+    }
+   ]
+  }
+ ]
+}

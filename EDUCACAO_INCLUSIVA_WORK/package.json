@@ -1,0 +1,18 @@
+{
+  "name": "educacao_inclusiva_work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.25.10",
+    "gsap": "^3.13.0",
+    "hyperframes": "^0.8.150",
+    "three": "^0.180.0"
+  }
+}

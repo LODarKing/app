@@ -1,0 +1,83 @@
+{
+ "Narrac_a_o_09_e_10": {
+  "plosive_frames_reduced_gt3db_ms": 996,
+  "deess_active_ms": 1668,
+  "deess_max_db": 7.0,
+  "comp_threshold_db": -23.4,
+  "comp_avg_gr_active_db": 1.57,
+  "comp_max_gr_db": 7.5,
+  "take_gain_to_-19LUFS_db": 9.03
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_01": {
+  "plosive_frames_reduced_gt3db_ms": 1245,
+  "deess_active_ms": 663,
+  "deess_max_db": 7.0,
+  "comp_threshold_db": -25.4,
+  "comp_avg_gr_active_db": 1.81,
+  "comp_max_gr_db": 7.57,
+  "take_gain_to_-19LUFS_db": 10.41
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_02": {
+  "plosive_frames_reduced_gt3db_ms": 1053,
+  "deess_active_ms": 1691,
+  "deess_max_db": 7.0,
+  "comp_threshold_db": -25.0,
+  "comp_avg_gr_active_db": 1.48,
+  "comp_max_gr_db": 8.1,
+  "take_gain_to_-19LUFS_db": 10.3
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_03": {
+  "plosive_frames_reduced_gt3db_ms": 512,
+  "deess_active_ms": 1656,
+  "deess_max_db": 7.0,
+  "comp_threshold_db": -25.6,
+  "comp_avg_gr_active_db": 1.62,
+  "comp_max_gr_db": 7.8,
+  "take_gain_to_-19LUFS_db": 10.51
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_04": {
+  "plosive_frames_reduced_gt3db_ms": 1195,
+  "deess_active_ms": 2145,
+  "deess_max_db": 7.0,
+  "comp_threshold_db": -25.1,
+  "comp_avg_gr_active_db": 1.58,
+  "comp_max_gr_db": 8.29,
+  "take_gain_to_-19LUFS_db": 10.27
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_05": {
+  "plosive_frames_reduced_gt3db_ms": 1447,
+  "deess_active_ms": 684,
+  "deess_max_db": 5.7,
+  "comp_threshold_db": -25.5,
+  "comp_avg_gr_active_db": 1.68,
+  "comp_max_gr_db": 8.36,
+  "take_gain_to_-19LUFS_db": 10.83
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_06": {
+  "plosive_frames_reduced_gt3db_ms": 770,
+  "deess_active_ms": 698,
+  "deess_max_db": 7.0,
+  "comp_threshold_db": -25.3,
+  "comp_avg_gr_active_db": 1.55,
+  "comp_max_gr_db": 8.49,
+  "take_gain_to_-19LUFS_db": 10.48
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_07": {
+  "plosive_frames_reduced_gt3db_ms": 868,
+  "deess_active_ms": 944,
+  "deess_max_db": 7.0,
+  "comp_threshold_db": -25.6,
+  "comp_avg_gr_active_db": 1.56,
+  "comp_max_gr_db": 8.8,
+  "take_gain_to_-19LUFS_db": 10.86
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_08": {
+  "plosive_frames_reduced_gt3db_ms": 611,
+  "deess_active_ms": 1006,
+  "deess_max_db": 7.0,
+  "comp_threshold_db": -24.3,
+  "comp_avg_gr_active_db": 1.67,
+  "comp_max_gr_db": 7.73,
+  "take_gain_to_-19LUFS_db": 9.44
+ }
+}

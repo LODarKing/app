@@ -1,0 +1,236 @@
+{
+ "Narrac_a_o_09_e_10": {
+  "A": {
+   "silence_db": -95.8,
+   "fricative_loss_db": -0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 12.4
+  },
+  "B": {
+   "silence_db": -96.3,
+   "fricative_loss_db": -0.64,
+   "speech_loss_db": -0.11,
+   "silence_flicker_db": 13.2
+  },
+  "C": {
+   "silence_db": -105.0,
+   "fricative_loss_db": -0.01,
+   "speech_loss_db": -0.02,
+   "silence_flicker_db": 11.8
+  },
+  "D": {
+   "silence_db": -99.8,
+   "fricative_loss_db": -1.08,
+   "speech_loss_db": -0.21,
+   "silence_flicker_db": 11.8
+  }
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_01": {
+  "A": {
+   "silence_db": -97.4,
+   "fricative_loss_db": 0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 31.9
+  },
+  "B": {
+   "silence_db": -97.0,
+   "fricative_loss_db": -0.41,
+   "speech_loss_db": -0.08,
+   "silence_flicker_db": 30.3
+  },
+  "C": {
+   "silence_db": -106.7,
+   "fricative_loss_db": -0.0,
+   "speech_loss_db": -0.03,
+   "silence_flicker_db": 28.8
+  },
+  "D": {
+   "silence_db": -101.7,
+   "fricative_loss_db": -0.84,
+   "speech_loss_db": -0.17,
+   "silence_flicker_db": 30.8
+  }
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_02": {
+  "A": {
+   "silence_db": -95.4,
+   "fricative_loss_db": 0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 14.5
+  },
+  "B": {
+   "silence_db": -95.5,
+   "fricative_loss_db": -0.42,
+   "speech_loss_db": -0.2,
+   "silence_flicker_db": 16.0
+  },
+  "C": {
+   "silence_db": -103.6,
+   "fricative_loss_db": -0.01,
+   "speech_loss_db": -0.03,
+   "silence_flicker_db": 13.7
+  },
+  "D": {
+   "silence_db": -99.3,
+   "fricative_loss_db": -1.05,
+   "speech_loss_db": -0.3,
+   "silence_flicker_db": 14.4
+  }
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_03": {
+  "A": {
+   "silence_db": -95.9,
+   "fricative_loss_db": 0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 14.6
+  },
+  "B": {
+   "silence_db": -96.4,
+   "fricative_loss_db": -0.64,
+   "speech_loss_db": -0.14,
+   "silence_flicker_db": 15.9
+  },
+  "C": {
+   "silence_db": -105.3,
+   "fricative_loss_db": -0.02,
+   "speech_loss_db": -0.03,
+   "silence_flicker_db": 13.5
+  },
+  "D": {
+   "silence_db": -101.3,
+   "fricative_loss_db": -0.57,
+   "speech_loss_db": -0.17,
+   "silence_flicker_db": 14.2
+  }
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_04": {
+  "A": {
+   "silence_db": -95.5,
+   "fricative_loss_db": -0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 15.2
+  },
+  "B": {
+   "silence_db": -96.5,
+   "fricative_loss_db": -0.24,
+   "speech_loss_db": -0.16,
+   "silence_flicker_db": 16.9
+  },
+  "C": {
+   "silence_db": -104.7,
+   "fricative_loss_db": -0.02,
+   "speech_loss_db": -0.04,
+   "silence_flicker_db": 14.2
+  },
+  "D": {
+   "silence_db": -100.0,
+   "fricative_loss_db": -0.34,
+   "speech_loss_db": -0.24,
+   "silence_flicker_db": 15.1
+  }
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_05": {
+  "A": {
+   "silence_db": -90.2,
+   "fricative_loss_db": 0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 15.6
+  },
+  "B": {
+   "silence_db": -89.1,
+   "fricative_loss_db": -0.31,
+   "speech_loss_db": -0.13,
+   "silence_flicker_db": 18.4
+  },
+  "C": {
+   "silence_db": -98.7,
+   "fricative_loss_db": -0.03,
+   "speech_loss_db": -0.07,
+   "silence_flicker_db": 15.0
+  },
+  "D": {
+   "silence_db": -94.4,
+   "fricative_loss_db": -0.83,
+   "speech_loss_db": -0.17,
+   "silence_flicker_db": 15.7
+  }
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_06": {
+  "A": {
+   "silence_db": -93.3,
+   "fricative_loss_db": 0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 15.0
+  },
+  "B": {
+   "silence_db": -93.4,
+   "fricative_loss_db": -0.32,
+   "speech_loss_db": -0.13,
+   "silence_flicker_db": 16.6
+  },
+  "C": {
+   "silence_db": -102.5,
+   "fricative_loss_db": -0.02,
+   "speech_loss_db": -0.04,
+   "silence_flicker_db": 14.0
+  },
+  "D": {
+   "silence_db": -98.3,
+   "fricative_loss_db": -0.44,
+   "speech_loss_db": -0.16,
+   "silence_flicker_db": 14.8
+  }
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_07": {
+  "A": {
+   "silence_db": -94.8,
+   "fricative_loss_db": 0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 14.3
+  },
+  "B": {
+   "silence_db": -95.2,
+   "fricative_loss_db": -0.39,
+   "speech_loss_db": -0.14,
+   "silence_flicker_db": 15.5
+  },
+  "C": {
+   "silence_db": -103.7,
+   "fricative_loss_db": -0.03,
+   "speech_loss_db": -0.03,
+   "silence_flicker_db": 13.2
+  },
+  "D": {
+   "silence_db": -99.0,
+   "fricative_loss_db": -0.38,
+   "speech_loss_db": -0.22,
+   "silence_flicker_db": 14.0
+  }
+ },
+ "Narrac_a_o_Educac_a_o_Inclusiva_08": {
+  "A": {
+   "silence_db": -95.0,
+   "fricative_loss_db": -0.0,
+   "speech_loss_db": 0.0,
+   "silence_flicker_db": 16.2
+  },
+  "B": {
+   "silence_db": -95.2,
+   "fricative_loss_db": -0.66,
+   "speech_loss_db": -0.15,
+   "silence_flicker_db": 18.0
+  },
+  "C": {
+   "silence_db": -104.3,
+   "fricative_loss_db": -0.02,
+   "speech_loss_db": -0.03,
+   "silence_flicker_db": 15.0
+  },
+  "D": {
+   "silence_db": -98.7,
+   "fricative_loss_db": -0.34,
+   "speech_loss_db": -0.2,
+   "silence_flicker_db": 16.2
+  }
+ }
+}

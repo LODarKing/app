@@ -1,0 +1,2835 @@
+{
+ "decisions": [
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01",
+   "at": 4.37,
+   "punct": ",",
+   "orig_gap": 0.11,
+   "new_gap": 0.11,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01",
+   "at": 6.37,
+   "punct": ",",
+   "orig_gap": 0.18,
+   "new_gap": 0.18,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01",
+   "at": 9.96,
+   "punct": ".",
+   "orig_gap": 0.3,
+   "new_gap": 0.3,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01",
+   "at": 10.39,
+   "punct": ".",
+   "orig_gap": 0.18,
+   "new_gap": 0.18,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01",
+   "at": 11.97,
+   "punct": "?",
+   "orig_gap": 0.61,
+   "new_gap": 0.42,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01",
+   "at": 13.1,
+   "punct": ",",
+   "orig_gap": 0.27,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02",
+   "at": 5.3,
+   "punct": ".",
+   "orig_gap": 0.17,
+   "new_gap": 0.17,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02",
+   "at": 10.07,
+   "punct": ".",
+   "orig_gap": 0.21,
+   "new_gap": 0.21,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02",
+   "at": 14.34,
+   "punct": "",
+   "orig_gap": 0.13,
+   "new_gap": 0.13,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02",
+   "at": 17.36,
+   "punct": ",",
+   "orig_gap": 0.16,
+   "new_gap": 0.16,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02",
+   "at": 19.48,
+   "punct": ".",
+   "orig_gap": 0.12,
+   "new_gap": 0.12,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03",
+   "at": 3.36,
+   "punct": "",
+   "orig_gap": 0.2,
+   "new_gap": 0.16,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03",
+   "at": 10.08,
+   "punct": ".",
+   "orig_gap": 0.2,
+   "new_gap": 0.2,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03",
+   "at": 10.36,
+   "punct": ".",
+   "orig_gap": 0.2,
+   "new_gap": 0.2,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03",
+   "at": 15.27,
+   "punct": ".",
+   "orig_gap": 0.46,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03",
+   "at": 19.38,
+   "punct": ".",
+   "orig_gap": 0.12,
+   "new_gap": 0.12,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04",
+   "at": 8.42,
+   "punct": ".",
+   "orig_gap": 0.17,
+   "new_gap": 0.17,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04",
+   "at": 8.76,
+   "punct": ".",
+   "orig_gap": 0.15,
+   "new_gap": 0.15,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04",
+   "at": 9.81,
+   "punct": "",
+   "orig_gap": 0.25,
+   "new_gap": 0.16,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04",
+   "at": 13.44,
+   "punct": ",",
+   "orig_gap": 0.1,
+   "new_gap": 0.1,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04",
+   "at": 14.87,
+   "punct": ",",
+   "orig_gap": 0.28,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04",
+   "at": 16.81,
+   "punct": ",",
+   "orig_gap": 0.19,
+   "new_gap": 0.19,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04",
+   "at": 19.67,
+   "punct": ".",
+   "orig_gap": 0.5,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05",
+   "at": 3.86,
+   "punct": ",",
+   "orig_gap": 0.36,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05",
+   "at": 7.25,
+   "punct": "",
+   "orig_gap": 0.13,
+   "new_gap": 0.13,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05",
+   "at": 11.29,
+   "punct": ".",
+   "orig_gap": 0.7,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05",
+   "at": 13.9,
+   "punct": ",",
+   "orig_gap": 0.24,
+   "new_gap": 0.24,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05",
+   "at": 15.21,
+   "punct": "",
+   "orig_gap": 0.11,
+   "new_gap": 0.11,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05",
+   "at": 16.12,
+   "punct": ".",
+   "orig_gap": 0.55,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05",
+   "at": 18.58,
+   "punct": ",",
+   "orig_gap": 0.12,
+   "new_gap": 0.12,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06",
+   "at": 8.77,
+   "punct": ".",
+   "orig_gap": 0.17,
+   "new_gap": 0.17,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06",
+   "at": 10.25,
+   "punct": ",",
+   "orig_gap": 0.43,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06",
+   "at": 11.72,
+   "punct": "",
+   "orig_gap": 0.11,
+   "new_gap": 0.11,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06",
+   "at": 13.36,
+   "punct": ".",
+   "orig_gap": 0.5,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06",
+   "at": 17.29,
+   "punct": ",",
+   "orig_gap": 0.37,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06",
+   "at": 20.39,
+   "punct": "",
+   "orig_gap": 0.16,
+   "new_gap": 0.16,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06",
+   "at": 22.2,
+   "punct": ".",
+   "orig_gap": 0.18,
+   "new_gap": 0.18,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 3.95,
+   "punct": ",",
+   "orig_gap": 0.09,
+   "new_gap": 0.09,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 5.22,
+   "punct": "",
+   "orig_gap": 0.16,
+   "new_gap": 0.16,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 6.31,
+   "punct": ",",
+   "orig_gap": 0.33,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 7.97,
+   "punct": ",",
+   "orig_gap": 0.31,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 10.29,
+   "punct": ".",
+   "orig_gap": 0.54,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 13.88,
+   "punct": ",",
+   "orig_gap": 0.43,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 15.4,
+   "punct": "",
+   "orig_gap": 0.2,
+   "new_gap": 0.16,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 17.29,
+   "punct": "",
+   "orig_gap": 0.19,
+   "new_gap": 0.16,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 19.43,
+   "punct": ".",
+   "orig_gap": 0.47,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 22.22,
+   "punct": "",
+   "orig_gap": 0.11,
+   "new_gap": 0.11,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07",
+   "at": 24.53,
+   "punct": "",
+   "orig_gap": 0.12,
+   "new_gap": 0.12,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08",
+   "at": 5.51,
+   "punct": ".",
+   "orig_gap": 0.59,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08",
+   "at": 8.17,
+   "punct": ",",
+   "orig_gap": 0.12,
+   "new_gap": 0.12,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08",
+   "at": 10.25,
+   "punct": ",",
+   "orig_gap": 0.34,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08",
+   "at": 13.89,
+   "punct": ".",
+   "orig_gap": 0.41,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 6.01,
+   "punct": ",",
+   "orig_gap": 0.23,
+   "new_gap": 0.23,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 11.9,
+   "punct": ".",
+   "orig_gap": 0.6,
+   "new_gap": 0.34,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 16.31,
+   "punct": "",
+   "orig_gap": 0.09,
+   "new_gap": 0.09,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 16.82,
+   "punct": "",
+   "orig_gap": 0.09,
+   "new_gap": 0.09,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 19.45,
+   "punct": ".",
+   "orig_gap": 0.32,
+   "new_gap": 0.52,
+   "mode": "shortened",
+   "scene_split": true
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 21.58,
+   "punct": "?",
+   "orig_gap": 0.43,
+   "new_gap": 0.43,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 23.27,
+   "punct": "?",
+   "orig_gap": 0.12,
+   "new_gap": 0.12,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 25.31,
+   "punct": ",",
+   "orig_gap": 0.16,
+   "new_gap": 0.16,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 29.94,
+   "punct": ".",
+   "orig_gap": 0.11,
+   "new_gap": 0.11,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 31.19,
+   "punct": "",
+   "orig_gap": 0.31,
+   "new_gap": 0.16,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 33.56,
+   "punct": ",",
+   "orig_gap": 0.45,
+   "new_gap": 0.22,
+   "mode": "shortened",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 37.23,
+   "punct": ".",
+   "orig_gap": 0.1,
+   "new_gap": 0.1,
+   "mode": "kept",
+   "scene_split": false
+  },
+  {
+   "take": "Narrac_a_o_09_e_10",
+   "at": 38.32,
+   "punct": "",
+   "orig_gap": 0.29,
+   "new_gap": 0.16,
+   "mode": "shortened",
+   "scene_split": false
+  }
+ ],
+ "scenes": [
+  [
+   0.25,
+   15.024999999999999
+  ],
+  [
+   15.544999999999998,
+   39.169999999999995
+  ],
+  [
+   39.69,
+   60.056000000000004
+  ],
+  [
+   60.57600000000001,
+   81.59197916666666
+  ],
+  [
+   82.11197916666666,
+   103.7119791666667
+  ],
+  [
+   104.23197916666669,
+   126.9419791666667
+  ],
+  [
+   127.4619791666667,
+   151.67397916666667
+  ],
+  [
+   152.19397916666668,
+   168.6089791666667
+  ],
+  [
+   169.1289791666667,
+   187.4889583333334
+  ],
+  [
+   187.84395833333338,
+   208.25093750000008
+  ]
+ ],
+ "words": [
+  {
+   "w": "Imagine",
+   "s": 0.25,
+   "e": 0.735,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "chegar",
+   "s": 0.735,
+   "e": 1.215,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "ao",
+   "s": 1.215,
+   "e": 1.395,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "seu",
+   "s": 1.395,
+   "e": 1.575,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "clube,",
+   "s": 1.575,
+   "e": 2.035,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "cheio",
+   "s": 2.45,
+   "e": 2.895,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "de",
+   "s": 2.895,
+   "e": 3.015,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "vontade",
+   "s": 3.015,
+   "e": 3.315,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "de",
+   "s": 3.315,
+   "e": 3.535,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "participar,",
+   "s": 3.535,
+   "e": 4.015,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "mas",
+   "s": 4.58,
+   "e": 4.855,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "encontrar",
+   "s": 4.855,
+   "e": 5.455,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "uma",
+   "s": 5.455,
+   "e": 5.895,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "barreira",
+   "s": 5.895,
+   "e": 6.495,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "que",
+   "s": 6.495,
+   "e": 6.695,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "impede",
+   "s": 6.695,
+   "e": 7.015,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "você",
+   "s": 7.015,
+   "e": 7.375,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "de",
+   "s": 7.375,
+   "e": 7.575,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "entrar.",
+   "s": 7.575,
+   "e": 7.915,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "Será",
+   "s": 8.35,
+   "e": 8.66,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "Será",
+   "s": 8.72,
+   "e": 8.975,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "que",
+   "s": 8.975,
+   "e": 9.235,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "isso",
+   "s": 9.235,
+   "e": 9.515,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "é",
+   "s": 9.515,
+   "e": 9.555,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "inclusão?",
+   "s": 9.555,
+   "e": 10.035,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "Hoje,",
+   "s": 10.54,
+   "e": 10.925,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "vamos",
+   "s": 11.28,
+   "e": 11.635,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "descobrir",
+   "s": 11.635,
+   "e": 12.455,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "porque",
+   "s": 12.455,
+   "e": 12.995,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "ninguém",
+   "s": 12.995,
+   "e": 13.355,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "deve",
+   "s": 13.355,
+   "e": 13.815,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "ficar",
+   "s": 13.815,
+   "e": 14.175,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "de",
+   "s": 14.175,
+   "e": 14.335,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "fora.",
+   "s": 14.335,
+   "e": 14.615,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_01"
+  },
+  {
+   "w": "uma",
+   "s": 15.73,
+   "e": 15.99,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "deficiência",
+   "s": 15.99,
+   "e": 16.95,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "não",
+   "s": 16.95,
+   "e": 17.21,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "significa",
+   "s": 17.21,
+   "e": 17.91,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "ser",
+   "s": 17.91,
+   "e": 18.25,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "incapaz.",
+   "s": 18.25,
+   "e": 18.95,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "Muitas",
+   "s": 19.61,
+   "e": 20.01,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "dificuldades",
+   "s": 20.01,
+   "e": 21.01,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "surgem",
+   "s": 21.01,
+   "e": 21.45,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "quando",
+   "s": 21.45,
+   "e": 21.71,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "a",
+   "s": 21.71,
+   "e": 21.87,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "sociedade",
+   "s": 21.87,
+   "e": 22.37,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "cria",
+   "s": 22.37,
+   "e": 23.03,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "barreiras.",
+   "s": 23.03,
+   "e": 23.73,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "A",
+   "s": 24.105,
+   "e": 24.63,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "Organização",
+   "s": 24.63,
+   "e": 25.25,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "Mundial",
+   "s": 25.25,
+   "e": 25.67,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "da",
+   "s": 25.67,
+   "e": 25.83,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "Saúde",
+   "s": 25.83,
+   "e": 26.29,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "utiliza",
+   "s": 26.29,
+   "e": 27.23,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "a",
+   "s": 27.23,
+   "e": 27.59,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "CIF",
+   "s": 27.59,
+   "e": 27.87,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "para",
+   "s": 27.87,
+   "e": 28.295,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "compreender",
+   "s": 28.49,
+   "e": 29.11,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "a",
+   "s": 29.11,
+   "e": 29.47,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "relação",
+   "s": 29.47,
+   "e": 29.97,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "entre",
+   "s": 29.97,
+   "e": 30.41,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "saúde,",
+   "s": 30.41,
+   "e": 30.93,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "ambiente",
+   "s": 31.465,
+   "e": 31.97,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "e",
+   "s": 31.97,
+   "e": 32.47,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "participação.",
+   "s": 32.47,
+   "e": 33.31,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "E",
+   "s": 33.605,
+   "e": 34.07,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "a",
+   "s": 34.07,
+   "e": 34.19,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "Convenção",
+   "s": 34.19,
+   "e": 34.87,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "da",
+   "s": 34.87,
+   "e": 35.09,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "ONU",
+   "s": 35.09,
+   "e": 35.49,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "defende",
+   "s": 35.49,
+   "e": 36.03,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "direitos",
+   "s": 36.03,
+   "e": 36.71,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "e",
+   "s": 36.71,
+   "e": 36.97,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "oportunidades",
+   "s": 36.97,
+   "e": 37.91,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "para",
+   "s": 37.91,
+   "e": 38.33,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "todos.",
+   "s": 38.33,
+   "e": 38.73,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_02"
+  },
+  {
+   "w": "Existem",
+   "s": 40.501,
+   "e": 41.026,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "deficiências",
+   "s": 41.026,
+   "e": 41.886,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "físicas,",
+   "s": 41.886,
+   "e": 42.626,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "visuais,",
+   "s": 42.926,
+   "e": 43.606,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "auditivas,",
+   "s": 43.986,
+   "e": 44.826,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "intelectuais",
+   "s": 45.206,
+   "e": 45.986,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "e",
+   "s": 45.986,
+   "e": 46.326,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "múltiplas.",
+   "s": 46.326,
+   "e": 46.986,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "Também",
+   "s": 47.281,
+   "e": 47.561,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "Também",
+   "s": 47.621,
+   "e": 47.846,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "existem",
+   "s": 47.846,
+   "e": 48.206,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "condições",
+   "s": 48.206,
+   "e": 48.966,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "e",
+   "s": 48.966,
+   "e": 49.346,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "deficiências",
+   "s": 49.346,
+   "e": 50.046,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "que",
+   "s": 50.046,
+   "e": 50.246,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "não",
+   "s": 50.246,
+   "e": 50.406,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "são",
+   "s": 50.406,
+   "e": 50.666,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "imediatamente",
+   "s": 50.666,
+   "e": 51.626,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "visíveis.",
+   "s": 51.626,
+   "e": 52.226,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "Cada",
+   "s": 52.671,
+   "e": 52.866,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "pessoa",
+   "s": 52.866,
+   "e": 53.266,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "tem",
+   "s": 53.266,
+   "e": 53.526,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "as",
+   "s": 53.526,
+   "e": 53.706,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "suas",
+   "s": 53.706,
+   "e": 53.866,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "próprias",
+   "s": 53.866,
+   "e": 54.426,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "habilidades",
+   "s": 54.426,
+   "e": 55.186,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "e",
+   "s": 55.186,
+   "e": 55.466,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "necessidades.",
+   "s": 55.466,
+   "e": 56.186,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "O",
+   "s": 56.501,
+   "e": 56.966,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "importante",
+   "s": 56.966,
+   "e": 57.406,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "é",
+   "s": 57.406,
+   "e": 57.826,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "respeitar",
+   "s": 57.826,
+   "e": 58.646,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "as",
+   "s": 58.646,
+   "e": 59.026,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "diferenças.",
+   "s": 59.026,
+   "e": 59.646,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_03"
+  },
+  {
+   "w": "Discriminação",
+   "s": 60.576,
+   "e": 61.501,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "acontece",
+   "s": 61.501,
+   "e": 62.301,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "quando",
+   "s": 62.301,
+   "e": 62.701,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "alguém",
+   "s": 62.701,
+   "e": 63.041,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "sofre",
+   "s": 63.041,
+   "e": 63.461,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "tratamento",
+   "s": 63.461,
+   "e": 64.181,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "desigual",
+   "s": 64.181,
+   "e": 64.881,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "ou",
+   "s": 64.881,
+   "e": 65.401,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "tem",
+   "s": 65.401,
+   "e": 65.621,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "seus",
+   "s": 65.621,
+   "e": 65.941,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "direitos",
+   "s": 65.941,
+   "e": 66.441,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "negados.",
+   "s": 66.441,
+   "e": 67.121,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "Já",
+   "s": 67.581,
+   "e": 67.786,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "Já",
+   "s": 67.846,
+   "e": 68.061,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "o",
+   "s": 68.061,
+   "e": 68.301,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "bullying",
+   "s": 68.301,
+   "e": 68.681,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "envolve",
+   "s": 68.927,
+   "e": 69.452,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "agressões",
+   "s": 69.452,
+   "e": 70.132,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "intencionais",
+   "s": 70.132,
+   "e": 71.112,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "e",
+   "s": 71.112,
+   "e": 71.312,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "repetidas,",
+   "s": 71.312,
+   "e": 72.012,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "como",
+   "s": 72.212,
+   "e": 72.407,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "como",
+   "s": 72.467,
+   "e": 72.672,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "humilhações,",
+   "s": 72.672,
+   "e": 73.672,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "apelidos",
+   "s": 74.072,
+   "e": 74.672,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "ofensivos,",
+   "s": 74.672,
+   "e": 75.552,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "exclusão",
+   "s": 76.152,
+   "e": 76.892,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "e",
+   "s": 76.892,
+   "e": 77.252,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "ataques",
+   "s": 77.252,
+   "e": 77.832,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "virtuais.",
+   "s": 77.832,
+   "e": 78.492,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "isso",
+   "s": 79.152,
+   "e": 79.552,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "precisa",
+   "s": 79.552,
+   "e": 79.992,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "ser",
+   "s": 79.992,
+   "e": 80.292,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "combatido.",
+   "s": 80.292,
+   "e": 81.132,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_04"
+  },
+  {
+   "w": "1999,",
+   "s": 82.297,
+   "e": 83.217,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "países",
+   "s": 84.712,
+   "e": 85.117,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "das",
+   "s": 85.117,
+   "e": 85.477,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "Américas",
+   "s": 85.477,
+   "e": 86.157,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "adotaram",
+   "s": 86.157,
+   "e": 86.797,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "a",
+   "s": 86.797,
+   "e": 86.917,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "Convenção",
+   "s": 86.917,
+   "e": 87.477,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "para",
+   "s": 87.477,
+   "e": 87.872,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "Combater",
+   "s": 88.077,
+   "e": 88.757,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "a",
+   "s": 88.757,
+   "e": 89.077,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "Discriminação",
+   "s": 89.077,
+   "e": 89.757,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "contra",
+   "s": 89.757,
+   "e": 90.117,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "Pessoas",
+   "s": 90.117,
+   "e": 90.837,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "com",
+   "s": 90.837,
+   "e": 91.057,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "Deficiência.",
+   "s": 91.057,
+   "e": 91.797,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "defende",
+   "s": 92.742,
+   "e": 93.282,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "igualdade,",
+   "s": 93.282,
+   "e": 94.102,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "participação",
+   "s": 94.717,
+   "e": 95.602,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "e",
+   "s": 95.602,
+   "e": 95.897,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "respeito.",
+   "s": 96.082,
+   "e": 96.762,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "Conheça",
+   "s": 97.097,
+   "e": 97.672,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "esse",
+   "s": 97.672,
+   "e": 98.132,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "documento,",
+   "s": 98.132,
+   "e": 98.892,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "debata",
+   "s": 99.272,
+   "e": 99.732,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "suas",
+   "s": 99.732,
+   "e": 99.992,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "propostas",
+   "s": 99.992,
+   "e": 100.832,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "e",
+   "s": 100.832,
+   "e": 101.112,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "prepare",
+   "s": 101.112,
+   "e": 101.692,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "um",
+   "s": 101.692,
+   "e": 101.912,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "resumo",
+   "s": 101.912,
+   "e": 102.412,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "do",
+   "s": 102.412,
+   "e": 102.592,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "que",
+   "s": 102.592,
+   "e": 102.832,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "aprendeu.",
+   "s": 102.832,
+   "e": 103.372,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_05"
+  },
+  {
+   "w": "João",
+   "s": 104.367,
+   "e": 104.627,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "5,",
+   "s": 104.627,
+   "e": 105.167,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "Jesus",
+   "s": 105.367,
+   "e": 105.607,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "encontrou",
+   "s": 105.607,
+   "e": 106.247,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "um",
+   "s": 106.247,
+   "e": 106.427,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "homem",
+   "s": 106.427,
+   "e": 106.767,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "que",
+   "s": 106.767,
+   "e": 107.007,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "vivia",
+   "s": 107.007,
+   "e": 107.627,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "com",
+   "s": 107.627,
+   "e": 107.987,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "uma",
+   "s": 107.987,
+   "e": 108.147,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "limitação",
+   "s": 108.147,
+   "e": 108.927,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "havia",
+   "s": 108.927,
+   "e": 109.527,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "38",
+   "s": 109.527,
+   "e": 110.247,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "anos.",
+   "s": 110.247,
+   "e": 111.127,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "Jesus",
+   "s": 111.562,
+   "e": 112.187,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "o",
+   "s": 112.187,
+   "e": 112.427,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "ouviu,",
+   "s": 112.427,
+   "e": 112.867,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "falou",
+   "s": 113.092,
+   "e": 113.337,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "com",
+   "s": 113.337,
+   "e": 113.577,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "ele",
+   "s": 113.577,
+   "e": 113.917,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "e",
+   "s": 113.917,
+   "e": 114.242,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "realizou",
+   "s": 114.397,
+   "e": 115.017,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "uma",
+   "s": 115.017,
+   "e": 115.277,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "cura.",
+   "s": 115.277,
+   "e": 115.757,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "Enquanto",
+   "s": 116.387,
+   "e": 116.772,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "alguns",
+   "s": 116.772,
+   "e": 117.152,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "líderes",
+   "s": 117.152,
+   "e": 117.732,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "questionaram",
+   "s": 117.732,
+   "e": 118.412,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "o",
+   "s": 118.412,
+   "e": 118.552,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "ocorrido",
+   "s": 118.552,
+   "e": 118.972,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "no",
+   "s": 118.972,
+   "e": 119.172,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "sábado,",
+   "s": 119.172,
+   "e": 119.732,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "Jesus",
+   "s": 120.037,
+   "e": 120.422,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "demonstrou",
+   "s": 120.422,
+   "e": 121.182,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "atenção",
+   "s": 121.182,
+   "e": 121.682,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "à",
+   "s": 121.682,
+   "e": 122.022,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "pessoa",
+   "s": 122.022,
+   "e": 122.482,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "e",
+   "s": 122.482,
+   "e": 122.927,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "à",
+   "s": 123.102,
+   "e": 123.222,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "sua",
+   "s": 123.222,
+   "e": 123.482,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "necessidade.",
+   "s": 123.482,
+   "e": 124.542,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "O",
+   "s": 124.882,
+   "e": 125.282,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "que",
+   "s": 125.282,
+   "e": 125.382,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "podemos",
+   "s": 125.382,
+   "e": 125.722,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "aprender",
+   "s": 125.722,
+   "e": 126.042,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "com",
+   "s": 126.042,
+   "e": 126.262,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "isso?",
+   "s": 126.262,
+   "e": 126.562,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_06"
+  },
+  {
+   "w": "Segunda",
+   "s": 127.657,
+   "e": 128.197,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "Samuel",
+   "s": 128.197,
+   "e": 128.717,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "9,",
+   "s": 128.717,
+   "e": 129.297,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "Davi",
+   "s": 129.772,
+   "e": 130.197,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "procurou",
+   "s": 130.197,
+   "e": 130.877,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "Mefibosete,",
+   "s": 131.172,
+   "e": 132.017,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "filho",
+   "s": 132.487,
+   "e": 132.727,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "de",
+   "s": 132.727,
+   "e": 132.927,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "Jônatas,",
+   "s": 132.927,
+   "e": 133.627,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "que",
+   "s": 133.872,
+   "e": 133.977,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "tinha",
+   "s": 133.977,
+   "e": 134.257,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "deficiência",
+   "s": 134.257,
+   "e": 135.197,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "nos",
+   "s": 135.197,
+   "e": 135.397,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "pés.",
+   "s": 135.397,
+   "e": 135.797,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "Mesmo",
+   "s": 136.337,
+   "e": 136.812,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "demonstrando",
+   "s": 136.812,
+   "e": 137.612,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "insegurança",
+   "s": 137.612,
+   "e": 138.412,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "diante",
+   "s": 138.412,
+   "e": 138.852,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "do",
+   "s": 138.852,
+   "e": 139.032,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "rei,",
+   "s": 139.032,
+   "e": 139.332,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "Mefibosete",
+   "s": 139.607,
+   "e": 140.562,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "recebeu",
+   "s": 140.878,
+   "e": 141.443,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "acolhimento",
+   "s": 141.443,
+   "e": 142.363,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "e",
+   "s": 142.363,
+   "e": 142.689,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "um",
+   "s": 142.854,
+   "e": 142.994,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "lugar",
+   "s": 142.994,
+   "e": 143.334,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "permanente",
+   "s": 143.334,
+   "e": 144.194,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "à",
+   "s": 144.194,
+   "e": 144.354,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "mesa.",
+   "s": 144.354,
+   "e": 144.654,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "Davi",
+   "s": 145.039,
+   "e": 145.444,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "nos",
+   "s": 145.444,
+   "e": 145.624,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "ensina",
+   "s": 145.624,
+   "e": 146.164,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "que",
+   "s": 146.164,
+   "e": 146.424,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "incluir",
+   "s": 146.424,
+   "e": 147.144,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "também",
+   "s": 147.144,
+   "e": 147.469,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "é",
+   "s": 147.744,
+   "e": 148.024,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "reconhecer",
+   "s": 148.024,
+   "e": 148.744,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "o",
+   "s": 148.744,
+   "e": 149.004,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "valor",
+   "s": 149.004,
+   "e": 149.444,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "e",
+   "s": 149.444,
+   "e": 149.849,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "a",
+   "s": 150.004,
+   "e": 150.144,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "dignidade",
+   "s": 150.144,
+   "e": 150.804,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "de",
+   "s": 150.804,
+   "e": 150.964,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "alguém.",
+   "s": 150.964,
+   "e": 151.284,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_07"
+  },
+  {
+   "w": "Keller",
+   "s": 152.509,
+   "e": 152.909,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "perdeu",
+   "s": 152.909,
+   "e": 153.629,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "a",
+   "s": 153.629,
+   "e": 153.749,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "visão",
+   "s": 153.749,
+   "e": 154.069,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "e",
+   "s": 154.069,
+   "e": 154.249,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "a",
+   "s": 154.249,
+   "e": 154.309,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "audição",
+   "s": 154.309,
+   "e": 154.769,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "ainda",
+   "s": 154.769,
+   "e": 155.269,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "pequena.",
+   "s": 155.269,
+   "e": 155.829,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "educação",
+   "s": 156.299,
+   "e": 156.819,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "acessível",
+   "s": 156.819,
+   "e": 157.479,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "e",
+   "s": 157.479,
+   "e": 157.639,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "apoio,",
+   "s": 157.639,
+   "e": 158.119,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "tornou",
+   "s": 158.484,
+   "e": 158.919,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "-se",
+   "s": 158.919,
+   "e": 159.079,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "escritora,",
+   "s": 159.079,
+   "e": 160.299,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "formou",
+   "s": 160.664,
+   "e": 161.119,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "-se",
+   "s": 161.119,
+   "e": 161.299,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "na",
+   "s": 161.299,
+   "e": 161.439,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "universidade",
+   "s": 161.439,
+   "e": 162.239,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "e",
+   "s": 162.239,
+   "e": 162.599,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "defendeu",
+   "s": 162.599,
+   "e": 163.239,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "direitos.",
+   "s": 163.239,
+   "e": 163.819,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "Sua",
+   "s": 164.304,
+   "e": 164.629,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "história",
+   "s": 164.629,
+   "e": 164.909,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "mostra",
+   "s": 164.909,
+   "e": 165.409,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "a",
+   "s": 165.409,
+   "e": 165.749,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "importância",
+   "s": 165.749,
+   "e": 166.589,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "de",
+   "s": 166.589,
+   "e": 166.829,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "oportunidades",
+   "s": 166.829,
+   "e": 167.709,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "reais.",
+   "s": 167.709,
+   "e": 168.149,
+   "take": "Narrac_a_o_Educac_a_o_Inclusiva_08"
+  },
+  {
+   "w": "Brasil,",
+   "s": 169.314,
+   "e": 169.734,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "a",
+   "s": 170.094,
+   "e": 170.334,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Lei",
+   "s": 170.334,
+   "e": 170.514,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Brasileira",
+   "s": 170.514,
+   "e": 171.294,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "de",
+   "s": 171.294,
+   "e": 171.494,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Inclusão",
+   "s": 171.494,
+   "e": 172.274,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "garante",
+   "s": 172.274,
+   "e": 172.914,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "direitos,",
+   "s": 172.914,
+   "e": 173.654,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "acessibilidade,",
+   "s": 174.054,
+   "e": 175.054,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "educação",
+   "s": 175.574,
+   "e": 176.254,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "e",
+   "s": 176.254,
+   "e": 176.534,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "participação",
+   "s": 176.534,
+   "e": 177.574,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "em",
+   "s": 177.574,
+   "e": 177.874,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "igualdade",
+   "s": 177.874,
+   "e": 178.734,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "de",
+   "s": 178.734,
+   "e": 178.914,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "condições.",
+   "s": 178.914,
+   "e": 179.474,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "nos",
+   "s": 180.479,
+   "e": 180.719,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "lembra",
+   "s": 180.719,
+   "e": 181.099,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "que",
+   "s": 181.099,
+   "e": 181.319,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "a",
+   "s": 181.319,
+   "e": 181.479,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "sociedade",
+   "s": 181.479,
+   "e": 181.939,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "deve",
+   "s": 181.939,
+   "e": 182.479,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "eliminar",
+   "s": 182.479,
+   "e": 183.139,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "barreiras",
+   "s": 183.139,
+   "e": 183.799,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "para",
+   "s": 183.799,
+   "e": 184.154,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "que",
+   "s": 184.339,
+   "e": 184.539,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "todas",
+   "s": 184.784,
+   "e": 185.159,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "as",
+   "s": 185.159,
+   "e": 185.479,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "pessoas",
+   "s": 185.479,
+   "e": 185.979,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "possam",
+   "s": 185.979,
+   "e": 186.539,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "participar.",
+   "s": 186.539,
+   "e": 187.179,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "E",
+   "s": 187.844,
+   "e": 188.179,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "o",
+   "s": 188.179,
+   "e": 188.279,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "seu",
+   "s": 188.279,
+   "e": 188.399,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Clube",
+   "s": 188.399,
+   "e": 188.679,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "de",
+   "s": 188.679,
+   "e": 188.819,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Desbravadores?",
+   "s": 188.819,
+   "e": 189.439,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Ele",
+   "s": 189.839,
+   "e": 190.084,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Ele",
+   "s": 190.144,
+   "e": 190.319,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "é",
+   "s": 190.319,
+   "e": 190.459,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "inclusivo?",
+   "s": 190.459,
+   "e": 190.979,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Observe",
+   "s": 191.584,
+   "e": 192.259,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "as",
+   "s": 192.259,
+   "e": 192.659,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "barreiras,",
+   "s": 192.659,
+   "e": 193.279,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "proponha",
+   "s": 193.779,
+   "e": 194.239,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "melhorias",
+   "s": 194.239,
+   "e": 195.059,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "e",
+   "s": 195.059,
+   "e": 195.379,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "apresente",
+   "s": 195.379,
+   "e": 196.079,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "suas",
+   "s": 196.079,
+   "e": 196.379,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "ideias",
+   "s": 196.379,
+   "e": 196.979,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "à",
+   "s": 196.979,
+   "e": 197.179,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "diretoria.",
+   "s": 197.179,
+   "e": 197.739,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Porque",
+   "s": 197.739,
+   "e": 198.304,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "inclusão",
+   "s": 198.619,
+   "e": 199.459,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "é",
+   "s": 199.85,
+   "e": 199.99,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "apenas",
+   "s": 199.99,
+   "e": 200.41,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "receber",
+   "s": 200.41,
+   "e": 200.95,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "alguém,",
+   "s": 200.95,
+   "e": 201.57,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "garantir",
+   "s": 202.08,
+   "e": 202.78,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "que",
+   "s": 202.78,
+   "e": 203.0,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "essa",
+   "s": 203.0,
+   "e": 203.3,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "pessoa",
+   "s": 203.3,
+   "e": 203.84,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "participe.",
+   "s": 203.84,
+   "e": 204.74,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Seja",
+   "s": 204.98,
+   "e": 205.285,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "Seja",
+   "s": 205.345,
+   "e": 205.7,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "você",
+   "s": 205.7,
+   "e": 206.06,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "dessa",
+   "s": 206.851,
+   "e": 207.331,
+   "take": "Narrac_a_o_09_e_10"
+  },
+  {
+   "w": "mudança.",
+   "s": 207.331,
+   "e": 207.891,
+   "take": "Narrac_a_o_09_e_10"
+  }
+ ]
+}

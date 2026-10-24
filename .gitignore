@@ -1,0 +1,25 @@
+# dependencies / build caches
+node_modules/
+__pycache__/
+*.pyc
+# regenerable audio intermediates (float32 working files)
+EDUCACAO_INCLUSIVA_WORK/audio/work/
+EDUCACAO_INCLUSIVA_WORK/audio/takes_original/
+EDUCACAO_INCLUSIVA_WORK/audio/clean_takes/
+EDUCACAO_INCLUSIVA_WORK/audio/clean_takes_vad/
+EDUCACAO_INCLUSIVA_WORK/audio/qa_*/
+EDUCACAO_INCLUSIVA_WORK/audio/voice_edited_natural_mono.wav
+EDUCACAO_INCLUSIVA_WORK/audio/music_mixlevel.wav
+# third-party model used only for the denoise comparison (not redistributed)
+EDUCACAO_INCLUSIVA_WORK/assets/generated_assets/models/
+# render scratch (HyperFrames intermediates, preview frames, single snapshots)
+EDUCACAO_INCLUSIVA_WORK/renders/final/work-*
+EDUCACAO_INCLUSIVA_WORK/renders/final/.hf_*
+EDUCACAO_INCLUSIVA_WORK/renders/final/hf_*.mp4
+EDUCACAO_INCLUSIVA_WORK/renders/scene_previews/motion/
+EDUCACAO_INCLUSIVA_WORK/renders/scene_previews/*.png
+!EDUCACAO_INCLUSIVA_WORK/renders/scene_previews/*sheet*.png
+!EDUCACAO_INCLUSIVA_WORK/renders/scene_previews/scan_*.png
+EDUCACAO_INCLUSIVA_WORK/renders/character_tests/*.png
+!EDUCACAO_INCLUSIVA_WORK/renders/character_tests/*sheet*.png
+EDUCACAO_INCLUSIVA_WORK/hyperframes/test/

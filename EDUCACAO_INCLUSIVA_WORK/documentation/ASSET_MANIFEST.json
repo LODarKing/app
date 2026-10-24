@@ -1,0 +1,150 @@
+{
+ "input_audio": [
+  {
+   "file": "assets/original_audio/Narrac_a_o_09_e_10.m4a",
+   "sha256": "0e7358e7e0eea47e",
+   "source": "user recording (narration)"
+  },
+  {
+   "file": "assets/original_audio/Narrac_a_o_Educac_a_o_Inclusiva_01.m4a",
+   "sha256": "5c331c4633e27cf8",
+   "source": "user recording (narration)"
+  },
+  {
+   "file": "assets/original_audio/Narrac_a_o_Educac_a_o_Inclusiva_02.m4a",
+   "sha256": "722e91a38210249a",
+   "source": "user recording (narration)"
+  },
+  {
+   "file": "assets/original_audio/Narrac_a_o_Educac_a_o_Inclusiva_03.m4a",
+   "sha256": "93f6a08bba7cc582",
+   "source": "user recording (narration)"
+  },
+  {
+   "file": "assets/original_audio/Narrac_a_o_Educac_a_o_Inclusiva_04.m4a",
+   "sha256": "64e7251ab3c5395b",
+   "source": "user recording (narration)"
+  },
+  {
+   "file": "assets/original_audio/Narrac_a_o_Educac_a_o_Inclusiva_05.m4a",
+   "sha256": "69a731f6650789ec",
+   "source": "user recording (narration)"
+  },
+  {
+   "file": "assets/original_audio/Narrac_a_o_Educac_a_o_Inclusiva_06.m4a",
+   "sha256": "6df4c7b79cf5054f",
+   "source": "user recording (narration)"
+  },
+  {
+   "file": "assets/original_audio/Narrac_a_o_Educac_a_o_Inclusiva_07.m4a",
+   "sha256": "7740981b6907fba9",
+   "source": "user recording (narration)"
+  },
+  {
+   "file": "assets/original_audio/Narrac_a_o_Educac_a_o_Inclusiva_08.m4a",
+   "sha256": "a78a5484c6e42262",
+   "source": "user recording (narration)"
+  }
+ ],
+ "fonts": [
+  {
+   "file": "assets/generated_assets/fonts/Poppins-*.ttf",
+   "license": "SIL Open Font License 1.1 (OFL.txt included)",
+   "source": "github.com/google/fonts"
+  }
+ ],
+ "libraries": [
+  {
+   "name": "three",
+   "version": "0.180.0",
+   "license": "MIT"
+  },
+  {
+   "name": "gsap",
+   "version": "3.13.0",
+   "license": "GSAP Standard License (no-charge)"
+  },
+  {
+   "name": "hyperframes",
+   "version": "0.8.150",
+   "license": "Apache-2.0"
+  },
+  {
+   "name": "esbuild",
+   "version": "0.25.10",
+   "license": "MIT"
+  },
+  {
+   "name": "faster-whisper (large-v3-turbo)",
+   "license": "MIT"
+  },
+  {
+   "name": "pedalboard",
+   "version": "0.9.26",
+   "license": "GPL-3.0"
+  },
+  {
+   "name": "Rubber Band Library / CLI",
+   "version": "3.3.0",
+   "license": "GPL-2.0+"
+  },
+  {
+   "name": "FFmpeg",
+   "version": "6.1.1"
+  },
+  {
+   "name": "NumPy / SciPy / librosa / pyloudnorm / soundfile"
+  }
+ ],
+ "generated_by_code": {
+  "characters": {
+   "file": "src/characters/humanoid.js + src/characters/cast.js",
+   "cast": [
+    "lucas",
+    "ana",
+    "pedro",
+    "clara",
+    "rafael",
+    "bia",
+    "theo",
+    "joao",
+    "lia",
+    "caio",
+    "nina",
+    "director",
+    "jesus",
+    "bethesdaMan",
+    "leader1",
+    "leader2",
+    "david",
+    "mefibosete",
+    "messenger",
+    "guest1",
+    "guest2",
+    "teacher",
+    "helenChild",
+    "anne",
+    "helenAdult",
+    "helenGrad"
+   ]
+  },
+  "rig": "src/rigs/ik.js (2-bone IK), joint hierarchy in humanoid.js",
+  "accessibility_objects": "src/objects/accessibility.js (manual wheelchair, power wheelchair, AAC tablet, long white cane, phone, Bible, documents, pencil)",
+  "icons_fx": "src/objects/fx.js",
+  "environments": "src/environments/outdoor.js, indoor.js, bible.js",
+  "scenes": "src/scenes/s01..s10, kit.js, ui.js",
+  "compositor": "src/core/stage.js",
+  "music": "src/audio/music.py (original, synthesised, no samples)",
+  "sfx": "src/audio/sfx.py (synthesised, no samples)",
+  "overlay_titles_subtitles": "tools/build_overlay.py -> hyperframes/main/index.html"
+ },
+ "not_used": [
+  "official Pathfinder logos/emblems (not obtained — no substitute emblem was drawn)",
+  "image cut-outs, stock art, generative video",
+  "synthetic voice"
+ ],
+ "standard_public_symbols": [
+  "International Symbol of Access (wheelchair pictogram) drawn as simple geometry on the ramp sign",
+  "sunflower lanyard (Lei 14.624/2023) drawn as a green strap with yellow flowers"
+ ]
+}

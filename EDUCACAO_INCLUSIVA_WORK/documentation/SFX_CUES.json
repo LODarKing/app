@@ -1,0 +1,366 @@
+[
+ {
+  "t": 12.716,
+  "sfx": "transition into scene 2"
+ },
+ {
+  "t": 33.354,
+  "sfx": "transition into scene 3"
+ },
+ {
+  "t": 51.207,
+  "sfx": "transition into scene 4"
+ },
+ {
+  "t": 69.615,
+  "sfx": "transition into scene 5"
+ },
+ {
+  "t": 88.523,
+  "sfx": "transition into scene 6"
+ },
+ {
+  "t": 108.38,
+  "sfx": "transition into scene 7"
+ },
+ {
+  "t": 129.52,
+  "sfx": "transition into scene 8"
+ },
+ {
+  "t": 144.187,
+  "sfx": "transition into scene 9"
+ },
+ {
+  "t": 160.255,
+  "sfx": "transition into scene 10"
+ },
+ {
+  "t": 0.25,
+  "sfx": "wheelchair rolling"
+ },
+ {
+  "t": 0.35,
+  "sfx": "footstep"
+ },
+ {
+  "t": 0.77,
+  "sfx": "footstep"
+ },
+ {
+  "t": 1.19,
+  "sfx": "footstep"
+ },
+ {
+  "t": 1.61,
+  "sfx": "footstep"
+ },
+ {
+  "t": 2.03,
+  "sfx": "footstep"
+ },
+ {
+  "t": 2.45,
+  "sfx": "footstep"
+ },
+ {
+  "t": 2.87,
+  "sfx": "footstep"
+ },
+ {
+  "t": 3.29,
+  "sfx": "footstep"
+ },
+ {
+  "t": 5.15,
+  "sfx": "warning sign pop"
+ },
+ {
+  "t": 7.15,
+  "sfx": "question mark pop"
+ },
+ {
+  "t": 13.466,
+  "sfx": "ramp appears"
+ },
+ {
+  "t": 14.366,
+  "sfx": "rolling up the ramp"
+ },
+ {
+  "t": 16.366,
+  "sfx": "board slides in"
+ },
+ {
+  "t": 19.516,
+  "sfx": "bricks drop"
+ },
+ {
+  "t": 19.816,
+  "sfx": "blocked"
+ },
+ {
+  "t": 20.316,
+  "sfx": "bricks scatter"
+ },
+ {
+  "t": 20.466,
+  "sfx": "accessibility bridge"
+ },
+ {
+  "t": 25.916,
+  "sfx": "node saúde"
+ },
+ {
+  "t": 26.816,
+  "sfx": "node ambiente"
+ },
+ {
+  "t": 27.716,
+  "sfx": "node participação"
+ },
+ {
+  "t": 28.466,
+  "sfx": "document"
+ },
+ {
+  "t": 30.666,
+  "sfx": "icon"
+ },
+ {
+  "t": 31.516,
+  "sfx": "icon"
+ },
+ {
+  "t": 32.666,
+  "sfx": "icon"
+ },
+ {
+  "t": 39.754,
+  "sfx": "quiz correct"
+ },
+ {
+  "t": 42.304,
+  "sfx": "sunflower lanyard"
+ },
+ {
+  "t": 50.004,
+  "sfx": "group cheer"
+ },
+ {
+  "t": 54.307,
+  "sfx": "unequal"
+ },
+ {
+  "t": 56.357,
+  "sfx": "padlock"
+ },
+ {
+  "t": 56.357,
+  "sfx": "padlock thud"
+ },
+ {
+  "t": 60.807,
+  "sfx": "tally"
+ },
+ {
+  "t": 61.027,
+  "sfx": "tally"
+ },
+ {
+  "t": 61.247,
+  "sfx": "tally"
+ },
+ {
+  "t": 66.107,
+  "sfx": "notification"
+ },
+ {
+  "t": 66.307,
+  "sfx": "notification"
+ },
+ {
+  "t": 66.507,
+  "sfx": "notification"
+ },
+ {
+  "t": 66.707,
+  "sfx": "notification"
+ },
+ {
+  "t": 66.907,
+  "sfx": "notification"
+ },
+ {
+  "t": 67.757,
+  "sfx": "stand up for respect"
+ },
+ {
+  "t": 70.065,
+  "sfx": "calendar page"
+ },
+ {
+  "t": 70.395,
+  "sfx": "calendar page"
+ },
+ {
+  "t": 70.725,
+  "sfx": "calendar page"
+ },
+ {
+  "t": 71.055,
+  "sfx": "calendar page"
+ },
+ {
+  "t": 72.065,
+  "sfx": "globe"
+ },
+ {
+  "t": 74.165,
+  "sfx": "document"
+ },
+ {
+  "t": 75.965,
+  "sfx": "signature"
+ },
+ {
+  "t": 77.665,
+  "sfx": "seal"
+ },
+ {
+  "t": 79.665,
+  "sfx": "value icon"
+ },
+ {
+  "t": 80.865,
+  "sfx": "value icon"
+ },
+ {
+  "t": 82.065,
+  "sfx": "value icon"
+ },
+ {
+  "t": 82.565,
+  "sfx": "board out"
+ },
+ {
+  "t": 86.265,
+  "sfx": "writing summary"
+ },
+ {
+  "t": 89.073,
+  "sfx": "bible opens"
+ },
+ {
+  "t": 97.773,
+  "sfx": "healing (gentle)"
+ },
+ {
+  "t": 108.83,
+  "sfx": "scroll unrolls"
+ },
+ {
+  "t": 133.62,
+  "sfx": "water pump"
+ },
+ {
+  "t": 133.82,
+  "sfx": "letter"
+ },
+ {
+  "t": 134.07,
+  "sfx": "letter"
+ },
+ {
+  "t": 134.32,
+  "sfx": "letter"
+ },
+ {
+  "t": 134.57,
+  "sfx": "letter"
+ },
+ {
+  "t": 134.82,
+  "sfx": "letter"
+ },
+ {
+  "t": 135.37,
+  "sfx": "typewriter"
+ },
+ {
+  "t": 137.02,
+  "sfx": "typewriter bell"
+ },
+ {
+  "t": 137.87,
+  "sfx": "caps tossed"
+ },
+ {
+  "t": 144.587,
+  "sfx": "map"
+ },
+ {
+  "t": 145.487,
+  "sfx": "pin"
+ },
+ {
+  "t": 147.987,
+  "sfx": "rights icon"
+ },
+ {
+  "t": 148.987,
+  "sfx": "rights icon"
+ },
+ {
+  "t": 149.987,
+  "sfx": "rights icon"
+ },
+ {
+  "t": 151.087,
+  "sfx": "rights icon"
+ },
+ {
+  "t": 152.187,
+  "sfx": "rights icon"
+ },
+ {
+  "t": 153.537,
+  "sfx": "board out"
+ },
+ {
+  "t": 156.087,
+  "sfx": "barrier crumbles"
+ },
+ {
+  "t": 162.005,
+  "sfx": "question"
+ },
+ {
+  "t": 164.055,
+  "sfx": "ramp ok"
+ },
+ {
+  "t": 165.105,
+  "sfx": "gate too narrow"
+ },
+ {
+  "t": 165.605,
+  "sfx": "writing proposals"
+ },
+ {
+  "t": 168.505,
+  "sfx": "proposal handed over"
+ },
+ {
+  "t": 174.205,
+  "sfx": "flag at the top"
+ },
+ {
+  "t": 175.605,
+  "sfx": "finale"
+ },
+ {
+  "t": 178.205,
+  "sfx": "end card"
+ }
+]

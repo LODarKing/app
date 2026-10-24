@@ -1,0 +1,9 @@
+{
+ "music_gain_db": -5.43,
+ "duck_db_max": -7.5,
+ "sfx_gain_db": -2.0,
+ "pre_lufs": -15.96,
+ "final_lufs": -14.0,
+ "limiter_max_gr_db": 5.96,
+ "limiter_time_over_1db_ms": 275
+}
