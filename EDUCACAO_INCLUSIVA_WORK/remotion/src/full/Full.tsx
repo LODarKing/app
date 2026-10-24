@@ -56,7 +56,7 @@ export const Full: React.FC<{ subs?: boolean; audio?: boolean; only?: number }> 
       {audio ? <Audio src={staticFile('completo_mix.wav')} /> : null}
       {layers}
       <CornerBadge t={t} />
-      {subs ? <GlobalCaptions t={t} hide={(tt) => tt < 0.95} /> : null}
+      {subs ? <GlobalCaptions t={t} hide={(tt) => tt < 0.95 || tt > 175.55} /> : null}
     </AbsoluteFill>
   );
 };

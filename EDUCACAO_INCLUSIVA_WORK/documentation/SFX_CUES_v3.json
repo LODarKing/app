@@ -1,0 +1,1154 @@
+[
+ {
+  "t": 12.716,
+  "sfx": "transição para a cena 2"
+ },
+ {
+  "t": 33.354,
+  "sfx": "transição para a cena 3"
+ },
+ {
+  "t": 51.207,
+  "sfx": "transição para a cena 4"
+ },
+ {
+  "t": 69.615,
+  "sfx": "transição para a cena 5"
+ },
+ {
+  "t": 88.523,
+  "sfx": "transição para a cena 6"
+ },
+ {
+  "t": 108.38,
+  "sfx": "transição para a cena 7"
+ },
+ {
+  "t": 129.52,
+  "sfx": "transição para a cena 8"
+ },
+ {
+  "t": 144.187,
+  "sfx": "transição para a cena 9"
+ },
+ {
+  "t": 160.255,
+  "sfx": "transição para a cena 10"
+ },
+ {
+  "t": 0.12,
+  "sfx": "letra IMAGINE"
+ },
+ {
+  "t": 0.165,
+  "sfx": "letra IMAGINE"
+ },
+ {
+  "t": 0.21,
+  "sfx": "letra IMAGINE"
+ },
+ {
+  "t": 0.255,
+  "sfx": "letra IMAGINE"
+ },
+ {
+  "t": 0.3,
+  "sfx": "letra IMAGINE"
+ },
+ {
+  "t": 0.345,
+  "sfx": "letra IMAGINE"
+ },
+ {
+  "t": 0.39,
+  "sfx": "letra IMAGINE"
+ },
+ {
+  "t": 0.75,
+  "sfx": "título da série"
+ },
+ {
+  "t": 0.86,
+  "sfx": "revelação"
+ },
+ {
+  "t": 1.5,
+  "sfx": "câmera sobe"
+ },
+ {
+  "t": 2.05,
+  "sfx": "confete"
+ },
+ {
+  "t": 2.1,
+  "sfx": "confete"
+ },
+ {
+  "t": 2.15,
+  "sfx": "confete"
+ },
+ {
+  "t": 2.2,
+  "sfx": "confete"
+ },
+ {
+  "t": 2.25,
+  "sfx": "confete"
+ },
+ {
+  "t": 2.3,
+  "sfx": "confete"
+ },
+ {
+  "t": 3.02,
+  "sfx": "participar"
+ },
+ {
+  "t": 3.25,
+  "sfx": "selo vai ao canto"
+ },
+ {
+  "t": 0.0,
+  "sfx": "cadeira de rodas rolando"
+ },
+ {
+  "t": 0.895,
+  "sfx": "impulso"
+ },
+ {
+  "t": 2.695,
+  "sfx": "impulso"
+ },
+ {
+  "t": 4.4,
+  "sfx": "mãos freiam o aro"
+ },
+ {
+  "t": 2.0,
+  "sfx": "aceno"
+ },
+ {
+  "t": 5.04,
+  "sfx": "barreira (pulso)"
+ },
+ {
+  "t": 5.72,
+  "sfx": "barreira (pulso)"
+ },
+ {
+  "t": 7.14,
+  "sfx": "ponto de interrogação"
+ },
+ {
+  "t": 10.75,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 10.78,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 10.81,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 10.84,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 10.87,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 10.9,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 10.93,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 10.96,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 10.99,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 11.02,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 11.05,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 11.08,
+  "sfx": "letra NINGUÉM FICA DE FORA"
+ },
+ {
+  "t": 11.0,
+  "sfx": "confete final da cena 1"
+ },
+ {
+  "t": 13.616,
+  "sfx": "pop"
+ },
+ {
+  "t": 15.416,
+  "sfx": "pop"
+ },
+ {
+  "t": 16.766,
+  "sfx": "pop"
+ },
+ {
+  "t": 17.016,
+  "sfx": "pop"
+ },
+ {
+  "t": 20.566,
+  "sfx": "pop"
+ },
+ {
+  "t": 25.916,
+  "sfx": "pop"
+ },
+ {
+  "t": 26.816,
+  "sfx": "pop"
+ },
+ {
+  "t": 27.666,
+  "sfx": "pop"
+ },
+ {
+  "t": 30.766,
+  "sfx": "pop"
+ },
+ {
+  "t": 31.566,
+  "sfx": "pop"
+ },
+ {
+  "t": 14.416,
+  "sfx": "≠ gira"
+ },
+ {
+  "t": 15.686,
+  "sfx": "incapacidade riscada"
+ },
+ {
+  "t": 18.266,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 18.426,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 18.586,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 18.746,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 18.906,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 19.066,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 19.226,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 19.386,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 19.546,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 19.706,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 19.866,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 20.026,
+  "sfx": "tijolo"
+ },
+ {
+  "t": 19.616,
+  "sfx": "BARREIRA"
+ },
+ {
+  "t": 20.316,
+  "sfx": "muro desmorona"
+ },
+ {
+  "t": 20.666,
+  "sfx": "acessibilidade"
+ },
+ {
+  "t": 23.416,
+  "sfx": "CIF"
+ },
+ {
+  "t": 28.516,
+  "sfx": "cartão da ONU"
+ },
+ {
+  "t": 32.766,
+  "sfx": "para todos"
+ },
+ {
+  "t": 34.154,
+  "sfx": "pop"
+ },
+ {
+  "t": 35.754,
+  "sfx": "tipo de deficiência"
+ },
+ {
+  "t": 36.604,
+  "sfx": "tipo de deficiência"
+ },
+ {
+  "t": 37.504,
+  "sfx": "tipo de deficiência"
+ },
+ {
+  "t": 38.554,
+  "sfx": "tipo de deficiência"
+ },
+ {
+  "t": 39.534,
+  "sfx": "tipo de deficiência"
+ },
+ {
+  "t": 40.054,
+  "sfx": "troca de quadro"
+ },
+ {
+  "t": 43.354,
+  "sfx": "cordão de girassol"
+ },
+ {
+  "t": 43.704,
+  "sfx": "brilho"
+ },
+ {
+  "t": 46.454,
+  "sfx": "pop"
+ },
+ {
+  "t": 47.354,
+  "sfx": "pop"
+ },
+ {
+  "t": 48.104,
+  "sfx": "pop"
+ },
+ {
+  "t": 49.304,
+  "sfx": "amigos acenam"
+ },
+ {
+  "t": 50.454,
+  "sfx": "respeitar as diferenças"
+ },
+ {
+  "t": 51.757,
+  "sfx": "DISCRIMINAÇÃO"
+ },
+ {
+  "t": 52.557,
+  "sfx": "balança"
+ },
+ {
+  "t": 54.207,
+  "sfx": "pop"
+ },
+ {
+  "t": 56.757,
+  "sfx": "DIREITOS NEGADOS"
+ },
+ {
+  "t": 58.307,
+  "sfx": "BULLYING"
+ },
+ {
+  "t": 59.307,
+  "sfx": "pop"
+ },
+ {
+  "t": 59.557,
+  "sfx": "calendário"
+ },
+ {
+  "t": 60.157,
+  "sfx": "repetição"
+ },
+ {
+  "t": 59.677,
+  "sfx": "calendário"
+ },
+ {
+  "t": 60.537,
+  "sfx": "repetição"
+ },
+ {
+  "t": 59.797,
+  "sfx": "calendário"
+ },
+ {
+  "t": 60.917,
+  "sfx": "repetição"
+ },
+ {
+  "t": 59.917,
+  "sfx": "calendário"
+ },
+ {
+  "t": 61.297,
+  "sfx": "repetição"
+ },
+ {
+  "t": 62.057,
+  "sfx": "pop"
+ },
+ {
+  "t": 63.257,
+  "sfx": "pop"
+ },
+ {
+  "t": 65.007,
+  "sfx": "pop"
+ },
+ {
+  "t": 66.007,
+  "sfx": "pop"
+ },
+ {
+  "t": 67.157,
+  "sfx": "virada"
+ },
+ {
+  "t": 67.757,
+  "sfx": "pop"
+ },
+ {
+  "t": 68.507,
+  "sfx": "COMBATER!"
+ },
+ {
+  "t": 70.015,
+  "sfx": "calendário"
+ },
+ {
+  "t": 70.115,
+  "sfx": "contador"
+ },
+ {
+  "t": 70.235,
+  "sfx": "contador"
+ },
+ {
+  "t": 70.355,
+  "sfx": "contador"
+ },
+ {
+  "t": 70.475,
+  "sfx": "contador"
+ },
+ {
+  "t": 70.595,
+  "sfx": "contador"
+ },
+ {
+  "t": 70.715,
+  "sfx": "contador"
+ },
+ {
+  "t": 70.835,
+  "sfx": "contador"
+ },
+ {
+  "t": 70.955,
+  "sfx": "contador"
+ },
+ {
+  "t": 71.075,
+  "sfx": "contador"
+ },
+ {
+  "t": 71.215,
+  "sfx": "1999"
+ },
+ {
+  "t": 72.865,
+  "sfx": "países"
+ },
+ {
+  "t": 72.945,
+  "sfx": "países"
+ },
+ {
+  "t": 73.025,
+  "sfx": "países"
+ },
+ {
+  "t": 73.105,
+  "sfx": "países"
+ },
+ {
+  "t": 73.185,
+  "sfx": "países"
+ },
+ {
+  "t": 73.265,
+  "sfx": "países"
+ },
+ {
+  "t": 73.345,
+  "sfx": "países"
+ },
+ {
+  "t": 73.425,
+  "sfx": "países"
+ },
+ {
+  "t": 73.505,
+  "sfx": "países"
+ },
+ {
+  "t": 73.585,
+  "sfx": "países"
+ },
+ {
+  "t": 73.665,
+  "sfx": "países"
+ },
+ {
+  "t": 73.745,
+  "sfx": "países"
+ },
+ {
+  "t": 74.215,
+  "sfx": "documento"
+ },
+ {
+  "t": 75.265,
+  "sfx": "assinatura"
+ },
+ {
+  "t": 76.065,
+  "sfx": "carimbo"
+ },
+ {
+  "t": 79.665,
+  "sfx": "valor"
+ },
+ {
+  "t": 80.915,
+  "sfx": "valor"
+ },
+ {
+  "t": 82.065,
+  "sfx": "valor"
+ },
+ {
+  "t": 82.665,
+  "sfx": "pop"
+ },
+ {
+  "t": 84.815,
+  "sfx": "pop"
+ },
+ {
+  "t": 86.365,
+  "sfx": "pop"
+ },
+ {
+  "t": 84.965,
+  "sfx": "balão do debate"
+ },
+ {
+  "t": 85.265,
+  "sfx": "balão do debate"
+ },
+ {
+  "t": 85.565,
+  "sfx": "balão do debate"
+ },
+ {
+  "t": 86.765,
+  "sfx": "resumo sendo escrito"
+ },
+ {
+  "t": 89.073,
+  "sfx": "Bíblia abre"
+ },
+ {
+  "t": 89.773,
+  "sfx": "luz da página"
+ },
+ {
+  "t": 89.973,
+  "sfx": "passos"
+ },
+ {
+  "t": 90.393,
+  "sfx": "passos"
+ },
+ {
+  "t": 90.813,
+  "sfx": "passos"
+ },
+ {
+  "t": 91.233,
+  "sfx": "passos"
+ },
+ {
+  "t": 91.653,
+  "sfx": "passos"
+ },
+ {
+  "t": 92.073,
+  "sfx": "passos"
+ },
+ {
+  "t": 89.873,
+  "sfx": "água do tanque"
+ },
+ {
+  "t": 93.523,
+  "sfx": "pop"
+ },
+ {
+  "t": 96.023,
+  "sfx": "pop"
+ },
+ {
+  "t": 96.723,
+  "sfx": "pop"
+ },
+ {
+  "t": 98.323,
+  "sfx": "cura (suave)"
+ },
+ {
+  "t": 100.573,
+  "sfx": "pop"
+ },
+ {
+  "t": 101.823,
+  "sfx": "pop"
+ },
+ {
+  "t": 103.523,
+  "sfx": "atenção à pessoa"
+ },
+ {
+  "t": 106.673,
+  "sfx": "pop"
+ },
+ {
+  "t": 107.873,
+  "sfx": "ideia"
+ },
+ {
+  "t": 108.93,
+  "sfx": "Bíblia abre"
+ },
+ {
+  "t": 109.63,
+  "sfx": "luz da página"
+ },
+ {
+  "t": 111.03,
+  "sfx": "pop"
+ },
+ {
+  "t": 113.13,
+  "sfx": "passos do mensageiro"
+ },
+ {
+  "t": 113.55,
+  "sfx": "passos do mensageiro"
+ },
+ {
+  "t": 113.97,
+  "sfx": "passos do mensageiro"
+ },
+ {
+  "t": 114.39,
+  "sfx": "passos do mensageiro"
+ },
+ {
+  "t": 114.81,
+  "sfx": "passos do mensageiro"
+ },
+ {
+  "t": 116.13,
+  "sfx": "corte"
+ },
+ {
+  "t": 120.68,
+  "sfx": "corte"
+ },
+ {
+  "t": 111.93,
+  "sfx": "pop"
+ },
+ {
+  "t": 113.33,
+  "sfx": "pop"
+ },
+ {
+  "t": 118.53,
+  "sfx": "pop"
+ },
+ {
+  "t": 120.13,
+  "sfx": "pop"
+ },
+ {
+  "t": 122.28,
+  "sfx": "pop"
+ },
+ {
+  "t": 126.43,
+  "sfx": "pop"
+ },
+ {
+  "t": 120.93,
+  "sfx": "acolhimento"
+ },
+ {
+  "t": 127.23,
+  "sfx": "coração"
+ },
+ {
+  "t": 131.17,
+  "sfx": "bomba d’água"
+ },
+ {
+  "t": 130.77,
+  "sfx": "pop"
+ },
+ {
+  "t": 133.82,
+  "sfx": "letra W-A-T-E-R"
+ },
+ {
+  "t": 134.06,
+  "sfx": "letra W-A-T-E-R"
+ },
+ {
+  "t": 134.3,
+  "sfx": "letra W-A-T-E-R"
+ },
+ {
+  "t": 134.54,
+  "sfx": "letra W-A-T-E-R"
+ },
+ {
+  "t": 134.78,
+  "sfx": "letra W-A-T-E-R"
+ },
+ {
+  "t": 135.32,
+  "sfx": "corte"
+ },
+ {
+  "t": 137.12,
+  "sfx": "corte"
+ },
+ {
+  "t": 139.67,
+  "sfx": "corte"
+ },
+ {
+  "t": 135.37,
+  "sfx": "máquina de escrever"
+ },
+ {
+  "t": 136.97,
+  "sfx": "sino da máquina"
+ },
+ {
+  "t": 137.62,
+  "sfx": "diploma"
+ },
+ {
+  "t": 138.27,
+  "sfx": "capelos"
+ },
+ {
+  "t": 139.77,
+  "sfx": "pop"
+ },
+ {
+  "t": 140.47,
+  "sfx": "porta se abre"
+ },
+ {
+  "t": 141.02,
+  "sfx": "porta se abre"
+ },
+ {
+  "t": 141.57,
+  "sfx": "porta se abre"
+ },
+ {
+  "t": 142.77,
+  "sfx": "oportunidades"
+ },
+ {
+  "t": 143.57,
+  "sfx": "brilho"
+ },
+ {
+  "t": 144.637,
+  "sfx": "mapa do Brasil"
+ },
+ {
+  "t": 145.687,
+  "sfx": "cartão da Lei"
+ },
+ {
+  "t": 147.537,
+  "sfx": "pop"
+ },
+ {
+  "t": 147.987,
+  "sfx": "direito"
+ },
+ {
+  "t": 148.987,
+  "sfx": "direito"
+ },
+ {
+  "t": 150.037,
+  "sfx": "direito"
+ },
+ {
+  "t": 151.037,
+  "sfx": "direito"
+ },
+ {
+  "t": 152.237,
+  "sfx": "pop"
+ },
+ {
+  "t": 153.587,
+  "sfx": "muro"
+ },
+ {
+  "t": 153.657,
+  "sfx": "muro"
+ },
+ {
+  "t": 153.727,
+  "sfx": "muro"
+ },
+ {
+  "t": 153.797,
+  "sfx": "muro"
+ },
+ {
+  "t": 153.867,
+  "sfx": "muro"
+ },
+ {
+  "t": 153.937,
+  "sfx": "muro"
+ },
+ {
+  "t": 156.187,
+  "sfx": "barreira eliminada"
+ },
+ {
+  "t": 156.837,
+  "sfx": "todos participam"
+ },
+ {
+  "t": 157.837,
+  "sfx": "pop"
+ },
+ {
+  "t": 161.205,
+  "sfx": "pop"
+ },
+ {
+  "t": 162.905,
+  "sfx": "pop"
+ },
+ {
+  "t": 163.655,
+  "sfx": "pop"
+ },
+ {
+  "t": 163.705,
+  "sfx": "lupa"
+ },
+ {
+  "t": 165.605,
+  "sfx": "projeto"
+ },
+ {
+  "t": 165.905,
+  "sfx": "desenho da rampa"
+ },
+ {
+  "t": 167.155,
+  "sfx": "proposta"
+ },
+ {
+  "t": 167.505,
+  "sfx": "item da proposta"
+ },
+ {
+  "t": 167.805,
+  "sfx": "item da proposta"
+ },
+ {
+  "t": 168.105,
+  "sfx": "item da proposta"
+ },
+ {
+  "t": 168.555,
+  "sfx": "APROVADO!"
+ },
+ {
+  "t": 169.455,
+  "sfx": "corte para a rampa"
+ },
+ {
+  "t": 169.605,
+  "sfx": "construção da rampa"
+ },
+ {
+  "t": 169.855,
+  "sfx": "construção da rampa"
+ },
+ {
+  "t": 170.105,
+  "sfx": "construção da rampa"
+ },
+ {
+  "t": 170.355,
+  "sfx": "construção da rampa"
+ },
+ {
+  "t": 170.605,
+  "sfx": "rampa pronta"
+ },
+ {
+  "t": 170.805,
+  "sfx": "Theo sobe a rampa"
+ },
+ {
+  "t": 171.005,
+  "sfx": "impulso"
+ },
+ {
+  "t": 171.525,
+  "sfx": "impulso"
+ },
+ {
+  "t": 172.045,
+  "sfx": "impulso"
+ },
+ {
+  "t": 172.565,
+  "sfx": "impulso"
+ },
+ {
+  "t": 173.085,
+  "sfx": "impulso"
+ },
+ {
+  "t": 173.605,
+  "sfx": "impulso"
+ },
+ {
+  "t": 174.125,
+  "sfx": "impulso"
+ },
+ {
+  "t": 174.645,
+  "sfx": "impulso"
+ },
+ {
+  "t": 175.005,
+  "sfx": "chegou à sede!"
+ },
+ {
+  "t": 175.105,
+  "sfx": "confete"
+ },
+ {
+  "t": 175.155,
+  "sfx": "confete"
+ },
+ {
+  "t": 175.205,
+  "sfx": "confete"
+ },
+ {
+  "t": 175.255,
+  "sfx": "confete"
+ },
+ {
+  "t": 175.305,
+  "sfx": "confete"
+ },
+ {
+  "t": 175.355,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.005,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.055,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.105,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.155,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.205,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.255,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.205,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.255,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.305,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.355,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.405,
+  "sfx": "confete"
+ },
+ {
+  "t": 177.455,
+  "sfx": "confete"
+ },
+ {
+  "t": 175.555,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.585,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.615,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.645,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.675,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.705,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.735,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.765,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.795,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.825,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.855,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.885,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.915,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.945,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 175.975,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 176.005,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 176.035,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 176.065,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 176.095,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 176.125,
+  "sfx": "letra do título final"
+ },
+ {
+  "t": 177.505,
+  "sfx": "emblema final"
+ }
+]
