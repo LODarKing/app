@@ -85,7 +85,7 @@ const Arm: React.FC<{ rig: KidRig; side: 'L' | 'R'; p: ArmPose; id: string }> = 
   );
 };
 
-export const FrontKid: React.FC<{ rig: KidRig; pose: KidPose; id: string }> = ({ rig, pose, id }) => {
+export const FrontKid: React.FC<{ rig: KidRig; pose: KidPose; id: string; accessory?: React.ReactNode }> = ({ rig, pose, id, accessory }) => {
   const parts = rig.data.parts;
   const head = P(parts.head);
   const x = pose.expr;
@@ -102,6 +102,7 @@ export const FrontKid: React.FC<{ rig: KidRig; pose: KidPose; id: string }> = ({
           <Traced part={parts[rig.hipsPart]} />
         </g>
         <Traced part={parts.torso} />
+        {accessory}
         {(['L', 'R'] as const).map((sd) => { const A = rig.arms[sd]; return <ellipse key={sd} cx={A.S[0]} cy={A.S[1] + A.r[0] * 0.2} rx={A.r[0] * 1.15} ry={A.r[0] * 1.05} fill={rig.cloth.shirt} />; })}
         {pose.armR.sh > -60 ? <Arm rig={rig} side="R" p={pose.armR} id={id} /> : null}
         {pose.armL.sh < 60 ? <Arm rig={rig} side="L" p={pose.armL} id={id} /> : null}
