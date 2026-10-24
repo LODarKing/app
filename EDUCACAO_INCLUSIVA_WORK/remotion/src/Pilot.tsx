@@ -81,21 +81,27 @@ function kidPose(t: number, base: { x: number; scale: number; walk: Walk; phase:
   const breath = Math.sin(t * 2.1 + base.phase);
   const bob = 3 * breath - 14 * lift * ws.moving;
   // waving with the screen-left arm
-  const w = ss((t - base.wave[0]) / 0.35) * (1 - ss((t - (base.wave[1] - 0.35)) / 0.35));
+  const up = outBack((t - base.wave[0] - 0.08) / 0.42), down = ss((t - (base.wave[1] - 0.4)) / 0.4);
+  const antic = Math.sin(clamp((t - base.wave[0]) / 0.12) * Math.PI) * 0.06;   // small dip before the arm rises
+  const w = clamp(up * (1 - down) - antic, -0.1, 1.1);
   // waving arm (mirrored angles for the screen-right arm)
   const m = base.waveSide === 'L' ? 1 : -1;
   const waving: ArmPose = {
-    sh: m * lerp(2 + 1.5 * breath, 138, w) + (ws.moving ? 8 * step : 0),
-    el: m * lerp(0, 28 + 20 * Math.sin(t * 11 + base.phase), w),
-    wr: m * lerp(0, -10 + 8 * Math.sin(t * 11 + base.phase - 0.7), w),
+    sh: m * lerp(2 + 1.5 * breath, 146 + 4 * Math.sin(t * 11 + base.phase - 1.2), w) + (ws.moving ? 8 * step : 0),
+    el: m * lerp(0, 16 + 22 * Math.sin(t * 11 + base.phase), w),
+    wr: m * lerp(0, -6 + 12 * Math.sin(t * 11 + base.phase - 0.8), w),
     open: clamp((w - 0.3) / 0.4),
   };
   const other: ArmPose = { sh: -m * (2 + 1.5 * breath) - (ws.moving ? 8 * step : 0), el: ws.moving ? -6 * m : 0, wr: 0, open: 0 };
-  const armL = m === 1 ? waving : other, armR = m === 1 ? other : waving;
+  let armL = m === 1 ? waving : other, armR = m === 1 ? other : waving;
+  if (base.rig === 'd') {
+    const gst = outBack((t - 9.05) / 0.5) * (1 - ss((t - 10.4) / 0.25));
+    armL = { sh: lerp(armL.sh, 58 + 3 * Math.sin(t * 2.4), gst), el: lerp(armL.el, -22, gst), wr: lerp(armL.wr, -18, gst), open: clamp(gst * 1.6) };
+  }
   const lean = keys(t, [[0, 0], [4.8, 0], [5.6, -1.5], [8.7, -1.5], [9.0, 0]]) + 0.8 * Math.sin(t * 1.2 + base.phase) + (ws.moving ? -3 : 0);
   const g = base.rig === 'g';
-  const head = keys(t, [[0, g ? -3 : 3], [1.0, -2], [2.9, -4], [4.8, -2], [5.6, -6], [7.1, -6], [7.5, g ? -8 : 8], [8.6, g ? -8 : 8], [9.0, -4], [10.6, -5]]) + 1.2 * Math.sin(t * 1.7 + base.phase);
-  const look = keys<number[]>(t, [[0, [g ? -6 : 6, 0]], [0.9, [-6, 1]], [4.6, [-6, 2]], [5.4, [-5, 7]], [7.2, [-5, 7]], [7.6, [g ? -7 : 7, 1]], [8.6, [g ? -7 : 7, 1]], [8.9, [-6, 3]], [10.6, [-7, 3]]]) as [number, number];
+  const head = keys(t, [[0, g ? -3 : 3], [1.0, -2], [2.9, -4], [4.8, -2], [5.6, -6], [7.1, -6], [7.5, g ? -8 : 8], [8.6, g ? -8 : 8], [9.0, -5], [9.6, g ? -6 : -3], [9.85, g ? -2 : 1], [10.05, g ? -4 : -2], [10.6, -3]]) + 1.2 * Math.sin(t * 1.7 + base.phase);
+  const look = keys<number[]>(t, [[0, [g ? -6 : 6, 0]], [0.9, [-6, 1]], [4.6, [-6, 2]], [5.4, [-5, 7]], [7.2, [-5, 7]], [7.6, [g ? -7 : 7, 1]], [8.6, [g ? -7 : 7, 1]], [8.9, [-6, 4]], [9.7, [-6, 4]], [10.05, [0, 1]], [10.6, [0, 1]]]) as [number, number];
   const expr: Expr = {
     smile: keys(t, [[0, 0.8], [4.9, 0.75], [5.7, -0.3], [8.7, -0.3], [9.2, 0.45], [10.6, 0.6]]),
     open: keys(t, [[0, 0.45], [1.2, 0.85], [3.0, 0.55], [4.9, 0.35], [5.7, 0.02], [8.7, 0.02], [9.2, 0.35], [10.6, 0.3]]),
@@ -105,14 +111,14 @@ function kidPose(t: number, base: { x: number; scale: number; walk: Walk; phase:
   };
   return { x, y, scale: s, bob, lean, head, armL, armR, legL: ws.moving ? legL : leg0, legR: ws.moving ? legR : leg0, expr, skirt: base.rig === 'd' ? 1.2 * Math.sin(t * 2.2) + (ws.moving ? 3 * step : 0) : 0 };
 }
-const GIRL_B = { x: 665, scale: TIMING.GIRL_SCALE, walk: { t0: 8.95, x0: 665, x1: 400, dur: 1.65, stride: 0.33 }, phase: 1.3, wave: [1.45, 3.05] as [number, number], rig: 'd' as const, waveSide: 'L' as const };
-const GAB_B = { x: 785, scale: TIMING.GAB_SCALE, walk: { t0: 9.5, x0: 785, x1: 650, dur: 1.1, stride: 0.33 }, phase: 0, wave: [1.15, 2.9] as [number, number], rig: 'g' as const, waveSide: 'R' as const };
+const GIRL_B = { x: 640, scale: TIMING.GIRL_SCALE, walk: { t0: 99, x0: 640, x1: 640, dur: 1, stride: 0.33 }, phase: 1.3, wave: [1.45, 3.05] as [number, number], rig: 'd' as const, waveSide: 'L' as const };
+const GAB_B = { x: 850, scale: TIMING.GAB_SCALE, walk: { t0: 99, x0: 850, x1: 850, dur: 1, stride: 0.33 }, phase: 0, wave: [1.15, 2.9] as [number, number], rig: 'g' as const, waveSide: 'R' as const };
 
 // ---------- camera ----------
 function camAt(t: number): Cam {
   const c = keys<number[]>(t, [
-    [0, [430, -440, 0.93]], [3.6, [420, -415, 0.96]], [4.6, [385, -392, 0.98]], [6.7, [380, -382, 1.01]],
-    [7.2, [110, -330, 1.55]], [8.65, [105, -335, 1.6]], [9.45, [360, -440, 1.08]], [10.6, [380, -450, 1.04]],
+    [0, [430, -440, 0.93]], [3.6, [420, -415, 0.96]], [4.6, [393, -392, 0.955]], [6.7, [390, -385, 0.975]],
+    [7.2, [110, -330, 1.55]], [8.65, [105, -335, 1.6]], [9.5, [392, -425, 0.96]], [10.6, [395, -430, 0.94]],
   ]);
   return { x: c[0] + 5 * Math.sin(t * 0.7) + 2 * Math.sin(t * 1.9), y: c[1] + 4 * Math.sin(t * 0.9 + 1) + 2 * Math.sin(t * 2.3), zoom: c[2] };
 }
@@ -141,8 +147,8 @@ export const Pilot: React.FC<{ subs?: boolean }> = ({ subs = true }) => {
         <SetBack cam={cam} t={t} />
         <g transform={camT(cam, 1)}>
           {shadow(dp.x, dp.y, 70)}{shadow(gp.x, gp.y, 78)}{shadow(tp.x + 70, 0, 150)}
-          <FrontKid rig={GABRIEL} pose={gp} id="gab" />
           <FrontKid rig={GIRL} pose={dp} id="girl" />
+          <FrontKid rig={GABRIEL} pose={gp} id="gab" />
           <Theo pose={tp} id="theo" />
           {/* the barrier: the stairs are highlighted, never the person */}
           {bar > 0.001 ? <g opacity={bar}>

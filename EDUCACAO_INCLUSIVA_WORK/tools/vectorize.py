@@ -92,14 +92,22 @@ def run(name):
     for c in cfg.get('drop_near', []):
         for k, hx in enumerate(hexes):
             if dist_hex(hx, c) < cfg.get('drop_tol', 18): lbl[lbl == k] = -1
+    # light anti-aliasing fringes on the outer silhouette -> background
+    if cfg.get('edge_clean', True):
+        bg = (lbl < 0).astype(np.uint8)
+        near_bg = cv2.dilate(bg, np.ones((5, 5), np.uint8)).astype(bool)
+        for k, hx in enumerate(hexes):
+            L = hex2lab(hx)[0] * 100 / 255
+            if L > 90: lbl[(lbl == k) & near_bg] = -1
     # repaint regions: [polygon, 'nearest-to' hex] -> label of nearest palette entry
     for pts, col in cfg.get('repaint', []):
         k = nearest(hexes, col); m = poly_mask(lbl.shape, pts) & (lbl >= 0)
         lbl[m] = k
     # part assignment (first match wins, in listed priority order)
-    taken = np.zeros(lbl.shape, bool); parts = {}
+    taken = np.zeros(lbl.shape, bool); parts = {}; part_fill = {}
     for pname, spec in cfg['parts'].items():
-        pm = poly_mask(lbl.shape, spec['poly']) & ~taken & (lbl >= 0)
+        pm = poly_mask(lbl.shape, spec['poly']) & (lbl >= 0)
+        if not spec.get('shared'): pm &= ~taken      # 'shared' parts may extend under earlier parts
         if spec.get('only'):  # restrict to colours near the listed ones
             ok = np.zeros(lbl.shape, bool)
             for col in spec['only']:
@@ -108,6 +116,20 @@ def run(name):
             pm &= ok
         for col in spec.get('exclude', []):
             pm &= lbl != nearest(hexes, col)
+        # 'inpaint_under': pixels of the listed (front) parts inside this part's polygon are filled with
+        # the nearest colour of this part, so nothing opens up behind a limb when it moves
+        if spec.get('inpaint_under'):
+            under = np.zeros(lbl.shape, bool)
+            for other in spec['inpaint_under']: under |= parts.get(other, np.zeros(lbl.shape, bool))
+            under &= poly_mask(lbl.shape, spec['poly'])
+            if under.any() and pm.any():
+                src = (~pm).astype(np.uint8)
+                _, idx = cv2.distanceTransformWithLabels(src, cv2.DIST_L2, 5, labelType=cv2.DIST_LABEL_PIXEL)
+                ys, xs = np.nonzero(pm); lab_of = np.zeros(idx.max() + 1, np.int32)
+                lab_of[idx[ys, xs]] = lbl[ys, xs]
+                fill_lbl = lab_of[idx]
+                part_fill[pname] = (under, fill_lbl)
+                pm = pm | under
         taken |= pm
         parts[pname] = pm
     out = {'size': [int(W * OUT_SCALE), int(H * OUT_SCALE)], 'palette': hexes, 'parts': {}}
@@ -118,7 +140,12 @@ def run(name):
         for i in range(1, n):
             if st[i, cv2.CC_STAT_AREA] < cfg.get('min_island', 60): pm[cc == i] = False
         parts[pname] = pm
+    base_lbl = lbl
     for pname, pm in parts.items():
+        lbl = base_lbl
+        if pname in part_fill:
+            under, fill_lbl = part_fill[pname]
+            lbl = base_lbl.copy(); lbl[under] = fill_lbl[under]
         ks = [k for k in range(K) if (pm & (lbl == k)).sum() > 12]
         # stacking order: by area (desc) inside this part
         ks.sort(key=lambda k: -(pm & (lbl == k)).sum())

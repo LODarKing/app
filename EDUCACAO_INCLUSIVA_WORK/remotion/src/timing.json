@@ -1,9 +1,38 @@
 {
-  "AXLE_START": -600, "AXLE_STOP": -60, "T_STOP": 4.45,
-  "THEO_SCALE": 0.45, "GAB_SCALE": 0.468, "GIRL_SCALE": 0.298,
-  "CONTACT": 1.08, "CYCLE": 2.6, "A_GRAB": -1.955,
-  "R_TIRE": 222,
-  "GIRL_WALK": [8.95, 1.65, 0.33], "GAB_WALK": [9.5, 1.1, 0.33],
-  "WAVES": {"gab": [1.15, 2.9], "girl": [1.45, 3.05]},
-  "BARRIER": [5.04, 5.72], "QUESTION": 7.14, "DUR": 10.6
+ "AXLE_START": -600,
+ "AXLE_STOP": -60,
+ "T_STOP": 4.45,
+ "THEO_SCALE": 0.45,
+ "GAB_SCALE": 0.468,
+ "GIRL_SCALE": 0.298,
+ "CONTACT": 1.08,
+ "CYCLE": 2.6,
+ "A_GRAB": -1.955,
+ "R_TIRE": 222,
+ "GIRL_WALK": [
+  99,
+  0,
+  0.33
+ ],
+ "GAB_WALK": [
+  99,
+  0,
+  0.33
+ ],
+ "WAVES": {
+  "gab": [
+   1.15,
+   2.9
+  ],
+  "girl": [
+   1.45,
+   3.05
+  ]
+ },
+ "BARRIER": [
+  5.04,
+  5.72
+ ],
+ "QUESTION": 7.14,
+ "DUR": 10.6
 }

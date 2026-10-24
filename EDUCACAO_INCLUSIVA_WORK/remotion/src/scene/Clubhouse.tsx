@@ -174,9 +174,9 @@ export const SetBack: React.FC<{ cam: Cam; t: number }> = ({ cam, t }) => {
         <path d={shape([[900, -600], [960, -676], [990, -676], [920, -580]])} fill="#FFFFFF" opacity={0.45} />
         <circle cx={1030} cy={-470} r={10} fill="#E9B23A" stroke="#9C6B10" strokeWidth={2} />
         {/* welcome sign */}
-        <path d={rrect(800, -940, 320, 150, 14)} fill={K.sign} stroke={K.lineWood} strokeWidth={3} />
-        <path d={rrect(818, -924, 284, 118, 8)} fill={K.signFace} />
-        <text x={960} y={-850} textAnchor="middle" fontFamily="Poppins" fontWeight={800} fontSize={50} fill="#5A3920">BEM-VINDOS!</text>
+        <path d={rrect(640, -960, 244, 112, 14)} fill={K.sign} stroke={K.lineWood} strokeWidth={3} />
+        <path d={rrect(652, -948, 220, 88, 8)} fill={K.signFace} />
+        <text x={762} y={-890} textAnchor="middle" fontFamily="Poppins" fontWeight={800} fontSize={34} textLength={190} lengthAdjust="spacingAndGlyphs" fill="#5A3920">BEM-VINDOS!</text>
         {/* windows */}
         {[1250, 1700].map((wx) => (
           <g key={wx}>
