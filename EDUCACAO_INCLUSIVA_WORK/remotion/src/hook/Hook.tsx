@@ -10,7 +10,7 @@ const rnd = (i: number) => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453;
 
 /** raios girando atrás do "IMAGINE" */
 export const Sunburst: React.FC<{ t: number }> = ({ t }) => {
-  const a = ss(t / 0.25) * (1 - ss((t - 0.95) / 0.35));
+  const a = 1 - ss((t - 0.95) / 0.35);
   if (a <= 0) return null;
   const n = 18, rays = [];
   for (let i = 0; i < n; i++) {
