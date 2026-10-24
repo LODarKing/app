@@ -1,0 +1,22 @@
+// v2 palette sampled from the user's character sheets (assets/researched_references).
+export const C = {
+  white: '#FFFFFF',
+  skin: '#FEC88C', skinShade: '#F2AE6E', cheek: '#F79C7A', lineSkin: '#E39A60',
+  hair: '#E6B058', hairShade: '#D29A44', hairHi: '#F3C676', lineHair: '#C28A3A',
+  eyeWhite: '#FFFFFF', eyeShade: '#E9E3DA', lineEye: '#6B4A33', pupil: '#4D301B', brow: '#3D2F24',
+  mouth: '#822827', tongue: '#DC665F', lineMouth: '#5E1C1C',
+  shirt: '#EFDCB9', shirtShade: '#DCC49A', shirtLine: '#C4A97E', lineShirt: '#B59A70', button: '#9C8460',
+  tag: '#254A34', tagShade: '#1B3826', pinRed: '#D6382B', pinGold: '#E9B23A', pinBlue: '#2E5FB8',
+  epaulette: '#264A36', epauletteShade: '#1B3627',
+  scarf: '#FED52C', scarfShade: '#F0BC14', lineScarf: '#D29A0E',
+  red: '#D6382B', redDark: '#9E2318', orange: '#F28C28', yellow: '#FED52C',
+  gold: '#E9B23A', goldShade: '#C98F1E', goldLine: '#9C6B10',
+  belt: '#1E1E1F',
+  pants: '#22422E', pantsShade: '#1A3424', pantsHi: '#2C5439', pantsFar: '#18301F', linePants: '#11261A',
+  shoe: '#232321', shoeSole: '#141414', shoeHi: '#3A3A3A',
+  lineBlack: '#0E0E0F',
+  chairBlack: '#262729', chairBlack2: '#1B1C1D',
+  tire: '#2A2A2C', tireHi: '#3E3F42',
+  steel: '#CDD1D6', steelShade: '#A3AAB2', lineSteel: '#7C838B', rim: '#E4E7EA', spoke: '#B7BDC4',
+  hub: '#262728', hubHi: '#3A3B3D',
+};
