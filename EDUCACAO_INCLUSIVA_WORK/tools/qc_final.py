@@ -22,7 +22,7 @@ def detect(f):
     return dict(black=re.findall(r'black_start:([\d.]+) black_end:([\d.]+)', e), freeze=re.findall(r'freeze_start: ([\d.]+)', e))
 def av_offset(f):
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f, '-map', '0:a', '-t', '30', '-ar', '48000', '-ac', '1', '/tmp/claude-0/qc_a.wav'])
-    a = sf.read('/tmp/claude-0/qc_a.wav')[0]; m = sf.read('audio/master.wav', frames=48000 * 30)[0].mean(1)
+    a = sf.read('/tmp/claude-0/qc_a.wav')[0]; m = sf.read(os.environ.get('MASTER', 'audio/master.wav'), frames=48000 * 30)[0].mean(1)
     n = min(len(a), len(m)); a, m = a[:n], m[:n]
     lags = range(-2400, 2401, 24); c = [np.dot(a[max(0, l):n + min(0, l)], m[max(0, -l):n - max(0, l)]) for l in lags]
     return round(list(lags)[int(np.argmax(c))] / 48000 * 1000, 1)
