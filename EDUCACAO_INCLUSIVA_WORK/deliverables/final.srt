@@ -1,315 +1,432 @@
 1
-00:00:00,164 --> 00:00:02,510
-Imagine chegar ao
-seu clube, cheio de
+00:00:00,214 --> 00:00:01,900
+Imagine chegar
+ao seu clube,
 
 2
-00:00:02,530 --> 00:00:04,610
-vontade de participar,
-mas encontrar
+00:00:01,920 --> 00:00:03,860
+cheio de vontade
+de participar,
 
 3
-00:00:04,630 --> 00:00:07,070
-uma barreira que
-impede você de entrar.
+00:00:03,880 --> 00:00:05,700
+mas encontrar uma
+barreira que
 
 4
-00:00:07,090 --> 00:00:08,750
-Será que isso é inclusão?
+00:00:05,720 --> 00:00:07,120
+impede você
+de entrar.
 
 5
-00:00:08,770 --> 00:00:11,070
-Hoje, vamos
-descobrir por que
+00:00:07,140 --> 00:00:08,800
+Será que isso
+é inclusão?
 
 6
-00:00:11,090 --> 00:00:12,620
-ninguém deve ficar de fora.
+00:00:08,820 --> 00:00:11,480
+Hoje, vamos descobrir
+por que ninguém
 
 7
-00:00:13,238 --> 00:00:16,610
-Ter uma deficiência não
-significa ser incapaz.
+00:00:11,500 --> 00:00:13,000
+deve ficar
+de fora.
 
 8
-00:00:16,630 --> 00:00:18,490
+00:00:13,288 --> 00:00:15,260
+Ter uma deficiência
+não significa
+
+9
+00:00:15,280 --> 00:00:16,660
+ser incapaz.
+
+10
+00:00:16,680 --> 00:00:18,540
 Muitas dificuldades
 surgem quando
 
-9
-00:00:18,510 --> 00:00:20,430
-a sociedade cria barreiras.
-
-10
-00:00:20,450 --> 00:00:23,210
-A Organização Mundial
-da Saúde utiliza
-
 11
-00:00:23,230 --> 00:00:25,550
-a CIF para
-compreender a relação
+00:00:18,560 --> 00:00:20,480
+a sociedade cria
+barreiras.
 
 12
-00:00:25,570 --> 00:00:28,410
-entre saúde,
-ambiente e participação.
+00:00:20,500 --> 00:00:22,440
+A Organização Mundial
+da Saúde
 
 13
-00:00:28,430 --> 00:00:30,730
-E a Convenção da ONU defende
+00:00:22,460 --> 00:00:24,860
+utiliza a CIF para
+compreender
 
 14
-00:00:30,750 --> 00:00:33,300
+00:00:24,880 --> 00:00:26,840
+a relação entre
+saúde,
+
+15
+00:00:26,860 --> 00:00:28,460
+ambiente e participação.
+
+16
+00:00:28,480 --> 00:00:30,780
+E a Convenção da
+ONU defende
+
+17
+00:00:30,800 --> 00:00:33,680
 direitos e oportunidades
 para todos.
 
-15
-00:00:34,150 --> 00:00:37,510
-Existem deficiências
-físicas, visuais,
-
-16
-00:00:37,530 --> 00:00:40,090
-auditivas,
-intelectuais e múltiplas.
-
-17
-00:00:40,110 --> 00:00:42,710
-Também existem
-condições e deficiências
-
 18
-00:00:42,730 --> 00:00:44,570
-que não são
-imediatamente visíveis.
+00:00:34,200 --> 00:00:36,640
+Existem deficiências
+físicas,
 
 19
-00:00:44,590 --> 00:00:46,450
-Cada pessoa tem
-as suas próprias
+00:00:36,660 --> 00:00:38,600
+visuais, auditivas,
 
 20
-00:00:46,470 --> 00:00:47,970
-habilidades e necessidades.
+00:00:38,620 --> 00:00:40,140
+intelectuais
+e múltiplas.
 
 21
-00:00:47,990 --> 00:00:51,200
-O importante é
-respeitar as diferenças.
+00:00:40,160 --> 00:00:42,760
+Também existem condições
+e deficiências
 
 22
-00:00:51,729 --> 00:00:54,170
-Discriminação acontece
-quando alguém sofre
+00:00:42,780 --> 00:00:44,620
+que não são imediatamente
+visíveis.
 
 23
-00:00:54,190 --> 00:00:57,310
-tratamento desigual ou
-tem seus direitos negados.
+00:00:44,640 --> 00:00:46,500
+Cada pessoa tem as
+suas próprias
 
 24
-00:00:57,330 --> 00:01:00,710
-Já o bullying envolve
-agressões intencionais
+00:00:46,520 --> 00:00:48,020
+habilidades e
+necessidades.
 
 25
-00:01:00,730 --> 00:01:03,750
-e repetidas, como
-humilhações, apelidos
+00:00:48,040 --> 00:00:51,580
+O importante é respeitar
+as diferenças.
 
 26
-00:01:03,770 --> 00:01:07,250
-ofensivos, exclusão
-e ataques virtuais.
+00:00:51,779 --> 00:00:53,880
+Discriminação acontece
+quando alguém
 
 27
-00:01:07,270 --> 00:01:09,460
+00:00:53,900 --> 00:00:56,080
+sofre tratamento
+desigual ou tem
+
+28
+00:00:56,100 --> 00:00:57,360
+seus direitos
+negados.
+
+29
+00:00:57,380 --> 00:00:59,900
+Já o bullying envolve
+agressões
+
+30
+00:00:59,920 --> 00:01:01,720
+intencionais
+e repetidas,
+
+31
+00:01:01,740 --> 00:01:03,280
+como humilhações,
+
+32
+00:01:03,300 --> 00:01:05,060
+apelidos ofensivos,
+
+33
+00:01:05,080 --> 00:01:07,300
+exclusão e ataques
+virtuais.
+
+34
+00:01:07,320 --> 00:01:09,840
 Tudo isso precisa
 ser combatido.
 
-28
-00:01:10,138 --> 00:01:11,740
+35
+00:01:10,188 --> 00:01:12,120
 Em 1999,
 
-29
-00:01:12,350 --> 00:01:15,790
-países das Américas adotaram
-a Convenção para combater
-
-30
-00:01:15,810 --> 00:01:18,630
-a discriminação contra
-pessoas com deficiência.
-
-31
-00:01:18,650 --> 00:01:22,650
-Ela defende igualdade,
-participação e respeito.
-
-32
-00:01:22,670 --> 00:01:26,110
-Conheça esse documento,
-debata suas propostas
-
-33
-00:01:26,130 --> 00:01:28,480
-e prepare um resumo
-do que aprendeu.
-
-34
-00:01:29,045 --> 00:01:31,390
-Em João 5, Jesus
-encontrou um homem que
-
-35
-00:01:31,410 --> 00:01:35,250
-vivia com uma limitação
-havia 38 anos.
-
 36
-00:01:35,270 --> 00:01:39,250
-Jesus o ouviu, falou com
-ele e realizou uma cura.
+00:01:12,400 --> 00:01:14,280
+países das Américas
+adotaram a
 
 37
-00:01:39,270 --> 00:01:41,150
-Enquanto alguns
-líderes questionaram
+00:01:14,300 --> 00:01:16,700
+Convenção para combater
+a discriminação
 
 38
-00:01:41,170 --> 00:01:43,510
-o ocorrido no sábado,
-Jesus demonstrou
+00:01:16,720 --> 00:01:18,680
+contra pessoas com
+deficiência.
 
 39
-00:01:43,530 --> 00:01:46,610
-atenção à pessoa e
-à sua necessidade.
+00:01:18,700 --> 00:01:20,920
+Ela defende
+igualdade,
 
 40
-00:01:46,630 --> 00:01:48,300
-O que podemos
-aprender com isso?
+00:01:20,960 --> 00:01:22,700
+participação
+e respeito.
 
 41
-00:01:48,902 --> 00:01:53,190
-Em Segunda Samuel 9,
-Davi procurou Mefibosete,
+00:01:22,720 --> 00:01:24,840
+Conheça esse
+documento,
 
 42
-00:01:53,210 --> 00:01:56,350
-filho de Jônatas, que
-tinha deficiência nos pés.
+00:01:24,860 --> 00:01:26,900
+debata suas propostas
+e prepare
 
 43
-00:01:56,370 --> 00:01:58,630
-Mesmo demonstrando
-insegurança diante
+00:01:26,920 --> 00:01:28,860
+um resumo do que
+aprendeu.
 
 44
-00:01:58,650 --> 00:02:01,610
-do rei, Mefibosete
-recebeu acolhimento
+00:01:29,095 --> 00:01:30,960
+Em João 5, Jesus
+encontrou um
 
 45
-00:02:01,630 --> 00:02:03,770
-e um lugar
-permanente à mesa.
+00:01:30,980 --> 00:01:33,080
+homem que vivia com
+uma limitação
 
 46
-00:02:03,790 --> 00:02:06,450
-Davi nos ensina que
-incluir também é
+00:01:33,100 --> 00:01:35,300
+havia 38 anos.
 
 47
-00:02:06,470 --> 00:02:09,440
-reconhecer o valor e
-a dignidade de alguém.
+00:01:35,320 --> 00:01:36,700
+Jesus o ouviu,
 
 48
-00:02:10,042 --> 00:02:11,730
-Helen Keller perdeu a visão
+00:01:36,720 --> 00:01:38,520
+falou com ele e
+realizou uma
 
 49
-00:02:11,750 --> 00:02:13,530
-e a audição ainda pequena.
+00:01:38,540 --> 00:01:39,300
+cura.
 
 50
-00:02:13,550 --> 00:02:17,130
-Com educação acessível e
-apoio, tornou-se escritora,
+00:01:39,320 --> 00:01:41,200
+Enquanto alguns líderes
+questionaram
 
 51
-00:02:17,150 --> 00:02:20,150
-formou-se na universidade
-e defendeu direitos.
+00:01:41,220 --> 00:01:42,660
+o ocorrido
+no sábado,
 
 52
-00:02:20,170 --> 00:02:22,510
+00:01:42,680 --> 00:01:44,680
+Jesus demonstrou
+atenção à pessoa
+
+53
+00:01:44,700 --> 00:01:46,660
+e à sua necessidade.
+
+54
+00:01:46,680 --> 00:01:48,680
+O que podemos aprender
+com isso?
+
+55
+00:01:48,952 --> 00:01:50,780
+Em Segunda
+Samuel 9,
+
+56
+00:01:50,800 --> 00:01:53,240
+Davi procurou
+Mefibosete,
+
+57
+00:01:53,260 --> 00:01:54,320
+filho de
+Jônatas,
+
+58
+00:01:54,340 --> 00:01:56,400
+que tinha deficiência
+nos pés.
+
+59
+00:01:56,420 --> 00:01:58,300
+Mesmo demonstrando
+insegurança
+
+60
+00:01:58,320 --> 00:01:59,380
+diante do rei,
+
+61
+00:01:59,400 --> 00:02:01,660
+Mefibosete recebeu
+acolhimento
+
+62
+00:02:01,680 --> 00:02:03,820
+e um lugar permanente
+à mesa.
+
+63
+00:02:03,840 --> 00:02:06,280
+Davi nos ensina que
+incluir também
+
+64
+00:02:06,300 --> 00:02:08,320
+é reconhecer
+o valor e a
+
+65
+00:02:08,340 --> 00:02:09,820
+dignidade de
+alguém.
+
+66
+00:02:10,092 --> 00:02:11,960
+Helen Keller perdeu
+a visão e
+
+67
+00:02:11,980 --> 00:02:13,580
+a audição ainda
+pequena.
+
+68
+00:02:13,600 --> 00:02:15,400
+Com educação acessível
+e apoio,
+
+69
+00:02:15,420 --> 00:02:17,180
+tornou-se escritora,
+
+70
+00:02:17,200 --> 00:02:19,700
+formou-se na universidade
+e defendeu
+
+71
+00:02:19,720 --> 00:02:20,200
+direitos.
+
+72
+00:02:20,220 --> 00:02:22,560
 Sua história mostra
 a importância
 
-53
-00:02:22,530 --> 00:02:24,060
-de oportunidades reais.
+73
+00:02:22,580 --> 00:02:24,440
+de oportunidades
+reais.
 
-54
-00:02:24,709 --> 00:02:27,370
+74
+00:02:24,759 --> 00:02:26,780
 No Brasil, a Lei
-Brasileira de Inclusão
+Brasileira de
 
-55
-00:02:27,390 --> 00:02:30,770
-garante direitos,
-acessibilidade, educação
+75
+00:02:26,800 --> 00:02:29,000
+Inclusão garante
+direitos,
 
-56
-00:02:30,790 --> 00:02:33,550
-e participação em
-igualdade de condições.
+76
+00:02:29,020 --> 00:02:30,060
+acessibilidade,
 
-57
-00:02:33,570 --> 00:02:36,670
-Ela nos lembra que a
-sociedade deve eliminar
+77
+00:02:30,080 --> 00:02:32,940
+educação e participação
+em igualdade
 
-58
-00:02:36,690 --> 00:02:40,320
-barreiras para que todas as
-pessoas possam participar.
+78
+00:02:32,960 --> 00:02:33,600
+de condições.
 
-59
-00:02:40,707 --> 00:02:42,050
+79
+00:02:33,620 --> 00:02:35,700
+Ela nos lembra que
+a sociedade
+
+80
+00:02:35,720 --> 00:02:37,920
+deve eliminar barreiras
+para que
+
+81
+00:02:37,940 --> 00:02:40,700
+todas as pessoas possam
+participar.
+
+82
+00:02:40,757 --> 00:02:42,100
 E o seu Clube de
 Desbravadores?
 
-60
-00:02:42,070 --> 00:02:43,610
+83
+00:02:42,120 --> 00:02:43,660
 Ele é inclusivo?
 
-61
-00:02:43,630 --> 00:02:46,870
-Observe as barreiras,
+84
+00:02:43,680 --> 00:02:45,620
+Observe as
+barreiras,
+
+85
+00:02:45,640 --> 00:02:47,800
 proponha melhorias
+e apresente
 
-62
-00:02:46,890 --> 00:02:49,410
-e apresente suas
-ideias à diretoria.
+86
+00:02:47,820 --> 00:02:49,460
+suas ideias à
+diretoria.
 
-63
-00:02:49,430 --> 00:02:52,610
-Porque inclusão não é
-apenas receber alguém,
+87
+00:02:49,480 --> 00:02:51,960
+Porque inclusão não
+é apenas receber
 
-64
-00:02:52,630 --> 00:02:55,430
-é garantir que essa
-pessoa participe.
+88
+00:02:51,980 --> 00:02:54,400
+alguém, é garantir
+que essa pessoa
 
-65
-00:02:55,450 --> 00:02:58,380
+89
+00:02:54,420 --> 00:02:55,480
+participe.
+
+90
+00:02:55,500 --> 00:02:58,360
 Seja você parte
 dessa mudança.
-

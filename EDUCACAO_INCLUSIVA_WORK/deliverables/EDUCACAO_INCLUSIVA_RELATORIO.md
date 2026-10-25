@@ -72,13 +72,20 @@ Reels 9:16 · 1080×1920 · 60 fps · 180 s · H.264 + AAC 48 kHz estéreo · na
 
 Medido nos MP4 entregues por `tools/qc_final.py` (arquivo `documentation/QC_FINAL.json`):
 
-QC_TABLE
+| Arquivo | Tamanho | Duração | Quadros | Vídeo | Áudio | Volume | Pico real | Quadros pretos | Congelamentos | Desvio A/V |
+|---|---|---|---|---|---|---|---|---|---|---|
+| EDUCACAO_INCLUSIVA_FINAL.mp4 | 76.0 MB | 180.0 s | 10800 | H.264 High 1080×1920 60 fps BT.709 | AAC 48 kHz estéreo 258 kbps | -14.0 LUFS | -1.3 dBTP | 0 | 0 | 0.0 ms |
+| EDUCACAO_INCLUSIVA_SEM_LEGENDAS.mp4 | 68.0 MB | 180.0 s | 10800 | H.264 High 1080×1920 60 fps BT.709 | AAC 48 kHz estéreo 258 kbps | -14.0 LUFS | -1.3 dBTP | 0 | 0 | 0.0 ms |
 
 Também foram conferidos:
 - uma varredura de 1 quadro por segundo do vídeo inteiro;
 - os quadros das 9 transições.
 
-Um trecho de cerca de 2,5 s quase vazio na cena 2 (0:20–0:23) ganhou o selo da OMS. Os quadros desse trecho foram renderizados de novo e encaixados com contagem exata de quadros.
+Dois ajustes saíram dessa conferência:
+- um trecho de cerca de 2,5 s quase vazio na cena 2 (0:20–0:23) ganhou o selo da OMS;
+- um trecho quase parado no fim da cena 7 (2:06), apontado pela detecção de congelamento, ganhou movimento de câmera contínuo.
+
+Os quadros desses trechos foram renderizados de novo e encaixados com contagem exata de quadros.
 
 ## 6. Limitações declaradas
 

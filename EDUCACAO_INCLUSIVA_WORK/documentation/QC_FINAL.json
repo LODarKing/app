@@ -2,9 +2,9 @@
  "EDUCACAO_INCLUSIVA_FINAL": {
   "probe": {
    "file": "deliverables/EDUCACAO_INCLUSIVA_FINAL.mp4",
-   "size_mb": 72.9,
+   "size_mb": 76.0,
    "duration": 180.0,
-   "bitrate_kbps": 3238,
+   "bitrate_kbps": 3377,
    "video": {
     "codec": "h264",
     "profile": "High",
@@ -24,7 +24,7 @@
   },
   "loudness": {
    "integrated_lufs": -14.0,
-   "lra": 2.0,
+   "lra": 2.1,
    "true_peak_dbtp": -1.3
   },
   "detect": {
@@ -36,9 +36,9 @@
  "EDUCACAO_INCLUSIVA_SEM_LEGENDAS": {
   "probe": {
    "file": "deliverables/EDUCACAO_INCLUSIVA_SEM_LEGENDAS.mp4",
-   "size_mb": 71.0,
+   "size_mb": 68.0,
    "duration": 180.0,
-   "bitrate_kbps": 3156,
+   "bitrate_kbps": 3022,
    "video": {
     "codec": "h264",
     "profile": "High",
@@ -58,14 +58,12 @@
   },
   "loudness": {
    "integrated_lufs": -14.0,
-   "lra": 2.0,
+   "lra": 2.1,
    "true_peak_dbtp": -1.3
   },
   "detect": {
    "black": [],
-   "freeze": [
-    "74.8833"
-   ]
+   "freeze": []
   },
   "av_offset_ms": 0.0
  }
