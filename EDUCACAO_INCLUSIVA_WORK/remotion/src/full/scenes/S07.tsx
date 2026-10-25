@@ -29,7 +29,7 @@ export const S07: React.FC<{ t: number }> = ({ t }) => {
   const mx = keys(t, [[7.55, 1000], [9.4, 640]]);
   const bow = sm((t - 9.5) / 0.7) * (1 - sm((t - 12.2) / 0.6));
   const davidReach = sm((t - 11.0) / 0.6);
-  const zoomC = lerp(1.15, 1, sm((t - 12.1) / 1.4)) + 0.12 * sm((t - 15.0) / 1.6);
+  const zoomC = lerp(1.15, 1, sm((t - 12.1) / 1.4)) + 0.22 * sm((t - 15.0) / 6.2);
   return (
     <div style={{ position: 'absolute', inset: 0 }}>
       <PageFrame t={t} title="2 SAMUEL 9">
