@@ -84,6 +84,11 @@ export const S02: React.FC<{ t: number }> = ({ t }) => {
       {/* C: CIF */}
       {cIn > 0 && cOut < 1 ? <div style={{ position: 'absolute', inset: 0, opacity: cIn * (1 - cOut) }}>
         <Chip t={t} t0={7.9} t1={15.3} x={540} y={250} text={<>OMS • <span style={{ color: PAL.yellow }}>Organização Mundial da Saúde</span></>} size={36} />
+        {t < 10.6 ? <div style={{ position: 'absolute', left: 540 - 230, top: 560, width: 460, height: 460, borderRadius: 230, background: '#FFFFFF', border: `10px solid ${PAL.deep}`, boxShadow: `0 16px 0 ${PAL.deep}`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10,
+          transform: `scale(${f(clamp(outBack((t - 7.95) / 0.5), 0, 1.2) * (1 - ss((t - 10.25) / 0.3)))}) rotate(${f(Math.sin(t * 2) * 3)}deg)` }}>
+          <div style={{ transform: `rotate(${f(t * 40)}deg)` }}><Icon name="globe" color="#1D7CC4" size={200} /></div>
+          <div style={{ fontFamily: FONT, fontWeight: 900, fontSize: 96, color: '#1D7CC4', lineHeight: 1 }}>OMS</div>
+        </div> : null}
         <svg width={1080} height={1920} style={{ position: 'absolute', inset: 0 }}>
           <g transform={`translate(540 800) rotate(${f(t * 25)}) scale(${f(clamp(ring, 0, 1.2))})`}>
             <circle r={300} fill="none" stroke="#FFFFFF" strokeWidth={10} strokeDasharray="40 26" opacity={0.6} />
