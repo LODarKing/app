@@ -10,7 +10,7 @@ const FOTO = {
   leopardo: { sci: 'Panthera pardus', fx: 0.5, fy: 0.5, z: 1.1 },
   sucuarana: { sci: 'Puma concolor', fx: 0.55, fy: 0.5, z: 1.0 },
   jaguatirica: { sci: 'Leopardus pardalis', fx: 0.56, fy: 0.55, z: 1.05 },
-  gato: { sci: 'Felis catus', fx: 0.5, fy: 0.5, z: 1.1 },
+  gato: { sci: 'Felis catus', fx: 0.6, fy: 0.55, z: 1.3 },
   persa: { sci: 'Felis catus', fx: 0.5, fy: 0.5, z: 1.25 },
   siames: { sci: 'Felis catus', fx: 0.6, fy: 0.45, z: 1.05 },
   mainecoon: { sci: 'Felis catus', fx: 0.5, fy: 0.42, z: 1.0 },
