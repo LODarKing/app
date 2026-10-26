@@ -1,0 +1,62 @@
+{
+ "NARRADOR_A_Alex": {
+  "papel": "narrador",
+  "duracao_s": 11.35,
+  "roteiro": "Parece apenas um gatinho fofinho, não é? Mas a família dele guarda segredos incríveis! Daniel foi lançado numa cova de leões porque permaneceu fiel a Deus.",
+  "whisper_ouviu": "Parece apenas um gatinho fofinho, não é? Mas a família dele guarda segredos incríveis. Daniel foi lançado numa cova de leões porque permaneceu fiel a Deus."
+ },
+ "NARRADOR_B_Santa": {
+  "papel": "narrador",
+  "duracao_s": 11.41,
+  "roteiro": "Parece apenas um gatinho fofinho, não é? Mas a família dele guarda segredos incríveis! Daniel foi lançado numa cova de leões porque permaneceu fiel a Deus.",
+  "whisper_ouviu": "Parece apenas um gatinho fofinho, não é? Mas a família dele guarda segredos incríveis. Daniel foi lançado numa cova de leões porque permaneceu fiel a Deus."
+ },
+ "NARRADOR_C_mistura": {
+  "papel": "narrador",
+  "duracao_s": 11.48,
+  "roteiro": "Parece apenas um gatinho fofinho, não é? Mas a família dele guarda segredos incríveis! Daniel foi lançado numa cova de leões porque permaneceu fiel a Deus.",
+  "whisper_ouviu": "Parece apenas um gatinho fofinho, não é? Mas a família dele guarda segredos incríveis. Daniel foi lançado numa cova de leões porque permaneceu fiel a Deus."
+ },
+ "NARRADORA_D_Dora": {
+  "papel": "narrador",
+  "duracao_s": 11.26,
+  "roteiro": "Parece apenas um gatinho fofinho, não é? Mas a família dele guarda segredos incríveis! Daniel foi lançado numa cova de leões porque permaneceu fiel a Deus.",
+  "whisper_ouviu": "Parece apenas um gatinho fofinho não é, mas a família dele guarda segredos incríveis. Daniel foi lançado numa cova de leões porque permaneceu fiel a Deus."
+ },
+ "LARA_A_Dora_jovem": {
+  "papel": "lara",
+  "duracao_s": 6.98,
+  "roteiro": "Acho que alguém quer nos mostrar uma coisa! Então não é magia. É uma adaptação incrível da natureza!",
+  "whisper_ouviu": "Acho que alguém quer nos mostrar uma coisa. Então não é magia, é uma adaptação incrível da natureza."
+ },
+ "LARA_B_Dora_mais_jovem": {
+  "papel": "lara",
+  "duracao_s": 6.92,
+  "roteiro": "Acho que alguém quer nos mostrar uma coisa! Então não é magia. É uma adaptação incrível da natureza!",
+  "whisper_ouviu": "Acho que alguém quer nos mostrar uma coisa. Então não é magia, é uma adaptação incrível da natureza."
+ },
+ "LARA_C_Dora_natural": {
+  "papel": "lara",
+  "duracao_s": 7.0,
+  "roteiro": "Acho que alguém quer nos mostrar uma coisa! Então não é magia. É uma adaptação incrível da natureza!",
+  "whisper_ouviu": "Acho que alguém quer nos mostrar uma coisa. Então, não é magia, é uma adaptação incrível da natureza."
+ },
+ "MIGUEL_A_Alex_jovem": {
+  "papel": "miguel",
+  "duracao_s": 5.91,
+  "roteiro": "Ei, Lara! O que está acontecendo com esse livro? Espera! O Pingo é parente de um tigre?",
+  "whisper_ouviu": "Ei Lara, o que está acontecendo com esse livro? Espera, o Pingo é parente de um tigre."
+ },
+ "MIGUEL_B_Santa_jovem": {
+  "papel": "miguel",
+  "duracao_s": 6.0,
+  "roteiro": "Ei, Lara! O que está acontecendo com esse livro? Espera! O Pingo é parente de um tigre?",
+  "whisper_ouviu": "Ei Lara, o que está acontecendo com esse livro? Espera, o pingo é parente de um tigre."
+ },
+ "MIGUEL_C_mistura": {
+  "papel": "miguel",
+  "duracao_s": 5.83,
+  "roteiro": "Ei, Lara! O que está acontecendo com esse livro? Espera! O Pingo é parente de um tigre?",
+  "whisper_ouviu": "Ei Lara, o que está acontecendo com esse livro? Espera, o Pingo é parente de um tigre."
+ }
+}
