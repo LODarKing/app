@@ -134,3 +134,31 @@ pip install librosa pedalboard pyloudnorm soundfile scipy # se o ambiente não t
 - Texto no limite da tela: medir antes. "UMA AVENTURA SELVAGEM!" a 66 px passou da borda; a 58 px coube.
 - Onomatopeia e rótulo podem colidir: conferir os quadros das batidas fortes.
 - Canvas reutilizado guarda o quadro anterior: limpar sempre.
+
+## 14. Lições do episódio completo de Felinos (9 min)
+
+- **Personagens desenhados do zero**, a partir das folhas de referência, sem ferramentas prontas (pedido do usuário).
+  - Cada um recebe:
+    - olhos abertos com piscadas e olhar que se mexe;
+    - luz principal, sombra e luz de recorte (`lightRig`);
+    - respiração, balanço do corpo e atraso da cabeça.
+  - O cenário também precisa de movimento: sombras de folhas, raios de sol, partículas no ar, nuvens e árvores balançando.
+- **Episódio longo = sistema de cenas.**
+  - `timeline.js` é gerado a partir das falas: cenas, eventos, vozes com envelope da boca e palavras com grafia corrigida.
+  - Cada cena tem `draw`, `ui`, `sfx` e `capY`, que define a altura da legenda para ela não cobrir o personagem.
+- **Render de 16 mil quadros:**
+  - filtro de pintura em 3 passadas (papel estático, Kuwahara em meia resolução, composição);
+  - pincel limitado à área do personagem;
+  - 4 páginas em paralelo, por segmento;
+  - mais de 1 h por metade do episódio.
+- **Som:**
+  - Os efeitos saem das onomatopeias desenhadas (`audio/onomatopeias.mjs`).
+  - Eles se encaixam na semicolcheia da batida medida, com desvio máximo de cerca de 60 ms. Eventos ligados às palavras raramente caem na meia batida.
+  - Instrumentos longos vão para um cache: a trilha de 9 min sintetiza em cerca de 4 min.
+- **O que as folhas de contato pegaram:**
+  - planos parados por mais de 4 s (resolvidos com um close no meio do plano);
+  - legendas por cima do rosto;
+  - leoa no lugar de leão;
+  - velocímetro contradizendo a narração;
+  - texto centralizado herdando o alinhamento do quadro anterior (o `textAlign` deve ser sempre definido).
+- **Trechos bíblicos:** silhuetas em teatro de sombras, sem rostos inventados, sem violência (a luta vira silhueta), anjo como figura de luz suave, referência bíblica escrita à mão.
