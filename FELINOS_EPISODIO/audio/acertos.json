@@ -92,20 +92,20 @@
  {
   "evento": "onomatopeia NHAC!",
   "timeline": 125.8,
-  "grade": 125.769,
-  "desvio_ms": -31.0
+  "grade": 125.77,
+  "desvio_ms": -30.0
  },
  {
   "evento": "onomatopeia crunch",
   "timeline": 129.75,
-  "grade": 129.769,
-  "desvio_ms": 19.0
+  "grade": 129.77,
+  "desvio_ms": 20.0
  },
  {
   "evento": "onomatopeia crunch",
   "timeline": 133.25,
-  "grade": 133.269,
-  "desvio_ms": 19.0
+  "grade": 133.27,
+  "desvio_ms": 20.0
  },
  {
   "evento": "onomatopeia slurp",
@@ -128,104 +128,104 @@
  {
   "evento": "onomatopeia crrsh",
   "timeline": 178.4,
-  "grade": 178.395,
-  "desvio_ms": -5.0
+  "grade": 178.396,
+  "desvio_ms": -4.0
  },
  {
   "evento": "onomatopeia ?",
   "timeline": 178.5,
-  "grade": 178.52,
-  "desvio_ms": 20.0
+  "grade": 178.521,
+  "desvio_ms": 21.0
  },
  {
   "evento": "onomatopeia ronrom...",
   "timeline": 197.6,
-  "grade": 197.645,
-  "desvio_ms": 45.0
+  "grade": 197.646,
+  "desvio_ms": 46.0
  },
  {
   "evento": "onomatopeia miau!",
   "timeline": 215.15,
-  "grade": 215.145,
-  "desvio_ms": -5.0
+  "grade": 215.146,
+  "desvio_ms": -4.0
  },
  {
   "evento": "onomatopeia miau!",
   "timeline": 215.95,
-  "grade": 215.895,
-  "desvio_ms": -55.0
+  "grade": 215.896,
+  "desvio_ms": -54.0
  },
  {
   "evento": "onomatopeia miau?",
   "timeline": 223.75,
-  "grade": 223.77,
-  "desvio_ms": 20.0
+  "grade": 223.771,
+  "desvio_ms": 21.0
  },
  {
   "evento": "onomatopeia TCHUM!",
   "timeline": 244.25,
-  "grade": 244.271,
-  "desvio_ms": 21.0
+  "grade": 244.272,
+  "desvio_ms": 22.0
  },
  {
   "evento": "onomatopeia CLIQUE!",
   "timeline": 254.5,
-  "grade": 254.521,
-  "desvio_ms": 21.0
+  "grade": 254.522,
+  "desvio_ms": 22.0
  },
  {
   "evento": "onomatopeia bocejo...",
   "timeline": 209.75,
-  "grade": 209.77,
-  "desvio_ms": 20.0
+  "grade": 209.771,
+  "desvio_ms": 21.0
  },
  {
   "evento": "onomatopeia ronrom",
   "timeline": 294.65,
-  "grade": 294.646,
-  "desvio_ms": -4.0
+  "grade": 294.648,
+  "desvio_ms": -2.0
  },
  {
   "evento": "onomatopeia TAN-TAN!",
   "timeline": 377.75,
-  "grade": 377.772,
-  "desvio_ms": 22.0
+  "grade": 377.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "onomatopeia TCHAN!",
   "timeline": 387.75,
-  "grade": 387.772,
-  "desvio_ms": 22.0
+  "grade": 387.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "onomatopeia VRUUUM!",
   "timeline": 398.55,
-  "grade": 398.522,
-  "desvio_ms": -28.0
+  "grade": 398.524,
+  "desvio_ms": -26.0
  },
  {
   "evento": "onomatopeia ROOAAR!",
   "timeline": 431.25,
-  "grade": 431.272,
-  "desvio_ms": 22.0
+  "grade": 431.275,
+  "desvio_ms": 25.0
  },
  {
   "evento": "onomatopeia ROAR!",
   "timeline": 449.95,
-  "grade": 449.898,
-  "desvio_ms": -52.0
+  "grade": 449.9,
+  "desvio_ms": -50.0
  },
  {
   "evento": "onomatopeia GRRR...",
   "timeline": 479.75,
-  "grade": 479.773,
-  "desvio_ms": 23.0
+  "grade": 479.776,
+  "desvio_ms": 26.0
  },
  {
   "evento": "onomatopeia miau!",
   "timeline": 521.6,
-  "grade": 521.648,
-  "desvio_ms": 48.0
+  "grade": 521.651,
+  "desvio_ms": 51.0
  },
  {
   "evento": "passagem para s03",
@@ -248,8 +248,8 @@
  {
   "evento": "passagem para s06",
   "timeline": 126.55,
-  "grade": 126.519,
-  "desvio_ms": -31.0
+  "grade": 126.52,
+  "desvio_ms": -30.0
  },
  {
   "evento": "passagem para s07",
@@ -260,44 +260,44 @@
  {
   "evento": "passagem para s08",
   "timeline": 177.05,
-  "grade": 177.02,
-  "desvio_ms": -30.0
+  "grade": 177.021,
+  "desvio_ms": -29.0
  },
  {
   "evento": "passagem para s09",
   "timeline": 199.55,
-  "grade": 199.52,
-  "desvio_ms": -30.0
+  "grade": 199.521,
+  "desvio_ms": -29.0
  },
  {
   "evento": "passagem para s10",
   "timeline": 255.55,
-  "grade": 255.521,
-  "desvio_ms": -29.0
+  "grade": 255.522,
+  "desvio_ms": -28.0
  },
  {
   "evento": "passagem para s11",
   "timeline": 297.55,
-  "grade": 297.521,
-  "desvio_ms": -29.0
+  "grade": 297.523,
+  "desvio_ms": -27.0
  },
  {
   "evento": "passagem para s12",
   "timeline": 370.55,
-  "grade": 370.522,
-  "desvio_ms": -28.0
+  "grade": 370.524,
+  "desvio_ms": -26.0
  },
  {
   "evento": "passagem para s13",
   "timeline": 432.55,
-  "grade": 432.522,
-  "desvio_ms": -28.0
+  "grade": 432.525,
+  "desvio_ms": -25.0
  },
  {
   "evento": "passagem para s18",
   "timeline": 514.05,
-  "grade": 514.023,
-  "desvio_ms": -27.0
+  "grade": 514.026,
+  "desvio_ms": -24.0
  },
  {
   "evento": "batimento",
@@ -524,8 +524,8 @@
  {
   "evento": "título Felidae",
   "timeline": 40.25,
-  "grade": 40.269,
-  "desvio_ms": 19.0
+  "grade": 40.268,
+  "desvio_ms": 18.0
  },
  {
   "evento": "característica",
@@ -626,44 +626,44 @@
  {
   "evento": "binóculo",
   "timeline": 109.75,
-  "grade": 109.769,
-  "desvio_ms": 19.0
+  "grade": 109.77,
+  "desvio_ms": 20.0
  },
  {
   "evento": "tapete lúcido brilha",
   "timeline": 115.95,
-  "grade": 115.894,
-  "desvio_ms": -56.0
+  "grade": 115.895,
+  "desvio_ms": -55.0
  },
  {
   "evento": "tela dividida",
   "timeline": 118.75,
-  "grade": 118.769,
-  "desvio_ms": 19.0
+  "grade": 118.77,
+  "desvio_ms": 20.0
  },
  {
   "evento": "bote",
   "timeline": 125.25,
-  "grade": 125.269,
-  "desvio_ms": 19.0
+  "grade": 125.27,
+  "desvio_ms": 20.0
  },
  {
   "evento": "mandíbula",
   "timeline": 135.25,
-  "grade": 135.269,
-  "desvio_ms": 19.0
+  "grade": 135.27,
+  "desvio_ms": 20.0
  },
  {
   "evento": "caninos",
   "timeline": 136.25,
-  "grade": 136.269,
-  "desvio_ms": 19.0
+  "grade": 136.27,
+  "desvio_ms": 20.0
  },
  {
   "evento": "carniceiros",
   "timeline": 138.75,
-  "grade": 138.769,
-  "desvio_ms": 19.0
+  "grade": 138.77,
+  "desvio_ms": 20.0
  },
  {
   "evento": "zoom no folículo",
@@ -674,475 +674,475 @@
  {
   "evento": "passa pela fresta",
   "timeline": 168.75,
-  "grade": 168.77,
-  "desvio_ms": 20.0
+  "grade": 168.771,
+  "desvio_ms": 21.0
  },
  {
   "evento": "ondas sonoras",
   "timeline": 182.0,
-  "grade": 182.02,
-  "desvio_ms": 20.0
+  "grade": 182.021,
+  "desvio_ms": 21.0
  },
  {
   "evento": "anatomia do ouvido",
   "timeline": 185.75,
-  "grade": 185.77,
-  "desvio_ms": 20.0
+  "grade": 185.771,
+  "desvio_ms": 21.0
  },
  {
   "evento": "entra persa",
   "timeline": 201.75,
-  "grade": 201.77,
-  "desvio_ms": 20.0
+  "grade": 201.771,
+  "desvio_ms": 21.0
  },
  {
   "evento": "entra siames",
   "timeline": 214.75,
-  "grade": 214.77,
-  "desvio_ms": 20.0
+  "grade": 214.771,
+  "desvio_ms": 21.0
  },
  {
   "evento": "entra maine",
   "timeline": 227.25,
-  "grade": 227.27,
-  "desvio_ms": 20.0
+  "grade": 227.272,
+  "desvio_ms": 22.0
  },
  {
   "evento": "entra angora",
   "timeline": 240.25,
-  "grade": 240.271,
-  "desvio_ms": 21.0
+  "grade": 240.272,
+  "desvio_ms": 22.0
  },
  {
   "evento": "janela acende",
   "timeline": 256.75,
-  "grade": 256.771,
-  "desvio_ms": 21.0
+  "grade": 256.772,
+  "desvio_ms": 22.0
  },
  {
   "evento": "janela acende",
   "timeline": 260.75,
-  "grade": 260.771,
-  "desvio_ms": 21.0
+  "grade": 260.772,
+  "desvio_ms": 22.0
  },
  {
   "evento": "janela acende",
   "timeline": 263.75,
-  "grade": 263.771,
-  "desvio_ms": 21.0
+  "grade": 263.772,
+  "desvio_ms": 22.0
  },
  {
   "evento": "janela acende",
   "timeline": 269.55,
-  "grade": 269.521,
-  "desvio_ms": -29.0
+  "grade": 269.522,
+  "desvio_ms": -28.0
  },
  {
   "evento": "janela acende",
   "timeline": 272.35,
-  "grade": 272.396,
-  "desvio_ms": 46.0
+  "grade": 272.397,
+  "desvio_ms": 47.0
  },
  {
   "evento": "ícone",
   "timeline": 277.95,
-  "grade": 277.896,
-  "desvio_ms": -54.0
+  "grade": 277.897,
+  "desvio_ms": -53.0
  },
  {
   "evento": "ícone",
   "timeline": 279.35,
-  "grade": 279.396,
-  "desvio_ms": 46.0
+  "grade": 279.397,
+  "desvio_ms": 47.0
  },
  {
   "evento": "ícone",
   "timeline": 280.35,
-  "grade": 280.396,
-  "desvio_ms": 46.0
+  "grade": 280.397,
+  "desvio_ms": 47.0
  },
  {
   "evento": "ícone",
   "timeline": 281.35,
-  "grade": 281.396,
-  "desvio_ms": 46.0
+  "grade": 281.397,
+  "desvio_ms": 47.0
  },
  {
   "evento": "indoor",
   "timeline": 283.75,
-  "grade": 283.771,
-  "desvio_ms": 21.0
+  "grade": 283.772,
+  "desvio_ms": 22.0
  },
  {
   "evento": "catio",
   "timeline": 288.75,
-  "grade": 288.771,
-  "desvio_ms": 21.0
+  "grade": 288.773,
+  "desvio_ms": 23.0
  },
  {
   "evento": "birds",
   "timeline": 291.75,
-  "grade": 291.771,
-  "desvio_ms": 21.0
+  "grade": 291.773,
+  "desvio_ms": 23.0
  },
  {
   "evento": "pegada no diário",
   "timeline": 296.25,
-  "grade": 296.271,
-  "desvio_ms": 21.0
+  "grade": 296.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "ponto no mapa",
   "timeline": 300.25,
-  "grade": 300.271,
-  "desvio_ms": 21.0
+  "grade": 300.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "ponto no mapa",
   "timeline": 300.75,
-  "grade": 300.771,
-  "desvio_ms": 21.0
+  "grade": 300.773,
+  "desvio_ms": 23.0
  },
  {
   "evento": "ponto no mapa",
   "timeline": 301.25,
-  "grade": 301.271,
-  "desvio_ms": 21.0
+  "grade": 301.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "ponto no mapa",
   "timeline": 301.75,
-  "grade": 301.771,
-  "desvio_ms": 21.0
+  "grade": 301.773,
+  "desvio_ms": 23.0
  },
  {
   "evento": "ponto no mapa",
   "timeline": 302.25,
-  "grade": 302.271,
-  "desvio_ms": 21.0
+  "grade": 302.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "ponto no mapa",
   "timeline": 302.75,
-  "grade": 302.771,
-  "desvio_ms": 21.0
+  "grade": 302.773,
+  "desvio_ms": 23.0
  },
  {
   "evento": "ponto no mapa",
   "timeline": 303.25,
-  "grade": 303.271,
-  "desvio_ms": 21.0
+  "grade": 303.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "mergulho no habitat",
   "timeline": 306.25,
-  "grade": 306.271,
-  "desvio_ms": 21.0
+  "grade": 306.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "mergulho no habitat",
   "timeline": 315.25,
-  "grade": 315.271,
-  "desvio_ms": 21.0
+  "grade": 315.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "mergulho no habitat",
   "timeline": 324.25,
-  "grade": 324.271,
-  "desvio_ms": 21.0
+  "grade": 324.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "mergulho no habitat",
   "timeline": 333.25,
-  "grade": 333.271,
-  "desvio_ms": 21.0
+  "grade": 333.273,
+  "desvio_ms": 23.0
  },
  {
   "evento": "mergulho no habitat",
   "timeline": 342.75,
-  "grade": 342.772,
-  "desvio_ms": 22.0
+  "grade": 342.773,
+  "desvio_ms": 23.0
  },
  {
   "evento": "mergulho no habitat",
   "timeline": 351.75,
-  "grade": 351.772,
-  "desvio_ms": 22.0
+  "grade": 351.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "mergulho no habitat",
   "timeline": 360.75,
-  "grade": 360.772,
-  "desvio_ms": 22.0
+  "grade": 360.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "mapa dobra",
   "timeline": 369.25,
-  "grade": 369.272,
-  "desvio_ms": 22.0
+  "grade": 369.274,
+  "desvio_ms": 24.0
  },
  {
   "evento": "resposta",
   "timeline": 377.75,
-  "grade": 377.772,
-  "desvio_ms": 22.0
+  "grade": 377.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "resposta",
   "timeline": 387.75,
-  "grade": 387.772,
-  "desvio_ms": 22.0
+  "grade": 387.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "pergunta",
   "timeline": 372.75,
-  "grade": 372.772,
-  "desvio_ms": 22.0
+  "grade": 372.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "pergunta",
   "timeline": 384.75,
-  "grade": 384.772,
-  "desvio_ms": 22.0
+  "grade": 384.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "pergunta",
   "timeline": 397.25,
-  "grade": 397.272,
-  "desvio_ms": 22.0
+  "grade": 397.274,
+  "desvio_ms": 24.0
  },
  {
   "evento": "pergunta",
   "timeline": 408.75,
-  "grade": 408.772,
-  "desvio_ms": 22.0
+  "grade": 408.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "coroa",
   "timeline": 409.75,
-  "grade": 409.772,
-  "desvio_ms": 22.0
+  "grade": 409.774,
+  "desvio_ms": 24.0
  },
  {
   "evento": "coroa sai",
   "timeline": 415.75,
-  "grade": 415.772,
-  "desvio_ms": 22.0
+  "grade": 415.775,
+  "desvio_ms": 25.0
  },
  {
   "evento": "diário dourado",
   "timeline": 432.75,
-  "grade": 432.772,
-  "desvio_ms": 22.0
+  "grade": 432.775,
+  "desvio_ms": 25.0
  },
  {
   "evento": "Bíblia",
   "timeline": 437.25,
-  "grade": 437.272,
-  "desvio_ms": 22.0
+  "grade": 437.275,
+  "desvio_ms": 25.0
  },
  {
   "evento": "vinheta",
   "timeline": 438.75,
-  "grade": 438.773,
-  "desvio_ms": 23.0
+  "grade": 438.775,
+  "desvio_ms": 25.0
  },
  {
   "evento": "vinheta",
   "timeline": 439.25,
-  "grade": 439.273,
-  "desvio_ms": 23.0
+  "grade": 439.275,
+  "desvio_ms": 25.0
  },
  {
   "evento": "vinheta",
   "timeline": 439.75,
-  "grade": 439.773,
-  "desvio_ms": 23.0
+  "grade": 439.775,
+  "desvio_ms": 25.0
  },
  {
   "evento": "vinheta",
   "timeline": 440.25,
-  "grade": 440.273,
-  "desvio_ms": 23.0
+  "grade": 440.275,
+  "desvio_ms": 25.0
  },
  {
   "evento": "entra na página",
   "timeline": 445.25,
-  "grade": 445.273,
-  "desvio_ms": 23.0
+  "grade": 445.275,
+  "desvio_ms": 25.0
  },
  {
   "evento": "força",
   "timeline": 452.65,
-  "grade": 452.648,
-  "desvio_ms": -2.0
+  "grade": 452.65,
+  "desvio_ms": 0.0
  },
  {
   "evento": "Sansão enfrenta o leão (sem violência)",
   "timeline": 454.25,
-  "grade": 454.273,
-  "desvio_ms": 23.0
+  "grade": 454.275,
+  "desvio_ms": 25.0
  },
  {
   "evento": "página",
   "timeline": 460.25,
-  "grade": 460.273,
-  "desvio_ms": 23.0
+  "grade": 460.275,
+  "desvio_ms": 25.0
  },
  {
   "evento": "Davi corre",
   "timeline": 468.25,
-  "grade": 468.273,
-  "desvio_ms": 23.0
+  "grade": 468.275,
+  "desvio_ms": 25.0
  },
  {
   "evento": "ovelha salva (bé)",
   "timeline": 470.05,
-  "grade": 470.023,
-  "desvio_ms": -27.0
+  "grade": 470.025,
+  "desvio_ms": -25.0
  },
  {
   "evento": "página",
   "timeline": 474.25,
-  "grade": 474.273,
-  "desvio_ms": 23.0
+  "grade": 474.276,
+  "desvio_ms": 26.0
  },
  {
   "evento": "desce na cova",
   "timeline": 482.65,
-  "grade": 482.648,
-  "desvio_ms": -2.0
+  "grade": 482.651,
+  "desvio_ms": 1.0
  },
  {
   "evento": "luzes",
   "timeline": 486.75,
-  "grade": 486.773,
-  "desvio_ms": 23.0
+  "grade": 486.776,
+  "desvio_ms": 26.0
  },
  {
   "evento": "passos dos soldados",
   "timeline": 490.7,
-  "grade": 490.648,
-  "desvio_ms": -52.0
+  "grade": 490.651,
+  "desvio_ms": -49.0
  },
  {
   "evento": "passos dos soldados",
   "timeline": 491.2,
-  "grade": 491.148,
-  "desvio_ms": -52.0
+  "grade": 491.151,
+  "desvio_ms": -49.0
  },
  {
   "evento": "passos dos soldados",
   "timeline": 491.7,
-  "grade": 491.648,
-  "desvio_ms": -52.0
+  "grade": 491.651,
+  "desvio_ms": -49.0
  },
  {
   "evento": "passos dos soldados",
   "timeline": 492.2,
-  "grade": 492.148,
-  "desvio_ms": -52.0
+  "grade": 492.151,
+  "desvio_ms": -49.0
  },
  {
   "evento": "cova",
   "timeline": 492.55,
-  "grade": 492.523,
-  "desvio_ms": -27.0
+  "grade": 492.526,
+  "desvio_ms": -24.0
  },
  {
   "evento": "leões rosnam baixo",
   "timeline": 493.3,
-  "grade": 493.273,
-  "desvio_ms": -27.0
+  "grade": 493.276,
+  "desvio_ms": -24.0
  },
  {
   "evento": "feixe de luz (suave)",
   "timeline": 494.85,
-  "grade": 494.898,
-  "desvio_ms": 48.0
+  "grade": 494.901,
+  "desvio_ms": 51.0
  },
  {
   "evento": "diário fecha",
   "timeline": 515.75,
-  "grade": 515.773,
-  "desvio_ms": 23.0
+  "grade": 515.776,
+  "desvio_ms": 26.0
  },
  {
   "evento": "insígnia",
   "timeline": 532.25,
-  "grade": 532.273,
-  "desvio_ms": 23.0
+  "grade": 532.276,
+  "desvio_ms": 26.0
  },
  {
   "evento": "passos do Pingo",
   "timeline": 535.5,
-  "grade": 535.523,
-  "desvio_ms": 23.0
+  "grade": 535.527,
+  "desvio_ms": 27.0
  },
  {
   "evento": "passos do Pingo",
   "timeline": 535.77,
-  "grade": 535.773,
-  "desvio_ms": 3.0
+  "grade": 535.777,
+  "desvio_ms": 7.0
  },
  {
   "evento": "passos do Pingo",
   "timeline": 536.04,
-  "grade": 536.023,
-  "desvio_ms": -17.0
+  "grade": 536.027,
+  "desvio_ms": -13.0
  },
  {
   "evento": "passos do Pingo",
   "timeline": 536.31,
-  "grade": 536.273,
-  "desvio_ms": -37.0
+  "grade": 536.277,
+  "desvio_ms": -33.0
  },
  {
   "evento": "passos do Pingo",
   "timeline": 536.58,
-  "grade": 536.523,
-  "desvio_ms": -57.0
+  "grade": 536.527,
+  "desvio_ms": -53.0
  },
  {
   "evento": "passos do Pingo",
   "timeline": 536.85,
-  "grade": 536.898,
-  "desvio_ms": 48.0
+  "grade": 536.902,
+  "desvio_ms": 52.0
  },
  {
   "evento": "pegada final",
   "timeline": 536.75,
-  "grade": 536.773,
-  "desvio_ms": 23.0
+  "grade": 536.777,
+  "desvio_ms": 27.0
  },
  {
   "evento": "crédito",
   "timeline": 537.75,
-  "grade": 537.773,
-  "desvio_ms": 23.0
+  "grade": 537.777,
+  "desvio_ms": 27.0
  },
  {
   "evento": "crédito",
   "timeline": 539.0,
-  "grade": 539.024,
-  "desvio_ms": 24.0
+  "grade": 539.027,
+  "desvio_ms": 27.0
  },
  {
   "evento": "crédito",
   "timeline": 540.25,
-  "grade": 540.274,
-  "desvio_ms": 24.0
+  "grade": 540.277,
+  "desvio_ms": 27.0
  },
  {
   "evento": "crédito",
   "timeline": 541.5,
-  "grade": 541.524,
-  "desvio_ms": 24.0
+  "grade": 541.527,
+  "desvio_ms": 27.0
  },
  {
   "evento": "crédito",
   "timeline": 542.75,
-  "grade": 542.774,
-  "desvio_ms": 24.0
+  "grade": 542.777,
+  "desvio_ms": 27.0
  }
 ]
