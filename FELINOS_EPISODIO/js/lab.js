@@ -33,6 +33,16 @@ function renderLab(ctx, v, t) {
     drawHouseCat(ctx, 'persa', { x: 280, y: 860, s: 0.72, tail: t, dilate: 0.4 }); drawHouseCat(ctx, 'siames', { x: 800, y: 860, s: 0.72, tail: t, dilate: 0.3 });
     drawHouseCat(ctx, 'mainecoon', { x: 280, y: 1780, s: 0.9, tail: t }); drawHouseCat(ctx, 'angora', { x: 800, y: 1780, s: 0.72, tail: t });
   }
+  if (v === 'bible') {
+    ctx.fillStyle = linear(ctx, 0, 0, 0, H, [[0, '#F2C98E'], [1, '#C98A5A']]); ctx.fillRect(0, 0, W, H);
+    robeFigure(ctx, { x: 200, y: 800, s: 0.55, t, pose: 'walk', hair: 'long', rim: '#FFE2A8' });
+    robeFigure(ctx, { x: 520, y: 800, s: 0.55, t, pose: 'stand', staff: true, rim: '#FFE2A8' });
+    robeFigure(ctx, { x: 860, y: 800, s: 0.55, t, pose: 'run', hair: 'helmet', spear: true, cloak: true, rim: '#FFE2A8' });
+    robeFigure(ctx, { x: 200, y: 1700, s: 0.55, t, pose: 'kneel', hair: 'beard', rim: '#FFE2A8' });
+    robeFigure(ctx, { x: 520, y: 1700, s: 0.55, t, pose: 'stand', lamb: true, rim: '#FFE2A8' });
+    robeFigure(ctx, { x: 860, y: 1700, s: 0.6, t, pose: 'float', color: 'rgba(255,248,230,0.85)', tall: 1.1, arms: [[100, 0.1], [80, -0.1]] });
+    sheep(ctx, 520, 1850, 0.8, t, false, t);
+  }
   if (v === 'pingoBig') drawPingo(ctx, { x: 540, y: 1500, s: 1.7, dilate: 0.3, tail: t });
   if (v === 'cats' && typeof drawBigCat === 'function') {
     drawBigCat(ctx, 'jaguar', { x: 500, y: 600, s: 1.05, walk: t, moving: 1 }, t);

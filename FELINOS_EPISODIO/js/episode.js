@@ -75,7 +75,7 @@ function handTitle(ctx, t, t0, txt, x, y, o = {}) {
   const { size = 110, color = CREAM, dur = 0.7, t1 = 1e9, rot = -0.04, align = 'left', stroke = PLUM } = o;
   const wk = clamp((t - t0) / dur), out = clamp((t - t1) / 0.3); if (wk <= 0 || out >= 1) return;
   ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1 - out; ctx.translate(x, y); ctx.rotate(rot);
-  ctx.font = `700 ${size}px Caveat`; ctx.textBaseline = 'alphabetic'; ctx.lineJoin = 'round'; const tw = ctx.measureText(txt).width, x0 = align === 'center' ? -tw / 2 : 0;
+  ctx.font = `700 ${size}px Caveat`; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'; ctx.lineJoin = 'round'; const tw = ctx.measureText(txt).width, x0 = align === 'center' ? -tw / 2 : 0;
   ctx.beginPath(); ctx.rect(x0 - 20, -size * 1.2, (tw + 40) * wk, size * 1.6); ctx.clip();
   ctx.strokeStyle = stroke; ctx.lineWidth = size * 0.11; ctx.strokeText(txt, x0, 0); ctx.fillStyle = color; ctx.fillText(txt, x0, 0);
   ctx.restore();
