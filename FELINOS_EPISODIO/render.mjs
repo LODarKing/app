@@ -77,6 +77,29 @@ if (args[0] === '--frame') {
     parts.forEach((f) => fs.rmSync(f));
     console.log(`segmento ${sc.id}.mp4: ${n} quadros em ${((Date.now() - t0) / 1000).toFixed(0)} s`);
   }
+} else if (args[0] === '--part') {
+  // --part sNN a b fps: refaz só o trecho [a, b) (tempo local da cena) a `fps` quadros/s (saída sempre a 30, quadros repetidos)
+  // e emenda no segmento existente: [0, a) antigo + trecho novo + [b, fim) antigo
+  const sc = sceneOf(args[1]), a = Number(args[2]), b = Math.min(Number(args[3]), sc.dur), fr = Number(args[4] || FPS), NP = 4, t0 = Date.now();
+  const n = Math.round((b - a) * fr), per = Math.ceil(n / NP), pages = await Promise.all(Array.from({ length: NP }, page)); let done = 0;
+  await Promise.all(pages.map(async (p, k) => {
+    const f0 = k * per, f1 = Math.min(n, f0 + per); if (f0 >= f1) return;
+    const ff = spawn('ffmpeg', ['-loglevel', 'error', '-y', '-f', 'image2pipe', '-framerate', String(fr), '-c:v', 'png', '-i', '-', '-c:v', 'libx264', '-crf', '16', '-preset', 'medium', '-pix_fmt', 'yuv420p', '-r', String(FPS), `segmentos/_p${k}.mp4`], { stdio: ['pipe', 'inherit', 'inherit'] });
+    const fin = new Promise((res) => ff.on('close', res));
+    for (let f = f0; f < f1; f++) { const buf = await grab(p, sc.t0 + a + f / fr); if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once('drain', r)); if (++done % 100 === 0) console.log(`${sc.id} trecho: ${done}/${n} quadros, ${((Date.now() - t0) / 1000).toFixed(0)} s`); }
+    ff.stdin.end(); await fin;
+  }));
+  const parts = Array.from({ length: NP }, (_, k) => `segmentos/_p${k}.mp4`).filter((f) => fs.existsSync(f));
+  fs.writeFileSync('segmentos/_lista.txt', parts.map((f) => `file '${path.resolve(f)}'`).join('\n'));
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', 'segmentos/_lista.txt', '-c', 'copy', 'segmentos/_novo.mp4']); parts.forEach((f) => fs.rmSync(f));
+  const old = `segmentos/${sc.id}.mp4`, keepA = a > 0.001, keepB = b < sc.dur - 0.001, ins = [], fc = []; let k = 0;
+  if (keepA) { ins.push('-i', old); fc.push(`[${k}:v]trim=0:${a},setpts=PTS-STARTPTS[v${k}]`); k++; }
+  ins.push('-i', 'segmentos/_novo.mp4'); fc.push(`[${k}:v]setpts=PTS-STARTPTS[v${k}]`); k++;
+  if (keepB) { ins.push('-i', old); fc.push(`[${k}:v]trim=${b}:${sc.dur},setpts=PTS-STARTPTS[v${k}]`); k++; }
+  const cat = Array.from({ length: k }, (_, i) => `[v${i}]`).join('') + `concat=n=${k}:v=1:a=0[out]`;
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', ...ins, '-filter_complex', fc.join(';') + ';' + cat, '-map', '[out]', '-c:v', 'libx264', '-crf', '16', '-preset', 'veryfast', '-pix_fmt', 'yuv420p', '-r', String(FPS), 'segmentos/_emenda.mp4']);
+  fs.renameSync('segmentos/_emenda.mp4', old); fs.rmSync('segmentos/_novo.mp4');
+  console.log(`${sc.id}: trecho ${a}–${b} s refeito (${n} quadros a ${fr} q/s) em ${((Date.now() - t0) / 1000).toFixed(0)} s`);
 } else if (args[0] === '--final') {
   const segs = TL.scenes.map((s) => `segmentos/${s.id}.mp4`), miss = segs.filter((f) => !fs.existsSync(f));
   if (miss.length) { console.error('faltam segmentos:', miss.join(' ')); process.exit(1); }
