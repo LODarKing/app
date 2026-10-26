@@ -12,6 +12,8 @@ function voiceAt(who, t) { const tt = on2s(t); for (const v of TL.voices) if (v.
 const speaking = (who, t) => TL.voices.some((v) => v.quem === who && t >= v.inicio - 0.1 && t < v.inicio + v.dur + 0.1);
 const voiceL = (who, lt) => voiceAt(who, lt + SCENE_T0), speakingL = (who, lt) => speaking(who, lt + SCENE_T0);
 const lerpM = (A, B, k) => A.map((a, i) => lerp(a, B[i], k));
+/** pose em coordenadas do mundo -> tela, pela transformação atual (os personagens desenham em coordenadas de tela) */
+function tp(ctx, p) { const M = ctx.getTransform(); return { ...p, x: M.a * p.x + M.c * p.y + M.e, y: M.b * p.x + M.d * p.y + M.f, s: p.s * Math.hypot(M.a, M.b), cutY: p.cutY != null ? M.d * p.cutY + M.f : undefined }; }
 /** gestos de fala: piscadas, acenos e sobrancelhas nas palavras longas (tônicas), a partir dos tempos reais */
 function talkBeats(who, t) {
   let nod = 0, brow = 0;
@@ -60,7 +62,7 @@ function uiCard(ctx, t, t0, t1, txt, x, y, o = {}) {
   const k = (t - t0) / 0.2, out = (t - t1) / 0.18; if (k <= 0 || out >= 1) return;
   const s = (k < 1 ? outBack(k, 2.2) : 1) * (out > 0 ? 1 - easeIn(out) : 1);
   ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s);
-  ctx.font = `900 ${size}px InterUI`; const tw = w || ctx.measureText(txt).width + size * 0.9, th = size * 1.45 + (sub ? size * 0.85 : 0);
+  ctx.font = `700 ${size * 0.62}px InterUI`; const sw = sub ? ctx.measureText(sub).width : 0; ctx.font = `900 ${size}px InterUI`; const tw = w || Math.max(ctx.measureText(txt).width, sw) + size * 0.9, th = size * 1.45 + (sub ? size * 0.85 : 0);
   const bx = align === 'center' ? -tw / 2 : 0;
   ctx.fillStyle = PLUM; ctx.beginPath(); ctx.roundRect(bx + 8, -th / 2 + 9, tw, th, 16); ctx.fill();
   ctx.fillStyle = accent ? ACCENT : CREAM; ctx.beginPath(); ctx.roundRect(bx, -th / 2, tw, th, 16); ctx.fill(); ctx.strokeStyle = PLUM; ctx.lineWidth = 6; ctx.stroke();

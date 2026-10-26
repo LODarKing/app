@@ -328,5 +328,6 @@ function shotFamily(ctx, t) {
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     speedLines(ctx, t, bell(t, P.splash + 0.3, 0.2) * 0.8);
   }
+  window.BOOK = { bookSpread, coverFace, pageNotes, pageArt, endpaper, sheet, PW, PH };
   CENAS.s02 = { draw, ui: uiLayer, sfx, capY: (t) => (t >= P.cutFam ? 330 : 1390), blur: (t) => (t > P.whip - 0.04 && t < P.whip + 0.2) || (t > P.splash + 0.2 && t < P.portal) };
 })();

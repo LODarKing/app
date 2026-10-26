@@ -94,11 +94,11 @@
     ctx.restore();
     // Lara (meio corpo) e o Pingo no toco
     const talk = voiceL('lara', t), tb = talkBeats('lara', t + SCENE_T0), proud = ss((td - P.proud) / 0.3) * (1 - ss((td - P.butterfly - 0.2) / 0.3));
-    drawPerson(ctx, 'lara', { x: 320, y: 1180, s: 0.95, t: td, mouth: talk, smile: 1, look: [7, 4], turn: 0.35, tilt: 4 + 3 * tb.nod, happy: bell(td, P.proud + 0.4, 0.35) > 0.5 ? 1 : 0, blink: blinkAt(td, [P.lara + 1.6]), armR: { a1: lerp(84, 40, ss((td - P.lara - 0.4) / 0.4)), a2: lerp(110, -10, ss((td - P.lara - 0.4) / 0.4)), open: 1 } });
+    drawPerson(ctx, 'lara', tp(ctx, { x: 320, y: 1180, s: 0.95, t: td, mouth: talk, smile: 1, look: [7, 4], turn: 0.35, tilt: 4 + 3 * tb.nod, happy: bell(td, P.proud + 0.4, 0.35) > 0.5 ? 1 : 0, blink: blinkAt(td, [P.lara + 1.6]), armR: { a1: lerp(84, 40, ss((td - P.lara - 0.4) / 0.4)), a2: lerp(110, -10, ss((td - P.lara - 0.4) / 0.4)), open: 1 } }));
     ctx.fillStyle = '#7A5A4E'; ctx.beginPath(); ctx.ellipse(800, 1560, 150, 40, 0, 0, 6.283); ctx.fill(); ctx.fillStyle = '#6A4A42'; ctx.fillRect(650, 1560, 300, 400); ctx.fillStyle = '#9A7A66'; ctx.beginPath(); ctx.ellipse(800, 1560, 140, 32, 0, 0, 6.283); ctx.fill();
     const [bx, by, br] = butterflyPos(t), bk = t > P.butterfly - 0.1 ? 1 : 0;
     const lookB = bk ? [clamp((bx - 800) / 60, -8, 8), clamp((by - 1240) / 60, -8, 8)] : [0, 0];
-    drawPingo(ctx, { x: 800, y: 1556, s: 0.55, tail: td * (1 + bk), tilt: -14 * proud + bk * clamp((bx - 800) / 20, -14, 14), headDy: -18 * proud, blink: proud > 0.5 ? 0.55 : blinkAt(td, [P.lara + 0.8]), dilate: bk ? 0.95 : 0.4, look: proud > 0.3 ? [0, -6] : lookB, earL: -10 * bk, earR: -10 * bk, crouch: bk * ss((td - P.land + 0.4) / 0.3) * 0.7, wiggle: bk * ss((td - P.land) / 0.2) * Math.sin(td * 26) * 0.6 });
+    drawPingo(ctx, tp(ctx, { x: 800, y: 1556, s: 0.55, tail: td * (1 + bk), tilt: -14 * proud + bk * clamp((bx - 800) / 20, -14, 14), headDy: -18 * proud, blink: proud > 0.5 ? 0.55 : blinkAt(td, [P.lara + 0.8]), dilate: bk ? 0.95 : 0.4, look: proud > 0.3 ? [0, -6] : lookB, earL: -10 * bk, earR: -10 * bk, crouch: bk * ss((td - P.land + 0.4) / 0.3) * 0.7, wiggle: bk * ss((td - P.land) / 0.2) * Math.sin(td * 26) * 0.6 }));
     leafShape(ctx, 880, 1452, 150, 40, -0.3, '#7E9C6E', '#5F7A56');
     if (t > P.butterfly - 0.2) butterfly(ctx, bx, by, 0.9, t, br);
     leafShadows(ctx, t, [0, 1000, W, 920], { alpha: 0.12, seed: 9 });

@@ -67,7 +67,7 @@ function pingoHead(ctx, p, lw) {
   inkLine(ctx, [[0, 38], [0, 48]], { lw: lw * 0.8, seed: 52 });
   inkLine(ctx, [[0, 48], [-12, 57], [-27, 50]], { lw: lw * 0.8, seed: 53 });
   inkLine(ctx, [[0, 48], [12, 57], [27, 50]], { lw: lw * 0.8, seed: 54 });
-  [-1, 1].forEach((sd) => [0, 1, 2].forEach((k) => inkLine(ctx, [[sd * 48, 58 + k * 8], [sd * 120, 46 + k * 16], [sd * 200, 46 + k * 34]], { lw: lw * 0.55, seed: 60 + k + sd * 5, line: '#3A2C36' })));
+  const wb = p.whiskBend || 0, wf = p.whiskFwd || 0; [-1, 1].forEach((sd) => [0, 1, 2].forEach((k) => inkLine(ctx, [[sd * 48, 58 + k * 8], [sd * (120 - 10 * wf), 46 + k * 16 - 20 * wf], [sd * (200 - 70 * wb - 40 * wf), 46 + k * 34 - 26 * wb - 50 * wf]], { lw: lw * 0.55, seed: 60 + k + sd * 5, line: '#3A2C36' })));
 }
 
 /** Pingo sentado de frente. p: {x, y, s, tilt, blink, dilate, look, earL, earR, crouch, wiggle, meow, tail, glow} */
