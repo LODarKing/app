@@ -37,3 +37,10 @@ FELINOS_PILOTO_V3/out/
 FELINOS_PILOTO_V3/node_modules/
 FELINOS_PILOTO_V3/assets/ref_brilhante/
 ENTRADA_FELINOS/
+# Felinos piloto v4 e áudio: quadros, testes, dependências; gravações originais ficam com o usuário (entram só as falas restauradas)
+FELINOS_PILOTO_V4/frames/
+FELINOS_PILOTO_V4/out/
+FELINOS_PILOTO_V4/node_modules/
+FELINOS_PILOTO_V4/assets/ref_brilhante/
+FELINOS_AUDIO/originais_wav/
+ENTRADA_NARRACOES/

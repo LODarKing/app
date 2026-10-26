@@ -1,0 +1,452 @@
+{
+ "Lara_Felinos_01": {
+  "lufs": -23.5,
+  "pico_dbfs": -5.65,
+  "amostras_clip": 0,
+  "piso_ruido_db": -49.3,
+  "fala_db": -20.2,
+  "snr_db": 29.1,
+  "banda_99pct_hz": 14624
+ },
+ "Lara_Felinos_02": {
+  "lufs": -13.2,
+  "pico_dbfs": 3.06,
+  "amostras_clip": 695,
+  "piso_ruido_db": -40.6,
+  "fala_db": -10.4,
+  "snr_db": 30.2,
+  "banda_99pct_hz": 10335
+ },
+ "Lara_Felinos_03": {
+  "lufs": -19.9,
+  "pico_dbfs": -1.01,
+  "amostras_clip": 0,
+  "piso_ruido_db": -47.2,
+  "fala_db": -17.4,
+  "snr_db": 29.8,
+  "banda_99pct_hz": 11854
+ },
+ "Lara_Felinos_04": {
+  "lufs": -19.8,
+  "pico_dbfs": 2.62,
+  "amostras_clip": 82,
+  "piso_ruido_db": -49.1,
+  "fala_db": -18.0,
+  "snr_db": 31.1,
+  "banda_99pct_hz": 7875
+ },
+ "Lara_Felinos_05": {
+  "lufs": -17.3,
+  "pico_dbfs": -0.93,
+  "amostras_clip": 0,
+  "piso_ruido_db": -47.6,
+  "fala_db": -14.5,
+  "snr_db": 33.1,
+  "banda_99pct_hz": 4468
+ },
+ "Lara_Felinos_06": {
+  "lufs": -15.1,
+  "pico_dbfs": 2.94,
+  "amostras_clip": 262,
+  "piso_ruido_db": -45.0,
+  "fala_db": -11.4,
+  "snr_db": 33.5,
+  "banda_99pct_hz": 11221
+ },
+ "Lara_Felinos_07": {
+  "lufs": -21.0,
+  "pico_dbfs": -3.1,
+  "amostras_clip": 0,
+  "piso_ruido_db": -48.1,
+  "fala_db": -17.3,
+  "snr_db": 30.8,
+  "banda_99pct_hz": 7926
+ },
+ "Lara_e_Miguel_Felinos_01": {
+  "lufs": -18.1,
+  "pico_dbfs": -0.24,
+  "amostras_clip": 0,
+  "piso_ruido_db": -48.9,
+  "fala_db": -14.9,
+  "snr_db": 34.0,
+  "banda_99pct_hz": 8325
+ },
+ "Lara_e_Miguel_Felinos_02": {
+  "lufs": -18.2,
+  "pico_dbfs": 2.92,
+  "amostras_clip": 75,
+  "piso_ruido_db": -47.5,
+  "fala_db": -16.2,
+  "snr_db": 31.3,
+  "banda_99pct_hz": 5559
+ },
+ "Lara_e_Miguel_Felinos_03": {
+  "lufs": -14.8,
+  "pico_dbfs": 3.16,
+  "amostras_clip": 583,
+  "piso_ruido_db": -44.9,
+  "fala_db": -11.9,
+  "snr_db": 33.0,
+  "banda_99pct_hz": 11398
+ },
+ "Miguel_Felinos_01": {
+  "lufs": -22.0,
+  "pico_dbfs": -6.54,
+  "amostras_clip": 0,
+  "piso_ruido_db": -48.4,
+  "fala_db": -19.0,
+  "snr_db": 29.4,
+  "banda_99pct_hz": 11747
+ },
+ "Miguel_Felinos_02": {
+  "lufs": -14.4,
+  "pico_dbfs": 2.51,
+  "amostras_clip": 136,
+  "piso_ruido_db": -42.2,
+  "fala_db": -11.1,
+  "snr_db": 31.2,
+  "banda_99pct_hz": 10246
+ },
+ "Miguel_Felinos_03": {
+  "lufs": -16.3,
+  "pico_dbfs": 2.3,
+  "amostras_clip": 21,
+  "piso_ruido_db": -42.9,
+  "fala_db": -12.4,
+  "snr_db": 30.5,
+  "banda_99pct_hz": 8937
+ },
+ "Miguel_Felinos_04": {
+  "lufs": -9.6,
+  "pico_dbfs": 3.11,
+  "amostras_clip": 1661,
+  "piso_ruido_db": -47.8,
+  "fala_db": -6.3,
+  "snr_db": 41.6,
+  "banda_99pct_hz": 5054
+ },
+ "Miguel_Felinos_05": {
+  "lufs": -14.6,
+  "pico_dbfs": 1.59,
+  "amostras_clip": 67,
+  "piso_ruido_db": -43.0,
+  "fala_db": -10.9,
+  "snr_db": 32.1,
+  "banda_99pct_hz": 4075
+ },
+ "Miguel_Felinos_06": {
+  "lufs": -10.9,
+  "pico_dbfs": 2.61,
+  "amostras_clip": 635,
+  "piso_ruido_db": -49.1,
+  "fala_db": -9.0,
+  "snr_db": 40.2,
+  "banda_99pct_hz": 4559
+ },
+ "Miguel_Felinos_07": {
+  "lufs": -21.0,
+  "pico_dbfs": -4.67,
+  "amostras_clip": 0,
+  "piso_ruido_db": -51.7,
+  "fala_db": -17.7,
+  "snr_db": 34.0,
+  "banda_99pct_hz": 5011
+ },
+ "Narrador_Felinos_01": {
+  "lufs": -14.9,
+  "pico_dbfs": 2.7,
+  "amostras_clip": 372,
+  "piso_ruido_db": -47.0,
+  "fala_db": -11.0,
+  "snr_db": 36.0,
+  "banda_99pct_hz": 6146
+ },
+ "Narrador_Felinos_02": {
+  "lufs": -15.6,
+  "pico_dbfs": 3.06,
+  "amostras_clip": 426,
+  "piso_ruido_db": -47.3,
+  "fala_db": -12.1,
+  "snr_db": 35.3,
+  "banda_99pct_hz": 8606
+ },
+ "Narrador_Felinos_03": {
+  "lufs": -15.1,
+  "pico_dbfs": 3.19,
+  "amostras_clip": 1233,
+  "piso_ruido_db": -41.5,
+  "fala_db": -11.4,
+  "snr_db": 30.0,
+  "banda_99pct_hz": 6614
+ },
+ "Narrador_Felinos_04": {
+  "lufs": -16.2,
+  "pico_dbfs": 3.14,
+  "amostras_clip": 442,
+  "piso_ruido_db": -51.1,
+  "fala_db": -12.9,
+  "snr_db": 38.2,
+  "banda_99pct_hz": 7039
+ },
+ "Narrador_Felinos_05": {
+  "lufs": -16.0,
+  "pico_dbfs": 3.15,
+  "amostras_clip": 473,
+  "piso_ruido_db": -50.6,
+  "fala_db": -11.9,
+  "snr_db": 38.7,
+  "banda_99pct_hz": 6997
+ },
+ "Narrador_Felinos_06": {
+  "lufs": -17.6,
+  "pico_dbfs": 3.18,
+  "amostras_clip": 202,
+  "piso_ruido_db": -46.8,
+  "fala_db": -13.9,
+  "snr_db": 32.9,
+  "banda_99pct_hz": 7142
+ },
+ "Narrador_Felinos_07": {
+  "lufs": -16.9,
+  "pico_dbfs": 1.8,
+  "amostras_clip": 81,
+  "piso_ruido_db": -53.0,
+  "fala_db": -13.1,
+  "snr_db": 39.9,
+  "banda_99pct_hz": 7501
+ },
+ "Narrador_Felinos_08": {
+  "lufs": -16.0,
+  "pico_dbfs": 2.92,
+  "amostras_clip": 700,
+  "piso_ruido_db": -50.8,
+  "fala_db": -12.4,
+  "snr_db": 38.4,
+  "banda_99pct_hz": 7936
+ },
+ "Narrador_Felinos_09": {
+  "lufs": -14.4,
+  "pico_dbfs": 3.11,
+  "amostras_clip": 1235,
+  "piso_ruido_db": -52.3,
+  "fala_db": -10.4,
+  "snr_db": 41.9,
+  "banda_99pct_hz": 7364
+ },
+ "Narrador_Felinos_10": {
+  "lufs": -17.7,
+  "pico_dbfs": 2.95,
+  "amostras_clip": 111,
+  "piso_ruido_db": -53.4,
+  "fala_db": -14.3,
+  "snr_db": 39.1,
+  "banda_99pct_hz": 7145
+ },
+ "Narrador_Felinos_11": {
+  "lufs": -15.8,
+  "pico_dbfs": 3.17,
+  "amostras_clip": 251,
+  "piso_ruido_db": -48.7,
+  "fala_db": -12.4,
+  "snr_db": 36.3,
+  "banda_99pct_hz": 5216
+ },
+ "Narrador_Felinos_12": {
+  "lufs": -17.1,
+  "pico_dbfs": 3.12,
+  "amostras_clip": 344,
+  "piso_ruido_db": -52.0,
+  "fala_db": -13.9,
+  "snr_db": 38.1,
+  "banda_99pct_hz": 5194
+ },
+ "Narrador_Felinos_13": {
+  "lufs": -15.4,
+  "pico_dbfs": 3.11,
+  "amostras_clip": 407,
+  "piso_ruido_db": -49.8,
+  "fala_db": -11.1,
+  "snr_db": 38.7,
+  "banda_99pct_hz": 5989
+ },
+ "Narrador_Felinos_14": {
+  "lufs": -17.2,
+  "pico_dbfs": 3.06,
+  "amostras_clip": 261,
+  "piso_ruido_db": -49.3,
+  "fala_db": -13.5,
+  "snr_db": 35.9,
+  "banda_99pct_hz": 5768
+ },
+ "Narrador_Felinos_15": {
+  "lufs": -15.4,
+  "pico_dbfs": 3.23,
+  "amostras_clip": 611,
+  "piso_ruido_db": -50.2,
+  "fala_db": -11.0,
+  "snr_db": 39.3,
+  "banda_99pct_hz": 7191
+ },
+ "Narrador_Felinos_16": {
+  "lufs": -12.7,
+  "pico_dbfs": 3.38,
+  "amostras_clip": 1157,
+  "piso_ruido_db": -51.5,
+  "fala_db": -8.9,
+  "snr_db": 42.6,
+  "banda_99pct_hz": 8639
+ },
+ "Narrador_Felinos_17": {
+  "lufs": -14.3,
+  "pico_dbfs": 3.02,
+  "amostras_clip": 437,
+  "piso_ruido_db": -52.9,
+  "fala_db": -10.2,
+  "snr_db": 42.7,
+  "banda_99pct_hz": 7593
+ },
+ "Narrador_Felinos_18": {
+  "lufs": -14.4,
+  "pico_dbfs": 2.74,
+  "amostras_clip": 297,
+  "piso_ruido_db": -56.0,
+  "fala_db": -10.6,
+  "snr_db": 45.4,
+  "banda_99pct_hz": 7075
+ },
+ "Narrador_Felinos_19": {
+  "lufs": -15.5,
+  "pico_dbfs": 3.09,
+  "amostras_clip": 365,
+  "piso_ruido_db": -46.1,
+  "fala_db": -11.4,
+  "snr_db": 34.7,
+  "banda_99pct_hz": 6608
+ },
+ "Narrador_Felinos_20": {
+  "lufs": -15.3,
+  "pico_dbfs": 2.55,
+  "amostras_clip": 321,
+  "piso_ruido_db": -53.3,
+  "fala_db": -11.8,
+  "snr_db": 41.5,
+  "banda_99pct_hz": 5734
+ },
+ "Narrador_Felinos_21": {
+  "lufs": -16.6,
+  "pico_dbfs": 3.08,
+  "amostras_clip": 199,
+  "piso_ruido_db": -53.9,
+  "fala_db": -12.8,
+  "snr_db": 41.1,
+  "banda_99pct_hz": 4905
+ },
+ "Narrador_Felinos_22": {
+  "lufs": -17.6,
+  "pico_dbfs": 3.0,
+  "amostras_clip": 120,
+  "piso_ruido_db": -48.0,
+  "fala_db": -14.0,
+  "snr_db": 34.0,
+  "banda_99pct_hz": 6259
+ },
+ "Narrador_Felinos_23": {
+  "lufs": -16.2,
+  "pico_dbfs": 3.18,
+  "amostras_clip": 222,
+  "piso_ruido_db": -53.7,
+  "fala_db": -13.0,
+  "snr_db": 40.7,
+  "banda_99pct_hz": 7074
+ },
+ "Narrador_Felinos_24": {
+  "lufs": -14.4,
+  "pico_dbfs": 2.38,
+  "amostras_clip": 219,
+  "piso_ruido_db": -51.5,
+  "fala_db": -10.8,
+  "snr_db": 40.7,
+  "banda_99pct_hz": 6612
+ },
+ "Narrador_Felinos_25": {
+  "lufs": -14.4,
+  "pico_dbfs": 3.08,
+  "amostras_clip": 867,
+  "piso_ruido_db": -46.8,
+  "fala_db": -10.7,
+  "snr_db": 36.0,
+  "banda_99pct_hz": 2899
+ },
+ "Narrador_Felinos_26": {
+  "lufs": -13.9,
+  "pico_dbfs": 3.16,
+  "amostras_clip": 579,
+  "piso_ruido_db": -51.7,
+  "fala_db": -10.4,
+  "snr_db": 41.3,
+  "banda_99pct_hz": 7884
+ },
+ "Narrador_Felinos_27": {
+  "lufs": -14.2,
+  "pico_dbfs": 3.24,
+  "amostras_clip": 1625,
+  "piso_ruido_db": -48.7,
+  "fala_db": -10.3,
+  "snr_db": 38.3,
+  "banda_99pct_hz": 6394
+ },
+ "Narrador_Felinos_28": {
+  "lufs": -16.1,
+  "pico_dbfs": 3.25,
+  "amostras_clip": 270,
+  "piso_ruido_db": -50.4,
+  "fala_db": -12.6,
+  "snr_db": 37.8,
+  "banda_99pct_hz": 6278
+ },
+ "Narrador_Felinos_29": {
+  "lufs": -17.2,
+  "pico_dbfs": 2.96,
+  "amostras_clip": 42,
+  "piso_ruido_db": -45.6,
+  "fala_db": -13.5,
+  "snr_db": 32.1,
+  "banda_99pct_hz": 7149
+ },
+ "Narrador_Felinos_30": {
+  "lufs": -15.9,
+  "pico_dbfs": 3.09,
+  "amostras_clip": 137,
+  "piso_ruido_db": -39.5,
+  "fala_db": -11.7,
+  "snr_db": 27.8,
+  "banda_99pct_hz": 7853
+ },
+ "Narrador_Felinos_31": {
+  "lufs": -16.1,
+  "pico_dbfs": 3.15,
+  "amostras_clip": 226,
+  "piso_ruido_db": -44.1,
+  "fala_db": -12.5,
+  "snr_db": 31.6,
+  "banda_99pct_hz": 4559
+ },
+ "Narrador_Felinos_32": {
+  "lufs": -16.5,
+  "pico_dbfs": 2.79,
+  "amostras_clip": 203,
+  "piso_ruido_db": -43.5,
+  "fala_db": -12.8,
+  "snr_db": 30.8,
+  "banda_99pct_hz": 6450
+ },
+ "Narrador_Felinos_33": {
+  "lufs": -14.2,
+  "pico_dbfs": 3.21,
+  "amostras_clip": 931,
+  "piso_ruido_db": -43.8,
+  "fala_db": -10.6,
+  "snr_db": 33.2,
+  "banda_99pct_hz": 7169
+ }
+}
