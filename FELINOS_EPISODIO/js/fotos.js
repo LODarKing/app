@@ -3,7 +3,7 @@
 'use strict';
 // enquadramento de cada foto: centro do recorte (fração da imagem) e zoom sobre o "cover"
 const FOTO = {
-  tigre: { sci: 'Panthera tigris', fx: 0.6, fy: 0.55, z: 1.25 },
+  tigre: { sci: 'Panthera tigris', fx: 0.5, fy: 0.5, z: 1.0 },
   leao: { sci: 'Panthera leo', fx: 0.28, fy: 0.5, z: 1.35 },
   onca: { sci: 'Panthera onca', fx: 0.62, fy: 0.48, z: 1.1 },
   guepardo: { sci: 'Acinonyx jubatus', fx: 0.5, fy: 0.5, z: 1.1 },
