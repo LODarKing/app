@@ -118,6 +118,9 @@
     vignette(ctx, '50,25,60', 0.28);
   }
   function ui(ctx, t) {
+    // fotos reais: "o Pingo é parente de um tigre?"
+    photoPip(ctx, t, 1.1, P.reorg - 0.3, 'gato', { x: 34, y: 150, w: 330, h: 240, side: 'below', name: 'Gato doméstico', rot: -0.03 });
+    photoPip(ctx, t, 2.9, P.reorg - 0.3, 'tigre', { x: 690, y: 150, w: 330, h: 240, side: 'below', name: 'Tigre', rot: 0.03 });
     // título do diagrama e a ordem (fonte de título); nomes no desfile; características
     if (t >= P.reorg && t < P.parade) {
       handTitle(ctx, t, P.title, 'Família', 540, 880, { size: 84, color: CREAM, align: 'center', rot: -0.03, t1: P.parade - 0.3 });

@@ -131,6 +131,7 @@
     vignette(ctx, '50,25,50', 0.28);
   }
   function ui(ctx, t) {
+    photoPip(ctx, t, 2.5, 8.0, 'gato', { x: 30, y: 128, w: 400, h: 290, name: 'Gato doméstico', sub: 'convive com as pessoas', ly: 40 });
     if (t >= P.lara && t < P.indoor) { const pos = [[200, 360], [880, 360], [170, 740], [900, 740]], names = ['alimento adequado', 'água limpa', 'segurança', 'veterinário'];
       P.icons.forEach((t0, i) => { const k = (t - t0) / 0.2; if (k <= 0) return; icon(ctx, i, pos[i][0], pos[i][1], outBack(clamp(k), 2) * (t > P.indoor - 0.2 ? 1 - clamp((t - P.indoor + 0.2) / 0.2) : 1)); uiCard(ctx, t, t0 + 0.1, P.indoor - 0.1, names[i], pos[i][0], pos[i][1] + 130, { size: 34, accent: i % 2 === 1 }); }); }
     if (t >= P.indoor && t < P.pet) { uiCard(ctx, t, P.indoor + 1.4, P.catio - 0.1, 'cuidar é amar', 540, 230, { size: 56, accent: true }); uiCard(ctx, t, P.catio + 0.4, P.pet - 0.1, 'dentro de casa ou em área externa segura', 540, 230, { size: 34 }); uiCard(ctx, t, P.birds + 0.4, P.pet - 0.1, 'preserva a fauna silvestre', 540, 330, { size: 42, accent: true }); }

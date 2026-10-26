@@ -7,6 +7,7 @@
 @font-face { font-family: 'InterUI'; font-weight: 700; src: url('fonts/Inter-Bold.otf'); }
 @font-face { font-family: 'InterUI'; font-weight: 800; src: url('fonts/Inter-ExtraBold.otf'); }
 @font-face { font-family: 'InterUI'; font-weight: 900; src: url('fonts/Inter-Black.otf'); }
+@font-face { font-family: 'InterUI'; font-style: italic; font-weight: 700; src: url('fonts/Inter-BoldItalic.otf'); }
 html, body { margin: 0; background: #000; }
 canvas { display: block; }
 </style></head>
@@ -16,6 +17,18 @@ canvas { display: block; }
 <img id="refMiguel" src="assets/ref_miguel.png" style="display:none">
 <img id="refLara" src="assets/ref_lara.png" style="display:none">
 <img id="emblema" src="assets/emblema_desbravadores_recortado.png" style="display:none">
+<img id="foto_tigre" src="assets/fotos/tigre.jpg" style="display:none">
+<img id="foto_leao" src="assets/fotos/leao.jpg" style="display:none">
+<img id="foto_onca" src="assets/fotos/onca.jpg" style="display:none">
+<img id="foto_guepardo" src="assets/fotos/guepardo.jpg" style="display:none">
+<img id="foto_leopardo" src="assets/fotos/leopardo.jpg" style="display:none">
+<img id="foto_sucuarana" src="assets/fotos/sucuarana.jpg" style="display:none">
+<img id="foto_jaguatirica" src="assets/fotos/jaguatirica.jpg" style="display:none">
+<img id="foto_gato" src="assets/fotos/gato.jpg" style="display:none">
+<img id="foto_persa" src="assets/fotos/persa.jpg" style="display:none">
+<img id="foto_siames" src="assets/fotos/siames.jpg" style="display:none">
+<img id="foto_mainecoon" src="assets/fotos/mainecoon.jpg" style="display:none">
+<img id="foto_angora" src="assets/fotos/angora.jpg" style="display:none">
 <script src="timeline.js"></script>
 <script src="js/core.js"></script>
 <script src="js/post.js"></script>
@@ -28,7 +41,10 @@ canvas { display: block; }
 <script src="js/mapa.js"></script>
 <script src="js/episode.js"></script>
 <script src="js/biblia.js"></script>
+<script src="js/figuras.js"></script>
 <script src="js/mesa.js"></script>
+<script src="js/fotos_creditos.js"></script>
+<script src="js/fotos.js"></script>
 <script src="js/cenas/s01.js"></script>
 <script src="js/cenas/s02.js"></script>
 <script src="js/cenas/s03.js"></script>
@@ -42,13 +58,15 @@ canvas { display: block; }
 <script src="js/cenas/s11.js"></script>
 <script src="js/cenas/s12.js"></script>
 <script src="js/cenas/s13_16.js"></script>
+<script src="js/cenas/historias.js"></script>
 <script src="js/cenas/s17_18.js"></script>
 <script src="js/lab.js"></script>
 <script>
   // Contrato de render: window.seek(t) desenha o quadro do instante t (função pura do tempo).
   window.ready = (async () => {
-    for (const f of ['700 40px Caveat', '400 40px InterUI', '600 40px InterUI', '700 40px InterUI', '800 40px InterUI', '900 40px InterUI']) await document.fonts.load(f);
+    for (const f of ['italic 700 40px InterUI', '700 40px Caveat', '400 40px InterUI', '600 40px InterUI', '700 40px InterUI', '800 40px InterUI', '900 40px InterUI']) await document.fonts.load(f);
     await document.getElementById('insignia').decode(); await document.getElementById('emblema').decode(); await document.getElementById('refMiguel').decode(); await document.getElementById('refLara').decode();
+    for (const im of document.querySelectorAll('img[id^=foto_]')) { try { await im.decode(); } catch (e) { /* foto ainda não baixada: o PIP é omitido */ } }
     return true;
   })();
   const ctx = document.getElementById('c').getContext('2d');

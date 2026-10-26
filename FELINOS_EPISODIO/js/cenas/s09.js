@@ -118,7 +118,8 @@
   }
   function ui(ctx, t) {
     if (t < P.persa + 2.5) { ctx.save(); marquee(ctx, t, (t - P.sign - 0.2) / 0.4); ctx.restore(); if (t > P.sign + 0.4) { ctx.save(); ctx.font = '900 60px InterUI'; ctx.textAlign = 'center'; ctx.fillStyle = CREAM; const s = 'CONHEÇA 4 RAÇAS'; ctx.fillText(s, 540, 290); ctx.font = '900 44px InterUI'; ctx.fillStyle = ACCENT; ctx.fillText('DE GATOS!', 540, 350); ctx.restore(); } }
-    const tag = (t0, t1, a, b) => uiCard(ctx, t, t0, t1, a, 540, 330, { size: 62, accent: true, sub: b });
+    const FK = { PERSA: 'persa', 'SIAMÊS': 'siames', 'MAINE COON': 'mainecoon', 'ANGORÁ TURCO': 'angora' }, NM = { PERSA: 'Persa', 'SIAMÊS': 'Siamês', 'MAINE COON': 'Maine Coon', 'ANGORÁ TURCO': 'Angorá turco' };
+    const tag = (t0, t1, a, b) => photoPip(ctx, t, t0 - 0.4, t1, FK[a], { x: 30, y: 128, w: 400, h: 290, name: NM[a], sub: b, ly: 40 });   // foto real da raça + Felis catus
     tag(P.persa + 3.0, P.siames - 0.15, 'PERSA', 'calmo e dócil');
     tag(P.siames + 3.4, P.maine - 0.15, 'SIAMÊS', 'comunicativo e sociável');
     tag(P.maine + 4.6, P.angora - 0.15, 'MAINE COON', 'grande e sociável');

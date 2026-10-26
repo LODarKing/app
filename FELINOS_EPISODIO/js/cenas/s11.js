@@ -7,6 +7,7 @@
     ['tiger', 'TIGRE', 'ÁSIA', 'Panthera tigris'], ['lion', 'LEÃO', 'ÁFRICA E ÍNDIA', 'Panthera leo'], ['jaguar', 'ONÇA-PINTADA', 'AMÉRICAS', 'Panthera onca'],
     ['cheetah', 'GUEPARDO', 'ÁFRICA E IRÃ', 'Acinonyx jubatus'], ['leopard', 'LEOPARDO', 'ÁFRICA E ÁSIA', 'Panthera pardus'], ['puma', 'SUÇUARANA', 'AMÉRICAS', 'Puma concolor'], ['ocelot', 'JAGUATIRICA', 'AMÉRICAS', 'Leopardus pardalis'],
   ];
+  const FOTOK = { tiger: 'tigre', lion: 'leao', jaguar: 'onca', cheetah: 'guepardo', leopard: 'leopardo', puma: 'sucuarana', ocelot: 'jaguatirica' };
   const segOf = (t) => { let i = -1; P.sp.forEach((s, k) => { if (t >= s) i = k; }); return i; };
   const DIVE = 0.9;
   // ---------- habitats
@@ -94,11 +95,11 @@
     if (t >= P.fold) { [[300, 600, -0.2], [780, 640, 0.2], [380, 1240, 0.15], [720, 1200, -0.15]].forEach(([x, y, r], k) => { const kk = (t - P.fold - 0.6 - k * 0.15) / 0.2; if (kk <= 0) return; ctx.save(); ctx.translate(x, y); ctx.rotate(r); ctx.scale(outBack(clamp(kk), 2.4), outBack(clamp(kk), 2.4)); ctx.font = '700 230px Caveat'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.fillStyle = ACCENT; ctx.fillText('?', 8, 8); ctx.strokeStyle = PLUM; ctx.lineWidth = 22; ctx.strokeText('?', 0, 0); ctx.fillStyle = CREAM; ctx.fillText('?', 0, 0); ctx.restore(); }); return; }
     const lt = t - P.sp[i], [kind, name, region, sci] = SPC[i], end = (P.sp[i + 1] ?? P.fold) - P.sp[i];
     if (lt > DIVE) {
-      uiCard(ctx, t, P.sp[i] + DIVE + 0.5, P.sp[i] + end - 0.2, name, 540, 380, { size: 66, accent: true, sub: region });
+      photoPip(ctx, t, P.sp[i] + DIVE + 0.4, P.sp[i] + end - 0.25, FOTOK[kind], { x: 30, y: 128, w: 420, h: 300, name, sub: region, ly: 196, rot: -0.03 });   // foto real + nome científico
       // mapinha da região (canto superior direito, fora dos botões do Reels)
       const k = clamp((lt - DIVE - 0.3) / 0.3) * (1 - clamp((lt - end + 0.4) / 0.25)); if (k > 0) { ctx.save(); ctx.globalAlpha = k; ctx.fillStyle = PLUM; ctx.beginPath(); ctx.roundRect(704, 124, 340, 182, 18); ctx.fill(); ctx.beginPath(); ctx.roundRect(714, 134, 320, 162, 12); ctx.clip(); ctx.drawImage(mapPainted(), 0, MAPH * 0.06, MAPW, MAPH * 0.78, 714, 134, 320, 162); ctx.translate(714, 134 - 162 * 0.06 / 0.78); ctx.scale(320 / MAPW, 162 / (MAPH * 0.78)); rangeBlob(ctx, kind, t, 1); ctx.restore(); }
     }
   }
   const sfx = (E) => [['VUUUM', E.sp[0], 0.4, 540, 1500 - 300, 120, 0.05]];
-  CENAS.s11 = { draw, ui, sfx: () => [], capY: (t) => { const i = segOf(t); return i >= 0 && t < P.fold && t - P.sp[i] > DIVE ? 700 : 1390; } };
+  CENAS.s11 = { draw, ui, sfx: () => [], capY: (t) => { const i = segOf(t); return i >= 0 && t < P.fold && t - P.sp[i] > DIVE ? 760 : 1390; } };
 })();

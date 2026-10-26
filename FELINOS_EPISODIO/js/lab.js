@@ -23,6 +23,19 @@ function renderLab(ctx, v, t) {
     drawPerson(ctx, 'lara', { x: 270, y: 1500, s: 0.85, t, mouth: 0.7, look: [6, 2], turn: 0.4, armR: { a1: 30, a2: -40, open: 1 } });
     drawPerson(ctx, 'miguel', { x: 800, y: 1500, s: 0.85, t, surprise: 1, mouth: 0.8, turn: -0.4, armL: { a1: 150, a2: -120, open: 1 }, armR: { a1: 30, a2: -60, open: 1 } });
   }
+  if (v === 'figuras') {
+    ctx.fillStyle = '#D8C6B4'; ctx.fillRect(0, 0, W, H);
+    bibFigure(ctx, 'sansao', { x: 200, y: 900, s: 0.75, t, pose: 'walk' });
+    bibFigure(ctx, 'davi', { x: 540, y: 900, s: 0.7, t, pose: 'stand', hold: 'staff' });
+    bibFigure(ctx, 'benaia', { x: 870, y: 900, s: 0.72, t, pose: 'walk', hold: 'spear', face: -1 });
+    bibFigure(ctx, 'daniel', { x: 200, y: 1850, s: 0.72, t, pose: 'pray' });
+    bibFigure(ctx, 'davi', { x: 540, y: 1850, s: 0.68, t, pose: 'run' });
+    bibFigure(ctx, 'anjo', { x: 870, y: 1850, s: 0.75, t, pose: 'float', face: -1 });
+  }
+  if (v === 'leoes') {
+    ctx.fillStyle = '#C8B8A4'; ctx.fillRect(0, 0, W, H);
+    [0, 0.5, 1].forEach((l, i) => drawBigCat(ctx, 'lion', { x: 560, y: 450 + i * 560, s: 0.85, lie: l, headRot: 14 * l, blink: l > 0.9 ? 1 : 0, tail: t }, t, { light: { dir: [-1, -0.6], rim: 'rgba(255,236,196,1)', rimW: 5, rimA: 0.7 } }));
+  }
   if (v === 'species') {
     ctx.fillStyle = '#EDE6DE'; ctx.fillRect(0, 0, W, H);
     const L = [['cheetah', 0.62, 'gallop'], ['leopard', 0.72], ['puma', 0.68], ['ocelot', 0.62], ['lioness', 0.62], ['cub', 0.8], ['pingo', 0.9], ['angora', 0.9]];

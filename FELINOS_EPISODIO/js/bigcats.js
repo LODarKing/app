@@ -103,14 +103,16 @@ function footAt(home, ph, sp, mv, rest, G) {
   else { const k = (q - st) / (1 - st), e = k * k * (3 - 2 * k); x = lerp(-stride / 2, stride / 2, e); y = -lift * Math.sin(k * Math.PI); fold = Math.sin(k * Math.PI); }
   return { x: home + x * mv + rest * (1 - mv), y: y * mv, fold: fold * mv, stance: q < st ? Math.sin((q / st) * Math.PI) : 0 };
 }
-function catLegs(sp, walk, mv, bob, gait) {
+function catLegs(sp, walk, mv, bob, gait, lie = 0, D = 0) {
   // passo lateral (andar) ou galope rotativo (corrida): pares traseiros e dianteiros quase juntos, fase de voo
   const G = gait === 'gallop' ? { stance: 0.34, stride: sp.stride * 2.3, lift: sp.lift * 1.8 } : null;
   const L = G ? [{ front: false, near: true, o: 0, rest: -14 }, { front: true, near: true, o: 0.52, rest: 16 }, { front: false, near: false, o: 0.1, rest: 20 }, { front: true, near: false, o: 0.62, rest: -24 }]
     : [{ front: false, near: true, o: 0, rest: -14 }, { front: true, near: true, o: 0.25, rest: 16 }, { front: false, near: false, o: 0.5, rest: 20 }, { front: true, near: false, o: 0.75, rest: -24 }];
   return L.map((l) => {
     const ft = footAt(l.front ? sp.homeF : sp.homeH, walk + l.o, sp, mv, l.rest, G), dx = l.near ? 0 : 14;
-    const root = add2(l.front ? sp.S : sp.H, [dx, l.front ? bob[0] : bob[1]]), P = [ft.x + dx, ft.y];
+    // deitado (lie): o corpo desce D e as patas dobram — dianteiras esticadas à frente (pose de esfinge), traseiras sob a anca
+    const tuck = lie * (l.front ? 70 + (l.near ? 20 : 0) : 46);
+    const root = add2(l.front ? sp.S : sp.H, [dx, l.front ? bob[0] : bob[1]]), P = [ft.x + dx + tuck, ft.y * (1 - lie) - D];
     if (l.front) { const W2 = [P[0] - sp.pastern[0], P[1] - sp.pastern[1]], E = ik2(root, W2, sp.fl[0], sp.fl[1], 1); return { ...l, b: [root, E, W2, add2(W2, rot2(sp.pastern, ft.fold * 75))], R: sp.fr, stance: ft.stance }; }
     const Hk = [P[0] - sp.meta[0], P[1] - sp.meta[1]], K = ik2(root, Hk, sp.hl[0], sp.hl[1], -1);
     return { ...l, b: [root, K, Hk, add2(Hk, rot2(sp.meta, -ft.fold * 30))], R: sp.hr, stance: ft.stance };
@@ -132,16 +134,19 @@ function drawBigCat(ctx, kind, pose, t, look = {}) {
   const sp = SPEC[kind], c = sp.c, walk = pose.walk || 0, mv = pose.moving ?? 0, fl = pose.flip ? -1 : 1, S = pose.s, gal = pose.gait === 'gallop';
   const bob = gal ? [mv * 14 * Math.sin(walk * Math.PI * 2 + 0.6), mv * 14 * Math.sin(walk * Math.PI * 2 - 0.4)] : [mv * 4 * Math.sin((walk + 0.1) * Math.PI * 4), mv * 3.5 * Math.sin((walk + 0.35) * Math.PI * 4)];
   const flex = gal ? Math.sin(walk * Math.PI * 2) * 0.09 : 0;    // coluna estica e encolhe no galope
-  const legs = catLegs(sp, walk, mv, bob, pose.gait), nf = legs.find((l) => l.front && l.near);
+  const lie = pose.lie || 0, D = lie * Math.abs(sp.S[1]) * 0.62;
+  const legs = catLegs(sp, walk, mv, bob, pose.gait, lie, D), nf = legs.find((l) => l.front && l.near);
   const [lc, g] = layer('cat');
   g.translate(pose.x, pose.y); g.scale(S * fl, S);
   g.fillStyle = 'rgba(40,20,40,0.22)'; g.beginPath(); g.ellipse(-10, 4, sp.stride + 160, 14, 0, 0, 6.283); g.fill();
+  g.translate(0, D);
   if (gal) g.translate(0, -Math.max(0, Math.sin(walk * Math.PI * 2 - 1.2)) * 26);
   // cauda
   const tr = sp.tail, sw = Math.sin((pose.tail ?? t) * 2.0), sw2 = Math.sin((pose.tail ?? t) * 2.0 - 1.1), r0 = add2(tr.root, [0, bob[1]]), L = tr.len, d = tr.droop;
   const up = d < 0 ? 1 : 0;
   const tc = up ? smooth([r0, [r0[0] - L * 0.2, r0[1] + L * 0.1], [r0[0] - L * 0.32 + sw * 6, r0[1] - L * 0.3], [r0[0] - L * 0.3 + sw * 14, r0[1] - L * 0.62], [r0[0] - L * 0.16 + sw2 * 22, r0[1] - L * 0.8]], false, 4)
     : smooth([r0, [r0[0] - L * 0.14, r0[1] + L * 0.38 * d + sw * 4], [r0[0] - L * 0.26, r0[1] + L * 0.72 * d + sw * 10], [r0[0] - L * 0.46, r0[1] + L * 0.86 * d + sw2 * 16], [r0[0] - L * 0.66, r0[1] + L * 0.74 * d + sw2 * 26], [r0[0] - L * 0.78, r0[1] + L * 0.58 * d + sw2 * 34 - (sp.tailMark === 'leopard' || sp.tailMark === 'cheetah' ? 30 : 0)]], false, 4);
+  if (lie > 0) tc.forEach((q) => { if (q[1] > -D - 6) q[1] = lerp(q[1], -D - 6, lie); });   // deitado: a cauda descansa no chão
   const tw = sp.tailMark === 'plume' ? (i, n) => tr.r * (0.7 + 0.8 * Math.sin(Math.PI * i / n)) : (i, n) => lerp(tr.r * 1.25, tr.r * 0.7, i / n);
   const tailP = flat(g, limb(tc, tc.map((_, i) => tw(i, tc.length - 1))), c.base, 2);
   clipTo(g, tailP, () => {

@@ -201,7 +201,7 @@
     if (t >= P.pads && t < P.claws) { uiCard(ctx, t, P.pads + 2.6, P.claws - 0.1, 'COXINS', 540, 320, { size: 70, accent: true }); uiCard(ctx, t, P.pads + 4.2, P.claws - 0.1, 'amortecem os passos', 540, 1560 - 240, { size: 46 }); }
     if (t >= P.claws && t < P.count) { const ext = keys(t, [[P.claws, 0], [P.claws + 0.8, 1], [P.retract - 0.6, 1], [P.retract, 0], [P.extend - 0.1, 0], [P.extend + 0.3, 1]]) > 0.5; uiCard(ctx, t, P.claws + 0.4, P.count - 0.1, ext ? 'garra estendida' : 'garra recolhida', 330, 380, { size: 54, accent: ext }); }
     if (t >= P.count && t < P.lara) { uiCard(ctx, t, P.count + 0.2, P.lara - 0.1, 'garras guardadas, protegidas', 540, 360, { size: 46, accent: true }); uiCard(ctx, t, P.count + 1.2, P.lara - 0.1, 'dianteira: 5 dedos', 290, 1100, { size: 42 }); uiCard(ctx, t, P.count + 1.8, P.lara - 0.1, 'traseira: 4 dedos', 790, 1100, { size: 42, accent: true }); }
-    if (t >= P.cheetah && t < P.grip) speciesTag(ctx, t, P.cheetah + 1.2, P.grip, 'GUEPARDO', 'Acinonyx jubatus', 600, 600, 0);
+    if (t >= P.cheetah && t < P.grip) photoPip(ctx, t, P.cheetah + 0.9, P.grip - 0.1, 'guepardo', { x: 30, y: 128, w: 400, h: 290, name: 'Guepardo', sub: 'garras pouco retráteis', ly: 40 });
     if (t >= P.grip && t < P.pawFill) uiCard(ctx, t, P.grip + 1.6, P.pawFill - 0.1, 'garras pouco retráteis = tração', 540, 420, { size: 44, accent: true });
   }
   const sfx = (E) => [['CREC!', E.crec, 0.5, 560, 760, 220, -0.1], ['psiu...', E.whisper - 0.05, 0.6, 820, 520, 110, 0.12], ['VUUSH!', E.cheetah + 0.8, 0.5, 300, 700, 170, -0.12]];

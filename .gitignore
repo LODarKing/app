@@ -51,3 +51,5 @@ FELINOS_EPISODIO/segmentos/
 # Felinos episódio: mixagem e vídeo final são regeneráveis e grandes demais para o git
 FELINOS_EPISODIO/audio/mix.wav
 FELINOS_EPISODIO/*.mp4
+# fotos reais (Wikimedia Commons): material de terceiros, baixado por fotos/baixar.py
+FELINOS_EPISODIO/assets/fotos/
