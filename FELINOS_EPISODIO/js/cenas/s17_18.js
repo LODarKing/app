@@ -110,6 +110,6 @@
     ctx.restore();
   }
   CENAS.s17 = { draw: s17, ui: (ctx, t, E) => { if (t >= E.morning - 0.2 && t < E.lara) bibleRef(ctx, t, E.morning + 0.6, E.lara - 0.3, 'Daniel 6:16–23'); }, capY: (t, E) => (t < E.soldiers ? 520 : t < E.lara ? 760 : 1390), sfx: (E) => [] };
-  CENAS.s18 = { draw: s18, ui: ui18, sfx: (E) => [['miau!', E.meow + 0.1, 0.6, 760, 1050, 140, 0.1]], capY: (t, E) => (t >= E.rise ? 1390 : 1390) };
+  CENAS.s18 = { draw: s18, ui: ui18, sfx: (E) => [['miau!', E.meow + 0.1, 0.6, 760, 1050, 140, 0.1]], capY: (t, E) => (t >= E.ident ? null : 1390) };
   CENAS.cred = { draw: cred, ui: credUi };
 })();

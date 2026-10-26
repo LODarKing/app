@@ -10,8 +10,10 @@ L = lambda k: f'Lara_Felinos_{k:02d}'
 M = lambda k: f'Miguel_Felinos_{k:02d}'
 # grafia correta nas legendas (o reconhecedor de fala errou estes nomes; o áudio está certo)
 FIX = {'Felidia,': 'Felidae,', 'Ciamês': 'siamês', 'MineCon': 'Maine Coon', 'pulma': 'puma', 'angora': 'angorá', 'golias,': 'Golias,',
-       'bíblia?': 'Bíblia?', 'Brasileiro.': 'brasileiro.', 'atração': 'tração', '4': 'quatro', '7': 'sete', 'desses': 'dentes', 'Felidae,': 'Felidae,'}
-FIX_AT = {(N(1), 8): 'a'}   # "Mas a família dele..." (o reconhecedor ouviu "da")
+       'bíblia?': 'Bíblia?', 'Brasileiro.': 'brasileiro.', 'atração': 'tração', '4': 'quatro', '7': 'sete', 'Felidae,': 'Felidae,'}
+FIX_AT = {(N(1), 8): 'a',   # "Mas a família dele..." (o reconhecedor ouviu "da")
+          ('Miguel_Felinos_D03', 6): 'dentes',
+          (N(9), 5): 'ouvidos!', (N(9), 6): 'Eles'}   # pontuação: "Ah, os ouvidos! Eles captam..."   # "tem dentes preparados" (ouviu "desses"); o "desses perigos" do narrador (Davi) está certo
 
 SCENES = [
     {'id': 's01', 'dur': 14.25, 'ev': {'heart': [0.0, 0.5, 1.0, 1.5], 'eyesOpen': 0.25, 'meow': 0.75, 'light': 1.25, 'push': 1.75, 'cut1': 2.5,

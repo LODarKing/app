@@ -76,7 +76,7 @@
         mapView(ctx, t, lerp(MAPW * 0.5, c[0], sm(Math.min(1, lt / 0.5))), lerp(MAPH * 0.47, c[1], sm(Math.min(1, lt / 0.5))), z, false);
         drawMap(ctx, c[0], c[1], z, 540, 960, (g) => rangeBlob(g, kind, t, clamp(lt / 0.3)));
         const ir = clamp((lt - 0.45) / 0.45); if (ir > 0) { const [hc, hg] = layer('s11hab'); habitat(hg, i, lt + 0.0, t); ctx.save(); ctx.beginPath(); ctx.arc(540, 960, 1150 * easeIn(ir), 0, 6.283); ctx.clip(); ctx.drawImage(hc, 0, 0); ctx.restore(); }
-      } else if (HEAD[i] && lt > PUNCH && lt < ((P.sp[i + 1] ?? P.fold) - P.sp[i]) - 0.5) {   // segundo plano do habitat: close no felino (algo novo no meio do trecho)
+      } else if (HEAD[i] && lt > PUNCH && lt < (P.sp[i + 1] ?? P.fold) - P.sp[i]) {   // segundo plano do habitat: close no felino (algo novo no meio do trecho)
         const [hc, hg] = layer('s11hab'), [hx, hy] = HEAD[i](lt), z = 1.5 + 0.025 * (lt - PUNCH); habitat(hg, i, lt, t);
         const cx = clamp(hx, 560 / z, W - 520 / z), cy = clamp(hy, 1020 / z, H - 900 / z);   // sem mostrar a borda da camada
         ctx.save(); ctx.translate(560, 1020); ctx.scale(z, z); ctx.translate(-cx, -cy); ctx.drawImage(hc, 0, 0); ctx.restore();

@@ -141,6 +141,8 @@ pad(T('s08', 'relax'), t1('s08'), G_MAJ, 0.07, 1000)
 # s09 — desfile das raças: groove de passarela; cada raça muda a cor do acorde
 for k, (a, b) in enumerate([(t0('s09'), T('s09', 'persa')), (T('s09', 'persa'), T('s09', 'siames')), (T('s09', 'siames'), T('s09', 'maine')), (T('s09', 'maine'), T('s09', 'angora')), (T('s09', 'angora'), T('s09', 'photo'))]):
     groove(a, b - 0.01, [D_MAJ, F_MAJ, G_MAJ, D_MIN, D_MAJ][k], 0.75 if k else 0.9)
+for i in eighths(T('s09', 'photo'), T('s09', 'flash') - 0.01): [music.put(drum(190, 0.08, 0.7, 40) * (0.12 + 0.25 * (i * E8 - T('s09', 'photo')) / (T('s09', 'flash') - T('s09', 'photo'))), i * E8 + q * E8 / 2, 0.1) for q in range(2)]   # rufar até o clique
+pad(T('s09', 'photo'), T('s09', 'flash'), [(50, [62, 66, 69])], 0.06, 1400, per=64)
 stab(T('s09', 'flash'), D_MAJ[0], 0.45); pad(T('s09', 'flash'), t1('s09'), D_MAJ, 0.08)
 # s10 — companheiros: estudo caloroso em Sol, carinho no fim com celesta
 pizz(t0('s10'), T('s10', 'pet') - 0.01, G_MAJ, 0.8); pad(T('s10', 'indoor'), T('s10', 'pet'), G_MAJ, 0.06)
@@ -153,6 +155,8 @@ for k in range(7):
     taiko(a, b - 0.01, prog, 0.7, busy=k % 2 + 1); pad(a, b, prog, 0.08, 2000)
 stab(T('s11', 'fold'), D_MAJ[0], 0.35); bells(T('s11', 'fold'), t1('s11'), D_MAJ, 0.12, 2, seed=11)
 # s12 — desafio: vinheta, perguntas (tique-taque, pizz em Fá), revelações (acordes), corrida (aventura rápida), coroa (fanfarra)
+for k, ch in enumerate([F_MAJ[0], F_MAJ[1], F_MAJ[2], F_MAJ[0]]): stab(t0('s12') + k * BEAT / 2 + (0.25 if k == 3 else 0), ch, 0.3 + 0.08 * k)   # vinheta "Desafio Felino!"
+for k, m in enumerate([77, 81, 84, 89]): music.put(celesta(hz(m), 0.8) * 0.2, t0('s12') + 1.5 + k * E8 / 2, -0.3 + 0.2 * k)
 for (a, b) in [(T('s12', 'q1'), T('s12', 'reveal1')), (T('s12', 'q2'), T('s12', 'reveal2')), (T('s12', 'q3'), T('s12', 'run'))]:
     pizz(a, b - 0.01, F_MAJ, 0.7, bass=True, pat=(0, 2))
 for (a, b) in [(T('s12', 'reveal1'), T('s12', 'q2')), (T('s12', 'reveal2'), T('s12', 'q3'))]:
@@ -181,7 +185,7 @@ sacred(t0('s17'), T('s17', 'beam') - 0.3, D_MIN, 0.75, voices=False)
 sacred(T('s17', 'angel'), T('s17', 'night'), D_MAJ, 0.9)
 pad(T('s17', 'night'), T('s17', 'morning'), D_MAJ, 0.05, 900); bells(T('s17', 'night'), T('s17', 'morning'), D_MAJ, 0.1, 4, seed=17)
 pad(T('s17', 'morning'), T('s17', 'lara'), D_MAJ, 0.11, 2600); bells(T('s17', 'morning'), T('s17', 'lara'), D_MAJ, 0.12, 2, seed=18)
-pad(T('s17', 'lara'), t1('s17'), G_MAJ, 0.08, 1500); bells(T('s17', 'lara'), t1('s17'), G_MAJ, 0.1, 4, seed=19)
+pad(T('s17', 'lara'), t1('s17'), G_MAJ, 0.12, 1800); bells(T('s17', 'lara'), t1('s17'), G_MAJ, 0.13, 4, seed=19)
 rise(T('s17', 'outro'), t1('s17'), 0.35)
 # s18 — encerramento: o Diário fecha (pizz suave), a câmera sobe (tutti com coro), identidade (acordes finais)
 pizz(t0('s18'), T('s18', 'rise') - 0.01, D_MAJ, 0.7)
@@ -191,7 +195,9 @@ for i in eighths(T('s18', 'rise'), T('s18', 'ident')):
 for k, (tt, ch) in enumerate([(T('s18', 'ident'), D_MAJ[2]), (T('s18', 'ident') + 1.0, D_MAJ[3]), (T('s18', 'ident') + 2.0, D_MAJ[0])]): stab(tt, ch, 0.35 + 0.1 * k)
 pad(T('s18', 'ident') + 2.0, t1('s18'), D_MAJ[:1], 0.1, 2400, per=64); bells(T('s18', 'ident') + 2.0, t1('s18'), D_MAJ[:1], 0.12, 2, seed=20)
 # créditos — canção de ninar em celesta sobre cordas, fade no fim
-pad(t0('cred'), t1('cred'), G_MAJ, 0.08, 1200, per=8); bells(t0('cred'), t1('cred') - 1, G_MAJ, 0.14, 2, per=8, seed=21)
+pad(t0('cred'), t1('cred'), G_MAJ, 0.16, 1600, per=8); bells(t0('cred'), t1('cred') - 1, G_MAJ, 0.26, 2, per=8, seed=21)
+for i in eighths(t0('cred'), t1('cred') - 1):
+    if i % 4 == 0: music.put(pluck(hz(chord_at(G_MAJ, i, 8)[0] - 12), 0.8, 1500) * 1.2, i * E8, 0)   # baixo suave
 
 def stereo_master(x, wet, room):
     return Pedalboard([HighpassFilter(30), Reverb(room_size=room, wet_level=wet, dry_level=1.0, width=1.0)])(x.T.astype(np.float32), SR).T

@@ -165,5 +165,5 @@ function renderFrame(ctx, t) {
   sfxWords(ctx, t);
   POST(ctx, 1);             // pinceladas + retícula + hachura + registro de cor + papel (estilo aprovado)
   if (C.ui) { ctx.save(); C.ui(ctx, lt, sc.ev); ctx.restore(); }
-  captions(ctx, t, C.capY ? C.capY(lt, sc.ev) : 1390);
+  const cy = C.capY ? C.capY(lt, sc.ev) : 1390; if (cy != null) captions(ctx, t, cy);   // capY nulo = sem legenda (ex.: tela de identidade)
 }
