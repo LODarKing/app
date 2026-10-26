@@ -8,17 +8,17 @@ const FOTO = {
   onca: { sci: 'Panthera onca', fx: 0.62, fy: 0.48, z: 1.1 },
   guepardo: { sci: 'Acinonyx jubatus', fx: 0.5, fy: 0.5, z: 1.1 },
   leopardo: { sci: 'Panthera pardus', fx: 0.5, fy: 0.5, z: 1.1 },
-  sucuarana: { sci: 'Puma concolor', fx: 0.5, fy: 0.5, z: 1.1 },
-  jaguatirica: { sci: 'Leopardus pardalis', fx: 0.5, fy: 0.5, z: 1.1 },
+  sucuarana: { sci: 'Puma concolor', fx: 0.55, fy: 0.5, z: 1.0 },
+  jaguatirica: { sci: 'Leopardus pardalis', fx: 0.56, fy: 0.55, z: 1.05 },
   gato: { sci: 'Felis catus', fx: 0.5, fy: 0.5, z: 1.1 },
-  persa: { sci: 'Felis catus', fx: 0.5, fy: 0.5, z: 1.1 },
-  siames: { sci: 'Felis catus', fx: 0.5, fy: 0.5, z: 1.1 },
-  mainecoon: { sci: 'Felis catus', fx: 0.5, fy: 0.5, z: 1.1 },
+  persa: { sci: 'Felis catus', fx: 0.5, fy: 0.5, z: 1.25 },
+  siames: { sci: 'Felis catus', fx: 0.6, fy: 0.45, z: 1.05 },
+  mainecoon: { sci: 'Felis catus', fx: 0.5, fy: 0.42, z: 1.0 },
   angora: { sci: 'Felis catus', fx: 0.5, fy: 0.5, z: 1.1 },
 };
 // créditos (gerados de documentacao/fotos_creditos.json por fotos/baixar.py → js/fotos_creditos.js)
 const fotoImg = (k) => { const im = document.getElementById('foto_' + k); return im && im.complete && im.naturalWidth ? im : null; };
-const fotoCredito = (k) => { const c = (window.FOTO_CRED || {})[k]; return c ? `Foto: ${c.autor} · ${c.licenca} · Wikimedia Commons` : ''; };
+const fotoCredito = (k) => { const c = (window.FOTO_CRED || {})[k]; return !c ? '' : c.licenca === 'uso autorizado' ? 'Foto enviada pela produção' : `Foto: ${c.autor} · ${c.licenca} · Wikimedia Commons`; };
 /**
  * PIP com foto real: cartão de foto (borda creme, leve rotação, sombra), Ken Burns lento, selo "foto real",
  * crédito na borda e, ao lado, o nome popular e o nome científico em itálico.
