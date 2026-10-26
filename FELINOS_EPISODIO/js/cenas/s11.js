@@ -56,6 +56,8 @@
       for (let k = 0; k < 6; k++) leafShape(ctx, 60 + k * 70, 1560, 360, 100, -1.3 + k * 0.18 + 0.06 * Math.sin(t * 1.4 + k), '#3E6A4C', '#2E5440', 0.01, 1800 + k); }
     leafShadows(ctx, t, [0, 900, W, 1020], { alpha: 0.1, seed: 40 + i });
   }
+  // close no meio de cada habitat: a cabeça do felino (posição medida nos quadros, acompanha o andar) vai para o ponto (560, 1020)
+  const PUNCH = 4.75, HEAD = [(l) => [870 + 50 * (l - PUNCH), 890], () => [527, 1093], (l) => [855 + 60 * (l - PUNCH), 960], (l) => [600 - 20 * (l - PUNCH), 760], null, () => [700, 993], () => [720, 1140]];
   function mapView(ctx, t, cx, cy, z, dots) {
     drawMap(ctx, cx, cy, z, 540, 960, (g) => {
       if (dots) SPC.forEach(([kind], i) => { const k = clamp((t - P.dots[i]) / 0.25); if (k <= 0) return; const [x, y] = rangeCenter(kind); g.fillStyle = '#3B2A45'; g.beginPath(); g.arc(x, y, 92 * outBack(k), 0, 6.283); g.fill(); g.fillStyle = ACCENT; g.beginPath(); g.arc(x, y, 70 * outBack(k), 0, 6.283); g.fill(); });
@@ -74,6 +76,10 @@
         mapView(ctx, t, lerp(MAPW * 0.5, c[0], sm(Math.min(1, lt / 0.5))), lerp(MAPH * 0.47, c[1], sm(Math.min(1, lt / 0.5))), z, false);
         drawMap(ctx, c[0], c[1], z, 540, 960, (g) => rangeBlob(g, kind, t, clamp(lt / 0.3)));
         const ir = clamp((lt - 0.45) / 0.45); if (ir > 0) { const [hc, hg] = layer('s11hab'); habitat(hg, i, lt + 0.0, t); ctx.save(); ctx.beginPath(); ctx.arc(540, 960, 1150 * easeIn(ir), 0, 6.283); ctx.clip(); ctx.drawImage(hc, 0, 0); ctx.restore(); }
+      } else if (HEAD[i] && lt > PUNCH && lt < ((P.sp[i + 1] ?? P.fold) - P.sp[i]) - 0.5) {   // segundo plano do habitat: close no felino (algo novo no meio do trecho)
+        const [hc, hg] = layer('s11hab'), [hx, hy] = HEAD[i](lt), z = 1.5 + 0.025 * (lt - PUNCH); habitat(hg, i, lt, t);
+        const cx = clamp(hx, 560 / z, W - 520 / z), cy = clamp(hy, 1020 / z, H - 900 / z);   // sem mostrar a borda da camada
+        ctx.save(); ctx.translate(560, 1020); ctx.scale(z, z); ctx.translate(-cx, -cy); ctx.drawImage(hc, 0, 0); ctx.restore();
       } else habitat(ctx, i, lt, t);
     } else {   // os ambientes se recolhem para dentro do mapa; pontos de interrogação
       const k = sm((t - P.fold) / 1.2);

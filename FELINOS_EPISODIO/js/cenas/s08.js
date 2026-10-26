@@ -30,7 +30,7 @@
   }
   function shotWaves(ctx, t) {
     const td = on2s(t), seq = Math.floor((td - P.waves) / 1.2) % 3;
-    ctx.drawImage(porch(), 0, -120);
+    ctx.drawImage(porch(), -70, -150, W + 140, H + 250);   // um pouco ampliado: sobe sem deixar faixa vazia embaixo
     const src = [[Math.PI, -40, 0], [0, 40, 1], [-Math.PI / 2, 0, 2]][seq];
     drawPingo(ctx, { x: 540, y: 1760, s: 1.25, tail: td, earL: seq === 0 ? -34 : seq === 2 ? -10 : 6, earR: seq === 1 ? -34 : seq === 2 ? -10 : 6, look: seq === 0 ? [-7, 0] : seq === 1 ? [7, 0] : [0, -6], dilate: 0.7, tilt: seq === 0 ? -5 : seq === 1 ? 5 : 0 });
     soundArcs(ctx, 540, 820, src[0], t, P.waves + seq * 1.2);
@@ -89,5 +89,5 @@
     }
   }
   const sfx = (E) => [['crrsh', E.leaf + 0.9, 0.45, 860, 1100, 110, 0.1], ['?', E.headTurn, 0.6, 700, 900, 170, 0.1], ['ronrom...', E.relax + 0.6, 0.8, 760, 1000, 110, -0.08]];
-  CENAS.s08 = { draw, ui, sfx, capY: (t) => (t >= P.anatomy && t < P.relax ? 1480 : 1390) };
+  CENAS.s08 = { draw, ui, sfx, capY: (t) => (t >= P.anatomy && t < P.relax ? 1480 : 1000) };   // no quintal a legenda fica acima do Pingo
 })();

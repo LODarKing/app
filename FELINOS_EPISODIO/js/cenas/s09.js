@@ -106,7 +106,10 @@
     if (fl > 0 && fl < 1) { ctx.fillStyle = `rgba(255,255,250,${1 - fl})`; ctx.fillRect(0, 0, W, H); }
   }
   function draw(ctx, t) {
-    if (t < P.siames) shotPersa(ctx, t);
+    if (t >= P.persa + 6.5 && t < P.persa + 11) {   // close no persa (o bocejo de perto), depois volta ao plano aberto
+      const [c, g] = layer('s09close'), z = 1.75 + 0.04 * (t - P.persa - 6.5); shotPersa(g, t);
+      ctx.save(); ctx.translate(540, 900); ctx.scale(z, z); ctx.translate(-560, -1060); ctx.drawImage(c, 0, 0); ctx.restore();
+    } else if (t < P.siames) shotPersa(ctx, t);
     else if (t < P.maine) shotSiames(ctx, t);
     else if (t < P.angora) shotMaine(ctx, t);
     else if (t < P.photo) shotAngora(ctx, t);

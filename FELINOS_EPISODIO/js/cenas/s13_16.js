@@ -53,16 +53,16 @@
     let shake = 0; { const d = t - E.lion - 0.2; if (d > 0 && d < 0.5) shake = Math.sin(d * 70) * 12 * (1 - d / 0.5); }
     ctx.save(); ctx.translate(-200 - 20 * t + shake, 0); ctx.drawImage(vineyard(), 0, 0); ctx.restore();
     lightBeam(ctx, 520, spirit * (won ? 1 : 0.9), 300);
-    const sx = won ? 520 : lerp(220, 480, clamp(t / E.lion)), sy = 1560;
+    const sx = won ? 420 : lerp(120, 280, clamp(t / E.lion)), sy = 1560;
     if (!fight) {
       robeFigure(ctx, { x: sx, y: sy, s: 0.95, t: td, pose: t < E.lion ? 'walk' : 'stand', hair: 'long', rim: spirit > 0.1 ? '#FFF2C8' : GOLD, arms: t >= E.lion && !won ? [[60, -0.3], [40, -0.4]] : won ? [[100, 0], [80, 0]] : null });
-      if (!won) { const lk = clamp((td - E.lion) / 0.5), lx = lerp(1350, 1060, easeOut(lk)), ly = 1560 - 160 * Math.sin(Math.PI * Math.min(1, lk)) * (lk < 1 ? 1 : 0); if (td >= E.lion) drawBigCat(ctx, 'lioness', { x: lx, y: ly, s: 0.95, flip: true, jaw: roar, tail: td, headRot: -6 }, td, { dark: 'rgba(36,22,42,1)', rim: GOLD, rimDx: 6, rimDy: -6 }); }
-      else { const [c, cg] = layer('s14l'); drawBigCat(cg, 'lioness', { x: 860, y: 1600, s: 0.8, flip: true, tail: 0, headRot: 30 }, 0, { dark: 'rgba(36,22,42,1)' }); ctx.save(); ctx.globalAlpha = 0.85; ctx.drawImage(c, 0, 0); ctx.restore(); }
+      if (!won) { const lk = clamp((td - E.lion) / 0.5), lx = lerp(1400, 880, easeOut(lk)), ly = 1560 - 160 * Math.sin(Math.PI * Math.min(1, lk)) * (lk < 1 ? 1 : 0); if (td >= E.lion) drawBigCat(ctx, 'lion', { x: lx, y: ly, s: 0.85, flip: true, jaw: roar, tail: td, headRot: -6 }, td, { dark: 'rgba(36,22,42,1)', rim: GOLD, rimDx: 6, rimDy: -6 }); }
+      else { const [c, cg] = layer('s14l'); drawBigCat(cg, 'lion', { x: 800, y: 1600, s: 0.8, flip: true, tail: 0, headRot: 30 }, 0, { dark: 'rgba(36,22,42,1)' }); ctx.save(); ctx.globalAlpha = 0.85; ctx.drawImage(c, 0, 0); ctx.restore(); }
     } else {   // a luta: silhuetas rápidas sobrepostas, em dois desenhos de impacto
       const f = Math.floor(td * 12), ph = f % 6;
       if (ph < 2) { ctx.fillStyle = '#E2A23A'; ctx.fillRect(0, 0, W, H); }
       const jx = (rnd(f, 1) - 0.5) * 60, jy = (rnd(f, 2) - 0.5) * 40;
-      drawBigCat(ctx, 'lioness', { x: 640 + jx, y: 1500 + jy, s: 1.0, flip: true, jaw: 0.6, headRot: -20 + 20 * rnd(f, 3), tail: td }, td, { dark: 'rgba(36,22,42,1)', rim: '#FFF2C8', rimDx: 6, rimDy: -6 });
+      drawBigCat(ctx, 'lion', { x: 640 + jx, y: 1500 + jy, s: 1.0, flip: true, jaw: 0.6, headRot: -20 + 20 * rnd(f, 3), tail: td }, td, { dark: 'rgba(36,22,42,1)', rim: '#FFF2C8', rimDx: 6, rimDy: -6 });
       robeFigure(ctx, { x: 470 - jx * 0.6, y: 1560 + jy * 0.4, s: 0.95, t: td, pose: 'stand', hair: 'long', rim: '#FFF2C8', arms: [[10 + 30 * rnd(f, 4), -0.5], [-10 + 20 * rnd(f, 5), -0.6]] });
       speedLines(ctx, t, 0.5, 600, 1200, true);
     }

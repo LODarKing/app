@@ -83,5 +83,5 @@
     if (t >= P.through && t < P.miguel) uiCard(ctx, t, P.through + 0.4, P.miguel - 0.1, 'ajudam a explorar espaços próximos', 540, 330, { size: 40, accent: true });
   }
   const sfx = (E) => [['tic', E.touch, 0.4, 230, 980, 110, -0.1], ['tic', E.touch + 0.5, 0.4, 860, 960, 110, 0.1]];
-  CENAS.s07 = { draw, ui, sfx };
+  CENAS.s07 = { draw, ui, sfx, capY: (t) => (t < P.follicle || (t >= P.through && t < P.miguel) ? 1000 : 1390) };   // nas caixas, a legenda sobe para não cobrir o Pingo
 })();

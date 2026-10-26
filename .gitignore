@@ -48,3 +48,6 @@ FELINOS_EPISODIO/frames/
 FELINOS_EPISODIO/out/
 FELINOS_EPISODIO/node_modules/
 FELINOS_EPISODIO/segmentos/
+# Felinos episódio: mixagem e vídeo final são regeneráveis e grandes demais para o git
+FELINOS_EPISODIO/audio/mix.wav
+FELINOS_EPISODIO/*.mp4

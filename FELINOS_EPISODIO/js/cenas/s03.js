@@ -61,12 +61,13 @@
     sunRays(ctx, t, { x: 300, y: -100, ang: -0.3, len: 1600, n: 4, width: 120, alpha: 0.12 });
   }
   // características compartilhadas, apontadas no corpo do Pingo
-  const TR = [['corpo ágil', [250, 470], [540, 1110, 95]], ['sentidos aguçados', [830, 470], [580, 930, 55]], ['dentes de carnívoro', [220, 740], [540, 990, 45]], ['patas silenciosas', [860, 740], [575, 1236, 42]], ['garras, geralmente retráteis', [540, 290], [505, 1236, 42]]];
+  const TZ = 1.3, tz = ([x, y, r]) => [540 + (x - 540) * TZ, 1150 + (y - 1150) * TZ, r * TZ];   // close no Pingo (anéis acompanham)
+  const TR = [['corpo ágil', [270, 440], tz([540, 1110, 95])], ['sentidos aguçados', [810, 440], tz([580, 930, 55])], ['dentes de carnívoro', [270, 590], tz([540, 990, 45])], ['patas silenciosas', [810, 590], tz([575, 1236, 42])], ['garras, geralmente retráteis', [540, 290], tz([505, 1236, 42])]];
   function shotTraits(ctx, t) {
     const td = on2s(t);
     ctx.drawImage(paperBg(), 0, 0);
     ctx.save(); ctx.globalCompositeOperation = 'soft-light'; ctx.fillStyle = radial(ctx, 540, 1100, 80, 700, [[0, 'rgba(255,230,180,0.9)'], [1, 'rgba(120,80,140,0.3)']]); ctx.fillRect(0, 0, W, H); ctx.restore();
-    drawPingo(ctx, { x: 540, y: 1250, s: 0.7, tail: td, dilate: 0.4, blink: blinkAt(td, [P.traits[1] + 0.6, P.traits[4] + 0.4]), look: [0, 0], tilt: 4 * Math.sin(td * 0.8) });
+    drawPingo(ctx, { x: 540, y: 1150 + 100 * TZ, s: 0.7 * TZ, tail: td, dilate: 0.4, blink: blinkAt(td, [P.traits[1] + 0.6, P.traits[4] + 0.4]), look: [0, 0], tilt: 4 * Math.sin(td * 0.8) });
     // anéis âmbar nas partes do corpo
     TR.forEach(([, , part], i) => { const k = clamp((t - P.traits[i]) / 0.25); if (k <= 0) return; ctx.save(); ctx.strokeStyle = PLUM; ctx.lineWidth = 16; ctx.beginPath(); ctx.arc(part[0], part[1], part[2] * outBack(k), 0, 6.283); ctx.stroke(); ctx.strokeStyle = ACCENT; ctx.lineWidth = 9; ctx.setLineDash([26, 12]); ctx.lineDashOffset = -t * 40; ctx.beginPath(); ctx.arc(part[0], part[1], part[2] * outBack(k), 0, 6.283); ctx.stroke(); ctx.restore(); });
     motes(ctx, t, [0, 300, W, 1300], { n: 16, seed: 21 });
@@ -124,7 +125,7 @@
       uiCard(ctx, t, P.title + 3.4, P.parade - 0.2, 'ordem Carnivora', 540, 330, { size: 50 });
     }
     if (t >= P.parade && t < P.traits[0] - 0.5) PAR.forEach(([, s, name], i) => { const x = parX(i, t); if (x > 40 && x < 1040) uiCard(ctx, t, P.parade, P.traits[0] - 0.6, name, clamp(x - 120 * s, 170, 880), 1420 - s * 470, { size: 44 }); });
-    if (t >= P.traits[0] - 0.5 && t < P.lara) TR.forEach(([txt, pos], i) => uiCard(ctx, t, P.traits[i], P.lara - 0.15, txt, pos[0], pos[1], { size: 40, accent: i % 2 === 1, rot: (i % 2 ? 0.03 : -0.03) }));
+    if (t >= P.traits[0] - 0.5 && t < P.lara) TR.forEach(([txt, pos], i) => uiCard(ctx, t, P.traits[i], P.lara - 0.15, txt, pos[0], pos[1], { size: 48, accent: i % 2 === 1, rot: (i % 2 ? 0.03 : -0.03) }));
     if (t >= P.lara && t < P.land) uiCard(ctx, t, P.lara + 0.3, P.butterfly, 'Felidae = família dos felinos', 540, 230, { size: 38 });
   }
   const sfx = (E) => [['FLAP', E.butterfly + 0.4, 0.4, 300, 760, 110, -0.1]];
