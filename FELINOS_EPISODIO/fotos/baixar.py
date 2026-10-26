@@ -15,7 +15,7 @@ def get(url):
         try:
             return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40).read()
         except Exception as e:
-            print('  tentando de novo:', e); time.sleep(30 * (k + 1))
+            print('  tentando de novo:', e); time.sleep(120 * (k + 1))
     raise SystemExit('falhou: ' + url)
 def api(**q):
     q.update(format='json'); return json.loads(get('https://en.wikipedia.org/w/api.php?' + urllib.parse.urlencode(q)))
@@ -38,4 +38,4 @@ for key in sel:
                   'pagina': ii['descriptionurl'], 'tamanho_original': [ii['width'], ii['height']]}
     json.dump(creds, open('documentacao/fotos_creditos.json', 'w'), ensure_ascii=False, indent=1)   # salva a cada foto
     open('js/fotos_creditos.js', 'w').write('// gerado por fotos/baixar.py\nwindow.FOTO_CRED = ' + json.dumps({k: {'autor': v['autor'], 'licenca': v['licenca']} for k, v in creds.items()}, ensure_ascii=False) + ';\n')
-    print(key, '|', ftitle, '|', creds[key]['autor'], '|', creds[key]['licenca'], flush=True); time.sleep(20)
+    print(key, '|', ftitle, '|', creds[key]['autor'], '|', creds[key]['licenca'], flush=True); time.sleep(90)
