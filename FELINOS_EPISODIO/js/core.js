@@ -155,4 +155,27 @@ function paintBackground(g, w, h, seed = 3, strength = 0.7) {
   g.restore();
 }
 /** cenário em cache já com o acabamento pintado (textura de pincel + lavagens de cor) */
-function cachedPainted(name, w, h, fn, seed = 3, strength = 0.75) { return cached(name, w, h, (g, ww, hh) => { fn(g, ww, hh); paintBackground(g, ww, hh, seed, strength); }); }
+function cachedPainted(name, w, h, fn, seed = 3, strength = 0.75) {
+  return cached(name, w, h, (g, ww, hh) => {
+    fn(g, ww, hh);
+    const m = document.createElement('canvas'); m.width = ww; m.height = hh; m.getContext('2d').drawImage(g.canvas, 0, 0);   // máscara: a textura só fica onde já há tinta
+    paintBackground(g, ww, hh, seed, strength);
+    g.save(); g.globalCompositeOperation = 'destination-in'; g.drawImage(m, 0, 0); g.restore();
+  });
+}
+
+/** luz da cena num personagem já desenhado (camada com alfa): lado da sombra, luz quente do lado da fonte e luz de recorte na borda.
+ *  L = {dir: [dx, dy] de onde vem a luz, key, shade, rim, rimW, rimA}; rect = [x, y, w, h] na tela */
+function lightRig(lc, rect, L) {
+  if (!L || !rect || rect[2] <= 0) return;
+  const g = lc.getContext('2d'), [x, y, w, h] = rect, [dx, dy] = norm(L.dir || [-1, -0.5]), cx = x + w / 2, cy = y + h / 2, R = Math.hypot(w, h) / 2;
+  g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = 'source-atop';
+  g.fillStyle = linear(g, cx + dx * R, cy + dy * R, cx - dx * R, cy - dy * R, [[0, L.key || 'rgba(255,226,180,0.22)'], [0.45, 'rgba(0,0,0,0)'], [0.62, 'rgba(0,0,0,0)'], [1, L.shade || 'rgba(60,30,90,0.34)']]);
+  g.fillRect(x, y, w, h); g.restore();
+  if (L.rim) {
+    const rw = L.rimW || 5, [rc, rg] = layer('rimLight');
+    rg.drawImage(lc, x, y, w, h, x, y, w, h); rg.globalCompositeOperation = 'destination-out'; rg.drawImage(lc, x, y, w, h, x - dx * rw, y - dy * rw, w, h);
+    rg.globalCompositeOperation = 'source-in'; rg.fillStyle = L.rim; rg.fillRect(x, y, w, h);
+    g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = 'source-atop'; g.globalAlpha = L.rimA ?? 0.75; g.drawImage(rc, x, y, w, h, x, y, w, h); g.restore();
+  }
+}

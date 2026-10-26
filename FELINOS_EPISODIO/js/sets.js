@@ -73,7 +73,7 @@ function pawPrint(g, fill, lw = 4, seed = 5) {
   [[-66, -22], [-26, -60], [26, -60], [66, -22]].forEach(([x, y], i) => inkShape(g, ell(x, y, 18, 24, 10, x * 0.006), { fill, lw, seed: seed + i + 1, wob: 0.6 }));
 }
 function drawStudySet(ctx, t, cam) {
-  camSet(ctx, cam, 0.25); ctx.drawImage(studyBg(), -210, -40);
+  camSet(ctx, cam, 0.25); ctx.translate(-210, -40); drawStudyBack(ctx, t);
   camSet(ctx, cam, 1);
   const top = 1120, bot = 2050, wd = wood();
   for (let i = 0; i < 60; i++) { const v0 = i / 60, v1 = (i + 1) / 60, y0 = lerp(top, bot, v0 * v0 * 0.4 + v0 * 0.6), y1 = lerp(top, bot, v1 * v1 * 0.4 + v1 * 0.6), sc = lerp(0.55, 1.25, v0), wp = 1600 * sc; ctx.drawImage(wd, 0, v0 * 1000, 1600, 1000 / 60 + 1, W / 2 - wp / 2, y0, wp, y1 - y0 + 1); }

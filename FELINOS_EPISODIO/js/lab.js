@@ -23,6 +23,16 @@ function renderLab(ctx, v, t) {
     drawPerson(ctx, 'lara', { x: 270, y: 1500, s: 0.85, t, mouth: 0.7, look: [6, 2], turn: 0.4, armR: { a1: 30, a2: -40, open: 1 } });
     drawPerson(ctx, 'miguel', { x: 800, y: 1500, s: 0.85, t, surprise: 1, mouth: 0.8, turn: -0.4, armL: { a1: 150, a2: -120, open: 1 }, armR: { a1: 30, a2: -60, open: 1 } });
   }
+  if (v === 'species') {
+    ctx.fillStyle = '#EDE6DE'; ctx.fillRect(0, 0, W, H);
+    const L = [['cheetah', 0.62, 'gallop'], ['leopard', 0.72], ['puma', 0.68], ['ocelot', 0.62], ['lioness', 0.62], ['cub', 0.8], ['pingo', 0.9], ['angora', 0.9]];
+    L.forEach(([k, s, gait], i) => drawBigCat(ctx, k, { x: 420 + (i % 2) * 0, y: 250 + i * 225, s, walk: t * (gait ? 1.6 : 1), moving: 1, gait }, t));
+  }
+  if (v === 'breeds') {
+    ctx.fillStyle = '#E6DCE6'; ctx.fillRect(0, 0, W, H);
+    drawHouseCat(ctx, 'persa', { x: 280, y: 860, s: 0.72, tail: t, dilate: 0.4 }); drawHouseCat(ctx, 'siames', { x: 800, y: 860, s: 0.72, tail: t, dilate: 0.3 });
+    drawHouseCat(ctx, 'mainecoon', { x: 280, y: 1780, s: 0.9, tail: t }); drawHouseCat(ctx, 'angora', { x: 800, y: 1780, s: 0.72, tail: t });
+  }
   if (v === 'pingoBig') drawPingo(ctx, { x: 540, y: 1500, s: 1.7, dilate: 0.3, tail: t });
   if (v === 'cats' && typeof drawBigCat === 'function') {
     drawBigCat(ctx, 'jaguar', { x: 500, y: 600, s: 1.05, walk: t, moving: 1 }, t);

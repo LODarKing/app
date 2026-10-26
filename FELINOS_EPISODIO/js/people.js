@@ -102,8 +102,8 @@ function drawPerson(dst, who, p) {
   // cinto e fivela (emblema oficial)
   g.fillStyle = UNI.belt; g.fillRect(-T.waist - 8, C.belt[0], 2 * T.waist + 16, C.belt[1] - C.belt[0]);
   g.fillStyle = '#D9D9D6'; g.beginPath(); g.roundRect(-30 + tx * 0.3, C.belt[0] - 2, 60, C.belt[1] - C.belt[0] + 4, 6); g.fill(); emblemAt(g, tx * 0.3, (C.belt[0] + C.belt[1]) / 2, 30);
-  if (!p.legs && who === 'miguel') { g.fillStyle = UNI.green; g.fillRect(-T.waist - 6, C.belt[1], 2 * T.waist + 12, 140); }
-  if (!p.legs && who === 'lara') { g.fillStyle = UNI.green; g.beginPath(); trace(g, [[-T.waist, C.belt[1]], [T.waist, C.belt[1]], [T.waist + 16, C.belt[1] + 140], [-T.waist - 16, C.belt[1] + 140]]); g.fill(); }
+  if (!p.legs && who === 'miguel') { g.fillStyle = UNI.green; g.fillRect(-T.waist - 6, C.belt[1], 2 * T.waist + 12, 1400); g.fillStyle = UNI.greenS; g.fillRect(T.waist * 0.3, C.belt[1] + 30, T.waist * 0.7, 1400); }
+  if (!p.legs && who === 'lara') { g.fillStyle = UNI.green; g.beginPath(); trace(g, [[-T.waist, C.belt[1]], [T.waist, C.belt[1]], [T.waist + 110, C.belt[1] + 1400], [-T.waist - 110, C.belt[1] + 1400]]); g.fill(); g.fillStyle = UNI.greenS; g.beginPath(); trace(g, [[-8, C.belt[1]], [8, C.belt[1]], [60, C.belt[1] + 1400], [-60, C.belt[1] + 1400]]); g.fill(); }
   // insígnias nas mangas ficam no braço (desenhadas depois)
   // pescoço
   poly(g, [[-34, -60], [34, -60], [38, 14], [0, 26], [-38, 14]], C.skin, 3);
@@ -137,7 +137,7 @@ function drawPerson(dst, who, p) {
   g.restore();
   // ---------- acabamento pintado + luz da cena
   const M = [s, 0, 0, s, p.x, p.y], toS = ([x, y]) => [p.x + x * s, p.y + y * s];
-  const rr = painterize(lc, M, [-460, -480, 460, p.legs ? C.foot + 40 : 560], { seed: who.length * 5, tex: 0.32, edge: 0.55, edgeBlur: 2 });
+  const rr = painterize(lc, M, [-460, -480, 460, p.legs ? C.foot + 40 : 1500], { seed: who.length * 5, tex: 0.32, edge: 0.55, edgeBlur: 2 });
   lightRig(lc, rr, p.light || { dir: [-1, -0.45], key: 'rgba(255,222,170,0.3)', shade: 'rgba(70,35,95,0.4)', rim: 'rgba(255,236,196,1)', rimW: 6 * s + 2, rimA: 0.8 });
   dst.save(); dst.setTransform(1, 0, 0, 1, 0, 0); dst.drawImage(lc, rr[0], rr[1], rr[2], rr[3], rr[0], rr[1], rr[2], rr[3]); dst.restore();
   return hands.map(([x, y]) => toS([x, y]));
