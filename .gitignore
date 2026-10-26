@@ -25,3 +25,5 @@ EDUCACAO_INCLUSIVA_WORK/renders/character_tests/*.png
 EDUCACAO_INCLUSIVA_WORK/hyperframes/test/
 EDUCACAO_INCLUSIVA_WORK/renders/final/*.log
 EDUCACAO_INCLUSIVA_WORK/renders/final/patch_*/
+# Felinos: quadros de conferência e renders intermediários
+FELINOS_WORK/remotion/out/
