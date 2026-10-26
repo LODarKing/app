@@ -30,12 +30,12 @@
     // Miguel vindo pela trilha ao fundo, na ponta dos pés
     const tip = ss((td - 0.6) / 0.4);
     ctx.fillStyle = '#9A8A66'; ctx.beginPath(); trace(ctx, smooth([[-20, 1000], [400, 980], [800, 1000], [1100, 990], [1100, 1070], [-20, 1080]])); ctx.fill();
-    drawPerson(ctx, 'miguel', { x: 760, y: 1030 - 0.32 * 1070 - 8 * Math.abs(Math.sin(td * 3)), s: 0.32, t: td, legs: true, walk: td * 0.8, look: [-6, 6], tilt: -4, armL: { a1: lerp(100, 150, tip), a2: lerp(80, -60, tip), open: 1 }, armR: { a1: lerp(84, 30, tip), a2: lerp(100, -60, tip), open: 1 }, smile: 0.3, brow: 0.4 });
+    const mk = clamp(td / 2.2); drawPerson(ctx, 'miguel', { x: lerp(1000, 760, sm(mk)), y: 1030 - 0.32 * 1070 - 8 * Math.abs(Math.sin(td * 3)) * (mk < 1 ? 1 : 0), s: 0.32, t: td, legs: true, walk: mk < 1 ? td * 0.8 : null, look: [-6, 6], tilt: -4, armL: { a1: lerp(100, 150, tip), a2: lerp(80, -60, tip), open: 1 }, armR: { a1: lerp(84, 30, tip), a2: lerp(100, -60, tip), open: 1 }, smile: 0.3, brow: 0.4 });
     water(ctx, t, 1260);
     bridge(ctx);
     // Pingo atravessando sem barulho (perfil)
     const px = lerp(120, 760, clamp(td / 2.6)), stop = td > 2.6;
-    if (td < 3.0) drawBigCat(ctx, 'pingo', { x: px, y: 1170, s: 0.9, walk: td * 1.2, moving: stop ? 0 : 1, tail: td, headRot: stop ? -8 : 0 }, td, { light: { dir: [-1, -0.6], rim: 'rgba(255,236,196,1)', rimW: 4, rimA: 0.7 } });
+    if (td < 3.0) drawBigCat(ctx, 'pingo', { x: px, y: 1170, s: 0.9, walk: (px - 120) / catStep('pingo', 0.9), moving: stop ? 0 : 1, tail: td, headRot: stop ? -8 : 0 }, td, { light: { dir: [-1, -0.6], rim: 'rgba(255,236,196,1)', rimW: 4, rimA: 0.7 } });
     leafShadows(ctx, t, [0, 1000, W, 400], { alpha: 0.12, seed: 6 });
     foliageFG(ctx, t, { x: -60, y: 120, s: 1.2, side: 1, seed: 650, blur: 6 });
     motes(ctx, t, [0, 300, W, 900], { n: 18, seed: 17 });
@@ -134,7 +134,7 @@
     drawPerson(ctx, 'lara', { x: 430, y: 1080, s: 0.98, t: td, mouth: voiceL('lara', t), smile: 1, look: [6, 5], turn: 0.25, tilt: 3 + 3 * tb.nod, brow: tb.brow, blink: blinkAt(td, [P.lara + 1.8]), armR: { a1: lerp(84, 50, ss((td - P.lara - 1.2) / 0.4)), a2: lerp(100, -30, ss((td - P.lara - 1.2) / 0.4)), open: 1 } });
     // o Pingo passa em primeiro plano, em silêncio
     const px = lerp(-300, 1300, clamp((td - P.lara - 0.3) / 3.4));
-    drawBigCat(ctx, 'pingo', { x: px, y: 1700, s: 1.0, walk: td * 1.2, moving: 1, tail: td }, td, { light: { dir: [-1, -0.6], rim: 'rgba(255,236,196,1)', rimW: 4, rimA: 0.6 } });
+    drawBigCat(ctx, 'pingo', { x: px, y: 1700, s: 1.0, walk: (px + 300) / catStep('pingo', 1.0), moving: 1, tail: td }, td, { light: { dir: [-1, -0.6], rim: 'rgba(255,236,196,1)', rimW: 4, rimA: 0.6 } });
     leafShadows(ctx, t, [0, 900, W, 1020], { alpha: 0.12, seed: 14 });
   }
   // ---------- o guepardo

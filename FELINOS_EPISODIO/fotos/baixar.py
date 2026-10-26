@@ -38,4 +38,4 @@ for key in sel:
                   'pagina': ii['descriptionurl'], 'tamanho_original': [ii['width'], ii['height']]}
     json.dump(creds, open('documentacao/fotos_creditos.json', 'w'), ensure_ascii=False, indent=1)   # salva a cada foto
     open('js/fotos_creditos.js', 'w').write('// gerado por fotos/baixar.py\nwindow.FOTO_CRED = ' + json.dumps({k: {'autor': v['autor'], 'licenca': v['licenca']} for k, v in creds.items()}, ensure_ascii=False) + ';\n')
-    print(key, '|', ftitle, '|', creds[key]['autor'], '|', creds[key]['licenca'], flush=True); time.sleep(8)
+    print(key, '|', ftitle, '|', creds[key]['autor'], '|', creds[key]['licenca'], flush=True); time.sleep(20)

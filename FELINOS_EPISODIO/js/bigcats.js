@@ -103,6 +103,12 @@ function footAt(home, ph, sp, mv, rest, G) {
   else { const k = (q - st) / (1 - st), e = k * k * (3 - 2 * k); x = lerp(-stride / 2, stride / 2, e); y = -lift * Math.sin(k * Math.PI); fold = Math.sin(k * Math.PI); }
   return { x: home + x * mv + rest * (1 - mv), y: y * mv, fold: fold * mv, stance: q < st ? Math.sin((q / st) * Math.PI) : 0 };
 }
+/** quanto o corpo avança (px na tela) a cada ciclo de passada, para a pata apoiada não patinar: fase = distância / catStep */
+function catStep(kind, s, gait) { const sp = SPEC[kind]; return gait === 'gallop' ? sp.stride * 2.3 / 0.34 * s : sp.stride / 0.6 * s; }
+/** distância acumulada de quem anda de um lado para o outro (x = A·sen(w·t)): a fase da passada avança com |velocidade| */
+function paceDist(A, w, t) { const u = w * t, n = Math.floor(u / Math.PI); return Math.abs(A) * (2 * n + 1 - Math.cos(u - n * Math.PI)); }
+/** função erro (Abramowitz–Stegun) para integrar velocidades que variam em sino */
+function erf(x) { const s = Math.sign(x); x = Math.abs(x); const t = 1 / (1 + 0.3275911 * x); return s * (1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x)); }
 function catLegs(sp, walk, mv, bob, gait, lie = 0, D = 0) {
   // passo lateral (andar) ou galope rotativo (corrida): pares traseiros e dianteiros quase juntos, fase de voo
   const G = gait === 'gallop' ? { stance: 0.34, stride: sp.stride * 2.3, lift: sp.lift * 1.8 } : null;

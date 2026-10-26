@@ -31,7 +31,7 @@
       ctx.save(); ctx.globalCompositeOperation = 'multiply'; ctx.drawImage(cachedPainted('s18paper', 1080, 1920, (g, w, h) => { g.fillStyle = '#F3E8D8'; g.fillRect(0, 0, w, h); }, 41, 0.5), 0, 0); ctx.restore();
       const pk = clamp((t - E.paw) / 1.6), px = lerp(-200, 1250, pk);
       for (let i = 0; i < 6; i++) { const x = 40 + i * 190, k = (px - x) / 120; if (k > 0) { ctx.save(); ctx.translate(x, 1690 + (i % 2) * 70); ctx.rotate(Math.PI / 2 + 0.1); ctx.scale(0.36, 0.36); ctx.globalAlpha = i === 5 ? 1 : clamp(1 - (t - E.paw - i * 0.27 - 0.6) / 0.8); pawPrint(ctx, ACCENT, 0, 7 + i); ctx.restore(); } }
-      if (pk > 0 && pk < 1) drawBigCat(ctx, 'pingo', { x: px, y: 1640, s: 0.5, walk: td * 1.4, moving: 1, tail: td }, td, {});
+      if (pk > 0 && pk < 1) drawBigCat(ctx, 'pingo', { x: px, y: 1640, s: 0.5, walk: (px + 200) / catStep('pingo', 0.5, 'gallop'), moving: 1, gait: 'gallop', tail: td }, td, {});
       const fo = clamp((t - (E.paw + 1.6)) / 0.4); if (fo > 0) { ctx.fillStyle = `rgba(42,30,48,${fo})`; ctx.fillRect(0, 0, W, H); }
     }
     vignette(ctx, '40,20,40', 0.25);

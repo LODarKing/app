@@ -9,7 +9,7 @@ import json, sys, numpy as np, soundfile as sf, pyloudnorm as pyln, librosa
 from pedalboard import Pedalboard, Reverb, HighpassFilter, Compressor
 sys.path.insert(0, 'audio')
 import instruments as I
-from instruments import SR, tv, env, hz, pluck, celesta, drum, noise, whoosh, meow, roar, pop, step, birds, sparkle, boing, heartbeat, mx
+from instruments import SR, tv, env, hz, pluck, celesta, drum, harp, flute, horn, marimba, glock, timpani, noise, whoosh, meow, roar, pop, step, birds, sparkle, boing, heartbeat, mx
 
 TL = json.loads(open('timeline.js').read().replace('const TL = ', '').rstrip().rstrip(';'))
 DUR = TL['dur']; N = int(DUR * SR); BEAT = 60 / TL['bpm']; E8 = BEAT / 2
@@ -19,6 +19,9 @@ from functools import lru_cache
 _strings, _choir = lru_cache(None)(lambda m, d, cut, a, r: I.strings(m, d, cut, a, r)), lru_cache(None)(lambda m, d: I.choir(m, d))
 def strings(m, d, cut=1800, a=0.25, r=0.4): return _strings(m, round(d, 2), cut, round(a, 2), r)
 def choir(m, d): return _choir(m, round(d, 2))
+_ens, _ch2 = lru_cache(None)(lambda m, d, cut, a, r: I.ensemble(m, d, cut, a, r)), lru_cache(None)(lambda m, d, v: I.choir2(m, d, v))
+def ensemble(m, d, cut=2200, a=0.5, r=0.6): return _ens(m, round(d, 2), cut, round(a, 2), round(r, 2))
+def choir2(m, d, v='a'): return _ch2(m, round(d, 2), v)
 music, sfx, amb, vox = I.Bus(), I.Bus(), I.Bus(), I.Bus()
 S = {s['id']: s for s in TL['scenes']}
 def T(sid, key, i=None):
@@ -45,13 +48,14 @@ def pad(a, b, prog, g=0.1, cut=1600, per=16):
     k = i[0]
     while k * E8 < b:
         k2 = max(k + 1, min((k // per + 1) * per, int(np.ceil(b / E8 - 1e-6)))); d = min(k2 * E8, b) - k * E8 + 0.35; root, ch = chord_at(prog, k, per)
-        for j, m in enumerate([root] + ch): music.put(strings(m, d, cut, 0.3, 0.35) * (g * 1.3 if j == 0 else g), k * E8, -0.4 + 0.27 * j)
+        for j, m in enumerate([root] + ch): music.put(ensemble(m, d, cut, 0.35, 0.4) * (g * 1.3 if j == 0 else g), k * E8, -0.4 + 0.27 * j)
         k = k2
-def pizz(a, b, prog, g=1.0, per=16, bass=True, pat=(0, 1, 2, 1, 2, 1, 0, 2)):
-    """pizzicato em colcheias (arpejo do acorde) + baixo no tempo"""
+def pizz(a, b, prog, g=1.0, per=16, bass=True, pat=(0, 1, 2, 1, 2, 1, 0, 2), inst='pluck'):
+    """arpejo em colcheias (pizzicato, marimba ou harpa) + baixo no tempo"""
     for i in eighths(a, b):
         root, ch = chord_at(prog, i, per); n = ch[pat[i % len(pat)]] + (12 if (i // 4) % 2 and i % 4 == 3 else 0)
-        music.put(pluck(hz(n), 0.45) * 0.9 * g, i * E8, -0.3 + 0.6 * (i % 2))
+        note = pluck(hz(n), 0.45) * 0.9 if inst == 'pluck' else marimba(hz(n + 12), 0.5) * 0.8 if inst == 'marimba' else harp(hz(n), 1.6) * 0.55
+        music.put(note * g, i * E8, -0.3 + 0.6 * (i % 2))
         if bass and i % 2 == 0: music.put(pluck(hz(root - 12 + (7 if i % 8 == 4 else 0)), 0.8, 1500) * 1.4 * g, i * E8, 0)
 def taiko(a, b, prog, g=1.0, per=16, busy=1):
     """aventura: tambores no tempo, baixo em colcheias, acentos a cada compasso"""
@@ -82,17 +86,41 @@ def sacred(a, b, prog, g=1.0, per=16, voices=True):
     if voices:
         k = eighths(a, b)
         for i in k:
-            if i % per == 0: _, ch = chord_at(prog, i, per); [music.put(choir(m, min(per * E8, b - i * E8) + 0.4) * 0.16 * g, i * E8, -0.2 + 0.2 * j) for j, m in enumerate(ch)]
+            if i % per == 0: _, ch = chord_at(prog, i, per); [music.put(choir2(m, min(per * E8, b - i * E8) + 0.6, 'o' if j % 2 else 'a') * 0.5 * g, i * E8, -0.25 + 0.25 * j) for j, m in enumerate(ch)]
     for i in eighths(a, b):
-        if i % per == 0: music.put(drum(45, 1.2, 0.2, 3) * 0.5 * g, i * E8, 0)
+        if i % per == 0: music.put(timpani(hz(chord_at(prog, i, per)[0] - 12), 1.8) * 0.45 * g, i * E8, 0)
 def stab(t, prog_chord, g=0.5):
     """acorde curto de orquestra (para revelações)"""
     root, ch = prog_chord
     for j, m in enumerate([root, root + 12] + ch + [ch[0] + 12]): music.put(strings(m, 0.6, 3400, 0.01, 0.4) * g * (1.4 if j < 2 else 1), t, -0.4 + 0.15 * j)
-    music.put(drum(55, 0.6, 0.3, 6) * g * 1.4, t, 0)
+    for j, m in enumerate(ch): music.put(horn(m, 0.7) * g * 0.9, t, -0.2 + 0.2 * j)
+    music.put(timpani(hz(root - 12), 1.2) * g * 1.2, t, 0)
 def rise(a, b, g=0.6, m=50):
     """cordas subindo de intensidade até b (preparação)"""
     d = b - a; s = strings(m, d, 3200, d * 0.8, 0.05); music.put(s * np.linspace(0.05, 1, len(s)) * g, a, 0)
+
+# ================================================================= melodias (tema recorrente do episódio)
+# tema "Felinos" (Ré maior, 8 compassos): (batida, nota MIDI, duração em batidas)
+THEME = [(0, 74, 1), (1, 78, 0.5), (1.5, 81, 0.5), (2, 83, 1), (3, 81, 1), (4, 78, 1.5), (5.5, 76, 0.5), (6, 74, 2), (8, 79, 1), (9, 78, 0.5), (9.5, 76, 0.5), (10, 78, 1), (11, 81, 1), (12, 76, 4),
+         (16, 74, 1), (17, 78, 0.5), (17.5, 81, 0.5), (18, 86, 2), (20, 85, 1), (21, 83, 1), (22, 81, 2), (24, 79, 1), (25, 83, 1), (26, 81, 1), (27, 78, 1), (28, 74, 4)]
+THEME_CH = [D_MAJ[0], D_MAJ[1], D_MAJ[2], D_MAJ[3], D_MAJ[0], (42, [61, 66, 69]), (43, [62, 67, 71]), D_MAJ[0]]   # um acorde por compasso
+SACRED = [(0, 69, 2), (2, 69, 1), (3, 70, 1), (4, 69, 2), (6, 67, 2), (8, 65, 2), (10, 64, 2), (12, 65, 2), (14, 67, 1), (15, 69, 1), (16, 74, 4), (20, 73, 2), (22, 74, 6)]
+PASTORAL = [(0, 79, 1.5), (1.5, 81, 0.5), (2, 83, 2), (4, 81, 1), (5, 79, 1), (6, 76, 2), (8, 74, 1), (9, 76, 1), (10, 79, 1.5), (11.5, 81, 0.5), (12, 79, 4)]
+def onbeat(t): return round(t / BEAT) * BEAT
+def melody(t0, notes, inst, g=0.5, pan=0.0, b0=0, b1=99, tr=0):
+    """toca as notas entre as batidas b0 e b1 da melodia a partir de t0 (na batida); legato com leve sobreposição"""
+    t0 = onbeat(t0)
+    for b, m, d in notes:
+        if b < b0 or b >= b1: continue
+        dur = d * BEAT * 1.05; tt = t0 + (b - b0) * BEAT; m += tr
+        sig = flute(m, dur) if inst == 'flute' else horn(m - 12, dur) if inst == 'horn' else glock(hz(m + 12), 1.4) * 0.8 if inst == 'glock' else harp(hz(m), 2.0) * 0.7
+        music.put(sig * g, tt, pan)
+def harpArp(t0, bars, g=0.35, chords=THEME_CH, bar0=0):
+    """harpa arpejando o acorde de cada compasso (colcheias subindo)"""
+    t0 = onbeat(t0)
+    for k in range(bars):
+        root, ch = chords[(bar0 + k) % len(chords)]
+        for q, m in enumerate([root, ch[0], ch[1], ch[2], ch[0] + 12, ch[2], ch[1], ch[0]]): music.put(harp(hz(m), 1.8) * g, t0 + k * 4 * BEAT + q * E8, -0.4 + 0.1 * q)
 
 # ================================================================= trilha por cena
 # s01 — gancho: pedal grave + batimentos (efeitos); salto e aventura; rugido; tutti na escrita do título
@@ -115,7 +143,7 @@ for k, tf in enumerate(S['s02']['ev']['fam']): music.put(celesta(hz([81, 86, 90]
 # s03 — família Felidae: árvore (estudo), desfile (aventura leve), Lara e a borboleta (estudo + celesta)
 pizz(t0('s03'), T('s03', 'parade') - 0.01, D_MAJ, 0.9); pad(t0('s03'), T('s03', 'parade'), D_MAJ, 0.07)
 taiko(T('s03', 'parade'), T('s03', 'lara') - 0.01, D_MAJ, 0.75, busy=0); pad(T('s03', 'parade'), T('s03', 'lara'), D_MAJ, 0.09, 2200)
-pizz(T('s03', 'lara'), t1('s03') - 0.01, G_MAJ, 0.85); bells(T('s03', 'butterfly'), t1('s03'), G_MAJ, 0.14, 2, seed=3)
+pizz(T('s03', 'lara'), t1('s03') - 0.01, G_MAJ, 0.85, inst='harp'); bells(T('s03', 'butterfly'), t1('s03'), G_MAJ, 0.14, 2, seed=3)
 # s04 — patas: ponte na ponta dos pés (pizz em Ré menor, contido), congela, ciência (estudo), guepardo (aventura rápida)
 pizz(t0('s04'), T('s04', 'freeze') - 0.01, D_MIN, 0.7, bass=True, pat=(0, 2, 1, 2))
 pizz(T('s04', 'digi'), T('s04', 'cheetah') - 0.01, D_MAJ, 0.8); pad(T('s04', 'digi'), T('s04', 'cheetah'), D_MAJ, 0.06)
@@ -158,17 +186,17 @@ stab(T('s11', 'fold'), D_MAJ[0], 0.35); bells(T('s11', 'fold'), t1('s11'), D_MAJ
 for k, ch in enumerate([F_MAJ[0], F_MAJ[1], F_MAJ[2], F_MAJ[0]]): stab(t0('s12') + k * BEAT / 2 + (0.25 if k == 3 else 0), ch, 0.3 + 0.08 * k)   # vinheta "Desafio Felino!"
 for k, m in enumerate([77, 81, 84, 89]): music.put(celesta(hz(m), 0.8) * 0.2, t0('s12') + 1.5 + k * E8 / 2, -0.3 + 0.2 * k)
 for (a, b) in [(T('s12', 'q1'), T('s12', 'reveal1')), (T('s12', 'q2'), T('s12', 'reveal2')), (T('s12', 'q3'), T('s12', 'run'))]:
-    pizz(a, b - 0.01, F_MAJ, 0.7, bass=True, pat=(0, 2))
+    pizz(a, b - 0.01, F_MAJ, 0.7, bass=True, pat=(0, 2), inst='marimba')
 for (a, b) in [(T('s12', 'reveal1'), T('s12', 'q2')), (T('s12', 'reveal2'), T('s12', 'q3'))]:
     pizz(a, b - 0.01, D_MAJ, 0.8); pad(a, b, D_MAJ, 0.06)
 taiko(T('s12', 'run'), T('s12', 'q4') - 0.01, D_MAJ, 1.0, busy=2); pad(T('s12', 'run'), T('s12', 'q4'), D_MAJ, 0.08, 2600)
-pizz(T('s12', 'q4'), T('s12', 'crown') - 0.01, F_MAJ, 0.7, pat=(0, 2))
+pizz(T('s12', 'q4'), T('s12', 'crown') - 0.01, F_MAJ, 0.7, pat=(0, 2), inst='marimba')
 pad(T('s12', 'crown'), T('s12', 'pride'), D_MAJ, 0.12, 3000); bells(T('s12', 'crown'), T('s12', 'pride'), D_MAJ, 0.15, 2, seed=12)
 taiko(T('s12', 'pride'), T('s12', 'roar') - 0.01, D_MAJ, 0.8, busy=1); pad(T('s12', 'pride'), T('s12', 'roar'), D_MAJ, 0.09, 2400)
 rise(T('s12', 'males'), T('s12', 'roar'), 0.5); stab(T('s12', 'roar'), D_MAJ[0], 0.45)
 # s13 — o Diário dourado e a Bíblia: pad quente, celesta, coro entra quando a Bíblia aparece
 pad(t0('s13'), T('s13', 'bible'), D_MAJ, 0.08, 1300); bells(t0('s13'), T('s13', 'bible'), D_MAJ, 0.12, 4, seed=13)
-sacred(T('s13', 'bible'), t1('s13'), D_MAJ, 0.8)
+sacred(T('s13', 'bible'), t1('s13'), D_MIN, 0.8)   # combina com o coral sacro (Ré menor)
 # s14 — Sansão: Ré menor solene; vitória em Ré maior
 sacred(t0('s14'), T('s14', 'won'), D_MIN, 1.0); taiko(T('s14', 'lion'), T('s14', 'won') - 0.01, D_MIN, 0.5, busy=0)
 sacred(T('s14', 'won'), t1('s14'), D_MAJ, 0.9)
@@ -195,9 +223,32 @@ for i in eighths(T('s18', 'rise'), T('s18', 'ident')):
 for k, (tt, ch) in enumerate([(T('s18', 'ident'), D_MAJ[2]), (T('s18', 'ident') + 1.0, D_MAJ[3]), (T('s18', 'ident') + 2.0, D_MAJ[0])]): stab(tt, ch, 0.35 + 0.1 * k)
 pad(T('s18', 'ident') + 2.0, t1('s18'), D_MAJ[:1], 0.1, 2400, per=64); bells(T('s18', 'ident') + 2.0, t1('s18'), D_MAJ[:1], 0.12, 2, seed=20)
 # créditos — canção de ninar em celesta sobre cordas, fade no fim
-pad(t0('cred'), t1('cred'), G_MAJ, 0.16, 1600, per=8); bells(t0('cred'), t1('cred') - 1, G_MAJ, 0.26, 2, per=8, seed=21)
+pad(t0('cred'), t1('cred'), THEME_CH, 0.14, 1600, per=8); bells(t0('cred'), t1('cred') - 1, THEME_CH, 0.18, 4, per=8, seed=21)   # mesma harmonia do tema
 for i in eighths(t0('cred'), t1('cred') - 1):
-    if i % 4 == 0: music.put(pluck(hz(chord_at(G_MAJ, i, 8)[0] - 12), 0.8, 1500) * 1.2, i * E8, 0)   # baixo suave
+    if i % 4 == 0: music.put(pluck(hz(chord_at(THEME_CH, i, 8)[0] - 12), 0.8, 1500) * 1.2, i * E8, 0)   # baixo suave
+
+
+# o tema aparece nos momentos-chave
+melody(T('s01', 'write'), THEME, 'glock', 0.7, 0.2, 0, 4)
+melody(T('s02', 'cutFam'), THEME, 'horn', 0.9, -0.1, 0, 8); melody(T('s02', 'cutFam'), THEME, 'glock', 0.35, 0.3, 0, 8)
+melody(T('s03', 'title'), THEME, 'flute', 0.6, 0.15, 16, 24)
+melody(t0('s11'), THEME, 'horn', 0.8, -0.1, 0, 16); melody(t0('s11') + 8 * BEAT, THEME, 'flute', 0.45, 0.2, 8, 16)
+melody(T('s18', 'rise'), THEME, 'flute', 0.65, 0.15, 0, 16); harpArp(T('s18', 'rise'), 4, 0.3)
+melody(T('s18', 'rise') + 8 * BEAT, THEME, 'horn', 0.7, -0.15, 8, 16)
+melody(T('s18', 'ident'), THEME, 'horn', 0.9, 0.0, 24, 32); melody(T('s18', 'ident'), THEME, 'flute', 0.55, 0.2, 24, 32)
+harpArp(t0('cred'), 4, 0.32, THEME_CH, 0); melody(t0('cred') + 2 * BEAT, THEME, 'flute', 0.4, 0.1, 0, 14)
+# coral sacro e melodias das histórias
+melody(T('s13', 'bible'), SACRED, 'horn', 0.6, -0.1, 0, 16, tr=0)
+melody(T('s14', 'won'), THEME, 'horn', 0.75, 0.0, 16, 22)                                      # vitória de Sansão: tema em maior
+melody(t0('s15'), PASTORAL, 'flute', 0.6, 0.2, 0, 12)                                            # o pastor ao amanhecer
+melody(T('s15', 'safe'), PASTORAL, 'flute', 0.5, 0.2, 8, 16)
+for k, m in enumerate([86, 90, 93, 98]): music.put(glock(hz(m), 1.6) * 0.5, onbeat(T('s16', 'lights')) + k * E8, -0.3 + 0.2 * k)
+melody(t0('s17'), SACRED, 'flute', 0.5, 0.15, 0, 8)                                              # a oração de Daniel
+harpArp(T('s17', 'beam'), 2, 0.28, [(50, [62, 66, 69]), (43, [62, 67, 71])])                     # a luz desce
+melody(T('s17', 'angel'), SACRED, 'horn', 0.55, -0.1, 16, 28)
+harpArp(T('s17', 'night'), 1, 0.22, [(50, [62, 66, 69])])                                       # a noite passa
+music.put(timpani(hz(38), 2.6, roll=1.0) * 0.6, onbeat(T('s17', 'morning')) - 1.0, 0)           # rufar até o amanhecer
+melody(T('s17', 'morning'), THEME, 'horn', 0.8, 0.0, 16, 24); melody(T('s17', 'morning'), THEME, 'flute', 0.45, 0.25, 16, 24)
 
 def stereo_master(x, wet, room):
     return Pedalboard([HighpassFilter(30), Reverb(room_size=room, wet_level=wet, dry_level=1.0, width=1.0)])(x.T.astype(np.float32), SR).T

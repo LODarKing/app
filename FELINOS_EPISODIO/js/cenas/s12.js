@@ -46,16 +46,16 @@
     // América do Sul (recorte do mapa) e a onça crescendo no centro
     ctx.fillStyle = '#5E8EA6'; ctx.fillRect(0, 0, W, H);
     const [cx, cy] = proj(-60, -18); drawMap(ctx, cx, cy, 6.2, 540, 1000, (g, sc) => rangeBlob(g, 'jaguar', t, rev));
-    const s = 0.2 + 0.75 * outBack(rev, 1.3); drawBigCat(ctx, 'jaguar', { x: 470, y: 1180, s, walk: td * 0.6, moving: 0.3, tail: td }, td, { light: { dir: [-1, -0.6], rim: 'rgba(255,240,200,1)', rimW: 4, rimA: 0.6 } });
+    const s = 0.2 + 0.75 * outBack(rev, 1.3); drawBigCat(ctx, 'jaguar', { x: 470, y: 1180, s, walk: 0, moving: 0, tail: td }, td, { light: { dir: [-1, -0.6], rim: 'rgba(255,240,200,1)', rimW: 4, rimA: 0.6 } });
   }
   function shotRace(ctx, t) {
     const td = on2s(t), slow = bell(t, P.run + 6.0, 1.4), speed = 1 - 0.7 * slow;
     const track = cachedPainted('s12track', 2400, 1920, (g, w, h) => { g.fillStyle = linear(g, 0, 0, 0, h, [[0, '#8EB8D6'], [0.42, '#E8EEE0'], [0.47, '#9A8A5E'], [1, '#6E5E3E']]); g.fillRect(0, 0, w, h); g.fillStyle = '#8A6A44'; g.fillRect(0, 1250, w, 160); g.fillStyle = '#F6EEE4'; for (let x = 0; x < w; x += 200) { g.fillRect(x, 1240, 120, 10); g.fillRect(x, 1410, 120, 10); } for (let x = 0; x < w; x += 300) { g.fillStyle = '#4E4038'; g.fillRect(x + 140, 790, 10, 110); g.beginPath(); g.ellipse(x + 145, 790, 90, 22, 0, 0, 6.283); g.fill(); } }, 36, 0.5);
     if (t < P.run) { ctx.drawImage(track, 0, 0); drawBigCat(ctx, 'cheetah', { x: 380, y: 1330, s: 1.0, walk: 0, moving: 0, tail: td, headRot: 4 }, td, {}); ctx.fillStyle = '#F6EEE4'; ctx.fillRect(560, 1180, 12, 260); return; }
-    const dist = (t - P.run) * 1100 - 900 * Math.max(0, (t - P.run) - 4.6) * 0 ;
-    const off = ((t - P.run) * 1150 * (1 - 0.6 * slow)) % 1200;
+    // distância percorrida = integral da velocidade (que cai em sino perto de run+6): o chão rola exatamente o que as patas empurram
+    const V0 = 1700, dist = V0 * ((t - P.run) - 0.6 * 1.4 * Math.sqrt(Math.PI) / 2 * (erf((t - P.run - 6.0) / 1.4) - erf(-6.0 / 1.4))), off = dist % 1200;
     ctx.save(); ctx.translate(-off, 0); ctx.drawImage(track, 0, 0); ctx.drawImage(track, 2400, 0); ctx.restore();
-    drawBigCat(ctx, 'cheetah', { x: 470, y: 1330, s: 1.05, walk: (td - P.run) * 2.6 * speed + 0.3 * slow * (td - P.run), moving: 1, gait: 'gallop', tail: td * 3 }, td, { light: { dir: [-1, -0.7], rim: 'rgba(255,240,200,1)', rimW: 5, rimA: 0.7 } });
+    drawBigCat(ctx, 'cheetah', { x: 470, y: 1330, s: 1.05, walk: dist / catStep('cheetah', 1.05, 'gallop'), moving: 1, gait: 'gallop', tail: td * 3 }, td, { light: { dir: [-1, -0.7], rim: 'rgba(255,240,200,1)', rimW: 5, rimA: 0.7 } });
     speedLines(ctx, t, 0.18 * (1 - slow), 540, 900, false);
   }
   function shotKing(ctx, t) {
@@ -68,13 +68,13 @@
     const cam = { x: 0, y: 0, zoom: 1.0 + 0.02 * (t - P.pride), fx: 540, fy: 1100 };
     drawSavanna(ctx, t, cam, () => { camSet(ctx, cam, 1);
       if (t < P.hunt) {
-        drawBigCat(ctx, 'lioness', tp(ctx, { x: 700, y: 1390, s: 0.62, flip: true, walk: td * 0.5, moving: 0.2, tail: td }), td, { dark: 'rgba(70,30,60,0.3)' });
-        drawBigCat(ctx, 'cub', tp(ctx, { x: 520 + 40 * Math.sin(td * 1.6), y: 1420, s: 0.62, walk: td * 1.4, moving: 1, flip: Math.cos(td * 1.6) < 0, tail: td * 2 }), td, { dark: 'rgba(70,30,60,0.25)' });
+        drawBigCat(ctx, 'lioness', tp(ctx, { x: 700, y: 1390, s: 0.62, flip: true, walk: 0, moving: 0, tail: td }), td, { dark: 'rgba(70,30,60,0.3)' });
+        drawBigCat(ctx, 'cub', tp(ctx, { x: 520 + 40 * Math.sin(td * 1.6), y: 1420, s: 0.62, walk: paceDist(40, 1.6, td) / catStep('cub', 0.62), moving: 1, flip: Math.cos(td * 1.6) < 0, tail: td * 2 }), td, { dark: 'rgba(70,30,60,0.25)' });
         drawBigCat(ctx, 'lion', tp(ctx, { x: 200, y: 1356, s: 0.95, headRot: terr ? -18 : -4, jaw: terr ? 0.8 * bell(td, P.territory + 0.6, 0.5) : 0, tail: td }), td, { dark: 'rgba(70,30,60,0.35)', rim: '#FFD7A6', rimDx: -8, rimDy: -6 });
         drawBigCat(ctx, 'lioness', tp(ctx, { x: 860, y: 1440, s: 0.66, flip: true, walk: 0, moving: 0, tail: td, headRot: 6 }), td, { dark: 'rgba(70,30,60,0.3)' });
       } else {   // leoas avançam juntas, abaixadas, pelo capim alto (sem presa na tela)
-        [0, 1, 2].forEach((i) => drawBigCat(ctx, 'lioness', tp(ctx, { x: 140 + i * 280 + 60 * (td - P.hunt), y: 1400 + (i % 2) * 50, s: 0.68, walk: (td - P.hunt) * 0.7 + i * 0.3, moving: 1, tail: td, headRot: 10 }), td, { dark: 'rgba(70,30,60,0.32)' }));
-        if (males) drawBigCat(ctx, 'lion', tp(ctx, { x: -200 + 260 * sm((td - P.males) / 2.4), y: 1360, s: 0.85, walk: (td - P.males) * 0.8, moving: 1, tail: td }), td, { dark: 'rgba(70,30,60,0.35)', rim: '#FFD7A6', rimDx: -8, rimDy: -6 });
+        [0, 1, 2].forEach((i) => drawBigCat(ctx, 'lioness', tp(ctx, { x: 140 + i * 280 + 60 * (td - P.hunt), y: 1400 + (i % 2) * 50, s: 0.68, walk: 60 * (td - P.hunt) / catStep('lioness', 0.68) + i * 0.3, moving: 1, tail: td, headRot: 10 }), td, { dark: 'rgba(70,30,60,0.32)' }));
+        if (males) drawBigCat(ctx, 'lion', tp(ctx, { x: -200 + 260 * sm((td - P.males) / 2.4), y: 1360, s: 0.85, walk: 260 * sm((td - P.males) / 2.4) / catStep('lion', 0.85), moving: 1, tail: td }), td, { dark: 'rgba(70,30,60,0.35)', rim: '#FFD7A6', rimDx: -8, rimDy: -6 });
         camSet(ctx, cam, 1.3); for (let i = 0; i < 60; i++) { const x = -200 + i * 24, hh = 160 + rnd(i, 7) * 180, sw = 14 * Math.sin(t * 1.6 + i * 0.4); inkLine(ctx, [[x, 1700], [x + sw * 0.4, 1700 - hh * 0.55], [x + sw, 1700 - hh]], { line: i % 3 ? '#C9A46E' : '#B08A56', lw: 8, wob: 0 }); }
       }
     });

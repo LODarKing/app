@@ -57,7 +57,7 @@
     const gnd = cachedPainted('s03ground', 1080, 760, (g, w, h) => { g.fillStyle = linear(g, 0, 0, 0, h, [[0, '#B8A07A'], [0.2, '#9DAA78'], [1, '#6E8A5E']]); g.fillRect(0, 0, w, h); for (let i = 0; i < 18; i++) canopy(g, rnd(31, i) * w, 40 + rnd(32, i) * 30, 50 + rnd(33, i) * 40, '#8FA070', '#748A5C', 800 + i, 0.01); }, 15, 0.5);
     ctx.drawImage(gnd, 0, 1220);
     for (let i = 0; i < 34; i++) { const x = ((i * 67 + 40 - (t - P.parade) * 80) % 1240 + 1240) % 1240 - 80; inkLine(ctx, [[x, 1330 + (i % 3) * 30], [x + 6, 1296 + (i % 3) * 30], [x + 3 + Math.sin(t * 2 + i) * 6, 1262 + (i % 3) * 30]], { line: i % 2 ? '#5E7A4A' : '#6E8A56', lw: 6, wob: 0 }); }
-    PAR.forEach(([kind, s, , ], i) => { const x = parX(i, t); if (x < -400 || x > 1500) return; drawBigCat(ctx, kind, { x, y: 1420, s, flip: true, walk: (td - P.parade) * 1.1 + i * 0.3, moving: 1, tail: td + i }, td, { light: { dir: [-1, -0.6], rim: 'rgba(255,236,196,1)', rimW: 3, rimA: 0.6 } }); });
+    PAR.forEach(([kind, s, , ], i) => { const x = parX(i, t); if (x < -400 || x > 1500) return; drawBigCat(ctx, kind, { x, y: 1420, s, flip: true, walk: (td - P.parade) * 110 / catStep(kind, s) + i * 0.3, moving: 1, tail: td + i }, td, { light: { dir: [-1, -0.6], rim: 'rgba(255,236,196,1)', rimW: 3, rimA: 0.6 } }); });
     sunRays(ctx, t, { x: 300, y: -100, ang: -0.3, len: 1600, n: 4, width: 120, alpha: 0.12 });
   }
   // características compartilhadas, apontadas no corpo do Pingo

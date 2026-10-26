@@ -20,5 +20,38 @@
    5168,
    3448
   ]
+ },
+ "onca": {
+  "arquivo": "File:Standing_jaguar.jpg",
+  "autor": "USFWS",
+  "licenca": "Public domain",
+  "url_licenca": "",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Standing_jaguar.jpg",
+  "tamanho_original": [
+   727,
+   501
+  ]
+ },
+ "guepardo": {
+  "arquivo": "File:Male_cheetah_facing_left_in_South_Africa.jpg",
+  "autor": "AfricanConservation",
+  "licenca": "CC BY-SA 4.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+  "pagina": "https://commons.wikimedia.org/wiki/File:Male_cheetah_facing_left_in_South_Africa.jpg",
+  "tamanho_original": [
+   4181,
+   2787
+  ]
+ },
+ "leopardo": {
+  "arquivo": "File:African_leopard_male_(cropped).jpg",
+  "autor": "Sumeet Moghe",
+  "licenca": "CC BY-SA 4.0",
+  "url_licenca": "https://creativecommons.org/licenses/by-sa/4.0",
+  "pagina": "https://commons.wikimedia.org/wiki/File:African_leopard_male_(cropped).jpg",
+  "tamanho_original": [
+   5322,
+   5316
+  ]
  }
 }

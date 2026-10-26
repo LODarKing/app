@@ -157,7 +157,7 @@
       if (t < E.shadow - 0.2) g.drawImage(rock(), -90 - t * 8, 1210);
       if (t >= E.shadow - 0.2) {
         const back = ss((t - E.safe - 0.4) / 1.6), peek = ss((t - E.shadow) / 0.8);
-        drawBigCat(g, 'lion', { x: lerp(-60, 250, peek) - 300 * back, y: 1400, s: 0.52, flip: back > 0.05 ? true : false, lie: 0.3 * (1 - back), walk: td * 0.8, moving: back > 0.05 ? 1 : 0.15, headRot: 6, jaw: 0.25 * bell(td, E.shadow + 1.0, 0.4), tail: td * 1.5 }, td, lionLook('rgba(255,226,200,1)'));
+        drawBigCat(g, 'lion', { x: lerp(-60, 250, peek) - 300 * back, y: 1400, s: 0.52, flip: back > 0.05 ? true : false, lie: 0.3 * (1 - back), walk: (310 * peek + 300 * back) / catStep('lion', 0.52), moving: back > 0.05 ? 1 : 0.15, headRot: 6, jaw: 0.25 * bell(td, E.shadow + 1.0, 0.4), tail: td * 1.5 }, td, lionLook('rgba(255,226,200,1)'));
         g.drawImage(rock(), -90 - t * 8, 1210);   // o rochedo na frente do leão
       }
       // rebanho pastando (à direita); um cordeiro se afasta para a esquerda
@@ -166,7 +166,7 @@
       // Davi: observa o rebanho, vira, corre até o cordeiro e o pega no colo
       const rk = clamp((t - E.run) / (E.safe - E.run)), dx = !run && !safe ? 820 : run ? lerp(820, 370, sm(rk)) : 360;
       if (safe) bibFigure(g, 'davi', { x: dx, y: 1690, s: 0.62, t: td, pose: 'stand', hold: 'lamb', face: 1, look: 10, light: figLight('rgba(255,240,206,1)') });
-      else bibFigure(g, 'davi', { x: dx, y: 1690, s: 0.62, t: td, pose: run ? 'run' : 'stand', ph: run ? (t - E.run) * 1.6 : 0, hold: run ? null : 'staff', face: t > E.shadow - 0.3 ? -1 : 1, wind: run ? 0.8 : 0.25, look: t > E.stray && t < E.shadow ? 6 : 0, light: figLight() });
+      else bibFigure(g, 'davi', { x: dx, y: 1690, s: 0.62, t: td, pose: run ? 'run' : 'stand', stride: 240, ph: run ? (820 - dx) / figStep(0.62, true, 240) : 0, hold: run ? null : 'staff', face: t > E.shadow - 0.3 ? -1 : 1, wind: run ? 0.8 : 0.25, look: t > E.stray && t < E.shadow ? 6 : 0, light: figLight() });
       if (run) dust(g, t, E.run + 0.2, 720, 1690, { seed: 151, n: 8, spread: 160, a: 0.45, col: '200,190,150' });
       if (safe) { motes(g, t, [180, 1000, 520, 700], { n: 20, seed: 152, color: '255,240,200', alpha: 0.7, drift: [4, -30] }); lightBeam(g, 380, 0.5 * ss((t - E.safe) / 1.2), 240); }
       vignette(g, '50,30,50', 0.3);
@@ -211,7 +211,7 @@
         for (let a = 0; a < 6.28; a += 0.3) { g.fillStyle = a % 0.6 < 0.3 ? '#7E8290' : '#5E6270'; g.beginPath(); g.ellipse(540 + Math.cos(a) * 610, 960 + Math.sin(a) * 610, 110, 70, a, 0, 6.283); g.fill(); g.fillStyle = '#F2F5FA'; g.beginPath(); g.ellipse(540 + Math.cos(a) * 640, 960 + Math.sin(a) * 640, 90, 26, a + Math.PI / 2, 0, 6.283); g.fill(); }
         g.fillStyle = radial(g, 540, 960, 100, 520, [[0, '#4A4E66'], [1, '#22202E']]); g.beginPath(); g.arc(540, 960, 520, 0, 6.283); g.fill();
         g.fillStyle = 'rgba(220,230,255,0.18)'; g.beginPath(); g.arc(540, 960, 330, 0, 6.283); g.fill();
-        drawBigCat(g, 'lion', { x: 420 + 60 * Math.sin(td * 0.9), y: 1130, s: 0.5, flip: Math.cos(td * 0.9) < 0, walk: td * 0.7, moving: 1, headRot: -18, jaw: bell(td, E.pit + 0.5, 0.4) * 0.7, tail: td * 1.4 }, td, lionLook('rgba(200,212,240,1)', 'rgba(30,30,60,0.35)'));
+        drawBigCat(g, 'lion', { x: 420 + 60 * Math.sin(td * 0.9), y: 1130, s: 0.5, flip: Math.cos(td * 0.9) < 0, walk: paceDist(60, 0.9, td) / catStep('lion', 0.5), moving: 1, headRot: -18, jaw: bell(td, E.pit + 0.5, 0.4) * 0.7, tail: td * 1.4 }, td, lionLook('rgba(200,212,240,1)', 'rgba(30,30,60,0.35)'));
         const dk = clamp((t - E.descend) / 1.0); if (dk > 0) bibFigure(g, 'benaia', { x: 760, y: lerp(560, 1240, sm(dk)), s: 0.42, t: td, pose: dk < 1 ? 'brace' : 'stand', hold: 'spear', face: -1, wind: 0.6, light: figLight('rgba(232,240,255,1)', [0.4, -1], 'rgba(230,236,255,0.3)', 'rgba(30,30,70,0.5)') });
         snowfall(g, t, 50, 0, [0, 0, W, H], 0.85); vignette(g, '20,20,40', 0.4);
       });
@@ -226,8 +226,8 @@
         // sombras na parede: Benaia firme com a lança, o leão avança e recua; batidas marcadas por pequenos saltos de câmera
         const ph = (t - E.shadows) / (E.lights - E.shadows), beat = Math.floor((t - E.shadows) * 2), lean = Math.sin(beat * 2.1) * 0.6;
         const [sc, sg] = layer('h16sh');
-        bibFigure(sg, 'benaia', { x: 360 + 30 * lean, y: 1480, s: 0.95, t: td, pose: lights > 0 ? 'stand' : 'brace', hold: 'spear', wind: 0.8, tag: 'sh', light: { dir: [0, -1], key: 'rgba(0,0,0,0)', shade: 'rgba(0,0,0,0)' } });
-        if (lights < 0.9) drawBigCat(sg, 'lion', { x: 790 - 60 * lean, y: 1480, s: 0.82, flip: true, lie: lights * 0.9, jaw: lights > 0 ? 0 : 0.6, headRot: -14 + 10 * lean, tail: td * 2 }, td, {});
+        bibFigure(sg, 'benaia', { x: 250 + 30 * lean, y: 1480, s: 0.9, t: td, pose: lights > 0 ? 'stand' : 'brace', hold: 'spear', wind: 0.8, tag: 'sh', light: { dir: [0, -1], key: 'rgba(0,0,0,0)', shade: 'rgba(0,0,0,0)' } });
+        if (lights < 0.9) drawBigCat(sg, 'lion', { x: 840 - 60 * lean, y: 1480, s: 0.78, flip: true, lie: lights * 0.9, jaw: lights > 0 ? 0 : 0.6, headRot: -14 + 10 * lean, tail: td * 2 }, td, {});
         sg.globalCompositeOperation = 'source-in'; sg.fillStyle = 'rgba(16,12,26,1)'; sg.fillRect(0, 0, W, H);
         g.save(); g.globalAlpha = 0.82 * (1 - 0.5 * lights); g.setTransform(1.05, 0, -0.12, 1.02, 120, -60); g.drawImage(sc, 0, 0); g.restore();
         // na luz: Benaia de pé, olhando para o alto; a neve fica dourada
@@ -303,7 +303,7 @@
         const lions = [['lion', 200, 1640, 0.5, false, 0], ['lioness', 860, 1610, 0.5, true, 1], ['lion', 900, 1800, 0.56, true, 2], ['lioness', 150, 1820, 0.52, false, 3]];
         lions.forEach(([kind, x, y, s, fl, i]) => {
           const pace = (1 - calm) * 70 * Math.sin(td * 0.8 + i * 1.7), facing = calm > 0.5 ? fl : (Math.cos(td * 0.8 + i * 1.7) > 0 ? fl : !fl);
-          drawBigCat(g, kind, { x: x + pace, y, s, flip: facing, walk: td * 0.6 + i, moving: (1 - calm) * 0.9, lie: calm, headRot: calm * (14 + night * 10), jaw: (1 - calm) * 0.4 * bell(td, E.den + 0.6 + i * 0.4, 0.4), blink: Math.max(night, calm * 0.5), tail: td * (1 - calm) * 1.4 }, td,
+          drawBigCat(g, kind, { x: x + pace, y, s, flip: facing, walk: paceDist(70, 0.8, td + i * 1.7 / 0.8) / catStep(kind, s), moving: (1 - calm) * 0.9, lie: calm, headRot: calm * (14 + night * 10), jaw: (1 - calm) * 0.4 * bell(td, E.den + 0.6 + i * 0.4, 0.4), blink: Math.max(night, calm * 0.5), tail: td * (1 - calm) * 1.4 }, td,
             { dark: `rgba(20,20,50,${0.35 - 0.2 * beam})`, light: { dir: [0, -1], key: beam > 0.2 ? 'rgba(255,230,180,0.3)' : 'rgba(170,190,240,0.25)', shade: 'rgba(20,16,40,0.45)', rim: beam > 0.2 ? 'rgba(255,236,200,1)' : 'rgba(190,206,250,1)', rimW: 5, rimA: 0.8 } });
           if (calm < 0.6) [-1, 1].forEach((sd) => { g.fillStyle = `rgba(230,220,150,${0.6 * (1 - calm / 0.6)})`; g.beginPath(); g.arc(x + pace + (facing ? -1 : 1) * 175 * s * 2 + sd * 6, y - 330 * s, 4, 0, 6.283); g.fill(); });
         });

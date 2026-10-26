@@ -92,3 +92,45 @@ def sparkle(d=1.0):
         c = celesta(hz(m), 0.9) * 0.22; j = int(i * 0.06 * SR); out[j:j + len(c)] += c[:len(out) - j]
     return out
 
+
+# ---------------------------------------------------------------- instrumentos melódicos (trilha refinada)
+def harp(f, d=2.4):
+    """harpa: Karplus-Strong com pouco amortecimento + ataque brilhante + corpo"""
+    n = int(SR / f); buf = rng.uniform(-1, 1, n) * np.hanning(n) * 1.6; out = np.zeros(int(d * SR)); i = 0
+    while i < len(out):
+        k = min(n, len(out) - i); out[i:i + k] = buf[:k]; buf = 0.5 * (buf + np.roll(buf, -1)) * 0.9985; i += k
+    t = tv(d); return filt(out, 'lowpass', 6500) * np.exp(-t * 1.4) * env(len(out), 0.002, 0.2) * 0.9
+def flute(m, d, vib=0.8):
+    """flauta: fundamental + 2º/3º harmônicos leves, sopro e vibrato que entra devagar"""
+    t = tv(d); f = hz(m) * (1 + 0.006 * np.sin(2 * np.pi * 5.0 * t) * np.clip(t / 0.4, 0, 1) * vib); ph = 2 * np.pi * np.cumsum(f) / SR
+    x = np.sin(ph) + 0.18 * np.sin(2 * ph) + 0.06 * np.sin(3 * ph) + filt(rng.standard_normal(len(t)), 'bandpass', [hz(m) * 0.9, hz(m) * 4]) * 0.05
+    return x * env(len(t), min(0.08, d / 3), min(0.18, d / 3)) * 0.5
+def horn(m, d):
+    """trompa: dente de serra filtrado, ataque macio, timbre arredondado"""
+    t = tv(d); f = hz(m) * (1 + 0.003 * np.sin(2 * np.pi * 4.6 * t)); ph = 2 * np.pi * np.cumsum(f) / SR
+    x = sum(np.sin(k * ph) / k ** 1.3 for k in range(1, 14)); bright = np.clip(t / 0.25, 0, 1) * 0.6 + 0.4
+    return filt(x * bright, 'lowpass', 1300) * env(len(t), min(0.12, d / 3), min(0.25, d / 3)) * 0.42
+def marimba(f, d=0.6):
+    t = tv(d); return (np.sin(2 * np.pi * f * t) + 0.25 * np.sin(2 * np.pi * f * 4 * t) * np.exp(-t * 30) + 0.1 * np.sin(2 * np.pi * f * 9.9 * t) * np.exp(-t * 60)) * np.exp(-t * 6) * env(len(t), 0.002, 0.05) * 0.6
+def glock(f, d=1.4):
+    t = tv(d); return (np.sin(2 * np.pi * f * t) + 0.4 * np.sin(2 * np.pi * f * 2.76 * t) * np.exp(-t * 4) + 0.2 * np.sin(2 * np.pi * f * 5.4 * t) * np.exp(-t * 9)) * np.exp(-t * 2.6) * env(len(t), 0.001, 0.08) * 0.35
+def timpani(f=55, d=1.6, roll=0.0):
+    t = tv(d); body = np.sin(2 * np.pi * f * t * (1 + 0.08 * np.exp(-t * 10))) * np.exp(-t * 2.2) + 0.4 * np.sin(2 * np.pi * f * 1.5 * t) * np.exp(-t * 3)
+    x = body + 0.15 * filt(rng.standard_normal(len(t)), 'bandpass', [80, 900]) * np.exp(-t * 18)
+    if roll: x *= 1 + roll * 0.3 * np.sin(2 * np.pi * 14 * t)
+    return x * env(len(t), 0.004, 0.3) * 0.8
+def ensemble(m, d, cut=2200, a=0.5, r=0.6, voices=5):
+    """naipe de cordas mais cheio: 5 vozes desafinadas, vibrato e abertura do filtro com a dinâmica"""
+    x = sum(saw(hz(m) * (1 + dt), d, 18) for dt in np.linspace(-0.007, 0.007, voices)) / voices
+    t = tv(d); x *= 1 + 0.03 * np.sin(2 * np.pi * 5.3 * t + 1.0)
+    lo = filt(x, 'lowpass', cut * 0.55); hi = filt(x, 'lowpass', cut); sw = np.clip(t / max(a, 1e-3), 0, 1)
+    return (lo * (1 - sw * 0.5) + hi * sw * 0.5) * env(len(x), a, r)
+def choir2(m, d, vowel='a'):
+    """coro mais natural: vozes desafinadas, vibrato, formantes de /a/ ou /o/, ataque lento"""
+    F = {'a': ((730, 1.0), (1090, 0.55), (2440, 0.2)), 'o': ((500, 1.0), (850, 0.5), (2600, 0.12))}[vowel]
+    t = tv(d); x = 0
+    for dt, vp in ((-0.006, 0.0), (0.0, 1.3), (0.007, 2.6), (0.012, 3.9)):
+        f = hz(m) * (1 + dt) * (1 + 0.005 * np.sin(2 * np.pi * 5.1 * t + vp)); ph = 2 * np.pi * np.cumsum(f) / SR
+        x = x + sum(np.sin(k * ph) / k for k in range(1, 28))
+    y = sum(filt(x, 'bandpass', [fc * 0.86, fc * 1.14]) * gg for fc, gg in F) + 0.04 * filt(rng.standard_normal(len(t)), 'bandpass', [2000, 6000])
+    return y * env(len(y), min(0.6, d / 3), min(0.8, d / 3)) * 0.35

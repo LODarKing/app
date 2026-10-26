@@ -13,6 +13,8 @@ const FIG = {
 };
 const r2d = Math.PI / 180;
 /** passada: posição do pé relativa ao quadril para a fase ph (0..1) — apoio desliza para trás, balanço sobe e avança */
+/** avanço do corpo por ciclo de passada (px na tela), para a fase sair da distância e os pés não patinarem */
+const figStep = (s, run = false, stride = null) => (stride ?? (run ? 360 : 210)) / (run ? 0.38 : 0.6) * s;
 function gaitFoot(ph, stride, lift, stance) {
   ph = ((ph % 1) + 1) % 1;
   if (ph < stance) { const k = ph / stance; return [lerp(stride / 2, -stride / 2, k), 0]; }
@@ -28,7 +30,7 @@ function bibFigure(dst, who, p) {
   const [lc, g] = layer('fig_' + who + (p.tag || ''));
   g.translate(p.x, p.y); g.scale(s * face, s);
   const run = pose === 'run', walk = pose === 'walk' || run, kneel = pose === 'kneel' || pose === 'pray', sit = pose === 'sit', float = pose === 'float';
-  const ph = p.ph ?? t * (run ? 1.6 : 0.9), stance = run ? 0.38 : 0.6, stride = run ? 360 : 210, lift = run ? 120 : 46;
+  const ph = p.ph ?? t * (run ? 1.6 : 0.9), stance = run ? 0.38 : 0.6, stride = p.stride ?? (run ? 360 : 210), lift = run ? 120 : 46;
   const breath = Math.sin(t * 2.1 + who.length), wind = p.wind ?? 0.3;
   // quadril: sobe e desce com a passada; inclina na corrida
   const bob = walk ? (run ? 26 : 12) * (0.5 - 0.5 * Math.cos(ph * 4 * Math.PI)) : 0;
