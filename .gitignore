@@ -31,3 +31,9 @@ FELINOS_WORK/remotion/out/
 FELINOS_PILOTO_V2/frames/
 FELINOS_PILOTO_V2/out/
 VOZES/modelos/
+# Felinos piloto v3: quadros, testes e dependências; material de terceiros usado só como referência
+FELINOS_PILOTO_V3/frames/
+FELINOS_PILOTO_V3/out/
+FELINOS_PILOTO_V3/node_modules/
+FELINOS_PILOTO_V3/assets/ref_brilhante/
+ENTRADA_FELINOS/

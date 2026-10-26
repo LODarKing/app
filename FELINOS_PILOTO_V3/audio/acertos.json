@@ -1,0 +1,224 @@
+[
+ {
+  "evento": "batimento",
+  "timeline": 0.0,
+  "grade": 0.037,
+  "desvio_ms": 37.0
+ },
+ {
+  "evento": "batimento",
+  "timeline": 0.5,
+  "grade": 0.536,
+  "desvio_ms": 36.0
+ },
+ {
+  "evento": "batimento",
+  "timeline": 1.0,
+  "grade": 1.036,
+  "desvio_ms": 36.0
+ },
+ {
+  "evento": "batimento",
+  "timeline": 1.5,
+  "grade": 1.536,
+  "desvio_ms": 36.0
+ },
+ {
+  "evento": "miado",
+  "timeline": 0.75,
+  "grade": 0.786,
+  "desvio_ms": 36.0
+ },
+ {
+  "evento": "câmera entra no olho",
+  "timeline": 1.75,
+  "grade": 1.786,
+  "desvio_ms": 36.0
+ },
+ {
+  "evento": "corte para a mesa",
+  "timeline": 2.5,
+  "grade": 2.535,
+  "desvio_ms": 35.0
+ },
+ {
+  "evento": "inclina a cabeça",
+  "timeline": 3.5,
+  "grade": 3.534,
+  "desvio_ms": 34.0
+ },
+ {
+  "evento": "efeito divertido",
+  "timeline": 4.5,
+  "grade": 4.534,
+  "desvio_ms": 34.0
+ },
+ {
+  "evento": "miadinho (prepara o salto)",
+  "timeline": 5.0,
+  "grade": 5.033,
+  "desvio_ms": 33.0
+ },
+ {
+  "evento": "vento no salto",
+  "timeline": 5.5,
+  "grade": 5.533,
+  "desvio_ms": 33.0
+ },
+ {
+  "evento": "entra na floresta",
+  "timeline": 6.0,
+  "grade": 6.032,
+  "desvio_ms": 32.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 6.25,
+  "grade": 6.282,
+  "desvio_ms": 32.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 6.5,
+  "grade": 6.532,
+  "desvio_ms": 32.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 6.75,
+  "grade": 6.782,
+  "desvio_ms": 32.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 7.0,
+  "grade": 7.032,
+  "desvio_ms": 32.0
+ },
+ {
+  "evento": "chicote de câmera",
+  "timeline": 7.0,
+  "grade": 7.032,
+  "desvio_ms": 32.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 7.25,
+  "grade": 7.281,
+  "desvio_ms": 31.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 7.5,
+  "grade": 7.531,
+  "desvio_ms": 31.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 7.75,
+  "grade": 7.781,
+  "desvio_ms": 31.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 8.0,
+  "grade": 8.031,
+  "desvio_ms": 31.0
+ },
+ {
+  "evento": "corte para a savana",
+  "timeline": 8.0,
+  "grade": 8.031,
+  "desvio_ms": 31.0
+ },
+ {
+  "evento": "rugido",
+  "timeline": 8.5,
+  "grade": 8.531,
+  "desvio_ms": 31.0
+ },
+ {
+  "evento": "impacto do título",
+  "timeline": 9.0,
+  "grade": 9.03,
+  "desvio_ms": 30.0
+ },
+ {
+  "evento": "pegada",
+  "timeline": 9.0,
+  "grade": 9.03,
+  "desvio_ms": 30.0
+ },
+ {
+  "evento": "pegada",
+  "timeline": 9.25,
+  "grade": 9.28,
+  "desvio_ms": 30.0
+ },
+ {
+  "evento": "pegada",
+  "timeline": 9.5,
+  "grade": 9.53,
+  "desvio_ms": 30.0
+ },
+ {
+  "evento": "pegada",
+  "timeline": 9.75,
+  "grade": 9.78,
+  "desvio_ms": 30.0
+ },
+ {
+  "evento": "pena escrevendo",
+  "timeline": 9.75,
+  "grade": 9.78,
+  "desvio_ms": 30.0
+ },
+ {
+  "evento": "datilografia",
+  "timeline": 10.5,
+  "grade": 10.529,
+  "desvio_ms": 29.0
+ },
+ {
+  "evento": "datilografia",
+  "timeline": 10.625,
+  "grade": 10.529,
+  "desvio_ms": -96.0
+ },
+ {
+  "evento": "datilografia",
+  "timeline": 10.75,
+  "grade": 10.779,
+  "desvio_ms": 29.0
+ },
+ {
+  "evento": "datilografia",
+  "timeline": 10.875,
+  "grade": 10.779,
+  "desvio_ms": -96.0
+ },
+ {
+  "evento": "datilografia",
+  "timeline": 11.0,
+  "grade": 11.029,
+  "desvio_ms": 29.0
+ },
+ {
+  "evento": "datilografia",
+  "timeline": 11.125,
+  "grade": 11.029,
+  "desvio_ms": -96.0
+ },
+ {
+  "evento": "carimbo da insígnia",
+  "timeline": 10.75,
+  "grade": 10.779,
+  "desvio_ms": 29.0
+ },
+ {
+  "evento": "câmera atravessa a pegada",
+  "timeline": 11.5,
+  "grade": 11.528,
+  "desvio_ms": 28.0
+ }
+]

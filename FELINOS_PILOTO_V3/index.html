@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Caveat'; font-weight: 700; src: url('fonts/Caveat-Bold.ttf'); }
+@font-face { font-family: 'InterUI'; font-weight: 400; src: url('fonts/Inter-Regular.otf'); }
+@font-face { font-family: 'InterUI'; font-weight: 600; src: url('fonts/Inter-SemiBold.otf'); }
+@font-face { font-family: 'InterUI'; font-weight: 700; src: url('fonts/Inter-Bold.otf'); }
+@font-face { font-family: 'InterUI'; font-weight: 800; src: url('fonts/Inter-ExtraBold.otf'); }
+@font-face { font-family: 'InterUI'; font-weight: 900; src: url('fonts/Inter-Black.otf'); }
+html, body { margin: 0; background: #000; }
+canvas { display: block; }
+</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<img id="insignia" src="assets/insignia_en024.png" style="display:none">
+<img id="emblema" src="assets/emblema_desbravadores_recortado.png" style="display:none">
+<script src="timeline.js"></script>
+<script src="js/core.js"></script>
+<script src="js/post.js"></script>
+<script src="js/pingo.js"></script>
+<script src="js/bigcats.js"></script>
+<script src="js/sets.js"></script>
+<script src="js/film.js"></script>
+<script src="js/lab.js"></script>
+<script>
+  // Contrato de render: window.seek(t) desenha o quadro do instante t (função pura do tempo).
+  window.ready = (async () => {
+    for (const f of ['700 40px Caveat', '400 40px InterUI', '600 40px InterUI', '700 40px InterUI', '800 40px InterUI', '900 40px InterUI']) await document.fonts.load(f);
+    await document.getElementById('insignia').decode(); await document.getElementById('emblema').decode();
+    return true;
+  })();
+  const ctx = document.getElementById('c').getContext('2d');
+  window.seek = (t) => { renderFrame(ctx, t); };
+  window.lab = (v, t) => { renderLab(ctx, v, t || 0); };
+  window.png = () => document.getElementById('c').toDataURL('image/png');
+</script>
+</body></html>
