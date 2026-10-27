@@ -108,6 +108,10 @@ export const Icon: React.FC<{ name: string; color?: string; size?: number }> = (
     case 'ramp': return g(<><path d="M8 84 L92 84 L92 40 Z" {...sw} /><circle cx={34} cy={64} r={6} fill={color} /></>);
     case 'phone': return g(<><rect x={26} y={6} width={48} height={88} rx={10} {...sw} /><path d="M44 80 L56 80" {...sw} /></>);
     case 'sunflower': return g(<>{Array.from({ length: 10 }, (_, i) => { const a = (i / 10) * Math.PI * 2; return <ellipse key={i} cx={f(50 + Math.cos(a) * 26)} cy={f(50 + Math.sin(a) * 26)} rx={14} ry={8} fill="#FFC21A" transform={`rotate(${f((a * 180) / Math.PI)} ${f(50 + Math.cos(a) * 26)} ${f(50 + Math.sin(a) * 26)})`} />; })}<circle cx={50} cy={50} r={18} fill="#6B3E1E" /></>);
+    case 'clock': return g(<><circle cx={50} cy={52} r={38} {...sw} /><path d="M50 30 L50 52 L66 62 M40 8 L60 8 M50 8 L50 14" {...sw} /></>);
+    case 'coins': return g(<><ellipse cx={42} cy={70} rx={30} ry={11} {...sw} /><path d="M12 70 L12 56 M72 70 L72 56" {...sw} /><ellipse cx={42} cy={56} rx={30} ry={11} {...sw} /><circle cx={70} cy={32} r={20} {...sw} /><path d="M70 24 L70 40" {...sw} /></>);
+    case 'dumbbell': return g(<><path d="M28 50 L72 50" {...sw} /><rect x={14} y={30} width={14} height={40} rx={5} {...sw} /><rect x={72} y={30} width={14} height={40} rx={5} {...sw} /><path d="M6 42 L6 58 M94 42 L94 58" {...sw} /></>);
+    case 'bible': return g(<><rect x={20} y={8} width={60} height={84} rx={8} {...sw} /><path d="M50 26 L50 64 M38 38 L62 38" {...sw} /></>);
     case 'multi': return g(<>
       <g transform="translate(2 2) scale(0.5)"><circle cx={46} cy={14} r={9} fill={color} /><path d="M44 28 L44 56 L70 56 L80 80 M44 40 L64 40 M32 44 A26 26 0 1 0 70 74" {...sw} strokeWidth={12} /></g>
       <g transform="translate(50 2) scale(0.5)"><circle cx={46} cy={12} r={9} fill={color} /><path d="M44 26 L40 56 L28 90 M40 56 L54 90 M44 32 L60 50 L84 92" {...sw} strokeWidth={12} /></g>
