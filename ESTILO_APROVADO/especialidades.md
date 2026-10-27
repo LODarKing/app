@@ -170,9 +170,9 @@ Animais usam cores naturais por espécie. Por exemplo, as listras do tigre são 
 ## 13. Como começar uma nova especialidade
 
 ```sh
-rsync -a --exclude segmentos --exclude out --exclude node_modules --exclude '*.mp4' \
-      --exclude assets/fotos --exclude audio/vozes --exclude audio/mix.wav \
-      FELINOS_EPISODIO/ <NOME>_EPISODIO/
+mkdir <NOME>_EPISODIO && tar -C FELINOS_EPISODIO \
+      --exclude=segmentos --exclude=out --exclude=node_modules --exclude='*.mp4' \
+      --exclude=assets/fotos --exclude=audio/vozes --exclude=audio/mix.wav -cf - . | tar -C <NOME>_EPISODIO -xf -
 cd <NOME>_EPISODIO && npm install            # playwright (o Chromium já existe no ambiente)
 ```
 
