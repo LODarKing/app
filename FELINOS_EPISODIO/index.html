@@ -61,6 +61,7 @@ canvas { display: block; }
 <script src="js/cenas/historias.js"></script>
 <script src="js/cenas/s17_18.js"></script>
 <script src="js/lab.js"></script>
+<script src="js/capa.js"></script>
 <script>
   // Contrato de render: window.seek(t) desenha o quadro do instante t (função pura do tempo).
   window.ready = (async () => {
@@ -72,6 +73,7 @@ canvas { display: block; }
   const ctx = document.getElementById('c').getContext('2d');
   window.seek = (t) => { renderFrame(ctx, t); };
   window.lab = (v, t) => { renderLab(ctx, v, t || 0); };
+  window.capa = (o) => { renderCapa(ctx, o || {}); };
   window.png = () => document.getElementById('c').toDataURL('image/png');
 </script>
 </body></html>
