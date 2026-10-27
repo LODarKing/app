@@ -1,0 +1,42 @@
+{
+ "DUR": 10.0,
+ "HEART": [
+  0.12,
+  0.42,
+  0.98,
+  1.3
+ ],
+ "EYES_OPEN": 0.18,
+ "MEOW": 0.6,
+ "LIGHT": 0.82,
+ "PUSH0": 1.0,
+ "CUT1": 1.8,
+ "REVEAL_END": 2.45,
+ "TILT": 2.55,
+ "SLOWBLINK": 3.05,
+ "BOING": 3.42,
+ "HEARTS": 3.32,
+ "CROUCH": 3.92,
+ "LEAP": 4.42,
+ "COVER": 4.86,
+ "JAG_CHIP": 5.12,
+ "WHIP": 5.98,
+ "TIG_CHIP": 6.18,
+ "CUT4": 7.0,
+ "LION_CHIP": 7.1,
+ "LION_RAISE": 7.2,
+ "ROAR": 7.5,
+ "ROAR_END": 8.02,
+ "CUT5": 8.12,
+ "PAWS": [
+  8.2,
+  8.33,
+  8.46,
+  8.59
+ ],
+ "LETTERS": 8.8,
+ "SUB": 9.05,
+ "EN": 9.2,
+ "SERIES": 9.3,
+ "DIVE": 9.7
+}

@@ -1,0 +1,212 @@
+[
+ {
+  "evento": "pata toca a capa",
+  "timeline": 0.5,
+  "grade": 0.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "pegada acende (brilho discreto)",
+  "timeline": 0.52,
+  "grade": 0.516,
+  "desvio_ms": -4.0
+ },
+ {
+  "evento": "capa abre",
+  "timeline": 1.0,
+  "grade": 1.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "páginas correm",
+  "timeline": 1.25,
+  "grade": 1.266,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "ilustração sai do livro",
+  "timeline": 2.0,
+  "grade": 2.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "ilustração sai do livro",
+  "timeline": 2.5,
+  "grade": 2.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "ilustração sai do livro",
+  "timeline": 3.0,
+  "grade": 3.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "miado do Pingo",
+  "timeline": 7.5,
+  "grade": 7.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "miadinho (prepara o salto)",
+  "timeline": 8.0,
+  "grade": 8.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "salto",
+  "timeline": 8.0,
+  "grade": 8.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "mergulho na página (PLOFT)",
+  "timeline": 8.25,
+  "grade": 8.266,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "câmera entra na ilustração",
+  "timeline": 8.5,
+  "grade": 8.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "chegada na floresta",
+  "timeline": 9.0,
+  "grade": 9.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 9.25,
+  "grade": 9.266,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 9.5,
+  "grade": 9.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 9.75,
+  "grade": 9.766,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 10.0,
+  "grade": 10.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 10.25,
+  "grade": 10.266,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 10.5,
+  "grade": 10.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 10.75,
+  "grade": 10.766,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo da onça",
+  "timeline": 11.0,
+  "grade": 11.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "chicote de câmera",
+  "timeline": 11.5,
+  "grade": 11.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 11.75,
+  "grade": 11.766,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 12.0,
+  "grade": 12.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 12.25,
+  "grade": 12.266,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 12.5,
+  "grade": 12.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 12.75,
+  "grade": 12.766,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "passo do tigre",
+  "timeline": 13.0,
+  "grade": 13.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "corte para a savana",
+  "timeline": 13.5,
+  "grade": 13.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "rosnado baixo do leão",
+  "timeline": 15.0,
+  "grade": 15.016,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "felino chega",
+  "timeline": 16.25,
+  "grade": 16.266,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "felino chega",
+  "timeline": 16.75,
+  "grade": 16.766,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "felino chega",
+  "timeline": 17.25,
+  "grade": 17.266,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "Pingo pousa (TUM)",
+  "timeline": 18.5,
+  "grade": 18.516,
+  "desvio_ms": 16.0
+ },
+ {
+  "evento": "pena escrevendo",
+  "timeline": 20.0,
+  "grade": 20.016,
+  "desvio_ms": 16.0
+ }
+]

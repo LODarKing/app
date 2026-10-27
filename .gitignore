@@ -25,3 +25,31 @@ EDUCACAO_INCLUSIVA_WORK/renders/character_tests/*.png
 EDUCACAO_INCLUSIVA_WORK/hyperframes/test/
 EDUCACAO_INCLUSIVA_WORK/renders/final/*.log
 EDUCACAO_INCLUSIVA_WORK/renders/final/patch_*/
+# Felinos: quadros de conferência e renders intermediários
+FELINOS_WORK/remotion/out/
+# Felinos piloto v2: quadros e testes
+FELINOS_PILOTO_V2/frames/
+FELINOS_PILOTO_V2/out/
+VOZES/modelos/
+# Felinos piloto v3: quadros, testes e dependências; material de terceiros usado só como referência
+FELINOS_PILOTO_V3/frames/
+FELINOS_PILOTO_V3/out/
+FELINOS_PILOTO_V3/node_modules/
+FELINOS_PILOTO_V3/assets/ref_brilhante/
+ENTRADA_FELINOS/
+# Felinos piloto v4 e áudio: quadros, testes, dependências; gravações originais ficam com o usuário (entram só as falas restauradas)
+FELINOS_PILOTO_V4/frames/
+FELINOS_PILOTO_V4/out/
+FELINOS_PILOTO_V4/node_modules/
+FELINOS_PILOTO_V4/assets/ref_brilhante/
+FELINOS_AUDIO/originais_wav/
+ENTRADA_NARRACOES/
+FELINOS_EPISODIO/frames/
+FELINOS_EPISODIO/out/
+FELINOS_EPISODIO/node_modules/
+FELINOS_EPISODIO/segmentos/
+# Felinos episódio: mixagem e vídeo final são regeneráveis e grandes demais para o git
+FELINOS_EPISODIO/audio/mix.wav
+FELINOS_EPISODIO/*.mp4
+# fotos reais (Wikimedia Commons): material de terceiros, baixado por fotos/baixar.py
+FELINOS_EPISODIO/assets/fotos/
