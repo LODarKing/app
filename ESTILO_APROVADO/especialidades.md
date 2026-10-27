@@ -167,6 +167,13 @@ Animais usam cores naturais por espécie. Por exemplo, as listras do tigre são 
 - **Prazo de publicação:** perguntar o horário com antecedência. Reaproveitar segmentos que não mudaram. Se o tempo não der, oferecer opções ao usuário (ex.: trechos a 15 quadros/s) e, depois, uma versão final uniforme a 30 quadros/s.
 - Vídeos, mixagem e fotos ficam **fora do git** (limite de 100 MB do GitHub). O código regenera tudo.
 
+## 12b. Capa do Instagram
+
+- **Uma arte só, em 9:16** (1080×1920), gerada pelo motor do episódio: `node render.mjs --capa saida.png`, código em `js/capa.js`.
+- **Tudo o que importa centralizado na faixa 4:5 do meio** (1080×1350, de y 285 a 1635): cabeçalho com emblema, série, especialidade e insígnia oficial, título, subtítulo, cena principal, chamada e rodapé com o Distrito. Fora dessa faixa, só fundo (céu e chão).
+- O comando também gera `saida_guia4x5.png`, com a faixa marcada, para conferir. Esse arquivo não é entrega.
+- **Conceito:** o gancho do episódio virado imagem. Em Felinos, o Pingo sentado no Diário da Criação, com a sombra de um leão rugindo ao pôr do sol. Os personagens, as cores, as letras e o filtro são os do vídeo.
+
 ## 13. Como começar uma nova especialidade
 
 ```sh

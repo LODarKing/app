@@ -78,9 +78,10 @@ if (args[0] === '--frame') {
     console.log(`segmento ${sc.id}.mp4: ${n} quadros em ${((Date.now() - t0) / 1000).toFixed(0)} s`);
   }
 } else if (args[0] === '--capa') {
-  // --capa saida.png: capa do Instagram (1080×1920) + recorte 4:5 do perfil (saida_4x5.png)
+  // --capa saida.png: capa do Instagram 9:16 (1080×1920), com o essencial na faixa central 4:5; gera também saida_guia4x5.png para conferência
   const p = await page(); await p.evaluate(() => window.capa()); save(args[1], await p.evaluate(() => window.png()));
-  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-vf', 'crop=1080:1350:0:285', args[1].replace(/\.png$/, '_4x5.png')]);
+  // conferência: a mesma arte com a faixa 4:5 marcada (não é entrega)
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-vf', 'drawbox=x=0:y=285:w=1080:h=1350:color=0x00E5FF@0.9:t=6', args[1].replace(/\.png$/, '_guia4x5.png')]);
 } else if (args[0] === '--part') {
   // --part sNN a b fps: refaz só o trecho [a, b) (tempo local da cena) a `fps` quadros/s (saída sempre a 30, quadros repetidos)
   // e emenda no segmento existente: [0, a) antigo + trecho novo + [b, fim) antigo
