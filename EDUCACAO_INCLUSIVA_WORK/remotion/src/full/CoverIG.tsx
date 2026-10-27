@@ -67,29 +67,29 @@ export const CoverIG: React.FC = () => {
           {bands.map(([x, y, w, hh, c, o], i) => <ellipse key={i} cx={x + w / 2} cy={y} rx={w / 2} ry={hh} fill={c} opacity={o} filter="url(#soft)" />)}
         </g>
         {/* sol enorme atrás do herói */}
-        <circle cx={560} cy={1230} r={470} fill="url(#igsun)" />
-        <circle cx={560} cy={1230} r={260} fill="#FFF1D6" opacity={0.96} />
+        <circle cx={560} cy={1120} r={470} fill="url(#igsun)" />
+        <circle cx={560} cy={1120} r={250} fill="#FFF1D6" opacity={0.96} />
         {/* morros e a sede do clube ao longe */}
-        <path d="M0 1240 Q200 1170 420 1215 T820 1190 T1080 1210 L1080 1920 L0 1920 Z" fill="#8C4C78" opacity={0.75} />
-        <g fill="#6E3A6E" opacity={0.95}>
+        <path d="M0 1150 Q200 1080 420 1125 T820 1100 T1080 1120 L1080 1920 L0 1920 Z" fill="#8C4C78" opacity={0.75} />
+        <g fill="#6E3A6E" opacity={0.95} transform="translate(0 -95)">
           <path d="M40 1260 L40 1120 L20 1120 L130 1040 L240 1120 L220 1120 L220 1260 Z" />
           <rect x={150} y={1150} width={40} height={60} fill="#FFD9A8" opacity={0.7} />
           {[0, 1, 2].map((i) => <ellipse key={i} cx={290 + i * 70} cy={1210 - (i % 2) * 14} rx={46} ry={36} />)}
         </g>
         {/* a barreira: escada gigante em silhueta, atrás do herói */}
         {(() => {
-          const pts = Array.from({ length: 5 }, (_, i) => `L${690 + i * 78} ${1520 - (i + 1) * 136} L${690 + (i + 1) * 78} ${1520 - (i + 1) * 136}`).join(' ');
+          const pts = Array.from({ length: 5 }, (_, i) => `L${690 + i * 78} ${1420 - (i + 1) * 122} L${690 + (i + 1) * 78} ${1420 - (i + 1) * 122}`).join(' ');
           return <g>
-            <path d={`M690 1520 ${pts} L1080 840 L1080 1520 Z`} fill="url(#stairsil)" />
-            <path d={`M690 1520 ${pts} L1080 840`} fill="none" stroke="#FFC6A0" strokeWidth={7} opacity={0.75} />
-            <path d="M706 1380 L1070 920" stroke="#3A1E44" strokeWidth={16} strokeLinecap="round" /><path d="M760 1520 L760 1310 M900 1520 L900 1135" stroke="#3A1E44" strokeWidth={14} />
+            <path d={`M690 1420 ${pts} L1080 810 L1080 1420 Z`} fill="url(#stairsil)" />
+            <path d={`M690 1420 ${pts} L1080 810`} fill="none" stroke="#FFC6A0" strokeWidth={7} opacity={0.75} />
+            <path d="M706 1290 L1070 880" stroke="#3A1E44" strokeWidth={16} strokeLinecap="round" /><path d="M760 1420 L760 1225 M900 1420 L900 1065" stroke="#3A1E44" strokeWidth={14} />
           </g>;
         })()}
         {/* chão */}
-        <path d="M0 1490 Q300 1460 560 1500 T1080 1510 L1080 1920 L0 1920 Z" fill="url(#igground)" />
+        <path d="M0 1395 Q300 1365 560 1405 T1080 1412 L1080 1920 L0 1920 Z" fill="url(#igground)" />
         {/* herói: Theo diante da barreira */}
-        <ellipse cx={540} cy={1522} rx={210} ry={24} fill="#1E0D22" opacity={0.5} filter="url(#soft)" />
-        <Theo pose={theoRoll(t, () => 470, { scale: 0.38, y: 1520, ex: exT, head: -9 })} id="igt" />
+        <ellipse cx={540} cy={1422} rx={200} ry={22} fill="#1E0D22" opacity={0.5} filter="url(#soft)" />
+        <Theo pose={theoRoll(t, () => 470, { scale: 0.36, y: 1420, ex: exT, head: -9 })} id="igt" />
         {/* retícula e granulação por cima de tudo, como na referência */}
         <rect width={1080} height={1920} fill="url(#dots)" opacity={0.12} style={{ mixBlendMode: 'multiply' }} />
         <rect width={1080} height={1920} filter="url(#grain)" opacity={0.5} />
@@ -99,44 +99,44 @@ export const CoverIG: React.FC = () => {
         </g>
         {/* vinheta */}
         <rect width={1080} height={1920} fill="url(#vig)" />
-        <rect y={1530} width={1080} height={390} fill="#2A1430" opacity={0.5} />
+        <rect y={1440} width={1080} height={480} fill="#2A1430" opacity={0.5} />
       </svg>
 
       {/* cabeçalho: logo do clube + série + código; selo da especialidade */}
-      <Img src={staticFile('logo_desbravadores.png')} style={{ position: 'absolute', left: 64, top: 330, width: 128, height: 132 }} />
-      <div style={{ position: 'absolute', left: 212, top: 338, fontFamily: 'Poppins', fontWeight: 900, fontSize: 38, lineHeight: 1.08, color: CREAM, ...outline(9), letterSpacing: -0.5 }}>
+      <Img src={staticFile('logo_desbravadores.png')} style={{ position: 'absolute', left: 64, top: 300, width: 128, height: 132 }} />
+      <div style={{ position: 'absolute', left: 212, top: 308, fontFamily: 'Poppins', fontWeight: 900, fontSize: 38, lineHeight: 1.08, color: CREAM, ...outline(9), letterSpacing: -0.5 }}>
         SÉRIE ESPECIALIDADES<br />DOS DESBRAVADORES<br /><span style={{ color: GOLD }}>ESPECIALIDADE AM-055</span>
       </div>
-      <div style={{ position: 'absolute', left: 848, top: 326, width: 186, height: 186, borderRadius: 93, background: CREAM, border: `7px solid ${INK}`, boxShadow: `6px 9px 0 ${INK}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ position: 'absolute', left: 848, top: 296, width: 186, height: 186, borderRadius: 93, background: CREAM, border: `7px solid ${INK}`, boxShadow: `6px 9px 0 ${INK}`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <Img src={staticFile('emblema_recortado.png')} style={{ width: 150, height: 130, objectFit: 'contain' }} />
       </div>
-      <Star x={812} y={545} s={0.95} r={-12} />
-      <Star x={95} y={760} s={0.6} r={14} />
-      <Star x={985} y={1150} s={0.55} r={-20} />
+      <Star x={812} y={505} s={0.9} r={-12} />
+      <Star x={95} y={700} s={0.6} r={14} />
+      <Star x={985} y={1060} s={0.55} r={-20} />
 
       {/* título manuscrito */}
-      <div style={{ position: 'absolute', left: 0, right: 0, top: 520, textAlign: 'center', transform: 'rotate(-4deg)' }}>
-        <div style={{ fontFamily: 'Script', fontSize: 158, lineHeight: 1.12, color: CREAM, ...outline(22), textShadow: `10px 12px 0 ${INK}` }}>Educação</div>
-        <div style={{ fontFamily: 'Script', fontSize: 158, lineHeight: 1.0, color: CREAM, ...outline(22), textShadow: `10px 12px 0 ${INK}`, marginTop: -26, marginLeft: 120 }}>Inclusiva</div>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 462, textAlign: 'center', transform: 'rotate(-4deg)' }}>
+        <div style={{ fontFamily: 'Script', fontSize: 148, lineHeight: 1.12, color: CREAM, ...outline(22), textShadow: `10px 12px 0 ${INK}` }}>Educação</div>
+        <div style={{ fontFamily: 'Script', fontSize: 148, lineHeight: 1.0, color: CREAM, ...outline(22), textShadow: `10px 12px 0 ${INK}`, marginTop: -26, marginLeft: 120 }}>Inclusiva</div>
       </div>
       {/* pincelada sob o título */}
       <svg width={1080} height={1920} style={{ position: 'absolute', inset: 0 }}>
-        <path d="M150 940 C380 908 600 898 860 880" stroke={GOLD} strokeWidth={14} strokeLinecap="round" fill="none" />
-        <path d="M200 956 C420 930 600 924 780 912" stroke={GOLD} strokeWidth={6} strokeLinecap="round" fill="none" opacity={0.8} />
+        <path d="M150 862 C380 830 600 820 860 802" stroke={GOLD} strokeWidth={14} strokeLinecap="round" fill="none" />
+        <path d="M200 878 C420 852 600 846 780 834" stroke={GOLD} strokeWidth={6} strokeLinecap="round" fill="none" opacity={0.8} />
       </svg>
       {/* faixa amarela */}
-      <div style={{ position: 'absolute', left: 40, right: 40, top: 955, transform: 'rotate(-2.5deg)', display: 'flex', justifyContent: 'center' }}>
-        <div style={{ position: 'relative', fontFamily: 'Poppins', fontWeight: 900, fontSize: 70, letterSpacing: 0.5, color: INK, background: GOLD, padding: '8px 34px 2px', border: `7px solid ${INK}`, borderRadius: 16, boxShadow: `9px 11px 0 ${INK}`,
+      <div style={{ position: 'absolute', left: 40, right: 40, top: 875, transform: 'rotate(-2.5deg)', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ position: 'relative', fontFamily: 'Poppins', fontWeight: 900, fontSize: 66, letterSpacing: 0.5, color: INK, background: GOLD, padding: '8px 34px 2px', border: `7px solid ${INK}`, borderRadius: 16, boxShadow: `9px 11px 0 ${INK}`,
           backgroundImage: 'radial-gradient(rgba(53,33,63,.18) 2px, transparent 2.5px)', backgroundSize: '12px 12px' }}>NINGUÉM FICA DE FORA!</div>
       </div>
       {/* exclamação manuscrita */}
-      <div style={{ position: 'absolute', left: 36, top: 1070, transform: 'rotate(-11deg)', fontFamily: 'Hand', fontSize: 66, color: CREAM, ...outline(12), textShadow: `6px 7px 0 ${INK}` }}>E se fosse você?</div>
+      <div style={{ position: 'absolute', left: 36, top: 982, transform: 'rotate(-11deg)', fontFamily: 'Hand', fontSize: 62, color: CREAM, ...outline(12), textShadow: `6px 7px 0 ${INK}` }}>E se fosse você?</div>
 
       {/* chamada */}
-      <div style={{ position: 'absolute', left: 30, right: 30, top: 1580, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 800, fontSize: 47, lineHeight: 1.22, color: CREAM, textShadow: `0 4px 0 ${INK}, 0 0 18px rgba(30,13,34,.6)` }}>
+      <div style={{ position: 'absolute', left: 30, right: 30, top: 1450, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 800, fontSize: 44, lineHeight: 1.22, color: CREAM, textShadow: `0 4px 0 ${INK}, 0 0 18px rgba(30,13,34,.6)` }}>
         Parece só uma escada…<br /><span style={{ color: GOLD }}>mas pode deixar alguém de fora!</span>
       </div>
-      <div style={{ position: 'absolute', left: 0, right: 0, top: 1780, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 800, fontSize: 33, letterSpacing: 1, color: CREAM, textShadow: `0 3px 0 ${INK}` }}>DISTRITO DE DESBRAVADORES DE AMONTADA</div>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 1580, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 800, fontSize: 31, letterSpacing: 1, color: CREAM, textShadow: `0 3px 0 ${INK}` }}>DISTRITO DE DESBRAVADORES DE AMONTADA</div>
     </AbsoluteFill>
   );
 };
