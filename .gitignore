@@ -53,3 +53,9 @@ FELINOS_EPISODIO/audio/mix.wav
 FELINOS_EPISODIO/*.mp4
 # fotos reais (Wikimedia Commons): material de terceiros, baixado por fotos/baixar.py
 FELINOS_EPISODIO/assets/fotos/
+# Nós e Amarras: renders, quadros de conferência e mixagens regeneráveis
+NOS_AMARRAS_EPISODIO/out/
+NOS_AMARRAS_EPISODIO/*.mp4
+NOS_AMARRAS_EPISODIO/audio/*.wav
+NOS_AMARRAS_EPISODIO/narracao/
+NOS_AMARRAS_EPISODIO/node_modules/

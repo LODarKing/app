@@ -1,0 +1,74 @@
+[
+ {
+  "efeito": "deslize do nó",
+  "evento_s": 0.0,
+  "na_grade_s": 0.0,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "nó completo",
+  "evento_s": 2.4,
+  "na_grade_s": 2.4,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "deslize do título",
+  "evento_s": 2.55,
+  "na_grade_s": 2.55,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "título completo",
+  "evento_s": 4.35,
+  "na_grade_s": 4.35,
+  "desvio_ms": -0.0
+ },
+ {
+  "efeito": "mergulho",
+  "evento_s": 4.8,
+  "na_grade_s": 4.8,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "chegada no chicote",
+  "evento_s": 6.0,
+  "na_grade_s": 6.0,
+  "desvio_ms": -0.0
+ },
+ {
+  "efeito": "rótulo CORDA",
+  "evento_s": 6.0,
+  "na_grade_s": 6.0,
+  "desvio_ms": -0.0
+ },
+ {
+  "efeito": "cordões se abrem",
+  "evento_s": 6.05,
+  "na_grade_s": 6.0,
+  "desvio_ms": -50.0
+ },
+ {
+  "efeito": "rótulo 3 CORDÕES",
+  "evento_s": 6.6,
+  "na_grade_s": 6.6,
+  "desvio_ms": -0.0
+ },
+ {
+  "efeito": "fios se abrem",
+  "evento_s": 7.3,
+  "na_grade_s": 7.35,
+  "desvio_ms": 50.0
+ },
+ {
+  "efeito": "rótulo FIOS",
+  "evento_s": 7.8,
+  "na_grade_s": 7.8,
+  "desvio_ms": -0.0
+ },
+ {
+  "efeito": "rótulo FIBRAS",
+  "evento_s": 8.4,
+  "na_grade_s": 8.4,
+  "desvio_ms": -0.0
+ }
+]
