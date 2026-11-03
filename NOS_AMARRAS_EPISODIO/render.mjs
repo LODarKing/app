@@ -71,6 +71,12 @@ if (args[0] === '--frame') {
   fs.writeFileSync('out/_lista.txt', parts.map((f) => `file '${path.resolve(f)}'`).join('\n'));
   execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', 'out/_lista.txt', '-c', 'copy', out]); parts.forEach((f) => fs.rmSync(f));
   console.log(`${out}: ${n} quadros em ${((Date.now() - t0) / 1000).toFixed(0)} s`);
+} else if (args[0] === '--capa') {
+  // --capa saida.png: capa 9:16 (1080×1920) com o essencial na faixa 4:5 (y 285–1635); gera também saida_guia4x5.png e o recorte 4:5
+  const p = await page(); await p.evaluate(() => window.capa()); fs.writeFileSync(args[1], buf(await p.evaluate(() => window.png())));
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-vf', 'drawbox=x=0:y=285:w=1080:h=1350:color=0x00E5FF@0.9:t=6', args[1].replace(/\.png$/, '_guia4x5.png')]);
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-vf', 'crop=1080:1350:0:285', args[1].replace(/\.png$/, '_recorte4x5.png')]);
+  console.log('capa:', args[1]);
 } else if (args[0] === '--mux') {
   execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-i', args[2], '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '256k', '-shortest', '-movflags', '+faststart', args[3]]);
   console.log('vídeo:', args[3]);

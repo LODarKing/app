@@ -40,7 +40,9 @@ function fundo() {
 }
 
 // ---------------------------------------------------------------- câmera (mundo 1080×1920; zoom em torno de um ponto)
-function camera(z, fx, fy, sx = W / 2, sy = H / 2) { ctx.setTransform(z, 0, 0, z, sx - fx * z, sy - fy * z); }
+// BASE: transformação extra (usada só pela capa, para reaproveitar uma cena em escala menor)
+let BASE = null;
+function camera(z, fx, fy, sx = W / 2, sy = H / 2) { ctx.setTransform(z, 0, 0, z, sx - fx * z, sy - fy * z); if (BASE) { const m = ctx.getTransform(); ctx.setTransform(BASE.multiply(m)); } }
 
 // ---------------------------------------------------------------- texto
 function font(px, fam = 'ui', peso = 800) { return `${peso} ${px}px ${fam === 'titulo' ? CFG.fonte.titulo : CFG.fonte.ui}`; }

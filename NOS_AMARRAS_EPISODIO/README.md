@@ -21,6 +21,7 @@ python3 audio/tratar_narracao.py 1.15 narracao/tratadas  # tratamento leve + and
 node audio/montar_timeline.mjs                           # timeline.js (cenas pelas palavras) + legendas + NOS_E_AMARRAS.srt
 python3 audio/som_episodio.py                            # trilha + foley + narração, -14 LUFS -> audio/mix.wav
 node render.mjs --sheet out/folha_s03.png s3             # folha de contato de uma cena
+node render.mjs --capa capa/CAPA_NOS_E_AMARRAS.png       # capa 9:16 (+ recorte 4:5 e guia da faixa em _guia4x5.png)
 node render.mjs --video out/episodio_video.mp4           # imagem com legendas  (--sem-legenda para a versão limpa)
 node render.mjs --mux out/episodio_video.mp4 audio/mix.wav NOS_E_AMARRAS_FINAL.mp4
 ```
