@@ -1,0 +1,14 @@
+[
+ {
+  "efeito": "trilha abafa no mergulho e abre na chegada (filtro na própria música) + grave na chegada",
+  "evento_s": 4.8,
+  "na_grade_s": 4.8060926863326925,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "grave na chegada ao chicote",
+  "evento_s": 6.0,
+  "na_grade_s": 6.009,
+  "desvio_ms": 8.6
+ }
+]

@@ -16,12 +16,12 @@ Animação vetorial em canvas 2D, desenhada do zero em código. Render determin�
 
 ## Comandos (a partir desta pasta)
 ```sh
-python3 audio/som_piloto.py violao                       # trilha + efeitos (violao | piano | moderno), batidas medidas, -14 LUFS
+python3 audio/som_piloto.py moderno musical              # trilha (violao|piano|moderno) + efeitos (nenhum|foley|musical|toques), -14 LUFS
 node render.mjs --sheet out/folha_piloto.png             # um quadro por batida (ciclo de notas)
 node render.mjs --lab out/lab_oito.png oito              # conferência de um nó: cruzamentos numerados e sequência C/B
 node render.mjs --stills out/tira.png 1.0 1.033 1.066    # quadros seguidos
 node render.mjs --video out/piloto_video.mp4 0 10        # imagem (H.264 yuv420p CRF 16)
-node render.mjs --mux out/piloto_video.mp4 audio/trilha_piloto_violao.wav NOS_E_AMARRAS_PILOTO.mp4
+node render.mjs --mux out/piloto_video.mp4 audio/trilha_piloto_moderno_musical.wav NOS_E_AMARRAS_PILOTO.mp4
 ```
 Dependências: Node 22 com Playwright e o Chromium do ambiente, FFmpeg, e Python 3 com numpy, scipy, soundfile e pyloudnorm.
 

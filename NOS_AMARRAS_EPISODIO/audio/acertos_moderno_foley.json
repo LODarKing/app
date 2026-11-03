@@ -1,0 +1,38 @@
+[
+ {
+  "efeito": "atrito: a ponta desenha o nó",
+  "evento_s": 0.0,
+  "na_grade_s": -0.004,
+  "desvio_ms": -4.0
+ },
+ {
+  "efeito": "aperto do nó",
+  "evento_s": 2.4,
+  "na_grade_s": 2.401,
+  "desvio_ms": 1.1
+ },
+ {
+  "efeito": "atrito: a ponta corre sob o título",
+  "evento_s": 2.4,
+  "na_grade_s": 2.401,
+  "desvio_ms": 1.1
+ },
+ {
+  "efeito": "corda assenta",
+  "evento_s": 4.2,
+  "na_grade_s": 4.205,
+  "desvio_ms": 4.8
+ },
+ {
+  "efeito": "cordões se destorcem",
+  "evento_s": 6.0,
+  "na_grade_s": 6.009,
+  "desvio_ms": 8.6
+ },
+ {
+  "efeito": "fios se abrem",
+  "evento_s": 7.2,
+  "na_grade_s": 7.211,
+  "desvio_ms": 11.1
+ }
+]

@@ -5,13 +5,20 @@
 Etapas: 1) trilha a 100 bpm (Sol maior; Sol–Mi m–Dó–Ré, um acorde por compasso);
 2) batidas MEDIDAS na trilha pronta -> audio/beats.json; 3) efeitos nos eventos (config.js) na semicolcheia medida
 -> audio/acertos.json; 4) reverberação, mixagem em -14 LUFS e limitador (pico -2 dBFS).
-Uso (a partir de NOS_AMARRAS_EPISODIO/):  python3 audio/som_piloto.py [violao|piano|moderno]"""
+Efeitos (2º argumento):
+  nenhum   só a trilha (os acentos ficam por conta da própria música)
+  foley    sons reais de corda: atrito em grãos que segue a velocidade da ponta, aperto do nó, fibras se soltando
+  musical  sem efeitos avulsos: a trilha "abafa" enquanto a câmera mergulha na corda e abre na chegada, com um grave
+  toques   versão anterior (toques de instrumento nos rótulos)
+Uso (a partir de NOS_AMARRAS_EPISODIO/):  python3 audio/som_piloto.py [violao|piano|moderno] [nenhum|foley|musical|toques]"""
 import json, re, sys, numpy as np, soundfile as sf, pyloudnorm as pyln
 from scipy.ndimage import minimum_filter1d
+from scipy.signal import butter
 sys.path.insert(0, 'audio')
 from timbres import SR, tv, hz, filt, env, violao_r, piano, rhodes, baixo, sub, pad, bumbo, estalo, escova, chimbal, ruido, reverb
 
-ESTILO = sys.argv[1] if len(sys.argv) > 1 else 'violao'
+ESTILO = sys.argv[1] if len(sys.argv) > 1 else 'moderno'
+EFEITOS = sys.argv[2] if len(sys.argv) > 2 else 'musical'
 cfg = open('config.js').read()
 BPM = float(re.search(r'bpm:\s*([\d.]+)', cfg).group(1)); BEAT = 60 / BPM; E8 = BEAT / 2; BAR = 4 * BEAT
 T = {k: float(v) for k, v in re.findall(r'(\w+):\s*([\d.]+)', re.search(r't:\s*\{([^}]*)\}', cfg).group(1))}
@@ -98,7 +105,7 @@ for k in cand:
     if not on or t - on[-1] > E8 * 0.5: on.append(t)
 on = np.array(on)
 # ajuste robusto: grade de colcheias (período e fase) por mínimos quadrados, descartando onsets fora da grade
-usa = np.ones(len(on), bool)
+usa = np.abs(on - np.round(on / E8) * E8) < 0.04          # inliers iniciais: perto da grade nominal
 for _ in range(3):
     idx = np.round(on / E8); A = np.vstack([idx[usa], np.ones(usa.sum())]).T
     per, fase = np.linalg.lstsq(A, on[usa], rcond=None)[0]; r = np.abs(on - (idx * per + fase)); usa = r < 0.04
@@ -115,6 +122,8 @@ def toque(m, g):
     if ESTILO == 'violao': return violao_r(hz(m), 1.4, 0.6) * g * 1.2
     if ESTILO == 'piano': return piano(hz(m), 1.6, 0.5) * g * 1.3
     return rhodes(hz(m), 1.4, 0.6) * g * 1.4
+def mx2(a, b):
+    o = np.zeros(max(len(a), len(b))); o[:len(a)] += a; o[:len(b)] += b; return o
 def fibras(d):            # fibras se soltando: estalinhos finos
     out = np.zeros(int(d * SR)); R = np.random.default_rng(9)
     for _ in range(34):
@@ -126,20 +135,64 @@ def mergulho(d):          # ar passando: banda que sobe, sem "whoosh" de desenho
 ac = []
 def poe(nome, t, sig, pan=0.0):
     tg = grade(t); sfx.put(sig, tg, pan); ac.append({'efeito': nome, 'evento_s': round(t, 3), 'na_grade_s': round(tg, 3), 'desvio_ms': round((tg - t) * 1000, 1)})
-poe('deslize do nó', 0.0, deslize(T['noFim'] + 0.2, 0.12), -0.2)
-poe('deslize do título', T['noFim'] + 0.15, deslize(T['tituloFim'] - T['noFim'], 0.1), 0.3)
-poe('título completo', T['tituloFim'] + 0.15, toque(79, 0.35), -0.1)
-poe('mergulho', T['zoom0'], mergulho(T['zoom1'] - T['zoom0']), 0)
-poe('cordões se abrem', T['zoom1'] + 0.05, fibras(1.1), 0.2)
-poe('rótulo 3 CORDÕES', T['zoom1'] + 0.6, toque(74, 0.28), 0.25)
-poe('fios se abrem', T['abre1'] + 0.1, fibras(1.0) * 0.8, -0.2)
-poe('rótulo FIOS', T['abre1'] + 0.6, toque(76, 0.26), -0.25)
-poe('rótulo FIBRAS', T['fios1'], toque(78, 0.26), 0.3)
+def atrito(t0, t1, vel, g, semente):
+    """atrito de corda: grãos curtos de ruído (stick-slip); a densidade e o volume seguem a velocidade da ponta"""
+    R = np.random.default_rng(semente); d = t1 - t0; out = np.zeros(int(d * SR) + SR // 10); t = 0.0
+    while t < d:
+        v = vel((t0 + t - t0) / d)                                   # 0..1
+        if v > 0.03:
+            gr = ruido(R.uniform(0.004, 0.012), R.uniform(250, 600), R.uniform(1400, 2600)); n = len(gr); gr = gr * np.hanning(n) * R.uniform(0.4, 1.0) * v
+            j = int(t * SR); out[j:j + n] += gr[: len(out) - j]
+        t += 1 / (25 + 140 * v)
+    return out * g
+def rangido(d, g, semente):   # aperto: grãos graves e ressonantes, como fibra sendo comprimida
+    R = np.random.default_rng(semente); out = np.zeros(int(d * SR) + 2400)
+    for k in range(int(d * 90)):
+        j = int(R.uniform(0, d) * SR); n = int(0.006 * SR); f0 = R.uniform(140, 380)
+        gr = np.sin(2 * np.pi * f0 * tv(n / SR)) * np.hanning(n) * R.uniform(0.3, 1.0); out[j:j + n] += gr
+    return filt(out, 'lowpass', 1400) * env(len(out), 0.04, 0.15) * g
+def baque(g):                 # pano/corda assentando: grave curto e abafado
+    t = tv(0.25); return (filt(ruido(0.25, 60, 500), 'lowpass', 400) * np.exp(-t * 28) + np.sin(2 * np.pi * 70 * t) * np.exp(-t * 22) * 0.4) * g
+vel_o = lambda k: (2.1 * (1 - k) ** 2 + 0.3) / 2.4          # derivada de 0,7·ease.o + 0,3·linear (normalizada), como a ponta no vídeo
+vel_io = lambda k: 1 - (2 * k - 1) ** 2                     # derivada da cúbica entra-sai (forma)
+if EFEITOS == 'toques':
+    poe('deslize do nó', 0.0, deslize(T['noFim'] + 0.2, 0.12), -0.2)
+    poe('deslize do título', T['noFim'] + 0.15, deslize(T['tituloFim'] - T['noFim'], 0.1), 0.3)
+    poe('título completo', T['tituloFim'] + 0.15, toque(79, 0.35), -0.1)
+    poe('mergulho', T['zoom0'], mergulho(T['zoom1'] - T['zoom0']), 0)
+    poe('cordões se abrem', T['zoom1'] + 0.05, fibras(1.1), 0.2)
+    poe('rótulo 3 CORDÕES', T['zoom1'] + 0.6, toque(74, 0.28), 0.25)
+    poe('fios se abrem', T['abre1'] + 0.1, fibras(1.0) * 0.8, -0.2)
+    poe('rótulo FIOS', T['abre1'] + 0.6, toque(76, 0.26), -0.25)
+    poe('rótulo FIBRAS', T['fios1'], toque(78, 0.26), 0.3)
+elif EFEITOS == 'foley':
+    poe('atrito: a ponta desenha o nó', 0.0, atrito(0.0, T['noFim'], vel_o, 0.16, 1), -0.15)
+    poe('aperto do nó', T['noFim'], rangido(0.3, 0.05, 2), 0.1)
+    poe('atrito: a ponta corre sob o título', T['noFim'], atrito(T['noFim'], T['tituloFim'], vel_io, 0.13, 3), 0.25)
+    poe('corda assenta', T['tituloFim'], baque(0.22), 0)
+    poe('cordões se destorcem', T['zoom1'], mx2(rangido(1.0, 0.035, 4), fibras(1.1) * 0.6), 0.15)
+    poe('fios se abrem', T['abre1'], fibras(1.0) * 0.45, -0.2)
+elif EFEITOS == 'musical':
+    ac.append({'efeito': 'trilha abafa no mergulho e abre na chegada (filtro na própria música) + grave na chegada', 'evento_s': T['zoom0'], 'na_grade_s': grade(T['zoom0']), 'desvio_ms': 0.0})
+    poe('grave na chegada ao chicote', T['zoom1'], sub(hz(31), 1.4) * env(int(1.4 * SR), 0.005, 1.0) * 0.9, 0)
 json.dump(ac, open('audio/acertos.json', 'w'), indent=1, ensure_ascii=False)
-print('maior desvio da grade:', max(abs(a['desvio_ms']) for a in ac), 'ms')
+print('maior desvio da grade:', max([abs(a['desvio_ms']) for a in ac] or [0]), 'ms')
 
 # ---------------------------------------------------------------- 4) mixagem
 mus = reverb(music.x, **RV) + reverb(ritmo.x, dur=0.9, umido=0.12)
+if EFEITOS == 'musical':
+    # mergulho "para dentro" da corda: passa-baixas que fecha até ~500 Hz e reabre de uma vez na chegada
+    from scipy.signal import sosfilt as _sf
+    blk = 480; out = np.zeros_like(mus); zi = None; a0, a1 = int(T['zoom0'] * SR), int(T['zoom1'] * SR)
+    for i in range(0, len(mus), blk):
+        if i < a0 or i >= a1 + int(0.25 * SR): fc = 18000
+        elif i < a1: fc = 18000 * (500 / 18000) ** (((i - a0) / (a1 - a0)) ** 0.7)
+        else: fc = 500 * (18000 / 500) ** ((i - a1) / (0.25 * SR))
+        sos = butter(2, min(fc, 20000), 'lowpass', fs=SR, output='sos')
+        if zi is None: zi = np.zeros((sos.shape[0], 2, 2))
+        for c in range(2):
+            out[i:i + blk, c], zi[:, c, :] = _sf(sos, mus[i:i + blk, c], zi=zi[:, c, :])
+    mus = out
 mixw = mus * 0.9 + reverb(sfx.x, dur=0.8, umido=0.1)
 mixw = filt(mixw.T, 'highpass', 35).T
 mixw = mixw[: int(FIM * SR)]
@@ -153,4 +206,4 @@ def limitador(x, teto, look=0.005, rel=0.08):
 meter = pyln.Meter(SR); lim = 10 ** (-2 / 20)
 for _ in range(4): mixw = pyln.normalize.loudness(mixw, meter.integrated_loudness(mixw), -14.0); mixw = limitador(mixw, lim * 0.97)
 print(f'LUFS {meter.integrated_loudness(mixw):.2f}, pico {20 * np.log10(np.abs(mixw).max()):.2f} dBFS')
-sf.write(f'audio/trilha_piloto_{ESTILO}.wav', mixw.astype(np.float32), SR, subtype='PCM_24')
+sf.write(f'audio/trilha_piloto_{ESTILO}_{EFEITOS}.wav', mixw.astype(np.float32), SR, subtype='PCM_24')
