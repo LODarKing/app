@@ -21,7 +21,7 @@ function mix(a, b, k) { const x = hex2rgb(a), y = hex2rgb(b); return `rgb(${x.ma
 function shade(h, k) { return k >= 0 ? mix(h, '#FFFFFF', k) : mix(h, '#000000', -k); }
 function rgba(h, a) { const [r, g, b] = hex2rgb(h); return `rgba(${r},${g},${b},${a})`; }
 
-// ---------------------------------------------------------------- fundo (marinho + grão de papel, calculado uma vez)
+// ---------------------------------------------------------------- fundo (feltro verde da insígnia + grão, calculado uma vez)
 let _grao = null;
 function fundo() {
   if (!_grao) {

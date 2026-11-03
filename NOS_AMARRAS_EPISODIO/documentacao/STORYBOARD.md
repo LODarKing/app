@@ -4,12 +4,12 @@
 
 | Item | Definição |
 |---|---|
-| Fundo | Azul-marinho `#14294A`, com grão de papel (ruído com semente) e um degradê muito leve de cima para baixo. Cenário de acampamento (lona, mastros, mesa) só nas cenas 6, 7 e 9, onde explica alguma coisa. |
-| Corda principal | Creme `#EFE2C4`, contorno marinho escuro `#0A1630`, torção de 3 cordões desenhada (losangos inclinados), sombra curta sob os cruzamentos. |
+| Fundo | **Verde do feltro da insígnia oficial**: `#2D5D3C` (medido na imagem enviada), com luz `#3E7A50` no topo e sombra `#1C4329` embaixo. Grão leve com semente. Cenário de acampamento (lona, mastros, mesa) só nas cenas 6, 7 e 9, onde explica alguma coisa. |
+| Corda principal | Branco-prata do bordado da insígnia `#ECEBDF`, sombra `#B8B9B0`, contorno verde-escuro `#0E2716`. Torção de 3 cordões desenhada (losangos inclinados) e sombra curta sob os cruzamentos. |
 | Destaque único | Amarelo `#F4C04E`: o que a narração está explicando agora. |
-| Cores dos segmentos (auxiliares) | Azul-petróleo `#3FA3A0` (corda restante), amarelo (ponta corrediça), coral `#E7765D` (chicote/terceiro cordão), azul-céu `#8EC3EA` (segunda corda). Cada cor mantém o mesmo papel do começo ao fim. |
+| Cores dos segmentos (auxiliares) | Azul-céu `#8EC3EA` (corda restante/cordão 1), amarelo (ponta corrediça/cordão 2), coral `#E7765D` (chicote/cordão 3). Cada cor mantém o mesmo papel do começo ao fim. O azul-petróleo saiu porque sumia no verde. |
 | Tipografia | **Zilla Slab Bold** nos títulos e nomes de termos. **Inter** ExtraBold/Bold na interface e nas legendas. |
-| Legendas | Inter ExtraBold 58 px, creme sobre faixa marinho 80%, máx. 2 linhas, faixa fixa y 1470–1630. Diagramas ficam acima de y 1430. |
+| Legendas | Inter ExtraBold 54 px, branco sobre faixa verde-escura 86%, máx. 2 linhas, faixa fixa y 1452–1630. Diagramas ficam acima de y 1430. |
 | Áreas seguras | Topo 120 px, base 280 px, laterais 90 px. |
 | Regra de movimento | Transformar → **segurar ≥ 1 s parado** → nomear. Nada se move enquanto o nome é lido. Câmera só aproxima para mostrar um cruzamento ou uma camada. |
 | Regra de cruzamento | Todo cruzamento tem "por cima" e "por baixo" explícitos, com o de cima sobre uma sombra. A corda nunca atravessa outra: as formas nascem pela **ponta guiando a corda** ao longo do caminho final, e as mudanças são desfazer e refazer pela ponta. |
@@ -95,3 +95,13 @@ Três cordões (petróleo, amarelo e coral) vêm de direções diferentes e se t
 1. Bancada ilustrada com cordas e uma prancheta: "**teoria ✓ · prática →** 20 nós de memória · 4 amarras".
 2. O quadro de 25 nós se organiza em grade.
 3. Encerramento: a corda escreve as três frases em sequência e termina na **insígnia oficial** da especialidade.
+
+## Som (aprovado no piloto)
+- **Trilha:** estilo "moderno": piano elétrico com acordes de 9ª, batida macia e sub-grave, a 100 bpm. A batida para durante os mergulhos de câmera.
+- **Efeitos:** "foley", sons reais de corda em volume baixo:
+  - atrito que acompanha a velocidade da ponta;
+  - rangido quando o nó aperta;
+  - baque leve quando a corda assenta;
+  - fibras estalando quando os cordões se abrem.
+
+  Os rótulos não têm som.

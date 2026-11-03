@@ -166,7 +166,7 @@ function desenhaCorda(r, o = {}) {
     ctx.save(); ctx.beginPath(); ctx.arc(c.x, c.y, w * 1.5, 0, Math.PI * 2); ctx.clip();
     // sombra curta do trecho de cima, recortada ao corpo do trecho de baixo (não suja o fundo)
     ctx.save(); corpo(r, Math.max(s0, c.sBaixo - 2 * w), Math.min(s1, c.sBaixo + 2 * w), w * 1.12); ctx.clip();
-    ctx.shadowColor = 'rgba(4,10,25,0.55)'; ctx.shadowBlur = w * 0.32 * z; ctx.shadowOffsetX = w * 0.07 * z; ctx.shadowOffsetY = w * 0.13 * z;
+    ctx.shadowColor = rgba(C.contorno, 0.6); ctx.shadowBlur = w * 0.32 * z; ctx.shadowOffsetX = w * 0.07 * z; ctx.shadowOffsetY = w * 0.13 * z;
     ctx.strokeStyle = C.contorno; ctx.lineWidth = w * 1.1; ctx.lineCap = 'butt'; trilha(r, a, b); ctx.stroke();
     ctx.restore();
     camadas(r, a, b, o);
