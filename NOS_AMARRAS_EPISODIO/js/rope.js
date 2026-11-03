@@ -5,19 +5,19 @@
 
 // ---------------------------------------------------------------- geometria
 function catmull(pts, amostras = 20) {
-  const P = [pts[0], ...pts, pts[pts.length - 1]], out = [];
+  const P = [pts[0], ...pts, pts[pts.length - 1]], out = [], D = [...Array(pts[0].length).keys()];
   const tj = (ti, a, b) => ti + Math.pow(Math.hypot(b[0] - a[0], b[1] - a[1]) || 1e-6, 0.5);
   for (let i = 1; i < P.length - 2; i++) {
     const p0 = P[i - 1], p1 = P[i], p2 = P[i + 1], p3 = P[i + 2];
     const t0 = 0, t1 = tj(t0, p0, p1), t2 = tj(t1, p1, p2), t3 = tj(t2, p2, p3);
     for (let k = 0; k < amostras; k++) {
       const t = t1 + (t2 - t1) * k / amostras;
-      const A1 = [0, 1].map((d) => (t1 - t) / (t1 - t0) * p0[d] + (t - t0) / (t1 - t0) * p1[d]);
-      const A2 = [0, 1].map((d) => (t2 - t) / (t2 - t1) * p1[d] + (t - t1) / (t2 - t1) * p2[d]);
-      const A3 = [0, 1].map((d) => (t3 - t) / (t3 - t2) * p2[d] + (t - t2) / (t3 - t2) * p3[d]);
-      const B1 = [0, 1].map((d) => (t2 - t) / (t2 - t0) * A1[d] + (t - t0) / (t2 - t0) * A2[d]);
-      const B2 = [0, 1].map((d) => (t3 - t) / (t3 - t1) * A2[d] + (t - t1) / (t3 - t1) * A3[d]);
-      out.push([0, 1].map((d) => (t2 - t) / (t2 - t1) * B1[d] + (t - t1) / (t2 - t1) * B2[d]));
+      const A1 = D.map((d) => (t1 - t) / (t1 - t0) * p0[d] + (t - t0) / (t1 - t0) * p1[d]);
+      const A2 = D.map((d) => (t2 - t) / (t2 - t1) * p1[d] + (t - t1) / (t2 - t1) * p2[d]);
+      const A3 = D.map((d) => (t3 - t) / (t3 - t2) * p2[d] + (t - t2) / (t3 - t2) * p3[d]);
+      const B1 = D.map((d) => (t2 - t) / (t2 - t0) * A1[d] + (t - t0) / (t2 - t0) * A2[d]);
+      const B2 = D.map((d) => (t3 - t) / (t3 - t1) * A2[d] + (t - t1) / (t3 - t1) * A3[d]);
+      out.push(D.map((d) => (t2 - t) / (t2 - t1) * B1[d] + (t - t1) / (t2 - t1) * B2[d]));
     }
   }
   out.push(pts[pts.length - 1]);
@@ -25,15 +25,16 @@ function catmull(pts, amostras = 20) {
 }
 function reamostra(poly, passo) {
   const cum = [0]; for (let i = 1; i < poly.length; i++) cum.push(cum[i - 1] + Math.hypot(poly[i][0] - poly[i - 1][0], poly[i][1] - poly[i - 1][1]));
-  const L = cum[cum.length - 1], n = Math.max(2, Math.round(L / passo) + 1), st = L / (n - 1), X = new Float32Array(n), Y = new Float32Array(n);
+  const L = cum[cum.length - 1], n = Math.max(2, Math.round(L / passo) + 1), st = L / (n - 1), X = new Float32Array(n), Y = new Float32Array(n), Z = poly[0].length > 2 ? new Float32Array(n) : null;
   let j = 0;
   for (let i = 0; i < n; i++) {
     const s = i * st; while (j < poly.length - 2 && cum[j + 1] < s) j++;
     const k = (s - cum[j]) / ((cum[j + 1] - cum[j]) || 1); X[i] = lerp(poly[j][0], poly[j + 1][0], k); Y[i] = lerp(poly[j][1], poly[j + 1][1], k);
+    if (Z) Z[i] = lerp(poly[j][2], poly[j + 1][2], k);
   }
   const TX = new Float32Array(n), TY = new Float32Array(n);
   for (let i = 0; i < n; i++) { const a = Math.max(0, i - 1), b = Math.min(n - 1, i + 1), dx = X[b] - X[a], dy = Y[b] - Y[a], m = Math.hypot(dx, dy) || 1; TX[i] = dx / m; TY[i] = dy / m; }
-  return { X, Y, TX, TY, n, st, L };
+  return { X, Y, Z, TX, TY, n, st, L };
 }
 function segInter(ax, ay, bx, by, cx, cy, dx, dy) {
   const r1x = bx - ax, r1y = by - ay, r2x = dx - cx, r2y = dy - cy, den = r1x * r2y - r1y * r2x; if (Math.abs(den) < 1e-9) return null;
@@ -64,7 +65,10 @@ function corda(pontos, o = {}) {
   // passagens na ordem do caminho → por cima / por baixo
   const vis = []; cz.forEach((c, k) => { vis.push({ s: c.sA, k }); vis.push({ s: c.sB, k }); }); vis.sort((p, q) => p.s - q.s);
   const pad = o.padrao || 'alt';
-  vis.forEach((v, i) => { v.cima = pad === 'alt' ? i % 2 === 0 : pad === 'altU' ? i % 2 === 1 : pad[i] === 'O'; });
+  // padrao 'z': quem está mais alto (z, saindo da tela) passa por cima — usado em nós com objetos (mastros) e em nós dobrados
+  const zEm_ = (sv) => { const f = clamp(sv / st, 0, n - 1.001), i = Math.floor(f); return lerp(g.Z[i], g.Z[i + 1], f - i); };
+  if (pad === 'z') cz.forEach((c, k) => { const za = zEm_(c.sA), zb = zEm_(c.sB); vis.filter((v) => v.k === k).forEach((v) => { v.cima = (v.s === c.sA) === (za >= zb); }); });
+  else vis.forEach((v, i) => { v.cima = pad === 'alt' ? i % 2 === 0 : pad === 'altU' ? i % 2 === 1 : pad[i] === 'O'; });
   cz.forEach((c, k) => {
     const vv = vis.filter((v) => v.k === k); c.sCima = vv.find((v) => v.cima)?.s; c.sBaixo = vv.find((v) => !v.cima)?.s;
     if (c.sCima === undefined || c.sBaixo === undefined) console.error('cruzamento inconsistente', k, JSON.stringify(c));
@@ -73,6 +77,7 @@ function corda(pontos, o = {}) {
   if (key) _cacheCorda.set(key, r);
   return r;
 }
+function zEm(r, s) { if (!r.Z) return 0; const f = clamp(s / r.st, 0, r.n - 1.001), i = Math.floor(f); return lerp(r.Z[i], r.Z[i + 1], f - i); }
 function em(r, s) {
   const f = clamp(s / r.st, 0, r.n - 1.001), i = Math.floor(f), k = f - i;
   return { x: lerp(r.X[i], r.X[i + 1], k), y: lerp(r.Y[i], r.Y[i + 1], k), tx: lerp(r.TX[i], r.TX[i + 1], k), ty: lerp(r.TY[i], r.TY[i + 1], k) };
@@ -172,7 +177,48 @@ function desenhaCorda(r, o = {}) {
     camadas(r, a, b, o);
     ctx.restore();
   }
+  if (o.pontas) for (const [sp, tipo] of o.pontas) ponta(r, sp, tipo, o);
   if (o.pontaFim && s1 >= r.L - 0.5) ponta(r, r.L, o.pontaFim, o);
   else if (o.pontaCabeca) ponta(r, s1, o.pontaCabeca, o);
-  if (o.pontaInicio && s0 <= 0.5) ponta(r, 0, o.pontaInicio, o);
+  if (o.pontaInicio && s0 <= 0.5 && s1 > r.w) ponta(r, 0, o.pontaInicio, o);
+}
+
+// corda com objetos (mastros, travessas): trechos com z < 0 ficam atrás do objeto. Ordem: trás → objeto → frente → cruzamentos
+function faixasZ(r, s0, s1, frente) {
+  const out = []; let a = s0, f = (zEm(r, s0) >= 0) === frente, cur = f ? s0 : null;
+  for (let s = s0; s <= s1 + r.st; s += r.st) {
+    const ss = Math.min(s, s1), ok = (zEm(r, ss) >= 0) === frente;
+    if (ok && cur === null) cur = ss;
+    if ((!ok || ss >= s1) && cur !== null) { out.push([cur, ss]); cur = null; }
+    if (ss >= s1) break;
+  }
+  return out.filter(([x, y]) => y - x > 0.5);
+}
+function desenhaCordaZ(r, o = {}) {
+  const s0 = o.s0 ?? 0, s1 = o.s1 ?? r.L; if (s1 - s0 < 1) { o.entre && o.entre(); return; }
+  // faixas visíveis (várias cordas no mesmo caminho, ligadas por conector fora da tela); cada uma pode ter s1 próprio
+  const vis = (o.faixas || [[s0, s1]]).map(([a, b], i) => [Math.max(a, s0), Math.min(b, o.s1s ? o.s1s[i] : s1)]).filter(([a, b]) => b - a > 0.5);
+  const corta = (lista) => lista.flatMap(([a, b]) => vis.map(([c, d]) => [Math.max(a, c), Math.min(b, d)]).filter(([x, y]) => y - x > 0.5));
+  for (const [a, b] of corta(faixasZ(r, s0, s1, false))) camadas(r, a, b, o);
+  if (o.entre) o.entre();
+  const fr = corta(faixasZ(r, s0, s1, true));
+  for (const [a, b] of fr) camadas(r, a, b, o);
+  const faixa = (s) => fr.find(([a, b]) => s >= a - 0.5 && s <= b + 0.5);
+  const dentro = (sv) => vis.find(([a, b]) => sv >= a - 0.5 && sv <= b + 1.6 * r.w);
+  for (const c of r.cruz) {
+    if (!dentro(c.sA) || !dentro(c.sB)) continue;
+    const fc = faixa(c.sCima); if (!fc || !faixa(c.sBaixo)) continue;
+    const w = r.w, a = Math.max(fc[0], c.sCima - 1.8 * w), b = Math.min(fc[1], s1, c.sCima + 1.8 * w), z = escala();
+    ctx.save(); ctx.beginPath(); ctx.arc(c.x, c.y, w * 1.5, 0, Math.PI * 2); ctx.clip();
+    ctx.save(); corpo(r, Math.max(s0, c.sBaixo - 2 * w), Math.min(s1, c.sBaixo + 2 * w), w * 1.12); ctx.clip();
+    ctx.shadowColor = rgba(C.contorno, 0.6); ctx.shadowBlur = w * 0.32 * z; ctx.shadowOffsetX = w * 0.07 * z; ctx.shadowOffsetY = w * 0.13 * z;
+    ctx.strokeStyle = C.contorno; ctx.lineWidth = w * 1.1; ctx.lineCap = 'butt'; trilha(r, a, b); ctx.stroke();
+    ctx.restore();
+    camadas(r, a, b, o);
+    ctx.restore();
+  }
+  if (o.pontas) for (const [sp, tipo] of o.pontas) ponta(r, sp, tipo, o);
+  if (o.pontaFim && s1 >= r.L - 0.5) ponta(r, r.L, o.pontaFim, o);
+  else if (o.pontaCabeca) ponta(r, s1, o.pontaCabeca, o);
+  if (o.pontaInicio && s0 <= 0.5 && s1 > r.w) ponta(r, 0, o.pontaInicio, o);
 }

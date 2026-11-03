@@ -1,0 +1,271 @@
+1
+00:00:00,239 --> 00:00:02,222
+Antes de aprender um nó,
+
+2
+00:00:02,222 --> 00:00:04,587
+você precisa entender a corda.
+
+3
+00:00:04,587 --> 00:00:06,674
+Eu me chamo Ítalo, Distrital de Amontada
+
+4
+00:00:06,674 --> 00:00:08,257
+e sejam muito bem-vindos à
+
+5
+00:00:08,257 --> 00:00:10,617
+especialidade de Nós e Amarras.
+
+6
+00:00:11,245 --> 00:00:15,750
+A corda de três fios tem três cordões torcidos juntos.
+
+7
+00:00:15,750 --> 00:00:20,289
+Cada cordão é feito de fios, e cada fio, de fibras.
+
+8
+00:00:20,289 --> 00:00:22,115
+Cada torção gira ao contrário
+
+9
+00:00:22,115 --> 00:00:25,228
+da anterior, e isso trava tudo.
+
+10
+00:00:25,228 --> 00:00:26,828
+No trançado triplo,
+
+11
+00:00:26,828 --> 00:00:28,724
+os cordões se cruzam por cima
+
+12
+00:00:28,724 --> 00:00:31,232
+e por baixo, como numa trança.
+
+13
+00:00:31,232 --> 00:00:36,102
+Fibras naturais, como sisal, algodão, juta e coco.
+
+14
+00:00:36,621 --> 00:00:40,734
+A corda restante ou ponta fixa fica parada.
+
+15
+00:00:40,734 --> 00:00:45,034
+A ponta corrediça, o vivo, é a que você movimenta.
+
+16
+00:00:45,034 --> 00:00:47,660
+O chicote é a extremidade,
+
+17
+00:00:47,660 --> 00:00:50,804
+precisa de acabamento para não desfiar.
+
+18
+00:00:50,804 --> 00:00:54,317
+Corda dobrada em U, sem cruzar, é um seio.
+
+19
+00:00:54,317 --> 00:00:57,817
+Cruzou sobre si mesma, virou uma volta.
+
+20
+00:00:57,817 --> 00:01:00,652
+Passe a ponta por dentro da volta,
+
+21
+00:01:00,652 --> 00:01:03,100
+nó superior, o nó simples.
+
+22
+00:01:03,100 --> 00:01:05,065
+O mesmo nó feito no seio,
+
+23
+00:01:05,065 --> 00:01:09,139
+dá uma alça de azelha, fixa, não corre.
+
+24
+00:01:09,139 --> 00:01:13,347
+Amarra prende a corda a um objeto, como um mastro.
+
+25
+00:01:13,347 --> 00:01:15,921
+Curva, aqui é o nome técnico,
+
+26
+00:01:15,921 --> 00:01:19,178
+o nó que une duas cordas pelas pontas.
+
+27
+00:01:19,178 --> 00:01:24,165
+E a união de cordas definitiva é a emenda,
+
+28
+00:01:24,165 --> 00:01:27,013
+cordões entrelaçados, sem nó.
+
+29
+00:01:27,719 --> 00:01:30,415
+A corda dinâmica estica bastante,
+
+30
+00:01:30,415 --> 00:01:33,789
+de propósito, absorve a energia de um tranco.
+
+31
+00:01:33,789 --> 00:01:37,528
+A estática estica pouco, pouco, não zero.
+
+32
+00:01:37,528 --> 00:01:40,902
+Isso depende da construção e da especificação,
+
+33
+00:01:40,902 --> 00:01:42,324
+não só do material.
+
+34
+00:01:42,324 --> 00:01:47,454
+Poliéster: estica pouco, aguenta sol, varais e lonas.
+
+35
+00:01:47,454 --> 00:01:51,571
+Sisal é áspero, firma as amarras de pioneiria.
+
+36
+00:01:51,571 --> 00:01:56,576
+Nylon: elástico, amortece trancos na ancoragem.
+
+37
+00:01:56,576 --> 00:02:00,332
+Polipropileno é leve, flutua, vai em boias.
+
+38
+00:02:00,332 --> 00:02:03,615
+E a cor engana, confira a etiqueta.
+
+39
+00:02:04,143 --> 00:02:06,317
+As sintéticas não apodrecem,
+
+40
+00:02:06,317 --> 00:02:08,643
+são leves e aguentam a umidade,
+
+41
+00:02:08,643 --> 00:02:10,748
+mas derretem com calor e atrito.
+
+42
+00:02:10,748 --> 00:02:12,330
+Algumas escorregam e o sol
+
+43
+00:02:12,330 --> 00:02:14,543
+afeta umas mais que as outras,
+
+44
+00:02:14,543 --> 00:02:18,522
+e nenhuma é biodegradável, então descarte com cuidado.
+
+45
+00:02:19,184 --> 00:02:22,367
+Inspecione antes e depois do uso.
+
+46
+00:02:22,367 --> 00:02:24,663
+Cortes, partes duras ou brilhantes,
+
+47
+00:02:24,663 --> 00:02:28,745
+desgaste, limpe como o fabricante orienta.
+
+48
+00:02:28,745 --> 00:02:30,102
+Seque à sombra,
+
+49
+00:02:30,102 --> 00:02:33,558
+guarde enrolada longe do sol e de químicos.
+
+50
+00:02:33,558 --> 00:02:36,480
+Corda danificada não volta a ser segura.
+
+51
+00:02:36,480 --> 00:02:39,137
+Em uso crítico, ela se aposenta.
+
+52
+00:02:39,656 --> 00:02:41,169
+Como começar uma amarra?
+
+53
+00:02:41,169 --> 00:02:42,665
+A amarra quadrada começa
+
+54
+00:02:42,665 --> 00:02:44,400
+com a volta do fiel no mastro,
+
+55
+00:02:44,400 --> 00:02:46,556
+logo abaixo da travessa,
+
+56
+00:02:46,556 --> 00:02:49,217
+a diagonal começa com a volta da ribeira,
+
+57
+00:02:49,217 --> 00:02:52,000
+que abraça e aproxima os dois paus,
+
+58
+00:02:52,000 --> 00:02:54,117
+cada amarra tem o seu nó inicial.
+
+59
+00:02:55,302 --> 00:02:58,224
+Eclesiastes, capítulo 4, versículo 12:
+
+60
+00:02:58,224 --> 00:03:00,085
+o cordão de três dobras não
+
+61
+00:03:00,085 --> 00:03:02,224
+se arrebenta com facilidade.
+
+62
+00:03:02,224 --> 00:03:05,737
+Não é sobre materiais, é sobre união,
+
+63
+00:03:05,737 --> 00:03:09,093
+juntos, com Deus no centro, um sustenta o outro.
+
+64
+00:03:09,812 --> 00:03:11,595
+E isso foi a teoria.
+
+65
+00:03:11,595 --> 00:03:13,751
+A prática é com o seu instrutor.
+
+66
+00:03:13,751 --> 00:03:16,186
+Fazer de memória pelo menos 20 nós,
+
+67
+00:03:16,186 --> 00:03:21,143
+demonstrar 4 amarras e montar um quadro com 25 nós.
+
+68
+00:03:21,143 --> 00:03:25,173
+Entenda a corda, pratique os nós e fortaleça a união.

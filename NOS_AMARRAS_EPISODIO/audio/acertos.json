@@ -1,14 +1,428 @@
 [
  {
-  "efeito": "trilha abafa no mergulho e abre na chegada (filtro na própria música) + grave na chegada",
-  "evento_s": 4.8,
-  "na_grade_s": 4.8060926863326925,
-  "desvio_ms": 0.0
+  "efeito": "s1 nó oito",
+  "evento_s": 0,
+  "na_grade_s": 0.007,
+  "desvio_ms": 7.3
  },
  {
-  "efeito": "grave na chegada ao chicote",
-  "evento_s": 6.0,
-  "na_grade_s": 6.009,
-  "desvio_ms": 8.6
+  "efeito": "s1 aperto do nó",
+  "evento_s": 2.6,
+  "na_grade_s": 2.557,
+  "desvio_ms": -42.7
+ },
+ {
+  "efeito": "s1 a ponta segue",
+  "evento_s": 4.637,
+  "na_grade_s": 4.657,
+  "desvio_ms": 20.3
+ },
+ {
+  "efeito": "s1 título",
+  "evento_s": 8.107,
+  "na_grade_s": 8.107,
+  "desvio_ms": 0.3
+ },
+ {
+  "efeito": "s1 corda assenta",
+  "evento_s": 10.167,
+  "na_grade_s": 10.207,
+  "desvio_ms": 40.3
+ },
+ {
+  "efeito": "s2 cordões se destorcem",
+  "evento_s": 12.041,
+  "na_grade_s": 12.007,
+  "desvio_ms": -33.7
+ },
+ {
+  "efeito": "s2 fibras",
+  "evento_s": 12.041,
+  "na_grade_s": 12.007,
+  "desvio_ms": -33.7
+ },
+ {
+  "efeito": "s2 fios se abrem",
+  "evento_s": 17.239,
+  "na_grade_s": 17.257,
+  "desvio_ms": 18.4
+ },
+ {
+  "efeito": "s2 volta a torcer",
+  "evento_s": 23.874,
+  "na_grade_s": 23.857,
+  "desvio_ms": -16.6
+ },
+ {
+  "efeito": "s2 corda puxada",
+  "evento_s": 25.019,
+  "na_grade_s": 25.057,
+  "desvio_ms": 38.4
+ },
+ {
+  "efeito": "s2 trança",
+  "evento_s": 25.369,
+  "na_grade_s": 25.357,
+  "desvio_ms": -11.6
+ },
+ {
+  "efeito": "s2 cartão sisal",
+  "evento_s": 32.417,
+  "na_grade_s": 32.407,
+  "desvio_ms": -9.5
+ },
+ {
+  "efeito": "s2 cartão algodao",
+  "evento_s": 33.513,
+  "na_grade_s": 33.457,
+  "desvio_ms": -55.5
+ },
+ {
+  "efeito": "s2 cartão juta",
+  "evento_s": 34.452,
+  "na_grade_s": 34.507,
+  "desvio_ms": 55.5
+ },
+ {
+  "efeito": "s2 cartão coco",
+  "evento_s": 35.187,
+  "na_grade_s": 35.257,
+  "desvio_ms": 70.5
+ },
+ {
+  "efeito": "s3 balanço da ponta",
+  "evento_s": 43.528,
+  "na_grade_s": 43.508,
+  "desvio_ms": -20.4
+ },
+ {
+  "efeito": "s3 desfiado",
+  "evento_s": 46.428,
+  "na_grade_s": 46.358,
+  "desvio_ms": -70.4
+ },
+ {
+  "efeito": "s3 falcaça",
+  "evento_s": 48.406,
+  "na_grade_s": 48.458,
+  "desvio_ms": 51.6
+ },
+ {
+  "efeito": "s3 recolhe",
+  "evento_s": 51.1,
+  "na_grade_s": 51.158,
+  "desvio_ms": 57.6
+ },
+ {
+  "efeito": "s3 seio",
+  "evento_s": 51.5,
+  "na_grade_s": 51.458,
+  "desvio_ms": -42.4
+ },
+ {
+  "efeito": "s3 volta",
+  "evento_s": 54.367,
+  "na_grade_s": 54.308,
+  "desvio_ms": -59.4
+ },
+ {
+  "efeito": "s3 nó superior",
+  "evento_s": 57.867,
+  "na_grade_s": 57.908,
+  "desvio_ms": 40.6
+ },
+ {
+  "efeito": "s3 aperto",
+  "evento_s": 60.806,
+  "na_grade_s": 60.758,
+  "desvio_ms": -48.3
+ },
+ {
+  "efeito": "s3 desfaz",
+  "evento_s": 63.306,
+  "na_grade_s": 63.308,
+  "desvio_ms": 1.7
+ },
+ {
+  "efeito": "s3 azelha",
+  "evento_s": 64.206,
+  "na_grade_s": 64.208,
+  "desvio_ms": 1.7
+ },
+ {
+  "efeito": "s3 não corre (puxão)",
+  "evento_s": 68.024,
+  "na_grade_s": 67.958,
+  "desvio_ms": -66.3
+ },
+ {
+  "efeito": "s3 mastro chega",
+  "evento_s": 68.989,
+  "na_grade_s": 69.008,
+  "desvio_ms": 18.7
+ },
+ {
+  "efeito": "s3 volta do fiel",
+  "evento_s": 69.289,
+  "na_grade_s": 69.308,
+  "desvio_ms": 18.7
+ },
+ {
+  "efeito": "s3 aperto fiel",
+  "evento_s": 71.893,
+  "na_grade_s": 71.858,
+  "desvio_ms": -35.3
+ },
+ {
+  "efeito": "s3 nó de fita A",
+  "evento_s": 73.297,
+  "na_grade_s": 73.358,
+  "desvio_ms": 60.8
+ },
+ {
+  "efeito": "s3 nó de fita B",
+  "evento_s": 76.345,
+  "na_grade_s": 76.358,
+  "desvio_ms": 12.8
+ },
+ {
+  "efeito": "s3 cordas se encontram",
+  "evento_s": 83.137,
+  "na_grade_s": 83.108,
+  "desvio_ms": -29.2
+ },
+ {
+  "efeito": "s3 cordões entrelaçam",
+  "evento_s": 83.337,
+  "na_grade_s": 83.408,
+  "desvio_ms": 70.8
+ },
+ {
+  "efeito": "s4 carga dinâmica",
+  "evento_s": 88.678,
+  "na_grade_s": 88.658,
+  "desvio_ms": -20.1
+ },
+ {
+  "efeito": "s4 estica (dinâmica)",
+  "evento_s": 88.678,
+  "na_grade_s": 88.658,
+  "desvio_ms": -20.1
+ },
+ {
+  "efeito": "s4 carga estática",
+  "evento_s": 94.317,
+  "na_grade_s": 94.358,
+  "desvio_ms": 40.9
+ },
+ {
+  "efeito": "s4 estica (estática)",
+  "evento_s": 94.317,
+  "na_grade_s": 94.358,
+  "desvio_ms": 40.9
+ },
+ {
+  "efeito": "s4 cartão poliester",
+  "evento_s": 102.124,
+  "na_grade_s": 102.158,
+  "desvio_ms": 33.9
+ },
+ {
+  "efeito": "s4 cartão sisal",
+  "evento_s": 107.254,
+  "na_grade_s": 107.258,
+  "desvio_ms": 4.0
+ },
+ {
+  "efeito": "s4 cartão nylon",
+  "evento_s": 111.371,
+  "na_grade_s": 111.308,
+  "desvio_ms": -63.0
+ },
+ {
+  "efeito": "s4 cartão polipropileno",
+  "evento_s": 116.376,
+  "na_grade_s": 116.408,
+  "desvio_ms": 32.0
+ },
+ {
+  "efeito": "s4 etiquetas",
+  "evento_s": 122.513,
+  "na_grade_s": 122.558,
+  "desvio_ms": 45.1
+ },
+ {
+  "efeito": "s5 item apodrecem",
+  "evento_s": 125.263,
+  "na_grade_s": 125.258,
+  "desvio_ms": -4.9
+ },
+ {
+  "efeito": "s5 item leves",
+  "evento_s": 126.289,
+  "na_grade_s": 126.308,
+  "desvio_ms": 19.1
+ },
+ {
+  "efeito": "s5 item umidade",
+  "evento_s": 127.437,
+  "na_grade_s": 127.508,
+  "desvio_ms": 71.1
+ },
+ {
+  "efeito": "s5 item derretem",
+  "evento_s": 128.632,
+  "na_grade_s": 128.558,
+  "desvio_ms": -73.9
+ },
+ {
+  "efeito": "s5 item escorregam",
+  "evento_s": 130.893,
+  "na_grade_s": 130.958,
+  "desvio_ms": 65.1
+ },
+ {
+  "efeito": "s5 item sol",
+  "evento_s": 132.024,
+  "na_grade_s": 132.008,
+  "desvio_ms": -15.9
+ },
+ {
+  "efeito": "s5 item biodegradavel",
+  "evento_s": 135.176,
+  "na_grade_s": 135.158,
+  "desvio_ms": -17.8
+ },
+ {
+  "efeito": "s6 lupa percorre a corda",
+  "evento_s": 142.017,
+  "na_grade_s": 142.058,
+  "desvio_ms": 41.2
+ },
+ {
+  "efeito": "s6 estação limpe",
+  "evento_s": 145.691,
+  "na_grade_s": 145.658,
+  "desvio_ms": -32.8
+ },
+ {
+  "efeito": "s6 estação seque",
+  "evento_s": 148.595,
+  "na_grade_s": 148.658,
+  "desvio_ms": 63.3
+ },
+ {
+  "efeito": "s6 estação guarde",
+  "evento_s": 149.952,
+  "na_grade_s": 150.008,
+  "desvio_ms": 56.3
+ },
+ {
+  "efeito": "s6 aposentada",
+  "evento_s": 156.73,
+  "na_grade_s": 156.758,
+  "desvio_ms": 28.3
+ },
+ {
+  "efeito": "s7 mastros",
+  "evento_s": 159.502,
+  "na_grade_s": 159.458,
+  "desvio_ms": -43.7
+ },
+ {
+  "efeito": "s7 volta do fiel",
+  "evento_s": 163.332,
+  "na_grade_s": 163.358,
+  "desvio_ms": 26.4
+ },
+ {
+  "efeito": "s7 aperto fiel",
+  "evento_s": 164.228,
+  "na_grade_s": 164.258,
+  "desvio_ms": 30.4
+ },
+ {
+  "efeito": "s7 paus em X",
+  "evento_s": 166.615,
+  "na_grade_s": 166.658,
+  "desvio_ms": 43.4
+ },
+ {
+  "efeito": "s7 volta da ribeira",
+  "evento_s": 168.202,
+  "na_grade_s": 168.158,
+  "desvio_ms": -43.6
+ },
+ {
+  "efeito": "s7 aproxima",
+  "evento_s": 170.106,
+  "na_grade_s": 170.108,
+  "desvio_ms": 2.4
+ },
+ {
+  "efeito": "s8 cordões chegam",
+  "evento_s": 174.728,
+  "na_grade_s": 174.758,
+  "desvio_ms": 30.4
+ },
+ {
+  "efeito": "s8 torção",
+  "evento_s": 177.865,
+  "na_grade_s": 177.908,
+  "desvio_ms": 43.5
+ },
+ {
+  "efeito": "s9 item teoria",
+  "evento_s": 190.558,
+  "na_grade_s": 190.509,
+  "desvio_ms": -49.5
+ },
+ {
+  "efeito": "s9 item pratica",
+  "evento_s": 191.584,
+  "na_grade_s": 191.559,
+  "desvio_ms": -25.5
+ },
+ {
+  "efeito": "s9 item memoria",
+  "evento_s": 194.036,
+  "na_grade_s": 194.109,
+  "desvio_ms": 72.6
+ },
+ {
+  "efeito": "s9 item demonstrar",
+  "evento_s": 196.036,
+  "na_grade_s": 196.059,
+  "desvio_ms": 22.6
+ },
+ {
+  "efeito": "s9 item quadro",
+  "evento_s": 198.732,
+  "na_grade_s": 198.759,
+  "desvio_ms": 26.6
+ },
+ {
+  "efeito": "s9 sublinha entenda",
+  "evento_s": 201.193,
+  "na_grade_s": 201.159,
+  "desvio_ms": -34.4
+ },
+ {
+  "efeito": "s9 sublinha pratique",
+  "evento_s": 202.393,
+  "na_grade_s": 202.359,
+  "desvio_ms": -34.4
+ },
+ {
+  "efeito": "s9 sublinha fortaleca",
+  "evento_s": 203.488,
+  "na_grade_s": 203.559,
+  "desvio_ms": 70.6
+ },
+ {
+  "efeito": "s9 insígnia",
+  "evento_s": 204.523,
+  "na_grade_s": 204.459,
+  "desvio_ms": -64.4
  }
 ]

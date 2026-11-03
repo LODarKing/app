@@ -12,13 +12,13 @@ import path from 'node:path';
 import { execFileSync, spawn } from 'node:child_process';
 const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
-const FPS = 30, args = process.argv.slice(2);
+const FPS = 30, SEM = process.argv.includes('--sem-legenda'), args = process.argv.slice(2).filter((a) => a !== '--sem-legenda');
 const browser = await chromium.launch({ args: ['--allow-file-access-from-files'] });
 async function page() {
   const p = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
   p.on('pageerror', (e) => { console.error('ERRO NA PÁGINA:', e.message); process.exitCode = 1; });
   p.on('console', (m) => { if (m.type() === 'error' || m.type() === 'warning') console.error('console:', m.text()); });
-  await p.goto('file://' + path.resolve('index.html')); await p.evaluate(() => window.ready);
+  await p.goto('file://' + path.resolve('index.html') + (SEM ? '?legenda=0' : '')); await p.evaluate(() => window.ready);
   return p;
 }
 const buf = (u) => Buffer.from(u.split(',')[1], 'base64');
@@ -48,11 +48,13 @@ if (args[0] === '--frame') {
   for (const t of ts) { const f = `out/_s_${t}.png`; fs.writeFileSync(f, await grab(p, Number(t))); files.push(f); }
   sheet(files, ts.map((t) => t + 's'), out, Math.min(files.length, 6));
 } else if (args[0] === '--sheet') {
+  // --sheet saida.png [cena]: um quadro por batida medida (da cena, se indicada)
   const out = args[1] || 'out/folha.png', p = await page(), info = await p.evaluate(() => window.info());
-  const beats = fs.existsSync('audio/beats.json') ? JSON.parse(fs.readFileSync('audio/beats.json', 'utf8')).batidas : Array.from({ length: Math.ceil(info.dur / 0.6) }, (_, i) => i * 0.6);
+  const sc = args[2] ? info.cenas.find((c) => c.id === args[2]) : { t0: 0, dur: info.dur };
+  const beats = (fs.existsSync('audio/beats.json') ? JSON.parse(fs.readFileSync('audio/beats.json', 'utf8')).batidas : Array.from({ length: Math.ceil(info.dur / 0.6) }, (_, i) => i * 0.6)).filter((b) => b >= sc.t0 && b < sc.t0 + sc.dur);
   const files = [];
-  for (const b of beats.filter((b) => b < info.dur)) { const f = `out/_b_${b.toFixed(3)}.png`; fs.writeFileSync(f, await grab(p, b + 0.02)); files.push(f); }
-  sheet(files, beats.map((b) => b.toFixed(2) + 's'), out, 6); console.log(out, files.length, 'batidas');
+  for (const b of beats) { const f = `out/_b_${b.toFixed(3)}.png`; fs.writeFileSync(f, await grab(p, b + 0.02)); files.push(f); }
+  sheet(files, beats.map((b) => b.toFixed(1) + 's'), out, 8); console.log(out, files.length, 'batidas');
 } else if (args[0] === '--lab') {
   const p = await page(); await p.evaluate((n) => window.lab(n), args[2]); fs.writeFileSync(args[1], buf(await p.evaluate(() => window.png())));
 } else if (args[0] === '--video') {

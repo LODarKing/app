@@ -34,6 +34,26 @@ const CFG = {
       [7.85, 9.95, 'Cada cordão é feito de fios, e cada fio, de fibras.'],
     ],
   },
-  // ---------------------------------------------------------------- episódio (preenchido depois da narração)
-  audio: { estilo: 'moderno', efeitos: 'foley', trilha: 'audio/trilha_piloto_moderno_foley.wav', narracao: [] },   // estilos: violao | piano | moderno · efeitos: nenhum | foley | musical | toques (audio/som_piloto.py)
+  // ---------------------------------------------------------------- episódio: uma cena por arquivo de narração
+  // extra = segundos de imagem depois da fala (pausa para observar / encerramento); vo = início da fala na cena
+  vo: 0.15,
+  cenas: [
+    { id: 's1', fala: 'cena01', extra: 0.7 }, { id: 's2', fala: 'cena02', extra: 0.6 }, { id: 's3', fala: 'cena03', extra: 0.7 },
+    { id: 's4', fala: 'cena04', extra: 0.6 }, { id: 's5', fala: 'cena05', extra: 0.5 }, { id: 's6', fala: 'cena06', extra: 0.6 },
+    { id: 's7', fala: 'cena07', extra: 0.7 }, { id: 's8', fala: 'cena08', extra: 0.8 }, { id: 's9', fala: 'cena09', extra: 3.6 },
+  ],
+  // quebras de legenda forçadas: depois destas palavras (por cena)
+  quebras: { s1: ['Amontada'], s7: ['paus,'], s3: ['emenda,'] },
+  // grafia das legendas (o reconhecedor de fala erra algumas palavras; a legenda segue o que foi DITO)
+  grafia: [
+    ['Ítalo Distrital', 'Ítalo, Distrital'], ['bem vindos', 'bem-vindos'], ['Amontada e', 'Amontada, e'],
+    ['Cada cordão é feito de fios e cada fio de fibras', 'Cada cordão é feito de fios, e cada fio, de fibras'],
+    ['anterior e isso', 'anterior, e isso'], ['baixo como', 'baixo, como'], ['Fibras naturais como', 'Fibras naturais, como'],
+    ['desgarte', 'desgaste'], ['limpe como fabricante e orienta', 'limpe como o fabricante orienta'], ['Seque a sombra', 'Seque à sombra'],
+    ['começar um amarras', 'começar uma amarra'], ['A amarras quadrada', 'A amarra quadrada'], ['cada amarras', 'cada amarra'],
+    ['Amarra, prende', 'Amarra prende'], ['O mesmo nó feito no seio, dá', 'O mesmo nó, feito no seio, dá'],
+    ['Poliéster estica', 'Poliéster: estica'], ['Sisal é áspero', 'Sisal é áspero'], ['Nylon, elástico', 'Nylon: elástico'],
+    ['juntos com Deus', 'juntos, com Deus'], ['capítulo 4, versículo 12,', 'capítulo 4, versículo 12:'],
+  ],
+  audio: { estilo: 'moderno', efeitos: 'foley', trilha: 'audio/trilha_piloto_moderno_foley.wav', mix: 'audio/mix.wav' },   // estilos: violao | piano | moderno · efeitos: nenhum | foley | musical | toques (audio/som_piloto.py)
 };
