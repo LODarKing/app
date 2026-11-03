@@ -50,3 +50,25 @@ Cenas 3 a 9, com o roteiro enxuto em `ROTEIRO_NARRACAO_v2.md`: 297 palavras.
 |---|---|---|---|
 | ~2,2 palavras/s (o ritmo das suas cenas 1 e 7) | ~135 s | ~163 s | Sim, com ~15 s para pausas visuais e encerramento. |
 | Ritmo atual (1,92 pal/s) | ~155 s | ~183 s | Não. |
+
+## Versão final da narração: "som de estúdio" (pedido do usuário em 03/11)
+
+**Cadeia:** `audio/estudio_voz.py`, chamada por `python3 audio/tratar_narracao.py 1.15 narracao/estudio --estudio`.
+
+1. Picos refeitos por interpolação autorregressiva.
+2. Passa-altas 80 Hz.
+3. Redução de ruído espectral com o perfil de todas as pausas.
+4. Controle de plosivas.
+5. EQ de estúdio: corpo +1,5 dB em 150 Hz, −2,5 dB em 350 Hz, presença +2 dB em 3,5 kHz, ar +1,5 dB acima de 10 kHz.
+6. De-esser.
+7. Compressão em dois estágios.
+8. Respirações e ambiente entre frases abaixados 30 dB.
+
+A redução de ruído por rede neural (DeepFilterNet 3) não foi usada. O carregamento do modelo baixado da internet foi bloqueado pela política de segurança do ambiente, porque arquivos de modelo PyTorch podem executar código. Tudo foi feito com processamento de sinal clássico.
+
+**Resultados:**
+- **Tempos idênticos** aos da versão anterior: mesmas regiões de fala, mesmas pausas, mesmo andamento de 1,15×. A imagem não precisou ser refeita.
+- **Ruído nas pausas:** de cerca de −50 dBFS para −67 a −86 dBFS. A cena 1 tem poucas pausas e ficou em −47.
+- **Presença da voz:** +2 a +3 dB na faixa de 2–5 kHz; o som de caixa (250–500 Hz) caiu cerca de 0,5 dB.
+- **Conferência por nova transcrição:** nenhuma palavra perdida. Restam variações de grafia do reconhecedor ("três" → "3", "mastro" → "astro"); a energia de "mastro" foi medida e está intacta.
+- **Comparação para ouvir:** `NOS_E_AMARRAS_narracao_antes_e_depois.mp3`. Primeiro vem a gravação original, depois a de estúdio, no mesmo volume.

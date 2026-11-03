@@ -8,11 +8,15 @@ Cadeia (por cena; as regiões de fala usam histerese para não cortar finais fra
   5) andamento: rubberband (altura e formantes preservados), fator FATOR;
   6) -18 LUFS por cena, pico <= -1,5 dBFS.
 Também grava o mapa de tempos de cada palavra (original -> tratado) para sincronia e legendas.
-Uso: python3 audio/tratar_narracao.py FATOR [saida] [cenas...]      ex.: python3 audio/tratar_narracao.py 1.12"""
+Com --estudio, o áudio passa pela cadeia "som de estúdio" (audio/estudio_voz.py). As regiões de fala, as pausas
+e o andamento são calculados exatamente como antes, então os tempos das palavras (e a imagem) não mudam.
+Uso: python3 audio/tratar_narracao.py FATOR [saida] [cenas...] [--estudio]      ex.: python3 audio/tratar_narracao.py 1.12"""
 import json, os, sys, subprocess, numpy as np, soundfile as sf, pyloudnorm as pyln, noisereduce as nr
 from scipy.signal import butter, sosfilt
 from scipy.interpolate import CubicSpline
+sys.path.insert(0, 'audio')
 
+ESTUDIO = '--estudio' in sys.argv; sys.argv = [a for a in sys.argv if a != '--estudio']
 FATOR = float(sys.argv[1]) if len(sys.argv) > 1 else 1.0
 SAIDA = sys.argv[2] if len(sys.argv) > 2 else f'narracao/tratadas_{FATOR:.2f}'
 CENAS = sys.argv[3:] or [f'cena{i:02d}' for i in range(1, 10)]
@@ -60,7 +64,7 @@ def regioes_fala(x):
 
 relat = {}
 for cena in CENAS:
-    x, sr = sf.read(f'narracao/originais/{cena}.wav'); assert sr == SR
+    x, sr = sf.read(f'narracao/originais/{cena}.wav'); assert sr == SR; x_orig = x.copy()
     x = declip(x); x = sosfilt(butter(4, 80, 'highpass', fs=SR, output='sos'), x)
     reg = regioes_fala(x); P = TR[cena]['palavras']
     # finais de palavra ditos baixinho (ex.: "mas-tro." caindo no piso): a região vai até o fim da palavra transcrita
@@ -74,6 +78,9 @@ for cena in CENAS:
     g0 = max(gaps, key=lambda g: g[1] - g[0]); ruido = x[g0[0]:g0[1]] if g0[1] - g0[0] > SR * 0.15 else None
     x = nr.reduce_noise(y=x, sr=SR, y_noise=ruido, stationary=True, prop_decrease=0.55)
     x = compressor(x)
+    if ESTUDIO:
+        from estudio_voz import estudio
+        x = estudio(x_orig, reg, P)
     # cortes autorizados (frases inteiras): remove do início da 1ª palavra até o início da palavra seguinte ao trecho
     remov = []
     for i0, i1 in CORTES.get(cena, []):
@@ -111,7 +118,10 @@ for cena in CENAS:
         y, _ = sf.read(tmp_out)
     os.remove(tmp_in); os.path.exists(tmp_out) and os.remove(tmp_out)
     y = pyln.normalize.loudness(y, M.integrated_loudness(y), -18.0); pk = np.abs(y).max()
-    if pk > 10 ** (-1.5 / 20): y *= 10 ** (-1.5 / 20) / pk
+    if ESTUDIO:
+        from dsp_voz import tp_limiter
+        y, _ = tp_limiter(y, ceiling_db=-1.5)
+    elif pk > 10 ** (-1.5 / 20): y *= 10 ** (-1.5 / 20) / pk
     sf.write(f'{SAIDA}/{cena}.wav', y.astype(np.float32), SR, subtype='PCM_24')
     # mapa de tempos das palavras
     def mapa(t):
