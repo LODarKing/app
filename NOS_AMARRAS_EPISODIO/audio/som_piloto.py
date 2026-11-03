@@ -1,97 +1,156 @@
-"""Som do piloto (10 s), sintetizado em código — sem amostras, sem voz.
-1) trilha discreta a 100 bpm (Sol maior): marimba em arpejo, baixo de pizzicato, cama de cordas, chocalho leve;
-2) batidas MEDIDAS na trilha pronta (onset do bumbo/baixo por energia) -> audio/beats.json;
-3) efeitos nos eventos da imagem (config.js), cada um encaixado na semicolcheia medida mais próxima -> audio/acertos.json;
-4) mixagem em -14 LUFS, pico -2 dBFS.
-Rodar a partir de NOS_AMARRAS_EPISODIO/:  python3 audio/som_piloto.py"""
+"""Som do piloto (10 s), sintetizado em código — sem amostras, sem voz. Três estilos de trilha para escolha:
+  violao   acústico de acampamento: violão dedilhado, escovinha, pad que entra no mergulho
+  piano    documentário: piano com tema curto, cordas sustentadas, pulso grave no mergulho
+  moderno  leve para Reels: piano elétrico com acordes de 9ª, batida macia, sub-grave, respiro no mergulho
+Etapas: 1) trilha a 100 bpm (Sol maior; Sol–Mi m–Dó–Ré, um acorde por compasso);
+2) batidas MEDIDAS na trilha pronta -> audio/beats.json; 3) efeitos nos eventos (config.js) na semicolcheia medida
+-> audio/acertos.json; 4) reverberação, mixagem em -14 LUFS e limitador (pico -2 dBFS).
+Uso (a partir de NOS_AMARRAS_EPISODIO/):  python3 audio/som_piloto.py [violao|piano|moderno]"""
 import json, re, sys, numpy as np, soundfile as sf, pyloudnorm as pyln
+from scipy.ndimage import minimum_filter1d
 sys.path.insert(0, 'audio')
-import instruments as I
-from instruments import SR, tv, env, hz, pluck, marimba, noise, whoosh, drum, glock, mx
+from timbres import SR, tv, hz, filt, env, violao_r, piano, rhodes, baixo, sub, pad, bumbo, estalo, escova, chimbal, ruido, reverb
 
+ESTILO = sys.argv[1] if len(sys.argv) > 1 else 'violao'
 cfg = open('config.js').read()
-BPM = float(re.search(r'bpm:\s*([\d.]+)', cfg).group(1)); BEAT = 60 / BPM; E8 = BEAT / 2; S16 = BEAT / 4
-DUR = 10.0 + 0.6; N = int(DUR * SR); I.N = N
+BPM = float(re.search(r'bpm:\s*([\d.]+)', cfg).group(1)); BEAT = 60 / BPM; E8 = BEAT / 2; BAR = 4 * BEAT
 T = {k: float(v) for k, v in re.findall(r'(\w+):\s*([\d.]+)', re.search(r't:\s*\{([^}]*)\}', cfg).group(1))}
-music, sfx = I.Bus(), I.Bus()
+FIM = 10.0; N = int((FIM + 3.0) * SR)
 
-# ---------------------------------------------------------------- 1) trilha
-G = [(43, [59, 62, 67]), (40, [59, 64, 67]), (36, [60, 64, 67]), (38, [62, 66, 69])]      # Sol  Mi-m  Dó  Ré
-def ch(i): return G[(i // 8) % 4]                                                         # 1 acorde por compasso (8 colcheias)
-nE = int(10.0 / E8) + 1
-for i in range(nE):
-    t = i * E8; root, c = ch(i)
-    fade = min(1.0, 0.55 + 0.45 * t / 2.4)                                                # entra já presente, cresce até o título
-    n = c[(0, 1, 2, 1, 2, 1, 0, 2)[i % 8]] + (12 if i % 4 == 3 else 0)
-    music.put(marimba(hz(n + 12), 0.55) * 0.55 * fade, t, -0.35 + 0.7 * (i % 2))
-    if i % 2 == 0: music.put(pluck(hz(root - 12), 0.9, 1400) * 1.1 * fade, t, 0)
-    if i % 4 == 0: music.put(drum(58, 0.45, 0.05, 10) * 0.55 * fade, t, 0)                # bumbo macio nos tempos 1 e 3
-    music.put(noise(0.05, 5000, 11000) * np.exp(-tv(0.05) * 70) * (0.05 if i % 2 else 0.028) * fade, t, 0.3)  # chocalho
-# cama de cordas (um acorde por compasso)
-for b in range(0, nE, 8):
-    root, c = ch(b); d = 8 * E8 + 0.4
-    for j, m in enumerate([root] + c): music.put(I.strings(m, d, 1300, 0.4, 0.5) * (0.07 if j else 0.09), b * E8, -0.4 + 0.27 * j)
-# final: acorde de Sol sustentado
-for j, m in enumerate([43, 59, 62, 67]): music.put(I.strings(m, 1.6, 1300, 0.05, 1.2) * 0.08, 9.6, -0.3 + 0.2 * j)
-music.put(glock(hz(79), 1.6) * 0.5, 9.6, 0.2)
+class Bus:
+    def __init__(s): s.x = np.zeros((N, 2))
+    def put(s, sig, t0, pan=0.0, g=1.0):
+        i0 = int(round(t0 * SR))
+        if i0 < 0: sig = sig[-i0:]; i0 = 0
+        if i0 >= N or len(sig) == 0: return
+        sig = sig[: N - i0] * g; s.x[i0:i0 + len(sig), 0] += sig * np.cos((pan + 1) * np.pi / 4); s.x[i0:i0 + len(sig), 1] += sig * np.sin((pan + 1) * np.pi / 4)
+music, ritmo, sfx = Bus(), Bus(), Bus()
 
-# ---------------------------------------------------------------- 2) batidas medidas (onset de energia grave)
-mono = music.x.mean(1); lo = I.filt(mono, 'lowpass', 160); hop = 240
-e = np.array([np.sum(lo[k:k + hop] ** 2) for k in range(0, len(lo) - hop, hop)]); flux = np.maximum(0, np.diff(e, prepend=0))
-cand = [k for k in range(1, len(flux) - 1) if flux[k] > flux[k - 1] and flux[k] >= flux[k + 1] and flux[k] > 0.25 * flux.max()]
+# acordes: (baixo, quinta do baixo, notas do meio)
+AC = [('Sol', 43, 50, [55, 59, 62, 67]), ('Mi m', 40, 47, [55, 59, 64, 67]), ('Dó', 48, 43, [55, 60, 64, 67]), ('Ré', 50, 45, [54, 57, 62, 66])]
+def acorde(t): return AC[int(t // BAR) % 4]
+NB = int(np.ceil(FIM / BAR))                           # compassos (o 5º começa em 9,6 s: resolução em Sol)
+
+# ---------------------------------------------------------------- 1) trilhas
+if ESTILO == 'violao':
+    # rasqueado curto no tempo 0 (o gancho já começa com som), depois dedilhado em colcheias
+    for j, m in enumerate([43, 50, 55, 59, 62, 67]): music.put(violao_r(hz(m), 2.6, 0.9), j * 0.014, -0.25 + 0.1 * j, 0.8)
+    dedo = [None, 3, 1, 2, None, 3, 1, 2]                       # baixo nas colcheias 0 e 4 (alternado), agudos nas outras
+    for i in range(1, int(FIM / E8) + 1):
+        t = i * E8; nome, b1, b5, mid = acorde(t); k = i % 8
+        if k == 0: music.put(violao_r(hz(b1), 2.0, 1.0), t, -0.15, 1.25)
+        elif k == 4: music.put(violao_r(hz(b5), 1.6, 0.8), t, -0.15, 1.05)
+        else: music.put(violao_r(hz(mid[dedo[k]] + (12 if k == 5 and i // 8 % 2 else 0)), 1.6, 0.65), t, 0.2 + 0.1 * (k % 2), 0.62)
+    # escovinha nos tempos 2 e 4 a partir do 2º compasso; pad discreto a partir do mergulho
+    for i in range(int(BAR / BEAT), int(FIM / BEAT) + 1):
+        if i % 2 == 1: ritmo.put(escova(0.35, 0.9), i * BEAT, 0.1)
+        ritmo.put(escova(0.12, 0.35), i * BEAT + E8, -0.1)
+    for b in range(2, NB):
+        nome, b1, b5, mid = AC[b % 4]; d = BAR + 0.6; g = 0.05 if b == 2 else 0.08
+        music.put(pad([b1 + 12] + mid, d, 1500, g), b * BAR, 0)
+    music.put(violao_r(hz(43), 3.0, 1.0), 9.6, -0.2, 0.9); music.put(violao_r(hz(67), 3.0, 0.7), 9.6 + 0.02, 0.2, 0.6)
+    RV = dict(dur=1.6, umido=0.2)
+
+elif ESTILO == 'piano':
+    tema = [(0, 74), (1, 71), (2, 67), (3, 71), (4, 76), (5, 71), (6, 67), (7, 64), (8, 72), (9, 76), (10, 79), (11, 76), (12, 74), (13, 78), (14, 81), (15, 78)]
+    for b in range(NB):
+        nome, b1, b5, mid = AC[b % 4]; t = b * BAR
+        music.put(piano(hz(b1), 3.0, 0.75), t, -0.3); music.put(piano(hz(b1 + 12), 3.0, 0.55), t, -0.3)
+        for j, m in enumerate(mid[1:]): music.put(piano(hz(m), 2.6, 0.5), t + 0.01 * j + BEAT * 2, -0.05 + 0.1 * j, 0.7)
+        music.put(pad([b1 + 12] + mid, BAR + 0.8, 1200, 0.07 if b else 0.04), t, 0)
+    for q, m in tema: music.put(piano(hz(m), 1.8, 0.62), q * BEAT, 0.25)
+    # pulso grave em colcheias durante o mergulho, preparando a chegada no chicote
+    for i in range(int(T['zoom0'] / E8), int(T['zoom1'] / E8)):
+        k = (i * E8 - T['zoom0']) / (T['zoom1'] - T['zoom0']); ritmo.put(sub(hz(38), 0.26) * (0.4 + 0.6 * k), i * E8, 0)
+    ritmo.put(bumbo(0.9, 0.9), T['zoom1'], 0)
+    music.put(piano(hz(43), 3.2, 0.8), 9.6, -0.3); music.put(piano(hz(79), 3.2, 0.6), 9.6, 0.25)
+    RV = dict(dur=2.4, umido=0.28)
+
+elif ESTILO == 'moderno':
+    EXT = {'Sol': [55, 59, 62, 66, 69], 'Mi m': [52, 55, 59, 62, 66], 'Dó': [52, 55, 59, 62, 64], 'Ré': [54, 57, 62, 64, 69]}
+    for b in range(NB):
+        nome, b1, b5, mid = AC[b % 4]; t = b * BAR
+        for j, m in enumerate(EXT[nome]): music.put(rhodes(hz(m), 2.2, 0.75), t + 0.008 * j, -0.3 + 0.15 * j, 0.8)
+        for j, m in enumerate(EXT[nome][1:4]): music.put(rhodes(hz(m + 12), 0.9, 0.5), t + 3 * BEAT + E8, 0.2, 0.45)   # contratempo
+        music.put(sub(hz(b1 - 12 if b1 > 45 else b1), BAR * 0.9), t, 0, 0.42)
+    for i in range(int(FIM / E8) + 1):
+        t = i * E8; k = i % 8; dentro = not (T['zoom0'] <= t < T['zoom1'])       # respiro: a batida some no mergulho
+        g = 0.55 if t < BAR else 1.0
+        if not dentro: continue
+        if k in (0, 5): ritmo.put(bumbo(0.5, 0.85 * g), t, 0)
+        if k in (2, 6): ritmo.put(estalo(0.9 * g), t, 0.05)
+        ritmo.put(chimbal(1.1 * g * (1.0 if k % 2 else 0.6)), t, 0.25)
+    sw = ruido(T['zoom1'] - T['zoom0'], 2000, 9000) * np.linspace(0, 1, int((T['zoom1'] - T['zoom0']) * SR)) ** 2 * 0.08
+    ritmo.put(sw, T['zoom0'], 0)
+    for j, m in enumerate(EXT['Sol']): music.put(rhodes(hz(m), 3.0, 0.7), 9.6 + 0.01 * j, -0.3 + 0.15 * j, 0.8)
+    RV = dict(dur=1.4, umido=0.18)
+else:
+    sys.exit('estilo desconhecido: ' + ESTILO)
+
+# ---------------------------------------------------------------- 2) batidas medidas (onset de energia grave + percussão)
+mono = (music.x + ritmo.x).mean(1)[: int(FIM * SR)]; hop = 120
+rms = np.sqrt(np.array([np.mean(mono[k:k + hop * 2] ** 2) for k in range(0, len(mono) - hop * 2, hop)]) + 1e-12)
+flux = np.maximum(0, np.diff(np.log(rms), prepend=np.log(rms[0])))
+cand = [k for k in range(1, len(flux) - 1) if flux[k] > flux[k - 1] and flux[k] >= flux[k + 1] and flux[k] > 0.35 * flux.max()]
 on = []
 for k in cand:
     t = k * hop / SR
-    if not on or t - on[-1] > E8 * 0.6: on.append(t)
-# grade ajustada aos onsets (período e fase por mínimos quadrados)
-idx = np.round(np.array(on) / E8); A = np.vstack([idx, np.ones_like(idx)]).T; per, fase = np.linalg.lstsq(A, np.array(on), rcond=None)[0]
-res = np.abs(np.array(on) - (idx * per + fase)).max() * 1000
-batidas = [round(fase + k * per * 2, 3) for k in range(int(10.0 / (per * 2)) + 1)]
-json.dump({'bpm_medido': round(60 / (per * 2), 2), 'fase_s': round(fase, 3), 'residuo_max_ms': round(res, 1), 'onsets': [round(x, 3) for x in on], 'batidas': batidas}, open('audio/beats.json', 'w'), indent=1)
-print(f'bpm medido {60 / (per * 2):.2f}, fase {fase * 1000:.1f} ms, resíduo {res:.1f} ms, {len(on)} onsets')
-def grade(t): return fase + round((t - fase) / (per / 2)) * (per / 2)                    # semicolcheia medida mais próxima
+    if not on or t - on[-1] > E8 * 0.5: on.append(t)
+on = np.array(on)
+# ajuste robusto: grade de colcheias (período e fase) por mínimos quadrados, descartando onsets fora da grade
+usa = np.ones(len(on), bool)
+for _ in range(3):
+    idx = np.round(on / E8); A = np.vstack([idx[usa], np.ones(usa.sum())]).T
+    per, fase = np.linalg.lstsq(A, on[usa], rcond=None)[0]; r = np.abs(on - (idx * per + fase)); usa = r < 0.04
+res = r[usa].max() * 1000
+batidas = [round(fase + k * per * 2, 3) for k in range(int(FIM / (per * 2)) + 1)]
+json.dump({'estilo': ESTILO, 'bpm_medido': round(60 / (per * 2), 2), 'fase_s': round(fase, 3), 'residuo_max_ms': round(res, 1), 'onsets': [round(float(x), 3) for x in on[usa]], 'batidas': batidas}, open('audio/beats.json', 'w'), indent=1)
+print(f'[{ESTILO}] bpm medido {60 / (per * 2):.2f}, fase {fase * 1000:.1f} ms, resíduo {res:.1f} ms, {usa.sum()} de {len(on)} onsets na grade')
+def grade(t): return fase + round((t - fase) / (per / 2)) * (per / 2)
 
-# ---------------------------------------------------------------- 3) efeitos
-def deslize(d, g=0.5):    # corda deslizando: ruído de fibra filtrado com textura de atrito
-    x = noise(d, 900, 5200) * (0.6 + 0.4 * np.abs(np.sin(2 * np.pi * 23 * tv(d)))); return x * env(len(x), 0.12, 0.35) * g
-def toque(f, g=0.5): return mx(marimba(hz(f), 0.5) * 0.9, glock(hz(f + 12), 0.6) * 0.25) * g
-def abre(d=0.9):          # fibras se soltando: estalos finos com semente
+# ---------------------------------------------------------------- 3) efeitos (discretos, no timbre da trilha)
+def deslize(d, g):        # atrito de corda: ruído de fibra, banda média, textura lenta
+    t = tv(d); x = ruido(d, 500, 2600) * (0.7 + 0.3 * np.sin(2 * np.pi * 9 * t) ** 2); return x * env(len(t), 0.18, 0.4) * g
+def toque(m, g):
+    if ESTILO == 'violao': return violao_r(hz(m), 1.4, 0.6) * g * 1.2
+    if ESTILO == 'piano': return piano(hz(m), 1.6, 0.5) * g * 1.3
+    return rhodes(hz(m), 1.4, 0.6) * g * 1.4
+def fibras(d):            # fibras se soltando: estalinhos finos
     out = np.zeros(int(d * SR)); R = np.random.default_rng(9)
-    for _ in range(40):
-        j = int(R.uniform(0, d - 0.03) * SR); c = noise(0.012, 3000, 9000) * np.exp(-tv(0.012) * 400) * R.uniform(0.05, 0.16); out[j:j + len(c)] += c
+    for _ in range(34):
+        j = int(R.uniform(0, d - 0.03) * SR); c = ruido(0.012, 3000, 9000) * np.exp(-tv(0.012) * 400) * R.uniform(0.03, 0.1); out[j:j + len(c)] += c
     return out * env(len(out), 0.1, 0.3)
+def mergulho(d):          # ar passando: banda que sobe, sem "whoosh" de desenho animado
+    n = int(d * SR); x = ruido(d, 250, 1200) * np.linspace(0.2, 1, n) ** 2 + ruido(d, 1200, 5000) * np.linspace(0, 1, n) ** 3 * 0.5
+    return x * env(n, 0.3, 0.12) * 0.35
 ac = []
-def poe(nome, t, sig, pan=0.0, g=1.0):
-    tg = grade(t); sfx.put(sig * g, tg, pan); ac.append({'efeito': nome, 'evento_s': round(t, 3), 'na_grade_s': round(tg, 3), 'desvio_ms': round((tg - t) * 1000, 1)})
-poe('deslize do nó', 0.0, deslize(T['noFim'] + 0.2, 0.32), -0.2)
-poe('nó completo', T['noFim'], toque(74, 0.55), 0.1)
-poe('deslize do título', T['noFim'] + 0.15, deslize(T['tituloFim'] - T['noFim'], 0.26), 0.3)
-poe('título completo', T['tituloFim'] + 0.15, toque(79, 0.5), -0.1)
-poe('mergulho', T['zoom0'], whoosh(T['zoom1'] - T['zoom0'], 300, 3200) * 0.9, 0)
-poe('chegada no chicote', T['zoom1'], mx(drum(70, 0.35, 0.1, 12) * 0.5, toque(67, 0.45)), 0)
-poe('rótulo CORDA', T['zoom1'], toque(71, 0.0), 0)            # (marcador; o toque já soou na chegada)
-poe('cordões se abrem', T['zoom1'] + 0.05, abre(1.1), 0.2)
-poe('rótulo 3 CORDÕES', T['zoom1'] + 0.6, toque(74, 0.42), 0.25)
-poe('fios se abrem', T['abre1'] + 0.1, abre(1.0) * 0.8, -0.2)
-poe('rótulo FIOS', T['abre1'] + 0.6, toque(76, 0.4), -0.25)
-poe('rótulo FIBRAS', T['fios1'], toque(79, 0.4), 0.3)
+def poe(nome, t, sig, pan=0.0):
+    tg = grade(t); sfx.put(sig, tg, pan); ac.append({'efeito': nome, 'evento_s': round(t, 3), 'na_grade_s': round(tg, 3), 'desvio_ms': round((tg - t) * 1000, 1)})
+poe('deslize do nó', 0.0, deslize(T['noFim'] + 0.2, 0.12), -0.2)
+poe('deslize do título', T['noFim'] + 0.15, deslize(T['tituloFim'] - T['noFim'], 0.1), 0.3)
+poe('título completo', T['tituloFim'] + 0.15, toque(79, 0.35), -0.1)
+poe('mergulho', T['zoom0'], mergulho(T['zoom1'] - T['zoom0']), 0)
+poe('cordões se abrem', T['zoom1'] + 0.05, fibras(1.1), 0.2)
+poe('rótulo 3 CORDÕES', T['zoom1'] + 0.6, toque(74, 0.28), 0.25)
+poe('fios se abrem', T['abre1'] + 0.1, fibras(1.0) * 0.8, -0.2)
+poe('rótulo FIOS', T['abre1'] + 0.6, toque(76, 0.26), -0.25)
+poe('rótulo FIBRAS', T['fios1'], toque(78, 0.26), 0.3)
 json.dump(ac, open('audio/acertos.json', 'w'), indent=1, ensure_ascii=False)
 print('maior desvio da grade:', max(abs(a['desvio_ms']) for a in ac), 'ms')
 
 # ---------------------------------------------------------------- 4) mixagem
-mixw = music.x * 0.8 + sfx.x
-mixw = mixw[:int(10.0 * SR)]
-fo = int(0.35 * SR); mixw[-fo:] *= np.linspace(1, 0, fo)[:, None] ** 1.5
-from scipy.ndimage import minimum_filter1d
+mus = reverb(music.x, **RV) + reverb(ritmo.x, dur=0.9, umido=0.12)
+mixw = mus * 0.9 + reverb(sfx.x, dur=0.8, umido=0.1)
+mixw = filt(mixw.T, 'highpass', 35).T
+mixw = mixw[: int(FIM * SR)]
+fo = int(0.5 * SR); mixw[-fo:] *= np.linspace(1, 0, fo)[:, None] ** 1.5
 def limitador(x, teto, look=0.005, rel=0.08):
-    # ganho necessário por amostra, antecipado (lookahead) e com liberação exponencial
     pk = np.abs(x).max(1); g = np.minimum(1.0, teto / np.maximum(pk, 1e-9)); g = minimum_filter1d(g, int(look * SR) * 2 + 1)
     a = np.exp(-1 / (rel * SR)); out = np.empty_like(g); cur = 1.0
     for i in range(len(g)):
         cur = g[i] if g[i] < cur else a * cur + (1 - a) * g[i]; out[i] = cur
     return x * out[:, None]
-meter = pyln.Meter(SR); lufs0 = meter.integrated_loudness(mixw); lim = 10 ** (-2 / 20)
-for _ in range(4):
-    mixw = pyln.normalize.loudness(mixw, meter.integrated_loudness(mixw), -14.0); mixw = limitador(mixw, lim * 0.97)
-print(f'LUFS antes {lufs0:.1f} -> depois {meter.integrated_loudness(mixw):.2f}, pico {20 * np.log10(np.abs(mixw).max()):.2f} dBFS')
-sf.write('audio/trilha_piloto.wav', mixw.astype(np.float32), SR, subtype='PCM_24')
+meter = pyln.Meter(SR); lim = 10 ** (-2 / 20)
+for _ in range(4): mixw = pyln.normalize.loudness(mixw, meter.integrated_loudness(mixw), -14.0); mixw = limitador(mixw, lim * 0.97)
+print(f'LUFS {meter.integrated_loudness(mixw):.2f}, pico {20 * np.log10(np.abs(mixw).max()):.2f} dBFS')
+sf.write(f'audio/trilha_piloto_{ESTILO}.wav', mixw.astype(np.float32), SR, subtype='PCM_24')

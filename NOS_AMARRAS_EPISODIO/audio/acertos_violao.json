@@ -1,0 +1,56 @@
+[
+ {
+  "efeito": "deslize do nó",
+  "evento_s": 0.0,
+  "na_grade_s": 0.014,
+  "desvio_ms": 14.0
+ },
+ {
+  "efeito": "deslize do título",
+  "evento_s": 2.55,
+  "na_grade_s": 2.558,
+  "desvio_ms": 7.6
+ },
+ {
+  "efeito": "título completo",
+  "evento_s": 4.35,
+  "na_grade_s": 4.353,
+  "desvio_ms": 3.2
+ },
+ {
+  "efeito": "mergulho",
+  "evento_s": 4.8,
+  "na_grade_s": 4.802,
+  "desvio_ms": 2.1
+ },
+ {
+  "efeito": "cordões se abrem",
+  "evento_s": 6.05,
+  "na_grade_s": 5.999,
+  "desvio_ms": -50.9
+ },
+ {
+  "efeito": "rótulo 3 CORDÕES",
+  "evento_s": 6.6,
+  "na_grade_s": 6.598,
+  "desvio_ms": -2.4
+ },
+ {
+  "efeito": "fios se abrem",
+  "evento_s": 7.3,
+  "na_grade_s": 7.346,
+  "desvio_ms": 45.8
+ },
+ {
+  "efeito": "rótulo FIOS",
+  "evento_s": 7.8,
+  "na_grade_s": 7.795,
+  "desvio_ms": -5.4
+ },
+ {
+  "efeito": "rótulo FIBRAS",
+  "evento_s": 8.4,
+  "na_grade_s": 8.393,
+  "desvio_ms": -6.8
+ }
+]

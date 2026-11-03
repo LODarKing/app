@@ -34,5 +34,5 @@ const CFG = {
     ],
   },
   // ---------------------------------------------------------------- episódio (preenchido depois da narração)
-  audio: { trilha: 'audio/trilha_piloto.wav', narracao: [] },
+  audio: { estilo: 'violao', trilha: 'audio/trilha_piloto_violao.wav', narracao: [] },   // estilos: violao | piano | moderno (audio/som_piloto.py)
 };
