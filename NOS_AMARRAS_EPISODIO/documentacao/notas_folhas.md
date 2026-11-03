@@ -50,3 +50,27 @@
 - Sem quadros pretos (`blackdetect`).
 - Congelamentos só nas pausas de leitura previstas: título de 3,9 a 4,8 s e camadas de 8,7 a 10 s.
 - −14,0 LUFS, pico −2,2 dBTP.
+
+## Episódio completo — folhas por cena (`node render.mjs --sheet out/folha_sNN.png sNN`)
+
+### Problemas encontrados e corrigidos
+| Cena | Problema | Correção |
+|---|---|---|
+| s2 | A torcida e a trança apareciam devagar demais e a trança tinha voltas demais. Os cartões de fibra estouravam a borda. | Revelação mais rápida, 2,3 voltas e cartões redimensionados. |
+| s3 | A morfose da corda reta para o seio criava um cruzamento passageiro (corda atravessando corda). | Troca: a ponta recolhe a corda reta e volta guiando o seio. Nada atravessa nada. |
+| s3 | O selo "fixa" aparecia em "ponta fixa" (palavra errada). | Âncora na 2ª ocorrência. |
+| s3 | Volta do fiel pequena demais para ler. | Escala 1,55 e mastro mais grosso. |
+| s3 | A alça de azelha saía estreita. | Laço redondo no prolongamento da perna do seio. |
+| s7 | O título ficava atrás dos mastros, a volta do fiel longe da travessa e a ponta passava por trás da travessa. | Título por cima, volta do fiel logo abaixo da travessa e a ponta passando por cima dela. |
+| s8 | O cordão de cima cobria a referência bíblica. | Referência e citação foram para baixo do cordão. |
+| todas | Legendas de 3 linhas. | Blocos de até 54 caracteres, com quebras forçadas nas frases longas. |
+
+### Notas finais (autoavaliação)
+| Critério | Nota |
+|---|---|
+| Gancho nos 2 primeiros segundos | 8 |
+| Leitura em tela de celular | 8 — legenda de 54 px em até 2 linhas, nomes dos termos em 64 px. Alguns textos de apoio têm 30–32 px. |
+| Qualidade do movimento | 8 |
+| Variedade | 8 — algo novo a cada 2–4 s; o maior trecho parado é na s2, com ~3,6 s, enquanto os fios se abrem. |
+| Fidelidade à marca | 8 — paleta da insígnia (verde e branco-prata) com destaque amarelo, Zilla Slab e Inter, insígnia oficial no fim. |
+| Sincronia do som | 8 — tudo ancorado nas palavras da narração; 71 efeitos na semicolcheia medida (desvio máximo de 74 ms); voz 17 dB acima da trilha. |

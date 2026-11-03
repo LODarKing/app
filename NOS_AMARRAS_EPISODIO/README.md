@@ -14,7 +14,19 @@ Animação vetorial em canvas 2D, desenhada do zero em código. Render determin�
 | `audio/` | Síntese da trilha e dos efeitos (`som_piloto.py`, `timbres.py`), além de `beats.json` (batidas medidas) e `acertos.json`. |
 | `documentacao/` | Fontes, nomenclatura, matriz de cobertura, roteiro, storyboard e notas das folhas de contato. |
 
-## Comandos (a partir desta pasta)
+## Episódio completo (a partir desta pasta)
+```sh
+python3 audio/transcrever.py                             # transcrição das gravações originais (narracao/originais/*.wav)
+python3 audio/tratar_narracao.py 1.15 narracao/tratadas  # tratamento leve + andamento 1,15× (autorizado) -> copiar para falas/
+node audio/montar_timeline.mjs                           # timeline.js (cenas pelas palavras) + legendas + NOS_E_AMARRAS.srt
+python3 audio/som_episodio.py                            # trilha + foley + narração, -14 LUFS -> audio/mix.wav
+node render.mjs --sheet out/folha_s03.png s3             # folha de contato de uma cena
+node render.mjs --video out/episodio_video.mp4           # imagem com legendas  (--sem-legenda para a versão limpa)
+node render.mjs --mux out/episodio_video.mp4 audio/mix.wav NOS_E_AMARRAS_FINAL.mp4
+```
+Textos de legenda: grafia e quebras em `config.js` (`grafia`, `quebras`); tempos das cenas: `cenas[].extra` e `vo`.
+
+## Comandos do piloto (a partir desta pasta)
 ```sh
 python3 audio/som_piloto.py moderno musical              # trilha (violao|piano|moderno) + efeitos (nenhum|foley|musical|toques), -14 LUFS
 node render.mjs --sheet out/folha_piloto.png             # um quadro por batida (ciclo de notas)

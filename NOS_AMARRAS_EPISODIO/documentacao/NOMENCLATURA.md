@@ -10,7 +10,7 @@ Os nomes dos 10 termos do requisito 2 vieram de uma tradução da especialidade 
 | 4 | Nó superior | *overhand* | A ponta cruza **por cima** da parte fixa e passa por dentro da volta. Aparece na tela como **"Nó superior (nó simples)"**. | Os gabaritos brasileiros chamam de "nó simples" e T4 o descreve como a volta cruzada por cima. A mesma animação mostra as duas leituras: primeiro a volta por cima, depois a ponta atravessando. |
 | 5 | Alça de azelha (laçada com nó) | *loop* | Alça **fixa** feita com um nó no seio (nó de azelha). Não corre quando puxada. | O parêntese do requisito ("laçada com nó") e a "azelha" dos manuais brasileiros. |
 | 6 | Volta (laço) | *turn* | A corda **cruza sobre si mesma** ou envolve um objeto. Contraste direto com o seio, que não cruza. | T1: "laço é o cruzamento de duas partes". R2: *turn* ao redor de objetos ou da própria corda. |
-| 7 | Curva (dobra) | *bend* | **Nó que une duas cordas pelas pontas** (exemplo: nó de escota). | Em inglês, *bend* é o nome técnico dos nós de união, e "curva/dobra" é a tradução literal. O vídeo avisa: "aqui, curva é nome técnico". |
+| 7 | Curva (dobra) | *bend* | **Nó que une duas cordas pelas pontas** (exemplo no vídeo: **nó de fita**). | Em inglês, *bend* é o nome técnico dos nós de união, e "curva/dobra" é a tradução literal. O vídeo avisa: "aqui, curva é nome técnico". |
 | 8 | Amarra | *hitch* | Prende a corda **a um objeto** (mastro, argola). Várias voltas apertadas unindo paus formam as amarras de pioneiria. | R2: *hitch* prende a corda a um mastro. Liga o termo às amarras do requisito 10. |
 | 9 | União de cordas | *splice* | **Emenda (costura)**: os cordões de uma corda são entrelaçados nos da outra, **sem nó**. | Mesma posição de *splice* na lista. O requisito 7 da edição brasileira traduz *splice* por "costura". Fica distinto da curva: a curva une com nó, a emenda une entrelaçando. |
 | 10 | Chicote (ponta de trabalho) | *whipping* | A **extremidade** da corda. Precisa de acabamento (falcaça ou fusão, nas sintéticas) para não desfiar. | Em português náutico, chicote é a ponta do cabo (T1). *Whipping* é a falcaça que protege o chicote, e o vídeo mostra as duas coisas juntas. |
@@ -34,3 +34,25 @@ Os nomes dos 10 termos do requisito 2 vieram de uma tradução da especialidade 
 
 1. Apresentar **curva** como "nó de união" (*bend*) e **união de cordas** como "emenda/costura" (*splice*). Alguns gabaritos de clube tratam "curva" como "dobra da corda". Se o avaliador do clube usar essa leitura, dá para trocar o texto em `config.js` sem refazer a animação.
 2. **Nó superior** aparece como "nó superior (nó simples)".
+
+## Exemplo de "curva" no vídeo: nó de fita, e não nó de escota nem nó direito
+
+- O **nó de fita** (Ashley nº 1412) foi construído para ser correto por definição:
+  - um nó simples (trevo, 3 cruzamentos alternados) na corda A;
+  - a corda B percorre o mesmo caminho em sentido contrário.
+
+  O laboratório confere 12 cruzamentos coerentes.
+- O **nó direito** tem 6 cruzamentos, e a distinção entre ele, o nó torto e o nó de ladrão depende de detalhes fáceis de errar num desenho feito à mão. Por isso ficou de fora.
+- O **nó de escota** ficou para quando houver uma referência de desenho conferida.
+
+## Nós desenhados e como foram conferidos
+
+| Nó | Como foi construído | Conferência |
+|---|---|---|
+| Nó oito (abertura) | Desenho à mão, com 4 cruzamentos alternados. | Um diagrama alternado reduzido de 4 cruzamentos é o nó oito. |
+| Nó superior / nó simples | Trevo paramétrico aberto num laço. | 3 cruzamentos alternados. |
+| Alça de azelha | O mesmo trevo com a corda dobrada (seio). | 12 cruzamentos; o "por cima/por baixo" vem do trevo. |
+| Nó de fita | O trevo na corda A, refeito ao contrário pela corda B. | 12 cruzamentos. |
+| Volta do fiel | Comparado com o diagrama do Pathfinder Wiki (*Knot_clove*, Open Clip Art). | A volta montada cruza por cima das duas pontas, que saem em sentidos opostos. |
+| Volta da ribeira | A volta abraça os dois paus, passa uma vez pela parte fixa e se torce 3 vezes na própria corda. | Comparado com a foto *Timber_Hitch_Final* (Wikimedia Commons). |
+| Trança de 3 cordões | Paramétrica. | Conferida numericamente: cada cordão alterna por cima e por baixo (OUOU…). |
