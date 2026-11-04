@@ -183,9 +183,9 @@ function drawPrimeiroPlano(ctx, t) {
   const copas = [[-0.78, -0.55, 420, 0], [0.8, -0.3, 400, 1], [-0.85, 0.45, 440, 2], [0.7, 0.72, 460, 3], [0.1, -1.0, 360, 1]];
   for (const [dx, dy, r, c] of copas) {
     const f = 1.05 + e * 2.6, x = 540 + dx * 620 * f, y = 900 + dy * 900 * f, rr = r * (1 + e * 1.4);
-    ctx.fillStyle = 'rgba(5,14,9,0.45)'; ctx.beginPath(); ctx.arc(x + 40, y + 55, rr, 0, 7); ctx.fill();
-    ctx.fillStyle = mixHex(PAL.folha[c], PAL.mata, 0.35); ctx.beginPath(); ctx.arc(x, y, rr, 0, 7); ctx.fill();
-    ctx.fillStyle = 'rgba(160,200,140,0.14)'; ctx.beginPath(); ctx.arc(x - rr * 0.3, y - rr * 0.32, rr * 0.55, 0, 7); ctx.fill();
+    const sp = COPAS.grandes[c % COPAS.grandes.length];
+    ctx.globalAlpha = 0.5; COPAS.sombra(ctx, sp, x + 40, y + 55, rr); ctx.globalAlpha = 1;
+    COPAS.desenha(ctx, sp, x, y, rr);
   }
 }
 

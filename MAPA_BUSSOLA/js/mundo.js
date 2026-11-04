@@ -51,12 +51,15 @@ const MUNDO = (() => {
       const r = 15 + R() * 12 + 6 * fbm(px / 300, py / 300, 7, 2);
       let d = 1e9; for (const p of todasTrilhas) { const dd = (p[0] - px) ** 2 + (p[1] - py) ** 2; if (dd < d) d = dd; }
       d = Math.sqrt(d);
-      if (d < r * 0.55 + 13) continue;                       // a trilha fica à vista
+      if (d < r * 0.85 + 14) continue;                       // a trilha fica à vista
       if (Math.hypot(px, py) < 58) continue;                  // clareira onde você está
       const clar = fbm(px / 260 + 3, py / 260 - 8, 99, 3);
       if (clar > 0.7 && R() < 0.8) continue;                  // pequenas clareiras naturais
       const hh = 0.55 + 0.6 * fbm(px / 180, py / 180, 13, 3) + R() * 0.35;
-      arvores.push({ x: px, y: py, r, h: hh, c: Math.floor(R() * 5), sh: R() });
+      const a = { x: px, y: py, r, h: hh, c: Math.floor(R() * 5), sh: R() };
+      a.sp = COPAS.escolhe(a);
+      if (a.sp.raio === 100 && hash2(Math.round(px), Math.round(py), 77) < 0.07) a.h += 0.35; // araucárias são emergentes
+      arvores.push(a);
     }
     arvores.sort((a, b) => a.h - b.h);
   }
@@ -147,16 +150,11 @@ const MUNDO = (() => {
       const f = 1 + a.h * par;
       vis.push([CX + (sx - CX) * f, CY + (sy - CY) * f, rr * (1 + a.h * par * 0.8) * k, a]);
     }
-    // sombras (luz vinda de cima à esquerda)
-    ctx.fillStyle = 'rgba(5,14,9,0.42)';
-    ctx.beginPath();
-    for (const [x, y, r, a] of vis) { const o = (5 + 7 * a.h) * cam.z; ctx.moveTo(x + o + r, y + o * 1.25); ctx.arc(x + o, y + o * 1.25, r * 1.02, 0, 7); }
-    ctx.fill();
-    for (const [x, y, r, a] of vis) {
-      ctx.fillStyle = PAL.folha[a.c]; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill();
-      ctx.fillStyle = 'rgba(160,200,140,0.20)'; ctx.beginPath(); ctx.arc(x - r * 0.28, y - r * 0.3, r * 0.58, 0, 7); ctx.fill();
-      ctx.fillStyle = 'rgba(200,230,170,0.16)'; ctx.beginPath(); ctx.arc(x - r * 0.38, y - r * 0.42, r * 0.26, 0, 7); ctx.fill();
-    }
+    // sombras (luz vinda de cima à esquerda): silhueta da própria copa, deslocada
+    ctx.globalAlpha = 0.5;
+    for (const [x, y, r, a] of vis) { const o = (5 + 7 * a.h) * cam.z; COPAS.sombra(ctx, a.sp, x + o, y + o * 1.25, r * 1.02); }
+    ctx.globalAlpha = 1;
+    for (const [x, y, r, a] of vis) COPAS.desenha(ctx, a.sp, x, y, r);
   }
 
   // mapa topográfico do mesmo terreno

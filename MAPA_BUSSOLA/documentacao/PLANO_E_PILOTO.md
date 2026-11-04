@@ -16,6 +16,7 @@
 
 ## 2. Linguagem visual
 - Cartografia editorial em 2,5D, toda procedural (canvas 2D, vetorial). Um único terreno fictício serve de floresta vista de cima e de mapa topográfico. Assim, as passagens floresta → mapa são cortes de correspondência, e o relevo, a escala e o percurso de 10 pontos usam a mesma geografia em todas as cenas.
+- Copas das árvores (`js/copas.js`): sprites ilustrados criados uma vez com semente fixa. São três tipos: folhosa (7 a 12 tufos com contorno lobado, três tons de luz vinda de cima à esquerda, textura de folhas e sombra interna), palmeira (folhas radiais com folíolos) e araucária emergente (galhos em verticilo com tufos de agulhas). Há quatro famílias de verde e 34 variantes. As copas do primeiro plano do mergulho usam versões em alta resolução, com mais textura. Cada árvore projeta a sombra da própria silhueta.
 - Paleta: verde-floresta `#173022` a `#56875A`, areia `#E9DFC6`, amarelo `#F2C230` (único destaque), branco e preto.
 - Tipografia: **Barlow Condensed ExtraBold** nos títulos e palavras-chave; **Inter** na interface e nas legendas. As duas fontes têm licença OFL e estão em `fonts/`.
 - Palavras-chave usam um marca-texto amarelo que corre por trás do texto preto. Nada entra com fade. Não há título centralizado sobre gradiente, etiquetas nos cantos, glow ou explosão de partículas.
@@ -67,6 +68,7 @@ Pela contagem de palavras do roteiro (cerca de 380), a narração deve ficar ent
 
 Correções entre as versões:
 - v1 → v2: o quadro 0 deixou de ser só um close das copas e ganhou um mergulho de drone com abertura sobre o marcador; a chamada "VOCÊ ESTÁ AQUI" saiu de baixo dos botões do Instagram; "BÚSSOLA" se afastou da legenda; a primeira legenda entra no quadro 0.
+- v3 → v4 (pedido do usuário): as copas deixaram de ser círculos e passaram a ser copas ilustradas e detalhadas; a faixa livre ao longo das trilhas foi alargada para que continuem legíveis.
 - v2 → v3: "MAPA" e "BÚSSOLA" passaram a entrar junto com as palavras faladas; o pico real ficou abaixo de −1 dBTP depois do AAC.
 
 ## 6. Precisão técnica (registrada para as próximas cenas)
