@@ -47,6 +47,13 @@ if (args[0] === '--frame') {
   for (const b of beats) { const f = `out/_b_${b.toFixed(3)}.png`; fs.writeFileSync(f, await grab(p, b + 0.02)); files.push(f); }
   sheet(files, beats.map((b) => b.toFixed(2) + 's'), out, 8);
   console.log(out, beats.length, 'batidas');
+} else if (args[0] === '--capa') {
+  // --capa saida.png: capa 9:16; gera também saida_recorte4x5.png (o que aparece no perfil) e saida_guia4x5.png (conferência)
+  const p = await page(); await p.evaluate(() => window.capa()); const u = await p.evaluate(() => window.png());
+  fs.writeFileSync(args[1], Buffer.from(u.split(',')[1], 'base64'));
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-vf', 'crop=1080:1350:0:285', args[1].replace(/\.png$/, '_recorte4x5.png')]);
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-vf', 'drawbox=x=0:y=285:w=1080:h=1350:color=0x00E5FF@0.9:t=6', 'out/capa_guia4x5.png']);
+  console.log('capa:', args[1]);
 } else if (args[0] === '--acertos') {
   const p = await page(); const ev = await p.evaluate(() => window.acertos());
   fs.writeFileSync('audio/acertos.json', JSON.stringify(ev, null, 1)); console.log('audio/acertos.json', ev.length, 'acertos');

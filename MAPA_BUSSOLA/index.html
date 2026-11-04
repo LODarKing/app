@@ -11,6 +11,7 @@ canvas { display: block; }
 </style></head>
 <body>
 <canvas id="c" width="1080" height="1920"></canvas>
+<img id="emblema" src="assets/emblema_desbravadores_recortado.png" style="display:none">
 <script src="timeline.js"></script>
 <script src="audio/beats.js"></script>
 <script src="js/core.js"></script>
@@ -30,14 +31,17 @@ canvas { display: block; }
 <script src="js/cenas/s08_uso.js"></script>
 <script src="js/cenas/s09_simulacao.js"></script>
 <script src="js/cenas/s10_final.js"></script>
+<script src="js/capa.js"></script>
 <script>
   // Contrato de render: window.seek(t) desenha o quadro do instante t (função pura do tempo).
   window.ready = (async () => {
     for (const f of ['800 40px BarlowC', '500 40px InterUI', '600 40px InterUI', '700 40px InterUI', '800 40px InterUI']) await document.fonts.load(f);
+    await document.getElementById('emblema').decode();
     return true;
   })();
   const ctx = document.getElementById('c').getContext('2d');
   window.seek = (t) => { renderFrame(ctx, t); };
+  window.capa = () => { renderCapa(ctx); };
   window.png = () => document.getElementById('c').toDataURL('image/png');
 </script>
 </body></html>
