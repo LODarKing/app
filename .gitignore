@@ -53,3 +53,8 @@ FELINOS_EPISODIO/audio/mix.wav
 FELINOS_EPISODIO/*.mp4
 # fotos reais (Wikimedia Commons): material de terceiros, baixado por fotos/baixar.py
 FELINOS_EPISODIO/assets/fotos/
+# Mapa e Bússola: quadros de conferência e renders intermediários
+MAPA_BUSSOLA/out/
+MAPA_BUSSOLA/audio/mix.wav
+MAPA_BUSSOLA/audio/musica.wav
+MAPA_BUSSOLA/audio/sfx.wav
