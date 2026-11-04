@@ -1,7 +1,21 @@
-// Cena 1 — HOOK (piloto de 10 s).
-// Batidas (96 BPM, 0,625 s): A 0–4 floresta e "você"; B 4–8 o celular perde o sinal; C 8–12 os caminhos e a dúvida; D 12–16 floresta vira mapa + bússola.
+// Cena 1 — HOOK (aprovado no piloto). As 16 âncoras agora vêm das palavras faladas, na grade de batidas.
+// A: floresta e "você"; B: o celular perde o sinal; C: os caminhos e a dúvida; D: floresta vira mapa + bússola.
 'use strict';
-const BT = (i) => (typeof BEATS !== 'undefined' && BEATS[i] !== undefined ? BEATS[i] : i * 0.625);
+const A1 = (() => {
+  const h = (t, tipo, g) => hit('s01', t, tipo, g), a = [];
+  a[0] = h(0, 'mergulho'); a[1] = h(0.62, 'baque'); a[2] = h(F('s01', 'floresta'), 'tique'); a[3] = a[2] + 0.3;
+  a[4] = h(F('s01', 'sem') - 0.1, 'deslize'); a[5] = h(F('s01', 'internet'), 'bipe1'); a[6] = h(F('s01', 'GPS'), 'bipe2');
+  a[7] = h(F('s01', 'GPS', 0, 't1') + 0.2, 'erro');
+  a[8] = h(F('s01', 'caminhos') - 0.1, 'traco');
+  for (const i of [9, 10, 11]) a[i] = h(a[8] + (i - 8) * 0.625, i < 11 ? 'traco' : null);
+  for (const i of [9, 10, 11]) hit('s01', a[i], 'interroga' + (i - 8));
+  a[12] = h(F('s01', 'resposta'), 'papel'); hit('s01', a[12], 'subida_fim');
+  a[13] = h(F('s01', 'instrumentos') - 0.2, 'bussola_entra');
+  a[14] = h(F('s01', 'mapa'), 'marca'); a[15] = h(F('s01', 'bússola') - 0.1, 'marca');
+  a[16] = CENAS.s01.dur;
+  return a;
+})();
+const BT = (i) => A1[i];
 
 function camS01(t) {
   // A: a câmera mergulha de muito perto para a vista aérea (impacto no quadro 0)
@@ -12,7 +26,7 @@ function camS01(t) {
   const kC = eio(prog(t, BT(8) - 0.1, BT(8) + 1.5));
   z = lerp(z, 0.74, kC); cy = lerp(cy, -470, kC); cx = lerp(cx, 10, kC); r = lerp(r, -0.035, kC);
   // D: leve aproximação sobre o mapa
-  const kD = eio(prog(t, BT(12), 10));
+  const kD = eio(prog(t, BT(12), BT(16)));
   z = lerp(z, 0.8, kD); cy = lerp(cy, -430, kD); r = lerp(r, 0, kD);
   return { cx, cy, z, r };
 }
@@ -165,7 +179,7 @@ function renderS01(ctx, t) {
     maskWord(ctx, txt, x, y, px, t, tw, { color: PAL.preto });
   };
   if (kD > 0.2) marca('MAPA', 70, 470, 180, BT(14) + 0.02);
-  const tb = BT(14);
+  const tb = BT(13);
   const kb = eo5(prog(t, tb - 0.3, tb + 0.55));
   if (kb > 0) {
     const ag = 0.9 * Math.exp(-3.0 * Math.max(0, t - tb)) * Math.cos(9 * Math.max(0, t - tb)) + (t < tb ? 0.9 : 0);
@@ -173,7 +187,6 @@ function renderS01(ctx, t) {
     marca('BÚSSOLA', 60, 1120, 150, BT(15) + 0.1);
   }
   drawPrimeiroPlano(ctx, t);
-  LEG.draw(ctx, t);
 }
 
 // primeiro plano do mergulho: copas grandes passam pela câmera (2,5D) e saem do quadro até 0,7 s
@@ -189,7 +202,3 @@ function drawPrimeiroPlano(ctx, t) {
   }
 }
 
-function renderFrame(ctx, t) {
-  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.setLineDash([]);
-  renderS01(ctx, t);
-}

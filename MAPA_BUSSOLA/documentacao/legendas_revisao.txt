@@ -1,0 +1,99 @@
+00:00:00,070  Imagine estar no meio de
+00:00:01,490  uma floresta,
+00:00:02,410  sem internet,
+00:00:03,370  sem GPS e com vários
+00:00:04,950  caminhos pela frente.
+00:00:06,590  Como descobrir para onde ir?
+00:00:08,950  A resposta pode estar em
+00:00:10,530  dois instrumentos:
+00:00:12,050  um mapa e uma bússola!
+00:00:13,960  Tudo começa com a rosa
+00:00:15,730  dos ventos.
+00:00:16,700  São quatro pontos cardeais:
+00:00:19,140  Norte, Sul,
+00:00:20,500  Leste e Oeste,
+00:00:22,260  e quatro colaterais:
+00:00:24,480  Nordeste, Sudeste,
+00:00:25,880  Sudoeste e Noroeste.
+00:00:28,120  Juntos, eles formam oito
+00:00:30,220  direções fundamentais para
+00:00:32,260  a orientação.
+00:00:33,215  O mapa topográfico representa
+00:00:35,685  o relevo do terreno.
+00:00:37,495  Suas curvas de nível mostram
+00:00:39,255  diferentes altitudes.
+00:00:40,925  Quanto mais próximas estiverem,
+00:00:43,585  mais íngreme é a subida.
+00:00:45,595  Esses mapas ajudam a identificar
+00:00:47,415  montanhas, vales e planejar
+00:00:49,795  rotas mais seguras.
+00:00:51,905  E como calcular a distância?
+00:00:54,235  Pela escala!
+00:00:54,955  Num mapa de 1 para
+00:00:55,855  25 mil,
+00:00:56,755  cada centímetro representa
+00:00:58,495  250 metros reais.
+00:01:01,255  Então, 4 centímetros equivalem
+00:01:03,815  a 1 quilômetro.
+00:01:05,235  Mas atenção:
+00:01:06,505  essa é a distância no
+00:01:07,765  mapa, não necessariamente
+00:01:09,725  a percorrida no terreno.
+00:01:11,370  Já a ortofoto é uma
+00:01:13,250  imagem aérea corrigida geometricamente,
+00:01:16,070  permitindo medir posições
+00:01:17,570  e distâncias com precisão cartográfica.
+00:01:20,700  Ela mostra estradas,
+00:01:22,500  rios e construções como realmente
+00:01:24,720  estão distribuídas no terreno.
+00:01:26,530  Agora vem o azimute:
+00:01:28,490  um ângulo medido em graus,
+00:01:30,350  a partir do Norte,
+00:01:31,670  no sentido horário.
+00:01:33,460  Norte é 0 grau,
+00:01:35,100  Leste 90,
+00:01:36,640  Sul 180 e Oeste 270.
+00:01:40,600  Um azimute de 60 graus
+00:01:42,820  aponta para uma direção entre
+00:01:44,820  Norte e Leste.
+00:01:46,180  Mas existe um detalhe importante:
+00:01:49,000  o Norte magnético não coincide
+00:01:51,140  exatamente com o Norte verdadeiro.
+00:01:53,680  Essa diferença angular é
+00:01:55,300  chamada de declinação magnética.
+00:01:57,550  Para corrigir a orientação,
+00:01:59,730  consulte a declinação indicada
+00:02:02,070  para o local e a
+00:02:03,250  data e aplique a correção
+00:02:05,000  adequada à sua bússola e
+00:02:06,900  ao mapa.
+00:02:07,485  Para encontrar uma direção,
+00:02:09,495  mantenha a bússola horizontal,
+00:02:11,275  longe de metais.
+00:02:12,925  Gire o corpo até alinhar
+00:02:14,505  a agulha magnética com a
+00:02:16,085  marca do Norte.
+00:02:16,485  Com a bússola corretamente
+00:02:17,925  orientada, identifique Norte,
+00:02:20,325  Sul, Leste e Oeste e
+00:02:21,815  siga o rumo planejado.
+00:02:23,535  Chegou o desafio!
+00:02:25,035  Com seu instrutor,
+00:02:26,655  prepare uma pista com pelo
+00:02:28,055  menos 10 pontos de controle.
+00:02:30,555  Em cada etapa,
+00:02:31,615  leia o mapa,
+00:02:32,465  determine o rumo com a
+00:02:33,405  bússola, confira a distância
+00:02:35,425  e encontre o próximo ponto.
+00:02:37,575  Na animação parece simples.
+00:02:39,695  Agora é a sua vez
+00:02:40,875  de colocar tudo em prática!
+00:02:42,355  Saber se orientar é muito
+00:02:45,075  mais que encontrar um caminho.
+00:02:47,295  É desenvolver atenção,
+00:02:48,935  autonomia e responsabilidade.
+00:02:51,425  Agora reúna seu clube,
+00:02:53,125  pratique com segurança e
+00:02:54,665  conquiste sua especialidade
+00:02:56,065  de Mapa e Bússola!

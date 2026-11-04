@@ -41,12 +41,15 @@ if (args[0] === '--frame') {
   for (const t of ts) { const f = `out/_s_${t}.png`; fs.writeFileSync(f, await grab(p, Number(t))); files.push(f); }
   sheet(files, ts.map((t) => t + 's'), out, Math.min(files.length, 6));
 } else if (args[0] === '--sheet') {
-  const out = args[1] || 'out/folha_contato.png';
-  const beats = JSON.parse(fs.readFileSync('audio/beats.json', 'utf8')).beats.filter((b) => b < TL.dur);
+  const out = args[1] || 'out/folha_contato.png', sc = args[2] ? TL.scenes.find((s) => s.id === args[2]) : { t0: 0, dur: TL.dur };
+  const beats = JSON.parse(fs.readFileSync('audio/beats.json', 'utf8')).beats.filter((b) => b >= sc.t0 && b < sc.t0 + sc.dur);
   const p = await page(), files = [];
   for (const b of beats) { const f = `out/_b_${b.toFixed(3)}.png`; fs.writeFileSync(f, await grab(p, b + 0.02)); files.push(f); }
   sheet(files, beats.map((b) => b.toFixed(2) + 's'), out, 8);
   console.log(out, beats.length, 'batidas');
+} else if (args[0] === '--acertos') {
+  const p = await page(); const ev = await p.evaluate(() => window.acertos());
+  fs.writeFileSync('audio/acertos.json', JSON.stringify(ev, null, 1)); console.log('audio/acertos.json', ev.length, 'acertos');
 } else if (args[0] === '--video') {
   const out = args[1], t0 = Number(args[2] || 0), t1 = Number(args[3] || TL.dur);
   const f0 = Math.round(t0 * FPS), f1 = Math.round(t1 * FPS), n = f1 - f0, NP = 4, per = Math.ceil(n / NP), tA = Date.now();

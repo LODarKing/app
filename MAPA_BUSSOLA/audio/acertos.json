@@ -1,0 +1,878 @@
+[
+ {
+  "t": 0,
+  "tipo": "mergulho",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 0.6249,
+  "tipo": "baque",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 1.5624,
+  "tipo": "tique",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 2.1874,
+  "tipo": "deslize",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 2.4999,
+  "tipo": "bipe1",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 3.4374,
+  "tipo": "bipe2",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 4.3749,
+  "tipo": "erro",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 4.9999,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 5.6249,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 5.6249,
+  "tipo": "interroga1",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 6.2499,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 6.2499,
+  "tipo": "interroga2",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 6.8749,
+  "tipo": "interroga3",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 9.3749,
+  "tipo": "papel",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 9.3749,
+  "tipo": "subida_fim",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 10.6249,
+  "tipo": "bussola_entra",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 12.1874,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 13.1249,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s01"
+ },
+ {
+  "t": 14.0624,
+  "tipo": "mergulho",
+  "ganho": 0.7,
+  "cena": "s02"
+ },
+ {
+  "t": 15.6249,
+  "tipo": "risco",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 18.1249,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 19.0624,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 19.9999,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 20.6249,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 21.2499,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 22.8124,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 24.3749,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 25.3124,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 25.9374,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 26.8749,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 29.6874,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 29.9999,
+  "tipo": "tique",
+  "ganho": 0.6,
+  "cena": "s02"
+ },
+ {
+  "t": 30.3124,
+  "tipo": "tiquinho",
+  "ganho": 0.6,
+  "cena": "s02"
+ },
+ {
+  "t": 30.3124,
+  "tipo": "tique",
+  "ganho": 0.6,
+  "cena": "s02"
+ },
+ {
+  "t": 30.6249,
+  "tipo": "tiquinho",
+  "ganho": 0.6,
+  "cena": "s02"
+ },
+ {
+  "t": 30.6249,
+  "tipo": "tique",
+  "ganho": 0.6,
+  "cena": "s02"
+ },
+ {
+  "t": 30.9374,
+  "tipo": "tiquinho",
+  "ganho": 0.6,
+  "cena": "s02"
+ },
+ {
+  "t": 30.9374,
+  "tipo": "tique",
+  "ganho": 0.6,
+  "cena": "s02"
+ },
+ {
+  "t": 31.2499,
+  "tipo": "tiquinho",
+  "ganho": 0.6,
+  "cena": "s02"
+ },
+ {
+  "t": 32.4999,
+  "tipo": "deslize",
+  "ganho": 1,
+  "cena": "s02"
+ },
+ {
+  "t": 34.0624,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 37.8124,
+  "tipo": "risco",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 39.3748,
+  "tipo": "subida_fim",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 41.8748,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 43.7498,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 47.4998,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 48.7498,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 49.3748,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 50.6248,
+  "tipo": "confirma",
+  "ganho": 1,
+  "cena": "s03"
+ },
+ {
+  "t": 53.1248,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 54.3748,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 55.6248,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 57.1873,
+  "tipo": "deslize",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 58.4373,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 61.8748,
+  "tipo": "tique",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 64.3748,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 65.3123,
+  "tipo": "erro",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 66.8748,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 68.7498,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 69.9998,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s04"
+ },
+ {
+  "t": 72.1873,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 73.7498,
+  "tipo": "deslize",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 74.0623,
+  "tipo": "subida_fim",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 77.1873,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 77.8123,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 78.7498,
+  "tipo": "risco",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 81.5622,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 82.4997,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 83.1247,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s05"
+ },
+ {
+  "t": 87.4997,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 88.7497,
+  "tipo": "risco",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 89.6872,
+  "tipo": "tique",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 90.9372,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 91.8747,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 93.4372,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 94.9997,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 96.5622,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 98.4372,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 100.6247,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 101.5622,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 104.3747,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s06"
+ },
+ {
+  "t": 107.4997,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 109.3747,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 112.4997,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 113.7497,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 116.2497,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 117.8122,
+  "tipo": "deslize",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 119.6872,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 122.4996,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 123.1246,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 124.0621,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 126.2496,
+  "tipo": "tique",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 127.1871,
+  "tipo": "tique",
+  "ganho": 1,
+  "cena": "s07"
+ },
+ {
+  "t": 127.4996,
+  "tipo": "deslize",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 130.6246,
+  "tipo": "confirma",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 130.9371,
+  "tipo": "deslize",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 132.1871,
+  "tipo": "erro",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 132.8121,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 134.6871,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 135.9371,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 136.5621,
+  "tipo": "confirma",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 137.8121,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 139.6871,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 140.3121,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 140.6246,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 141.2496,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 141.5621,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 142.4996,
+  "tipo": "giro",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 142.8121,
+  "tipo": "passo",
+  "ganho": 1,
+  "cena": "s08"
+ },
+ {
+  "t": 144.3746,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 145.6246,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 147.1871,
+  "tipo": "traco",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 148.4371,
+  "tipo": "tique",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 148.4371,
+  "tipo": "tiquinho",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 148.7496,
+  "tipo": "tique",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 148.7496,
+  "tipo": "tiquinho",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 149.0621,
+  "tipo": "tique",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 149.0621,
+  "tipo": "tiquinho",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 149.3746,
+  "tipo": "tique",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 149.3746,
+  "tipo": "tiquinho",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 149.6871,
+  "tipo": "tique",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 149.6871,
+  "tipo": "tiquinho",
+  "ganho": 0.7,
+  "cena": "s09"
+ },
+ {
+  "t": 150.6246,
+  "tipo": "mergulho",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 151.5621,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 152.8121,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 154.9996,
+  "tipo": "pop",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 155.9371,
+  "tipo": "passo",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 156.8746,
+  "tipo": "confirma",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 157.4996,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 157.8121,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 158.1246,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 158.4371,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 158.7496,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 159.0621,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 159.3746,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 159.6871,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 159.9996,
+  "tipo": "tiquinho",
+  "ganho": 0.8,
+  "cena": "s09"
+ },
+ {
+  "t": 160.3121,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s09"
+ },
+ {
+  "t": 166.2495,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s10"
+ },
+ {
+  "t": 168.1245,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s10"
+ },
+ {
+  "t": 169.062,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s10"
+ },
+ {
+  "t": 169.9995,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s10"
+ },
+ {
+  "t": 171.562,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s10"
+ },
+ {
+  "t": 173.1245,
+  "tipo": "marca",
+  "ganho": 1,
+  "cena": "s10"
+ },
+ {
+  "t": 174.3745,
+  "tipo": "deslize",
+  "ganho": 1,
+  "cena": "s10"
+ },
+ {
+  "t": 176.2495,
+  "tipo": "final",
+  "ganho": 1,
+  "cena": "s10"
+ }
+]

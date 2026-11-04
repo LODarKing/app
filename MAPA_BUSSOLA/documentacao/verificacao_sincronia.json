@@ -1,0 +1,17 @@
+{
+ "palavras_legenda": 382,
+ "casadas": 374,
+ "nao_casadas": [
+  "cardeais:",
+  "rotas",
+  "Pela",
+  "Num",
+  "azimute:",
+  "azimute",
+  "do",
+  "Norte."
+ ],
+ "dif_media_ms": 46.5,
+ "dif_p95_ms": 146.7,
+ "dif_max_ms": 640.0
+}

@@ -1,0 +1,395 @@
+1
+00:00:00,070 --> 00:00:01,470
+Imagine estar no meio de
+
+2
+00:00:01,490 --> 00:00:02,230
+uma floresta,
+
+3
+00:00:02,410 --> 00:00:03,150
+sem internet,
+
+4
+00:00:03,370 --> 00:00:04,930
+sem GPS e com vários
+
+5
+00:00:04,950 --> 00:00:06,090
+caminhos pela frente.
+
+6
+00:00:06,590 --> 00:00:08,450
+Como descobrir para onde ir?
+
+7
+00:00:08,950 --> 00:00:10,510
+A resposta pode estar em
+
+8
+00:00:10,530 --> 00:00:11,710
+dois instrumentos:
+
+9
+00:00:12,050 --> 00:00:13,710
+um mapa e uma bússola!
+
+10
+00:00:13,960 --> 00:00:15,710
+Tudo começa com a rosa
+
+11
+00:00:15,730 --> 00:00:16,540
+dos ventos.
+
+12
+00:00:16,700 --> 00:00:18,820
+São quatro pontos cardeais:
+
+13
+00:00:19,140 --> 00:00:20,100
+Norte, Sul,
+
+14
+00:00:20,500 --> 00:00:21,740
+Leste e Oeste,
+
+15
+00:00:22,260 --> 00:00:24,060
+e quatro colaterais:
+
+16
+00:00:24,480 --> 00:00:25,680
+Nordeste, Sudeste,
+
+17
+00:00:25,880 --> 00:00:27,540
+Sudoeste e Noroeste.
+
+18
+00:00:28,120 --> 00:00:30,200
+Juntos, eles formam oito
+
+19
+00:00:30,220 --> 00:00:32,240
+direções fundamentais para
+
+20
+00:00:32,260 --> 00:00:32,980
+a orientação.
+
+21
+00:00:33,215 --> 00:00:35,665
+O mapa topográfico representa
+
+22
+00:00:35,685 --> 00:00:37,375
+o relevo do terreno.
+
+23
+00:00:37,495 --> 00:00:39,235
+Suas curvas de nível mostram
+
+24
+00:00:39,255 --> 00:00:40,635
+diferentes altitudes.
+
+25
+00:00:40,925 --> 00:00:43,085
+Quanto mais próximas estiverem,
+
+26
+00:00:43,585 --> 00:00:45,185
+mais íngreme é a subida.
+
+27
+00:00:45,595 --> 00:00:47,395
+Esses mapas ajudam a identificar
+
+28
+00:00:47,415 --> 00:00:49,775
+montanhas, vales e planejar
+
+29
+00:00:49,795 --> 00:00:51,095
+rotas mais seguras.
+
+30
+00:00:51,905 --> 00:00:53,960
+E como calcular a distância?
+
+31
+00:00:54,235 --> 00:00:54,935
+Pela escala!
+
+32
+00:00:54,955 --> 00:00:55,835
+Num mapa de 1 para
+
+33
+00:00:55,855 --> 00:00:56,655
+25 mil,
+
+34
+00:00:56,755 --> 00:00:58,475
+cada centímetro representa
+
+35
+00:00:58,495 --> 00:01:00,595
+250 metros reais.
+
+36
+00:01:01,255 --> 00:01:03,795
+Então, 4 centímetros equivalem
+
+37
+00:01:03,815 --> 00:01:04,855
+a 1 quilômetro.
+
+38
+00:01:05,235 --> 00:01:05,955
+Mas atenção:
+
+39
+00:01:06,505 --> 00:01:07,745
+essa é a distância no
+
+40
+00:01:07,765 --> 00:01:09,705
+mapa, não necessariamente
+
+41
+00:01:09,725 --> 00:01:11,145
+a percorrida no terreno.
+
+42
+00:01:11,370 --> 00:01:13,230
+Já a ortofoto é uma
+
+43
+00:01:13,250 --> 00:01:15,810
+imagem aérea corrigida geometricamente,
+
+44
+00:01:16,070 --> 00:01:17,550
+permitindo medir posições
+
+45
+00:01:17,570 --> 00:01:20,480
+e distâncias com precisão cartográfica.
+
+46
+00:01:20,700 --> 00:01:22,220
+Ela mostra estradas,
+
+47
+00:01:22,500 --> 00:01:24,700
+rios e construções como realmente
+
+48
+00:01:24,720 --> 00:01:26,360
+estão distribuídas no terreno.
+
+49
+00:01:26,530 --> 00:01:28,270
+Agora vem o azimute:
+
+50
+00:01:28,490 --> 00:01:30,210
+um ângulo medido em graus,
+
+51
+00:01:30,350 --> 00:01:31,510
+a partir do Norte,
+
+52
+00:01:31,670 --> 00:01:33,089
+no sentido horário.
+
+53
+00:01:33,460 --> 00:01:34,960
+Norte é 0 grau,
+
+54
+00:01:35,100 --> 00:01:36,260
+Leste 90,
+
+55
+00:01:36,640 --> 00:01:40,449
+Sul 180 e Oeste 270.
+
+56
+00:01:40,600 --> 00:01:42,800
+Um azimute de 60 graus
+
+57
+00:01:42,820 --> 00:01:44,800
+aponta para uma direção entre
+
+58
+00:01:44,820 --> 00:01:46,100
+Norte e Leste.
+
+59
+00:01:46,180 --> 00:01:48,620
+Mas existe um detalhe importante:
+
+60
+00:01:49,000 --> 00:01:51,120
+o Norte magnético não coincide
+
+61
+00:01:51,140 --> 00:01:53,120
+exatamente com o Norte verdadeiro.
+
+62
+00:01:53,680 --> 00:01:55,280
+Essa diferença angular é
+
+63
+00:01:55,300 --> 00:01:57,425
+chamada de declinação magnética.
+
+64
+00:01:57,550 --> 00:01:59,230
+Para corrigir a orientação,
+
+65
+00:01:59,730 --> 00:02:02,050
+consulte a declinação indicada
+
+66
+00:02:02,070 --> 00:02:03,230
+para o local e a
+
+67
+00:02:03,250 --> 00:02:04,980
+data e aplique a correção
+
+68
+00:02:05,000 --> 00:02:06,880
+adequada à sua bússola e
+
+69
+00:02:06,900 --> 00:02:07,465
+ao mapa.
+
+70
+00:02:07,485 --> 00:02:09,475
+Para encontrar uma direção,
+
+71
+00:02:09,495 --> 00:02:11,255
+mantenha a bússola horizontal,
+
+72
+00:02:11,275 --> 00:02:12,645
+longe de metais.
+
+73
+00:02:12,925 --> 00:02:14,485
+Gire o corpo até alinhar
+
+74
+00:02:14,505 --> 00:02:16,065
+a agulha magnética com a
+
+75
+00:02:16,085 --> 00:02:16,465
+marca do Norte.
+
+76
+00:02:16,485 --> 00:02:17,905
+Com a bússola corretamente
+
+77
+00:02:17,925 --> 00:02:20,265
+orientada, identifique Norte,
+
+78
+00:02:20,325 --> 00:02:21,795
+Sul, Leste e Oeste e
+
+79
+00:02:21,815 --> 00:02:23,475
+siga o rumo planejado.
+
+80
+00:02:23,535 --> 00:02:24,935
+Chegou o desafio!
+
+81
+00:02:25,035 --> 00:02:26,275
+Com seu instrutor,
+
+82
+00:02:26,655 --> 00:02:28,035
+prepare uma pista com pelo
+
+83
+00:02:28,055 --> 00:02:30,095
+menos 10 pontos de controle.
+
+84
+00:02:30,555 --> 00:02:31,395
+Em cada etapa,
+
+85
+00:02:31,615 --> 00:02:32,315
+leia o mapa,
+
+86
+00:02:32,465 --> 00:02:33,385
+determine o rumo com a
+
+87
+00:02:33,405 --> 00:02:35,405
+bússola, confira a distância
+
+88
+00:02:35,425 --> 00:02:37,265
+e encontre o próximo ponto.
+
+89
+00:02:37,575 --> 00:02:39,155
+Na animação parece simples.
+
+90
+00:02:39,695 --> 00:02:40,855
+Agora é a sua vez
+
+91
+00:02:40,875 --> 00:02:42,215
+de colocar tudo em prática!
+
+92
+00:02:42,355 --> 00:02:45,055
+Saber se orientar é muito
+
+93
+00:02:45,075 --> 00:02:46,715
+mais que encontrar um caminho.
+
+94
+00:02:47,295 --> 00:02:48,715
+É desenvolver atenção,
+
+95
+00:02:48,935 --> 00:02:50,945
+autonomia e responsabilidade.
+
+96
+00:02:51,425 --> 00:02:52,745
+Agora reúna seu clube,
+
+97
+00:02:53,125 --> 00:02:54,645
+pratique com segurança e
+
+98
+00:02:54,665 --> 00:02:56,045
+conquiste sua especialidade
+
+99
+00:02:56,065 --> 00:02:57,225
+de Mapa e Bússola!
