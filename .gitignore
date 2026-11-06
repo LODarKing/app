@@ -62,3 +62,11 @@ MAPA_BUSSOLA/audio/voz_timeline.wav
 MAPA_BUSSOLA/audio/_mix_bruto.wav
 MAPA_BUSSOLA/timeline_piloto.js
 MAPA_BUSSOLA/entregas/MAPA_E_BUSSOLA_AR021.mp4
+# Trilha Icaraí: imagens aéreas de terceiros (só referência para o traçado) e conferências
+MAPA_ICARAI/dados/tiles/
+MAPA_ICARAI/dados/ref_bing/
+MAPA_ICARAI/dados/ref_bing*.png
+MAPA_ICARAI/dados/visao_z1*.png
+MAPA_ICARAI/dados/perto_z1*.png
+MAPA_ICARAI/dados/rascunho.png
+MAPA_ICARAI/out/

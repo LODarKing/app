@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Trilha da Bússola · Icaraí</title>
+<style>
+@font-face { font-family: 'Poppins'; font-weight: 900; src: url('fonts/Poppins-Black.ttf'); }
+@font-face { font-family: 'Poppins'; font-weight: 800; src: url('fonts/Poppins-ExtraBold.ttf'); }
+@font-face { font-family: 'Poppins'; font-weight: 700; src: url('fonts/Poppins-Bold.ttf'); }
+@font-face { font-family: 'Poppins'; font-weight: 600; src: url('fonts/Poppins-SemiBold.ttf'); }
+@font-face { font-family: 'Caveat'; font-weight: 700; src: url('fonts/Caveat-Bold.ttf'); }
+@font-face { font-family: 'Inter'; font-weight: 500; src: url('fonts/Inter-Medium.otf'); }
+@font-face { font-family: 'Inter'; font-weight: 600; src: url('fonts/Inter-SemiBold.otf'); }
+@font-face { font-family: 'Inter'; font-weight: 700; src: url('fonts/Inter-Bold.otf'); }
+@font-face { font-family: 'Inter'; font-weight: 800; src: url('fonts/Inter-ExtraBold.otf'); }
+:root { --verde: #1F5A3A; --verde2: #2E7D4F; --roxo: #8E24AA; --laranja: #F57C00; --amarelo: #F2C230; --areia: #FBF3DF; --tinta: #1B2A22; }
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #888; font-family: 'Inter', sans-serif; color: var(--tinta); }
+.pg { width: 210mm; height: 297mm; background: var(--areia); position: relative; overflow: hidden; page-break-after: always; margin: 0 auto 6mm; }
+@media print { .pg { margin: 0; } body { background: none; } }
+h1, h2, h3 { font-family: 'Poppins'; margin: 0; }
+/* ---------- página do mapa ---------- */
+.topo { position: absolute; left: 12mm; top: 9mm; right: 12mm; height: 33mm; display: flex; align-items: center; gap: 4mm; }
+.topo img { height: 24mm; }
+.topo h1 { font-weight: 900; font-size: 31pt; line-height: 0.95; color: var(--verde); letter-spacing: -0.5pt; }
+.topo h1 span { color: var(--laranja); }
+.topo p { margin: 1.4mm 0 0; font-family: 'Poppins'; font-weight: 600; font-size: 10.5pt; color: #3d4b43; }
+.selo { margin-left: auto; text-align: center; background: var(--verde); color: #fff; border-radius: 4mm; padding: 2mm 3mm; font-family: 'Poppins'; font-weight: 800; font-size: 9pt; line-height: 1.15; }
+.selo b { display: block; font-size: 17pt; color: var(--amarelo); font-weight: 900; }
+.moldura { position: absolute; left: 12mm; top: 44mm; width: 186mm; height: 200mm; border-radius: 5mm; overflow: hidden; border: 1.3mm solid var(--verde); }
+.moldura canvas, .moldura svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.rodape { position: absolute; left: 12mm; right: 12mm; top: 247mm; height: 43mm; display: grid; grid-template-columns: 81mm 1fr 37mm; gap: 2.5mm; }
+.caixa { background: #fff; border-radius: 3.5mm; border: 0.5mm solid #d8cfb8; padding: 2mm 2.6mm; overflow: hidden; }
+.caixa h3 { font-size: 9pt; font-weight: 800; color: var(--verde); margin-bottom: 1.2mm; }
+.leg { display: grid; grid-template-columns: 7mm 1fr; align-items: center; row-gap: 0.6mm; font-size: 7.6pt; font-weight: 600; }
+.leg svg { width: 6mm; height: 5mm; }
+.dica { font-size: 6.5pt; font-weight: 600; line-height: 1.24; margin-bottom: 0.6mm; }
+.dica b { color: var(--roxo); }
+.creditos { position: absolute; left: 12mm; right: 12mm; bottom: 1.6mm; font-size: 5pt; color: #6b6b6b; text-align: center; }
+/* ---------- cartão ---------- */
+.cartao { position: absolute; left: 10mm; right: 10mm; height: 136mm; border: 0.6mm solid var(--verde); border-radius: 4mm; background: #fff; padding: 4mm 5mm; }
+.cartao .cab { display: flex; align-items: center; gap: 3mm; }
+.cartao .cab img { height: 12mm; }
+.cartao h2 { font-size: 15pt; font-weight: 900; color: var(--verde); }
+.cartao .cab .nome { margin-left: auto; font-family: 'Poppins'; font-weight: 700; font-size: 9pt; }
+.cartao .cab .nome i { display: inline-block; width: 55mm; border-bottom: 0.3mm solid #333; }
+table.ct { width: 100%; border-collapse: collapse; margin-top: 2.5mm; font-size: 9pt; }
+table.ct th { background: var(--verde); color: #fff; font-family: 'Poppins'; font-weight: 700; font-size: 7.6pt; padding: 1mm 1mm; line-height: 1.1; }
+table.ct td { border-bottom: 0.25mm solid #e2dccb; text-align: center; height: 7.4mm; font-weight: 700; }
+table.ct td.n { font-family: 'Poppins'; font-weight: 900; color: var(--roxo); font-size: 11pt; }
+table.ct td.az { font-family: 'Poppins'; font-weight: 900; font-size: 12pt; }
+table.ct td.vazio { background: #faf6ea; }
+.palavra { margin-top: 2.5mm; display: flex; align-items: center; gap: 1.6mm; font-family: 'Poppins'; font-weight: 800; font-size: 9pt; color: var(--verde); }
+.palavra span { width: 8.5mm; height: 9mm; border: 0.4mm solid var(--verde); border-radius: 1.5mm; background: #faf6ea; }
+.calib { margin-top: 2mm; font-size: 7.8pt; font-weight: 600; line-height: 1.3; }
+.corte { position: absolute; left: 0; right: 0; top: 148.5mm; border-top: 0.4mm dashed #999; }
+.corte::after { content: '✂  recorte aqui'; position: absolute; left: 6mm; top: -3.2mm; font-size: 7pt; color: #888; background: var(--areia); padding: 0 1.5mm; }
+/* ---------- guia ---------- */
+.guia { position: absolute; left: 12mm; right: 12mm; top: 10mm; bottom: 10mm; font-size: 8.4pt; line-height: 1.38; }
+.guia h2 { font-size: 17pt; font-weight: 900; color: var(--verde); }
+.guia h3 { font-size: 10.5pt; font-weight: 800; color: var(--roxo); margin: 3.2mm 0 1mm; }
+.guia ol, .guia ul { margin: 0; padding-left: 5mm; }
+.guia li { margin-bottom: 0.6mm; }
+table.gab { width: 100%; border-collapse: collapse; font-size: 7.4pt; margin-top: 1mm; }
+table.gab th { background: var(--verde); color: #fff; font-weight: 700; padding: 0.9mm; text-align: center; }
+table.gab td { border-bottom: 0.25mm solid #e2dccb; padding: 0.8mm 1mm; text-align: center; }
+table.gab td.e { text-align: left; }
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.aviso { background: #FFF1D6; border-left: 1.5mm solid var(--laranja); padding: 2mm 3mm; border-radius: 1.5mm; }
+/* ---------- placas ---------- */
+.placa { position: absolute; left: 10mm; right: 10mm; height: 128mm; background: #fff; border: 0.6mm solid #333; border-radius: 4mm; overflow: hidden; }
+.placa svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+</style></head>
+<body>
+<div id="paginas"></div>
+<script src="js/core.js"></script>
+<script src="js/copas.js"></script>
+<script src="js/dados.js"></script>
+<script src="js/mapa.js"></script>
+<script src="js/paginas.js"></script>
+</body></html>

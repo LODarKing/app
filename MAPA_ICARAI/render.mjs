@@ -1,0 +1,21 @@
+// Gera o kit da Trilha da Bússola: PDF (A4) + PNG do mapa. Uso: node render.mjs
+import { createRequire } from 'node:module';
+import path from 'node:path';
+import fs from 'node:fs';
+const require = createRequire(import.meta.url);
+const { chromium } = require('playwright');
+const b = await chromium.launch({ args: ['--allow-file-access-from-files'] });
+const p = await b.newPage({ viewport: { width: 900, height: 1200 }, deviceScaleFactor: 2 });
+p.on('pageerror', (e) => { console.error('ERRO NA PÁGINA:', e.message); process.exitCode = 1; });
+p.on('console', (m) => { if (m.type() === 'error') console.error('console:', m.text()); });
+await p.goto('file://' + path.resolve('kit/index.html'));
+await p.evaluate(() => window.pronto);
+fs.mkdirSync('saida', { recursive: true });
+fs.mkdirSync('out', { recursive: true });
+await p.pdf({ path: 'saida/TRILHA_DA_BUSSOLA_ICARAI.pdf', format: 'A4', printBackground: true, margin: { top: 0, bottom: 0, left: 0, right: 0 } });
+await p.emulateMedia({ media: 'print' });
+const pgs = await p.$$('.pg');
+await pgs[0].screenshot({ path: 'saida/TRILHA_DA_BUSSOLA_ICARAI_mapa.png' });
+for (let i = 1; i < pgs.length; i++) await pgs[i].screenshot({ path: `out/pagina_${i + 1}.png` });
+console.log('páginas:', pgs.length);
+await b.close();
