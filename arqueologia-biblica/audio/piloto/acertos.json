@@ -1,0 +1,146 @@
+[
+ {
+  "efeito": "pedra sobe: subgrave",
+  "evento_s": 0.0,
+  "na_grade_s": -0.001,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "pedra sobe: atrito de rocha na areia",
+  "evento_s": 0.0,
+  "na_grade_s": -0.001,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "areia escorre dos ombros da pedra",
+  "evento_s": 0.0,
+  "na_grade_s": -0.001,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "gancho: \"FOSSE\" bate",
+  "evento_s": 0.125,
+  "na_grade_s": 0.124,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "gancho: \"REAL?\" bate",
+  "evento_s": 0.375,
+  "na_grade_s": 0.374,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "pincel limpa a escrita (10 linhas)",
+  "evento_s": 1.25,
+  "na_grade_s": 1.249,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "lupa: ar ao circular",
+  "evento_s": 2.25,
+  "na_grade_s": 2.249,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "lupa pousa: clique",
+  "evento_s": 2.875,
+  "na_grade_s": 2.874,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "destaque CASA DE DAVI: sininho",
+  "evento_s": 3.0,
+  "na_grade_s": 2.999,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "nuvem de areia (transição)",
+  "evento_s": 3.375,
+  "na_grade_s": 3.374,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "papiro: lâmina do mapa assenta",
+  "evento_s": 3.875,
+  "na_grade_s": 3.874,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "pena desenha a costa",
+  "evento_s": 3.75,
+  "na_grade_s": 3.749,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "gesto: braço do egípcio",
+  "evento_s": 4.125,
+  "na_grade_s": 4.124,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "seta de tinta até Tel Dan",
+  "evento_s": 4.75,
+  "na_grade_s": 4.749,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "marcador de Tel Dan",
+  "evento_s": 5.125,
+  "na_grade_s": 5.124,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "estela desce",
+  "evento_s": 6.25,
+  "na_grade_s": 6.249,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "pino entra na argola: claque",
+  "evento_s": 6.5,
+  "na_grade_s": 6.499,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "trava de bronze gira",
+  "evento_s": 6.625,
+  "na_grade_s": 6.624,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "carimbo VESTÍGIO HISTÓRICO",
+  "evento_s": 6.625,
+  "na_grade_s": 6.624,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "fio de tinta até o lugar do achado",
+  "evento_s": 6.5,
+  "na_grade_s": 6.499,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "peças saem (ar)",
+  "evento_s": 8.25,
+  "na_grade_s": 8.249,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "rolo de papiro se desenrola",
+  "evento_s": 8.5,
+  "na_grade_s": 8.499,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "título aberto: pandeiro + sininho",
+  "evento_s": 9.25,
+  "na_grade_s": 9.249,
+  "desvio_ms": -1.0
+ },
+ {
+  "efeito": "câmera desce às camadas do solo",
+  "evento_s": 9.5,
+  "na_grade_s": 9.499,
+  "desvio_ms": -1.0
+ }
+]

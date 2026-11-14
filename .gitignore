@@ -60,3 +60,12 @@ NOS_AMARRAS_EPISODIO/audio/*.wav
 NOS_AMARRAS_EPISODIO/narracao/
 NOS_AMARRAS_EPISODIO/node_modules/
 NOS_AMARRAS_EPISODIO/*.mp3
+# Arqueologia Bíblica: renders, quadros soltos, áudio gerado e segredos
+arqueologia-biblica/out/
+arqueologia-biblica/export/*.mp4
+arqueologia-biblica/audio/piloto/*.wav
+arqueologia-biblica/audio/piloto/*.mp3
+arqueologia-biblica/revisao/quadro_*.png
+arqueologia-biblica/node_modules/
+arqueologia-biblica/.env
+.env
