@@ -1,0 +1,24 @@
+{
+ "_doc": "Tempos em BATIDAS (80 bpm planejado). JS e Python convertem com a grade MEDIDA em audio/beats.json: t = fase + batida * periodo.",
+ "bpm": 80, "dur": 8.0, "fps": 60,
+ "eventos": {
+  "tesoura_abre":   [0.10, 0.36],
+  "tesoura_corte":   0.50,
+  "tesoura_reabre": [0.62, 0.95],
+  "corte_navalha":   1.00,
+  "navalha_desliza":[1.05, 1.95],
+  "cena2":           2.00,
+  "encaixe":         3.00,
+  "aneis":          [2.80, 4.00],
+  "cabeca":         [3.10, 4.15],
+  "barra":          [3.00, 3.45],
+  "nome":            5.00,
+  "faixa":          [5.25, 5.90],
+  "arcos_baixo":    [6.00, 7.40],
+  "barbearia":       7.00,
+  "est":             7.50,
+  "estrelas":       [7.75, 8.50],
+  "brilho":         [8.00, 8.85],
+  "corte_final":     9.00
+ }
+}

@@ -60,3 +60,6 @@ NOS_AMARRAS_EPISODIO/audio/*.wav
 NOS_AMARRAS_EPISODIO/narracao/
 NOS_AMARRAS_EPISODIO/node_modules/
 NOS_AMARRAS_EPISODIO/*.mp3
+# SR. Edgar: quadros de conferência e o ProRes 4444 com alfa (384 MB, regenerável com render.mjs --alpha)
+SR_EDGAR_VINHETA/out/
+SR_EDGAR_VINHETA/SR_EDGAR_VINHETA_ALPHA.mov
