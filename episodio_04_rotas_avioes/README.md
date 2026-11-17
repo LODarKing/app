@@ -18,6 +18,7 @@
 | `video_final.mp4` | episódio completo (67,5 s) |
 | `video_final_folha_de_contato.png` | quadros do vídeo final |
 | `descricao_youtube.txt` / `tags_youtube.txt` | textos de publicação (com fontes e aviso de IA) |
+| `capa_9x16.png` / `capa_recorte4x5.png` | capa (1080×1920) e recorte 4:5 do perfil; gerada pelo motor do vídeo: `node render.mjs Capa x --stills 0 out/capa` |
 
 ## Como reproduzir
 ```bash

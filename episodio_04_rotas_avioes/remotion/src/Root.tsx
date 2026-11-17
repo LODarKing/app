@@ -1,5 +1,6 @@
 import React from 'react';
-import { Composition, continueRender, delayRender, staticFile } from 'remotion';
+import { Composition, Still, continueRender, delayRender, staticFile } from 'remotion';
+import { Capa } from './Capa';
 import { Episode } from './Episode';
 import { FPS, W, H } from './theme';
 import { PILOTO_S } from './constants';
@@ -23,5 +24,7 @@ export const Root: React.FC = () => (
   <>
     <Composition id="Piloto" component={Episode} defaultProps={{ ate: 16.9 }} durationInFrames={Math.round(PILOTO_S * FPS)} fps={FPS} width={W} height={H} />
     <Composition id="Episodio" component={Episode} durationInFrames={Math.round(E.fim * FPS)} fps={FPS} width={W} height={H} />
+    <Still id="Capa" component={Capa} width={W} height={H} />
+    <Still id="CapaGuia" component={Capa} width={W} height={H} defaultProps={{ guia: true }} />
   </>
 );
