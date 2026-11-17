@@ -5,9 +5,9 @@
 ## Entregáveis desta etapa
 | Arquivo | O que é |
 |---|---|
-| `piloto_10s.mp4` | piloto (13,6 s): gancho completo + início da transformação mapa → globo |
+| `piloto_10s.mp4` | piloto v2 (17,2 s, voz ElevenLabs): gancho completo + transformação mapa → globo |
 | `piloto_folha_de_contato.png` | quadros do piloto (1,6 por segundo) |
-| `narracao_ia.wav` | narração **completa** (66,5 s), tratada, 48 kHz / 24 bits |
+| `narracao_ia.wav` | narração **completa** do ElevenLabs montada (65,7 s), tratada, 48 kHz / 24 bits |
 | `roteiro_final.txt` | roteiro com os tempos medidos de cada frase |
 | `legendas.srt` | legendas da narração completa (mesma divisão de blocos da tela) |
 | `storyboard.md` | storyboard das 6 cenas |
@@ -19,8 +19,9 @@
 
 ## Como reproduzir
 ```bash
-# 1. narração (Kokoro, local) + tempos por palavra (Whisper)
-python3 audio/narracao.py            # precisa de VOZES/modelos/kokoro-v1.0.onnx e voices-v1.0.bin
+# 1. narração + tempos por palavra (Whisper)
+python3 audio/narracao_elevenlabs.py  # monta a narração do ElevenLabs (audio/elevenlabs/)
+# alternativa local: python3 audio/narracao.py (Kokoro)
 python3 ferramentas_srt.py
 # 2. trilha + efeitos + medição da grade (beats.json) + mixagem a -14 LUFS
 python3 audio/som.py piloto

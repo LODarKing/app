@@ -30,7 +30,7 @@ export const EV = {
   aviaoIni: b(ev.aviaoIni), aviaoFim: b(ev.aviaoFim),
   titulo1: b(ev.titulo1), titulo2: b(ev.titulo2), tituloCurva: b(ev.tituloCurva),
   desvio: b(ev.desvio), desvioTxt: b(ev.desvioTxt),
-  olha: b(ev.olha), tissot: ev.tissot.map(b), recua: b(ev.recua),
+  olha: b(ev.olha), destaque: b(ev.destaque), curtoTxt: b(ev.curtoTxt), tissot: ev.tissot.map(b), recua: b(ev.recua),
   uIni: b(ev.uIni), uFim: b(ev.uFim), sIni: b(ev.sIni), sFim: b(ev.sFim),
   fimPiloto: b(ev.fimPiloto),
 };

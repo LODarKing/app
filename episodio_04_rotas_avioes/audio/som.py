@@ -231,6 +231,8 @@ def efeitos(dur, ev, B):
     put(fx_dobra(), bt(ev['tituloCurva']))
     put(fx_hachura(), bt(ev['desvio']), -0.1)
     put(fx_impacto(0.45, 140), bt(ev['desvioTxt']))
+    if 'destaque' in ev: put(fx_traco(0.6, 1800, 3200, 0.9), bt(ev['destaque']), -0.1)   # a curva ciano engrossa
+    if 'curtoTxt' in ev: put(fx_ping(1760, 0.6), bt(ev['curtoTxt']), 0.0)               # rótulo "o caminho mais curto?"
     for i, k in enumerate(ev['tissot']):                         # círculos maiores, notas mais graves
         put(fx_bolha([1047, 880, 740, 587, 440][i]), bt(k), 0.0)
     put(fx_whoosh(1.6, True), bt(ev['recua']) - 0.1)
@@ -276,15 +278,15 @@ def mixar(modo):
     ev = json.load(open(os.path.join(DATA, 'eventos.json')))
     voz, sr = sf.read(os.path.join(ROOT, 'narracao_ia.wav')); assert sr == SR
     if modo == 'piloto':
-        dur = 13.6
-        plano = [(0, 0.25), (1.8, 0.35), (4.4, 0.45), (6.8, 0.55), (8.1, 0.62), (11.0, 0.85), (13.1, 0.95), (13.6, 0.9)]
+        dur = 17.2
+        plano = [(0, 0.25), (1.8, 0.35), (4.5, 0.45), (7.2, 0.5), (10.3, 0.56), (12.2, 0.62), (14.1, 0.72), (16.2, 0.95), (17.2, 0.9)]
         fim = None  # definido pela grade medida (batida 21)
-        corte = 13.05  # fim de "A Terra é redonda." (12,79 s) + respiro; a frase seguinte fica para o episódio
+        corte = 16.6  # fim de "A Terra é quase esférica." (16,24 s) + respiro; a frase seguinte (17,4 s) fica para o episódio
         voz = voz[: int(corte * SR)].copy(); nf_ = int(0.06 * SR); voz[-nf_:] *= np.linspace(1, 0, nf_)
     else:
         raise SystemExit('episódio completo: só depois da aprovação do piloto')
     med = medir_batidas(trilha(dur, plano, None), dur)
-    fim = med['beats'][21] if modo == 'piloto' else fim
+    fim = med['beats'][27] if modo == 'piloto' else fim
     mus = trilha(dur, plano, fim_acorde=fim)
     json.dump(med, open(os.path.join(DATA, 'beats.json'), 'w'), ensure_ascii=False, indent=0)
     B = med['beats']

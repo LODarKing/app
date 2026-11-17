@@ -215,7 +215,13 @@
 130.625,
 131.25,
 131.875,
-132.5
+132.5,
+133.125,
+133.75,
+134.375,
+135.0,
+135.625,
+136.25
 ],
 "fonte": "período: librosa.feature.tempo; fase: ajuste de pente (±30 ms) sobre librosa.onset.onset_strength da trilha filtrada < 1,5 kHz"
 }

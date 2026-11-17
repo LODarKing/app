@@ -1,0 +1,964 @@
+{
+ "voz": "pm_santa",
+ "motor": "kokoro-onnx v1.0",
+ "duracao": 66.514,
+ "frases": [
+  {
+   "texto": "Já viu a rota de um avião no mapa e pensou:",
+   "cena": 1,
+   "inicio": 0.3,
+   "fim": 2.711,
+   "palavras": [
+    {
+     "p": "Já",
+     "i": 0.3,
+     "f": 0.54
+    },
+    {
+     "p": "viu",
+     "i": 0.54,
+     "f": 0.68
+    },
+    {
+     "p": "a",
+     "i": 0.68,
+     "f": 0.86
+    },
+    {
+     "p": "rota",
+     "i": 0.86,
+     "f": 1.18
+    },
+    {
+     "p": "de",
+     "i": 1.18,
+     "f": 1.3
+    },
+    {
+     "p": "um",
+     "i": 1.3,
+     "f": 1.48
+    },
+    {
+     "p": "avião",
+     "i": 1.48,
+     "f": 1.66
+    },
+    {
+     "p": "no",
+     "i": 1.66,
+     "f": 1.88
+    },
+    {
+     "p": "mapa",
+     "i": 1.88,
+     "f": 2.08
+    },
+    {
+     "p": "e",
+     "i": 2.08,
+     "f": 2.42
+    },
+    {
+     "p": "pensou:",
+     "i": 2.42,
+     "f": 2.68
+    }
+   ],
+   "whisper": "Já viu a rota de um avião no mapa e pensou",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "por que tanta curva?",
+   "cena": 1,
+   "inicio": 2.931,
+   "fim": 4.349,
+   "palavras": [
+    {
+     "p": "por",
+     "i": 2.931,
+     "f": 3.211
+    },
+    {
+     "p": "que",
+     "i": 3.211,
+     "f": 3.411
+    },
+    {
+     "p": "tanta",
+     "i": 3.411,
+     "f": 3.791
+    },
+    {
+     "p": "curva?",
+     "i": 3.791,
+     "f": 4.311
+    }
+   ],
+   "whisper": "Por que tanta curva?",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Parece um desvio.",
+   "cena": 1,
+   "inicio": 5.049,
+   "fim": 6.329,
+   "palavras": [
+    {
+     "p": "Parece",
+     "i": 5.049,
+     "f": 5.509
+    },
+    {
+     "p": "um",
+     "i": 5.509,
+     "f": 5.809
+    },
+    {
+     "p": "desvio.",
+     "i": 5.809,
+     "f": 6.229
+    }
+   ],
+   "whisper": "Parece um desvio.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Mas olha só...",
+   "cena": 1,
+   "inicio": 6.829,
+   "fim": 8.0,
+   "palavras": [
+    {
+     "p": "Mas",
+     "i": 6.829,
+     "f": 7.189
+    },
+    {
+     "p": "olha",
+     "i": 7.189,
+     "f": 7.509
+    },
+    {
+     "p": "só...",
+     "i": 7.509,
+     "f": 7.949
+    }
+   ],
+   "whisper": "Mas olha só...",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "talvez o mapa esteja te enganando!",
+   "cena": 1,
+   "inicio": 8.3,
+   "fim": 10.602,
+   "palavras": [
+    {
+     "p": "talvez",
+     "i": 8.3,
+     "f": 8.84
+    },
+    {
+     "p": "o",
+     "i": 8.84,
+     "f": 9.08
+    },
+    {
+     "p": "mapa",
+     "i": 9.08,
+     "f": 9.26
+    },
+    {
+     "p": "esteja",
+     "i": 9.26,
+     "f": 9.82
+    },
+    {
+     "p": "te",
+     "i": 9.82,
+     "f": 10.02
+    },
+    {
+     "p": "enganando!",
+     "i": 10.02,
+     "f": 10.58
+    }
+   ],
+   "whisper": "Talvez o mapa esteja te enganando!",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "A Terra é redonda.",
+   "cena": 2,
+   "inicio": 11.452,
+   "fim": 12.787,
+   "palavras": [
+    {
+     "p": "A",
+     "i": 11.452,
+     "f": 11.772
+    },
+    {
+     "p": "Terra",
+     "i": 11.772,
+     "f": 11.992
+    },
+    {
+     "p": "é",
+     "i": 11.992,
+     "f": 12.132
+    },
+    {
+     "p": "redonda.",
+     "i": 12.132,
+     "f": 12.692
+    }
+   ],
+   "whisper": "A Terra é redonda.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "E quando transformamos sua superfície em um mapa plano, as distâncias ficam distorcidas.",
+   "cena": 2,
+   "inicio": 13.337,
+   "fim": 18.636,
+   "palavras": [
+    {
+     "p": "E",
+     "i": 13.337,
+     "f": 13.517
+    },
+    {
+     "p": "quando",
+     "i": 13.517,
+     "f": 13.817
+    },
+    {
+     "p": "transformamos",
+     "i": 13.817,
+     "f": 14.557
+    },
+    {
+     "p": "sua",
+     "i": 14.557,
+     "f": 14.817
+    },
+    {
+     "p": "superfície",
+     "i": 14.817,
+     "f": 15.437
+    },
+    {
+     "p": "em",
+     "i": 15.437,
+     "f": 15.597
+    },
+    {
+     "p": "um",
+     "i": 15.597,
+     "f": 15.777
+    },
+    {
+     "p": "mapa",
+     "i": 15.777,
+     "f": 15.957
+    },
+    {
+     "p": "plano,",
+     "i": 15.957,
+     "f": 16.337
+    },
+    {
+     "p": "as",
+     "i": 16.737,
+     "f": 16.977
+    },
+    {
+     "p": "distâncias",
+     "i": 16.977,
+     "f": 17.417
+    },
+    {
+     "p": "ficam",
+     "i": 17.417,
+     "f": 17.817
+    },
+    {
+     "p": "distorcidas.",
+     "i": 17.817,
+     "f": 18.517
+    }
+   ],
+   "whisper": "E quando transformamos sua superfície em um mapa plano, as distâncias ficam distorcidas.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "No globo, o caminho mais curto entre dois pontos segue um arco chamado círculo máximo.",
+   "cena": 3,
+   "inicio": 19.386,
+   "fim": 24.22,
+   "palavras": [
+    {
+     "p": "No",
+     "i": 19.386,
+     "f": 19.546
+    },
+    {
+     "p": "globo,",
+     "i": 19.546,
+     "f": 20.026
+    },
+    {
+     "p": "o",
+     "i": 20.126,
+     "f": 20.246
+    },
+    {
+     "p": "caminho",
+     "i": 20.246,
+     "f": 20.406
+    },
+    {
+     "p": "mais",
+     "i": 20.406,
+     "f": 20.746
+    },
+    {
+     "p": "curto",
+     "i": 20.746,
+     "f": 21.106
+    },
+    {
+     "p": "entre",
+     "i": 21.106,
+     "f": 21.306
+    },
+    {
+     "p": "dois",
+     "i": 21.306,
+     "f": 21.666
+    },
+    {
+     "p": "pontos",
+     "i": 21.666,
+     "f": 21.906
+    },
+    {
+     "p": "segue",
+     "i": 21.906,
+     "f": 22.226
+    },
+    {
+     "p": "um",
+     "i": 22.226,
+     "f": 22.506
+    },
+    {
+     "p": "arco",
+     "i": 22.506,
+     "f": 22.786
+    },
+    {
+     "p": "chamado",
+     "i": 22.786,
+     "f": 23.206
+    },
+    {
+     "p": "círculo",
+     "i": 23.206,
+     "f": 23.706
+    },
+    {
+     "p": "máximo.",
+     "i": 23.706,
+     "f": 24.186
+    }
+   ],
+   "whisper": "No globo, o caminho mais curto entre dois pontos segue um arco chamado círculo máximo.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Só que, em muitos mapas, esse arco parece uma curva enorme!",
+   "cena": 3,
+   "inicio": 24.72,
+   "fim": 28.142,
+   "palavras": [
+    {
+     "p": "Só",
+     "i": 24.72,
+     "f": 24.96
+    },
+    {
+     "p": "que,",
+     "i": 24.96,
+     "f": 25.14
+    },
+    {
+     "p": "em",
+     "i": 25.18,
+     "f": 25.3
+    },
+    {
+     "p": "muitos",
+     "i": 25.3,
+     "f": 25.62
+    },
+    {
+     "p": "mapas,",
+     "i": 25.62,
+     "f": 26.12
+    },
+    {
+     "p": "esse",
+     "i": 26.3,
+     "f": 26.42
+    },
+    {
+     "p": "arco",
+     "i": 26.42,
+     "f": 26.82
+    },
+    {
+     "p": "parece",
+     "i": 26.82,
+     "f": 27.1
+    },
+    {
+     "p": "uma",
+     "i": 27.1,
+     "f": 27.3
+    },
+    {
+     "p": "curva",
+     "i": 27.3,
+     "f": 27.66
+    },
+    {
+     "p": "enorme!",
+     "i": 27.66,
+     "f": 28.0
+    }
+   ],
+   "whisper": "Só que, em muitos mapas, esse arco parece uma curva enorme!",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Agora compare as duas rotas sobre a Terra.",
+   "cena": 3,
+   "inicio": 28.992,
+   "fim": 31.563,
+   "palavras": [
+    {
+     "p": "Agora",
+     "i": 28.992,
+     "f": 29.452
+    },
+    {
+     "p": "compare",
+     "i": 29.452,
+     "f": 29.872
+    },
+    {
+     "p": "as",
+     "i": 29.872,
+     "f": 30.132
+    },
+    {
+     "p": "duas",
+     "i": 30.132,
+     "f": 30.432
+    },
+    {
+     "p": "rotas",
+     "i": 30.432,
+     "f": 30.812
+    },
+    {
+     "p": "sobre",
+     "i": 30.812,
+     "f": 31.072
+    },
+    {
+     "p": "a",
+     "i": 31.072,
+     "f": 31.312
+    },
+    {
+     "p": "Terra.",
+     "i": 31.312,
+     "f": 31.472
+    }
+   ],
+   "whisper": "Agora compare as duas rotas sobre a Terra.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Surpresa:",
+   "cena": 3,
+   "inicio": 32.513,
+   "fim": 33.435,
+   "palavras": [
+    {
+     "p": "Surpresa:",
+     "i": 32.513,
+     "f": 33.273
+    }
+   ],
+   "whisper": "Surpresa!",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "aquela curva do mapa pode representar a menor distância!",
+   "cena": 3,
+   "inicio": 33.735,
+   "fim": 37.115,
+   "palavras": [
+    {
+     "p": "aquela",
+     "i": 33.735,
+     "f": 34.095
+    },
+    {
+     "p": "curva",
+     "i": 34.095,
+     "f": 34.415
+    },
+    {
+     "p": "do",
+     "i": 34.415,
+     "f": 34.595
+    },
+    {
+     "p": "mapa",
+     "i": 34.595,
+     "f": 34.875
+    },
+    {
+     "p": "pode",
+     "i": 34.875,
+     "f": 35.255
+    },
+    {
+     "p": "representar",
+     "i": 35.255,
+     "f": 36.055
+    },
+    {
+     "p": "a",
+     "i": 36.055,
+     "f": 36.215
+    },
+    {
+     "p": "menor",
+     "i": 36.215,
+     "f": 36.415
+    },
+    {
+     "p": "distância!",
+     "i": 36.415,
+     "f": 37.095
+    }
+   ],
+   "whisper": "Aquela curva do mapa pode representar a menor distância!",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Mas atenção: os aviões reais nem sempre seguem exatamente esse caminho.",
+   "cena": 5,
+   "inicio": 38.165,
+   "fim": 42.599,
+   "palavras": [
+    {
+     "p": "Mas",
+     "i": 38.165,
+     "f": 38.445
+    },
+    {
+     "p": "atenção:",
+     "i": 38.445,
+     "f": 39.045
+    },
+    {
+     "p": "os",
+     "i": 39.345,
+     "f": 39.465
+    },
+    {
+     "p": "aviões",
+     "i": 39.465,
+     "f": 39.745
+    },
+    {
+     "p": "reais",
+     "i": 39.745,
+     "f": 40.125
+    },
+    {
+     "p": "nem",
+     "i": 40.125,
+     "f": 40.385
+    },
+    {
+     "p": "sempre",
+     "i": 40.385,
+     "f": 40.825
+    },
+    {
+     "p": "seguem",
+     "i": 40.825,
+     "f": 41.285
+    },
+    {
+     "p": "exatamente",
+     "i": 41.285,
+     "f": 41.885
+    },
+    {
+     "p": "esse",
+     "i": 41.885,
+     "f": 42.165
+    },
+    {
+     "p": "caminho.",
+     "i": 42.165,
+     "f": 42.505
+    }
+   ],
+   "whisper": "Mas atenção, os aviões reais nem sempre seguem exatamente esse caminho.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Ventos, tempestades, espaços aéreos restritos e controle de tráfego também influenciam as rotas.",
+   "cena": 5,
+   "inicio": 43.149,
+   "fim": 49.522,
+   "palavras": [
+    {
+     "p": "Ventos,",
+     "i": 43.149,
+     "f": 43.649
+    },
+    {
+     "p": "tempestades,",
+     "i": 43.809,
+     "f": 44.649
+    },
+    {
+     "p": "espaços",
+     "i": 45.109,
+     "f": 45.369
+    },
+    {
+     "p": "aéreos",
+     "i": 45.369,
+     "f": 45.769
+    },
+    {
+     "p": "restritos",
+     "i": 45.769,
+     "f": 46.249
+    },
+    {
+     "p": "e",
+     "i": 46.249,
+     "f": 46.529
+    },
+    {
+     "p": "controle",
+     "i": 46.529,
+     "f": 46.849
+    },
+    {
+     "p": "de",
+     "i": 46.849,
+     "f": 47.129
+    },
+    {
+     "p": "tráfego",
+     "i": 47.129,
+     "f": 47.669
+    },
+    {
+     "p": "também",
+     "i": 47.669,
+     "f": 48.129
+    },
+    {
+     "p": "influenciam",
+     "i": 48.129,
+     "f": 48.869
+    },
+    {
+     "p": "as",
+     "i": 48.869,
+     "f": 49.069
+    },
+    {
+     "p": "rotas.",
+     "i": 49.069,
+     "f": 49.429
+    }
+   ],
+   "whisper": "Ventos, tempestades, espaços aéreos restritos e controle de tráfego também influenciam as rotas.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Por isso, o caminho mais curto nem sempre é o mais rápido ou o mais adequado.",
+   "cena": 5,
+   "inicio": 50.172,
+   "fim": 54.486,
+   "palavras": [
+    {
+     "p": "Por",
+     "i": 50.172,
+     "f": 50.392
+    },
+    {
+     "p": "isso,",
+     "i": 50.392,
+     "f": 50.672
+    },
+    {
+     "p": "o",
+     "i": 50.732,
+     "f": 50.852
+    },
+    {
+     "p": "caminho",
+     "i": 50.852,
+     "f": 51.032
+    },
+    {
+     "p": "mais",
+     "i": 51.032,
+     "f": 51.372
+    },
+    {
+     "p": "curto",
+     "i": 51.372,
+     "f": 51.752
+    },
+    {
+     "p": "nem",
+     "i": 51.752,
+     "f": 51.912
+    },
+    {
+     "p": "sempre",
+     "i": 51.912,
+     "f": 52.352
+    },
+    {
+     "p": "é",
+     "i": 52.352,
+     "f": 52.492
+    },
+    {
+     "p": "o",
+     "i": 52.492,
+     "f": 52.592
+    },
+    {
+     "p": "mais",
+     "i": 52.592,
+     "f": 52.932
+    },
+    {
+     "p": "rápido",
+     "i": 52.932,
+     "f": 53.252
+    },
+    {
+     "p": "ou",
+     "i": 53.252,
+     "f": 53.672
+    },
+    {
+     "p": "o",
+     "i": 53.672,
+     "f": 53.672
+    },
+    {
+     "p": "mais",
+     "i": 53.672,
+     "f": 54.032
+    },
+    {
+     "p": "adequado.",
+     "i": 54.032,
+     "f": 54.452
+    }
+   ],
+   "whisper": "Por isso, o caminho mais curto nem sempre é o mais rápido ou o mais adequado.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Da próxima vez que olhar um voo no mapa, lembre-se:",
+   "cena": 6,
+   "inicio": 55.336,
+   "fim": 58.282,
+   "palavras": [
+    {
+     "p": "Da",
+     "i": 55.336,
+     "f": 55.576
+    },
+    {
+     "p": "próxima",
+     "i": 55.576,
+     "f": 55.936
+    },
+    {
+     "p": "vez",
+     "i": 55.936,
+     "f": 56.216
+    },
+    {
+     "p": "que",
+     "i": 56.216,
+     "f": 56.356
+    },
+    {
+     "p": "olhar",
+     "i": 56.356,
+     "f": 56.616
+    },
+    {
+     "p": "um",
+     "i": 56.616,
+     "f": 56.816
+    },
+    {
+     "p": "voo",
+     "i": 56.816,
+     "f": 56.976
+    },
+    {
+     "p": "no",
+     "i": 56.976,
+     "f": 57.176
+    },
+    {
+     "p": "mapa,",
+     "i": 57.176,
+     "f": 57.456
+    },
+    {
+     "p": "lembre-se:",
+     "i": 57.456,
+     "f": 58.282
+    }
+   ],
+   "whisper": "Da próxima vez que olhar um voo no mapa, lembre -se...",
+   "palavras_sem_alinhamento": [
+    "lembre-se:"
+   ]
+  },
+  {
+   "texto": "o desenho não conta a história toda.",
+   "cena": 6,
+   "inicio": 58.582,
+   "fim": 60.686,
+   "palavras": [
+    {
+     "p": "o",
+     "i": 58.582,
+     "f": 58.802
+    },
+    {
+     "p": "desenho",
+     "i": 58.802,
+     "f": 59.202
+    },
+    {
+     "p": "não",
+     "i": 59.202,
+     "f": 59.442
+    },
+    {
+     "p": "conta",
+     "i": 59.442,
+     "f": 59.722
+    },
+    {
+     "p": "a",
+     "i": 59.722,
+     "f": 59.882
+    },
+    {
+     "p": "história",
+     "i": 59.882,
+     "f": 60.222
+    },
+    {
+     "p": "toda.",
+     "i": 60.222,
+     "f": 60.562
+    }
+   ],
+   "whisper": "O desenho não conta a história toda.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "Além do Visível.",
+   "cena": 6,
+   "inicio": 61.686,
+   "fim": 62.963,
+   "palavras": [
+    {
+     "p": "Além",
+     "i": 61.686,
+     "f": 62.126
+    },
+    {
+     "p": "do",
+     "i": 62.126,
+     "f": 62.386
+    },
+    {
+     "p": "Visível.",
+     "i": 62.386,
+     "f": 62.866
+    }
+   ],
+   "whisper": "Além do Visível.",
+   "palavras_sem_alinhamento": []
+  },
+  {
+   "texto": "O extraordinário está nos detalhes.",
+   "cena": 6,
+   "inicio": 63.363,
+   "fim": 65.714,
+   "palavras": [
+    {
+     "p": "O",
+     "i": 63.363,
+     "f": 63.723
+    },
+    {
+     "p": "extraordinário",
+     "i": 63.723,
+     "f": 64.563
+    },
+    {
+     "p": "está",
+     "i": 64.563,
+     "f": 64.803
+    },
+    {
+     "p": "nos",
+     "i": 64.803,
+     "f": 65.003
+    },
+    {
+     "p": "detalhes.",
+     "i": 65.003,
+     "f": 65.623
+    }
+   ],
+   "whisper": "O extraordinário está nos detalhes.",
+   "palavras_sem_alinhamento": []
+  }
+ ]
+}

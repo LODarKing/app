@@ -1,5 +1,7 @@
 # Storyboard: "A curva que é mais curta"
 
+> **v2:** a narração agora é a do ElevenLabs (texto em `roteiro_final.txt`). Os tempos abaixo são da v1 e serão refeitos no episódio. Revelação planejada para "tudo começa a fazer sentido" (40,9 s); cena 4 na pausa de 2,2 s depois dela.
+
 **Formato:** 1080×1920, 30 fps. Os tempos vêm da narração medida (`audio/narracao_tempos.json`, 66,5 s). Os eventos ficam na grade de 96 BPM medida (`remotion/src/data/beats.json`).
 
 ## Ideia visual central

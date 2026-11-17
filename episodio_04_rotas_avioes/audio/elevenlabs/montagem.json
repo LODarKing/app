@@ -1,0 +1,179 @@
+{
+ "fonte": "/home/user/app/episodio_04_rotas_avioes/audio/elevenlabs/narracao_elevenlabs_original.mp3",
+ "cortes_no_original": [
+  0.0,
+  4.72,
+  6.135,
+  10.395,
+  12.36,
+  14.09,
+  19.5575,
+  26.22,
+  28.65,
+  31.8925,
+  34.2325,
+  35.82,
+  37.58,
+  40.9525,
+  45.3625,
+  48.615,
+  49.7675,
+  53.00245833333334
+ ],
+ "montagem": [
+  {
+   "frase": 1,
+   "original": [
+    0.0,
+    4.72
+   ],
+   "destino": 0.3,
+   "pausa_extra": 0.35
+  },
+  {
+   "frase": 2,
+   "original": [
+    4.72,
+    6.135
+   ],
+   "destino": 5.37,
+   "pausa_extra": 0.45
+  },
+  {
+   "frase": 3,
+   "original": [
+    6.135,
+    10.395
+   ],
+   "destino": 7.235,
+   "pausa_extra": 0.6
+  },
+  {
+   "frase": 4,
+   "original": [
+    10.395,
+    12.36
+   ],
+   "destino": 12.095,
+   "pausa_extra": 0.6
+  },
+  {
+   "frase": 5,
+   "original": [
+    12.36,
+    14.09
+   ],
+   "destino": 14.66,
+   "pausa_extra": 0.9
+  },
+  {
+   "frase": 6,
+   "original": [
+    14.09,
+    19.558
+   ],
+   "destino": 17.29,
+   "pausa_extra": 0.7
+  },
+  {
+   "frase": 7,
+   "original": [
+    19.558,
+    26.22
+   ],
+   "destino": 23.457,
+   "pausa_extra": 0.8
+  },
+  {
+   "frase": 8,
+   "original": [
+    26.22,
+    28.65
+   ],
+   "destino": 30.92,
+   "pausa_extra": 0.4
+  },
+  {
+   "frase": 9,
+   "original": [
+    28.65,
+    31.892
+   ],
+   "destino": 33.75,
+   "pausa_extra": 0.9
+  },
+  {
+   "frase": 10,
+   "original": [
+    31.892,
+    34.233
+   ],
+   "destino": 37.892,
+   "pausa_extra": 0.5
+  },
+  {
+   "frase": 11,
+   "original": [
+    34.233,
+    35.82
+   ],
+   "destino": 40.733,
+   "pausa_extra": 2.2
+  },
+  {
+   "frase": 12,
+   "original": [
+    35.82,
+    37.58
+   ],
+   "destino": 44.52,
+   "pausa_extra": 0.4
+  },
+  {
+   "frase": 13,
+   "original": [
+    37.58,
+    40.953
+   ],
+   "destino": 46.68,
+   "pausa_extra": 0.6
+  },
+  {
+   "frase": 14,
+   "original": [
+    40.953,
+    45.362
+   ],
+   "destino": 50.653,
+   "pausa_extra": 0.6
+  },
+  {
+   "frase": 15,
+   "original": [
+    45.362,
+    48.615
+   ],
+   "destino": 55.663,
+   "pausa_extra": 1.0
+  },
+  {
+   "frase": 16,
+   "original": [
+    48.615,
+    49.767
+   ],
+   "destino": 59.915,
+   "pausa_extra": 0.5
+  },
+  {
+   "frase": 17,
+   "original": [
+    49.767,
+    53.002
+   ],
+   "destino": 61.568,
+   "pausa_extra": 0.0
+  }
+ ],
+ "velocidade": "inalterada (1,0×)"
+}

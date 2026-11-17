@@ -20,6 +20,6 @@ if (typeof document !== 'undefined') {
 
 export const Root: React.FC = () => (
   <>
-    <Composition id="Piloto" component={Episode} defaultProps={{ ate: 13.1 }} durationInFrames={Math.round(PILOTO_S * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="Piloto" component={Episode} defaultProps={{ ate: 16.9 }} durationInFrames={Math.round(PILOTO_S * FPS)} fps={FPS} width={W} height={H} />
   </>
 );

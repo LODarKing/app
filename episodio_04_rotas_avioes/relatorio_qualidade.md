@@ -1,4 +1,7 @@
-# Relatório de qualidade: etapa do PILOTO
+# Relatório de qualidade: etapa do PILOTO (v2, voz ElevenLabs)
+
+> **v2 (17/11/2026):** o piloto foi refeito com a narração do ElevenLabs enviada pelo usuário. Ela foi montada sem mudar a velocidade (65,7 s no total) e a linha do tempo foi reencaixada na fala nova. Piloto com **17,2 s**, até "A Terra é quase esférica." Medições da v2: −14,0 LUFS, pico real −1,3 dBTP, yuv420p, AAC 48 kHz. Notas finais: todas 8. Mudanças desta versão: o avião cruza a rota inteira até "caminho mais curto?", a rota ciano é destacada com o rótulo "O CAMINHO MAIS CURTO?" e a esfera se fecha dentro do piloto. A versão Kokoro está em `audio/kokoro/`.
+> As medições abaixo são da v1.
 
 ## Arquivo: `piloto_10s.mp4`
 | Item | Medido |
@@ -43,7 +46,7 @@ Três rodadas de folha de contato. As versões estão em `remotion/out/folha_bat
 - **Narração:** texto integral do briefing, velocidade natural (1,0 e 0,97), sem aceleração. Conferida pelo Whisper; a única diferença é de tokenização em "lembre-se".
 
 ## Pendências conhecidas
-1. **Voz:** o ElevenLabs recusou a credencial salva ("Invalid API key"). A narração atual é Kokoro `pm_santa` (Apache-2.0). É mais limitada que o ElevenLabs em entonação expressiva.
+1. **Voz:** narração do ElevenLabs entregue pelo usuário. ⚠ "tempestades" soa como "tentestades" (cena 5). O roteiro difere do briefing (ver `roteiro_final.txt`). O ID e os parâmetros da voz ainda não foram registrados.
 2. **Símbolo AV original:** ausente do repositório; necessário para a cena 6.
 3. **Fonte da FAA:** inacessível (403). Será substituída por referência oficial antes da cena 5.
 4. **Cena 4:** sem frase própria no roteiro (ver storyboard).

@@ -1,24 +1,31 @@
 ALÉM DO VISÍVEL — EPISÓDIO 04
 POR QUE OS AVIÕES NÃO VOAM EM LINHA RETA NO MAPA?
 
-Roteiro final da narração (texto do briefing, sem cortes; duração medida da narração: 66.5 s)
+Roteiro final = texto efetivamente falado na narração do ElevenLabs fornecida pelo usuário (17/11/2026).
+Montagem: cortes nos silêncios entre frases + pausas maiores nas revelações; velocidade inalterada. Duração: 65.7 s
 
-[ 0.30– 2.71 s | cena 1] Já viu a rota de um avião no mapa e pensou:
-[ 2.93– 4.35 s | cena 1] por que tanta curva?
-[ 5.05– 6.33 s | cena 1] Parece um desvio.
-[ 6.83– 8.00 s | cena 1] Mas olha só…
-[ 8.30–10.60 s | cena 1] talvez o mapa esteja te enganando!
-[11.45–12.79 s | cena 2] A Terra é redonda.
-[13.34–18.64 s | cena 2] E quando transformamos sua superfície em um mapa plano, as distâncias ficam distorcidas.
-[19.39–24.22 s | cena 3] No globo, o caminho mais curto entre dois pontos segue um arco chamado círculo máximo.
-[24.72–28.14 s | cena 3] Só que, em muitos mapas, esse arco parece uma curva enorme!
-[28.99–31.56 s | cena 3] Agora compare as duas rotas sobre a Terra.
-[32.51–33.44 s | cena 3] Surpresa:
-[33.73–37.12 s | cena 3] aquela curva do mapa pode representar a menor distância!
-[38.16–42.60 s | cena 5] Mas atenção: os aviões reais nem sempre seguem exatamente esse caminho.
-[43.15–49.52 s | cena 5] Ventos, tempestades, espaços aéreos restritos e controle de tráfego também influenciam as rotas.
-[50.17–54.49 s | cena 5] Por isso, o caminho mais curto nem sempre é o mais rápido ou o mais adequado.
-[55.34–58.28 s | cena 6] Da próxima vez que olhar um voo no mapa, lembre-se:
-[58.58–60.69 s | cena 6] o desenho não conta a história toda.
-[61.69–62.96 s | cena 6] Além do Visível.
-[63.36–65.71 s | cena 6] O extraordinário está nos detalhes.
+[ 0.30– 4.88 s | cena 1] Você já olhou a rota de um avião no mapa e pensou: por que ele está fazendo essa curva enorme?
+[ 5.51– 6.55 s | cena 1] Parece um desvio, não é?
+[ 7.30–11.36 s | cena 1] Mas e se eu te dissesse que essa curva pode ser justamente o caminho mais curto?
+[12.22–13.96 s | cena 2] O segredo está no próprio mapa.
+[14.88–16.24 s | cena 2] A Terra é quase esférica.
+[17.40–22.56 s | cena 2] E quando tentamos representar sua superfície em um mapa plano, as distâncias podem ficar distorcidas.
+[23.48–30.08 s | cena 3] Por isso, o menor caminho entre dois pontos sobre o globo, chamado de círculo máximo, pode parecer uma curva gigantesca no mapa.
+[31.24–33.32 s | cena 3] Imagine um voo de Nova York até Tóquio.
+[33.72–36.80 s | cena 3] No mapa, a rota pode parecer um desvio em direção ao Norte.
+[37.96–40.16 s | cena 3] Mas quando observamos a Terra como um globo,
+[40.92–42.24 s | cena 4] tudo começa a fazer sentido.
+[44.80–46.30 s | cena 5] Só que existe outro detalhe.
+[46.90–49.94 s | cena 5] Os aviões nem sempre seguem exatamente o caminho mais curto.
+[50.80–55.04 s | cena 5] Ventos, tempestades e restrições do espaço aéreo também influenciam as rotas.
+[55.80–58.70 s | cena 5] Ou seja, o caminho mais curto nem sempre é o mais rápido.
+[60.18–60.80 s | cena 6] Incrível, não é?
+[61.64–64.66 s | cena 6] Além do Visível, o extraordinário está nos detalhes.
+
+Diferenças em relação ao roteiro do briefing:
+- não há a frase "Surpresa: aquela curva do mapa pode representar a menor distância!"; a revelação passa a cair em
+  "Mas quando observamos a Terra como um globo, tudo começa a fazer sentido." (40,9 s)
+- "controle de tráfego" não é citado (ventos, tempestades e restrições do espaço aéreo, sim)
+- não há "Da próxima vez que olhar um voo no mapa, lembre-se: o desenho não conta a história toda."
+- "A Terra é quase esférica" (mais preciso que "redonda")
+- ⚠ em "tempestades" (≈ 51,5 s) a voz soa como "tentestades" (Whisper small e medium); recomendo regerar só essa frase.

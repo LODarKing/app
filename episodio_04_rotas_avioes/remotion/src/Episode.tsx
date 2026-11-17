@@ -17,7 +17,7 @@ const PANX_FLAT = 6.5 * D2R;
 
 // ---- câmera / transformação em função do tempo (função pura)
 export function viewAt(t: number): View {
-  const push = seg(t, 0, EV.olha, easeInOut);                 // aproximação suave
+  const push = seg(t, 0, EV.recua, easeInOut);                 // aproximação suave
   const back = seg(t, EV.recua, EV.recua + 2.6, easeInOut);   // recuo
   const u = seg(t, EV.uIni, EV.uFim, easeInOut);
   const s = seg(t, EV.sIni, EV.sFim, easeInOut);
@@ -117,10 +117,15 @@ export const Episode: React.FC<{ ate?: number }> = ({ ate = 1e9 }) => {
   const kR = seg(t, EV.retaIni, EV.retaFim, easeOut);
   const kG = seg(t, EV.curvaIni, EV.curvaFim, easeInOut);
   // ênfase: as rotas recuam quando os círculos de Tissot entram, voltam no recuo da câmera
-  const dim = mix(1, 0.38, seg(t, EV.olha, EV.olha + 0.4)) + 0.62 * seg(t, EV.uFim - 0.6, EV.uFim + 0.6);
+  // "essa curva": a amarela recua e a ciano engrossa; nos círculos de Tissot as duas recuam; voltam com a esfera
+  const destK = seg(t, EV.destaque, EV.destaque + 0.35, easeOut) * (1 - seg(t, EV.recua, EV.recua + 0.4));
+  const dimT = mix(1, 0.38, seg(t, EV.tissot[0], EV.tissot[0] + 0.4)) + 0.62 * seg(t, EV.uFim - 1.2, EV.uFim);
+  const dimY = Math.min(1, dimT) * (1 - 0.6 * destK);
+  const dim = dimT;
+  const curtoK = seg(t, EV.curtoTxt, EV.curtoTxt + 0.4, easeOut) * (1 - seg(t, EV.recua - 0.1, EV.recua + 0.3));
 
   // avião sobre o círculo máximo
-  const kA = seg(t, EV.aviaoIni, EV.aviaoFim, (x) => easeInOut(x) * 0.97 + x * 0.03);
+  const kA = seg(t, EV.aviaoIni, EV.aviaoFim, (x) => easeInOut(x) * 0.3 + x * 0.7);
   const ai = Math.min(N_ROUTE - 1, Math.max(1, Math.round(kA * N_ROUTE)));
   const pa = gcP[ai], pb = gcP[Math.min(N_ROUTE, ai + 2)], pz = gcP[Math.max(0, ai - 2)];
   const head = Math.atan2(pb.x - pz.x, -(pb.y - pz.y)) * 180 / Math.PI;
@@ -180,8 +185,8 @@ export const Episode: React.FC<{ ate?: number }> = ({ ate = 1e9 }) => {
         )}
 
         {/* rotas */}
-        <path d={pathOf(partial(rhP, kR))} fill="none" stroke={C.yellow} strokeWidth={7} strokeLinecap="round" strokeLinejoin="round" opacity={Math.min(1, dim)} />
-        <path d={pathOf(partial(gcP, kG))} fill="none" stroke={C.cyan} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" opacity={Math.min(1, dim)} />
+        <path d={pathOf(partial(rhP, kR))} fill="none" stroke={C.yellow} strokeWidth={7} strokeLinecap="round" strokeLinejoin="round" opacity={dimY} />
+        <path d={pathOf(partial(gcP, kG))} fill="none" stroke={C.cyan} strokeWidth={8 + 5 * destK} strokeLinecap="round" strokeLinejoin="round" opacity={Math.min(1, dim)} />
 
         {/* rótulos das linhas */}
         {labK > 0 && (
@@ -193,6 +198,13 @@ export const Episode: React.FC<{ ate?: number }> = ({ ate = 1e9 }) => {
         {t >= EV.desvioTxt && desvioOut < 1 && (
           <g opacity={1 - desvioOut} transform={`translate(${dCx} ${dCy + 14}) scale(${easeOutBack(lin(t, EV.desvioTxt, EV.desvioTxt + 0.35))})`}>
             <text textAnchor="middle" fill={C.white} fontFamily={FONT_TITLE} fontWeight={800} fontSize={64} letterSpacing={2}>DESVIO?</text>
+          </g>
+        )}
+
+        {curtoK > 0 && (
+          <g transform={`translate(${gcP[mid].x} ${gcP[mid].y - 34 - 16 * (1 - curtoK)})`} opacity={curtoK}>
+            <text textAnchor="middle" fill={C.cyan} fontFamily={FONT_UI} fontWeight={700} fontSize={38} letterSpacing={2.5}
+              stroke={C.bg} strokeWidth={10} paintOrder="stroke">O CAMINHO MAIS CURTO?</text>
           </g>
         )}
 

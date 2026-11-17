@@ -1,1 +1,1 @@
-export const PILOTO_S = 13.6;
+export const PILOTO_S = 17.2;

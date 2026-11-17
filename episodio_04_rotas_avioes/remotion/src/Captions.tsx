@@ -5,7 +5,8 @@ import { C, FONT_UI, W } from './theme';
 
 const KEY: Record<string, string> = {
   curva: C.cyan, 'redonda.': C.cyan, círculo: C.cyan, 'máximo.': C.cyan, globo: C.cyan, 'curto': C.cyan,
-  'distância!': C.cyan, menor: C.cyan, 'curva?': C.cyan,
+  'distância!': C.cyan, menor: C.cyan, 'curva?': C.cyan, 'curto?': C.cyan, 'esférica.': C.cyan, 'mapa.': C.yellow,
+  'enorme?': C.cyan, 'desvio,': C.yellow, 'segredo': C.yellow, 'gigantesca': C.yellow, 'sentido.': C.cyan, 'tempestades': C.yellow, 'rápido.': C.yellow,
   'desvio.': C.yellow, 'enganando!': C.yellow, 'distorcidas.': C.yellow, 'Surpresa:': C.yellow, 'enorme!': C.yellow,
   'Ventos,': C.yellow, 'tempestades,': C.yellow, 'restritos': C.yellow, 'tráfego': C.yellow,
 };
