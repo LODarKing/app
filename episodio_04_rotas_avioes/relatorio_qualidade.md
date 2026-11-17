@@ -1,4 +1,52 @@
-# Relatório de qualidade: etapa do PILOTO (v2, voz ElevenLabs)
+# Relatório de qualidade
+
+## EPISÓDIO FINAL: `video_final.mp4` (piloto aprovado em 17/11/2026)
+| Item | Medido |
+|---|---|
+| Vídeo | H.264 High, 1080×1920, 30 fps, yuv420p (faixa TV, BT.709), CRF 16 |
+| Áudio | AAC-LC 256 kb/s, 48 kHz, estéreo |
+| Duração | **67,5 s** (narração de 66,9 s + assinatura) |
+| Loudness | **−14,0 LUFS** integrados (ebur128), LRA 2,6 LU |
+| Pico real | **−1,1 dBTP** depois da codificação AAC (limite −1); 0 clipping; 0 NaN |
+| Metadados | título e comentário de proveniência ("narração sintetizada por IA") preservados no MP4 |
+
+**Ciclo de revisão:** folha com um quadro por batida (108 quadros, `remotion/out/folha_episodio.png`) e folha do MP4 final (`video_final_folha_de_contato.png`).
+
+**Testes antes do render:** dois testes em momentos-chave corrigiram:
+1. globo pequeno nas cenas 2 a 5;
+2. centro da Terra encoberto pela rota na cena do círculo máximo (câmera inclinada para 30° N);
+3. círculos "todos iguais" achatados pela perspectiva (centro em 36° N);
+4. rótulos da cena 5 sobrepostos e elementos minúsculos;
+5. subtítulo "O MENOR CAMINHO SOBRE A ESFERA" saindo antes de terminar;
+6. legenda duplicada sobre a assinatura.
+
+| Critério | Nota final |
+|---|---|
+| Gancho nos 2 primeiros segundos | 8 |
+| Leitura em tela de celular | 8 |
+| Qualidade do movimento | 8 |
+| Variedade (algo novo a cada 2–4 s) | 8: o maior trecho sem evento novo tem 3,7 s ("MAIS CURTO ≠…") |
+| Fidelidade à marca | 8: cores e tipografia do canal; o símbolo AV não estava disponível |
+| Sincronia do som | 8: efeitos na grade medida (96 BPM, fase 0) e eventos nas palavras da narração |
+
+### Revisão editorial do episódio
+- **Círculo máximo:** explicação correta. Ele é mostrado como interseção da esfera com um plano que passa pelo centro, com anel completo, plano e raios.
+- **Globo × mapa:** a mesma rota aparece nas duas formas (cena 4), com pontos correspondentes calculados.
+- **Trajetórias:** consistentes. SLERP para o círculo máximo; loxodromia para a reta do Mercator; mesma função de projeção em WebGL e SVG.
+- **Distâncias:** calculadas na esfera (R = 6.371 km) e com o modelo informado na tela.
+- **Rota da cena 5:** marcada como simulação ilustrativa. Ventos, tempestade, área restrita e setores são genéricos (sem dados atuais) e não há tempo de voo nem economia inventados.
+- **Afirmações absolutas:** nenhuma. "pode ser", "pode parecer" e "nem sempre" vêm da narração.
+- **Originalidade:** sem imagens de terceiros. Mapa vetorial Natural Earth (domínio público), animação, trilha e efeitos feitos para o episódio.
+
+### Pendências
+1. ⚠ **"tempestades" soa como "tentestades"** na narração do ElevenLabs (cerca de 52,4 s). Regerar só essa frase e rodar `python3 audio/narracao_elevenlabs.py`. A montagem preserva os tempos das outras frases.
+2. **Símbolo AV original:** ausente. Para incluir, apontar `LOGO_SRC` em `remotion/src/Later.tsx` e renderizar de novo.
+3. **Voz:** registrar o ID e os parâmetros no `configuracao_voz.json`.
+4. **YouTube:** marcar "conteúdo alterado ou sintético" (voz por IA) no upload, conforme a descrição.
+
+---
+
+# Etapa do PILOTO (v2, voz ElevenLabs)
 
 > **v2 (17/11/2026):** o piloto foi refeito com a narração do ElevenLabs enviada pelo usuário. Ela foi montada sem mudar a velocidade (65,7 s no total) e a linha do tempo foi reencaixada na fala nova. Piloto com **17,2 s**, até "A Terra é quase esférica." Medições da v2: −14,0 LUFS, pico real −1,3 dBTP, yuv420p, AAC 48 kHz. Notas finais: todas 8. Mudanças desta versão: o avião cruza a rota inteira até "caminho mais curto?", a rota ciano é destacada com o rótulo "O CAMINHO MAIS CURTO?" e a esfera se fecha dentro do piloto. A versão Kokoro está em `audio/kokoro/`.
 > As medições abaixo são da v1.
@@ -50,4 +98,4 @@ Três rodadas de folha de contato. As versões estão em `remotion/out/folha_bat
 2. **Símbolo AV original:** ausente do repositório; necessário para a cena 6.
 3. **Fonte da FAA:** inacessível (403). Será substituída por referência oficial antes da cena 5.
 4. **Cena 4:** sem frase própria no roteiro (ver storyboard).
-5. **Render:** WebGL via SwiftShader (`gl: swangle`), cerca de 3 min para 13,6 s. O episódio completo deve levar cerca de 15 min.
+5. **Render:** WebGL via SwiftShader (`gl: swangle`); o episódio completo levou cerca de 13 min.

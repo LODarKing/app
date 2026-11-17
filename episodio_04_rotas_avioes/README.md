@@ -1,6 +1,6 @@
 # Além do Visível, Ep. 04: Por que os aviões não voam em linha reta no mapa?
 
-**Estado:** piloto renderizado, **aguardando aprovação** para o episódio completo.
+**Estado:** piloto aprovado; **episódio final renderizado e validado** (`video_final.mp4`, 67,5 s, −14 LUFS).
 
 ## Entregáveis desta etapa
 | Arquivo | O que é |
@@ -15,7 +15,9 @@
 | `relatorio_qualidade.md` | notas, medições e pendências |
 | `configuracao_voz.json` | voz e parâmetros para as próximas produções |
 
-`video_final.mp4`, `descricao_youtube.txt` e `tags_youtube.txt` vêm depois da aprovação.
+| `video_final.mp4` | episódio completo (67,5 s) |
+| `video_final_folha_de_contato.png` | quadros do vídeo final |
+| `descricao_youtube.txt` / `tags_youtube.txt` | textos de publicação (com fontes e aviso de IA) |
 
 ## Como reproduzir
 ```bash
@@ -24,12 +26,12 @@ python3 audio/narracao_elevenlabs.py  # monta a narração do ElevenLabs (audio/
 # alternativa local: python3 audio/narracao.py (Kokoro)
 python3 ferramentas_srt.py
 # 2. trilha + efeitos + medição da grade (beats.json) + mixagem a -14 LUFS
-python3 audio/som.py piloto
+python3 audio/som.py piloto        # ou: episodio
 # 3. imagem (Remotion + WebGL)
-cd remotion && npm install && node render.mjs Piloto out/piloto_video.mp4
+cd remotion && npm install && node render.mjs Piloto out/piloto_video.mp4   # ou: Episodio out/episodio_video.mp4
 #    folha de contato: node render.mjs Piloto x --stills 0,19,38 out/stills
 # 4. finalização (H.264 yuv420p CRF 16 + AAC 48 kHz)
-cd .. && ./finalizar.sh piloto
+cd .. && ./finalizar.sh piloto     # ou: episodio  -> video_final.mp4
 ```
 Dependências Python: numpy, scipy, soundfile, pyloudnorm, pedalboard, librosa, kokoro-onnx, faster-whisper.
 
@@ -37,7 +39,10 @@ Dependências Python: numpy, scipy, soundfile, pyloudnorm, pedalboard, librosa, 
 - `geo.ts`: coordenadas, SLERP do círculo máximo, loxodromia, Mercator, distâncias, antimeridiano.
 - `morph.ts`: transformação contínua folha plana → esfera (mesma fórmula do shader).
 - `GlobeGL.tsx`: superfície da Terra em WebGL (Natural Earth 1:50m rasterizado com `d3-geo`).
-- `Episode.tsx`: câmera, rotas, avião, marcadores, círculos de Tissot e título (função pura do quadro).
+- `camera.ts`: câmera (fórmula do piloto + quadros-chave) e tela dividida.
+- `Episode.tsx`: cena 1–2 (rotas, avião, título, Tissot) e composição das vistas.
+- `Later.tsx`: cenas 2–6 (círculo máximo, revelação, comparação, rota simulada, assinatura).
+- `shared.tsx`: rotas amostradas, marcadores, graticulado.
 - `Captions.tsx`: legendas por palavra.
 - `timeline.ts` + `data/eventos.json` + `data/beats.json`: eventos em batidas, fonte única para imagem e som.
 
