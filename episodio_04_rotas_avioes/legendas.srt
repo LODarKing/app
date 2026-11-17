@@ -1,0 +1,171 @@
+1
+00:00:00,220 --> 00:00:01,080
+Já viu a rota
+
+2
+00:00:01,100 --> 00:00:01,980
+de um avião no mapa
+
+3
+00:00:02,000 --> 00:00:02,831
+e pensou:
+
+4
+00:00:02,851 --> 00:00:04,761
+por que tanta curva?
+
+5
+00:00:04,969 --> 00:00:06,679
+Parece um desvio.
+
+6
+00:00:06,749 --> 00:00:08,200
+Mas olha só…
+
+7
+00:00:08,220 --> 00:00:09,720
+talvez o mapa esteja
+
+8
+00:00:09,740 --> 00:00:11,030
+te enganando!
+
+9
+00:00:11,372 --> 00:00:13,142
+A Terra é redonda.
+
+10
+00:00:13,257 --> 00:00:15,337
+E quando transformamos sua superfície
+
+11
+00:00:15,357 --> 00:00:16,637
+em um mapa plano,
+
+12
+00:00:16,657 --> 00:00:18,967
+as distâncias ficam distorcidas.
+
+13
+00:00:19,306 --> 00:00:20,026
+No globo,
+
+14
+00:00:20,046 --> 00:00:21,006
+o caminho mais curto
+
+15
+00:00:21,026 --> 00:00:22,126
+entre dois pontos segue
+
+16
+00:00:22,146 --> 00:00:24,620
+um arco chamado círculo máximo.
+
+17
+00:00:24,640 --> 00:00:25,080
+Só que,
+
+18
+00:00:25,100 --> 00:00:26,200
+em muitos mapas,
+
+19
+00:00:26,220 --> 00:00:28,450
+esse arco parece uma curva enorme!
+
+20
+00:00:28,912 --> 00:00:30,332
+Agora compare as duas
+
+21
+00:00:30,352 --> 00:00:31,922
+rotas sobre a Terra.
+
+22
+00:00:32,433 --> 00:00:33,635
+Surpresa:
+
+23
+00:00:33,655 --> 00:00:34,775
+aquela curva do mapa
+
+24
+00:00:34,795 --> 00:00:37,545
+pode representar a menor distância!
+
+25
+00:00:38,085 --> 00:00:39,245
+Mas atenção:
+
+26
+00:00:39,265 --> 00:00:40,285
+os aviões reais nem
+
+27
+00:00:40,305 --> 00:00:42,955
+sempre seguem exatamente esse caminho.
+
+28
+00:00:43,069 --> 00:00:43,709
+Ventos,
+
+29
+00:00:43,729 --> 00:00:45,009
+tempestades,
+
+30
+00:00:45,029 --> 00:00:46,749
+espaços aéreos restritos e controle
+
+31
+00:00:46,769 --> 00:00:48,769
+de tráfego também influenciam
+
+32
+00:00:48,789 --> 00:00:49,879
+as rotas.
+
+33
+00:00:50,092 --> 00:00:50,632
+Por isso,
+
+34
+00:00:50,652 --> 00:00:51,652
+o caminho mais curto
+
+35
+00:00:51,672 --> 00:00:53,152
+nem sempre é o mais rápido
+
+36
+00:00:53,172 --> 00:00:54,902
+ou o mais adequado.
+
+37
+00:00:55,256 --> 00:00:56,516
+Da próxima vez que olhar
+
+38
+00:00:56,536 --> 00:00:57,356
+um voo no mapa,
+
+39
+00:00:57,376 --> 00:00:58,482
+lembre-se:
+
+40
+00:00:58,502 --> 00:00:59,622
+o desenho não conta
+
+41
+00:00:59,642 --> 00:01:01,012
+a história toda.
+
+42
+00:01:01,606 --> 00:01:03,263
+Além do Visível.
+
+43
+00:01:03,283 --> 00:01:06,073
+O extraordinário está nos detalhes.

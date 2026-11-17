@@ -60,3 +60,10 @@ NOS_AMARRAS_EPISODIO/audio/*.wav
 NOS_AMARRAS_EPISODIO/narracao/
 NOS_AMARRAS_EPISODIO/node_modules/
 NOS_AMARRAS_EPISODIO/*.mp3
+# Episódio 04 (Além do Visível): dependências, renders intermediários e áudios regeneráveis
+episodio_04_rotas_avioes/remotion/node_modules/
+episodio_04_rotas_avioes/remotion/out/stills/
+episodio_04_rotas_avioes/remotion/out/*.mp4
+episodio_04_rotas_avioes/audio/narracao_bruta.wav
+episodio_04_rotas_avioes/audio/narracao_ia.wav
+episodio_04_rotas_avioes/audio/mix/*.wav

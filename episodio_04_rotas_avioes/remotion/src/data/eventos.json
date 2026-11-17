@@ -1,0 +1,30 @@
+{
+ "_doc": "Eventos em BATIDAS (índice na grade medida beats.json). Fonte única para imagem (timeline.ts) e som (audio/som.py).",
+ "ny": 0,
+ "tk": 0.25,
+ "retaIni": 0,
+ "retaFim": 0.75,
+ "curvaIni": 0.75,
+ "curvaFim": 3.0,
+ "aviaoIni": 0.75,
+ "aviaoFim": 10.5,
+ "titulo1": 5,
+ "titulo2": 6,
+ "tituloCurva": 7,
+ "desvio": 8,
+ "desvioTxt": 9,
+ "olha": 11,
+ "tissot": [
+  11,
+  11.5,
+  12,
+  12.5,
+  13
+ ],
+ "recua": 13,
+ "uIni": 14,
+ "uFim": 25,
+ "sIni": 14.5,
+ "sFim": 27.5,
+ "fimPiloto": 21
+}
