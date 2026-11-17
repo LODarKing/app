@@ -237,6 +237,35 @@ def efeitos(dur, ev, B):
         put(fx_bolha([1047, 880, 740, 587, 440][i]), bt(k), 0.0)
     put(fx_whoosh(1.6, True), bt(ev['recua']) - 0.1)
     put(fx_transformacao(bt(ev['sFim']) - bt(ev['uIni'])), bt(ev['uIni']))
+    if 'globoPronto' in ev and dur > 30:
+        put(fx_impacto(0.5, 70), bt(ev['globoPronto']))
+        put(fx_ping(1320, 0.5), bt(ev['iguais']), 0.2)
+        put(fx_impacto(0.8), bt(ev['titDistorce']))
+        put(fx_whoosh(1.0, False, 0.6), bt(ev['cena3']) - 0.2)
+        put(fx_traco(0.8, 600, 2200, 1.0), bt(ev['anel']))
+        put(fx_impacto(0.9, 85), bt(ev['titCirculo'])); put(fx_impacto(0.4, 150), bt(ev['titMenor']))
+        put(fx_transformacao(bt(ev['plano2']) - bt(ev['desenrola']))[::-1] * 0.8, bt(ev['desenrola']))
+        put(fx_aviao(bt(ev['voo2Fim']) - bt(ev['voo2'])), bt(ev['voo2']))
+        put(fx_ping(1175, 0.7), bt(ev['nyPulse']), 0.4); put(fx_ping(1568, 0.7), bt(ev['tkPulse']), -0.4)
+        put(fx_traco(0.6, 1200, 3000, 0.7), bt(ev['rotaVolta']))
+        put(fx_dobra(), bt(ev['norte']))
+        put(fx_transformacao(bt(ev['globo2Fim']) - bt(ev['globo2'])), bt(ev['globo2']))
+        put(fx_impacto(1.2, 70), bt(ev['reta'])); put(fx_ping(1760, 0.8), bt(ev['reta']))
+        put(fx_impacto(0.4, 160), bt(ev['distancias'])); put(fx_impacto(0.4, 160), bt(ev['distancias'] + 0.5))
+        put(fx_whoosh(0.9, True, 0.7), bt(ev['split']) - 0.1)
+        for i in range(3): put(fx_bolha([660, 880, 1047][i]), bt(ev['corresp'] + 0.5 * i))
+        put(fx_whoosh(0.9, False, 0.6), bt(ev['splitFim']) - 0.3)
+        put(fx_traco(bt(ev['simFim']) - bt(ev['simIni']), 500, 1400, 0.8), bt(ev['simIni']))
+        put(fx_whoosh(1.8, True, 0.5), bt(ev['ventos']))
+        put(fx_impacto(0.7, 55), bt(ev['tempestade']))
+        put(fx_impacto(0.4, 200), bt(ev['restrito']))
+        put(fx_ping(2093, 0.45), bt(ev['atc'])); put(fx_ping(2093, 0.3), bt(ev['atc'] + 0.5))
+        put(fx_impacto(0.9), bt(ev['maisCurto']))
+        put(fx_whoosh(1.0, True, 0.5), bt(ev['cena6']))
+        put(fx_transformacao(bt(ev['plano3']) - bt(ev['desenrola2']))[::-1] * 0.7, bt(ev['desenrola2']))
+        put(fx_aviao(bt(ev['aviaoFinalFim']) - bt(ev['aviaoFinal'])) * 1.2, bt(ev['aviaoFinal']))
+        put(fx_impacto(0.6, 65), bt(ev['assinatura']))
+        put(fx_ping(1047, 0.5), bt(ev['slogan']))
     return np.stack([L, R], 1)
 
 # ---------------------------------------------------------------- mixagem
@@ -283,10 +312,14 @@ def mixar(modo):
         fim = None  # definido pela grade medida (batida 21)
         corte = 16.6  # fim de "A Terra é quase esférica." (16,24 s) + respiro; a frase seguinte (17,4 s) fica para o episódio
         voz = voz[: int(corte * SR)].copy(); nf_ = int(0.06 * SR); voz[-nf_:] *= np.linspace(1, 0, nf_)
-    else:
-        raise SystemExit('episódio completo: só depois da aprovação do piloto')
+    else:  # episódio completo (piloto aprovado em 17/11/2026)
+        dur = 67.5
+        plano = [(0, 0.25), (1.8, 0.35), (4.5, 0.45), (7.2, 0.5), (10.3, 0.56), (12.2, 0.62), (14.1, 0.72), (16.2, 0.9),
+                 (18.8, 0.78), (23.4, 0.7), (28, 0.8), (30, 0.6), (36, 0.68), (38, 0.85), (41, 1.0), (42.8, 0.78),
+                 (46, 0.55), (52, 0.74), (57, 0.86), (60.9, 0.62), (63.1, 0.5), (67.5, 0.4)]
+        fim = None
     med = medir_batidas(trilha(dur, plano, None), dur)
-    fim = med['beats'][27] if modo == 'piloto' else fim
+    fim = med['beats'][27] if modo == 'piloto' else med['beats'][101]
     mus = trilha(dur, plano, fim_acorde=fim)
     json.dump(med, open(os.path.join(DATA, 'beats.json'), 'w'), ensure_ascii=False, indent=0)
     B = med['beats']

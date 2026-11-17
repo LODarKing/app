@@ -1,0 +1,25 @@
+Por que os aviões não voam em linha reta no mapa? ✈️🌍
+
+A rota de Nova York a Tóquio parece um desvio enorme para o Norte. Mas no globo ela é o caminho mais curto: um arco de círculo máximo. Neste episódio, o mapa plano se curva até virar esfera, diante dos seus olhos, sem perder um único ponto das coordenadas.
+
+O que você vai ver:
+• por que a projeção de Mercator estica as distâncias perto dos polos (círculos de 1.000 km que parecem até 3× maiores);
+• o que é um círculo máximo e por que ele é o menor caminho sobre uma esfera;
+• a mesma rota no mapa e no globo;
+• por que voos reais nem sempre seguem o caminho mais curto: ventos, tempestades, espaço aéreo restrito e controle de tráfego.
+
+Números do exemplo (modelo esférico, raio médio de 6.371 km):
+• Nova York → Tóquio pelo círculo máximo: ≈ 10.849 km
+• pela "linha reta" do mapa de Mercator (rumo constante): ≈ 12.787 km
+As rotas mostradas são simulações geométricas, não registros de voos reais. A rota alternativa da parte final é ilustrativa.
+
+Fontes:
+• Penn State, GEOG 486, Projection Properties: https://courses.ems.psu.edu/geog486/node/856
+• NOAA, The Jet Stream: https://www.noaa.gov/jetstream/global/jet-stream
+• NOAA/NWS, Glossário, Jet Stream: https://marine.weather.gov/glossary.php?word=Jet+Stream
+• NASA Ames, Gate-to-Gate Flights (ATD-3): https://www.nasa.gov/centers-and-facilities/ames/nasa-delivers-on-making-gate-to-gate-flights-more-efficient/
+• Dados geográficos: Natural Earth (domínio público)
+
+Produção: animação programática original (mapas e trajetórias calculados matematicamente), narração gerada por inteligência artificial (ElevenLabs), trilha e efeitos sintetizados em código.
+
+#Shorts #Geografia #Aviação #Mapas #Ciência #AlémDoVisível

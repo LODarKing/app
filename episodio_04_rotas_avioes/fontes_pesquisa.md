@@ -25,11 +25,13 @@ São coordenadas de referência das cidades, não de aeroportos. A rota é uma *
 - Num elipsoide (WGS-84) os valores mudam algumas dezenas de quilômetros. Se forem exibidos no vídeo, a legenda informará "modelo esférico".
 - **Antimeridiano:** o mapa é centrado no meio do círculo máximo (153,66° O). As duas rotas ficam contínuas, e a costura do mapa (26,3° L) fica longe delas. O recorte dos polígonos na costura é feito pelo `d3-geo`.
 
-## Aviação e meteorologia (cena 5, ainda não produzida)
+## Aviação e meteorologia (cena 5)
 
 | Fonte | Status | Observação |
 |---|---|---|
-| FAA, *How Air Traffic Works*: https://www.faa.gov/podcasts/the-air-up-there/how-air-traffic-works | ❌ **inacessível** (HTTP 403 para acesso automatizado) | O conteúdo **não** foi usado nem presumido. Antes da cena 5 vou buscar uma referência substituta oficial (outra página da FAA, da ICAO ou da EUROCONTROL sobre controle de tráfego e espaço aéreo restrito) e registrá-la aqui. |
+| FAA, *How Air Traffic Works*: https://www.faa.gov/podcasts/the-air-up-there/how-air-traffic-works | ❌ **inacessível** (HTTP 403 para acesso automatizado; as páginas do AIM e do NextGen da FAA também deram 403) | O conteúdo **não** foi usado nem presumido. Foi **substituída** pela fonte da NASA abaixo. |
+| **Substituta:** NASA Ames, *NASA Delivers on Making Gate-to-Gate Flights More Efficient* (2022, atualizada em 2026): https://www.nasa.gov/centers-and-facilities/ames/nasa-delivers-on-making-gate-to-gate-flights-more-efficient/ | ✅ lida | A pesquisa ATD-3 trata do "desvio de mau tempo na fase de cruzeiro" e de "correções de curso eficientes" quando há mau tempo. Lista como entradas do planejamento da rota "o clima atual, os ventos", "a presença de outros tráfegos aéreos" e "a proximidade de espaço aéreo restrito". Os gestores de tráfego gerenciam o intervalo entre aeronaves (ATD-1). Isso sustenta "ventos, tempestades e restrições do espaço aéreo influenciam as rotas" e o elemento visual "controle de tráfego". |
+| NOAA JetStream, *The Jet Stream*: https://www.noaa.gov/jetstream/global/jet-stream | ✅ lida | "Faixas relativamente estreitas de vento forte nos níveis altos da atmosfera"; "os ventos sopram de oeste para leste, mas a faixa se desloca para norte e sul". Sustenta a direção das setas de vento (para leste), que são genéricas e sem dados atuais. |
 | NOAA/NWS Glossary, *Jet Stream*: https://marine.weather.gov/glossary.php?word=Jet+Stream | ✅ lida | Define a corrente de jato como "ventos relativamente fortes concentrados numa faixa estreita da atmosfera, normalmente horizontais e em grande altitude". Sua posição e orientação variam dia a dia. Isso sustenta "ventos influenciam as rotas" sem citar condições atuais. |
 
 ## Políticas do YouTube

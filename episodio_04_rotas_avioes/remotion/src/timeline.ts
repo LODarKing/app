@@ -34,3 +34,5 @@ export const EV = {
   uIni: b(ev.uIni), uFim: b(ev.uFim), sIni: b(ev.sIni), sFim: b(ev.sFim),
   fimPiloto: b(ev.fimPiloto),
 };
+// eventos do episódio completo (segundos), pela mesma grade
+export const E: Record<string, number> = Object.fromEntries(Object.entries(ev).filter(([, x]) => typeof x === 'number').map(([k, x]) => [k, b(x as number)]));

@@ -82,7 +82,8 @@ function buildTexture(): Promise<HTMLCanvasElement> {
   return texPromise;
 }
 
-export const GlobeGL: React.FC<{ view: View; width: number; height: number }> = ({ view, width, height }) => {
+export type GLView = { v: View; clip?: [number, number, number, number] };
+export const GlobeGL: React.FC<{ views: GLView[]; width: number; height: number }> = ({ views, width, height }) => {
   const ref = useRef<HTMLCanvasElement>(null);
   const glRef = useRef<{ gl: WebGLRenderingContext; prog: WebGLProgram; n: number } | null>(null);
   const [handle] = useState(() => delayRender('textura e WebGL'));
@@ -137,13 +138,22 @@ export const GlobeGL: React.FC<{ view: View; width: number; height: number }> = 
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LEQUAL);
     const u = (k: string) => gl.getUniformLocation(prog, k);
-    gl.uniform1f(u('uS'), view.s); gl.uniform1f(u('uU'), view.u); gl.uniform1f(u('uLatC'), view.latC);
-    gl.uniform1f(u('uZoom'), view.zoom); gl.uniform1f(u('uRoll'), view.roll);
-    gl.uniform1f(u('uD'), CAM_D); gl.uniform1f(u('uF'), CAM_F);
-    gl.uniform2f(u('uPan'), view.panX, view.panY); gl.uniform2f(u('uCenter'), view.cx, view.cy); gl.uniform2f(u('uRes'), width, height);
-    const G = view.G; // GLSL mat3 é coluna a coluna
-    gl.uniformMatrix3fv(u('uG'), false, new Float32Array([G[0], G[3], G[6], G[1], G[4], G[7], G[2], G[5], G[8]]));
-    gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_INT, 0);
+    for (const { v: view, clip } of views) {
+      if (clip) {
+        if (clip[2] <= 0 || clip[3] <= 0) continue;
+        gl.enable(gl.SCISSOR_TEST);
+        gl.scissor(Math.round(clip[0]), Math.round(height - clip[1] - clip[3]), Math.round(clip[2]), Math.round(clip[3]));
+        gl.clear(gl.DEPTH_BUFFER_BIT);
+      } else gl.disable(gl.SCISSOR_TEST);
+      gl.uniform1f(u('uS'), view.s); gl.uniform1f(u('uU'), view.u); gl.uniform1f(u('uLatC'), view.latC);
+      gl.uniform1f(u('uZoom'), view.zoom); gl.uniform1f(u('uRoll'), view.roll);
+      gl.uniform1f(u('uD'), CAM_D); gl.uniform1f(u('uF'), CAM_F);
+      gl.uniform2f(u('uPan'), view.panX, view.panY); gl.uniform2f(u('uCenter'), view.cx, view.cy); gl.uniform2f(u('uRes'), width, height);
+      const G = view.G; // GLSL mat3 é coluna a coluna
+      gl.uniformMatrix3fv(u('uG'), false, new Float32Array([G[0], G[3], G[6], G[1], G[4], G[7], G[2], G[5], G[8]]));
+      gl.drawElements(gl.TRIANGLES, n, gl.UNSIGNED_INT, 0);
+    }
+    gl.disable(gl.SCISSOR_TEST);
     gl.finish();
   });
 

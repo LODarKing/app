@@ -28,7 +28,7 @@ FRASES = [
     ("Imagine um voo de Nova York até Tóquio.", 0.40, 3),
     ("No mapa, a rota pode parecer um desvio em direção ao Norte.", 0.90, 3),
     ("Mas quando observamos a Terra como um globo,", 0.50, 3),
-    ("tudo começa a fazer sentido.", 2.20, 4),
+    ("tudo começa a fazer sentido.", 3.40, 4),
     ("Só que existe outro detalhe.", 0.40, 5),
     ("Os aviões nem sempre seguem exatamente o caminho mais curto.", 0.60, 5),
     ("Ventos, tempestades e restrições do espaço aéreo também influenciam as rotas.", 0.60, 5),
