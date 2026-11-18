@@ -60,3 +60,12 @@ NOS_AMARRAS_EPISODIO/audio/*.wav
 NOS_AMARRAS_EPISODIO/narracao/
 NOS_AMARRAS_EPISODIO/node_modules/
 NOS_AMARRAS_EPISODIO/*.mp3
+# Além do Visível EP05: dependências, renders intermediários e testes de voz
+episodio_05_qrcode/projeto_remotion/node_modules/
+episodio_05_qrcode/projeto_remotion/out/
+episodio_05_qrcode/audio/teste/
+episodio_05_qrcode/audio/frases/
+episodio_05_qrcode/audio/narracao_bruta.wav
+episodio_05_qrcode/audio/*_trilha.wav
+episodio_05_qrcode/audio/*_sfx.wav
+episodio_05_qrcode/audio/narracao_ia.wav

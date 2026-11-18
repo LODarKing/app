@@ -1,0 +1,116 @@
+{
+ "voz": "pm_alex",
+ "motor": "kokoro-onnx v1.0",
+ "sr": 48000,
+ "duracao": 72.686,
+ "frases": [
+  {
+   "i": 0,
+   "texto": "Este quadrado parece uma bagunça.",
+   "ini": 0.12,
+   "fim": 2.215
+  },
+  {
+   "i": 1,
+   "texto": "Mas ele pode guardar uma mensagem, um endereço de internet... e até continuar funcionando quando parte dele está danificada!",
+   "ini": 2.595,
+   "fim": 9.725
+  },
+  {
+   "i": 2,
+   "texto": "Como isso é possível?",
+   "ini": 10.345,
+   "fim": 11.717
+  },
+  {
+   "i": 3,
+   "texto": "O segredo está na organização dos quadradinhos!",
+   "ini": 12.567,
+   "fim": 15.397
+  },
+  {
+   "i": 4,
+   "texto": "Um QR Code guarda informações em uma grade de pequenos módulos claros e escuros.",
+   "ini": 15.947,
+   "fim": 21.11
+  },
+  {
+   "i": 5,
+   "texto": "Aqueles três quadrados grandes nos cantos ajudam a câmera a encontrar e orientar o código.",
+   "ini": 21.61,
+   "fim": 27.05
+  },
+  {
+   "i": 6,
+   "texto": "Depois, o celular interpreta os padrões e reconstrói a informação armazenada.",
+   "ini": 27.55,
+   "fim": 32.038
+  },
+  {
+   "i": 7,
+   "texto": "Se o conteúdo for um endereço de internet, ele pode oferecer a opção de abrir o site.",
+   "ini": 32.458,
+   "fim": 37.363
+  },
+  {
+   "i": 8,
+   "texto": "E tem um detalhe surpreendente!",
+   "ini": 38.163,
+   "fim": 40.26
+  },
+  {
+   "i": 9,
+   "texto": "Alguns QR Codes possuem informações extras que permitem corrigir erros.",
+   "ini": 40.96,
+   "fim": 45.315
+  },
+  {
+   "i": 10,
+   "texto": "Por isso, dependendo do dano, eles podem continuar funcionando mesmo com partes comprometidas!",
+   "ini": 45.765,
+   "fim": 51.245
+  },
+  {
+   "i": 11,
+   "texto": "Mas existe um limite para essa recuperação.",
+   "ini": 51.695,
+   "fim": 54.208
+  },
+  {
+   "i": 12,
+   "texto": "E olha só: ler um QR Code não exige internet.",
+   "ini": 54.958,
+   "fim": 57.899
+  },
+  {
+   "i": 13,
+   "texto": "Abrir um site normalmente exige.",
+   "ini": 58.249,
+   "fim": 60.419
+  },
+  {
+   "i": 14,
+   "texto": "Agora vem o desafio!",
+   "ini": 61.269,
+   "fim": 62.777
+  },
+  {
+   "i": 15,
+   "texto": "Pause o vídeo no código que vai aparecer e descubra a mensagem secreta!",
+   "ini": 63.377,
+   "fim": 67.517
+  },
+  {
+   "i": 16,
+   "texto": "Além do Visível.",
+   "ini": 68.417,
+   "fim": 69.66
+  },
+  {
+   "i": 17,
+   "texto": "O extraordinário está nos detalhes.",
+   "ini": 70.11,
+   "fim": 72.386
+  }
+ ]
+}

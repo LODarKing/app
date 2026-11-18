@@ -1,0 +1,509 @@
+[
+ {
+  "texto": "Este quadrado",
+  "ini": 0.0,
+  "fim": 0.84,
+  "palavras": [
+   0.0,
+   0.32
+  ]
+ },
+ {
+  "texto": "parece uma _bagunça._",
+  "ini": 0.86,
+  "fim": 2.52,
+  "palavras": [
+   0.86,
+   1.22,
+   1.52
+  ]
+ },
+ {
+  "texto": "Mas ele pode guardar",
+  "ini": 2.54,
+  "fim": 3.6,
+  "palavras": [
+   2.54,
+   2.72,
+   2.86,
+   3.06
+  ]
+ },
+ {
+  "texto": "uma *mensagem,*",
+  "ini": 3.62,
+  "fim": 4.7,
+  "palavras": [
+   3.62,
+   3.8
+  ]
+ },
+ {
+  "texto": "um *endereço de internet…*",
+  "ini": 4.72,
+  "fim": 5.86,
+  "palavras": [
+   4.72,
+   4.8,
+   5.28,
+   5.46
+  ]
+ },
+ {
+  "texto": "e até continuar funcionando",
+  "ini": 5.88,
+  "fim": 7.84,
+  "palavras": [
+   5.88,
+   6.44,
+   6.64,
+   7.22
+  ]
+ },
+ {
+  "texto": "quando parte dele",
+  "ini": 7.86,
+  "fim": 8.74,
+  "palavras": [
+   7.86,
+   8.08,
+   8.54
+  ]
+ },
+ {
+  "texto": "está _danificada!_",
+  "ini": 8.76,
+  "fim": 10.24,
+  "palavras": [
+   8.76,
+   8.98
+  ]
+ },
+ {
+  "texto": "Como isso é *possível?*",
+  "ini": 10.28,
+  "fim": 12.04,
+  "palavras": [
+   10.28,
+   10.5,
+   10.82,
+   10.94
+  ]
+ },
+ {
+  "texto": "O segredo está",
+  "ini": 12.48,
+  "fim": 13.46,
+  "palavras": [
+   12.48,
+   12.66,
+   13.22
+  ]
+ },
+ {
+  "texto": "na *organização* dos quadradinhos!",
+  "ini": 13.48,
+  "fim": 15.8,
+  "palavras": [
+   13.48,
+   13.62,
+   14.28,
+   14.48
+  ]
+ },
+ {
+  "texto": "Um QR Code guarda informações",
+  "ini": 15.86,
+  "fim": 17.78,
+  "palavras": [
+   15.86,
+   16.04,
+   16.74,
+   17.2
+  ]
+ },
+ {
+  "texto": "em uma grade",
+  "ini": 17.8,
+  "fim": 18.88,
+  "palavras": [
+   17.8,
+   18.4,
+   18.54
+  ]
+ },
+ {
+  "texto": "de pequenos *módulos*",
+  "ini": 18.9,
+  "fim": 19.88,
+  "palavras": [
+   18.9,
+   19.08,
+   19.48
+  ]
+ },
+ {
+  "texto": "claros e escuros.",
+  "ini": 19.9,
+  "fim": 21.48,
+  "palavras": [
+   19.9,
+   20.4,
+   20.5
+  ]
+ },
+ {
+  "texto": "Aqueles *três quadrados grandes*",
+  "ini": 21.52,
+  "fim": 23.1,
+  "palavras": [
+   21.52,
+   21.86,
+   22.16,
+   22.64
+  ]
+ },
+ {
+  "texto": "nos cantos",
+  "ini": 23.12,
+  "fim": 23.88,
+  "palavras": [
+   23.12,
+   23.42
+  ]
+ },
+ {
+  "texto": "ajudam a câmera",
+  "ini": 23.9,
+  "fim": 24.98,
+  "palavras": [
+   23.9,
+   24.58,
+   24.72
+  ]
+ },
+ {
+  "texto": "a *encontrar* e *orientar* o código.",
+  "ini": 25.0,
+  "fim": 26.94,
+  "palavras": [
+   25.0,
+   25.18,
+   25.5,
+   25.9,
+   26.4,
+   26.54
+  ]
+ },
+ {
+  "texto": "Depois, o celular",
+  "ini": 26.96,
+  "fim": 28.5,
+  "palavras": [
+   26.96,
+   28.14,
+   28.22
+  ]
+ },
+ {
+  "texto": "*interpreta* os padrões",
+  "ini": 28.52,
+  "fim": 29.74,
+  "palavras": [
+   28.52,
+   29.14,
+   29.26
+  ]
+ },
+ {
+  "texto": "e *reconstrói* a informação",
+  "ini": 29.76,
+  "fim": 31.24,
+  "palavras": [
+   29.76,
+   30.04,
+   30.7,
+   30.8
+  ]
+ },
+ {
+  "texto": "armazenada.",
+  "ini": 31.26,
+  "fim": 32.36,
+  "palavras": [
+   31.26
+  ]
+ },
+ {
+  "texto": "Se o conteúdo for",
+  "ini": 32.38,
+  "fim": 33.34,
+  "palavras": [
+   32.38,
+   32.54,
+   32.64,
+   33.0
+  ]
+ },
+ {
+  "texto": "um *endereço de internet,*",
+  "ini": 33.36,
+  "fim": 34.96,
+  "palavras": [
+   33.36,
+   33.5,
+   33.98,
+   34.14
+  ]
+ },
+ {
+  "texto": "ele pode oferecer",
+  "ini": 34.98,
+  "fim": 35.86,
+  "palavras": [
+   34.98,
+   35.12,
+   35.3
+  ]
+ },
+ {
+  "texto": "a opção de abrir o site.",
+  "ini": 35.88,
+  "fim": 37.78,
+  "palavras": [
+   35.88,
+   36.02,
+   36.36,
+   36.52,
+   36.78,
+   36.92
+  ]
+ },
+ {
+  "texto": "E tem um detalhe",
+  "ini": 38.06,
+  "fim": 39.1,
+  "palavras": [
+   38.06,
+   38.3,
+   38.5,
+   38.7
+  ]
+ },
+ {
+  "texto": "_surpreendente!_",
+  "ini": 39.12,
+  "fim": 40.72,
+  "palavras": [
+   39.12
+  ]
+ },
+ {
+  "texto": "Alguns QR Codes possuem",
+  "ini": 40.9,
+  "fim": 42.48,
+  "palavras": [
+   40.9,
+   41.32,
+   42.0
+  ]
+ },
+ {
+  "texto": "*informações extras*",
+  "ini": 42.5,
+  "fim": 43.48,
+  "palavras": [
+   42.5,
+   42.86
+  ]
+ },
+ {
+  "texto": "que permitem *corrigir erros.*",
+  "ini": 43.5,
+  "fim": 45.66,
+  "palavras": [
+   43.5,
+   43.86,
+   44.32,
+   44.78
+  ]
+ },
+ {
+  "texto": "Por isso, dependendo do dano,",
+  "ini": 45.68,
+  "fim": 47.46,
+  "palavras": [
+   45.68,
+   45.86,
+   46.16,
+   46.68,
+   46.86
+  ]
+ },
+ {
+  "texto": "eles podem continuar funcionando",
+  "ini": 47.48,
+  "fim": 49.14,
+  "palavras": [
+   47.48,
+   47.6,
+   47.94,
+   48.56
+  ]
+ },
+ {
+  "texto": "mesmo com partes comprometidas!",
+  "ini": 49.16,
+  "fim": 51.6,
+  "palavras": [
+   49.16,
+   49.54,
+   49.82,
+   50.2
+  ]
+ },
+ {
+  "texto": "Mas existe um _limite_",
+  "ini": 51.62,
+  "fim": 52.74,
+  "palavras": [
+   51.62,
+   51.82,
+   52.2,
+   52.38
+  ]
+ },
+ {
+  "texto": "para essa recuperação.",
+  "ini": 52.76,
+  "fim": 54.66,
+  "palavras": [
+   52.76,
+   53.12,
+   53.36
+  ]
+ },
+ {
+  "texto": "E olha só:",
+  "ini": 54.68,
+  "fim": 55.7,
+  "palavras": [
+   54.68,
+   55.02,
+   55.2
+  ]
+ },
+ {
+  "texto": "ler um QR Code",
+  "ini": 55.72,
+  "fim": 56.6,
+  "palavras": [
+   55.72,
+   55.8,
+   55.92
+  ]
+ },
+ {
+  "texto": "*não exige internet.*",
+  "ini": 56.62,
+  "fim": 58.16,
+  "palavras": [
+   56.62,
+   56.86,
+   57.2
+  ]
+ },
+ {
+  "texto": "Abrir um site",
+  "ini": 58.18,
+  "fim": 58.94,
+  "palavras": [
+   58.18,
+   58.48,
+   58.62
+  ]
+ },
+ {
+  "texto": "normalmente _exige._",
+  "ini": 58.96,
+  "fim": 60.98,
+  "palavras": [
+   58.96,
+   59.58
+  ]
+ },
+ {
+  "texto": "Agora vem o _desafio!_",
+  "ini": 61.18,
+  "fim": 63.28,
+  "palavras": [
+   61.18,
+   61.52,
+   61.84,
+   62.06
+  ]
+ },
+ {
+  "texto": "Pause o vídeo",
+  "ini": 63.32,
+  "fim": 64.0,
+  "palavras": [
+   63.32,
+   63.56,
+   63.76
+  ]
+ },
+ {
+  "texto": "no código que vai aparecer",
+  "ini": 64.02,
+  "fim": 65.56,
+  "palavras": [
+   64.02,
+   64.16,
+   64.66,
+   64.96,
+   65.1
+  ]
+ },
+ {
+  "texto": "e descubra",
+  "ini": 65.58,
+  "fim": 66.32,
+  "palavras": [
+   65.58,
+   65.9
+  ]
+ },
+ {
+  "texto": "a *mensagem secreta!*",
+  "ini": 66.34,
+  "fim": 68.1,
+  "palavras": [
+   66.34,
+   66.38,
+   66.84
+  ]
+ },
+ {
+  "texto": "Além do Visível.",
+  "ini": 68.22,
+  "fim": 70.06,
+  "palavras": [
+   68.22,
+   68.66,
+   68.92
+  ]
+ },
+ {
+  "texto": "O extraordinário está nos detalhes.",
+  "ini": 70.08,
+  "fim": 72.8,
+  "palavras": [
+   70.08,
+   70.2,
+   71.14,
+   71.44,
+   71.62
+  ]
+ }
+]

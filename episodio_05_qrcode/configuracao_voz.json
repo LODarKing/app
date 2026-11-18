@@ -1,0 +1,24 @@
+{
+  "episodio": "Além do Visível — EP. 05 — Como um QR Code guarda informações?",
+  "situacao_elevenlabs": {
+    "disponivel": false,
+    "motivo": "Havia uma chave do ElevenLabs salva no ambiente (api.elevenlabs.io), mas a API recusou todas as chamadas: primeiro 'Invalid API key' e depois 'API key must start with sk_'. A nova chave pedida pelo formulário seguro foi recusada. Nenhuma credencial foi inventada e nenhum serviço foi contratado.",
+    "arquivo_para_importacao": "narracao_elevenlabs.txt",
+    "voz_anterior_do_canal": "não documentada neste repositório (não há arquivos dos episódios anteriores do Além do Visível aqui)"
+  },
+  "narracao_usada_no_piloto": {
+    "tipo": "voz sintetizada por IA, modelo neural local",
+    "motor": "Kokoro-82M v1.0 (kokoro-onnx), licença Apache-2.0",
+    "voz": "pm_alex",
+    "idioma": "pt-br",
+    "perfil": "masculina, português brasileiro, timbre médio-grave, dicção clara",
+    "velocidade_por_frase": "0,95 a 1,08 (perguntas e viradas mais lentas, explicações um pouco mais rápidas)",
+    "pausas": "definidas à mão por frase, maiores em 'Como isso é possível?', 'E tem um detalhe surpreendente!' e 'Agora vem o desafio!'",
+    "pronuncia_qr_code": "pronúncia padrão do motor ('quê-erre códji'), conferida pela transcrição do Whisper como 'QR-code'; as grafias fonéticas testadas pioraram a transcrição",
+    "tratamento": "passa-altas 70 Hz, +2 dB de corpo em 180 Hz, -1,2 dB em 320 Hz, +1,5 dB de presença em 3,2 kHz, -2,5 dB de sibilância em 7 kHz, compressão 2,5:1 e limitador; sem efeitos de voz",
+    "amostragem": "48 kHz, 24 bit",
+    "script": "ferramentas/narracao.py",
+    "conferencia": "ferramentas/palavras.py (Whisper small): as 18 frases foram transcritas sem nenhuma palavra trocada"
+  },
+  "para_trocar_pela_voz_do_canal": "Gerar o áudio no ElevenLabs a partir de narracao_elevenlabs.txt, salvar como audio/narracao_ia.wav e rodar ferramentas/palavras.py, ferramentas/legendas.py e ferramentas/trilha.py. As cenas seguem os tempos das palavras."
+}

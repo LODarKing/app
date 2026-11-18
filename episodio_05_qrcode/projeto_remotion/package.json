@@ -1,0 +1,26 @@
+{
+  "name": "alem-do-visivel-ep05-qrcode",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "qr": "node scripts/gerar_qr.mjs",
+    "studio": "remotion studio src/index.ts",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.538",
+    "@remotion/cli": "4.0.538",
+    "@remotion/renderer": "4.0.538",
+    "remotion": "4.0.538",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "qrcode": "1.5.4",
+    "@fontsource/jetbrains-mono": "5.2.5"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "@types/qrcode": "1.5.5",
+    "typescript": "5.8.3"
+  }
+}

@@ -1,0 +1,39 @@
+{
+ "trilha": "audio/piloto_trilha.wav",
+ "bpm_medido": 120.01,
+ "periodo_s": 0.5,
+ "fase_s": -0.2264,
+ "batidas": [
+  3.272,
+  3.774,
+  4.273,
+  4.773,
+  5.275,
+  5.774,
+  6.273,
+  6.772,
+  7.275,
+  7.774,
+  8.273,
+  8.772,
+  9.272,
+  9.774,
+  10.273,
+  10.772,
+  11.274,
+  11.773
+ ],
+ "eventos_desvio_ms": {
+  "gancho": -23.6,
+  "assentou": -23.5,
+  "baguncaIni": -23.5,
+  "ordem": -23.5,
+  "chipTexto": -23.4,
+  "chipSite": -23.4,
+  "leitura": -23.3,
+  "dano": -23.2,
+  "mergulho": -23.1,
+  "zigzag": -23.1,
+  "titulo": -23.1
+ }
+}

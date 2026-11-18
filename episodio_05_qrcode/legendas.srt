@@ -1,0 +1,196 @@
+1
+00:00:00,000 --> 00:00:00,840
+Este quadrado
+
+2
+00:00:00,860 --> 00:00:02,520
+parece uma bagunça.
+
+3
+00:00:02,540 --> 00:00:03,600
+Mas ele pode guardar
+
+4
+00:00:03,620 --> 00:00:04,700
+uma mensagem,
+
+5
+00:00:04,720 --> 00:00:05,860
+um endereço de internet…
+
+6
+00:00:05,880 --> 00:00:07,840
+e até continuar funcionando
+
+7
+00:00:07,860 --> 00:00:08,740
+quando parte dele
+
+8
+00:00:08,760 --> 00:00:10,240
+está danificada!
+
+9
+00:00:10,280 --> 00:00:12,040
+Como isso é possível?
+
+10
+00:00:12,480 --> 00:00:13,460
+O segredo está
+
+11
+00:00:13,480 --> 00:00:15,800
+na organização dos quadradinhos!
+
+12
+00:00:15,860 --> 00:00:17,780
+Um QR Code guarda informações
+
+13
+00:00:17,800 --> 00:00:18,880
+em uma grade
+
+14
+00:00:18,900 --> 00:00:19,880
+de pequenos módulos
+
+15
+00:00:19,900 --> 00:00:21,480
+claros e escuros.
+
+16
+00:00:21,520 --> 00:00:23,100
+Aqueles três quadrados grandes
+
+17
+00:00:23,120 --> 00:00:23,880
+nos cantos
+
+18
+00:00:23,900 --> 00:00:24,980
+ajudam a câmera
+
+19
+00:00:25,000 --> 00:00:26,940
+a encontrar e orientar o código.
+
+20
+00:00:26,960 --> 00:00:28,500
+Depois, o celular
+
+21
+00:00:28,520 --> 00:00:29,740
+interpreta os padrões
+
+22
+00:00:29,760 --> 00:00:31,240
+e reconstrói a informação
+
+23
+00:00:31,260 --> 00:00:32,360
+armazenada.
+
+24
+00:00:32,380 --> 00:00:33,340
+Se o conteúdo for
+
+25
+00:00:33,360 --> 00:00:34,960
+um endereço de internet,
+
+26
+00:00:34,980 --> 00:00:35,860
+ele pode oferecer
+
+27
+00:00:35,880 --> 00:00:37,780
+a opção de abrir o site.
+
+28
+00:00:38,060 --> 00:00:39,100
+E tem um detalhe
+
+29
+00:00:39,120 --> 00:00:40,720
+surpreendente!
+
+30
+00:00:40,900 --> 00:00:42,480
+Alguns QR Codes possuem
+
+31
+00:00:42,500 --> 00:00:43,480
+informações extras
+
+32
+00:00:43,500 --> 00:00:45,660
+que permitem corrigir erros.
+
+33
+00:00:45,680 --> 00:00:47,460
+Por isso, dependendo do dano,
+
+34
+00:00:47,480 --> 00:00:49,140
+eles podem continuar funcionando
+
+35
+00:00:49,160 --> 00:00:51,600
+mesmo com partes comprometidas!
+
+36
+00:00:51,620 --> 00:00:52,740
+Mas existe um limite
+
+37
+00:00:52,760 --> 00:00:54,660
+para essa recuperação.
+
+38
+00:00:54,680 --> 00:00:55,700
+E olha só:
+
+39
+00:00:55,720 --> 00:00:56,600
+ler um QR Code
+
+40
+00:00:56,620 --> 00:00:58,160
+não exige internet.
+
+41
+00:00:58,180 --> 00:00:58,940
+Abrir um site
+
+42
+00:00:58,960 --> 00:01:00,980
+normalmente exige.
+
+43
+00:01:01,180 --> 00:01:03,280
+Agora vem o desafio!
+
+44
+00:01:03,320 --> 00:01:04,000
+Pause o vídeo
+
+45
+00:01:04,020 --> 00:01:05,560
+no código que vai aparecer
+
+46
+00:01:05,580 --> 00:01:06,320
+e descubra
+
+47
+00:01:06,340 --> 00:01:08,100
+a mensagem secreta!
+
+48
+00:01:08,220 --> 00:01:10,060
+Além do Visível.
+
+49
+00:01:10,080 --> 00:01:12,800
+O extraordinário está nos detalhes.
+

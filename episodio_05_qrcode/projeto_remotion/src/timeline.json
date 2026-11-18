@@ -1,0 +1,18 @@
+{
+  "bpm": 120,
+  "grade_s": 0.25,
+  "piloto": {
+    "duracao": 12.3,
+    "gancho": 0.0,
+    "assentou": 1.0,
+    "baguncaIni": 1.5,
+    "ordem": 2.5,
+    "chipTexto": 3.75,
+    "chipSite": 4.75,
+    "leitura": 6.5,
+    "dano": 9.0,
+    "mergulho": 10.25,
+    "zigzag": 11.0,
+    "titulo": 10.75
+  }
+}

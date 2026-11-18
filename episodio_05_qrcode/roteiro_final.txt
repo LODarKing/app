@@ -1,0 +1,38 @@
+ALÉM DO VISÍVEL — EPISÓDIO 05
+COMO UM QR CODE GUARDA INFORMAÇÕES?
+Roteiro final da narração (tempos medidos na narração gerada; duração total 72.7 s)
+
+
+CENA 01 — O MISTÉRIO
+[00.12–02.21] Este quadrado parece uma bagunça.
+[02.60–09.72] Mas ele pode guardar uma mensagem, um endereço de internet... e até continuar funcionando quando parte dele está danificada!
+[10.35–11.72] Como isso é possível?
+
+CENA 02 — OS DADOS ESCONDIDOS
+[12.57–15.40] O segredo está na organização dos quadradinhos!
+[15.95–21.11] Um QR Code guarda informações em uma grade de pequenos módulos claros e escuros.
+
+CENA 03 — OS TRÊS QUADRADOS
+[21.61–27.05] Aqueles três quadrados grandes nos cantos ajudam a câmera a encontrar e orientar o código.
+
+CENA 04 — A DECODIFICAÇÃO
+[27.55–32.04] Depois, o celular interpreta os padrões e reconstrói a informação armazenada.
+[32.46–37.36] Se o conteúdo for um endereço de internet, ele pode oferecer a opção de abrir o site.
+
+CENA 05 — A CORREÇÃO DE ERROS
+[38.16–40.26] E tem um detalhe surpreendente!
+[40.96–45.31] Alguns QR Codes possuem informações extras que permitem corrigir erros.
+[45.77–51.24] Por isso, dependendo do dano, eles podem continuar funcionando mesmo com partes comprometidas!
+[51.70–54.21] Mas existe um limite para essa recuperação.
+
+CENA 06 — INTERNET OU NÃO?
+[54.96–57.90] E olha só: ler um QR Code não exige internet.
+[58.25–60.42] Abrir um site normalmente exige.
+
+CENA 07 — O DESAFIO FINAL
+[61.27–62.78] Agora vem o desafio!
+[63.38–67.52] Pause o vídeo no código que vai aparecer e descubra a mensagem secreta!
+[68.42–69.66] Além do Visível.
+[70.11–72.39] O extraordinário está nos detalhes.
+
+Alterações em relação ao texto-base: nenhuma palavra mudou. Só a pontuação das pausas (reticências em "internet...") e o ritmo de cada frase foram ajustados.
