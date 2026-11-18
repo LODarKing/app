@@ -3,7 +3,7 @@ import sys, json, numpy as np, librosa
 nome = sys.argv[1] if len(sys.argv) > 1 else 'piloto'
 y, sr = librosa.load(f'audio/{nome}_trilha.wav', sr=22050)
 HOP = 64  # ~2,9 ms por quadro de análise: resolução fina para trilha curta
-o0 = float(json.load(open('projeto_remotion/src/timeline.json'))[nome].get('ordem', 0))  # antes disso a trilha não tem pulso regular
+_E = json.load(open('projeto_remotion/src/timeline.json'))[nome]; o0 = float(min(_E.get('titulo', 99), _E.get('ordem', 0)))  # antes disso a trilha não tem pulso regular
 ys = y[int(o0 * sr):]
 oenv = librosa.onset.onset_strength(y=ys, sr=sr, hop_length=HOP)
 tempo, fr = librosa.beat.beat_track(onset_envelope=oenv, sr=sr, hop_length=HOP, start_bpm=120, tightness=400, units='frames')

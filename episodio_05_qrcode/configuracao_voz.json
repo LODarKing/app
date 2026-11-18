@@ -6,7 +6,15 @@
     "arquivo_para_importacao": "narracao_elevenlabs.txt",
     "voz_anterior_do_canal": "não documentada neste repositório (não há arquivos dos episódios anteriores do Além do Visível aqui)"
   },
-  "narracao_usada_no_piloto": {
+  "para_trocar_pela_voz_do_canal": "Substituir audio/usuario/narracao_original.mp3 e rodar tratar_narracao.py, palavras.py (medium), legendas.py e trilha.py.",
+  "narracao_em_uso": {
+    "origem": "fornecida pelo usuário (Narração QRCode .mp3, enviada em 18/11/2026)",
+    "arquivo_original": "audio/usuario/narracao_original.mp3 (MP3 128 kb/s, 44,1 kHz, mono, 60,03 s, -21,1 LUFS)",
+    "tratamento": "ferramentas/tratar_narracao.py — reamostragem para 48 kHz, de-esser dinâmico (até -6 dB em 5–9 kHz), passa-altas 70 Hz, EQ suave (+0,8 dB 150 Hz, -1 dB 300 Hz, +1 dB 3 kHz), compressão 2:1. Tempos e pausas intactos.",
+    "saida": "narracao_ia.wav (48 kHz, 24 bit)",
+    "conferencia": "Whisper medium: transcrição limpa, 177 palavras alinhadas às 50 legendas sem nenhuma palavra pulada"
+  },
+  "narracao_usada_no_piloto_v1": {
     "tipo": "voz sintetizada por IA, modelo neural local",
     "motor": "Kokoro-82M v1.0 (kokoro-onnx), licença Apache-2.0",
     "voz": "pm_alex",
@@ -18,7 +26,7 @@
     "tratamento": "passa-altas 70 Hz, +2 dB de corpo em 180 Hz, -1,2 dB em 320 Hz, +1,5 dB de presença em 3,2 kHz, -2,5 dB de sibilância em 7 kHz, compressão 2,5:1 e limitador; sem efeitos de voz",
     "amostragem": "48 kHz, 24 bit",
     "script": "ferramentas/narracao.py",
-    "conferencia": "ferramentas/palavras.py (Whisper small): as 18 frases foram transcritas sem nenhuma palavra trocada"
-  },
-  "para_trocar_pela_voz_do_canal": "Gerar o áudio no ElevenLabs a partir de narracao_elevenlabs.txt, salvar como audio/narracao_ia.wav e rodar ferramentas/palavras.py, ferramentas/legendas.py e ferramentas/trilha.py. As cenas seguem os tempos das palavras."
+    "conferencia": "ferramentas/palavras.py (Whisper small): as 18 frases foram transcritas sem nenhuma palavra trocada",
+    "observacao": "substituída pela narração do usuário; mantida só como registro"
+  }
 }

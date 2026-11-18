@@ -1,142 +1,142 @@
 [
 {
-"w": "Este",
+"w": "Você",
 "ini": 0.0,
-"fim": 0.32
+"fim": 0.3
 },
 {
-"w": "quadrado",
-"ini": 0.32,
-"fim": 0.9
+"w": "já",
+"ini": 0.3,
+"fim": 0.46
 },
 {
-"w": "parece",
-"ini": 0.9,
-"fim": 1.2
+"w": "parou",
+"ini": 0.46,
+"fim": 0.7
 },
 {
-"w": "uma",
-"ini": 1.2,
+"w": "para",
+"ini": 0.7,
+"fim": 0.8
+},
+{
+"w": "pensar",
+"ini": 0.8,
+"fim": 1.16
+},
+{
+"w": "como",
+"ini": 1.16,
 "fim": 1.5
 },
 {
-"w": "bagunça,",
+"w": "esses",
 "ini": 1.5,
-"fim": 2.16
+"fim": 1.68
 },
 {
-"w": "mas",
-"ini": 2.54,
+"w": "pequenos",
+"ini": 1.68,
+"fim": 2.2
+},
+{
+"w": "quadradinhos",
+"ini": 2.2,
 "fim": 2.72
 },
 {
-"w": "ele",
+"w": "conseguem",
 "ini": 2.72,
-"fim": 2.86
-},
-{
-"w": "pode",
-"ini": 2.86,
-"fim": 3.08
+"fim": 3.2
 },
 {
 "w": "guardar",
-"ini": 3.08,
+"ini": 3.2,
 "fim": 3.66
 },
 {
-"w": "uma",
+"w": "tanta",
 "ini": 3.66,
-"fim": 3.8
+"fim": 3.84
 },
 {
-"w": "mensagem,",
-"ini": 3.8,
-"fim": 4.46
+"w": "informação?",
+"ini": 3.84,
+"fim": 4.38
+},
+{
+"w": "Parece",
+"ini": 4.68,
+"fim": 5.0
+},
+{
+"w": "apenas",
+"ini": 5.0,
+"fim": 5.4
 },
 {
 "w": "um",
-"ini": 4.74,
-"fim": 4.8
+"ini": 5.4,
+"fim": 5.62
 },
 {
-"w": "endereço",
-"ini": 4.8,
-"fim": 5.28
+"w": "desenho",
+"ini": 5.62,
+"fim": 6.04
 },
 {
-"w": "de",
-"ini": 5.28,
-"fim": 5.46
+"w": "sem",
+"ini": 6.04,
+"fim": 6.14
 },
 {
-"w": "internet",
-"ini": 5.46,
-"fim": 5.88
+"w": "sentido,",
+"ini": 6.14,
+"fim": 6.56
 },
 {
-"w": "e",
-"ini": 5.88,
-"fim": 6.44
+"w": "não",
+"ini": 6.66,
+"fim": 6.74
 },
 {
-"w": "até",
-"ini": 6.44,
-"fim": 6.62
+"w": "é?",
+"ini": 6.74,
+"fim": 6.88
 },
 {
-"w": "continuar",
-"ini": 6.62,
-"fim": 7.22
+"w": "Mas",
+"ini": 7.28,
+"fim": 7.48
 },
 {
-"w": "funcionando",
-"ini": 7.22,
-"fim": 7.86
+"w": "existe",
+"ini": 7.48,
+"fim": 7.82
 },
 {
-"w": "quando",
-"ini": 7.86,
-"fim": 8.08
+"w": "uma",
+"ini": 7.82,
+"fim": 8.0
 },
 {
-"w": "parte",
-"ini": 8.08,
-"fim": 8.52
+"w": "tecnologia",
+"ini": 8.0,
+"fim": 8.58
 },
 {
-"w": "dele",
-"ini": 8.52,
-"fim": 8.76
+"w": "incrível",
+"ini": 8.58,
+"fim": 9.2
 },
 {
-"w": "está",
-"ini": 8.76,
-"fim": 8.98
+"w": "escondida",
+"ini": 9.2,
+"fim": 9.74
 },
 {
-"w": "danificada.",
-"ini": 8.98,
-"fim": 9.66
-},
-{
-"w": "Como",
-"ini": 10.12,
-"fim": 10.5
-},
-{
-"w": "isso",
-"ini": 10.5,
-"fim": 10.8
-},
-{
-"w": "é",
-"ini": 10.8,
-"fim": 10.92
-},
-{
-"w": "possível?",
-"ini": 10.92,
-"fim": 11.4
+"w": "aqui!",
+"ini": 9.74,
+"fim": 9.92
 }
 ]

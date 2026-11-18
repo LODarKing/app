@@ -23,9 +23,9 @@ Geração: **node-qrcode 1.5.4** (MIT), `scripts/gerar_qr.mjs`. Leitura independ
 |---|---|
 | Conteúdo | `Olá! Esta mensagem estava escondida nos quadrados.` |
 | Versão / EC / máscara | 4 (33×33) / M / 2 |
-| Leitura no **MP4 do piloto** | quadros em 0,0 s (ainda inclinado), 3,2 s, 5,5 s e 8,5 s: ✅ ZXing e ✅ OpenCV, texto idêntico. Em 1,2 s (grade de varredura sobreposta): ✅ ZXing, ❌ OpenCV. |
+| Leitura no **MP4 do piloto v2** | quadros em 0,0 s (ainda inclinado), 1,5 s, 3,0 s, 4,2 s e 8,3 s: ✅ ZXing e ✅ OpenCV, texto idêntico. |
 
-No piloto, as distorções (embaralhamento em 1,5–2,5 s e dano em 9 s) são **ilustração**: não se apresentam como código funcional. A matriz desenhada sai do mesmo `qr_dados.json` gerado pela biblioteca.
+No piloto, a distorção (embaralhamento em 4,75–7,25 s) é **ilustração**: não se apresenta como código funcional. A matriz desenhada sai do mesmo `qr_dados.json` gerado pela biblioteca.
 
 ## Estruturas preservadas (conferidas em `qr_dados.json`)
 

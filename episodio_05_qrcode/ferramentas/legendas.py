@@ -11,7 +11,8 @@ def tokens(line):
 grupos = [l.rstrip('\n') for l in open('legendas/grupos.txt', encoding='utf-8') if l.strip() and not l.startswith('#')]
 W0 = json.load(open('audio/narracao_ia_palavras.json')); W = []
 for w in W0:  # o Whisper parte "QR-code" em "QR" + "-code": junta de volta
-    if W and w['w'].startswith('-'): W[-1] = dict(w=W[-1]['w'] + w['w'], ini=W[-1]['ini'], fim=w['fim'])
+    if W and (w['w'].startswith('-') or (norm(W[-1]['w']) == 'qr' and norm(w['w']).startswith('code'))):
+        W[-1] = dict(w=W[-1]['w'] + '-' + w['w'].lstrip('-'), ini=W[-1]['ini'], fim=w['fim'])
     else: W.append(dict(w))
 wi, out = 0, []
 for g in grupos:

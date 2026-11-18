@@ -6,7 +6,7 @@ from faster_whisper import WhisperModel
 src = sys.argv[1] if len(sys.argv) > 1 else 'audio/narracao_ia.wav'
 a, sr = sf.read(src, dtype='float32')
 a16 = resample_poly(a, 1, 3).astype(np.float32)
-W = WhisperModel('small', device='cpu', compute_type='int8')
+W = WhisperModel(sys.argv[2] if len(sys.argv) > 2 else 'small', device='cpu', compute_type='int8')
 segs, _ = W.transcribe(a16, language='pt', word_timestamps=True, beam_size=5)
 words = []
 for s in segs:

@@ -49,9 +49,9 @@ for s16 in range(int(DUR / (BEAT / 4))):  # arpejo digital em semicolcheias: só
     f = midi(ch[step] + 12); n = int(0.16 * SR); tt = np.arange(n) / SR
     x = np.sin(2 * np.pi * f * tt + 1.4 * np.sin(2 * np.pi * 2 * f * tt) * np.exp(-tt * 30)) * env(n, 0.002, 0.09, 4)
     put(arp, x, t0, 0.07 * (0.8 if s16 % 4 else 1.0))
-for e8 in range(int(DUR / (BEAT / 2))):  # chimbal digital discreto em colcheias
+for e8 in range(int(DUR / (BEAT / 2))):  # chimbal digital discreto em colcheias (entra com o título)
     t0 = e8 * BEAT / 2
-    if t0 < ordem: continue
+    if t0 < E.get('titulo', ordem): continue
     n = int(0.05 * SR); x = hp(rng.standard_normal(n), 7000) * env(n, 0.001, 0.025, 5)
     put(perc, x, t0, 0.035 if e8 % 2 else 0.02)
 if 'mergulho' in E:  # bumbo suave a partir do mergulho: a pergunta ganha corpo
@@ -94,10 +94,12 @@ g = E['gancho']; sweep(g, 1.0, 300, 5000, 0.22); thump(g, 60, 0.55, 0.5)
 click(E['assentou'], 1800, 0.22)
 chatter(E['baguncaIni'], E['ordem'] - E['baguncaIni'] - 0.05, 0.08)
 click(E['ordem'], 2200, 0.25); click(E['ordem'] + 0.06, 3300, 0.18); thump(E['ordem'], 80, 0.35, 0.25)
-blip(E['chipTexto'], midi(76), 0.15); click(E['chipTexto'], 2600, 0.1)
-blip(E['chipSite'], midi(79), 0.15); click(E['chipSite'], 2600, 0.1)
+for k, nota in (('chipTexto', 76), ('chipSite', 79)):
+    if k in E: blip(E[k], midi(nota), 0.15); click(E[k], 2600, 0.1)
+if 'quadradinhos' in E:  # onda diagonal pelos módulos: tiques rápidos subindo de altura, em fusas
+    for i in range(8): click(E['quadradinhos'] + i * BEAT / 8, 1800 + 260 * i, 0.07, 0.018)
 ping(E['leitura']); sweep(E['leitura'], 0.6, 1500, 4000, 0.06)
-crunch(E['dano'])
+if 'dano' in E: crunch(E['dano'])
 sweep(E['mergulho'] - 0.15, 0.9, 4000, 250, 0.16); thump(E['mergulho'] + 0.5, 50, 0.3, 0.6)
 if 'titulo' in E: click(E['titulo'], 1600, 0.2); click(E['titulo'] + 0.0625, 2400, 0.12)
 for i in range(int((DUR - 0.2 - E['zigzag']) / (BEAT / 4))):  # cada palavra de código acesa = um tique

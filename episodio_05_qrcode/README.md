@@ -1,12 +1,12 @@
 # Além do Visível — EP. 05: Como um QR Code guarda informações?
 
-Status: **piloto renderizado, aguardando aprovação** (o episódio completo ainda não foi produzido).
+Status: **piloto v2 (narração do usuário) renderizado, aguardando aprovação**. O episódio completo ainda não foi produzido.
 
 ## Como regenerar
 ```bash
 cd episodio_05_qrcode
-python3 ferramentas/narracao.py          # narração IA (Kokoro pm_alex) -> audio/narracao_ia.wav, audio/frases.json
-python3 ferramentas/palavras.py          # Whisper: conferência + tempos por palavra
+python3 ferramentas/tratar_narracao.py   # narração do usuário (audio/usuario/narracao_original.mp3) -> audio/narracao_ia.wav
+python3 ferramentas/palavras.py audio/narracao_ia.wav medium   # Whisper: conferência + tempos por palavra
 python3 ferramentas/legendas.py          # legendas.srt + projeto_remotion/src/legendas.json
 python3 ferramentas/trilha.py piloto     # trilha + efeitos sintetizados + mixagem -14 LUFS
 python3 ferramentas/medir_batidas.py piloto   # beats.json (grade medida)

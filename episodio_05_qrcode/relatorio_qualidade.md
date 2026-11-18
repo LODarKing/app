@@ -1,4 +1,26 @@
-# Relatório de qualidade — PILOTO (12,3 s)
+# Relatório de qualidade — PILOTO v2 (10,3 s, narração do usuário)
+
+## Arquivo `piloto_10s.mp4`
+- 1080×1920, H.264 yuv420p, CRF 16, 30 fps, 10,30 s; AAC 48 kHz estéreo, 256 kb/s.
+- Volume medido **no MP4**: **-14,0 LUFS** integrados, pico real **-4,6 dBTP**. Sem clipping.
+- QR de abertura lido direto do MP4 em 0,0 / 1,5 / 3,0 / 4,2 / 8,3 s: ✅ ZXing e ✅ OpenCV, texto idêntico.
+- Narração: a do usuário, só com tratamento leve. Transcrita da mixagem final, sai idêntica.
+- Grade medida: 120,03 BPM; eventos a ~25 ms da colcheia (menos de 1 quadro).
+
+## Ciclo da folha de contato (v2)
+| Critério | Nota | Observação |
+|---|---|---|
+| Gancho nos 2 s | 8 | código inclinado que se assenta + varredura que revela a grade, já no quadro 0 |
+| Leitura em celular | 8 | título acima do código, legenda abaixo, nada cobre os localizadores |
+| Qualidade do movimento | 8 | onda nos "quadradinhos", embaralhamento à deriva, mola na volta da ordem |
+| Variedade | 8 | evento novo a cada 0,75–2,5 s |
+| Fidelidade à marca | 8 | paleta oficial; Inter Display + JetBrains Mono |
+| Sincronia do som | 8 | cada evento cai na palavra que ilustra |
+Problema corrigido nesta rodada: o título ficava 7 s parado; agora se desmonta na palavra "Mas" (~4 s na tela).
+
+---
+
+## Histórico — piloto v1 (12,3 s, narração IA Kokoro sobre o roteiro do briefing)
 
 ## Arquivo `piloto_10s.mp4`
 - 1080×1920, H.264 yuv420p, CRF 16, 30 fps, 12,30 s; AAC 48 kHz estéreo, 256 kb/s.
