@@ -24,3 +24,9 @@ Páginas consultadas em 18/11/2026. Todas carregaram.
 - Não diz que "qualquer QR Code funciona com 30% removido". A cena 5 vai usar um exemplo testado com decodificador real.
 - "Ler um QR Code não exige internet" vale para a decodificação, feita no aparelho. Abrir o site decodificado exige conexão.
 - O inventor e o ano não aparecem no vídeo: as páginas consultadas não trazem esse dado e ele não foi completado de memória.
+
+## Acrescentado na produção do episódio
+- **Estrutura de blocos (ISO/IEC 18004, tabela de blocos de correção)** para as combinações usadas: 4-M = 2 × (32 dados + 18 correção); 5-M = 2 × (43 + 24); 6-H = 4 × (15 + 28); 2-M = 1 × (28 + 16). As contagens de dados foram confirmadas no próprio código: desfeita a intercalação, o fluxo bate bit a bit com modo + comprimento + texto.
+- **Reed-Solomon**: com 28 palavras de correção por bloco, o leitor corrige até 14 palavras com erro por bloco quando não sabe onde estão (t = (n − k) / 2). É o "LIMITE 14" da cena 5.
+- **Proporção 1:1:3:1:1** do localizador (escuro-claro-escuro-claro-escuro numa linha que cruza o centro): é a assinatura que os leitores procuram para achar o código. Conferível na própria matriz (7 módulos: 1 + 1 + 3 + 1 + 1).
+- **example.com**: domínio reservado para exemplos (IETF RFC 2606, mantido pela IANA): https://www.iana.org/help/example-domains

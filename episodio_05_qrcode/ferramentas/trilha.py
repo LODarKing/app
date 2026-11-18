@@ -9,7 +9,11 @@ from pedalboard import Pedalboard, Reverb, Limiter, Compressor, HighpassFilter, 
 SR = 48000; BPM = 120; BEAT = 60 / BPM
 TL = json.load(open('projeto_remotion/src/timeline.json'))
 nome = sys.argv[1] if len(sys.argv) > 1 else 'piloto'
-E = TL[nome]; DUR = E['duracao']; N = int(DUR * SR) + SR // 2
+E = dict(TL['piloto'], **TL['episodio']) if nome == 'episodio' else TL[nome]
+EP = nome == 'episodio'
+DUR = E['duracao']; N = int(DUR * SR) + SR // 2
+def fora(t, *janelas): return all(not (a <= t < b) for a, b in janelas)
+PAUSAS = [(28.25, 29.5), (38.75, 40.25)] if EP else []   # respiro antes da revelação e corte na falha
 rng = np.random.default_rng(5)  # semente fixa
 t_all = np.arange(N) / SR
 
@@ -37,32 +41,39 @@ for k in range(int(DUR / (2 * BAR)) + 2):  # cada acorde dura 2 compassos
     put(pad, s, t0, 0.05)
 for b in range(int(DUR / BEAT) + 1):  # pulso grave: tempos 1 e 3 (coração do "sistema")
     t0 = b * BEAT
-    if b % 2: continue
+    if b % 2 or not fora(t0, PAUSAS[0] if EP else (0, 0)) or (EP and t0 > 60.5): continue
     root = CH[int(t0 // (2 * BAR)) % 4][0] - 12; n = int(0.45 * SR); tt = np.arange(n) / SR
     put(low, np.sin(2 * np.pi * midi(root) * tt) * env(n, 0.008, 0.35, 3), t0, 0.32)
 ordem = E.get('ordem', 0)
 for s16 in range(int(DUR / (BEAT / 4))):  # arpejo digital em semicolcheias: só depois que a ordem volta
     t0 = s16 * BEAT / 4
     if t0 < ordem: continue
+    sorte = rng.random()
+    if EP and (not fora(t0, *PAUSAS) or t0 > 59.9): continue
+    if EP and t0 >= E['c7Ini'] and s16 % 4: continue                  # desafio: só uma nota por tempo
     ch = CH[int(t0 // (2 * BAR)) % 4]; step = [0, 2, 1, 3, 4, 2, 3, 1][s16 % 8]
-    if rng.random() < 0.18: continue
-    f = midi(ch[step] + 12); n = int(0.16 * SR); tt = np.arange(n) / SR
+    if sorte < 0.18: continue
+    clim = EP and E['c5Recupera'] <= t0 < E['c5DanoB']
+    f = midi(ch[step] + (24 if clim else 12)); n = int(0.16 * SR); tt = np.arange(n) / SR
     x = np.sin(2 * np.pi * f * tt + 1.4 * np.sin(2 * np.pi * 2 * f * tt) * np.exp(-tt * 30)) * env(n, 0.002, 0.09, 4)
-    put(arp, x, t0, 0.07 * (0.8 if s16 % 4 else 1.0))
+    put(arp, x, t0, 0.07 * (0.8 if s16 % 4 else 1.0) * (1.25 if (EP and E['c5Recupera'] <= t0 < E['c5DanoB']) else 1.0))
 for e8 in range(int(DUR / (BEAT / 2))):  # chimbal digital discreto em colcheias (entra com o título)
     t0 = e8 * BEAT / 2
     if t0 < E.get('titulo', ordem): continue
+    if EP and (not fora(t0, *PAUSAS) or t0 >= E['c7Ini']): continue
     n = int(0.05 * SR); x = hp(rng.standard_normal(n), 7000) * env(n, 0.001, 0.025, 5)
     put(perc, x, t0, 0.035 if e8 % 2 else 0.02)
 if 'mergulho' in E:  # bumbo suave a partir do mergulho: a pergunta ganha corpo
     for b in range(int(E['mergulho'] / BEAT), int(DUR / BEAT) + 1):
-        t0 = b * BEAT; n = int(0.3 * SR); tt = np.arange(n) / SR
+        t0 = b * BEAT
+        if EP and (not fora(t0, *PAUSAS) or t0 >= E['c7Ini']): continue
+        n = int(0.3 * SR); tt = np.arange(n) / SR
         f = 50 + 90 * np.exp(-tt * 40); x = np.sin(2 * np.pi * np.cumsum(f) / SR) * env(n, 0.002, 0.22, 4)
         put(perc, x, t0, 0.22)
 mus = pad + low + arp + perc
 mus = Pedalboard([Reverb(room_size=0.5, wet_level=0.18, dry_level=0.9, damping=0.5)])(mus.reshape(1, -1).astype(np.float32), SR)[0][:N]
 # entrada da música no gancho: sobe em 0,3 s (sem cortar seco), saída suave no fim
-mus *= np.minimum(1, t_all / 0.3) * np.clip((DUR + 0.3 - t_all) / 0.6, 0, 1)
+mus *= np.minimum(1, t_all / 0.3) * np.clip((DUR + 0.3 - t_all) / (1.6 if EP else 0.6), 0, 1)
 
 # ---------------- EFEITOS
 sfx = np.zeros(N)
@@ -102,8 +113,42 @@ ping(E['leitura']); sweep(E['leitura'], 0.6, 1500, 4000, 0.06)
 if 'dano' in E: crunch(E['dano'])
 sweep(E['mergulho'] - 0.15, 0.9, 4000, 250, 0.16); thump(E['mergulho'] + 0.5, 50, 0.3, 0.6)
 if 'titulo' in E: click(E['titulo'], 1600, 0.2); click(E['titulo'] + 0.0625, 2400, 0.12)
-for i in range(int((DUR - 0.2 - E['zigzag']) / (BEAT / 4))):  # cada palavra de código acesa = um tique
+for i in range(int(((E['c2Ini'] if EP else DUR - 0.2) - E['zigzag']) / (BEAT / 4))):  # cada palavra de código acesa = um tique
     click(E['zigzag'] + i * BEAT / 4, 3000 + 200 * (i % 4), 0.07, 0.02)
+def chime(t0, notas=(76, 83), g=0.14):
+    for k, m in enumerate(notas): blip(t0 + k * BEAT / 4, midi(m), g, 0.35)
+def ticks(t0, d, passo=BEAT / 4, f=3000, g=0.06):
+    for i in range(int(d / passo)): click(t0 + i * passo, f + 180 * (i % 4), g, 0.02)
+def erro(t0):
+    for k, m in enumerate((52, 47)): blip(t0 + k * BEAT / 2, midi(m), 0.2, 0.3)
+if EP:
+    for i in range(int((E['c2Ini'] - E['zigzag']) / (BEAT / 4)), int((E['c2Recua'] - E['zigzag']) / (BEAT / 4))):
+        click(E['zigzag'] + i * BEAT / 4, 3000 + 200 * (i % 4), 0.07, 0.02)
+    MAPA = {
+        'c2Recua': lambda t: sweep(t, 0.9, 3000, 600, 0.08), 'c2Texto': lambda t: ticks(t, 0.75, BEAT / 4, 2600, 0.05),
+        'c2Cripto': lambda t: blip(t, midi(71), 0.1), 'c2Bits': lambda t: ticks(t, 1.25, BEAT / 4, 3200, 0.05),
+        'c2Nota': lambda t: click(t, 1800, 0.1), 'c2Voo': lambda t: (sweep(t, 0.5, 800, 3000, 0.08), thump(t + 0.5, 90, 0.3, 0.25), click(t + 0.5, 2600, 0.18)),
+        'c2Onda': lambda t: sweep(t, 0.75, 500, 6000, 0.09), 'c2ChipTexto': lambda t: (blip(t, midi(76), 0.15), click(t, 2600, 0.1)),
+        'c2ChipSite': lambda t: (blip(t, midi(79), 0.15), click(t, 2600, 0.1)),
+        'c3Ini': lambda t: sweep(t, 0.75, 400, 2000, 0.06), 'c3Titulo': lambda t: (click(t, 1600, 0.2), click(t + BEAT / 8, 2400, 0.12)),
+        'c3F1': lambda t: blip(t, midi(76), 0.16, 0.2), 'c3F2': lambda t: blip(t, midi(79), 0.16, 0.2), 'c3F3': lambda t: blip(t, midi(83), 0.16, 0.2),
+        'c3Razao': lambda t: ticks(t, 0.625, BEAT / 4, 2200, 0.07), 'c3Celular': lambda t: (thump(t, 80, 0.25, 0.25), click(t, 2000, 0.12)),
+        'c3Localizar': lambda t: [blip(t + k * BEAT / 4, midi(88), 0.1, 0.08) for k in range(3)], 'c3Orientar': lambda t: sweep(t, 0.75, 1200, 2400, 0.05),
+        'c3Sinc': lambda t: (click(t, 1600, 0.15), click(t + BEAT / 8, 2000, 0.1)), 'c3Amostra': lambda t: ticks(t, 0.5, BEAT / 8, 3600, 0.04),
+        'c4Conteudo': lambda t: chime(t), 'c5Suspense': lambda t: sweep(t, 1.1, 200, 900, 0.07),
+        'c5Morph': lambda t: chatter(t, 0.75, 0.07), 'c5Rotulo': lambda t: (click(t, 1600, 0.2), click(t + BEAT / 8, 2400, 0.12)),
+        'c5Leitura': lambda t: ping(t), 'c5DanoA': lambda t: crunch(t, 0.32), 'c5Blocos': lambda t: ticks(t + 0.15, 0.6, BEAT / 8, 2400, 0.05),
+        'c5Recupera': lambda t: ([blip(t + k * BEAT / 4, midi(m), 0.11, 0.12) for k, m in enumerate((69, 72, 76, 79, 81, 84, 88, 91))], chime(t + 1.0, (84, 91), 0.13)),
+        'c5DanoB': lambda t: crunch(t, 0.42), 'c5Falha': lambda t: erro(t),
+        'c6Ini': lambda t: sweep(t, 0.6, 2500, 500, 0.07), 'c6Titulo': lambda t: (click(t, 1600, 0.2), click(t + BEAT / 8, 2400, 0.12)),
+        'c6SemNet': lambda t: blip(t, midi(64), 0.12), 'c6Ler': lambda t: (ping(t, 1320, 0.12), chime(t + 0.5, (76, 83), 0.1)),
+        'c6Link': lambda t: blip(t, midi(79), 0.12), 'c6Botao': lambda t: click(t, 2400, 0.16), 'c6Conexao': lambda t: ticks(t + 0.2, 1.5, BEAT / 4, 2800, 0.045),
+        'c6Site': lambda t: chime(t, (79, 86), 0.12), 'c7Ini': lambda t: sweep(t, 0.7, 2500, 300, 0.07),
+        'c7Titulo': lambda t: (click(t, 1600, 0.2), click(t + BEAT / 8, 2400, 0.12)), 'c7Qr': lambda t: (ticks(t + 0.25, 0.5, BEAT / 8, 3000, 0.05), thump(t + 0.5, 70, 0.35, 0.35), click(t + 0.5, 2200, 0.18)),
+        'c7Icone': lambda t: (click(t, 2000, 0.14), click(t + BEAT / 4, 2000, 0.1)), 'c7Sublinha': lambda t: click(t, 1800, 0.1),
+        'c7Assinatura': lambda t: chime(t, (69, 76), 0.1), 'c7Frase': lambda t: blip(t, midi(88), 0.07, 0.4),
+    }
+    for k, fn in MAPA.items(): fn(E[k])
 sfx = Pedalboard([Reverb(room_size=0.25, wet_level=0.12, dry_level=1.0)])(sfx.reshape(1, -1).astype(np.float32), SR)[0][:N]
 
 # ---------------- MIXAGEM: voz à frente, música abaixa sob a fala

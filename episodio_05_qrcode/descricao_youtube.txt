@@ -1,0 +1,23 @@
+COMO UM QR CODE GUARDA INFORMAÇÕES? 🔍 | Além do Visível #05
+
+Aqueles quadradinhos parecem um desenho sem sentido, mas são uma estrutura organizada de dados.
+Neste episódio:
+• como texto vira bits e os bits viram módulos claros e escuros;
+• para que servem os três quadrados grandes nos cantos (e por que eles não trabalham sozinhos);
+• a correção de erros (Reed-Solomon): por que um código danificado pode continuar funcionando, e onde está o limite;
+• por que ler um QR Code não exige internet, mas abrir o site normalmente exige.
+
+🎯 DESAFIO: pause o vídeo no código final e escaneie com outro celular. A mensagem secreta é de verdade!
+
+Tudo o que aparece como QR Code foi gerado por programação (biblioteca node-qrcode) e conferido com dois decodificadores independentes. A demonstração de dano foi testada de verdade: o primeiro dano é lido; o segundo, maior, não.
+
+Fontes:
+DENSO WAVE: https://www.qrcode.com/en/about/
+Correção de erros: https://www.qrcode.com/en/about/error_correction.html
+Versões e capacidade: https://www.qrcode.com/en/about/version.html
+Norma ISO/IEC 18004.
+"QR Code" é marca registrada da DENSO WAVE INCORPORATED.
+
+Produção: motion design programático (Remotion, React, SVG), trilha e efeitos sintetizados em código. Narração gerada com inteligência artificial.
+
+#QRCode #Tecnologia #Ciência #Shorts #AlémDoVisível

@@ -16,10 +16,32 @@ Os tempos vêm da narração gerada (`audio/frases.json`). Os eventos visuais ca
 | 8,75 | "…escondida aqui!" | Mergulho macro até o canto inferior direito. | descida + grave |
 | 9,25 | — | **Ordem real dos bits**: os módulos acendem na sequência de posicionamento da norma (zigue-zague), uma palavra de código por semicolcheia, com o contador "PALAVRA nn/100". | um tique por palavra |
 
-## Cenas seguintes (planejadas sobre a narração do usuário, aguardando aprovação do piloto)
+## Cenas 02–07 (como foram produzidas)
 
-- **02 · Os dados escondidos (10,4–19,6 s).** A câmera recua pela trilha de bits. "Código secreto digital": a mensagem vira bytes reais (modo byte, indicador de modo e comprimento tirados de `qrcode.create`) e a tira **TEXTO → DADOS CODIFICADOS → QR CODE** se monta, com selo de representação didática onde a máscara e a correção são simplificadas. Em "textos e endereços de sites" entram as fichas **Aa TEXTO** e **www SITE**.
-- **03 · Os três quadrados (20,0–27,1 s).** "Três quadrados maiores nos cantos?": os localizadores acendem em ciano, um de cada vez. "Localizar e orientar": a interface de câmera vetorial traça as linhas entre eles e corrige o giro do código. "Fazer a leitura": sincronismo e alinhamento aparecem por um instante e a decodificação mostra **CONTEÚDO IDENTIFICADO** com o texto real.
-- **05 · A correção de erros (27,1–40,2 s, o clímax).** "Parte mais surpreendente…": silêncio curto e mergulho. "Danificada": módulos arrancados de um código de demonstração (nível documentado). "Correção de erros": o decodificador real recupera o texto (testado antes do render) e os módulos se reconstroem. "Dentro de certos limites": um dano maior **falha de verdade** e aparece **NÃO FOI POSSÍVEL LER**.
-- **06 · Internet ou não? (40,4–48,1 s).** Tela dividida: leitura no aparelho com o ícone de rede cortado e, ao lado, o site que só carrega com conexão. **LER O CÓDIGO ≠ ACESSAR A INTERNET**.
-- **07 · O desafio (48,6–60 s + respiro).** O QR da mensagem secreta (versão 5-M) aparece escuro sobre claro, com 4 módulos de silêncio, estático e inteiro de ~50,4 s até o fim (≥ 10 s). CONSEGUE DESCOBRIR A MENSAGEM? / PAUSE E ESCANEIE COM OUTRO CELULAR. A assinatura fica fora do código. Duração total estimada: ~62 s.
+| t (s) | Narração | Imagem |
+|---|---|---|
+| 10,5 | "O QR Code funciona…" | A câmera recua do macro; a trilha de bits recua até a palavra de código 0 (amarela, no canto inferior direito). |
+| 12,75 | "…código secreto digital." | **TEXTO**: a mensagem real é digitada. 13,25: "não é criptografia: qualquer leitor lê". |
+| 14,25 | "Seus quadradinhos…" | **DADOS CODIFICADOS**: 44 bits reais (modo `0100`, comprimento 51, "O", "l", "á") viram células; nota "ilustração: no código os bits são intercalados". |
+| 16,25 | "…formam padrões…" | Os 8 primeiros bits voam até a palavra 0 e, ao pousar, assumem a cor real do módulo: **+ MÁSCARA → MÓDULOS**. |
+| 17,25 | "…representam informações," | Onda ciano por todos os módulos de dados e correção; rótulo **64 PALAVRAS DE DADOS + 36 DE CORREÇÃO**. |
+| 18,25 / 18,75 | "como textos e endereços de sites" | Fichas **Aa TEXTO** e **www SITE**. |
+| 20,0 | "E sabe aqueles três quadrados…" | Título **COMO A CÂMERA ENCONTRA O CÓDIGO?**; os localizadores acendem um a um (20,5 / 21,0 / 21,5). |
+| 21,75 | "…nos cantos?" | Linha amarela atravessa o localizador com a proporção **1 : 1 : 3 : 1 : 1**. |
+| 22,5 | "Eles ajudam a câmera do celular…" | Moldura de celular; o código aparece girado −18°. |
+| 24,25 / 25,0 | "…localizar e orientar…" | Miras nos três localizadores + triângulo (LOCALIZADORES 3/3); ORIENTAÇÃO conta de −18° a 0°. |
+| 25,75 / 26,25 | "…para fazer a leitura." | **SINCRONISMO** e **ALINHAMENTO** em amarelo; pontos de amostragem no centro de cada módulo. |
+| 26,75 | — | **CONTEÚDO IDENTIFICADO**: o texto real do código. |
+| 28,5 | "Mas agora vem a parte mais surpreendente…" | Respiro: a interface sai, a música baixa. |
+| 29,5 | "Alguns QR Codes…" | Os módulos se reorganizam na mesma mensagem em **nível H**: **33×33 → 41×41 · MAIS MÓDULOS PARA CORREÇÃO**. 31,25: LEITURA OK ✓. |
+| 33,25 | "…está danificada." | **Dano A**: 185 módulos arrancados, contorno amarelo. |
+| 34,5 | "Isso acontece graças…" | **ERROS POR BLOCO · LIMITE 14**: barras reais (7, 7, 7, 6). |
+| 36,25 | "…correção de erros," | Os módulos voltam em ciano; **MENSAGEM RECUPERADA ✓** + texto + "o leitor corrige os dados (imagem ilustrativa)". Clímax musical. |
+| 38,75 / 39,5 | "…dentro de certos limites." | **Dano B**: barras passam do limite (21, 19, 18, 16) → **✕ NÃO FOI POSSÍVEL LER**. |
+| 41,0 | "E tem mais! Você nem precisa de internet…" | **LER O CÓDIGO ≠ ACESSAR A INTERNET**; à esquerda, o código com SEM INTERNET; 43,0: leitura → TEXTO LIDO ✓. |
+| 44,25 / 45,25 | "…se ele contiver um link," | Celular com QR real de `https://example.com`; botão **ABRIR SITE?**. |
+| 46,0 / 47,75 | "…precisará de conexão para abrir o site." | Ícone de rede ligado, barra de carregamento, página aparece; **PRECISA DE CONEXÃO**. |
+| 48,75 | "Agora eu tenho um desafio para você!" | Título **CONSEGUE DESCOBRIR A MENSAGEM?** |
+| 50,25 → 50,75 | "Pause o vídeo…" | O QR da mensagem se monta (localizadores, depois linhas) e fica **estático até 62 s**; **PAUSE E ESCANEIE COM OUTRO CELULAR**. |
+| 52,75 / 54,75 | "…descobrir a mensagem secreta. Será que você consegue?" | Ícone de pausa pulsa; sublinhado amarelo. |
+| 56,75 / 57,75 | "Além do Visível, o extraordinário está nos detalhes." | Assinatura **ALÉM DO VISÍVEL** / **O EXTRAORDINÁRIO ESTÁ NOS DETALHES.**, abaixo do código. |

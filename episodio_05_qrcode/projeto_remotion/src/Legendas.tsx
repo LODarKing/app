@@ -22,10 +22,10 @@ function pedacos(txt: string) {
   return out;
 }
 
-export const Legendas: React.FC<{ t: number; top?: number }> = ({ t, top = 1456 }) => {
+export const Legendas: React.FC<{ t: number; top?: number; ate?: number }> = ({ t, top = 1456, ate = 1e9 }) => {
   const { fps } = useVideoConfig();
   const g = GR.find((x) => t >= x.ini - 0.05 && t < x.fim);
-  if (!g) return null;
+  if (!g || t >= ate) return null;
   const p = mola(t, g.ini - 0.05, fps, { damping: 18, stiffness: 260 });
   const ws = pedacos(g.texto);
   return (

@@ -9,7 +9,7 @@ import path from 'node:path';
 
 const id = process.argv[2] || 'Piloto';
 const modo = process.argv[3] || 'video';
-const SAIDA = { Piloto: { mp4: '../piloto_10s.mp4', wav: '../audio/piloto_mix.wav' } }[id];
+const SAIDA = { Piloto: { mp4: '../piloto_10s.mp4', wav: '../audio/piloto_mix.wav' }, Episodio: { mp4: '../video_final.mp4', wav: '../audio/episodio_mix.wav' } }[id];
 fs.mkdirSync('out', { recursive: true });
 const serveUrl = await bundle({ entryPoint: path.resolve('src/index.ts') });
 const composition = await selectComposition({ serveUrl, id });

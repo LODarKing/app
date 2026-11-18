@@ -7,7 +7,15 @@ import fs from 'node:fs';
 export const CODIGOS = {
   abertura: { texto: 'Olá! Esta mensagem estava escondida nos quadrados.', ec: 'M' },
   mensagem: { texto: 'Você descobriu a mensagem secreta! O extraordinário está nos detalhes.', ec: 'M' },
+  demoH: { texto: 'Olá! Esta mensagem estava escondida nos quadrados.', ec: 'H' },   // cena 5: mesma mensagem, nível H
+  link: { texto: 'https://example.com', ec: 'M' },                                  // cena 6: domínio reservado para exemplos (IANA)
 };
+// máscaras da ISO/IEC 18004 (i = linha, j = coluna)
+const MASK = [(i, j) => (i + j) % 2 === 0, (i) => i % 2 === 0, (i, j) => j % 3 === 0, (i, j) => (i + j) % 3 === 0,
+  (i, j) => (Math.floor(i / 2) + Math.floor(j / 3)) % 2 === 0, (i, j) => ((i * j) % 2) + ((i * j) % 3) === 0,
+  (i, j) => (((i * j) % 2) + ((i * j) % 3)) % 2 === 0, (i, j) => (((i + j) % 2) + ((i * j) % 3)) % 2 === 0];
+// blocos de correção (ISO/IEC 18004, tabela 9) só para as combinações usadas
+const BLOCOS = { '4-M': { blocos: 2, dados: 32, ec: 18 }, '5-M': { blocos: 2, dadosPorBloco: [43, 43], ec: 24 }, '6-H': { blocos: 4, dados: 15, ec: 28 }, '2-M': { blocos: 1, dados: 28, ec: 16 } };
 
 function zigzag(size, reserved) {
   // percorre colunas em pares da direita para a esquerda, alternando subida/descida, pulando a coluna 6 (padrão de sincronismo)
@@ -48,6 +56,10 @@ for (const [nome, { texto, ec }] of Object.entries(CODIGOS)) {
     bytesUtf8: Buffer.byteLength(texto, 'utf8'),
     data, tipos, ordemDados: zigzag(size, reserved),
   };
+  // bits reais lidos da matriz: módulo XOR máscara, na ordem de posicionamento
+  const mk = MASK[qr.maskPattern];
+  out[nome].bitsLidos = out[nome].ordemDados.map((i) => data[i] ^ (mk(Math.floor(i / size), i % size) ? 1 : 0));
+  out[nome].blocos = BLOCOS[`${qr.version}-${ec}`] || null;
   console.log(`${nome}: versão ${qr.version} (${size}×${size}), EC ${ec}, máscara ${qr.maskPattern}, modo ${out[nome].segments.map(s => s.mode).join('+')}, ${out[nome].bytesUtf8} bytes UTF-8, ${out[nome].ordemDados.length} módulos de dados+correção`);
 }
 fs.writeFileSync('src/qr_dados.json', JSON.stringify(out));
@@ -57,4 +69,20 @@ const fin = CODIGOS.mensagem;
 await QRCode.toFile('../qrcode_mensagem.png', fin.texto, { errorCorrectionLevel: fin.ec, margin: 4, scale: 24, color: { dark: '#090E1AFF', light: '#F5F7FCFF' } });
 fs.writeFileSync('../qrcode_mensagem.svg', await QRCode.toString(fin.texto, { type: 'svg', errorCorrectionLevel: fin.ec, margin: 4, color: { dark: '#090E1AFF', light: '#F5F7FCFF' } }));
 await QRCode.toFile('../ferramentas/qrcode_abertura.png', CODIGOS.abertura.texto, { errorCorrectionLevel: CODIGOS.abertura.ec, margin: 4, scale: 16 });
+// conferência: lê as palavras de código da matriz, desfaz a intercalação dos blocos e confere o fluxo de dados inteiro
+// (indicador de modo byte 0100 + comprimento em 8 bits + bytes UTF-8 do texto)
+for (const [nome, o] of Object.entries(out)) {
+  const B = o.blocos; const nb = B.blocos; const nd = B.dados ?? B.dadosPorBloco[0];
+  const cws = []; for (let k = 0; k + 8 <= o.bitsLidos.length; k += 8) cws.push(parseInt(o.bitsLidos.slice(k, k + 8).join(''), 2));
+  const blocos = Array.from({ length: nb }, () => []);
+  for (let i = 0; i < nd * nb; i++) blocos[i % nb].push(cws[i]);
+  const fluxo = blocos.flat().map((v) => v.toString(2).padStart(8, '0')).join('');
+  const esperado = '0100' + o.bytesUtf8.toString(2).padStart(8, '0') + [...Buffer.from(o.texto, 'utf8')].map((v) => v.toString(2).padStart(8, '0')).join('');
+  const ok = fluxo.startsWith(esperado);
+  console.log(`${nome}: ${cws.length} palavras lidas, ${nb} bloco(s) × ${nd} de dados; fluxo de dados ${ok ? 'CONFERE' : 'NÃO CONFERE'} com modo+comprimento+${o.bytesUtf8} bytes`);
+  if (!ok) process.exit(1);
+  o.fluxoInicio = esperado.slice(0, 4 + 8 + 8 * 6);   // modo, comprimento e os 6 primeiros bytes, para a cena 2
+  o.palavras = cws.length;
+}
+fs.writeFileSync('src/qr_dados.json', JSON.stringify(out));
 console.log('ok: qrcode_mensagem.png / .svg, src/qr_dados.json');

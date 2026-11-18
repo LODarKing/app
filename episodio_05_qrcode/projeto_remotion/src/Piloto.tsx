@@ -46,7 +46,7 @@ const ORDEM = Q.ordemDados as number[];
 const POS_ORDEM = new Map<number, number>(); ORDEM.forEach((m, k) => POS_ORDEM.set(m, k));
 const FIXO = (tipo: string) => tipo === 'localizador' || tipo === 'separador';
 
-export const Piloto: React.FC = () => {
+export const Cena1: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -100,8 +100,6 @@ const tit = (d: number) => passos(lin(t, E.titulo + d, E.titulo + d + 0.4, 0, 1,
 
   return (
     <AbsoluteFill style={{ backgroundColor: COR.fundo, fontFamily: FONTE_TITULO }}>
-      <Fontes />
-      <Audio src={staticFile('piloto_mix.wav')} />
       <Circuitos t={t} camX={cam.cx} camW={cam.w} />
 
       <AbsoluteFill style={{ transform: `perspective(1700px) rotateX(${cam.rx}deg) rotateZ(${cam.rz}deg)`, transformOrigin: `540px ${CARD_Y}px` }}>
@@ -149,7 +147,18 @@ const tit = (d: number) => passos(lin(t, E.titulo + d, E.titulo + d + 0.4, 0, 1,
           ORDEM REAL DOS BITS · <span style={{ color: COR.ciano, fontWeight: 700 }}>PALAVRA {String(cwAtual).padStart(2, '0')}/100</span>
         </div>
       )}
+    </AbsoluteFill>
+  );
+};
 
+// composição do piloto aprovado = cena 1 + mixagem do piloto + legendas
+export const Piloto: React.FC = () => {
+  const t = useCurrentFrame() / useVideoConfig().fps;
+  return (
+    <AbsoluteFill style={{ backgroundColor: COR.fundo }}>
+      <Fontes />
+      <Audio src={staticFile('piloto_mix.wav')} />
+      <Cena1 />
       <Legendas t={t} />
     </AbsoluteFill>
   );

@@ -1,4 +1,55 @@
-# Relatório de qualidade — PILOTO v2 (10,3 s, narração do usuário)
+# Relatório de qualidade — EPISÓDIO COMPLETO (`video_final.mp4`)
+
+## Arquivo (medido no MP4 final)
+- 1080×1920 (9:16), H.264 yuv420p, CRF 16, 30 fps, **62,0 s**; AAC 48 kHz estéreo, 256 kb/s; 10,6 MB.
+- Áudio: **-14,0 LUFS** integrados, pico real **-4,6 dBTP** (limite -1), LRA 0,7 LU, sem clipping.
+- A transcrição da mixagem final (Whisper medium) bate frase a frase com a narração: a voz fica clara sobre a trilha.
+- A trilha medida (`beats.json`) dá 120,00 BPM; os 47 eventos sonoros e visuais ficam a no máximo 25,5 ms da colcheia (menos de 1 quadro).
+
+## Revisão técnica e editorial (checklist do briefing, item 15)
+| Pergunta | Resposta |
+|---|---|
+| O QR Code final pode ser decodificado? | ✅ 72/72 leituras no ZXing e 72/72 no OpenCV, quadros do MP4 de 50,8 s ao fim, em 3 escalas |
+| A mensagem reconstruída é exatamente a esperada? | ✅ "Você descobriu a mensagem secreta! O extraordinário está nos detalhes." |
+| O exemplo de correção de erros funciona? | ✅ Dano A lido pelos dois decodificadores nos quadros do MP4; dano B falha nos dois e o vídeo mostra a falha |
+| Os padrões de posicionamento estão corretos? | ✅ Matrizes da node-qrcode; fluxo de dados conferido bit a bit (`validacao_qrcode.md`) |
+| As informações técnicas foram verificadas? | ✅ `fontes_pesquisa.md`; números exibidos (64+36 palavras, 33×33→41×41, limite 14 por bloco, erros por bloco) calculados do próprio código |
+| O vídeo tem explicação autoral? | ✅ Roteiro visual próprio: bits reais voando para a palavra 0, proporção 1:1:3:1:1, erros por bloco reais |
+| As animações ajudam a entender? | ✅ Cada cena ilustra a frase falada; as simplificações são marcadas como ilustração |
+| A voz soa natural? | ✅ Narração enviada pelo usuário, só com tratamento leve (sem efeitos de voz) |
+| As legendas estão sincronizadas? | ✅ 50 grupos alinhados palavra a palavra; somem quando entra a assinatura (56,5 s) |
+| Todos os textos estão corretos? | ✅ Acentuação revisada; textos na tela conferidos com a narração |
+| A trilha está equilibrada? | ✅ Música abaixa ~7 dB sob a voz; respiro em 28,25 s, clímax na recuperação (36,25 s), corte na falha (38,75 s) |
+| A logo original foi preservada? | ⚠️ Não há logo AV no repositório e ela não foi enviada. O encerramento usa só a assinatura em texto, fora do QR |
+| Há imagens ou músicas sem licença? | ✅ Nenhuma: tudo vetorial ou sintetizado em código; fontes Inter (OFL) e JetBrains Mono (OFL); node-qrcode (MIT) |
+| A exportação está em 1080×1920? | ✅ |
+| O MP4 reproduz corretamente? | ✅ ffprobe sem erros; quadros extraídos ao longo de todo o arquivo |
+
+## Ciclo da folha de contato (1 quadro por batida, 124 quadros)
+| Critério | Rodada 1 | Rodada 2 |
+|---|---|---|
+| Gancho nos 2 primeiros segundos | 8 | 8 |
+| Leitura em tela de celular | 6 | 8 |
+| Qualidade do movimento | 7 | 8 |
+| Variedade | 8 | 8 |
+| Fidelidade à marca | 8 | 8 |
+| Sincronia do som | 8 | 8 |
+
+Corrigido entre as rodadas:
+1. Textos de interface de 20–26 px subiram para 28–40 px, com frases mais curtas.
+2. Cena 6 ampliada: código maior, celular maior, legendas internas maiores.
+3. Transições: o código girado da cena 3 cabe no celular; o título do desafio entra em 48,75 s (sem quadro vazio); sublinhado afastado do texto.
+4. Cena 2: a nota "não é criptografia" não encosta mais no texto de duas linhas.
+5. Depois do render: QR final com 18 px exatos por módulo (o OpenCV clássico falhava com 17,78 px).
+
+## Notas editoriais
+- "Código secreto digital" (narração) é uma metáfora. A cena 2 deixa claro na tela: "não é criptografia: qualquer leitor lê".
+- "Alguns QR Codes" + correção de erros: todo QR tem correção (níveis L/M/Q/H). O vídeo usa a mesma mensagem em nível H para mostrar mais módulos de correção.
+- Transparência: a descrição informa narração gerada com IA. Se a plataforma pedir, marque "conteúdo alterado ou sintético" no upload.
+
+---
+
+# Histórico — PILOTO v2 (10,3 s, narração do usuário)
 
 ## Arquivo `piloto_10s.mp4`
 - 1080×1920, H.264 yuv420p, CRF 16, 30 fps, 10,30 s; AAC 48 kHz estéreo, 256 kb/s.

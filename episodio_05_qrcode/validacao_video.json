@@ -1,0 +1,90 @@
+{
+ "qr_final": {
+  "texto_esperado": "Você descobriu a mensagem secreta! O extraordinário está nos detalhes.",
+  "testes": 72,
+  "zxing_ok": 72,
+  "opencv_ok": 72,
+  "falhas": [],
+  "estatico_desde": 50.75,
+  "variacao_max_pixels_no_cartao": 61
+ },
+ "dano_A": [
+  {
+   "t": 34.0,
+   "zxing": [
+    "Olá! Esta mensagem estava escondida nos quadrados."
+   ],
+   "opencv": "Olá! Esta mensagem estava escondida nos quadrados."
+  },
+  {
+   "t": 35.0,
+   "zxing": [
+    "Olá! Esta mensagem estava escondida nos quadrados."
+   ],
+   "opencv": "Olá! Esta mensagem estava escondida nos quadrados."
+  },
+  {
+   "t": 36.0,
+   "zxing": [
+    "Olá! Esta mensagem estava escondida nos quadrados."
+   ],
+   "opencv": "Olá! Esta mensagem estava escondida nos quadrados."
+  }
+ ],
+ "dano_B": [
+  {
+   "t": 39.6,
+   "zxing": [],
+   "opencv": ""
+  },
+  {
+   "t": 40.0,
+   "zxing": [],
+   "opencv": ""
+  }
+ ],
+ "cena4": [
+  {
+   "t": 27.25,
+   "zxing": [
+    "Olá! Esta mensagem estava escondida nos quadrados."
+   ],
+   "opencv": "Olá! Esta mensagem estava escondida nos quadrados."
+  },
+  {
+   "t": 28.0,
+   "zxing": [
+    "Olá! Esta mensagem estava escondida nos quadrados."
+   ],
+   "opencv": "Olá! Esta mensagem estava escondida nos quadrados."
+  }
+ ],
+ "cena6": {
+  "esquerda": [
+   "Olá! Esta mensagem estava escondida nos quadrados."
+  ],
+  "celular": [
+   "https://example.com"
+  ]
+ },
+ "abertura": [
+  {
+   "t": 0.0,
+   "zxing": [
+    "Olá! Esta mensagem estava escondida nos quadrados."
+   ]
+  },
+  {
+   "t": 3.0,
+   "zxing": [
+    "Olá! Esta mensagem estava escondida nos quadrados."
+   ]
+  },
+  {
+   "t": 8.3,
+   "zxing": [
+    "Olá! Esta mensagem estava escondida nos quadrados."
+   ]
+  }
+ ]
+}
