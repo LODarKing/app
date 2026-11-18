@@ -154,9 +154,11 @@ sfx = Pedalboard([Reverb(room_size=0.25, wet_level=0.12, dry_level=1.0)])(sfx.re
 # ---------------- MIXAGEM: voz à frente, música abaixa sob a fala
 voz, sr = sf.read('audio/narracao_ia.wav', dtype='float32'); voz = voz[:N]; voz = np.pad(voz, (0, N - len(voz)))
 fala = np.convolve(np.abs(voz) > 0.01, np.ones(int(0.25 * SR)) / int(0.25 * SR), 'same')
-duck = 1 - 0.55 * np.clip(fala * 3, 0, 1)            # ~ -7 dB sob a voz
+# nível da música: 0,55 (-4,3 dB em relação à 1ª mixagem, que o usuário achou alta) e abaixamento de ~-9 dB sob a voz
+MUSICA = 0.55
+duck = 1 - 0.645 * np.clip(fala * 3, 0, 1)           # ~ -9 dB sob a voz
 duck = np.convolve(duck, np.ones(int(0.12 * SR)) / int(0.12 * SR), 'same')
-mix = voz * 1.0 + mus * duck * 0.9 + sfx * (0.6 + 0.4 * duck)
+mix = voz * 1.0 + mus * duck * MUSICA + sfx * (0.6 + 0.4 * duck)
 mix = mix[: int(DUR * SR)]
 m = pyln.Meter(SR)
 for _ in range(4):  # -14 LUFS integrados com pico real <= -1 dBTP (limitador + medição com sobreamostragem 4x)

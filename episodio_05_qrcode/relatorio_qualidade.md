@@ -19,7 +19,7 @@
 | A voz soa natural? | ✅ Narração enviada pelo usuário, só com tratamento leve (sem efeitos de voz) |
 | As legendas estão sincronizadas? | ✅ 50 grupos alinhados palavra a palavra; somem quando entra a assinatura (56,5 s) |
 | Todos os textos estão corretos? | ✅ Acentuação revisada; textos na tela conferidos com a narração |
-| A trilha está equilibrada? | ✅ Música abaixa ~7 dB sob a voz; respiro em 28,25 s, clímax na recuperação (36,25 s), corte na falha (38,75 s) |
+| A trilha está equilibrada? | ✅ Revisada após retorno do usuário ("fundo musical um pouco alto"): música -4,3 dB e abaixamento de ~9 dB sob a voz → música 16,3 LU abaixo da voz durante a fala (antes: 10 LU); respiro em 28,25 s, clímax na recuperação (36,25 s), corte na falha (38,75 s) |
 | A logo original foi preservada? | ⚠️ Não há logo AV no repositório e ela não foi enviada. O encerramento usa só a assinatura em texto, fora do QR |
 | Há imagens ou músicas sem licença? | ✅ Nenhuma: tudo vetorial ou sintetizado em código; fontes Inter (OFL) e JetBrains Mono (OFL); node-qrcode (MIT) |
 | A exportação está em 1080×1920? | ✅ |
@@ -41,6 +41,10 @@ Corrigido entre as rodadas:
 3. Transições: o código girado da cena 3 cabe no celular; o título do desafio entra em 48,75 s (sem quadro vazio); sublinhado afastado do texto.
 4. Cena 2: a nota "não é criptografia" não encosta mais no texto de duas linhas.
 5. Depois do render: QR final com 18 px exatos por módulo (o OpenCV clássico falhava com 17,78 px).
+
+## Revisão de áudio (retorno do usuário)
+- Pedido: fundo musical um pouco alto. Mudança: `MUSICA = 0.55` (era 0,9) e abaixamento sob a voz de ~-7 para ~-9 dB em `ferramentas/trilha.py`; efeitos sonoros inalterados.
+- Resultado medido: música 16,3 LU abaixo da voz durante a fala; arquivo final ainda em -14,0 LUFS e -4,6 dBTP. Só o áudio foi trocado (vídeo copiado sem recodificar), então as validações do QR continuam valendo.
 
 ## Notas editoriais
 - "Código secreto digital" (narração) é uma metáfora. A cena 2 deixa claro na tela: "não é criptografia: qualquer leitor lê".
