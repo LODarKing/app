@@ -2,7 +2,7 @@
 import T from '../timeline.json';
 import { Easing } from 'remotion';
 import { P, bump, clamp, easeInCubic, easeInOutCubic, easeOutCubic, lerp, prog, springish } from './anim';
-import { CITY, LIP_SCALE, TRAIL } from '../mapa/geo';
+import { CITY, CORNER, LIP_SCALE, TRAIL, TRAIL_START } from '../mapa/geo';
 import { swipePoint } from '../components/Lips';
 import { TITLE } from './layout';
 
@@ -37,7 +37,7 @@ export function lips(t: number) {
 // progresso do traço do mapa: lento enquanto a câmera ainda está perto, rápido depois, pousa no fim
 export function trailQ(t: number) {
   const u = prog(t, T.tracoMapa[0], T.tracoMapa[1]);
-  return Math.pow(easeInOutCubic(u), 1.25);
+  return easeInOutCubic(u);
 }
 
 export function lipstick(t: number): { x: number; y: number; scale: number; angle: number; on: boolean } {
@@ -58,6 +58,14 @@ export function lipstick(t: number): { x: number; y: number; scale: number; angl
   }
   const [m0, m1] = T.tracoMapa;
   const end = TRAIL.at(TRAIL.len);
+  const [v0, v1] = T.batomVoa;
+  if (t < v1) {
+    // sai do canto da boca e voa (sem riscar) até a borda do mapa
+    const u = easeInOutCubic(prog(t, v0, v1));
+    const w: P = [lerp(CORNER[0], TRAIL_START[0], u), lerp(CORNER[1], TRAIL_START[1], u)];
+    const p = worldToScreen(w, c);
+    return { x: p[0], y: p[1] - 60 * Math.sin(u * Math.PI), scale: ls, angle: 36 - 14 * Math.sin(u * Math.PI), on: true };
+  }
   if (t < m1) {
     const a = TRAIL.at(trailQ(t) * TRAIL.len), p = worldToScreen(a.p, c);
     return { x: p[0], y: p[1], scale: ls, angle: 36 + 10 * Math.sin(a.ang), on: true };

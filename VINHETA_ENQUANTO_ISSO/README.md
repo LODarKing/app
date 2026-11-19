@@ -20,8 +20,9 @@ Abertura de 4,5 s para Reels (1080×1920, 30 q/s), em React + TypeScript + Remot
 | 0,25–0,60 | batom passa no lábio inferior (direita → esquerda), o vermelho é revelado pela máscara do gesto | textura cerosa, panorâmica acompanha o batom |
 | 0,625–1,00 | lábio superior (esquerda → direita) | segunda passada |
 | 1,00 | "mwah": a boca franze e solta; a câmera recua | estalo labial + whoosh descendente |
-| 1,00–2,00 | o traço sai do canto da boca, sobe pela estrada até Icaraí/Moitas e contorna o município; a boca vira o pino da sede | arpejo em semicolcheias |
-| 2,00 | beijo-carimbo na sede; rosa preenche o mapa a partir dela; surgem estradas e localidades | carimbo + sinos |
+| 1,00–1,25 | o batom sai do canto da boca e voa até a borda do mapa enquanto a câmera recua | arpejo em semicolcheias |
+| 1,25–2,00 | o batom traça só o contorno do município (litoral com o batom, o lado sul se desenha sozinho); a boca fica na sede | arpejo continua |
+| 2,00 | beijo-carimbo na sede; o rosa preenche o mapa a partir dela (sem linhas internas nem pontos) | carimbo + sinos |
 | 2,25 | "Enquanto Isso" sobe por máscara | estalo |
 | 2,50–2,85 | "em" estala; o batom passa e revela "Amontada" | impacto + passada |
 | 3,00 / 3,125 / 3,25 | as reticências caem uma a uma | três notas |
@@ -39,7 +40,7 @@ src/
     Lips.tsx               desenho da boca (vetorial) e máscaras do batom
     Lipstick.tsx           desenho do batom
     LipstickAnimation.tsx  boca no mundo + batom em primeiro plano
-    MapDrawAnimation.tsx   traço, preenchimento, estradas, localidades, anel do beijo
+    MapDrawAnimation.tsx   contorno, preenchimento e anel do beijo
     TitleAnimation.tsx     tipografia animada
     ExitSwipe.tsx          saída
     SoundDesign.tsx        toca a mixagem (pré-visualização no Studio)
@@ -71,4 +72,4 @@ O Remotion faz o papel do `window.seek(t)` do estúdio.
 - Fontes: **Anton** para o título ("Enquanto Isso", "Amontada…") e **Poppins SemiBold Itálico** de apoio ("em").
 - Cores: vermelho `#D90429` (destaque), vinho `#7B0D1E`, rosa vibrante `#FF4D6D`, rosa-claro `#FFF1F2`, preenchimento `#FFC9D3`.
 - Diagramação alinhada à esquerda, dentro da área segura do Reels (texto entre y 1084 e 1480, x ≤ 940).
-- Para trocar a cidade: novo raster em `assets/`, rode `tools/vetorizar_mapa.py`, ajuste estradas, localidades e sede em `src/mapa/geo.ts` e o texto em `TitleAnimation.tsx` (largura do nome em `lib/layout.ts`).
+- Para trocar a cidade: novo raster em `assets/`, rode `tools/vetorizar_mapa.py`, ajuste a sede em `src/mapa/geo.ts` e o texto em `TitleAnimation.tsx` (largura do nome em `lib/layout.ts`).

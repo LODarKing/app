@@ -134,8 +134,8 @@ z0, z1 = T['zoom']; sfx.add(z0, whoosh(z1 - z0 + 0.15, 4200, 500, 0.25, 0.8))
 # mapa: arpejo ascendente em semicolcheias enquanto o batom desenha
 arp = [65, 68, 72, 75, 77, 80, 84, 87]
 for k, n_ in enumerate(arp):
-    tt = T['tracoMapa'][0] + k * BEAT / 4; music.add(tt, pluck(n_, 0.5, 0.75 + 0.05 * k), pan=-0.4 + 0.1 * k)
-hit(T['tracoMapa'][0], 'mapa: arpejo começa')
+    tt = T['batomVoa'][0] + k * BEAT / 4; music.add(tt, pluck(n_, 0.5, 0.75 + 0.05 * k), pan=-0.4 + 0.1 * k)
+hit(T['batomVoa'][0], 'mapa: arpejo começa (batom sai da boca)')
 # beijo no mapa
 bm = T['beijoMapa']; sfx.add(bm, smack(1.0)); drums.add(bm, kick(1.0)); music.add(bm, sub(29, 0.5))
 for k, n_ in enumerate((84, 87, 91)): music.add(bm + k * 0.03, bell(n_, 1.0, 0.8), pan=(k - 1) * 0.5)
