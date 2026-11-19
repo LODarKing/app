@@ -1,0 +1,26 @@
+{
+  "_doc": "Fonte única do tempo. Vídeo (Remotion) e áudio (audio/gerar_trilha.py) leem este arquivo. Posições de 'cues' em batidas (1 batida = 60/bpm s).",
+  "fps": 30,
+  "durationInFrames": 105,
+  "width": 1080,
+  "height": 1920,
+  "bpm": 120,
+  "quadroCapa": 70,
+  "cues": {
+    "ponto1": 0.25,
+    "ponto2": 0.5,
+    "ponto3": 0.75,
+    "linha": 0.85,
+    "enquanto": 1.0,
+    "sobe": 2.0,
+    "em": 2.5,
+    "bloco": 3.0,
+    "revela": 3.5,
+    "assinatura": 4.0,
+    "fimPonto1": 5.25,
+    "fimPonto2": 5.5,
+    "fimPonto3": 5.75,
+    "resolucao": 6.0,
+    "fim": 7.0
+  }
+}

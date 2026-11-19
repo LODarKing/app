@@ -60,3 +60,6 @@ NOS_AMARRAS_EPISODIO/audio/*.wav
 NOS_AMARRAS_EPISODIO/narracao/
 NOS_AMARRAS_EPISODIO/node_modules/
 NOS_AMARRAS_EPISODIO/*.mp3
+# Vinheta Amontada: quadros soltos de conferência (a folha de contato e o relatório entram)
+AMONTADA_VINHETA/qa/quadros/
+AMONTADA_VINHETA/qa/tira-*.png

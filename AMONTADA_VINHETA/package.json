@@ -1,0 +1,29 @@
+{
+  "name": "vinheta-enquanto-isso-em-amontada",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Vinheta de abertura do quadro “Enquanto Isso em Amontada…” (Remotion, 1080×1920, 30 fps, 3,5 s)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "audio": "python3 audio/gerar_trilha.py",
+    "folha": "node render.mjs --folha",
+    "alfa": "node render.mjs --so-alfa",
+    "render": "node render.mjs",
+    "verificar": "python3 tools/verificar.py",
+    "tudo": "python3 audio/gerar_trilha.py && node render.mjs && python3 tools/verificar.py",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.538",
+    "@remotion/cli": "4.0.538",
+    "@remotion/renderer": "4.0.538",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.538"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}
