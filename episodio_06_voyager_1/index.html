@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Voyager 1 — 48 horas</title>
+<style>html,body{margin:0;background:#090E1A}canvas{display:block;width:1080px;height:1920px}</style></head>
+<body><canvas id="c"></canvas>
+<script src="dist/filme.js"></script>
+<script>
+// contrato de render: window.seek(t) desenha o quadro do instante t (sem rAF, sem timers)
+const legenda = new URLSearchParams(location.search).get('legenda') !== '0';
+window.ready = FILME.criar(document.getElementById('c'), { fontes: 'fonts', texturas: 'assets/nasa', legenda }).then((f) => {
+  window.seek = f.seek; window.info = f.info;
+  window.png = () => document.getElementById('c').toDataURL('image/png');
+  f.seek(0); return true;
+});
+</script></body></html>

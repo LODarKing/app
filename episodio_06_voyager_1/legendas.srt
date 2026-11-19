@@ -1,0 +1,149 @@
+1
+00:00:00,000 --> 00:00:01,760
+Imagine enviar uma mensagem
+
+2
+00:00:01,780 --> 00:00:03,580
+e precisar esperar
+dois dias
+
+3
+00:00:03,600 --> 00:00:05,100
+por uma resposta.
+
+4
+00:00:05,120 --> 00:00:06,621
+Não é ficção científica.
+
+5
+00:00:06,641 --> 00:00:08,641
+É o que acontece
+com a Voyager 1.
+
+6
+00:00:08,661 --> 00:00:10,801
+Em 18 de novembro
+de 2026,
+
+7
+00:00:10,821 --> 00:00:12,481
+ela alcançou
+um marco histórico.
+
+8
+00:00:12,501 --> 00:00:15,061
+Tornou-se o primeiro objeto
+construído pela humanidade
+
+9
+00:00:15,081 --> 00:00:17,522
+a chegar a um dia-luz
+de distância da Terra.
+
+10
+00:00:17,542 --> 00:00:20,342
+São quase 26 bilhões
+de quilômetros.
+
+11
+00:00:20,362 --> 00:00:22,182
+Mesmo viajando
+à velocidade da luz,
+
+12
+00:00:22,202 --> 00:00:24,482
+um sinal de rádio leva
+cerca de 24 horas
+
+13
+00:00:24,502 --> 00:00:25,622
+para chegar até ela.
+
+14
+00:00:25,642 --> 00:00:27,723
+E se a nave respondesse
+imediatamente,
+
+15
+00:00:27,743 --> 00:00:30,943
+seriam mais 24 horas
+para a resposta voltar.
+
+16
+00:00:30,963 --> 00:00:33,163
+Mas, justamente
+neste momento histórico,
+
+17
+00:00:33,183 --> 00:00:34,463
+algo preocupa a NASA.
+
+18
+00:00:34,483 --> 00:00:35,903
+Desde 14 de novembro,
+
+19
+00:00:35,923 --> 00:00:37,764
+a sonda deixou de transmitir
+normalmente
+
+20
+00:00:37,784 --> 00:00:39,884
+seus dados científicos
+e de engenharia.
+
+21
+00:00:39,904 --> 00:00:41,904
+O sinal de rádio
+ainda chega à Terra,
+
+22
+00:00:41,924 --> 00:00:44,364
+mas os engenheiros
+investigam o problema.
+
+23
+00:00:44,384 --> 00:00:46,564
+Lançada em 1977,
+
+24
+00:00:46,584 --> 00:00:48,905
+a Voyager 1 passou por
+Júpiter, Saturno,
+
+25
+00:00:48,925 --> 00:00:51,705
+e em 2012 entrou
+no espaço interestelar.
+
+26
+00:00:51,725 --> 00:00:53,525
+Quase 50 anos depois,
+
+27
+00:00:53,545 --> 00:00:55,625
+essa pequena máquina
+continua atravessando
+
+28
+00:00:55,645 --> 00:00:57,025
+a imensidão do espaço,
+
+29
+00:00:57,045 --> 00:00:59,206
+tão distante que
+até a própria luz
+
+30
+00:00:59,226 --> 00:01:01,826
+precisa de um dia inteiro
+para alcançá-la.
+
+31
+00:01:01,846 --> 00:01:02,986
+Além do visível,
+
+32
+00:01:03,006 --> 00:01:05,980
+o extraordinário
+está nos detalhes.

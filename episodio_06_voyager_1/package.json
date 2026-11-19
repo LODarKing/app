@@ -1,0 +1,11 @@
+{
+  "name": "episodio-06-voyager-1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild componentes_animacao/filme.ts --bundle --format=iife --global-name=FILME --outfile=dist/filme.js --target=chrome120",
+    "studio": "cd remotion && npx remotion studio"
+  },
+  "dependencies": { "three": "0.170.0" },
+  "devDependencies": { "esbuild": "0.24.2", "typescript": "5.8.3", "@types/three": "0.170.0" }
+}

@@ -1,0 +1,1454 @@
+{
+ "fonte": "narracao_original/Voyager .mp3",
+ "metodo": "CTC forced alignment, jonatasgrosman/wav2vec2-large-xlsr-53-portuguese, quadro de 20.0 ms",
+ "palavras": [
+  {
+   "palavra": "Imagine",
+   "ini": 0.06,
+   "fim": 0.5,
+   "conf": 0.98,
+   "whisper_ini": 0.0,
+   "desvio_ms": -60
+  },
+  {
+   "palavra": "enviar",
+   "ini": 0.56,
+   "fim": 0.84,
+   "conf": 1.0,
+   "whisper_ini": 0.32,
+   "desvio_ms": -240
+  },
+  {
+   "palavra": "uma",
+   "ini": 0.88,
+   "fim": 0.98,
+   "conf": 0.99,
+   "whisper_ini": 0.76,
+   "desvio_ms": -120
+  },
+  {
+   "palavra": "mensagem",
+   "ini": 1.02,
+   "fim": 1.56,
+   "conf": 0.99,
+   "whisper_ini": 0.9,
+   "desvio_ms": -120
+  },
+  {
+   "palavra": "e",
+   "ini": 1.86,
+   "fim": 1.88,
+   "conf": 1.0,
+   "whisper_ini": 1.42,
+   "desvio_ms": -440
+  },
+  {
+   "palavra": "precisar",
+   "ini": 1.98,
+   "fim": 2.38,
+   "conf": 1.0,
+   "whisper_ini": 1.82,
+   "desvio_ms": -160
+  },
+  {
+   "palavra": "esperar",
+   "ini": 2.44,
+   "fim": 2.76,
+   "conf": 1.0,
+   "whisper_ini": 2.32,
+   "desvio_ms": -120
+  },
+  {
+   "palavra": "dois",
+   "ini": 2.94,
+   "fim": 3.24,
+   "conf": 1.0,
+   "whisper_ini": 2.54,
+   "desvio_ms": -400
+  },
+  {
+   "palavra": "dias",
+   "ini": 3.36,
+   "fim": 3.64,
+   "conf": 1.0,
+   "whisper_ini": 3.02,
+   "desvio_ms": -340
+  },
+  {
+   "palavra": "por",
+   "ini": 3.68,
+   "fim": 3.78,
+   "conf": 1.0,
+   "whisper_ini": 3.48,
+   "desvio_ms": -200
+  },
+  {
+   "palavra": "uma",
+   "ini": 3.82,
+   "fim": 3.92,
+   "conf": 0.94,
+   "whisper_ini": 3.72,
+   "desvio_ms": -100
+  },
+  {
+   "palavra": "resposta.",
+   "ini": 3.96,
+   "fim": 4.4,
+   "conf": 1.0,
+   "whisper_ini": 3.84,
+   "desvio_ms": -120
+  },
+  {
+   "palavra": "Não",
+   "ini": 5.2,
+   "fim": 5.32,
+   "conf": 0.97,
+   "whisper_ini": 4.92,
+   "desvio_ms": -280
+  },
+  {
+   "palavra": "é",
+   "ini": 5.401,
+   "fim": 5.421,
+   "conf": 1.0,
+   "whisper_ini": 5.2,
+   "desvio_ms": -201
+  },
+  {
+   "palavra": "ficção",
+   "ini": 5.521,
+   "fim": 5.821,
+   "conf": 0.88,
+   "whisper_ini": 5.38,
+   "desvio_ms": -141
+  },
+  {
+   "palavra": "científica.",
+   "ini": 5.901,
+   "fim": 6.401,
+   "conf": 1.0,
+   "whisper_ini": 5.74,
+   "desvio_ms": -161
+  },
+  {
+   "palavra": "É",
+   "ini": 6.721,
+   "fim": 6.741,
+   "conf": 0.0,
+   "whisper_ini": 6.42,
+   "desvio_ms": -301
+  },
+  {
+   "palavra": "o",
+   "ini": 6.801,
+   "fim": 6.821,
+   "conf": 0.94,
+   "whisper_ini": 6.7,
+   "desvio_ms": -101
+  },
+  {
+   "palavra": "que",
+   "ini": 6.841,
+   "fim": 6.921,
+   "conf": 1.0,
+   "whisper_ini": 6.82,
+   "desvio_ms": -21
+  },
+  {
+   "palavra": "acontece",
+   "ini": 6.941,
+   "fim": 7.421,
+   "conf": 1.0,
+   "whisper_ini": 6.86,
+   "desvio_ms": -81
+  },
+  {
+   "palavra": "com",
+   "ini": 7.481,
+   "fim": 7.561,
+   "conf": 1.0,
+   "whisper_ini": 7.24,
+   "desvio_ms": -241
+  },
+  {
+   "palavra": "a",
+   "ini": 7.621,
+   "fim": 7.641,
+   "conf": 0.96,
+   "whisper_ini": 7.52,
+   "desvio_ms": -101
+  },
+  {
+   "palavra": "Voyager",
+   "ini": 7.701,
+   "fim": 8.061,
+   "conf": 0.75,
+   "whisper_ini": 7.6,
+   "desvio_ms": -101
+  },
+  {
+   "palavra": "1.",
+   "ini": 8.101,
+   "fim": 8.181,
+   "conf": 1.0,
+   "whisper_ini": 7.94,
+   "desvio_ms": -161
+  },
+  {
+   "palavra": "Em",
+   "ini": 8.741,
+   "fim": 8.821,
+   "conf": 1.0,
+   "whisper_ini": 8.3,
+   "desvio_ms": -441
+  },
+  {
+   "palavra": "18",
+   "ini": 8.861,
+   "fim": 9.201,
+   "conf": 0.93,
+   "whisper_ini": 8.76,
+   "desvio_ms": -101
+  },
+  {
+   "palavra": "de",
+   "ini": 9.241,
+   "fim": 9.301,
+   "conf": 1.0,
+   "whisper_ini": 9.02,
+   "desvio_ms": -221
+  },
+  {
+   "palavra": "novembro",
+   "ini": 9.341,
+   "fim": 9.741,
+   "conf": 0.99,
+   "whisper_ini": 9.26,
+   "desvio_ms": -81
+  },
+  {
+   "palavra": "de",
+   "ini": 9.781,
+   "fim": 9.841,
+   "conf": 0.96,
+   "whisper_ini": 9.68,
+   "desvio_ms": -101
+  },
+  {
+   "palavra": "2026,",
+   "ini": 9.881,
+   "fim": 10.681,
+   "conf": 0.89,
+   "whisper_ini": 9.8,
+   "desvio_ms": -81
+  },
+  {
+   "palavra": "ela",
+   "ini": 10.901,
+   "fim": 11.001,
+   "conf": 1.0,
+   "whisper_ini": 10.68,
+   "desvio_ms": -221
+  },
+  {
+   "palavra": "alcançou",
+   "ini": 11.041,
+   "fim": 11.481,
+   "conf": 1.0,
+   "whisper_ini": 10.96,
+   "desvio_ms": -81
+  },
+  {
+   "palavra": "um",
+   "ini": 11.501,
+   "fim": 11.561,
+   "conf": 0.87,
+   "whisper_ini": 11.42,
+   "desvio_ms": -81
+  },
+  {
+   "palavra": "marco",
+   "ini": 11.601,
+   "fim": 11.841,
+   "conf": 0.97,
+   "whisper_ini": 11.48,
+   "desvio_ms": -121
+  },
+  {
+   "palavra": "histórico.",
+   "ini": 11.881,
+   "fim": 12.321,
+   "conf": 0.97,
+   "whisper_ini": 11.8,
+   "desvio_ms": -81
+  },
+  {
+   "palavra": "Tornou-se",
+   "ini": 12.581,
+   "fim": 13.001,
+   "conf": 1.0,
+   "whisper_ini": 12.36,
+   "desvio_ms": -221
+  },
+  {
+   "palavra": "o",
+   "ini": 13.041,
+   "fim": 13.061,
+   "conf": 0.97,
+   "whisper_ini": 12.94,
+   "desvio_ms": -101
+  },
+  {
+   "palavra": "primeiro",
+   "ini": 13.101,
+   "fim": 13.401,
+   "conf": 1.0,
+   "whisper_ini": 13.02,
+   "desvio_ms": -81
+  },
+  {
+   "palavra": "objeto",
+   "ini": 13.421,
+   "fim": 13.821,
+   "conf": 0.98,
+   "whisper_ini": 13.24,
+   "desvio_ms": -181
+  },
+  {
+   "palavra": "construído",
+   "ini": 13.881,
+   "fim": 14.321,
+   "conf": 1.0,
+   "whisper_ini": 13.6,
+   "desvio_ms": -281
+  },
+  {
+   "palavra": "pela",
+   "ini": 14.381,
+   "fim": 14.521,
+   "conf": 1.0,
+   "whisper_ini": 14.24,
+   "desvio_ms": -141
+  },
+  {
+   "palavra": "humanidade",
+   "ini": 14.541,
+   "fim": 15.021,
+   "conf": 0.99,
+   "whisper_ini": 14.44,
+   "desvio_ms": -101
+  },
+  {
+   "palavra": "a",
+   "ini": 15.161,
+   "fim": 15.181,
+   "conf": 0.82,
+   "whisper_ini": 14.96,
+   "desvio_ms": -201
+  },
+  {
+   "palavra": "chegar",
+   "ini": 15.261,
+   "fim": 15.541,
+   "conf": 1.0,
+   "whisper_ini": 15.12,
+   "desvio_ms": -141
+  },
+  {
+   "palavra": "a",
+   "ini": 15.581,
+   "fim": 15.601,
+   "conf": 0.79,
+   "whisper_ini": 15.4,
+   "desvio_ms": -181
+  },
+  {
+   "palavra": "um",
+   "ini": 15.661,
+   "fim": 15.721,
+   "conf": 0.91,
+   "whisper_ini": 15.58,
+   "desvio_ms": -81
+  },
+  {
+   "palavra": "dia-luz",
+   "ini": 15.801,
+   "fim": 16.222,
+   "conf": 0.83,
+   "whisper_ini": 15.66,
+   "desvio_ms": -141
+  },
+  {
+   "palavra": "de",
+   "ini": 16.242,
+   "fim": 16.302,
+   "conf": 1.0,
+   "whisper_ini": 16.14,
+   "desvio_ms": -102
+  },
+  {
+   "palavra": "distância",
+   "ini": 16.342,
+   "fim": 16.782,
+   "conf": 0.98,
+   "whisper_ini": 16.26,
+   "desvio_ms": -82
+  },
+  {
+   "palavra": "da",
+   "ini": 16.802,
+   "fim": 16.862,
+   "conf": 1.0,
+   "whisper_ini": 16.7,
+   "desvio_ms": -102
+  },
+  {
+   "palavra": "Terra.",
+   "ini": 16.942,
+   "fim": 17.182,
+   "conf": 0.98,
+   "whisper_ini": 16.84,
+   "desvio_ms": -102
+  },
+  {
+   "palavra": "São",
+   "ini": 17.622,
+   "fim": 17.722,
+   "conf": 1.0,
+   "whisper_ini": 17.24,
+   "desvio_ms": -382
+  },
+  {
+   "palavra": "quase",
+   "ini": 17.802,
+   "fim": 18.082,
+   "conf": 0.99,
+   "whisper_ini": 17.64,
+   "desvio_ms": -162
+  },
+  {
+   "palavra": "26",
+   "ini": 18.202,
+   "fim": 18.822,
+   "conf": 1.0,
+   "whisper_ini": 17.94,
+   "desvio_ms": -262
+  },
+  {
+   "palavra": "bilhões",
+   "ini": 18.902,
+   "fim": 19.342,
+   "conf": 0.9,
+   "whisper_ini": 18.42,
+   "desvio_ms": -482
+  },
+  {
+   "palavra": "de",
+   "ini": 19.382,
+   "fim": 19.422,
+   "conf": 1.0,
+   "whisper_ini": 19.18,
+   "desvio_ms": -202
+  },
+  {
+   "palavra": "quilômetros.",
+   "ini": 19.482,
+   "fim": 20.042,
+   "conf": 0.91,
+   "whisper_ini": 19.4,
+   "desvio_ms": -82
+  },
+  {
+   "palavra": "Mesmo",
+   "ini": 20.442,
+   "fim": 20.702,
+   "conf": 1.0,
+   "whisper_ini": 20.12,
+   "desvio_ms": -322
+  },
+  {
+   "palavra": "viajando",
+   "ini": 20.762,
+   "fim": 21.162,
+   "conf": 1.0,
+   "whisper_ini": 20.66,
+   "desvio_ms": -102
+  },
+  {
+   "palavra": "à",
+   "ini": 21.202,
+   "fim": 21.222,
+   "conf": 0.0,
+   "whisper_ini": 21.08,
+   "desvio_ms": -122
+  },
+  {
+   "palavra": "velocidade",
+   "ini": 21.262,
+   "fim": 21.722,
+   "conf": 0.99,
+   "whisper_ini": 21.2,
+   "desvio_ms": -62
+  },
+  {
+   "palavra": "da",
+   "ini": 21.782,
+   "fim": 21.842,
+   "conf": 1.0,
+   "whisper_ini": 21.48,
+   "desvio_ms": -302
+  },
+  {
+   "palavra": "luz,",
+   "ini": 21.902,
+   "fim": 22.102,
+   "conf": 1.0,
+   "whisper_ini": 21.8,
+   "desvio_ms": -102
+  },
+  {
+   "palavra": "um",
+   "ini": 22.282,
+   "fim": 22.342,
+   "conf": 1.0,
+   "whisper_ini": 22.1,
+   "desvio_ms": -182
+  },
+  {
+   "palavra": "sinal",
+   "ini": 22.402,
+   "fim": 22.642,
+   "conf": 1.0,
+   "whisper_ini": 22.26,
+   "desvio_ms": -142
+  },
+  {
+   "palavra": "de",
+   "ini": 22.682,
+   "fim": 22.742,
+   "conf": 1.0,
+   "whisper_ini": 22.6,
+   "desvio_ms": -82
+  },
+  {
+   "palavra": "rádio",
+   "ini": 22.842,
+   "fim": 23.102,
+   "conf": 0.98,
+   "whisper_ini": 22.7,
+   "desvio_ms": -142
+  },
+  {
+   "palavra": "leva",
+   "ini": 23.142,
+   "fim": 23.322,
+   "conf": 1.0,
+   "whisper_ini": 23.04,
+   "desvio_ms": -102
+  },
+  {
+   "palavra": "cerca",
+   "ini": 23.402,
+   "fim": 23.622,
+   "conf": 0.91,
+   "whisper_ini": 23.18,
+   "desvio_ms": -222
+  },
+  {
+   "palavra": "de",
+   "ini": 23.682,
+   "fim": 23.722,
+   "conf": 1.0,
+   "whisper_ini": 23.4,
+   "desvio_ms": -282
+  },
+  {
+   "palavra": "24",
+   "ini": 23.802,
+   "fim": 24.282,
+   "conf": 0.96,
+   "whisper_ini": 23.72,
+   "desvio_ms": -82
+  },
+  {
+   "palavra": "horas",
+   "ini": 24.302,
+   "fim": 24.542,
+   "conf": 0.96,
+   "whisper_ini": 23.98,
+   "desvio_ms": -322
+  },
+  {
+   "palavra": "para",
+   "ini": 24.582,
+   "fim": 24.722,
+   "conf": 0.96,
+   "whisper_ini": 24.42,
+   "desvio_ms": -162
+  },
+  {
+   "palavra": "chegar",
+   "ini": 24.802,
+   "fim": 25.042,
+   "conf": 1.0,
+   "whisper_ini": 24.64,
+   "desvio_ms": -162
+  },
+  {
+   "palavra": "até",
+   "ini": 25.082,
+   "fim": 25.242,
+   "conf": 0.67,
+   "whisper_ini": 24.88,
+   "desvio_ms": -202
+  },
+  {
+   "palavra": "ela.",
+   "ini": 25.262,
+   "fim": 25.442,
+   "conf": 1.0,
+   "whisper_ini": 25.16,
+   "desvio_ms": -102
+  },
+  {
+   "palavra": "E",
+   "ini": 25.722,
+   "fim": 25.742,
+   "conf": 1.0,
+   "whisper_ini": 25.4,
+   "desvio_ms": -322
+  },
+  {
+   "palavra": "se",
+   "ini": 25.862,
+   "fim": 25.922,
+   "conf": 0.96,
+   "whisper_ini": 25.6,
+   "desvio_ms": -262
+  },
+  {
+   "palavra": "a",
+   "ini": 25.962,
+   "fim": 25.982,
+   "conf": 1.0,
+   "whisper_ini": 25.86,
+   "desvio_ms": -102
+  },
+  {
+   "palavra": "nave",
+   "ini": 26.022,
+   "fim": 26.262,
+   "conf": 0.95,
+   "whisper_ini": 25.94,
+   "desvio_ms": -82
+  },
+  {
+   "palavra": "respondesse",
+   "ini": 26.322,
+   "fim": 26.883,
+   "conf": 0.99,
+   "whisper_ini": 26.16,
+   "desvio_ms": -162
+  },
+  {
+   "palavra": "imediatamente,",
+   "ini": 26.943,
+   "fim": 27.583,
+   "conf": 0.99,
+   "whisper_ini": 26.74,
+   "desvio_ms": -203
+  },
+  {
+   "palavra": "seriam",
+   "ini": 27.823,
+   "fim": 28.123,
+   "conf": 1.0,
+   "whisper_ini": 27.62,
+   "desvio_ms": -203
+  },
+  {
+   "palavra": "mais",
+   "ini": 28.163,
+   "fim": 28.383,
+   "conf": 1.0,
+   "whisper_ini": 28.06,
+   "desvio_ms": -103
+  },
+  {
+   "palavra": "24",
+   "ini": 28.463,
+   "fim": 29.083,
+   "conf": 0.87,
+   "whisper_ini": 28.22,
+   "desvio_ms": -243
+  },
+  {
+   "palavra": "horas",
+   "ini": 29.123,
+   "fim": 29.403,
+   "conf": 1.0,
+   "whisper_ini": 28.68,
+   "desvio_ms": -443
+  },
+  {
+   "palavra": "para",
+   "ini": 29.443,
+   "fim": 29.563,
+   "conf": 1.0,
+   "whisper_ini": 29.22,
+   "desvio_ms": -223
+  },
+  {
+   "palavra": "a",
+   "ini": 29.583,
+   "fim": 29.603,
+   "conf": 0.0,
+   "whisper_ini": 29.5,
+   "desvio_ms": -83
+  },
+  {
+   "palavra": "resposta",
+   "ini": 29.623,
+   "fim": 30.003,
+   "conf": 0.99,
+   "whisper_ini": 29.56,
+   "desvio_ms": -63
+  },
+  {
+   "palavra": "voltar.",
+   "ini": 30.083,
+   "fim": 30.403,
+   "conf": 1.0,
+   "whisper_ini": 29.88,
+   "desvio_ms": -203
+  },
+  {
+   "palavra": "Mas,",
+   "ini": 31.043,
+   "fim": 31.303,
+   "conf": 0.99,
+   "whisper_ini": 30.54,
+   "desvio_ms": -503
+  },
+  {
+   "palavra": "justamente",
+   "ini": 31.423,
+   "fim": 31.943,
+   "conf": 0.98,
+   "whisper_ini": 31.22,
+   "desvio_ms": -203
+  },
+  {
+   "palavra": "neste",
+   "ini": 32.003,
+   "fim": 32.223,
+   "conf": 1.0,
+   "whisper_ini": 31.64,
+   "desvio_ms": -363
+  },
+  {
+   "palavra": "momento",
+   "ini": 32.263,
+   "fim": 32.543,
+   "conf": 0.99,
+   "whisper_ini": 32.06,
+   "desvio_ms": -203
+  },
+  {
+   "palavra": "histórico,",
+   "ini": 32.603,
+   "fim": 33.003,
+   "conf": 1.0,
+   "whisper_ini": 32.34,
+   "desvio_ms": -263
+  },
+  {
+   "palavra": "algo",
+   "ini": 33.263,
+   "fim": 33.423,
+   "conf": 1.0,
+   "whisper_ini": 33.04,
+   "desvio_ms": -223
+  },
+  {
+   "palavra": "preocupa",
+   "ini": 33.483,
+   "fim": 33.883,
+   "conf": 0.98,
+   "whisper_ini": 33.3,
+   "desvio_ms": -183
+  },
+  {
+   "palavra": "a",
+   "ini": 33.923,
+   "fim": 33.943,
+   "conf": 0.98,
+   "whisper_ini": 33.9,
+   "desvio_ms": -23
+  },
+  {
+   "palavra": "NASA.",
+   "ini": 33.983,
+   "fim": 34.223,
+   "conf": 0.92,
+   "whisper_ini": 33.92,
+   "desvio_ms": -63
+  },
+  {
+   "palavra": "Desde",
+   "ini": 34.563,
+   "fim": 34.803,
+   "conf": 0.99,
+   "whisper_ini": 34.3,
+   "desvio_ms": -263
+  },
+  {
+   "palavra": "14",
+   "ini": 34.863,
+   "fim": 35.263,
+   "conf": 0.83,
+   "whisper_ini": 34.66,
+   "desvio_ms": -203
+  },
+  {
+   "palavra": "de",
+   "ini": 35.303,
+   "fim": 35.363,
+   "conf": 1.0,
+   "whisper_ini": 34.96,
+   "desvio_ms": -343
+  },
+  {
+   "palavra": "novembro,",
+   "ini": 35.423,
+   "fim": 35.803,
+   "conf": 1.0,
+   "whisper_ini": 35.32,
+   "desvio_ms": -103
+  },
+  {
+   "palavra": "a",
+   "ini": 36.003,
+   "fim": 36.023,
+   "conf": 1.0,
+   "whisper_ini": 35.82,
+   "desvio_ms": -183
+  },
+  {
+   "palavra": "sonda",
+   "ini": 36.143,
+   "fim": 36.303,
+   "conf": 1.0,
+   "whisper_ini": 35.96,
+   "desvio_ms": -183
+  },
+  {
+   "palavra": "deixou",
+   "ini": 36.363,
+   "fim": 36.663,
+   "conf": 0.99,
+   "whisper_ini": 36.24,
+   "desvio_ms": -123
+  },
+  {
+   "palavra": "de",
+   "ini": 36.683,
+   "fim": 36.723,
+   "conf": 1.0,
+   "whisper_ini": 36.6,
+   "desvio_ms": -83
+  },
+  {
+   "palavra": "transmitir",
+   "ini": 36.783,
+   "fim": 37.263,
+   "conf": 0.98,
+   "whisper_ini": 36.72,
+   "desvio_ms": -63
+  },
+  {
+   "palavra": "normalmente",
+   "ini": 37.324,
+   "fim": 37.804,
+   "conf": 0.97,
+   "whisper_ini": 37.24,
+   "desvio_ms": -84
+  },
+  {
+   "palavra": "seus",
+   "ini": 37.864,
+   "fim": 38.024,
+   "conf": 1.0,
+   "whisper_ini": 37.5,
+   "desvio_ms": -364
+  },
+  {
+   "palavra": "dados",
+   "ini": 38.084,
+   "fim": 38.304,
+   "conf": 1.0,
+   "whisper_ini": 37.92,
+   "desvio_ms": -164
+  },
+  {
+   "palavra": "científicos",
+   "ini": 38.364,
+   "fim": 38.944,
+   "conf": 0.98,
+   "whisper_ini": 38.16,
+   "desvio_ms": -204
+  },
+  {
+   "palavra": "e",
+   "ini": 39.044,
+   "fim": 39.064,
+   "conf": 1.0,
+   "whisper_ini": 38.9,
+   "desvio_ms": -144
+  },
+  {
+   "palavra": "de",
+   "ini": 39.104,
+   "fim": 39.164,
+   "conf": 1.0,
+   "whisper_ini": 39.0,
+   "desvio_ms": -104
+  },
+  {
+   "palavra": "engenharia.",
+   "ini": 39.204,
+   "fim": 39.624,
+   "conf": 0.99,
+   "whisper_ini": 39.1,
+   "desvio_ms": -104
+  },
+  {
+   "palavra": "O",
+   "ini": 39.984,
+   "fim": 40.004,
+   "conf": 1.0,
+   "whisper_ini": 39.66,
+   "desvio_ms": -324
+  },
+  {
+   "palavra": "sinal",
+   "ini": 40.084,
+   "fim": 40.324,
+   "conf": 1.0,
+   "whisper_ini": 39.98,
+   "desvio_ms": -104
+  },
+  {
+   "palavra": "de",
+   "ini": 40.364,
+   "fim": 40.424,
+   "conf": 1.0,
+   "whisper_ini": 40.28,
+   "desvio_ms": -84
+  },
+  {
+   "palavra": "rádio",
+   "ini": 40.524,
+   "fim": 40.804,
+   "conf": 0.88,
+   "whisper_ini": 40.38,
+   "desvio_ms": -144
+  },
+  {
+   "palavra": "ainda",
+   "ini": 40.904,
+   "fim": 41.104,
+   "conf": 1.0,
+   "whisper_ini": 40.76,
+   "desvio_ms": -144
+  },
+  {
+   "palavra": "chega",
+   "ini": 41.224,
+   "fim": 41.424,
+   "conf": 0.88,
+   "whisper_ini": 40.98,
+   "desvio_ms": -244
+  },
+  {
+   "palavra": "à",
+   "ini": 41.444,
+   "fim": 41.464,
+   "conf": 0.0,
+   "whisper_ini": 41.38,
+   "desvio_ms": -64
+  },
+  {
+   "palavra": "Terra,",
+   "ini": 41.544,
+   "fim": 41.744,
+   "conf": 0.99,
+   "whisper_ini": 41.46,
+   "desvio_ms": -84
+  },
+  {
+   "palavra": "mas",
+   "ini": 42.004,
+   "fim": 42.184,
+   "conf": 0.98,
+   "whisper_ini": 41.76,
+   "desvio_ms": -244
+  },
+  {
+   "palavra": "os",
+   "ini": 42.224,
+   "fim": 42.304,
+   "conf": 0.99,
+   "whisper_ini": 42.12,
+   "desvio_ms": -104
+  },
+  {
+   "palavra": "engenheiros",
+   "ini": 42.364,
+   "fim": 42.864,
+   "conf": 1.0,
+   "whisper_ini": 42.24,
+   "desvio_ms": -124
+  },
+  {
+   "palavra": "investigam",
+   "ini": 42.944,
+   "fim": 43.404,
+   "conf": 1.0,
+   "whisper_ini": 42.76,
+   "desvio_ms": -184
+  },
+  {
+   "palavra": "o",
+   "ini": 43.444,
+   "fim": 43.464,
+   "conf": 0.55,
+   "whisper_ini": 43.38,
+   "desvio_ms": -64
+  },
+  {
+   "palavra": "problema.",
+   "ini": 43.504,
+   "fim": 43.824,
+   "conf": 1.0,
+   "whisper_ini": 43.44,
+   "desvio_ms": -64
+  },
+  {
+   "palavra": "Lançada",
+   "ini": 44.464,
+   "fim": 44.864,
+   "conf": 1.0,
+   "whisper_ini": 44.18,
+   "desvio_ms": -284
+  },
+  {
+   "palavra": "em",
+   "ini": 44.924,
+   "fim": 44.984,
+   "conf": 1.0,
+   "whisper_ini": 44.78,
+   "desvio_ms": -144
+  },
+  {
+   "palavra": "1977,",
+   "ini": 45.024,
+   "fim": 46.484,
+   "conf": 0.96,
+   "whisper_ini": 44.92,
+   "desvio_ms": -104
+  },
+  {
+   "palavra": "a",
+   "ini": 46.664,
+   "fim": 46.704,
+   "conf": 0.94,
+   "whisper_ini": 46.56,
+   "desvio_ms": -104
+  },
+  {
+   "palavra": "Voyager",
+   "ini": 46.764,
+   "fim": 47.144,
+   "conf": 0.71,
+   "whisper_ini": 46.64,
+   "desvio_ms": -124
+  },
+  {
+   "palavra": "1",
+   "ini": 47.184,
+   "fim": 47.264,
+   "conf": 1.0,
+   "whisper_ini": 46.98,
+   "desvio_ms": -204
+  },
+  {
+   "palavra": "passou",
+   "ini": 47.324,
+   "fim": 47.604,
+   "conf": 1.0,
+   "whisper_ini": 47.18,
+   "desvio_ms": -144
+  },
+  {
+   "palavra": "por",
+   "ini": 47.664,
+   "fim": 47.764,
+   "conf": 1.0,
+   "whisper_ini": 47.44,
+   "desvio_ms": -224
+  },
+  {
+   "palavra": "Júpiter,",
+   "ini": 47.864,
+   "fim": 48.185,
+   "conf": 0.9,
+   "whisper_ini": 47.7,
+   "desvio_ms": -164
+  },
+  {
+   "palavra": "Saturno,",
+   "ini": 48.345,
+   "fim": 48.785,
+   "conf": 1.0,
+   "whisper_ini": 48.2,
+   "desvio_ms": -145
+  },
+  {
+   "palavra": "e",
+   "ini": 49.005,
+   "fim": 49.025,
+   "conf": 1.0,
+   "whisper_ini": 48.8,
+   "desvio_ms": -205
+  },
+  {
+   "palavra": "em",
+   "ini": 49.085,
+   "fim": 49.165,
+   "conf": 0.93,
+   "whisper_ini": 48.98,
+   "desvio_ms": -105
+  },
+  {
+   "palavra": "2012",
+   "ini": 49.205,
+   "fim": 49.845,
+   "conf": 0.91,
+   "whisper_ini": 49.12,
+   "desvio_ms": -85
+  },
+  {
+   "palavra": "entrou",
+   "ini": 50.025,
+   "fim": 50.285,
+   "conf": 0.99,
+   "whisper_ini": 49.54,
+   "desvio_ms": -485
+  },
+  {
+   "palavra": "no",
+   "ini": 50.325,
+   "fim": 50.385,
+   "conf": 1.0,
+   "whisper_ini": 50.24,
+   "desvio_ms": -85
+  },
+  {
+   "palavra": "espaço",
+   "ini": 50.425,
+   "fim": 50.805,
+   "conf": 0.99,
+   "whisper_ini": 50.34,
+   "desvio_ms": -85
+  },
+  {
+   "palavra": "interestelar.",
+   "ini": 50.885,
+   "fim": 51.465,
+   "conf": 1.0,
+   "whisper_ini": 50.52,
+   "desvio_ms": -365
+  },
+  {
+   "palavra": "Quase",
+   "ini": 51.805,
+   "fim": 52.065,
+   "conf": 0.95,
+   "whisper_ini": 51.52,
+   "desvio_ms": -285
+  },
+  {
+   "palavra": "50",
+   "ini": 52.145,
+   "fim": 52.565,
+   "conf": 0.99,
+   "whisper_ini": 52.0,
+   "desvio_ms": -145
+  },
+  {
+   "palavra": "anos",
+   "ini": 52.685,
+   "fim": 52.845,
+   "conf": 1.0,
+   "whisper_ini": 52.3,
+   "desvio_ms": -385
+  },
+  {
+   "palavra": "depois,",
+   "ini": 52.885,
+   "fim": 53.305,
+   "conf": 1.0,
+   "whisper_ini": 52.7,
+   "desvio_ms": -185
+  },
+  {
+   "palavra": "essa",
+   "ini": 53.625,
+   "fim": 53.805,
+   "conf": 0.96,
+   "whisper_ini": 53.28,
+   "desvio_ms": -345
+  },
+  {
+   "palavra": "pequena",
+   "ini": 53.865,
+   "fim": 54.165,
+   "conf": 1.0,
+   "whisper_ini": 53.7,
+   "desvio_ms": -165
+  },
+  {
+   "palavra": "máquina",
+   "ini": 54.245,
+   "fim": 54.545,
+   "conf": 1.0,
+   "whisper_ini": 54.1,
+   "desvio_ms": -145
+  },
+  {
+   "palavra": "continua",
+   "ini": 54.685,
+   "fim": 55.085,
+   "conf": 1.0,
+   "whisper_ini": 54.42,
+   "desvio_ms": -265
+  },
+  {
+   "palavra": "atravessando",
+   "ini": 55.125,
+   "fim": 55.685,
+   "conf": 1.0,
+   "whisper_ini": 54.9,
+   "desvio_ms": -225
+  },
+  {
+   "palavra": "a",
+   "ini": 55.725,
+   "fim": 55.745,
+   "conf": 1.0,
+   "whisper_ini": 55.66,
+   "desvio_ms": -65
+  },
+  {
+   "palavra": "imensidão",
+   "ini": 55.785,
+   "fim": 56.225,
+   "conf": 0.99,
+   "whisper_ini": 55.72,
+   "desvio_ms": -65
+  },
+  {
+   "palavra": "do",
+   "ini": 56.285,
+   "fim": 56.345,
+   "conf": 1.0,
+   "whisper_ini": 56.2,
+   "desvio_ms": -85
+  },
+  {
+   "palavra": "espaço,",
+   "ini": 56.385,
+   "fim": 56.765,
+   "conf": 1.0,
+   "whisper_ini": 56.28,
+   "desvio_ms": -105
+  },
+  {
+   "palavra": "tão",
+   "ini": 57.125,
+   "fim": 57.245,
+   "conf": 0.99,
+   "whisper_ini": 56.74,
+   "desvio_ms": -385
+  },
+  {
+   "palavra": "distante",
+   "ini": 57.325,
+   "fim": 57.805,
+   "conf": 0.93,
+   "whisper_ini": 57.16,
+   "desvio_ms": -165
+  },
+  {
+   "palavra": "que",
+   "ini": 58.325,
+   "fim": 58.405,
+   "conf": 1.0,
+   "whisper_ini": 57.76,
+   "desvio_ms": -565
+  },
+  {
+   "palavra": "até",
+   "ini": 58.425,
+   "fim": 58.565,
+   "conf": 0.96,
+   "whisper_ini": 58.32,
+   "desvio_ms": -105
+  },
+  {
+   "palavra": "a",
+   "ini": 58.625,
+   "fim": 58.646,
+   "conf": 1.0,
+   "whisper_ini": 58.48,
+   "desvio_ms": -145
+  },
+  {
+   "palavra": "própria",
+   "ini": 58.726,
+   "fim": 59.006,
+   "conf": 1.0,
+   "whisper_ini": 58.64,
+   "desvio_ms": -86
+  },
+  {
+   "palavra": "luz",
+   "ini": 59.066,
+   "fim": 59.246,
+   "conf": 1.0,
+   "whisper_ini": 58.84,
+   "desvio_ms": -226
+  },
+  {
+   "palavra": "precisa",
+   "ini": 59.306,
+   "fim": 59.646,
+   "conf": 1.0,
+   "whisper_ini": 59.14,
+   "desvio_ms": -166
+  },
+  {
+   "palavra": "de",
+   "ini": 59.706,
+   "fim": 59.766,
+   "conf": 1.0,
+   "whisper_ini": 59.52,
+   "desvio_ms": -186
+  },
+  {
+   "palavra": "um",
+   "ini": 59.826,
+   "fim": 59.886,
+   "conf": 0.88,
+   "whisper_ini": 59.7,
+   "desvio_ms": -126
+  },
+  {
+   "palavra": "dia",
+   "ini": 59.966,
+   "fim": 60.086,
+   "conf": 0.97,
+   "whisper_ini": 59.8,
+   "desvio_ms": -166
+  },
+  {
+   "palavra": "inteiro",
+   "ini": 60.146,
+   "fim": 60.526,
+   "conf": 0.98,
+   "whisper_ini": 60.0,
+   "desvio_ms": -146
+  },
+  {
+   "palavra": "para",
+   "ini": 60.586,
+   "fim": 60.726,
+   "conf": 1.0,
+   "whisper_ini": 60.4,
+   "desvio_ms": -186
+  },
+  {
+   "palavra": "alcançá-la.",
+   "ini": 60.766,
+   "fim": 61.286,
+   "conf": 0.9,
+   "whisper_ini": 60.64,
+   "desvio_ms": -126
+  },
+  {
+   "palavra": "Além",
+   "ini": 61.926,
+   "fim": 62.126,
+   "conf": 1.0,
+   "whisper_ini": 61.52,
+   "desvio_ms": -406
+  },
+  {
+   "palavra": "do",
+   "ini": 62.166,
+   "fim": 62.226,
+   "conf": 1.0,
+   "whisper_ini": 62.0,
+   "desvio_ms": -166
+  },
+  {
+   "palavra": "visível,",
+   "ini": 62.286,
+   "fim": 62.686,
+   "conf": 1.0,
+   "whisper_ini": 62.2,
+   "desvio_ms": -86
+  },
+  {
+   "palavra": "o",
+   "ini": 63.086,
+   "fim": 63.106,
+   "conf": 1.0,
+   "whisper_ini": 62.72,
+   "desvio_ms": -366
+  },
+  {
+   "palavra": "extraordinário",
+   "ini": 63.206,
+   "fim": 63.946,
+   "conf": 0.94,
+   "whisper_ini": 63.06,
+   "desvio_ms": -146
+  },
+  {
+   "palavra": "está",
+   "ini": 64.286,
+   "fim": 64.486,
+   "conf": 1.0,
+   "whisper_ini": 63.9,
+   "desvio_ms": -386
+  },
+  {
+   "palavra": "nos",
+   "ini": 64.566,
+   "fim": 64.666,
+   "conf": 1.0,
+   "whisper_ini": 64.38,
+   "desvio_ms": -186
+  },
+  {
+   "palavra": "detalhes.",
+   "ini": 64.706,
+   "fim": 65.166,
+   "conf": 1.0,
+   "whisper_ini": 64.6,
+   "desvio_ms": -106
+  }
+ ]
+}

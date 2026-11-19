@@ -1,0 +1,26 @@
+TRANSCRIÇÃO DA NARRAÇÃO ORIGINAL — Além do Visível, Episódio 06: Voyager 1
+Arquivo: narracao_original/Voyager .mp3 (MP3 128 kbps, 44,1 kHz, mono, 65,31 s; MD5 46fb3aefe127e792544777b1e9e28eed)
+Texto: faster-whisper large-v3, conferido. Tempos: alinhamento forçado (wav2vec2 XLSR-53 pt). Formato: início–fim (s)
+
+[  0.06 –   4.40]  Imagine enviar uma mensagem e precisar esperar dois dias por uma resposta.
+[  5.20 –   6.40]  Não é ficção científica.
+[  6.72 –   8.18]  É o que acontece com a Voyager 1.
+[  8.74 –  12.32]  Em 18 de novembro de 2026, ela alcançou um marco histórico.
+[ 12.58 –  17.18]  Tornou-se o primeiro objeto construído pela humanidade a chegar a um dia-luz de distância da Terra.
+[ 17.62 –  20.04]  São quase 26 bilhões de quilômetros.
+[ 20.44 –  25.44]  Mesmo viajando à velocidade da luz, um sinal de rádio leva cerca de 24 horas para chegar até ela.
+[ 25.72 –  30.40]  E se a nave respondesse imediatamente, seriam mais 24 horas para a resposta voltar.
+[ 31.04 –  34.22]  Mas, justamente neste momento histórico, algo preocupa a NASA.
+[ 34.56 –  39.62]  Desde 14 de novembro, a sonda deixou de transmitir normalmente seus dados científicos e de engenharia.
+[ 39.98 –  43.82]  O sinal de rádio ainda chega à Terra, mas os engenheiros investigam o problema.
+[ 44.46 –  51.47]  Lançada em 1977, a Voyager 1 passou por Júpiter, Saturno, e em 2012 entrou no espaço interestelar.
+[ 51.80 –  61.29]  Quase 50 anos depois, essa pequena máquina continua atravessando a imensidão do espaço, tão distante que até a própria luz precisa de um dia inteiro para alcançá-la.
+[ 61.93 –  65.17]  Além do visível, o extraordinário está nos detalhes.
+
+TEXTO CORRIDO
+
+Imagine enviar uma mensagem e precisar esperar dois dias por uma resposta. Não é ficção científica. É o que acontece com a Voyager 1. Em 18 de novembro de 2026, ela alcançou um marco histórico. Tornou-se o primeiro objeto construído pela humanidade a chegar a um dia-luz de distância da Terra. São quase 26 bilhões de quilômetros. Mesmo viajando à velocidade da luz, um sinal de rádio leva cerca de 24 horas para chegar até ela. E se a nave respondesse imediatamente, seriam mais 24 horas para a resposta voltar. Mas, justamente neste momento histórico, algo preocupa a NASA. Desde 14 de novembro, a sonda deixou de transmitir normalmente seus dados científicos e de engenharia. O sinal de rádio ainda chega à Terra, mas os engenheiros investigam o problema. Lançada em 1977, a Voyager 1 passou por Júpiter, Saturno, e em 2012 entrou no espaço interestelar. Quase 50 anos depois, essa pequena máquina continua atravessando a imensidão do espaço, tão distante que até a própria luz precisa de um dia inteiro para alcançá-la. Além do visível, o extraordinário está nos detalhes.
+
+NOTA: a transcrição automática completa registrou "continua atravessando. Atravessando a imensidão" (55 s).
+A passada isolada do trecho 53,2–57,0 s, com dois modelos (medium e large-v3), ouve uma única ocorrência:
+"continua atravessando a imensidão". O alinhamento forçado confirma uma só palavra (55,12–55,69 s).

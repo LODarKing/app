@@ -60,3 +60,10 @@ NOS_AMARRAS_EPISODIO/audio/*.wav
 NOS_AMARRAS_EPISODIO/narracao/
 NOS_AMARRAS_EPISODIO/node_modules/
 NOS_AMARRAS_EPISODIO/*.mp3
+# Voyager 1 (ep. 06): renders, dependências e intermediários regeneráveis
+episodio_06_voyager_1/out/
+episodio_06_voyager_1/node_modules/
+episodio_06_voyager_1/dist/
+episodio_06_voyager_1/remotion/node_modules/
+episodio_06_voyager_1/remotion/out/
+episodio_06_voyager_1/audio/mix*.wav

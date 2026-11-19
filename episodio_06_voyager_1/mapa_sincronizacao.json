@@ -1,0 +1,1743 @@
+{
+ "fonte": "narracao_original/Voyager .mp3",
+ "duracao_narracao_s": 65.306,
+ "duracao_video_s": 66.0,
+ "fps": 30,
+ "metodo": "texto: faster-whisper large-v3 (conferido; repetição espúria em 55 s removida após passada isolada); tempos: alinhamento forçado CTC wav2vec2 XLSR-53 pt (quadro 20 ms)",
+ "grade_musical": {
+  "bpm": 101.5,
+  "fase_s": 0.136,
+  "semicolcheia_s": 0.1478
+ },
+ "frases": [
+  {
+   "n": 1,
+   "texto": "Imagine enviar uma mensagem e precisar esperar dois dias por uma resposta.",
+   "nivel_db": -20.9,
+   "f0_mediana_hz": 150.0,
+   "ini": 0.06,
+   "fim": 4.4
+  },
+  {
+   "n": 2,
+   "texto": "Não é ficção científica.",
+   "nivel_db": -22.5,
+   "f0_mediana_hz": 98.4,
+   "ini": 5.2,
+   "fim": 6.401
+  },
+  {
+   "n": 3,
+   "texto": "É o que acontece com a Voyager 1.",
+   "nivel_db": -21.7,
+   "f0_mediana_hz": 102.8,
+   "ini": 6.721,
+   "fim": 8.181
+  },
+  {
+   "n": 4,
+   "texto": "Em 18 de novembro de 2026, ela alcançou um marco histórico.",
+   "nivel_db": -21.1,
+   "f0_mediana_hz": 123.7,
+   "ini": 8.741,
+   "fim": 12.321
+  },
+  {
+   "n": 5,
+   "texto": "Tornou-se o primeiro objeto construído pela humanidade a chegar a um dia-luz de distância da Terra.",
+   "nivel_db": -20.1,
+   "f0_mediana_hz": 142.4,
+   "ini": 12.581,
+   "fim": 17.182
+  },
+  {
+   "n": 6,
+   "texto": "São quase 26 bilhões de quilômetros.",
+   "nivel_db": -21.1,
+   "f0_mediana_hz": 121.5,
+   "ini": 17.622,
+   "fim": 20.042
+  },
+  {
+   "n": 7,
+   "texto": "Mesmo viajando à velocidade da luz, um sinal de rádio leva cerca de 24 horas para chegar até ela.",
+   "nivel_db": -20.9,
+   "f0_mediana_hz": 135.2,
+   "ini": 20.442,
+   "fim": 25.442
+  },
+  {
+   "n": 8,
+   "texto": "E se a nave respondesse imediatamente, seriam mais 24 horas para a resposta voltar.",
+   "nivel_db": -21.6,
+   "f0_mediana_hz": 126.2,
+   "ini": 25.722,
+   "fim": 30.403
+  },
+  {
+   "n": 9,
+   "texto": "Mas, justamente neste momento histórico, algo preocupa a NASA.",
+   "nivel_db": -21.9,
+   "f0_mediana_hz": 159.0,
+   "ini": 31.043,
+   "fim": 34.223
+  },
+  {
+   "n": 10,
+   "texto": "Desde 14 de novembro, a sonda deixou de transmitir normalmente seus dados científicos e de engenharia.",
+   "nivel_db": -21.8,
+   "f0_mediana_hz": 131.4,
+   "ini": 34.563,
+   "fim": 39.624
+  },
+  {
+   "n": 11,
+   "texto": "O sinal de rádio ainda chega à Terra, mas os engenheiros investigam o problema.",
+   "nivel_db": -21.7,
+   "f0_mediana_hz": 115.0,
+   "ini": 39.984,
+   "fim": 43.824
+  },
+  {
+   "n": 12,
+   "texto": "Lançada em 1977, a Voyager 1 passou por Júpiter, Saturno, e em 2012 entrou no espaço interestelar.",
+   "nivel_db": -21.4,
+   "f0_mediana_hz": 151.8,
+   "ini": 44.464,
+   "fim": 51.465
+  },
+  {
+   "n": 13,
+   "texto": "Quase 50 anos depois, essa pequena máquina continua atravessando a imensidão do espaço, tão distante que até a própria luz precisa de um dia inteiro para alcançá-la.",
+   "nivel_db": -25.0,
+   "f0_mediana_hz": 114.4,
+   "ini": 51.805,
+   "fim": 61.286
+  },
+  {
+   "n": 14,
+   "texto": "Além do visível, o extraordinário está nos detalhes.",
+   "nivel_db": -25.4,
+   "f0_mediana_hz": 91.0,
+   "ini": 61.926,
+   "fim": 65.166
+  }
+ ],
+ "pausas": [
+  {
+   "depois_de": "resposta.",
+   "ini": 4.4,
+   "fim": 5.2,
+   "dur": 0.8
+  },
+  {
+   "depois_de": "científica.",
+   "ini": 6.401,
+   "fim": 6.721,
+   "dur": 0.32
+  },
+  {
+   "depois_de": "1.",
+   "ini": 8.181,
+   "fim": 8.741,
+   "dur": 0.56
+  },
+  {
+   "depois_de": "histórico.",
+   "ini": 12.321,
+   "fim": 12.581,
+   "dur": 0.26
+  },
+  {
+   "depois_de": "Terra.",
+   "ini": 17.182,
+   "fim": 17.622,
+   "dur": 0.44
+  },
+  {
+   "depois_de": "quilômetros.",
+   "ini": 20.042,
+   "fim": 20.442,
+   "dur": 0.4
+  },
+  {
+   "depois_de": "ela.",
+   "ini": 25.442,
+   "fim": 25.722,
+   "dur": 0.28
+  },
+  {
+   "depois_de": "voltar.",
+   "ini": 30.403,
+   "fim": 31.043,
+   "dur": 0.64
+  },
+  {
+   "depois_de": "NASA.",
+   "ini": 34.223,
+   "fim": 34.563,
+   "dur": 0.34
+  },
+  {
+   "depois_de": "engenharia.",
+   "ini": 39.624,
+   "fim": 39.984,
+   "dur": 0.36
+  },
+  {
+   "depois_de": "problema.",
+   "ini": 43.824,
+   "fim": 44.464,
+   "dur": 0.64
+  },
+  {
+   "depois_de": "interestelar.",
+   "ini": 51.465,
+   "fim": 51.805,
+   "dur": 0.34
+  },
+  {
+   "depois_de": "alcançá-la.",
+   "ini": 61.286,
+   "fim": 61.926,
+   "dur": 0.64
+  }
+ ],
+ "mudancas_de_intensidade": [
+  {
+   "t": 0.06,
+   "nota": "abertura em tom de convite; frase 1 com a maior variação de altura (f0 ±139 Hz)"
+  },
+  {
+   "t": 5.2,
+   "nota": "queda de altura (f0 98 Hz): \"Não é ficção científica\" — virada grave e séria"
+  },
+  {
+   "t": 12.581,
+   "nota": "frase mais forte da narração (-20.1 dB): o marco do dia-luz"
+  },
+  {
+   "t": 31.043,
+   "nota": "\"Mas,\" sobe a altura (f0 159 Hz) e abre a maior pausa do meio (0.64 s antes): virada para o problema"
+  },
+  {
+   "t": 44.464,
+   "nota": "retomada: linha do tempo com altura alta e ritmo de enumeração (f0 152 Hz)"
+  },
+  {
+   "t": 51.805,
+   "nota": "contemplativo: nível cai ~3,5 dB (-25.0 dB) e o ritmo desacelera"
+  },
+  {
+   "t": 61.926,
+   "nota": "assinatura: a mais grave e baixa da narração (f0 91 Hz, -25.4 dB)"
+  }
+ ],
+ "revelacoes_cientificas": [
+  {
+   "t": 2.94,
+   "revelacao": "48 horas de espera (ida e volta)"
+  },
+  {
+   "t": 15.801,
+   "revelacao": "um dia-luz de distância da Terra"
+  },
+  {
+   "t": 18.202,
+   "revelacao": "quase 26 bilhões de km (25,9 bilhões de km, NASA)"
+  },
+  {
+   "t": 24.802,
+   "revelacao": "o sinal leva 24 h para chegar"
+  },
+  {
+   "t": 30.083,
+   "revelacao": "mais 24 h para a resposta voltar (supondo resposta imediata)"
+  },
+  {
+   "t": 36.783,
+   "revelacao": "desde 14/11 a sonda não envia dados científicos e de engenharia; a portadora é recebida"
+  },
+  {
+   "t": 49.205,
+   "revelacao": "espaço interestelar em 2012"
+  }
+ ],
+ "pontos_de_sincronizacao": [
+  {
+   "briefing": "DOIS DIAS",
+   "palavra_na_narracao": "dois",
+   "marco": "h48",
+   "t": 2.94,
+   "acao": "contador chega a 48:00:00 e vira \"48 HORAS\""
+  },
+  {
+   "briefing": "VOYAGER 1",
+   "palavra_na_narracao": "Voyager",
+   "marco": "voyager",
+   "t": 7.701,
+   "acao": "revelação da silhueta da sonda"
+  },
+  {
+   "briefing": "18 DE NOVEMBRO DE 2026",
+   "palavra_na_narracao": "18",
+   "marco": "data_18",
+   "t": 8.861,
+   "acao": "data em tipografia cinética (18 / NOVEMBRO / 2026 no tempo de cada palavra)"
+  },
+  {
+   "briefing": "QUASE 26 BILHÕES DE QUILÔMETROS",
+   "palavra_na_narracao": "26",
+   "marco": "km",
+   "t": 18.202,
+   "acao": "grande revelação: 25,9 BILHÕES DE KM -> 1 DIA-LUZ"
+  },
+  {
+   "briefing": "24 HORAS PARA CHEGAR",
+   "palavra_na_narracao": "chegar",
+   "marco": "chega",
+   "t": 24.802,
+   "acao": "frente de onda do sinal alcança a Voyager com o contador em 24:00:00"
+  },
+  {
+   "briefing": "MAIS 24 HORAS PARA VOLTAR",
+   "palavra_na_narracao": "voltar",
+   "marco": "volta",
+   "t": 30.083,
+   "acao": "resposta hipotética chega à Terra com o total em 48:00:00"
+  },
+  {
+   "briefing": "A NASA DEIXOU DE RECEBER OS DADOS",
+   "palavra_na_narracao": "transmitir",
+   "marco": "transmitir",
+   "t": 36.783,
+   "acao": "atmosfera muda desde \"Mas\"; painel: SINAL DETECTADO / DADOS NÃO RECEBIDOS"
+  },
+  {
+   "briefing": "1977",
+   "palavra_na_narracao": "1977",
+   "marco": "ano_1977",
+   "t": 45.024,
+   "acao": "linha do tempo histórica começa"
+  },
+  {
+   "briefing": "ALÉM DO VISÍVEL",
+   "palavra_na_narracao": "Além",
+   "marco": "marca",
+   "t": 61.926,
+   "acao": "assinatura do canal"
+  }
+ ],
+ "cenas": [
+  {
+   "id": "s1",
+   "nome": "Uma mensagem impossível",
+   "t0": 0.0,
+   "t1": 4.75
+  },
+  {
+   "id": "s2",
+   "nome": "A viagem para fora da Terra",
+   "t0": 4.75,
+   "t1": 7.661
+  },
+  {
+   "id": "s3",
+   "nome": "O marco histórico",
+   "t0": 7.661,
+   "t1": 20.3
+  },
+  {
+   "id": "s4",
+   "nome": "A mensagem que leva um dia",
+   "t0": 20.3,
+   "t1": 30.943
+  },
+  {
+   "id": "s5",
+   "nome": "O problema de comunicação",
+   "t0": 30.943,
+   "t1": 44.314
+  },
+  {
+   "id": "s6",
+   "nome": "Uma jornada de quase cinquenta anos",
+   "t0": 44.314,
+   "t1": 51.705
+  },
+  {
+   "id": "s7",
+   "nome": "A imensidão do universo",
+   "t0": 51.705,
+   "t1": 66.0
+  }
+ ],
+ "efeitos_sonoros": [
+  {
+   "efeito": "teclas",
+   "marco": "digitar",
+   "evento_s": -0.012,
+   "na_grade_s": -0.012,
+   "desvio_ms": 0.0,
+   "descricao": "toques de teclado suaves enquanto a mensagem é escrita"
+  },
+  {
+   "efeito": "envio",
+   "marco": "enviar",
+   "evento_s": 1.023,
+   "na_grade_s": 1.023,
+   "desvio_ms": 0.0,
+   "descricao": "envio: varredura curta ascendente + bip"
+  },
+  {
+   "efeito": "relogio",
+   "marco": "relogio",
+   "evento_s": 1.614,
+   "na_grade_s": 1.614,
+   "desvio_ms": 0.0,
+   "descricao": "relógio digital: tiques que aceleram até 48 h"
+  },
+  {
+   "efeito": "impacto_48",
+   "marco": "h48",
+   "evento_s": 2.94,
+   "na_grade_s": 2.944,
+   "desvio_ms": 4.0,
+   "descricao": "impacto grave discreto na revelação de 48 HORAS"
+  },
+  {
+   "efeito": "colapso",
+   "marco": "colapso",
+   "evento_s": 4.569,
+   "na_grade_s": 4.569,
+   "desvio_ms": 0.0,
+   "descricao": "sucção reversa: o número vira um ponto de luz"
+  },
+  {
+   "efeito": "ponto",
+   "marco": "ponto",
+   "evento_s": 5.013,
+   "na_grade_s": 5.013,
+   "desvio_ms": 0.0,
+   "descricao": "nota de sino curta: ponto luminoso"
+  },
+  {
+   "efeito": "recuo_camera",
+   "marco": "afasta",
+   "evento_s": 5.456,
+   "na_grade_s": 5.456,
+   "desvio_ms": 0.0,
+   "descricao": "subida tonal grave: a câmera se afasta da Terra"
+  },
+  {
+   "efeito": "voyager",
+   "marco": "voyager",
+   "evento_s": 7.701,
+   "na_grade_s": 7.673,
+   "desvio_ms": -28.0,
+   "descricao": "revelação: sub-grave + acorde em sino"
+  },
+  {
+   "efeito": "data_18",
+   "marco": "data_18",
+   "evento_s": 8.861,
+   "na_grade_s": 8.855,
+   "desvio_ms": -6.0,
+   "descricao": "impacto tipográfico"
+  },
+  {
+   "efeito": "data_nov",
+   "marco": "data_nov",
+   "evento_s": 9.341,
+   "na_grade_s": 9.299,
+   "desvio_ms": -42.0,
+   "descricao": "impacto tipográfico leve"
+  },
+  {
+   "efeito": "data_2026",
+   "marco": "data_2026",
+   "evento_s": 9.881,
+   "na_grade_s": 9.89,
+   "desvio_ms": 9.0,
+   "descricao": "impacto tipográfico"
+  },
+  {
+   "efeito": "marco",
+   "marco": "marco",
+   "evento_s": 11.663,
+   "na_grade_s": 11.663,
+   "desvio_ms": 0.0,
+   "descricao": "tom ascendente: o sol varre a sonda"
+  },
+  {
+   "efeito": "recuo_escala",
+   "marco": "recuo",
+   "evento_s": 12.581,
+   "na_grade_s": 12.55,
+   "desvio_ms": -31.0,
+   "descricao": "subida longa: recuo até a escala do Sistema Solar"
+  },
+  {
+   "efeito": "km",
+   "marco": "km",
+   "evento_s": 18.202,
+   "na_grade_s": 18.166,
+   "desvio_ms": -36.0,
+   "descricao": "revelação da distância (ponto alto da trilha)"
+  },
+  {
+   "efeito": "dialuz",
+   "marco": "dialuz",
+   "evento_s": 20.087,
+   "na_grade_s": 20.087,
+   "desvio_ms": 0.0,
+   "descricao": "transformação em 1 DIA-LUZ"
+  },
+  {
+   "efeito": "sinal_ida",
+   "marco": "sinal_sai",
+   "evento_s": 22.156,
+   "na_grade_s": 22.156,
+   "desvio_ms": 0.0,
+   "descricao": "pulsos de rádio estilizados acompanhando o contador"
+  },
+  {
+   "efeito": "chegada",
+   "marco": "chega",
+   "evento_s": 24.802,
+   "na_grade_s": 24.816,
+   "desvio_ms": 14.0,
+   "descricao": "chegada do sinal"
+  },
+  {
+   "efeito": "sinal_volta",
+   "marco": "resposta_sai",
+   "evento_s": 27.624,
+   "na_grade_s": 27.624,
+   "desvio_ms": 0.0,
+   "descricao": "resposta hipotética"
+  },
+  {
+   "efeito": "chegada_volta",
+   "marco": "volta",
+   "evento_s": 30.083,
+   "na_grade_s": 30.136,
+   "desvio_ms": 53.0,
+   "descricao": "chegada da resposta: 48 h"
+  },
+  {
+   "efeito": "clima",
+   "marco": "clima",
+   "evento_s": 31.043,
+   "na_grade_s": 31.023,
+   "desvio_ms": -20.0,
+   "descricao": "transição para o problema: a trilha recua"
+  },
+  {
+   "efeito": "data_14",
+   "marco": "data_14",
+   "evento_s": 34.863,
+   "na_grade_s": 34.865,
+   "desvio_ms": 2.0,
+   "descricao": "impacto tipográfico abafado"
+  },
+  {
+   "efeito": "dados_off",
+   "marco": "dados",
+   "evento_s": 38.084,
+   "na_grade_s": 38.116,
+   "desvio_ms": 32.0,
+   "descricao": "canal de dados se apaga (bip grave)"
+  },
+  {
+   "efeito": "portadora",
+   "marco": "sinal_ok",
+   "evento_s": 40.084,
+   "na_grade_s": 40.037,
+   "desvio_ms": -47.0,
+   "descricao": "portadora: tom contínuo estilizado"
+  },
+  {
+   "efeito": "ano_1977",
+   "marco": "ano_1977",
+   "evento_s": 45.024,
+   "na_grade_s": 45.062,
+   "desvio_ms": 38.0,
+   "descricao": "impacto: início da linha do tempo"
+  },
+  {
+   "efeito": "jupiter",
+   "marco": "jupiter",
+   "evento_s": 47.864,
+   "na_grade_s": 47.87,
+   "desvio_ms": 6.0,
+   "descricao": "passagem"
+  },
+  {
+   "efeito": "saturno",
+   "marco": "saturno",
+   "evento_s": 48.345,
+   "na_grade_s": 48.313,
+   "desvio_ms": -32.0,
+   "descricao": "passagem"
+  },
+  {
+   "efeito": "ano_2012",
+   "marco": "ano_2012",
+   "evento_s": 49.205,
+   "na_grade_s": 49.2,
+   "desvio_ms": -5.0,
+   "descricao": "passagem: espaço interestelar"
+  },
+  {
+   "efeito": "marca",
+   "marco": "marca",
+   "evento_s": 61.926,
+   "na_grade_s": 61.909,
+   "desvio_ms": -17.0,
+   "descricao": "assinatura do canal"
+  }
+ ],
+ "marcos": {
+  "digitar": -0.012,
+  "enviar": 1.023,
+  "relogio": 1.614,
+  "conta_ini": 1.86,
+  "h48": 2.94,
+  "push48": 3.36,
+  "colapso": 4.569,
+  "ponto": 5.013,
+  "terra": 5.2,
+  "afasta": 5.456,
+  "lua": 5.901,
+  "voyager": 7.701,
+  "data_18": 8.861,
+  "data_nov": 9.341,
+  "data_2026": 9.881,
+  "marco": 11.663,
+  "luz_sonda": 11.041,
+  "recuo": 12.581,
+  "regua": 13.101,
+  "dialuz_fala": 15.801,
+  "terra_fala": 16.942,
+  "km": 18.202,
+  "km_fim": 20.042,
+  "dialuz": 20.087,
+  "luz": 21.902,
+  "sinal_sai": 22.156,
+  "h24_fala": 23.802,
+  "chega": 24.802,
+  "resposta": 26.322,
+  "resposta_sai": 27.624,
+  "h24b_fala": 28.463,
+  "volta": 30.083,
+  "clima": 31.043,
+  "nasa": 33.983,
+  "data_14": 34.863,
+  "transmitir": 36.783,
+  "dados": 38.084,
+  "sinal_ok": 40.084,
+  "engenheiros": 42.364,
+  "ano_1977": 45.024,
+  "jupiter": 47.864,
+  "saturno": 48.345,
+  "ano_2012": 49.205,
+  "interestelar": 50.885,
+  "cinquenta": 52.145,
+  "maquina": 54.245,
+  "imensidao": 55.785,
+  "luz_final": 59.066,
+  "dia_inteiro": 59.966,
+  "marca": 61.926,
+  "slogan": 63.206,
+  "fim_fala": 65.166
+ },
+ "palavras": [
+  {
+   "p": "Imagine",
+   "ini": 0.06,
+   "fim": 0.5,
+   "conf": 0.98
+  },
+  {
+   "p": "enviar",
+   "ini": 0.56,
+   "fim": 0.84,
+   "conf": 1.0
+  },
+  {
+   "p": "uma",
+   "ini": 0.88,
+   "fim": 0.98,
+   "conf": 0.99
+  },
+  {
+   "p": "mensagem",
+   "ini": 1.02,
+   "fim": 1.56,
+   "conf": 0.99
+  },
+  {
+   "p": "e",
+   "ini": 1.86,
+   "fim": 1.88,
+   "conf": 1.0
+  },
+  {
+   "p": "precisar",
+   "ini": 1.98,
+   "fim": 2.38,
+   "conf": 1.0
+  },
+  {
+   "p": "esperar",
+   "ini": 2.44,
+   "fim": 2.76,
+   "conf": 1.0
+  },
+  {
+   "p": "dois",
+   "ini": 2.94,
+   "fim": 3.24,
+   "conf": 1.0
+  },
+  {
+   "p": "dias",
+   "ini": 3.36,
+   "fim": 3.64,
+   "conf": 1.0
+  },
+  {
+   "p": "por",
+   "ini": 3.68,
+   "fim": 3.78,
+   "conf": 1.0
+  },
+  {
+   "p": "uma",
+   "ini": 3.82,
+   "fim": 3.92,
+   "conf": 0.94
+  },
+  {
+   "p": "resposta.",
+   "ini": 3.96,
+   "fim": 4.4,
+   "conf": 1.0
+  },
+  {
+   "p": "Não",
+   "ini": 5.2,
+   "fim": 5.32,
+   "conf": 0.97
+  },
+  {
+   "p": "é",
+   "ini": 5.401,
+   "fim": 5.421,
+   "conf": 1.0
+  },
+  {
+   "p": "ficção",
+   "ini": 5.521,
+   "fim": 5.821,
+   "conf": 0.88
+  },
+  {
+   "p": "científica.",
+   "ini": 5.901,
+   "fim": 6.401,
+   "conf": 1.0
+  },
+  {
+   "p": "É",
+   "ini": 6.721,
+   "fim": 6.741,
+   "conf": 0.0
+  },
+  {
+   "p": "o",
+   "ini": 6.801,
+   "fim": 6.821,
+   "conf": 0.94
+  },
+  {
+   "p": "que",
+   "ini": 6.841,
+   "fim": 6.921,
+   "conf": 1.0
+  },
+  {
+   "p": "acontece",
+   "ini": 6.941,
+   "fim": 7.421,
+   "conf": 1.0
+  },
+  {
+   "p": "com",
+   "ini": 7.481,
+   "fim": 7.561,
+   "conf": 1.0
+  },
+  {
+   "p": "a",
+   "ini": 7.621,
+   "fim": 7.641,
+   "conf": 0.96
+  },
+  {
+   "p": "Voyager",
+   "ini": 7.701,
+   "fim": 8.061,
+   "conf": 0.75
+  },
+  {
+   "p": "1.",
+   "ini": 8.101,
+   "fim": 8.181,
+   "conf": 1.0
+  },
+  {
+   "p": "Em",
+   "ini": 8.741,
+   "fim": 8.821,
+   "conf": 1.0
+  },
+  {
+   "p": "18",
+   "ini": 8.861,
+   "fim": 9.201,
+   "conf": 0.93
+  },
+  {
+   "p": "de",
+   "ini": 9.241,
+   "fim": 9.301,
+   "conf": 1.0
+  },
+  {
+   "p": "novembro",
+   "ini": 9.341,
+   "fim": 9.741,
+   "conf": 0.99
+  },
+  {
+   "p": "de",
+   "ini": 9.781,
+   "fim": 9.841,
+   "conf": 0.96
+  },
+  {
+   "p": "2026,",
+   "ini": 9.881,
+   "fim": 10.681,
+   "conf": 0.89
+  },
+  {
+   "p": "ela",
+   "ini": 10.901,
+   "fim": 11.001,
+   "conf": 1.0
+  },
+  {
+   "p": "alcançou",
+   "ini": 11.041,
+   "fim": 11.481,
+   "conf": 1.0
+  },
+  {
+   "p": "um",
+   "ini": 11.501,
+   "fim": 11.561,
+   "conf": 0.87
+  },
+  {
+   "p": "marco",
+   "ini": 11.601,
+   "fim": 11.841,
+   "conf": 0.97
+  },
+  {
+   "p": "histórico.",
+   "ini": 11.881,
+   "fim": 12.321,
+   "conf": 0.97
+  },
+  {
+   "p": "Tornou-se",
+   "ini": 12.581,
+   "fim": 13.001,
+   "conf": 1.0
+  },
+  {
+   "p": "o",
+   "ini": 13.041,
+   "fim": 13.061,
+   "conf": 0.97
+  },
+  {
+   "p": "primeiro",
+   "ini": 13.101,
+   "fim": 13.401,
+   "conf": 1.0
+  },
+  {
+   "p": "objeto",
+   "ini": 13.421,
+   "fim": 13.821,
+   "conf": 0.98
+  },
+  {
+   "p": "construído",
+   "ini": 13.881,
+   "fim": 14.321,
+   "conf": 1.0
+  },
+  {
+   "p": "pela",
+   "ini": 14.381,
+   "fim": 14.521,
+   "conf": 1.0
+  },
+  {
+   "p": "humanidade",
+   "ini": 14.541,
+   "fim": 15.021,
+   "conf": 0.99
+  },
+  {
+   "p": "a",
+   "ini": 15.161,
+   "fim": 15.181,
+   "conf": 0.82
+  },
+  {
+   "p": "chegar",
+   "ini": 15.261,
+   "fim": 15.541,
+   "conf": 1.0
+  },
+  {
+   "p": "a",
+   "ini": 15.581,
+   "fim": 15.601,
+   "conf": 0.79
+  },
+  {
+   "p": "um",
+   "ini": 15.661,
+   "fim": 15.721,
+   "conf": 0.91
+  },
+  {
+   "p": "dia-luz",
+   "ini": 15.801,
+   "fim": 16.222,
+   "conf": 0.83
+  },
+  {
+   "p": "de",
+   "ini": 16.242,
+   "fim": 16.302,
+   "conf": 1.0
+  },
+  {
+   "p": "distância",
+   "ini": 16.342,
+   "fim": 16.782,
+   "conf": 0.98
+  },
+  {
+   "p": "da",
+   "ini": 16.802,
+   "fim": 16.862,
+   "conf": 1.0
+  },
+  {
+   "p": "Terra.",
+   "ini": 16.942,
+   "fim": 17.182,
+   "conf": 0.98
+  },
+  {
+   "p": "São",
+   "ini": 17.622,
+   "fim": 17.722,
+   "conf": 1.0
+  },
+  {
+   "p": "quase",
+   "ini": 17.802,
+   "fim": 18.082,
+   "conf": 0.99
+  },
+  {
+   "p": "26",
+   "ini": 18.202,
+   "fim": 18.822,
+   "conf": 1.0
+  },
+  {
+   "p": "bilhões",
+   "ini": 18.902,
+   "fim": 19.342,
+   "conf": 0.9
+  },
+  {
+   "p": "de",
+   "ini": 19.382,
+   "fim": 19.422,
+   "conf": 1.0
+  },
+  {
+   "p": "quilômetros.",
+   "ini": 19.482,
+   "fim": 20.042,
+   "conf": 0.91
+  },
+  {
+   "p": "Mesmo",
+   "ini": 20.442,
+   "fim": 20.702,
+   "conf": 1.0
+  },
+  {
+   "p": "viajando",
+   "ini": 20.762,
+   "fim": 21.162,
+   "conf": 1.0
+  },
+  {
+   "p": "à",
+   "ini": 21.202,
+   "fim": 21.222,
+   "conf": 0.0
+  },
+  {
+   "p": "velocidade",
+   "ini": 21.262,
+   "fim": 21.722,
+   "conf": 0.99
+  },
+  {
+   "p": "da",
+   "ini": 21.782,
+   "fim": 21.842,
+   "conf": 1.0
+  },
+  {
+   "p": "luz,",
+   "ini": 21.902,
+   "fim": 22.102,
+   "conf": 1.0
+  },
+  {
+   "p": "um",
+   "ini": 22.282,
+   "fim": 22.342,
+   "conf": 1.0
+  },
+  {
+   "p": "sinal",
+   "ini": 22.402,
+   "fim": 22.642,
+   "conf": 1.0
+  },
+  {
+   "p": "de",
+   "ini": 22.682,
+   "fim": 22.742,
+   "conf": 1.0
+  },
+  {
+   "p": "rádio",
+   "ini": 22.842,
+   "fim": 23.102,
+   "conf": 0.98
+  },
+  {
+   "p": "leva",
+   "ini": 23.142,
+   "fim": 23.322,
+   "conf": 1.0
+  },
+  {
+   "p": "cerca",
+   "ini": 23.402,
+   "fim": 23.622,
+   "conf": 0.91
+  },
+  {
+   "p": "de",
+   "ini": 23.682,
+   "fim": 23.722,
+   "conf": 1.0
+  },
+  {
+   "p": "24",
+   "ini": 23.802,
+   "fim": 24.282,
+   "conf": 0.96
+  },
+  {
+   "p": "horas",
+   "ini": 24.302,
+   "fim": 24.542,
+   "conf": 0.96
+  },
+  {
+   "p": "para",
+   "ini": 24.582,
+   "fim": 24.722,
+   "conf": 0.96
+  },
+  {
+   "p": "chegar",
+   "ini": 24.802,
+   "fim": 25.042,
+   "conf": 1.0
+  },
+  {
+   "p": "até",
+   "ini": 25.082,
+   "fim": 25.242,
+   "conf": 0.67
+  },
+  {
+   "p": "ela.",
+   "ini": 25.262,
+   "fim": 25.442,
+   "conf": 1.0
+  },
+  {
+   "p": "E",
+   "ini": 25.722,
+   "fim": 25.742,
+   "conf": 1.0
+  },
+  {
+   "p": "se",
+   "ini": 25.862,
+   "fim": 25.922,
+   "conf": 0.96
+  },
+  {
+   "p": "a",
+   "ini": 25.962,
+   "fim": 25.982,
+   "conf": 1.0
+  },
+  {
+   "p": "nave",
+   "ini": 26.022,
+   "fim": 26.262,
+   "conf": 0.95
+  },
+  {
+   "p": "respondesse",
+   "ini": 26.322,
+   "fim": 26.883,
+   "conf": 0.99
+  },
+  {
+   "p": "imediatamente,",
+   "ini": 26.943,
+   "fim": 27.583,
+   "conf": 0.99
+  },
+  {
+   "p": "seriam",
+   "ini": 27.823,
+   "fim": 28.123,
+   "conf": 1.0
+  },
+  {
+   "p": "mais",
+   "ini": 28.163,
+   "fim": 28.383,
+   "conf": 1.0
+  },
+  {
+   "p": "24",
+   "ini": 28.463,
+   "fim": 29.083,
+   "conf": 0.87
+  },
+  {
+   "p": "horas",
+   "ini": 29.123,
+   "fim": 29.403,
+   "conf": 1.0
+  },
+  {
+   "p": "para",
+   "ini": 29.443,
+   "fim": 29.563,
+   "conf": 1.0
+  },
+  {
+   "p": "a",
+   "ini": 29.583,
+   "fim": 29.603,
+   "conf": 0.0
+  },
+  {
+   "p": "resposta",
+   "ini": 29.623,
+   "fim": 30.003,
+   "conf": 0.99
+  },
+  {
+   "p": "voltar.",
+   "ini": 30.083,
+   "fim": 30.403,
+   "conf": 1.0
+  },
+  {
+   "p": "Mas,",
+   "ini": 31.043,
+   "fim": 31.303,
+   "conf": 0.99
+  },
+  {
+   "p": "justamente",
+   "ini": 31.423,
+   "fim": 31.943,
+   "conf": 0.98
+  },
+  {
+   "p": "neste",
+   "ini": 32.003,
+   "fim": 32.223,
+   "conf": 1.0
+  },
+  {
+   "p": "momento",
+   "ini": 32.263,
+   "fim": 32.543,
+   "conf": 0.99
+  },
+  {
+   "p": "histórico,",
+   "ini": 32.603,
+   "fim": 33.003,
+   "conf": 1.0
+  },
+  {
+   "p": "algo",
+   "ini": 33.263,
+   "fim": 33.423,
+   "conf": 1.0
+  },
+  {
+   "p": "preocupa",
+   "ini": 33.483,
+   "fim": 33.883,
+   "conf": 0.98
+  },
+  {
+   "p": "a",
+   "ini": 33.923,
+   "fim": 33.943,
+   "conf": 0.98
+  },
+  {
+   "p": "NASA.",
+   "ini": 33.983,
+   "fim": 34.223,
+   "conf": 0.92
+  },
+  {
+   "p": "Desde",
+   "ini": 34.563,
+   "fim": 34.803,
+   "conf": 0.99
+  },
+  {
+   "p": "14",
+   "ini": 34.863,
+   "fim": 35.263,
+   "conf": 0.83
+  },
+  {
+   "p": "de",
+   "ini": 35.303,
+   "fim": 35.363,
+   "conf": 1.0
+  },
+  {
+   "p": "novembro,",
+   "ini": 35.423,
+   "fim": 35.803,
+   "conf": 1.0
+  },
+  {
+   "p": "a",
+   "ini": 36.003,
+   "fim": 36.023,
+   "conf": 1.0
+  },
+  {
+   "p": "sonda",
+   "ini": 36.143,
+   "fim": 36.303,
+   "conf": 1.0
+  },
+  {
+   "p": "deixou",
+   "ini": 36.363,
+   "fim": 36.663,
+   "conf": 0.99
+  },
+  {
+   "p": "de",
+   "ini": 36.683,
+   "fim": 36.723,
+   "conf": 1.0
+  },
+  {
+   "p": "transmitir",
+   "ini": 36.783,
+   "fim": 37.263,
+   "conf": 0.98
+  },
+  {
+   "p": "normalmente",
+   "ini": 37.324,
+   "fim": 37.804,
+   "conf": 0.97
+  },
+  {
+   "p": "seus",
+   "ini": 37.864,
+   "fim": 38.024,
+   "conf": 1.0
+  },
+  {
+   "p": "dados",
+   "ini": 38.084,
+   "fim": 38.304,
+   "conf": 1.0
+  },
+  {
+   "p": "científicos",
+   "ini": 38.364,
+   "fim": 38.944,
+   "conf": 0.98
+  },
+  {
+   "p": "e",
+   "ini": 39.044,
+   "fim": 39.064,
+   "conf": 1.0
+  },
+  {
+   "p": "de",
+   "ini": 39.104,
+   "fim": 39.164,
+   "conf": 1.0
+  },
+  {
+   "p": "engenharia.",
+   "ini": 39.204,
+   "fim": 39.624,
+   "conf": 0.99
+  },
+  {
+   "p": "O",
+   "ini": 39.984,
+   "fim": 40.004,
+   "conf": 1.0
+  },
+  {
+   "p": "sinal",
+   "ini": 40.084,
+   "fim": 40.324,
+   "conf": 1.0
+  },
+  {
+   "p": "de",
+   "ini": 40.364,
+   "fim": 40.424,
+   "conf": 1.0
+  },
+  {
+   "p": "rádio",
+   "ini": 40.524,
+   "fim": 40.804,
+   "conf": 0.88
+  },
+  {
+   "p": "ainda",
+   "ini": 40.904,
+   "fim": 41.104,
+   "conf": 1.0
+  },
+  {
+   "p": "chega",
+   "ini": 41.224,
+   "fim": 41.424,
+   "conf": 0.88
+  },
+  {
+   "p": "à",
+   "ini": 41.444,
+   "fim": 41.464,
+   "conf": 0.0
+  },
+  {
+   "p": "Terra,",
+   "ini": 41.544,
+   "fim": 41.744,
+   "conf": 0.99
+  },
+  {
+   "p": "mas",
+   "ini": 42.004,
+   "fim": 42.184,
+   "conf": 0.98
+  },
+  {
+   "p": "os",
+   "ini": 42.224,
+   "fim": 42.304,
+   "conf": 0.99
+  },
+  {
+   "p": "engenheiros",
+   "ini": 42.364,
+   "fim": 42.864,
+   "conf": 1.0
+  },
+  {
+   "p": "investigam",
+   "ini": 42.944,
+   "fim": 43.404,
+   "conf": 1.0
+  },
+  {
+   "p": "o",
+   "ini": 43.444,
+   "fim": 43.464,
+   "conf": 0.55
+  },
+  {
+   "p": "problema.",
+   "ini": 43.504,
+   "fim": 43.824,
+   "conf": 1.0
+  },
+  {
+   "p": "Lançada",
+   "ini": 44.464,
+   "fim": 44.864,
+   "conf": 1.0
+  },
+  {
+   "p": "em",
+   "ini": 44.924,
+   "fim": 44.984,
+   "conf": 1.0
+  },
+  {
+   "p": "1977,",
+   "ini": 45.024,
+   "fim": 46.484,
+   "conf": 0.96
+  },
+  {
+   "p": "a",
+   "ini": 46.664,
+   "fim": 46.704,
+   "conf": 0.94
+  },
+  {
+   "p": "Voyager",
+   "ini": 46.764,
+   "fim": 47.144,
+   "conf": 0.71
+  },
+  {
+   "p": "1",
+   "ini": 47.184,
+   "fim": 47.264,
+   "conf": 1.0
+  },
+  {
+   "p": "passou",
+   "ini": 47.324,
+   "fim": 47.604,
+   "conf": 1.0
+  },
+  {
+   "p": "por",
+   "ini": 47.664,
+   "fim": 47.764,
+   "conf": 1.0
+  },
+  {
+   "p": "Júpiter,",
+   "ini": 47.864,
+   "fim": 48.185,
+   "conf": 0.9
+  },
+  {
+   "p": "Saturno,",
+   "ini": 48.345,
+   "fim": 48.785,
+   "conf": 1.0
+  },
+  {
+   "p": "e",
+   "ini": 49.005,
+   "fim": 49.025,
+   "conf": 1.0
+  },
+  {
+   "p": "em",
+   "ini": 49.085,
+   "fim": 49.165,
+   "conf": 0.93
+  },
+  {
+   "p": "2012",
+   "ini": 49.205,
+   "fim": 49.845,
+   "conf": 0.91
+  },
+  {
+   "p": "entrou",
+   "ini": 50.025,
+   "fim": 50.285,
+   "conf": 0.99
+  },
+  {
+   "p": "no",
+   "ini": 50.325,
+   "fim": 50.385,
+   "conf": 1.0
+  },
+  {
+   "p": "espaço",
+   "ini": 50.425,
+   "fim": 50.805,
+   "conf": 0.99
+  },
+  {
+   "p": "interestelar.",
+   "ini": 50.885,
+   "fim": 51.465,
+   "conf": 1.0
+  },
+  {
+   "p": "Quase",
+   "ini": 51.805,
+   "fim": 52.065,
+   "conf": 0.95
+  },
+  {
+   "p": "50",
+   "ini": 52.145,
+   "fim": 52.565,
+   "conf": 0.99
+  },
+  {
+   "p": "anos",
+   "ini": 52.685,
+   "fim": 52.845,
+   "conf": 1.0
+  },
+  {
+   "p": "depois,",
+   "ini": 52.885,
+   "fim": 53.305,
+   "conf": 1.0
+  },
+  {
+   "p": "essa",
+   "ini": 53.625,
+   "fim": 53.805,
+   "conf": 0.96
+  },
+  {
+   "p": "pequena",
+   "ini": 53.865,
+   "fim": 54.165,
+   "conf": 1.0
+  },
+  {
+   "p": "máquina",
+   "ini": 54.245,
+   "fim": 54.545,
+   "conf": 1.0
+  },
+  {
+   "p": "continua",
+   "ini": 54.685,
+   "fim": 55.085,
+   "conf": 1.0
+  },
+  {
+   "p": "atravessando",
+   "ini": 55.125,
+   "fim": 55.685,
+   "conf": 1.0
+  },
+  {
+   "p": "a",
+   "ini": 55.725,
+   "fim": 55.745,
+   "conf": 1.0
+  },
+  {
+   "p": "imensidão",
+   "ini": 55.785,
+   "fim": 56.225,
+   "conf": 0.99
+  },
+  {
+   "p": "do",
+   "ini": 56.285,
+   "fim": 56.345,
+   "conf": 1.0
+  },
+  {
+   "p": "espaço,",
+   "ini": 56.385,
+   "fim": 56.765,
+   "conf": 1.0
+  },
+  {
+   "p": "tão",
+   "ini": 57.125,
+   "fim": 57.245,
+   "conf": 0.99
+  },
+  {
+   "p": "distante",
+   "ini": 57.325,
+   "fim": 57.805,
+   "conf": 0.93
+  },
+  {
+   "p": "que",
+   "ini": 58.325,
+   "fim": 58.405,
+   "conf": 1.0
+  },
+  {
+   "p": "até",
+   "ini": 58.425,
+   "fim": 58.565,
+   "conf": 0.96
+  },
+  {
+   "p": "a",
+   "ini": 58.625,
+   "fim": 58.646,
+   "conf": 1.0
+  },
+  {
+   "p": "própria",
+   "ini": 58.726,
+   "fim": 59.006,
+   "conf": 1.0
+  },
+  {
+   "p": "luz",
+   "ini": 59.066,
+   "fim": 59.246,
+   "conf": 1.0
+  },
+  {
+   "p": "precisa",
+   "ini": 59.306,
+   "fim": 59.646,
+   "conf": 1.0
+  },
+  {
+   "p": "de",
+   "ini": 59.706,
+   "fim": 59.766,
+   "conf": 1.0
+  },
+  {
+   "p": "um",
+   "ini": 59.826,
+   "fim": 59.886,
+   "conf": 0.88
+  },
+  {
+   "p": "dia",
+   "ini": 59.966,
+   "fim": 60.086,
+   "conf": 0.97
+  },
+  {
+   "p": "inteiro",
+   "ini": 60.146,
+   "fim": 60.526,
+   "conf": 0.98
+  },
+  {
+   "p": "para",
+   "ini": 60.586,
+   "fim": 60.726,
+   "conf": 1.0
+  },
+  {
+   "p": "alcançá-la.",
+   "ini": 60.766,
+   "fim": 61.286,
+   "conf": 0.9
+  },
+  {
+   "p": "Além",
+   "ini": 61.926,
+   "fim": 62.126,
+   "conf": 1.0
+  },
+  {
+   "p": "do",
+   "ini": 62.166,
+   "fim": 62.226,
+   "conf": 1.0
+  },
+  {
+   "p": "visível,",
+   "ini": 62.286,
+   "fim": 62.686,
+   "conf": 1.0
+  },
+  {
+   "p": "o",
+   "ini": 63.086,
+   "fim": 63.106,
+   "conf": 1.0
+  },
+  {
+   "p": "extraordinário",
+   "ini": 63.206,
+   "fim": 63.946,
+   "conf": 0.94
+  },
+  {
+   "p": "está",
+   "ini": 64.286,
+   "fim": 64.486,
+   "conf": 1.0
+  },
+  {
+   "p": "nos",
+   "ini": 64.566,
+   "fim": 64.666,
+   "conf": 1.0
+  },
+  {
+   "p": "detalhes.",
+   "ini": 64.706,
+   "fim": 65.166,
+   "conf": 1.0
+  }
+ ]
+}
