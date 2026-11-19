@@ -2,7 +2,7 @@
 import * as THREE from 'three';
 import { W, H, M, COR, RGB, rgba, F, seg, lerp, clamp, eOut3, eOut5, eIn3, eInOut3, eInOutSine, mola, texto, textoFenda, largura, Ctx, palavra, mulberry32, ruido1 } from './core';
 import type { Espaco } from './espaco3d';
-import { cameraVoyager, getVoyager } from './cenas_abertura';
+import { cameraVoyager, getVoyager, desenhaData } from './cenas_abertura';
 
 export const SPR: Record<string, HTMLCanvasElement> = {};
 const img = (c: Ctx, s: HTMLCanvasElement, x: number, y: number, larg: number, a = 1) => { if (a <= 0) return; c.globalAlpha = a; c.drawImage(s, x - larg / 2, y - larg / 2, larg, larg); c.globalAlpha = 1; };
@@ -66,6 +66,7 @@ export function cenaEscalaSinal(c: Ctx, e: Espaco, t: number) {
   c.drawImage(e.canvas, 0, 0);
   if (kr > 0.55 && t < 20.7) { const k = seg(kr, 0.55, 0.9) * (1 - seg(t, 20.3, 20.6)); c.fillStyle = rgba(RGB.ciano, k); c.beginPath(); c.arc(XL, YT, 9, 0, Math.PI * 2); c.fill(); }
 
+  if (t < M.recuo + 0.2) desenhaData(c, t);            // a data termina de sair pelo alto
   // régua (escurece na revelação da distância e sai na cena do sinal)
   const aR = (1 - 0.8 * eInOut3(seg(t, M.km - 0.55, M.km - 0.1))) * (1 - seg(t, 20.3, 20.65));
   c.save(); c.translate(-90 * eInOut3(seg(t, M.km - 0.55, M.km - 0.1)), 0); regua(c, t, aR); c.restore();

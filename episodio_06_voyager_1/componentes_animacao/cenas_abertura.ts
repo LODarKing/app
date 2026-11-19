@@ -188,9 +188,13 @@ export function cena3(c: Ctx, e: Espaco, t: number) {
   const cam = e.camera.position, ocl = Math.hypot(cam.x, cam.y) < 1.83 && cam.z < 0;
   const kSol = ocl ? 0 : seg(Math.hypot(cam.x, cam.y), 1.83, 2.6);
   if (kSol > 0 && ps.frente) estrelaSol(c, ps.x, ps.y, kSol);
+  desenhaData(c, t);
+}
+/** data cinética + régua do marco (sai pelo alto no recuo; também chamada pela cena seguinte até terminar de sair) */
+export function desenhaData(c: Ctx, t: number) {
   // data em tipografia cinética (cada parte no tempo da palavra)
   const sai = eIn3(seg(t, M.recuo - 0.25, M.recuo + 0.15));
-  c.save(); c.translate(0, -sai * 520);
+  c.save(); c.translate(0, -sai * 1000);
   textoFenda(c, '18', 540, 470, F.tituloX(320, 900), COR.branco, seg(t, M.data_18 - 0.03, M.data_18 + 0.22), { alt: 270 });
   textoFenda(c, 'NOVEMBRO', 540, 600, F.tituloX(88, 800), COR.branco, seg(t, M.data_nov - 0.03, M.data_nov + 0.22), { esp: 16, alt: 100 });
   textoFenda(c, '2026', 540, 790, F.tituloX(190, 900), COR.amarelo, seg(t, M.data_2026 - 0.03, M.data_2026 + 0.22), { alt: 170 });
