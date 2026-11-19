@@ -4,7 +4,7 @@ import { DURATION, HEIGHT, WIDTH } from '../config/timeline';
 import { EASE, mulberry32, prog } from '../lib/motion';
 
 /**
- * Fundo: petróleo chapado, três camadas de linhas finas e formas geométricas
+ * Fundo: vinho chapado, três camadas de linhas finas e formas geométricas
  * que derivam devagar em velocidades diferentes (profundidade), e grão editorial.
  * Nada aqui disputa atenção com o título: opacidades entre 5 % e 11 %.
  */
@@ -26,7 +26,7 @@ export const Fundo: React.FC<{ frame: number; x0: number }> = ({ frame, x0 }) =>
   const gy = 438 - 70 * t;
   const pontos: React.ReactNode[] = [];
   for (let row = 0; row < 3; row++) {
-    for (let col = 0; col < 9; col++) {
+    for (let col = 0; col < 6; col++) {
       // os pontos acendem da esquerda para a direita na abertura
       const k = prog(frame, -4 + col * 1.1 + row * 0.6, 3 + col * 1.1 + row * 0.6, EASE.expoOut);
       const s = 5 * k;
@@ -46,7 +46,7 @@ export const Fundo: React.FC<{ frame: number; x0: number }> = ({ frame, x0 }) =>
 
   return (
     <svg width={WIDTH} height={HEIGHT} style={{ position: 'absolute', inset: 0 }}>
-      <rect width={WIDTH} height={HEIGHT} fill={COLORS.petroleo} />
+      <rect width={WIDTH} height={HEIGHT} fill={COLORS.fundo} />
       <g transform={`rotate(${-40 + 5 * t} ${cx} ${cy})`}>
         <circle
           cx={cx}

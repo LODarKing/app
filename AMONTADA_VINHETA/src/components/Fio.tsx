@@ -7,14 +7,13 @@ import type { Layout } from '../lib/layout';
 import { EASE, lerp, prog, SPRINGS } from '../lib/motion';
 
 /**
- * O fio dourado — a linha que costura a vinheta inteira:
+ * O fio rosa — a linha que costura a vinheta inteira:
  * 1) nasce como os três pontos da reticência (um por acerto),
  * 2) os pontos se esticam e viram uma linha que atravessa a tela (revela o título),
- * 3) sobe e vira a régua que acompanha o “em”,
- * 4) na assinatura, um marcador coral corre por ele: “enquanto isso”, o tempo passa.
+ * 3) sobe e vira a régua que acompanha o “em”.
  */
 export const Fio: React.FC<{ frame: number; lay: Layout }> = ({ frame, lay }) => {
-  const esc = LAYOUT.escalaPontosAbertura * LAYOUT.tamanhoDourado;
+  const esc = LAYOUT.escalaPontosAbertura * LAYOUT.tamanhoCidade;
   const p = METRICS.ponto;
   const w = p.w * esc;
   const h = p.h * esc;
@@ -48,13 +47,6 @@ export const Fio: React.FC<{ frame: number; lay: Layout }> = ({ frame, lay }) =>
   const inteiro = morph >= 0.8;
   const fusao = morph < 1;
 
-  // marcador coral da assinatura
-  const m = prog(frame, T.marcador[0], T.marcador[1], EASE.sine);
-  const mEntra = spring({ frame: frame - T.marcador[0], fps: FPS, config: SPRINGS.ponto });
-  const lado = 12;
-  const mx = lerp(esquerda, direita - lado, m);
-  const mostraMarcador = frame >= T.marcador[0];
-
   return (
     <g>
       {inteiro ? (
@@ -64,10 +56,10 @@ export const Fio: React.FC<{ frame: number; lay: Layout }> = ({ frame, lay }) =>
             y={yCentro - pecas[0].alt / 2}
             width={pecas[2].x2 - pecas[0].x1}
             height={pecas[0].alt}
-            fill={COLORS.dourado}
+            fill={COLORS.rosa}
           />
         ) : (
-          <rect x={esquerda} y={yCentro - esp / 2} width={direita - esquerda} height={esp} fill={COLORS.dourado} />
+          <rect x={esquerda} y={yCentro - esp / 2} width={direita - esquerda} height={esp} fill={COLORS.rosa} />
         )
       ) : (
         pecas.map((pc, i) =>
@@ -78,20 +70,11 @@ export const Fio: React.FC<{ frame: number; lay: Layout }> = ({ frame, lay }) =>
               y={yCentro - pc.alt / 2}
               width={Math.max(0, pc.x2 - pc.x1)}
               height={Math.max(0, pc.alt)}
-              fill={COLORS.dourado}
+              fill={COLORS.rosa}
             />
           ) : null,
         )
       )}
-      {mostraMarcador ? (
-        <rect
-          x={mx + (lado - lado * mEntra) / 2}
-          y={yCentro - (lado * mEntra) / 2}
-          width={lado * mEntra}
-          height={lado * mEntra}
-          fill={COLORS.coral}
-        />
-      ) : null}
     </g>
   );
 };

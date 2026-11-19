@@ -14,7 +14,7 @@ Ideia musical (120 bpm, 3,5 s):
   • Pulso discreto: bumbo macio nos tempos, chimbal curto em semicolcheias, estalo nos tempos 2 e 4,
     baixo em colcheias “respirando” com o bumbo.
   • Efeitos: whoosh na 1ª revelação, impacto sutil em “Enquanto Isso”, deslize lateral e
-    “zíper” na faixa de “Amontada…”, acento de encerramento.
+    “zíper” na faixa de “Amontada…”, dois traços de batom e um beijinho, acento de encerramento.
 
 Todo ruído vem do gerador mulberry32 com semente fixa: o arquivo sai idêntico a cada execução.
 """
@@ -278,7 +278,7 @@ def compor() -> tuple[np.ndarray, dict]:
     pad[:, 1] = svf(pad[:, 1], corte, 0.9)
     # “respiração” com o bumbo (sidechain) a partir do 1º tempo
     duck = np.ones(N)
-    tempos_bumbo = [CUE["enquanto"], CUE["sobe"], CUE["bloco"], CUE["assinatura"], 2.5, CUE["resolucao"]]
+    tempos_bumbo = [CUE["enquanto"], CUE["sobe"], CUE["bloco"], CUE["batom1"], CUE["beijo"], CUE["resolucao"]]
     for tb in tempos_bumbo:
         i = int(tb * SR)
         m = min(N - i, int(0.3 * SR))
@@ -316,7 +316,7 @@ def compor() -> tuple[np.ndarray, dict]:
         tt = CUE["sobe"] + k * st
 
     # — Estalo nos tempos 2 e 4 —
-    for tb in (CUE["sobe"], CUE["assinatura"]):
+    for tb in (CUE["sobe"], CUE["batom1"]):
         e = estalo(int(tb * 1000))
         poe(musica, e, tb, pan=-0.1, ganho=0.30)
         poe(envio, e, tb, ganho=0.22)
@@ -326,7 +326,7 @@ def compor() -> tuple[np.ndarray, dict]:
         (CUE["enquanto"], "F#2", 0.5, 1.6),
         (CUE["sobe"], "F#2", 0.25, 1.0), (CUE["sobe"] + 0.25, "F#2", 0.25, 0.8),
         (CUE["bloco"], "D2", 0.25, 1.4), (CUE["bloco"] + 0.25, "D2", 0.25, 0.8),
-        (CUE["assinatura"], "D2", 0.25, 1.0), (CUE["assinatura"] + 0.25, "D2", 0.25, 0.8),
+        (CUE["batom1"], "D2", 0.25, 1.0), (CUE["batom1"] + 0.25, "D2", 0.25, 0.8),
         (2.5, "E2", 0.25, 1.0), (2.75, "E2", 0.25, 0.8),
         (CUE["resolucao"], "A2", 0.5, 1.6),
     ]
@@ -373,10 +373,30 @@ def compor() -> tuple[np.ndarray, dict]:
     zl = np.linspace(0.0, 0.8, len(z))
     poe(sfx, np.stack([z * np.cos((zl + 1) * math.pi / 4), z * np.sin((zl + 1) * math.pi / 4)], axis=1), CUE["revela"] - 0.08, ganho=0.42)
 
-    # marcador coral (assinatura): “tic” agudo, quase subliminar
-    n = int(0.05 * SR)
+    # batom: dois traços cerosos (lábio de cima direita→esquerda, de baixo esquerda→direita)
+    for k, (nome, fim, p0, p1) in enumerate((("batom1", "batom2", 0.55, -0.15), ("batom2", "beijo", -0.15, 0.55))):
+        d = CUE[fim] - CUE[nome] - 0.02
+        n = int(d * SR)
+        tt_ = tempo(n)
+        cera = svf(mulberry32(n, 1201 + k), 2600 + 900 * np.sin(math.pi * tt_ / d), 1.1, "bp")
+        arrasto = filtra(mulberry32(n, 1301 + k), "bp", 650, 1.5) * 0.5
+        # textura: microvariações de pressão (o batom “agarra” no lábio)
+        grao = 0.75 + 0.25 * np.abs(filtra(mulberry32(n, 1401 + k), "lp", 35)) * 6
+        env = np.sin(math.pi * np.clip(tt_ / d, 0, 1)) ** 0.6 * np.clip(grao, 0, 1.4)
+        s = (cera + arrasto) * env * fade(n, 0.006, 0.02)
+        pan = np.linspace(p0, p1, n)
+        st = np.stack([s * np.cos((pan + 1) * math.pi / 4), s * np.sin((pan + 1) * math.pi / 4)], axis=1)
+        poe(sfx, st, CUE[nome], ganho=0.34)
+        poe(envio, st, CUE[nome], ganho=0.08)
+
+    # beijo: estalo curto dos lábios + “pop” descendente, o toque de irreverência
+    n = int(0.12 * SR)
     tt_ = tempo(n)
-    poe(sfx, np.sin(2 * math.pi * 3150 * tt_) * np.exp(-tt_ / 0.008), CUE["assinatura"], pan=-0.5, ganho=0.10)
+    estalo_labio = filtra(mulberry32(n, 1501), "bp", 1400, 1.3) * np.exp(-tt_ / 0.004)
+    pop = np.sin(2 * math.pi * np.cumsum(420 + 900 * np.exp(-tt_ / 0.012)) / SR) * env_exp(n, 0.001, 0.028)
+    beijo = estalo_labio * 0.9 + pop * 0.7
+    poe(sfx, beijo, CUE["beijo"], pan=0.0, ganho=0.36)
+    poe(envio, beijo, CUE["beijo"], ganho=0.18)
 
     # saída: whoosh para a cortina + acento de encerramento
     d = 0.32

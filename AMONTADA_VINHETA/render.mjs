@@ -140,11 +140,12 @@ async function principal() {
   });
 
   log(`Capa (quadro ${timeline.quadroCapa})…`);
+  const propsCapa = { modo: 'completo', comAudio: false, capa: true };
   await renderStill({
     ...common,
-    composition: c,
+    composition: await comp('Vinheta', propsCapa),
     frame: timeline.quadroCapa,
-    inputProps: props,
+    inputProps: propsCapa,
     output: path.join(OUT, 'capa-vinheta.png'),
   });
 

@@ -16,7 +16,7 @@ export type Layout = ReturnType<typeof computeLayout>;
 /** Geometria da composição final. Chamada depois que as fontes carregaram. */
 export const computeLayout = () => {
   const L = LAYOUT;
-  const g = L.tamanhoDourado;
+  const g = L.tamanhoCidade;
   const xsCidade = glyphPositions(TXT.cidade, g);
   const larguraCidade = xsCidade[xsCidade.length - 1];
   const p = METRICS.ponto;
@@ -49,6 +49,6 @@ export const computeLayout = () => {
     /** centro vertical do fio na cena 2 (logo abaixo de “Isso”) */
     yFioCena2: L.base2 + L.deslocCena2 + 36,
     capBranco: METRICS.capHeight * L.tamanhoBranco,
-    capDourado: METRICS.capHeight * g,
+    capCidade: METRICS.capHeight * g,
   };
 };

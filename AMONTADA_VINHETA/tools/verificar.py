@@ -8,13 +8,14 @@ Confere:
   • loudness integrada e pico real do áudio do MP4 (filtro ebur128 do ffmpeg)
   • sincronia: cada acerto da timeline tem um ataque medido no áudio a ≤ 20 ms
                e uma mudança de imagem medida no vídeo no mesmo quadro (±1)
-  • zona segura: o texto da composição final fica dentro da área livre da interface dos Reels
+  • zona segura: título e boca da composição final ficam dentro da área livre da interface dos Reels
   • quadros vazios: nenhum quadro é só fundo antes da saída
 """
 from __future__ import annotations
 
 import json
 import math
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -29,6 +30,11 @@ FPS = TL["fps"]
 BEAT = 60 / TL["bpm"]
 CUES = {k: v * BEAT for k, v in TL["cues"].items() if k != "fim"}
 W, H = TL["width"], TL["height"]
+# cor de fundo lida da identidade (src/config/brand.ts)
+_hex = re.search(r"fundo:\s*'#([0-9A-Fa-f]{6})'", (ROOT / "src/config/brand.ts").read_text()).group(1)
+FUNDO = np.array([int(_hex[i : i + 2], 16) for i in (0, 2, 4)], dtype=np.float32)
+# acertos só de imagem (sem ataque sonoro próprio)
+SO_IMAGEM = {"linha", "contorno"}
 
 ok_geral = True
 linhas: list[str] = []
@@ -141,8 +147,8 @@ def main() -> None:
     ts, forcas = ataques(x)
     medidos = {}
     for nome, t in CUES.items():
-        if nome == "linha":
-            continue  # o “linha” é a cauda do whoosh, sem ataque próprio
+        if nome in SO_IMAGEM:
+            continue  # “linha” é a cauda do whoosh; “contorno” é só desenho
         d = np.abs(ts - t)
         i = int(d.argmin()) if len(d) else -1
         erro = float(d[i]) * 1000 if i >= 0 else 1e9
@@ -154,27 +160,31 @@ def main() -> None:
     # fração de pixels que mudaram de verdade (> 40 níveis): enxerga objetos pequenos como os pontos
     dif = (np.abs(np.diff(fr, axis=0)).max(axis=3) > 40).mean(axis=(1, 2)) * 100
     movimento = np.concatenate([[0], dif])
-    for nome in ("ponto1", "ponto2", "ponto3", "enquanto", "sobe", "em", "bloco", "revela", "fimPonto1", "fimPonto2", "fimPonto3", "resolucao"):
+    for nome in ("ponto1", "ponto2", "ponto3", "enquanto", "contorno", "sobe", "em", "bloco", "revela",
+                 "batom1", "batom2", "beijo", "fimPonto1", "fimPonto2", "fimPonto3", "resolucao"):
         q = CUES[nome] * FPS
         janela = movimento[max(0, int(math.floor(q)) - 1) : int(math.ceil(q)) + 2]
         check(janela.max() > 0.05, f"imagem: há movimento no acerto `{nome}` (quadro {q:.2f}; {janela.max():.2f} % da tela muda)")
 
     # ── composição ──
     linhas.append("\n### Composição\n")
-    fundo = np.array([0x15, 0x2A, 0x31], dtype=np.float32)
+    fundo = FUNDO
     for q in range(0, 88):
         f = fr[q]
         conteudo = (np.abs(f - fundo).max(axis=2) > 60).mean()
         if q >= 4 and conteudo < 0.0005:
             check(False, f"quadro {q} vazio (só fundo)")
     check(True, "nenhum quadro vazio entre a 1ª batida visual e a saída")
-    final = quadros_de(mudo, W, H)[70]
+    # composição final completa (capa: boca pintada, sem o batom em movimento)
+    r = subprocess.run(["ffmpeg", "-v", "error", "-i", str(OUT / "capa-vinheta.png"), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+                       capture_output=True, check=True)
+    final = np.frombuffer(r.stdout, dtype=np.uint8).reshape(H, W, 3).astype(np.float32)
     mask = np.abs(final - fundo).max(axis=2) > 60
     ys, xs = np.where(mask)
     x0, x1, y0, y1 = xs.min(), xs.max(), ys.min(), ys.max()
-    check(x0 >= 65 and x1 <= W - 65, f"texto entre x={x0} e x={x1} (margens laterais ≥ 65 px)")
-    check(y0 >= 250 and y1 <= H - 670, f"texto entre y={y0} e y={y1} (livre dos 250 px do topo e 670 px de baixo dos Reels)")
-    check(y0 >= (H - 1350) / 2 and y1 <= (H + 1350) / 2, "texto inteiro dentro do recorte 4:5 do feed")
+    check(x0 >= 65 and x1 <= W - 65, f"título e boca entre x={x0} e x={x1} (margens laterais ≥ 65 px)")
+    check(y0 >= 250 and y1 <= H - 670, f"título e boca entre y={y0} e y={y1} (livre dos 250 px do topo e 670 px de baixo dos Reels)")
+    check(y0 >= (H - 1350) / 2 and y1 <= (H + 1350) / 2, "composição inteira dentro do recorte 4:5 do feed")
 
     # beats.json: ataques medidos
     bj = ROOT / "beats.json"

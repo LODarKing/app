@@ -19,22 +19,31 @@ export const T = {
   sobe: [cue('sobe'), cue('sobe') + 8],
   // o “em” só aparece com o bloco já no lugar (nunca encosta em “Isso”)
   emAbre: [cueExact('em') - 1.5, cueExact('em') + 6],
-  // a faixa dourada corre da esquerda e pousa no acerto “bloco” (1,5 s)
+  // a faixa rosa corre da esquerda e pousa no acerto “bloco” (1,5 s)
   blocoEntra: [cue('bloco') - 4, cue('bloco') + 2],
   // a faixa recolhe para a direita e revela “Amontada…” (acerto “revela”, 1,75 s)
   blocoSai: [cue('revela') - 4, cue('revela') + 4],
   cidadeDesliza: [cue('bloco') - 3, cue('revela') + 7],
-  // CENA 4 — assinatura: o marcador coral percorre o fio enquanto a composição respira
-  marcador: [cue('assinatura') - 1, cue('fimPonto3') + 1],
+  // CENA 2 — o contorno da boca se desenha no alto enquanto “Enquanto Isso” assenta
+  contorno: [cueExact('contorno') - 1, cueExact('contorno') + 11],
+  // CENA 4 — o batom entra, pinta o lábio de cima (direita → esquerda, acerto “batom1”),
+  // o de baixo (esquerda → direita, acerto “batom2”), sai, e a boca dá um beijo (acerto “beijo”)
+  batom: {
+    entra: [cue('batom1') - 6, cueExact('batom1')],
+    superior: [cueExact('batom1'), cueExact('batom2') - 0.5],
+    inferior: [cueExact('batom2'), cueExact('beijo') - 1],
+    sai: [cueExact('beijo') - 1, cueExact('beijo') + 5],
+  },
+  beijo: cueExact('beijo') - 1.8,
   // os três pontos da reticência pulam no motivo final
   // (o pulo atinge a altura máxima exatamente no acerto)
   fimPontos: [cueExact('fimPonto1') - 1.7, cueExact('fimPonto2') - 1.7, cueExact('fimPonto3') - 1.7],
   // CENA 5 — saída: o texto ganha impulso e a cortina varre da esquerda para a direita
   saidaTexto: [cue('fimPonto3') - 2, cue('resolucao') + 1],
   cortina: {
-    /** borda da frente (coral, logo atrás o dourado): cobre o quadro até o acerto final */
+    /** borda da frente (vermelho, logo atrás o rosa): cobre o quadro até o acerto final */
     frente: [cue('resolucao') - 6, cue('resolucao') + 1.5],
-    /** borda de trás (dourado, com o coral fechando): revela o que vem depois */
+    /** borda de trás (rosa, com o vermelho fechando): revela o que vem depois */
     tras: [cue('resolucao') + 2, cue('resolucao') + 11.5],
   },
 } as const;

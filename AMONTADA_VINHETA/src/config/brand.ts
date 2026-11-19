@@ -3,16 +3,16 @@
  * Troque cores, fontes e tamanhos aqui; todos os componentes leem deste arquivo.
  */
 export const COLORS = {
-  /** Azul-petróleo escuro: fundo. */
-  petroleo: '#152A31',
-  /** Tom um pouco mais claro do petróleo, para as linhas e formas do fundo. */
-  petroleoClaro: '#1E3A43',
-  /** Branco levemente quente: “Enquanto Isso”, “em”, linhas finas. */
-  branco: '#F5F3ED',
-  /** Amarelo-dourado: “Amontada…”, o fio, o bloco e a cortina de saída. */
-  dourado: '#F5C451',
-  /** Coral de apoio, em pequenas quantidades: o marcador do fio e a borda da cortina. */
-  coral: '#EF715B',
+  /** Vinho profundo: fundo. Puxado para o vermelho, mas escuro o bastante para o rosa e o batom saltarem. */
+  fundo: '#420D20',
+  /** Branco quente, levemente rosado: “Enquanto Isso”, “em”, contornos e linhas finas. */
+  branco: '#FBEFEE',
+  /** Rosa: cor de destaque — “Amontada…”, o fio, a faixa, o estojo do batom e a cortina. */
+  rosa: '#FF86AE',
+  /** Vermelho batom: os lábios, a ponta do batom e as bordas da cortina. */
+  vermelho: '#E3243B',
+  /** Vermelho escuro: sombra do lábio superior, linha da boca, lado do batom. */
+  vermelhoEscuro: '#A9142B',
 } as const;
 
 export const FONTS = {
@@ -52,7 +52,7 @@ export const METRICS = {
  */
 export const LAYOUT = {
   tamanhoBranco: 188,
-  tamanhoDourado: 215,
+  tamanhoCidade: 215,
   tamanhoEm: 66,
   /** Linhas de base de cada linha de texto na composição final. */
   base1: 723, // Enquanto
@@ -61,8 +61,11 @@ export const LAYOUT = {
   base4: 1187, // Amontada…
   /** Na cena 2, “Enquanto Isso” fica sozinho e centralizado: tudo 150 px abaixo. */
   deslocCena2: 150,
-  /** Espessura do fio dourado. */
+  /** Espessura do fio rosa. */
   fio: 4,
+  /** Boca: canto superior esquerdo da caixa (400 × 182 unidades) e escala. Centralizada no alto,
+   *  acima do título, com espaço à direita para o batom entrar inteiro na tela. */
+  boca: { x: 540 - 200 * 1.2, y: 292, escala: 1.2 },
   /** Pontos da abertura: 1,8× os pontos da reticência. */
   escalaPontosAbertura: 1.8,
 } as const;

@@ -7,15 +7,15 @@ import { EASE, lerp, prog, pulse } from '../lib/motion';
 import { estiloTitulo } from './Linhas';
 
 /**
- * “Amontada…”: uma faixa dourada corre da esquerda e cobre a linha (o nome aparece
- * vazado em petróleo dentro dela), depois recolhe para a direita e deixa o nome em dourado.
+ * “Amontada…”: uma faixa rosa corre da esquerda e cobre a linha (o nome aparece
+ * vazado em vinho dentro dela), depois recolhe para a direita e deixa o nome em rosa.
  * Os três pontos da reticência são retângulos idênticos aos da fonte e pulam no motivo final.
  */
 export const Cidade: React.FC<{ frame: number; lay: Layout }> = ({ frame, lay }) => {
-  const g = LAYOUT.tamanhoDourado;
+  const g = LAYOUT.tamanhoCidade;
   const pad = 24;
-  const topo = LAYOUT.base4 - lay.capDourado - pad;
-  const alt = lay.capDourado + 2 * pad;
+  const topo = LAYOUT.base4 - lay.capCidade - pad;
+  const alt = lay.capCidade + 2 * pad;
   const esq0 = lay.x0 - pad;
   const dir1 = lay.direita + pad;
 
@@ -59,19 +59,19 @@ export const Cidade: React.FC<{ frame: number; lay: Layout }> = ({ frame, lay })
 
   return (
     <g>
-      {/* nome em dourado: só onde a faixa já passou e recolheu */}
+      {/* nome em rosa: só onde a faixa já passou e recolheu */}
       <clipPath id="cidOut">
         <rect x={0} y={0} width={Math.max(0, L)} height={HEIGHT} />
       </clipPath>
-      <g clipPath="url(#cidOut)">{palavra(COLORS.dourado)}</g>
-      {/* faixa dourada + nome vazado */}
+      <g clipPath="url(#cidOut)">{palavra(COLORS.rosa)}</g>
+      {/* faixa rosa + nome vazado */}
       {R > L ? (
         <>
-          <rect x={L} y={topo} width={R - L} height={alt} fill={COLORS.dourado} />
+          <rect x={L} y={topo} width={R - L} height={alt} fill={COLORS.rosa} />
           <clipPath id="cidIn">
             <rect x={L} y={topo} width={R - L} height={alt} />
           </clipPath>
-          <g clipPath="url(#cidIn)">{palavra(COLORS.petroleo)}</g>
+          <g clipPath="url(#cidIn)">{palavra(COLORS.fundo)}</g>
         </>
       ) : null}
     </g>
