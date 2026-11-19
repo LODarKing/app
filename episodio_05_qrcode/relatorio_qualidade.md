@@ -46,6 +46,11 @@ Corrigido entre as rodadas:
 - Pedido: fundo musical um pouco alto. Mudança: `MUSICA = 0.55` (era 0,9) e abaixamento sob a voz de ~-7 para ~-9 dB em `ferramentas/trilha.py`; efeitos sonoros inalterados.
 - Resultado medido: música 16,3 LU abaixo da voz durante a fala; arquivo final ainda em -14,0 LUFS e -4,6 dBTP. Só o áudio foi trocado (vídeo copiado sem recodificar), então as validações do QR continuam valendo.
 
+## Capa
+- `capa.png` (1080×1920) e `capa_recorte4x5.png` (1080×1350), gerados pelo motor do episódio (`src/Capa.tsx`, `node render.mjs Capa`).
+- Conceito: uma lupa sobre o QR real de abertura revela a ordem real dos bits; os localizadores aparecem em ciano; `0100 0011` são os bits reais da 1ª palavra de código. Chamada: MENSAGEM SECRETA NO FINAL (o código do desafio não aparece na capa, para não estragar a surpresa).
+- Todo o conteúdo fica na faixa 4:5 central; fora dela, só o fundo com circuitos.
+
 ## Notas editoriais
 - "Código secreto digital" (narração) é uma metáfora. A cena 2 deixa claro na tela: "não é criptografia: qualquer leitor lê".
 - "Alguns QR Codes" + correção de erros: todo QR tem correção (níveis L/M/Q/H). O vídeo usa a mesma mensagem em nível H para mostrar mais módulos de correção.

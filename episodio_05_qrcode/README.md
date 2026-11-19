@@ -1,6 +1,7 @@
 # Além do Visível — EP. 05: Como um QR Code guarda informações?
 
 Status: **episódio completo renderizado** (`video_final.mp4`, 62 s) e validado (`validacao_qrcode.md`, `relatorio_qualidade.md`). Piloto aprovado: `piloto_10s.mp4`.
+Capa: `capa.png` (9:16, essencial na faixa 4:5 de y 285 a 1635) e `capa_recorte4x5.png`, geradas por `node render.mjs Capa` (`src/Capa.tsx`); cópias em `CAPAS/`.
 
 ## Como regenerar
 ```bash
