@@ -1,0 +1,29 @@
+TÍTULO (até 100 caracteres; escolha um)
+1) 48 horas para uma resposta: a Voyager 1 chegou a 1 dia-luz da Terra
+2) A Voyager 1 está tão longe que a luz leva um dia inteiro para chegar
+3) Mandar "oi" para a Voyager 1 hoje? Resposta só em 48 horas
+
+DESCRIÇÃO
+Em 18 de novembro de 2026, a Voyager 1 se tornou o primeiro objeto feito pela humanidade a chegar a um dia-luz da Terra: cerca de 25,9 bilhões de quilômetros. A essa distância, um sinal de rádio, viajando à velocidade da luz, leva 24 horas para chegar até a sonda e mais 24 horas para uma resposta voltar.
+
+Ao mesmo tempo, desde 14 de novembro a NASA não recebe os dados científicos e de engenharia da Voyager 1. O sinal de rádio (a portadora) continua chegando à Terra, e os engenheiros investigam a causa. Situação em 19/11/2026; acompanhe as atualizações oficiais nos links abaixo.
+
+Lançada em 5 de setembro de 1977, a Voyager 1 passou por Júpiter (1979) e Saturno (1980) e entrou no espaço interestelar em 2012.
+
+Fontes (NASA/JPL):
+• Nota à imprensa (19/11/2026): https://www.nasa.gov/news-release/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/
+• Blog da missão (18/11/2026): https://science.nasa.gov/blogs/voyager/2026/11/18/voyager-1-engineers-analyze-data-issue-ready-to-confirm-light-day/
+• O que é um dia-luz: https://science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/
+• Missão Voyager: https://science.nasa.gov/mission/voyager/
+• JPL — Voyager 1: https://www.jpl.nasa.gov/missions/voyager-1/
+
+Sobre a produção: narração gerada com ElevenLabs a partir do roteiro do canal. Animações, infográficos, trilha e efeitos sonoros criados em código para este episódio. Texturas da Terra (Blue Marble) e da Lua (LRO/LROC): NASA, domínio público. Os gráficos do painel de dados são uma representação didática, não registros reais da NASA; as distâncias da régua estão em escala logarítmica e a linha do tempo não está em escala.
+
+#VoyagerOne #NASA #Astronomia #Espaço #Ciência #Shorts
+
+TAGS
+Voyager 1, Voyager, NASA, JPL, dia-luz, um dia-luz, espaço interestelar, sonda espacial, velocidade da luz, sinal de rádio, 48 horas, sistema solar, heliopausa, Júpiter, Saturno, astronomia, ciência, espaço, Além do Visível, divulgação científica
+
+ANTES DE PUBLICAR
+• Conferir se a NASA publicou atualização sobre os dados da Voyager 1 (https://science.nasa.gov/blogs/voyager/). Se houver, ajustar a descrição; a narração não precisa ser alterada.
+• Na publicação, marcar a divulgação de conteúdo sintético se a política do YouTube exigir para voz gerada por IA.

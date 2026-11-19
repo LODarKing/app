@@ -164,6 +164,7 @@ function rotulo(c: Ctx, x: number, y: number, s: string, k: number, lado: number
 // ------------------------------------------------------------------ CENA 3 — a Voyager 1 e o marco
 let VOY: THREE.Group | null = null;
 export function setVoyager(v: THREE.Group) { VOY = v; }
+export const getVoyager = () => VOY!;
 const CV = 1020;                                  // centro óptico da sonda nesta cena
 export function cameraVoyager(e: Espaco, t: number) {
   // começa quase atrás da sonda (contraluz: o Sol e a Terra estão no eixo da antena, +Z) e orbita para o lado

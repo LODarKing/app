@@ -32,7 +32,7 @@ export class Espaco {
   private constructor(tt: THREE.Texture, tl: THREE.Texture) {
     this.texTerra = tt; this.texLua = tl;
     this.canvas = document.createElement('canvas'); this.canvas.width = W; this.canvas.height = H;
-    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, preserveDrawingBuffer: true, powerPreference: 'high-performance' });
+    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, alpha: true, preserveDrawingBuffer: true, powerPreference: 'high-performance' });
     this.renderer.setPixelRatio(1); this.renderer.setSize(W, H, false);
     this.renderer.outputColorSpace = THREE.SRGBColorSpace; this.renderer.toneMapping = THREE.ACESFilmicToneMapping; this.renderer.toneMappingExposure = 1.0;
     this.renderer.setClearColor(new THREE.Color('#090E1A'), 1);
@@ -166,4 +166,20 @@ export class Espaco {
 
   /** projeta um ponto 3D na tela (px) */
   proj(p: THREE.Vector3) { const v = p.clone().project(this.camera); return { x: (v.x + 1) / 2 * W, y: (1 - v.y) / 2 * H, z: v.z, frente: v.z < 1 }; }
+
+  /** renderiza objetos isolados (fundo transparente) e devolve um canvas recortado — usado uma vez, na inicialização */
+  imagem(objs: THREE.Object3D[], cam: { pos: THREE.Vector3; alvo: THREE.Vector3; fov: number }, sol: THREE.Vector3, tam: number, cfg: { terra?: boolean; apoio?: number } = {}) {
+    const vis = this.scene.children.map((o) => o.visible); this.scene.children.forEach((o) => { if (!(o as any).isLight) o.visible = false; });
+    objs.forEach((o) => { this.scene.add(o); o.visible = true; });
+    if (cfg.terra) { this.terra.visible = true; }
+    this.solDir.copy(sol).normalize(); this.terraMat.uniforms.uSol.value.copy(this.solDir); (this.terra as any).atmMat.uniforms.uSol.value.copy(this.solDir);
+    this.sol.position.copy(this.solDir).multiplyScalar(100); this.sol.intensity = 3.4; this.preenche.intensity = 0.12;
+    const c = new THREE.PerspectiveCamera(cam.fov, 1, 0.01, 1e5); c.position.copy(cam.pos); c.lookAt(cam.alvo); c.updateMatrixWorld();
+    this.apoio.intensity = cfg.apoio ?? 0.5; this.apoio.position.copy(c.position).add(new THREE.Vector3(-8, 6, 0).applyQuaternion(c.quaternion));
+    this.renderer.setSize(tam, tam, false); this.renderer.setClearColor(0x000000, 0); this.renderer.render(this.scene, c);
+    const out = document.createElement('canvas'); out.width = tam; out.height = tam; out.getContext('2d')!.drawImage(this.canvas, 0, 0, tam, tam, 0, 0, tam, tam);
+    objs.forEach((o) => this.scene.remove(o)); this.scene.children.forEach((o, i) => (o.visible = vis[i] ?? o.visible));
+    this.renderer.setSize(W, H, false); this.renderer.setClearColor(new THREE.Color('#090E1A'), 1); this.apoio.intensity = 0;
+    return out;
+  }
 }

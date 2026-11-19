@@ -16,6 +16,11 @@ SAIDA = sys.argv[2] if len(sys.argv) > 2 else 'audio/mix.wav'
 BPM, FASE = TT['bpm'], TT['fase']; B = 60 / BPM; E8 = B / 2; S16 = B / 4; S32 = B / 8; BAR = 4 * B
 N = int((FIM + 3.0) * SR)
 def g16(t): return FASE + round((t - FASE) / S16) * S16
+def so(*xs):
+    """soma sinais de durações diferentes"""
+    n = max(len(x) for x in xs); out = np.zeros(n)
+    for x in xs: out[:len(x)] += x
+    return out
 class Bus:
     def __init__(s): s.x = np.zeros((N, 2))
     def put(s, sig, t0, pan=0.0, g=1.0):
@@ -46,19 +51,57 @@ while t < M['voyager'] - 0.05:
     puls.put(pluck(hz(D3 + (12 if k % 4 == 3 else 0)), 0.35, 1100 + 1500 * (t - M['terra']) / (M['voyager'] - M['terra'])), t, 0.3 if k % 2 else -0.3, 0.42); t += E8; k += 1
 t = g16(M['afasta'])
 while t < M['voyager'] - 0.1: mus.put(bumbo(0.5, 0.5), t, 0, 0.55); t += B
-# Voyager: Si bemol maj7 em pad + sinos; baixo em colcheias; chimbal leve em semicolcheias
+# a partir da Voyager: harmonia por trechos (início, notas do pad, baixo, pulsos, chimbal) — tudo ancorado nas falas
 TV = g16(M['voyager'])
-blocos = [(TV, [46, 53, 57, 62], 34), (FASE + np.ceil((TV + 2.0 - FASE) / BAR) * BAR, [45, 53, 57, 60], 41)]
-blocos.append((blocos[1][0] + BAR, [43, 50, 53, 57, 62], 31))
-for i, (t0, notas, baixo) in enumerate(blocos):
-    t1 = blocos[i + 1][0] if i + 1 < len(blocos) else FIM + 2.5
+def barra_apos(t): return FASE + np.ceil((t - FASE) / BAR) * BAR
+SEC = [  # (início, pad, baixo, pulsos de baixo, chimbal, ganho do pad, corte)
+ (TV,                    [46, 53, 57, 62], 34, True,  True,  0.60, 1500),   # Si♭maj7 — revelação
+ (barra_apos(TV + 2.0),  [45, 53, 57, 60], 41, True,  True,  0.60, 1800),   # Fá/Lá
+ (g16(M['recuo']),       [43, 50, 53, 57, 62], 31, True, True, 0.62, 2000), # Sol m9 — recuo até a escala
+ (g16(M['regua'] + 1.2), [51, 55, 58, 62], 39, True,  True,  0.62, 2200),   # Mi♭maj7
+ (g16(16.0),             [48, 53, 55, 60], 36, True,  True,  0.66, 2400),   # Dó sus — tensão
+ (g16(M['km']),          [46, 50, 53, 58, 62, 65], 34, True, True, 0.80, 3200),  # Si♭ (ponto alto: 26 bilhões)
+ (g16(M['dialuz']),      [53, 57, 60, 67], 41, True,  False, 0.70, 2600),   # Fá(add9) — 1 dia-luz
+ (g16(M['luz']),         [52, 55, 60, 64], 40, True,  False, 0.55, 2000),   # Dó/Mi — o sinal parte
+ (g16(M['chega']),       [50, 53, 57, 62], 38, True,  False, 0.55, 2000),   # Ré m — chegou
+ (g16(M['resposta_sai']),[46, 53, 58, 62], 34, True,  False, 0.55, 1900),   # Si♭ — resposta
+ (g16(M['volta']),       [53, 57, 60, 65], 41, False, False, 0.55, 1800),   # Fá — voltou
+ (g16(M['clima']),       [38, 45, 50],     26, False, False, 0.40, 500),    # recuo: só o grave (incerteza)
+ (g16(M['ano_1977'] - 0.55), [50, 53, 57, 64], 38, False, False, 0.50, 1400),  # Ré m(add9) — a harmonia volta
+ (g16(M['jupiter']),     [46, 53, 57, 62], 34, False, False, 0.55, 1700),   # Si♭maj7
+ (g16(M['saturno']),     [45, 53, 57, 60], 41, False, False, 0.55, 1900),   # Fá/Lá
+ (g16(M['ano_2012']),    [48, 55, 60, 62, 64], 36, False, False, 0.60, 2300),  # Dó(add9) — interestelar
+ (g16(M['cinquenta'] - 0.4), [46, 53, 57, 62], 34, False, False, 0.55, 1500),  # Si♭maj7 — contemplativo
+ (g16(M['maquina']),     [45, 52, 57, 60], 33, False, False, 0.50, 1400),   # Fá/Lá
+ (g16(M['imensidao'] + 1.0), [43, 50, 53, 58], 31, False, False, 0.50, 1300),  # Sol m7
+ (g16(M['luz_final']),   [39, 51, 55, 58, 62], 27, False, False, 0.50, 1300),  # Mi♭maj7
+ (g16(M['marca']),       [41, 53, 57, 60, 67], 29, False, False, 0.60, 1500),  # Fá(add9) — resolução sob a assinatura
+]
+for i, (t0, notas, baixo, pb, hat, gp, cut) in enumerate(SEC):
     if t0 >= FIM: break
-    mus.put(pad(notas, t1 - t0 + 0.8, cut=1500 + 300 * i, g=0.6), t0 - 0.05, 0, 1.0)
+    t1 = SEC[i + 1][0] if i + 1 < len(SEC) else FIM + 3.0
+    mus.put(pad(notas, t1 - t0 + 0.9, cut=cut, g=gp), t0 - 0.05, 0, 1.0)
+    mus.put(sub(hz(baixo + (12 if baixo < 30 else 0)), min(t1 - t0 + 0.4, 6.0)), t0, 0, 0.35 if i < 11 else 0.25)
     t = t0
-    while t < min(t1, FIM + 0.5): puls.put(pluck(hz(baixo), 0.32, 900), t, 0, 0.5); puls.put(pluck(hz(baixo + 12), 0.25, 1600), t + E8, 0.2, 0.25); t += B
-t = TV + S16 * 4
-while t < FIM + 0.5: puls.put(chimbal(0.55 if (round((t - FASE) / S16) % 4) == 2 else 0.3), t, 0.35, 0.8); t += S16
-
+    while pb and t < min(t1, FIM + 0.5):
+        puls.put(pluck(hz(baixo + 12), 0.32, 900), t, 0, 0.5); puls.put(pluck(hz(baixo + 24), 0.25, 1600), t + E8, 0.2, 0.25); t += B
+    t = t0 + (S16 * 4 if i == 0 else 0)
+    while hat and t < min(t1, FIM + 0.5): puls.put(chimbal(0.55 if (round((t - FASE) / S16) % 4) == 2 else 0.3), t, 0.35, 0.8); t += S16
+# ponto alto (26 bilhões de km): bateria aberta só nesse trecho
+t = g16(M['km'])
+while t < g16(M['dialuz']) - 0.05:
+    k = int(round((t - FASE) / B)) % 4; puls.put(bumbo(0.5, 0.9), t, 0, 0.8)
+    if k in (1, 3): puls.put(baque(0.55, 220, 160), t, 0.05, 0.6)
+    t += B
+# piano: notas esparsas no recuo (cena 5) e arpejos na linha do tempo e no fim
+for t in np.arange(g16(M['clima']) + BAR * 0.5, g16(M['ano_1977'] - 0.6), BAR): mus.put(piano(hz(38), 4.0, 0.5), t, -0.1, 0.45)
+arp = [(g16(M['ano_1977'] - 0.55), [62, 65, 69, 74]), (g16(M['jupiter']), [62, 65, 69, 74]), (g16(M['saturno']), [60, 65, 69, 72]), (g16(M['ano_2012']), [62, 67, 72, 76]),
+       (g16(M['cinquenta'] - 0.4), [62, 65, 69, 74]), (g16(M['maquina']), [60, 64, 69, 72]), (g16(M['imensidao'] + 1.0), [58, 62, 65, 70]), (g16(M['luz_final']), [58, 62, 67, 70]), (g16(M['marca']), [60, 65, 69, 72, 77])]
+for i, (t0, notas) in enumerate(arp):
+    t1 = arp[i + 1][0] if i + 1 < len(arp) else FIM
+    t = t0; j = 0
+    while t < t1 - 0.05 and t < FIM:
+        mus.put(piano(hz(notas[j % len(notas)]), 2.5, 0.55 if i < 4 else 0.45), t, -0.3 + 0.15 * (j % 4), 0.5 if i < 4 else 0.42); t += E8 if i < 4 else B; j += 1
 # ---------------------------------------------------------------- 2) batidas MEDIDAS na trilha pronta
 import librosa
 mono = filt(puls.x.mean(1), 'highpass', 150)[: int(FIM * SR)]          # mede nos pulsos (ataque nítido), não nos pads
@@ -95,7 +138,7 @@ while t < M['h48'] - 0.03:
 poe('impacto 48 h', 'h48', sub_boom(2.2, 64, 30), 0, 0.9); poe('impacto 48 h (corpo)', 'h48', baque(0.8, 140, 50), 0, 0.8)
 poe('HORAS', 'push48', sino(hz(81), 2.2, 0.35, 0.6), 0.3, 1.0)
 poe_fim('sucção (colapso)', 'colapso', reverso(1.0, 1.0, 600, 7000), 0, 1.2)
-poe('ponto de luz', 'ponto', sino(hz(81), 2.5, 0.8) + sino(hz(88), 2.5, 0.4), 0.1, 1.0)
+poe('ponto de luz', 'ponto', so(sino(hz(81), 2.5, 0.8), sino(hz(88), 2.5, 0.4)), 0.1, 1.0)
 poe('Terra: abertura', 'terra', sino(hz(69), 3.0, 0.4, 0.5), -0.2, 1.0)
 poe_fim('recuo da câmera (subida)', 'voyager', subida(M['voyager'] - M['afasta'] - 0.05, 110, 520, 1.0), 0, 1.0)
 poe('revelação Voyager (sub)', 'voyager', sub_boom(3.2, 58, 29), 0, 1.0)
@@ -105,6 +148,43 @@ poe('data: novembro', 'data_nov', baque(0.5, 150, 70), 0.1, 1.0)
 poe('data: 2026', 'data_2026', baque(0.9, 120, 50), 0, 1.0); poe('data: 2026 (sino)', 'data_2026', sino(hz(86), 2.5, 0.35), 0.2, 1.0)
 for j, m in enumerate((86, 93, 98, 105)): poe('luz na sonda %d' % (j + 1), 'luz_sonda', sino(hz(m), 1.8, 0.18, 0.5), -0.4 + 0.25 * j, 1.0, desloc=j * S16)
 poe('marco (tom ascendente)', 'marco', tom_marco(1.3), 0.2, 1.0)
+# --- escala, distância e dia-luz
+poe_fim('recuo até a escala (subida)', 'regua', subida(0.9, 140, 560, 0.8), 0, 0.9)
+def eio(k): return 4 * k ** 3 if k < 0.5 else 1 - (-2 * k + 2) ** 3 / 2
+YT, YB, L0, L1 = 330, 1180, 5, np.log10(2.59e10)
+for nome, km in (('heliopausa', 1.81e10), ('Netuno', 4.5e9), ('Saturno', 1.43e9), ('Júpiter', 7.78e8), ('Sol', 1.496e8), ('Lua', 3.844e5)):
+    y = YB - (np.log10(km) - L0) / (L1 - L0) * (YB - YT); tt = np.linspace(M['regua'], M['terra_fala'], 4000)
+    yy = np.array([YT + (YB - YT) * eio((x - M['regua']) / (M['terra_fala'] - M['regua'])) for x in tt]); tc = tt[np.argmax(yy >= y - 4)]
+    M['r_' + nome] = float(tc); poe('régua: ' + nome, 'r_' + nome, sino(hz(93 - len(nome) % 5), 1.2, 0.25, 0.4), 0.3, 1.0)
+poe('régua: Terra', 'terra_fala', so(sino(hz(81), 2.5, 0.5, 0.6), baque(0.4, 160, 80)), -0.1, 1.0)
+poe_fim('distância (subida)', 'km', so(reverso(1.4, 1.0, 400, 9000), subida(1.4, 90, 360, 0.6)), 0, 1.1)
+poe('distância: impacto', 'km', so(sub_boom(3.5, 60, 28, 1.0), baque(1.0, 110, 45)), 0, 1.0)
+for j, m in enumerate((58, 65, 70, 74)): poe('distância: piano %d' % j, 'km', piano(hz(m), 4.0, 0.9), -0.2 + 0.15 * j, 0.7)
+for j, m in enumerate((77, 81, 84, 89)): poe('1 dia-luz: sino %d' % j, 'dialuz', sino(hz(m), 3.5, 0.4, 0.6), -0.3 + 0.2 * j, 1.0)
+# --- sinal de rádio: pulsos nas semicolcheias, acompanhando o contador
+def pulsos(nome, m0, m1, nota, pan):
+    t = grade(M[m0]); i = 0
+    while t < M[m1] - 0.06:
+        M['_p'] = t; poe('%s %d' % (nome, i + 1), '_p', sino(hz(nota + (i // 4) % 3), 0.35, 0.22, 0.3), pan, 1.0); t += per / 2; i += 1
+pulsos('sinal ida', 'sinal_sai', 'chega', 84, -0.2); pulsos('resposta volta', 'resposta_sai', 'volta', 81, 0.2)
+poe('chegada à Voyager', 'chega', so(sino(hz(88), 2.5, 0.5, 0.7), baque(0.4, 180, 90)), 0.1, 1.0)
+poe('chegada à Terra (48 h)', 'volta', so(sino(hz(81), 2.8, 0.55, 0.7), baque(0.6, 140, 60)), -0.1, 1.0)
+# --- problema
+poe('clima: queda', 'clima', sub_boom(3.0, 46, 30, 0.8), 0, 1.0); poe('clima: tom descendente', 'clima', subida(1.2, 330, 110, 0.35), 0, 1.0)
+poe('data 14 (abafado)', 'data_14', filt(baque(0.8, 120, 55), 'lowpass', 900), 0, 1.0)
+M['_d2'] = grade(M['dados']) + per / 2; poe('dados: bip grave 1', 'dados', sino(hz(76), 0.5, 0.35, 0.2), 0.1, 1.0); poe('dados: bip grave 2', '_d2', sino(hz(72), 0.8, 0.35, 0.2), 0.1, 1.0)
+tp = tv(2.2); poe('portadora', 'sinal_ok', np.sin(2 * np.pi * 987.8 * tp) * (1 + 0.25 * np.sin(2 * np.pi * 6 * tp)) * env(len(tp), 0.15, 0.9) * 0.025, 0.15, 1.0)
+# --- linha do tempo
+poe('1977', 'ano_1977', so(baque(0.6, 120, 60), sino(hz(74), 3.0, 0.4, 0.5)), 0, 1.0)
+poe('Júpiter (passagem)', 'jupiter', so(subida(0.35, 220, 660, 0.5), sino(hz(79), 1.5, 0.3, 0.5)), -0.3, 1.0)
+poe('Saturno (passagem)', 'saturno', so(subida(0.35, 260, 780, 0.5), sino(hz(84), 1.5, 0.3, 0.5)), 0.3, 1.0)
+poe('2012', 'ano_2012', sino(hz(86), 3.0, 0.45, 0.7), 0, 1.0)
+poe('interestelar (brilho)', 'interestelar', so(sino(hz(93), 2.0, 0.2, 0.5), sino(hz(98), 2.0, 0.15, 0.5)), 0.2, 1.0)
+M['_s7'] = M['cinquenta'] - 0.44; poe_fim('mergulho na sonda', '_s7', subida(0.6, 200, 700, 0.6), 0, 1.0)
+poe('cena 7: chegada', '_s7', sino(hz(74), 3.5, 0.35, 0.5), 0, 1.0)
+poe('frase: nave lançada em 1977', 'maquina', sino(hz(81), 2.5, 0.25, 0.5), -0.2, 1.0)
+poe('frase: um dia-luz da Terra', 'dia_inteiro', sino(hz(86), 2.5, 0.25, 0.5), 0.2, 1.0)
+poe('assinatura do canal', 'marca', so(sub_boom(3.0, 50, 30, 0.5), sino(hz(77), 4.0, 0.4, 0.6), sino(hz(84), 4.0, 0.3, 0.6)), 0, 1.0)
 json.dump(ac, open('audio/acertos.json', 'w'), indent=1, ensure_ascii=False)
 print(len(ac), 'efeitos; maior desvio da grade medida:', max(abs(a['desvio_ms']) for a in ac), 'ms')
 
@@ -120,7 +200,7 @@ m = fala > 0.9; vr = np.sqrt(np.mean(voz.x[m] ** 2)); mr = np.sqrt(np.mean(musw[
 gm = vr / mr * 10 ** (-16 / 20)                              # trilha ~16 dB abaixo da voz nas falas
 mix = musw * gm + fxw * gm * 1.4 + voz.x
 mix = filt(mix.T, 'highpass', 30).T[: int(FIM * SR)]
-fo = int(0.45 * SR); mix[-fo:] *= np.linspace(1, 0, fo)[:, None] ** 1.5
+fo = int((1.2 if FIM > 60 else 0.45) * SR); mix[-fo:] *= np.linspace(1, 0, fo)[:, None] ** 1.5
 def limitador(x, teto, look=0.005, rel=0.08):
     pk = np.abs(x).max(1); g = np.minimum(1.0, teto / np.maximum(pk, 1e-9)); g = minimum_filter1d(g, int(look * SR) * 2 + 1)
     a = np.exp(-1 / (rel * SR)); out = np.empty_like(g); cur = 1.0

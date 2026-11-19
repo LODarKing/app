@@ -3,331 +3,831 @@
   "efeito": "tecla 1",
   "marco": "digitar",
   "evento_s": -0.012,
-  "na_grade_s": -0.001,
-  "desvio_ms": 11.1
+  "na_grade_s": -0.005,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 2",
   "marco": "digitar",
   "evento_s": 0.062,
-  "na_grade_s": 0.073,
-  "desvio_ms": 11.0
+  "na_grade_s": 0.069,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 3",
   "marco": "digitar",
   "evento_s": 0.136,
-  "na_grade_s": 0.147,
-  "desvio_ms": 11.0
+  "na_grade_s": 0.143,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 4",
   "marco": "digitar",
   "evento_s": 0.21,
-  "na_grade_s": 0.221,
-  "desvio_ms": 10.9
+  "na_grade_s": 0.217,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 5",
   "marco": "digitar",
   "evento_s": 0.284,
-  "na_grade_s": 0.294,
-  "desvio_ms": 10.9
+  "na_grade_s": 0.291,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 6",
   "marco": "digitar",
   "evento_s": 0.357,
-  "na_grade_s": 0.368,
-  "desvio_ms": 10.8
+  "na_grade_s": 0.364,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 7",
   "marco": "digitar",
   "evento_s": 0.431,
-  "na_grade_s": 0.442,
-  "desvio_ms": 10.8
+  "na_grade_s": 0.438,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 8",
   "marco": "digitar",
   "evento_s": 0.505,
-  "na_grade_s": 0.516,
-  "desvio_ms": 10.7
+  "na_grade_s": 0.512,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 9",
   "marco": "digitar",
   "evento_s": 0.579,
-  "na_grade_s": 0.59,
-  "desvio_ms": 10.6
+  "na_grade_s": 0.586,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 10",
   "marco": "digitar",
   "evento_s": 0.653,
-  "na_grade_s": 0.664,
-  "desvio_ms": 10.6
+  "na_grade_s": 0.66,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 11",
   "marco": "digitar",
   "evento_s": 0.727,
-  "na_grade_s": 0.737,
-  "desvio_ms": 10.5
+  "na_grade_s": 0.734,
+  "desvio_ms": 7.0
  },
  {
   "efeito": "tecla 12",
   "marco": "digitar",
   "evento_s": 0.801,
-  "na_grade_s": 0.811,
-  "desvio_ms": 10.5
+  "na_grade_s": 0.808,
+  "desvio_ms": 6.9
  },
  {
   "efeito": "tecla 13",
   "marco": "digitar",
   "evento_s": 0.875,
-  "na_grade_s": 0.885,
-  "desvio_ms": 10.4
+  "na_grade_s": 0.882,
+  "desvio_ms": 6.9
  },
  {
   "efeito": "envio",
   "marco": "enviar",
   "evento_s": 1.023,
-  "na_grade_s": 1.033,
-  "desvio_ms": 9.8
+  "na_grade_s": 1.029,
+  "desvio_ms": 6.4
  },
  {
   "efeito": "relógio 1",
   "marco": "conta_ini",
   "evento_s": 1.86,
-  "na_grade_s": 1.845,
-  "desvio_ms": -15.0
+  "na_grade_s": 1.842,
+  "desvio_ms": -17.9
  },
  {
   "efeito": "relógio 2",
   "marco": "conta_ini",
   "evento_s": 2.008,
-  "na_grade_s": 1.993,
-  "desvio_ms": -15.1
+  "na_grade_s": 1.99,
+  "desvio_ms": -17.9
  },
  {
   "efeito": "relógio 3",
   "marco": "conta_ini",
   "evento_s": 2.156,
-  "na_grade_s": 2.14,
-  "desvio_ms": -15.3
+  "na_grade_s": 2.138,
+  "desvio_ms": -17.9
  },
  {
   "efeito": "relógio 4",
   "marco": "conta_ini",
   "evento_s": 2.303,
-  "na_grade_s": 2.288,
-  "desvio_ms": -15.4
+  "na_grade_s": 2.285,
+  "desvio_ms": -18.0
  },
  {
   "efeito": "relógio 5",
   "marco": "conta_ini",
   "evento_s": 2.451,
-  "na_grade_s": 2.436,
-  "desvio_ms": -15.5
+  "na_grade_s": 2.433,
+  "desvio_ms": -18.0
  },
  {
   "efeito": "relógio 6",
   "marco": "conta_ini",
   "evento_s": 2.525,
-  "na_grade_s": 2.509,
-  "desvio_ms": -15.5
+  "na_grade_s": 2.507,
+  "desvio_ms": -18.0
  },
  {
   "efeito": "relógio 7",
   "marco": "conta_ini",
   "evento_s": 2.599,
-  "na_grade_s": 2.583,
-  "desvio_ms": -15.6
+  "na_grade_s": 2.581,
+  "desvio_ms": -18.0
  },
  {
   "efeito": "relógio 8",
   "marco": "conta_ini",
   "evento_s": 2.673,
-  "na_grade_s": 2.657,
-  "desvio_ms": -15.7
+  "na_grade_s": 2.655,
+  "desvio_ms": -18.0
  },
  {
   "efeito": "relógio 9",
   "marco": "conta_ini",
   "evento_s": 2.747,
-  "na_grade_s": 2.731,
-  "desvio_ms": -15.7
+  "na_grade_s": 2.729,
+  "desvio_ms": -18.0
  },
  {
   "efeito": "relógio 10",
   "marco": "conta_ini",
   "evento_s": 2.821,
-  "na_grade_s": 2.805,
-  "desvio_ms": -15.8
+  "na_grade_s": 2.803,
+  "desvio_ms": -18.0
  },
  {
   "efeito": "relógio 11",
   "marco": "conta_ini",
   "evento_s": 2.894,
-  "na_grade_s": 2.879,
-  "desvio_ms": -15.8
+  "na_grade_s": 2.876,
+  "desvio_ms": -18.0
  },
  {
   "efeito": "impacto 48 h",
   "marco": "h48",
   "evento_s": 2.94,
-  "na_grade_s": 2.952,
-  "desvio_ms": 12.5
+  "na_grade_s": 2.95,
+  "desvio_ms": 10.3
  },
  {
   "efeito": "impacto 48 h (corpo)",
   "marco": "h48",
   "evento_s": 2.94,
-  "na_grade_s": 2.952,
-  "desvio_ms": 12.5
+  "na_grade_s": 2.95,
+  "desvio_ms": 10.3
  },
  {
   "efeito": "HORAS",
   "marco": "push48",
   "evento_s": 3.36,
-  "na_grade_s": 3.395,
-  "desvio_ms": 35.5
+  "na_grade_s": 3.394,
+  "desvio_ms": 33.6
  },
  {
   "efeito": "sucção (colapso)",
   "marco": "colapso",
   "evento_s": 4.569,
-  "na_grade_s": 4.577,
-  "desvio_ms": 7.9,
+  "na_grade_s": 4.576,
+  "desvio_ms": 6.7,
   "termina_no_marco": true
  },
  {
   "efeito": "ponto de luz",
   "marco": "ponto",
   "evento_s": 5.013,
-  "na_grade_s": 5.02,
-  "desvio_ms": 6.9
+  "na_grade_s": 5.019,
+  "desvio_ms": 6.0
  },
  {
   "efeito": "Terra: abertura",
   "marco": "terra",
   "evento_s": 5.2,
-  "na_grade_s": 5.168,
-  "desvio_ms": -32.5
+  "na_grade_s": 5.167,
+  "desvio_ms": -33.2
  },
  {
   "efeito": "recuo da câmera (subida)",
   "marco": "voyager",
   "evento_s": 7.701,
-  "na_grade_s": 7.678,
-  "desvio_ms": -23.1,
+  "na_grade_s": 7.679,
+  "desvio_ms": -22.2,
   "termina_no_marco": true
  },
  {
   "efeito": "revelação Voyager (sub)",
   "marco": "voyager",
   "evento_s": 7.701,
-  "na_grade_s": 7.678,
-  "desvio_ms": -23.1
+  "na_grade_s": 7.679,
+  "desvio_ms": -22.2
  },
  {
   "efeito": "revelação Voyager (sino 1)",
   "marco": "voyager",
   "evento_s": 7.701,
-  "na_grade_s": 7.678,
-  "desvio_ms": -23.1
+  "na_grade_s": 7.679,
+  "desvio_ms": -22.2
  },
  {
   "efeito": "revelação Voyager (sino 2)",
   "marco": "voyager",
   "evento_s": 7.701,
-  "na_grade_s": 7.678,
-  "desvio_ms": -23.1
+  "na_grade_s": 7.679,
+  "desvio_ms": -22.2
  },
  {
   "efeito": "revelação Voyager (sino 3)",
   "marco": "voyager",
   "evento_s": 7.701,
-  "na_grade_s": 7.678,
-  "desvio_ms": -23.1
+  "na_grade_s": 7.679,
+  "desvio_ms": -22.2
  },
  {
   "efeito": "revelação Voyager (sino 4)",
   "marco": "voyager",
   "evento_s": 7.701,
-  "na_grade_s": 7.678,
-  "desvio_ms": -23.1
+  "na_grade_s": 7.679,
+  "desvio_ms": -22.2
  },
  {
   "efeito": "data: 18",
   "marco": "data_18",
   "evento_s": 8.861,
-  "na_grade_s": 8.859,
-  "desvio_ms": -1.7
+  "na_grade_s": 8.861,
+  "desvio_ms": -0.1
  },
  {
   "efeito": "data: 18 (tique)",
   "marco": "data_18",
   "evento_s": 8.861,
-  "na_grade_s": 8.859,
-  "desvio_ms": -1.7
+  "na_grade_s": 8.861,
+  "desvio_ms": -0.1
  },
  {
   "efeito": "data: novembro",
   "marco": "data_nov",
   "evento_s": 9.341,
-  "na_grade_s": 9.302,
-  "desvio_ms": -38.7
+  "na_grade_s": 9.304,
+  "desvio_ms": -36.8
  },
  {
   "efeito": "data: 2026",
   "marco": "data_2026",
   "evento_s": 9.881,
-  "na_grade_s": 9.893,
-  "desvio_ms": 11.9
+  "na_grade_s": 9.895,
+  "desvio_ms": 14.3
  },
  {
   "efeito": "data: 2026 (sino)",
   "marco": "data_2026",
   "evento_s": 9.881,
-  "na_grade_s": 9.893,
-  "desvio_ms": 11.9
+  "na_grade_s": 9.895,
+  "desvio_ms": 14.3
  },
  {
   "efeito": "luz na sonda 1",
   "marco": "luz_sonda",
   "evento_s": 11.041,
-  "na_grade_s": 11.074,
-  "desvio_ms": 33.3
+  "na_grade_s": 11.077,
+  "desvio_ms": 36.4
  },
  {
   "efeito": "luz na sonda 2",
   "marco": "luz_sonda",
   "evento_s": 11.189,
-  "na_grade_s": 11.222,
-  "desvio_ms": 33.2
+  "na_grade_s": 11.225,
+  "desvio_ms": 36.4
  },
  {
   "efeito": "luz na sonda 3",
   "marco": "luz_sonda",
   "evento_s": 11.337,
-  "na_grade_s": 11.37,
-  "desvio_ms": 33.1
+  "na_grade_s": 11.373,
+  "desvio_ms": 36.3
  },
  {
   "efeito": "luz na sonda 4",
   "marco": "luz_sonda",
   "evento_s": 11.484,
-  "na_grade_s": 11.517,
-  "desvio_ms": 33.0
+  "na_grade_s": 11.521,
+  "desvio_ms": 36.3
  },
  {
   "efeito": "marco (tom ascendente)",
   "marco": "marco",
   "evento_s": 11.663,
-  "na_grade_s": 11.665,
-  "desvio_ms": 2.0
+  "na_grade_s": 11.668,
+  "desvio_ms": 5.4
+ },
+ {
+  "efeito": "recuo até a escala (subida)",
+  "marco": "regua",
+  "evento_s": 13.101,
+  "na_grade_s": 13.146,
+  "desvio_ms": 45.1,
+  "termina_no_marco": true
+ },
+ {
+  "efeito": "régua: heliopausa",
+  "marco": "r_heliopausa",
+  "evento_s": 13.8,
+  "na_grade_s": 13.737,
+  "desvio_ms": -63.1
+ },
+ {
+  "efeito": "régua: Netuno",
+  "marco": "r_Netuno",
+  "evento_s": 14.345,
+  "na_grade_s": 14.328,
+  "desvio_ms": -16.6
+ },
+ {
+  "efeito": "régua: Saturno",
+  "marco": "r_Saturno",
+  "evento_s": 14.579,
+  "na_grade_s": 14.624,
+  "desvio_ms": 44.5
+ },
+ {
+  "efeito": "régua: Júpiter",
+  "marco": "r_Júpiter",
+  "evento_s": 14.678,
+  "na_grade_s": 14.624,
+  "desvio_ms": -54.4
+ },
+ {
+  "efeito": "régua: Sol",
+  "marco": "r_Sol",
+  "evento_s": 14.897,
+  "na_grade_s": 14.919,
+  "desvio_ms": 22.1
+ },
+ {
+  "efeito": "régua: Lua",
+  "marco": "r_Lua",
+  "evento_s": 15.774,
+  "na_grade_s": 15.806,
+  "desvio_ms": 31.8
+ },
+ {
+  "efeito": "régua: Terra",
+  "marco": "terra_fala",
+  "evento_s": 16.942,
+  "na_grade_s": 16.988,
+  "desvio_ms": 46.0
+ },
+ {
+  "efeito": "distância (subida)",
+  "marco": "km",
+  "evento_s": 18.202,
+  "na_grade_s": 18.17,
+  "desvio_ms": -31.9,
+  "termina_no_marco": true
+ },
+ {
+  "efeito": "distância: impacto",
+  "marco": "km",
+  "evento_s": 18.202,
+  "na_grade_s": 18.17,
+  "desvio_ms": -31.9
+ },
+ {
+  "efeito": "distância: piano 0",
+  "marco": "km",
+  "evento_s": 18.202,
+  "na_grade_s": 18.17,
+  "desvio_ms": -31.9
+ },
+ {
+  "efeito": "distância: piano 1",
+  "marco": "km",
+  "evento_s": 18.202,
+  "na_grade_s": 18.17,
+  "desvio_ms": -31.9
+ },
+ {
+  "efeito": "distância: piano 2",
+  "marco": "km",
+  "evento_s": 18.202,
+  "na_grade_s": 18.17,
+  "desvio_ms": -31.9
+ },
+ {
+  "efeito": "distância: piano 3",
+  "marco": "km",
+  "evento_s": 18.202,
+  "na_grade_s": 18.17,
+  "desvio_ms": -31.9
+ },
+ {
+  "efeito": "1 dia-luz: sino 0",
+  "marco": "dialuz",
+  "evento_s": 20.087,
+  "na_grade_s": 20.091,
+  "desvio_ms": 4.0
+ },
+ {
+  "efeito": "1 dia-luz: sino 1",
+  "marco": "dialuz",
+  "evento_s": 20.087,
+  "na_grade_s": 20.091,
+  "desvio_ms": 4.0
+ },
+ {
+  "efeito": "1 dia-luz: sino 2",
+  "marco": "dialuz",
+  "evento_s": 20.087,
+  "na_grade_s": 20.091,
+  "desvio_ms": 4.0
+ },
+ {
+  "efeito": "1 dia-luz: sino 3",
+  "marco": "dialuz",
+  "evento_s": 20.087,
+  "na_grade_s": 20.091,
+  "desvio_ms": 4.0
+ },
+ {
+  "efeito": "sinal ida 1",
+  "marco": "_p",
+  "evento_s": 22.16,
+  "na_grade_s": 22.16,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 2",
+  "marco": "_p",
+  "evento_s": 22.307,
+  "na_grade_s": 22.307,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 3",
+  "marco": "_p",
+  "evento_s": 22.455,
+  "na_grade_s": 22.455,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 4",
+  "marco": "_p",
+  "evento_s": 22.603,
+  "na_grade_s": 22.603,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 5",
+  "marco": "_p",
+  "evento_s": 22.751,
+  "na_grade_s": 22.751,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 6",
+  "marco": "_p",
+  "evento_s": 22.899,
+  "na_grade_s": 22.899,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 7",
+  "marco": "_p",
+  "evento_s": 23.046,
+  "na_grade_s": 23.046,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 8",
+  "marco": "_p",
+  "evento_s": 23.194,
+  "na_grade_s": 23.194,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 9",
+  "marco": "_p",
+  "evento_s": 23.342,
+  "na_grade_s": 23.342,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 10",
+  "marco": "_p",
+  "evento_s": 23.49,
+  "na_grade_s": 23.49,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 11",
+  "marco": "_p",
+  "evento_s": 23.637,
+  "na_grade_s": 23.637,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 12",
+  "marco": "_p",
+  "evento_s": 23.785,
+  "na_grade_s": 23.785,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 13",
+  "marco": "_p",
+  "evento_s": 23.933,
+  "na_grade_s": 23.933,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 14",
+  "marco": "_p",
+  "evento_s": 24.081,
+  "na_grade_s": 24.081,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 15",
+  "marco": "_p",
+  "evento_s": 24.228,
+  "na_grade_s": 24.228,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 16",
+  "marco": "_p",
+  "evento_s": 24.376,
+  "na_grade_s": 24.376,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 17",
+  "marco": "_p",
+  "evento_s": 24.524,
+  "na_grade_s": 24.524,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "sinal ida 18",
+  "marco": "_p",
+  "evento_s": 24.672,
+  "na_grade_s": 24.672,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 1",
+  "marco": "_p",
+  "evento_s": 27.627,
+  "na_grade_s": 27.627,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 2",
+  "marco": "_p",
+  "evento_s": 27.775,
+  "na_grade_s": 27.775,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 3",
+  "marco": "_p",
+  "evento_s": 27.923,
+  "na_grade_s": 27.923,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 4",
+  "marco": "_p",
+  "evento_s": 28.07,
+  "na_grade_s": 28.07,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 5",
+  "marco": "_p",
+  "evento_s": 28.218,
+  "na_grade_s": 28.218,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 6",
+  "marco": "_p",
+  "evento_s": 28.366,
+  "na_grade_s": 28.366,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 7",
+  "marco": "_p",
+  "evento_s": 28.514,
+  "na_grade_s": 28.514,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 8",
+  "marco": "_p",
+  "evento_s": 28.661,
+  "na_grade_s": 28.661,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 9",
+  "marco": "_p",
+  "evento_s": 28.809,
+  "na_grade_s": 28.809,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 10",
+  "marco": "_p",
+  "evento_s": 28.957,
+  "na_grade_s": 28.957,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 11",
+  "marco": "_p",
+  "evento_s": 29.105,
+  "na_grade_s": 29.105,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 12",
+  "marco": "_p",
+  "evento_s": 29.252,
+  "na_grade_s": 29.252,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 13",
+  "marco": "_p",
+  "evento_s": 29.4,
+  "na_grade_s": 29.4,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 14",
+  "marco": "_p",
+  "evento_s": 29.548,
+  "na_grade_s": 29.548,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 15",
+  "marco": "_p",
+  "evento_s": 29.696,
+  "na_grade_s": 29.696,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 16",
+  "marco": "_p",
+  "evento_s": 29.843,
+  "na_grade_s": 29.843,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "resposta volta 17",
+  "marco": "_p",
+  "evento_s": 29.991,
+  "na_grade_s": 29.991,
+  "desvio_ms": 0.0
+ },
+ {
+  "efeito": "chegada à Voyager",
+  "marco": "chega",
+  "evento_s": 24.802,
+  "na_grade_s": 24.819,
+  "desvio_ms": 17.5
+ },
+ {
+  "efeito": "chegada à Terra (48 h)",
+  "marco": "volta",
+  "evento_s": 30.083,
+  "na_grade_s": 30.139,
+  "desvio_ms": 56.0
+ },
+ {
+  "efeito": "clima: queda",
+  "marco": "clima",
+  "evento_s": 31.043,
+  "na_grade_s": 31.026,
+  "desvio_ms": -17.4
+ },
+ {
+  "efeito": "clima: tom descendente",
+  "marco": "clima",
+  "evento_s": 31.043,
+  "na_grade_s": 31.026,
+  "desvio_ms": -17.4
+ },
+ {
+  "efeito": "data 14 (abafado)",
+  "marco": "data_14",
+  "evento_s": 34.863,
+  "na_grade_s": 34.867,
+  "desvio_ms": 4.4
+ },
+ {
+  "efeito": "dados: bip grave 1",
+  "marco": "dados",
+  "evento_s": 38.084,
+  "na_grade_s": 38.118,
+  "desvio_ms": 34.3
+ },
+ {
+  "efeito": "dados: bip grave 2",
+  "marco": "_d2",
+  "evento_s": 38.334,
+  "na_grade_s": 38.266,
+  "desvio_ms": -68.0
+ },
+ {
+  "efeito": "portadora",
+  "marco": "sinal_ok",
+  "evento_s": 40.084,
+  "na_grade_s": 40.039,
+  "desvio_ms": -44.8
+ },
+ {
+  "efeito": "1977",
+  "marco": "ano_1977",
+  "evento_s": 45.024,
+  "na_grade_s": 45.063,
+  "desvio_ms": 39.2
+ },
+ {
+  "efeito": "Júpiter (passagem)",
+  "marco": "jupiter",
+  "evento_s": 47.864,
+  "na_grade_s": 47.871,
+  "desvio_ms": 6.7
+ },
+ {
+  "efeito": "Saturno (passagem)",
+  "marco": "saturno",
+  "evento_s": 48.345,
+  "na_grade_s": 48.314,
+  "desvio_ms": -31.0
+ },
+ {
+  "efeito": "2012",
+  "marco": "ano_2012",
+  "evento_s": 49.205,
+  "na_grade_s": 49.201,
+  "desvio_ms": -4.4
+ },
+ {
+  "efeito": "interestelar (brilho)",
+  "marco": "interestelar",
+  "evento_s": 50.885,
+  "na_grade_s": 50.826,
+  "desvio_ms": -59.0
+ },
+ {
+  "efeito": "mergulho na sonda",
+  "marco": "_s7",
+  "evento_s": 51.705000000000005,
+  "na_grade_s": 51.713,
+  "desvio_ms": 7.6,
+  "termina_no_marco": true
+ },
+ {
+  "efeito": "cena 7: chegada",
+  "marco": "_s7",
+  "evento_s": 51.705,
+  "na_grade_s": 51.713,
+  "desvio_ms": 7.6
+ },
+ {
+  "efeito": "frase: nave lançada em 1977",
+  "marco": "maquina",
+  "evento_s": 54.245,
+  "na_grade_s": 54.225,
+  "desvio_ms": -20.4
+ },
+ {
+  "efeito": "frase: um dia-luz da Terra",
+  "marco": "dia_inteiro",
+  "evento_s": 59.966,
+  "na_grade_s": 59.987,
+  "desvio_ms": 21.4
+ },
+ {
+  "efeito": "assinatura do canal",
+  "marco": "marca",
+  "evento_s": 61.926,
+  "na_grade_s": 61.908,
+  "desvio_ms": -17.7
  }
 ]
