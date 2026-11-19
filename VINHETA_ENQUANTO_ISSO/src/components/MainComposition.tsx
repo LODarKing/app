@@ -1,18 +1,15 @@
 import React from 'react';
 import { AbsoluteFill, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
-import { loadFont } from '@remotion/fonts';
 import { mulberry32 } from '../lib/anim';
 import { camera } from '../lib/choreo';
 import { CITY } from '../mapa/geo';
 import { Background } from './Background';
 import { ExitSwipe } from './ExitSwipe';
 import { LipsInWorld, LipstickOverlay } from './LipstickAnimation';
-import { MapDrawAnimation } from './MapDrawAnimation';
+import { MapDrawAnimation, RibbonToTitle } from './MapDrawAnimation';
 import { SoundDesign } from './SoundDesign';
-import { TitleAnimation } from './TitleAnimation';
+import { TitleLettering } from './TitleLettering';
 
-loadFont({ family: 'Anton', url: staticFile('Anton.woff2'), weight: '400' });
-loadFont({ family: 'Poppins', url: staticFile('Poppins-SemiBoldItalic.woff2'), weight: '600', style: 'italic' });
 
 export const Grain: React.FC<{ frame: number }> = ({ frame }) => {
   const r = mulberry32(1000 + frame);
@@ -37,7 +34,8 @@ export const MainComposition: React.FC<{ audio: boolean }> = ({ audio }) => {
     <AbsoluteFill style={{ backgroundColor: '#FFF1F2', overflow: 'hidden' }}>
       <Background t={t} zoom={cam.s} />
       <World t={t} cam={cam} />
-      <TitleAnimation t={t} />
+      <RibbonToTitle t={t} />
+      <TitleLettering t={t} />
       <LipstickOverlay t={t} />
       <ExitSwipe t={t} />
       <Grain frame={frame} />

@@ -8,11 +8,8 @@
     "render": "node render.mjs --tudo"
   },
   "dependencies": {
-    "@fontsource/anton": "5.2.6",
-    "@fontsource/poppins": "5.2.6",
     "@remotion/bundler": "4.0.538",
     "@remotion/cli": "4.0.538",
-    "@remotion/fonts": "4.0.538",
     "@remotion/paths": "4.0.538",
     "@remotion/renderer": "4.0.538",
     "react": "19.1.0",

@@ -1,32 +1,27 @@
-// Saída: duas passadas gigantes com a ponta chanfrada do batom (vinho, depois vermelho), terminando em
-// vermelho chapado — corte limpo para o vídeo da notícia.
+// Saída: uma pincelada gigante de batom (o mesmo bisel das letras, em escala de tela) cobre a composição em
+// ziguezague e termina em cereja chapado — corte limpo para a notícia, no mesmo tempo da assinatura sonora.
 import React from 'react';
 import T from '../timeline.json';
-import { mulberry32, prog } from '../lib/anim';
+import { prog } from '../lib/anim';
 import { COLORS } from '../lib/layout';
+import { PigmentDefs } from './Lettering';
+// @ts-ignore
+import { nibOutline, strokePoints } from '../lettering/engine.js';
 
-const streaks = (() => { const r = mulberry32(9); return Array.from({ length: 14 }, () => ({ y: -1400 + 2800 * r(), w: 2 + 6 * r(), o: 0.08 + 0.12 * r(), l: 200 + 700 * r() })); })();
-
-const Band: React.FC<{ head: number; color: string; sheen: string }> = ({ head, color, sheen }) => (
-  <g>
-    {/* ponta chanfrada: a borda de ataque é inclinada como a bala do batom */}
-    <path d={`M -4000 -2000 L ${head + 260} -2000 L ${head - 260} 2000 L -4000 2000 Z`} fill={color} />
-    <path d={`M ${head + 260 - 70} -2000 L ${head - 260 - 70} 2000`} stroke={sheen} strokeWidth={22} opacity={0.35} />
-    {streaks.map((s, i) => <rect key={i} x={head - s.l - 120 - (s.y / 2000) * 260} y={s.y} width={s.l} height={s.w} fill={sheen} opacity={s.o} />)}
-  </g>
-);
+// quatro passadas retas (vai e volta), cada uma com o bisel na ponta — sem dobras que se cruzem
+const PASSES = ['M -760 2420 L 1840 1560', 'M 1840 1600 L -760 1000', 'M -760 1060 L 1840 260', 'M 1840 320 L -760 -340'].map((d) => strokePoints(d, (x: number, y: number) => [x, y], 6));
 
 export const ExitSwipe: React.FC<{ t: number }> = ({ t }) => {
   const [s0, s1] = T.saida;
   if (t < s0) return null;
-  const ease = (x: number) => (1 - Math.cos(Math.PI * x)) / 2;
-  const a = ease(prog(t, s0, s1 - 0.12)), b = ease(prog(t, s0 + 0.1, s1));
+  const u = prog(t, s0, s1), e = (1 - Math.cos(Math.PI * u)) / 2;
   return (
     <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: 'absolute', inset: 0 }}>
-      <g transform="translate(540 960) rotate(-62)">
-        <Band head={-1450 + 2950 * a} color={COLORS.wine} sheen="#FF4D6D" />
-        <Band head={-1450 + 2950 * b} color={COLORS.red} sheen="#FFF1F2" />
-      </g>
+      <defs><PigmentDefs id="ex-pig" color={COLORS.cherry} /></defs>
+      {u >= 1 ? <rect width={1080} height={1920} fill={COLORS.cherry} /> : PASSES.map((pts, k) => {
+        const p = Math.min(1, Math.max(0, e * 4.3 - k * 1.05));
+        return p > 0 ? <path key={k} d={nibOutline(pts, { angle: -35, wmin: 1060, wmax: 1120, k: 1, pIn: 0.9, pOut: 0, wobble: 0.03, seed: 2 + k }, p)} fill="url(#ex-pig)" /> : null;
+      })}
     </svg>
   );
 };

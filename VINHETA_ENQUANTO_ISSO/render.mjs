@@ -53,6 +53,18 @@ if (args[0] === '--sheet') {
 } else if (args[0] === '--frame') {
   await still(Number(args[2]), args[1]); console.log(args[1]);
 }
+if (args[0] === '--propostas') {
+  // três propostas de lettering em PNG + prancha comparativa
+  fs.mkdirSync('entregaveis/lettering/propostas', { recursive: true }); const files = [];
+  const nomes = ['1 Bala de Batom', '2 Linha Continua', '3 Arco do Cupido'];
+  for (const v of [1, 2, 3]) {
+    const composition = await comp(`Proposta${v}`, { v }); const out = `entregaveis/lettering/propostas/proposta-${v}.png`;
+    await renderStill({ composition, serveUrl, output: out, inputProps: { v }, puppeteerInstance: browser, overwrite: true }); files.push(out);
+  }
+  const a = ['-loglevel', 'error', '-y']; files.forEach((f) => a.push('-i', f));
+  a.push('-filter_complex', files.map((_, i) => `[${i}]scale=540:-1,pad=560:1010:10:0:color=0xFFF1F2,drawtext=fontfile=${FONT}:text='${nomes[i]}':x=20:y=972:fontsize=26:fontcolor=0x7B0D1E[v${i}]`).join(';') + ';' + files.map((_, i) => `[v${i}]`).join('') + `hstack=${files.length}`, 'entregaveis/lettering/propostas/comparativo.png');
+  execFileSync('ffmpeg', a); console.log('propostas prontas');
+}
 if (args[0] === '--capa' || args[0] === '--tudo') {
   const composition = await comp('Capa', {});
   const out = 'entregaveis/capa-vinheta.png';

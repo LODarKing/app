@@ -4,7 +4,10 @@ import { Easing } from 'remotion';
 import { P, bump, clamp, easeInCubic, easeInOutCubic, easeOutCubic, lerp, prog, springish } from './anim';
 import { CITY, CORNER, LIP_SCALE, TRAIL, TRAIL_START } from '../mapa/geo';
 import { swipePoint } from '../components/Lips';
-import { TITLE } from './layout';
+// @ts-ignore
+import { MAP_SHIFT, finalMetrics } from '../lettering/final.js';
+const FM = finalMetrics();
+export const END_ANCHOR: P = [CITY[0] + MAP_SHIFT[0], CITY[1] + MAP_SHIFT[1]];
 
 export const S0 = 860 / (400 * LIP_SCALE);       // zoom inicial: boca com ~860 px de largura
 const A0: P = [540, 900];
@@ -16,7 +19,7 @@ export function camera(t: number) {
   const pop = 0.86 + 0.14 * springish(prog(t, 0, 0.5), 2.2, 7);    // gancho: a boca já chega em movimento
   const drift = (1.05 - 0.05 * easeOutCubic(prog(t, 0, z0))) * pop;
   const s = Math.pow(S0 * drift, 1 - e);
-  const anchor: P = [lerp(A0[0], CITY[0], e), lerp(A0[1], CITY[1], e)];
+  const anchor: P = [lerp(A0[0], END_ANCHOR[0], e), lerp(A0[1], END_ANCHOR[1], e)];
   return { s, anchor, e };
 }
 export const worldToScreen = (w: P, c = camera(0)): P => [c.anchor[0] + c.s * (w[0] - CITY[0]), c.anchor[1] + c.s * (w[1] - CITY[1])];
@@ -70,32 +73,34 @@ export function lipstick(t: number): { x: number; y: number; scale: number; angl
     const a = TRAIL.at(trailQ(t) * TRAIL.len), p = worldToScreen(a.p, c);
     return { x: p[0], y: p[1], scale: ls, angle: 36 + 10 * Math.sin(a.ang), on: true };
   }
-  if (t < m1 + 0.3) {
-    const p = worldToScreen(end.p, c), a = easeInCubic(prog(t, m1, m1 + 0.3));
-    return { x: p[0] + 900 * a, y: p[1] + 700 * a - 120 * Math.sin(a * Math.PI), scale: ls, angle: 36 + 30 * a, on: true };
+  if (t < m1 + 0.2) {
+    // termina o contorno e sai para cima/direita, longe do título (a fita segue sozinha até o "E")
+    const p = worldToScreen(end.p, c), a = easeOutCubic(prog(t, m1, m1 + 0.2));
+    return { x: p[0] + 1000 * a, y: p[1] - 900 * a, scale: ls, angle: 36 - 20 * a, on: true };
   }
-  // passada no "Amontada"
+  // o batom volta e escreve "Amontada" (a ponta passa e as letras nascem atrás dela)
   const [a0, a1] = T.amontada;
-  const y = TITLE.amontadaMidY;
-  if (t >= a0 - 0.14 && t < a1 + 0.22) {
-    const big = 1.0;
+  const y = FM.amMidY + 10;
+  if (t >= a0 - 0.14 && t < a1 + 0.24) {
     if (t < a0) {
       const a = easeOutCubic(prog(t, a0 - 0.14, a0));
-      return { x: lerp(-260, TITLE.left - 10, a), y: lerp(y + 380, y, a), scale: big, angle: lerp(150, 132, a), on: true };
+      return { x: lerp(-260, FM.amLeft - 30, a), y: lerp(y + 380, y + 18, a), scale: 0.95, angle: lerp(150, 132, a), on: true };
     }
     if (t < a1) {
-      const u = easeInOutCubic(prog(t, a0, a1));
-      return { x: lerp(TITLE.left - 10, TITLE.amontadaRight + 30, u), y: y + 14 * Math.sin(u * Math.PI * 3), scale: big, angle: 132 - 6 * Math.sin(u * Math.PI), on: true };
+      const x = amontadaTipX(t), u = prog(t, a0, a1);
+      return { x, y: y + 16 * Math.sin(u * Math.PI * 7), scale: 0.95, angle: 132 - 6 * Math.sin(u * Math.PI), on: true };
     }
-    const a = easeInCubic(prog(t, a1, a1 + 0.22));
-    return { x: lerp(TITLE.amontadaRight + 30, 1400, a), y: lerp(y, y - 520, a), scale: big, angle: 132 - 20 * a, on: true };
+    const a = easeInCubic(prog(t, a1, a1 + 0.24));
+    return { x: lerp(FM.amRight + 20, 1400, a), y: lerp(y, y - 560, a), scale: 0.95, angle: 132 - 22 * a, on: true };
   }
   return { x: -999, y: -999, scale: 1, angle: 0, on: false };
 }
-export const revealX = (t: number) => {
+// posição da ponta do batom ao escrever "Amontada" (o travessão do A nasce primeiro, à esquerda)
+export const amontadaTipX = (t: number) => {
   const [a0, a1] = T.amontada;
-  if (t < a0) return TITLE.left - 40;
-  if (t >= a1) return 2000;
-  return lerp(TITLE.left - 10, TITLE.amontadaRight + 30, easeInOutCubic(prog(t, a0, a1))) + 6;
+  if (t < a0) return FM.amLeft - 30;
+  if (t >= a1) return FM.amRight + 20;
+  return lerp(FM.amLeft - 30, FM.amRight + 20, Easing.bezier(0.35, 0, 0.25, 1)(prog(t, a0, a1)));
 };
+export { FM };
 export { clamp, springish };
