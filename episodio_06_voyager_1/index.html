@@ -7,7 +7,7 @@
 // contrato de render: window.seek(t) desenha o quadro do instante t (sem rAF, sem timers)
 const legenda = new URLSearchParams(location.search).get('legenda') !== '0';
 window.ready = FILME.criar(document.getElementById('c'), { fontes: 'fonts', texturas: 'assets/nasa', legenda }).then((f) => {
-  window.seek = f.seek; window.info = f.info;
+  window.seek = f.seek; window.info = f.info; window.capa = f.capa;
   window.png = () => document.getElementById('c').toDataURL('image/png');
   f.seek(0); return true;
 });

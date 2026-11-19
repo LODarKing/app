@@ -8,6 +8,7 @@ import { SPR, cenaEscalaSinal, cena5 } from './cenas_meio';
 import { cena6, cena7 } from './cenas_final';
 import { criarJupiter, criarSaturno } from './planetas';
 import { legendas } from './legendas';
+import { capa } from './capa';
 
 export { T };
 export async function carregarFontes(base: string) {
@@ -52,5 +53,5 @@ export async function criar(canvas: HTMLCanvasElement, opts: { fontes: string; t
     if (opts.legenda !== false) legendas(c, t);
     c.restore();
   }
-  return { seek, info: () => ({ dur: T.dur, fps: T.fps, cenas: T.cenas, marcos: M }) };
+  return { seek, capa: () => capa(c, e), info: () => ({ dur: T.dur, fps: T.fps, cenas: T.cenas, marcos: M }) };
 }

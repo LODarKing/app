@@ -34,5 +34,6 @@ node render.mjs --sheet out/folha.png 17 34   # folha de um trecho
 node render.mjs --video out/episodio_video.mp4 0 66
 node render.mjs --mux out/episodio_video.mp4 audio/mix.wav video_final.mp4
 python3 -I audio/verificar_sincronia.py video_final.mp4 65.3
+node render.mjs --capa capa/CAPA_VOYAGER_1.png   # capa 9:16 + recorte 4:5 + guia (componentes_animacao/capa.ts)
 ```
 Dependências: Node 22, Playwright com o Chromium do ambiente, FFmpeg; Python 3 com numpy, scipy, soundfile, pyloudnorm, librosa, faster-whisper, torch/torchaudio e transformers (só para o alinhamento).

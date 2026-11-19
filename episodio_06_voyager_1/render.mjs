@@ -4,6 +4,7 @@
 //   node render.mjs --sheet saida.png [a b]        um quadro por batida medida (audio/beats.json) no trecho [a, b)
 //   node render.mjs --video saida.mp4 [a b]        vídeo sem áudio do trecho [a, b) — 4 páginas em paralelo
 //   node render.mjs --mux video.mp4 audio.wav saida.mp4   junta imagem e som (AAC 48 kHz 256k, +faststart)
+//   node render.mjs --capa capa/CAPA.png           capa 9:16 (+ recorte 4:5 e guia)
 //   --sem-legenda  versão limpa
 // Vídeo: H.264, yuv420p, CRF 16, 30 q/s. Quadros vão direto para o codificador.
 import { createRequire } from 'node:module';
@@ -62,6 +63,12 @@ if (args[0] === '--frame') {
   const files = [];
   for (const x of beats) { const f = `out/_b_${x.toFixed(3)}.png`; fs.writeFileSync(f, await grab(p, x + 0.02)); files.push(f); }
   sheet(files, beats.map((x) => x.toFixed(2) + 's'), out, 6); console.log(out, files.length, 'batidas');
+} else if (args[0] === '--capa') {
+  // --capa saida.png: capa 9:16 com o essencial na faixa 4:5 (y 285–1635); gera também o recorte 4:5 e saida_guia4x5.png
+  const p = await page(); await p.evaluate(() => window.capa()); fs.writeFileSync(args[1], buf(await p.evaluate(() => window.png())));
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-vf', 'drawbox=x=0:y=285:w=1080:h=1350:color=0x00E5FF@0.9:t=6', args[1].replace(/\.png$/, '_guia4x5.png')]);
+  execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', args[1], '-vf', 'crop=1080:1350:0:285', args[1].replace(/\.png$/, '_recorte4x5.png')]);
+  console.log('capa:', args[1]);
 } else if (args[0] === '--video') {
   const out = args[1], p0 = await page(), info = await p0.evaluate(() => window.info());
   const a = Number(args[2] || 0), b = Number(args[3] || info.dur), f0 = Math.round(a * FPS), f1 = Math.round(b * FPS), n = f1 - f0, per = Math.ceil(n / NP), t0 = Date.now();
