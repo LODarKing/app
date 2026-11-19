@@ -1,0 +1,20 @@
+{
+  "_sobre": "Fonte única dos tempos (segundos). Lida pela composição (TS) e pela síntese do som (audio/sintetizar.py). Grade: 120 BPM, batida = 0,5 s.",
+  "fps": 30,
+  "duracao": 4.5,
+  "bpm": 120,
+  "batomEntra": [0.0, 0.25],
+  "labioInferior": [0.25, 0.6],
+  "labioSuperior": [0.625, 1.0],
+  "mwah": 1.0,
+  "zoom": [1.0, 1.7],
+  "tracoMapa": [1.0, 2.0],
+  "beijoMapa": 2.0,
+  "preenchimento": [2.0, 2.45],
+  "detalhesMapa": [2.05, 2.45],
+  "enquantoIsso": [2.25, 2.55],
+  "em": 2.5,
+  "amontada": [2.5, 2.85],
+  "pontos": [3.0, 3.125, 3.25],
+  "saida": [4.0, 4.42]
+}

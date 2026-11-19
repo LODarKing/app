@@ -60,3 +60,6 @@ NOS_AMARRAS_EPISODIO/audio/*.wav
 NOS_AMARRAS_EPISODIO/narracao/
 NOS_AMARRAS_EPISODIO/node_modules/
 NOS_AMARRAS_EPISODIO/*.mp3
+# Vinheta Enquanto Isso: dependências e quadros de conferência
+VINHETA_ENQUANTO_ISSO/node_modules/
+VINHETA_ENQUANTO_ISSO/out/
