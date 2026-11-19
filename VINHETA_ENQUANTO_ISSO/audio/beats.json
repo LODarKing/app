@@ -1,6 +1,14 @@
 {
  "bpm": 120,
+ "tonalidade": "Fá menor",
  "batida_s": 0.5,
+ "motivo": [
+  "C5",
+  "F5",
+  "Eb5",
+  "Ab5",
+  "F5"
+ ],
  "batidas": [
   0.0,
   0.5,
@@ -13,118 +21,126 @@
   4.0
  ],
  "onsets_medidos": [
-  0.001,
-  0.246,
+  -0.004,
+  0.126,
+  0.376,
   0.501,
-  0.621,
-  0.746,
-  0.846,
-  0.921,
+  0.691,
+  0.751,
+  0.876,
   0.996,
-  1.126,
-  1.246,
-  1.376,
+  1.071,
+  1.251,
+  1.371,
   1.496,
   1.621,
   1.746,
-  1.871,
+  1.876,
   1.996,
-  2.246,
-  2.496,
+  2.126,
+  2.251,
+  2.376,
+  2.501,
+  2.636,
   2.746,
+  2.891,
   2.996,
-  3.121,
-  3.246,
-  3.496,
-  3.746,
-  3.996
+  3.251,
+  3.376,
+  3.501
  ],
  "acertos": [
   {
+   "evento": "provocação: Dó5 + clique",
    "t": 0.0,
-   "evento": "gancho: bumbo + acorde Fm9",
-   "medido": 0.001,
-   "desvio_ms": 0.7,
-   "na_grade": true
+   "medido": -0.004,
+   "desvio_ms": -4.3
   },
   {
-   "t": 0.25,
-   "evento": "batom: lábio inferior",
-   "medido": 0.246,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "evento": "provocação: Fá5",
+   "t": 0.125,
+   "medido": 0.126,
+   "desvio_ms": 0.7
   },
   {
-   "t": 0.625,
-   "evento": "batom: lábio superior",
-   "medido": 0.621,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "evento": "batom toca o lábio (Mi♭5 + seda)",
+   "t": 0.375,
+   "medido": 0.376,
+   "desvio_ms": 0.7
   },
   {
+   "evento": "lábio superior",
+   "t": 0.6875,
+   "medido": 0.691,
+   "desvio_ms": 3.2
+  },
+  {
+   "evento": "\"mwah\" afinado (Dó6)",
    "t": 1.0,
-   "evento": "mwah (estalo do beijo)",
    "medido": 0.996,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "desvio_ms": -4.3
   },
   {
-   "t": 1.0,
-   "evento": "mapa: arpejo começa (batom sai da boca)",
-   "medido": 0.996,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "evento": "batom começa o contorno",
+   "t": 1.25,
+   "medido": 1.251,
+   "desvio_ms": 0.7
   },
   {
+   "evento": "beijo no mapa = motivo nota 1 (Dó5)",
    "t": 2.0,
-   "evento": "beijo no mapa (carimbo + sino)",
    "medido": 1.996,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "desvio_ms": -4.3
   },
   {
-   "t": 2.25,
-   "evento": "Enquanto Isso",
-   "medido": 2.246,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "evento": "\"Enquanto\" = Fá5",
+   "t": 2.125,
+   "medido": 2.126,
+   "desvio_ms": 0.7
   },
   {
+   "evento": "\"Isso\" = Mi♭5",
+   "t": 2.375,
+   "medido": 2.376,
+   "desvio_ms": 0.7
+  },
+  {
+   "evento": "\"em\" (estalo, melodia respira)",
    "t": 2.5,
-   "evento": "Amontada: impacto + passada",
-   "medido": 2.496,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "medido": 2.501,
+   "desvio_ms": 0.7
   },
   {
+   "evento": "batom em \"Amontada\" = Lá♭5 sincopado",
+   "t": 2.75,
+   "medido": 2.746,
+   "desvio_ms": -4.3
+  },
+  {
+   "evento": "IMPACTO \"Amontada\" = Fá5",
    "t": 3.0,
-   "evento": "ponto 1",
    "medido": 2.996,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "desvio_ms": -4.3
   },
   {
-   "t": 3.125,
-   "evento": "ponto 2",
-   "medido": 3.121,
-   "desvio_ms": -4.3,
-   "na_grade": true
-  },
-  {
+   "evento": "reticência 1 = Mi♭6",
    "t": 3.25,
-   "evento": "ponto 3",
-   "medido": 3.246,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "medido": 3.251,
+   "desvio_ms": 0.7
   },
   {
-   "t": 4.0,
-   "evento": "saída: passada final",
-   "medido": 3.996,
-   "desvio_ms": -4.3,
-   "na_grade": true
+   "evento": "reticência 2 = Lá♭6",
+   "t": 3.375,
+   "medido": 3.376,
+   "desvio_ms": 0.7
+  },
+  {
+   "evento": "reticência 3 = Fá6 (fim)",
+   "t": 3.5,
+   "medido": 3.501,
+   "desvio_ms": 0.7
   }
  ],
  "loudness_lufs": -14.0,
- "pico_verdadeiro_dbtp": -1.5
+ "pico_verdadeiro_dbtp": -1.3
 }

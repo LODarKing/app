@@ -26,7 +26,7 @@ export const TitleAnimation: React.FC<{ t: number; static?: boolean }> = ({ t, s
     <div style={{ position: 'absolute', inset: 0 }}>
       <div style={{ ...anton, position: 'absolute', left: TITLE.left, top: TITLE.enquantoTop, fontSize: TITLE.enquantoSize, color: COLORS.wine }}>
         <Rise t={tt} t0={e0} h={TITLE.enquantoSize}>Enquanto</Rise>{' '}
-        <Rise t={tt} t0={e0 + 0.09} h={TITLE.enquantoSize}>Isso</Rise>
+        <Rise t={tt} t0={T.isso} h={TITLE.enquantoSize}>Isso</Rise>
       </div>
       <div style={{ position: 'absolute', left: TITLE.left + 6, top: TITLE.emTop, fontFamily: 'Poppins', fontStyle: 'italic', fontWeight: 600, fontSize: TITLE.emSize, lineHeight: 1, color: COLORS.pink, transform: `scale(${em.toFixed(4)}) rotate(${((1 - em) * -14).toFixed(2)}deg)`, transformOrigin: '20% 70%' }}>
         em

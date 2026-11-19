@@ -70,6 +70,6 @@ if (args[0] === '--video' || args[0] === '--tudo') {
     const out = 'entregaveis/vinheta-enquanto-isso-em-amontada.mp4';
     execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', silent, '-i', MIX, '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '320k', '-ar', '48000', '-t', String(T.duracao), '-movflags', '+faststart', out]);
     console.log(out);
-  } else console.log('sem mixagem em', MIX, '— rode python3 audio/sintetizar.py');
+  } else console.log('sem mixagem em', MIX, '— rode python3 audio/sonic_logo.py');
 }
 await browser.close({ silent: true });

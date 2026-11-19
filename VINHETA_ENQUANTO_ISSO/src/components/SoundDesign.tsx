@@ -1,6 +1,6 @@
-// Som: trilha + efeitos sintetizados em código (audio/sintetizar.py), mixados em -14 LUFS e alinhados à
-// grade de 120 BPM lida de src/timeline.json. Aqui só se toca a mixagem final; as faixas separadas
-// (stems) ficam em public/audio/ para quem quiser remixar.
+// Som: assinatura sonora sintetizada em código (audio/sonic_logo.py) — 120 BPM, Fá menor, motivo Dó5 Fá5 Mi♭5 · Lá♭5 Fá5 —
+// masterizada em -14 LUFS e alinhada aos tempos de src/timeline.json. Versões, stems e documentação em
+// entregaveis/rackel-sonic-logo/.
 import React from 'react';
 import { Audio, staticFile } from 'remotion';
 
