@@ -9,7 +9,7 @@ Contrato de render: `window.seek(t)` desenha o quadro do instante t (função pu
 | `narracao_original/` | Arquivo recebido, intacto |
 | `narracao_tratada.wav` | Voz com tratamento técnico leve (48 kHz, mesma duração) |
 | `transcricao_narracao.txt`, `mapa_sincronizacao.json`, `legendas.srt` | Transcrição, mapa de sincronização (frases, palavras, pausas, intensidade, revelações, efeitos, cenas) e legendas |
-| `componentes_animacao/` | Motor e cenas em TypeScript: `core.ts` (tempo, cores, fontes, texto), `espaco3d.ts` (estrelas, Via Láctea, Terra, Lua), `voyager.ts` (modelo 3D), `cenas_abertura.ts`, `legendas.ts`, `filme.ts` |
+| `componentes_animacao/` | Motor e cenas em TypeScript: `core.ts` (tempo, cores, fontes, texto), `espaco3d.ts` (estrelas, Via Láctea, Terra, Lua), `voyager.ts` (modelo 3D), `cenas_abertura.ts` (1–3a), `cenas_meio.ts` (3b–5), `cenas_final.ts` (6–7), `planetas.ts`, `legendas.ts`, `filme.ts` |
 | `remotion/` | Projeto Remotion editável, que usa os mesmos componentes (`npm run studio`) |
 | `audio/` | Transcrição, alinhamento, mapa, tratamento da voz, síntese da trilha e dos efeitos, batidas medidas e acertos |
 | `assets/nasa/`, `fonts/` | Texturas NASA (domínio público) e fontes OFL, com as licenças |
@@ -28,5 +28,11 @@ node render.mjs --sheet out/folha.png 0 12.55 # um quadro por batida
 node render.mjs --video out/piloto_video.mp4 0 12.55
 node render.mjs --mux out/piloto_video.mp4 audio/mix_piloto.wav piloto_10s.mp4
 python3 -I audio/verificar_sincronia.py piloto_10s.mp4 12.4
+# episódio completo
+python3 -I audio/som.py                       # audio/mix.wav (66 s), beats.json, acertos.json
+node render.mjs --sheet out/folha.png 17 34   # folha de um trecho
+node render.mjs --video out/episodio_video.mp4 0 66
+node render.mjs --mux out/episodio_video.mp4 audio/mix.wav video_final.mp4
+python3 -I audio/verificar_sincronia.py video_final.mp4 65.3
 ```
 Dependências: Node 22, Playwright com o Chromium do ambiente, FFmpeg; Python 3 com numpy, scipy, soundfile, pyloudnorm, librosa, faster-whisper, torch/torchaudio e transformers (só para o alinhamento).
