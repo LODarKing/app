@@ -5,6 +5,8 @@
 export const COLORS = {
   /** Vinho profundo: fundo. Puxado para o vermelho, mas escuro o bastante para o rosa e o batom saltarem. */
   fundo: '#420D20',
+  /** Vinho um pouco mais claro: o território de Amontada preenchido no mapa do fundo. */
+  fundoClaro: '#541129',
   /** Branco quente, levemente rosado: “Enquanto Isso”, “em”, contornos e linhas finas. */
   branco: '#FBEFEE',
   /** Rosa: cor de destaque — “Amontada…”, o fio, a faixa, o estojo do batom e a cortina. */
@@ -66,6 +68,9 @@ export const LAYOUT = {
   /** Boca: canto superior esquerdo da caixa (400 × 182 unidades) e escala. Centralizada no alto,
    *  acima do título, com espaço à direita para o batom entrar inteiro na tela. */
   boca: { x: 540 - 200 * 1.2, y: 292, escala: 1.2 },
+  /** Mapa de Amontada (só o contorno): posição, largura, espessura do traço e opacidade.
+   *  Fica atrás do título e desce até a área vazia de baixo, equilibrando a tela. */
+  mapa: { x: 150, y: 560, largura: 860, traco: 5, opacidade: 0.7 },
   /** Pontos da abertura: 1,8× os pontos da reticência. */
   escalaPontosAbertura: 1.8,
 } as const;

@@ -180,6 +180,10 @@ def main() -> None:
                        capture_output=True, check=True)
     final = np.frombuffer(r.stdout, dtype=np.uint8).reshape(H, W, 3).astype(np.float32)
     mask = np.abs(final - fundo).max(axis=2) > 60
+    # abertura morfológica: some o que é traço fino (contorno do mapa, fio), fica o que é texto e boca
+    from scipy import ndimage
+
+    mask = ndimage.binary_opening(mask, iterations=5)
     ys, xs = np.where(mask)
     x0, x1, y0, y1 = xs.min(), xs.max(), ys.min(), ys.max()
     check(x0 >= 65 and x1 <= W - 65, f"título e boca entre x={x0} e x={x1} (margens laterais ≥ 65 px)")

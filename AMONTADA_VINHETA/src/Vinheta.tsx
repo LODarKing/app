@@ -9,6 +9,7 @@ import { bordasCortina, Cortina } from './components/Cortina';
 import { Fio } from './components/Fio';
 import { Fundo, Grao } from './components/Fundo';
 import { Linhas } from './components/Linhas';
+import { Mapa } from './components/Mapa';
 import { FontGate } from './lib/fonts';
 import { computeLayout } from './lib/layout';
 import { EASE, prog } from './lib/motion';
@@ -43,6 +44,9 @@ const Cena: React.FC<{ frame: number; modo: Modo; capa?: boolean }> = ({ frame, 
       <AbsoluteFill style={{ clipPath: recorte }}>
         <svg width={WIDTH} height={HEIGHT} style={{ position: 'absolute', inset: 0, overflow: 'visible' }}>
           {/* na saída cada camada ganha impulso diferente: o título se inclina para a cortina */}
+          <g transform={`translate(${saida * 0.3} 0)`}>
+            <Mapa frame={frame} comPreenchimento={modo !== 'alfaElementos'} />
+          </g>
           <g transform={`translate(${saida * 1.2} 0)`}>
             <Boca frame={frame} capa={capa} />
           </g>

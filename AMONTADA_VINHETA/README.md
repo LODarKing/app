@@ -29,15 +29,17 @@ Projeto em **React + TypeScript + Remotion**, editável e determinístico: o mes
 
 **A boca com batom.** Uma boca desenhada no alto da tela é o toque pessoal e irreverente do quadro. O contorno se desenha enquanto “Enquanto Isso” assenta. Na composição final, um batom entra e pinta os lábios de vermelho: o de cima da direita para a esquerda, o de baixo da esquerda para a direita, cada traço num acerto. A tinta aparece exatamente por onde a ponta passa. O batom sai e a boca dá um beijo curto, com som.
 
+**O mapa de Amontada.** O contorno do município, extraído do mapa enviado pela cliente (só a silhueta, sem nomes de localidades, estradas ou marcadores), se desenha no fundo desde o primeiro quadro, com uma ponta de caneta rosa. O traço fecha exatamente quando “Amontada…” pousa (1,5 s), e o território se preenche com um vinho um pouco mais claro junto com a revelação do nome.
+
 Tudo é desenhado a partir da própria fonte. Os pontos da abertura são retângulos com as proporções exatas do ponto final da Archivo (0,143 × 0,179 em), então a reticência de “Amontada…” e os pontos que abrem a vinheta são o mesmo objeto.
 
 ### Storyboard (120 bpm: 1 batida = 0,5 s = 15 quadros)
 
 | Tempo | Quadros | Imagem | Som |
 |---|---|---|---|
-| 0,00–0,45 s | 0–13 | Fundo vinho com grão e linhas finas (círculos, arco, grade de pontinhos) já em deriva, em três profundidades. Os três pontos rosa surgem um por acerto (0,125 / 0,25 / 0,375 s) e se esticam no fio, que atravessa a tela | Motivo “reticência”: Dó#–Mi–Fá# em pluck FM, da esquerda para a direita. Whoosh suave subindo com o fio |
+| 0,00–0,45 s | 0–13 | Fundo vinho com grão e grade de pontinhos. O contorno do mapa de Amontada já está sendo desenhado no quadro 0, a partir da ponta norte do litoral. Os três pontos rosa surgem um por acerto (0,125 / 0,25 / 0,375 s) e se esticam no fio, que atravessa a tela | Motivo “reticência”: Dó#–Mi–Fá# em pluck FM, da esquerda para a direita. Whoosh suave subindo com o fio |
 | 0,45–1,10 s | 13–33 | “Enquanto” e “Isso” sobem de trás de máscaras horizontais, letra por letra, com overshoot de mola (~10 %) e o espaçamento se fechando. A partir de 0,6 s, o contorno da boca se desenha em traço fino no alto | **0,5 s:** impacto sutil (baque grave + ar) e entra o pulso: bumbo, baixo, pad Fá#m9 |
-| 1,10–1,85 s | 30–57 | O bloco sobe e abre espaço; o fio vira a régua do “em”, que sai de trás da ponta do fio. **1,5 s:** a faixa rosa corre da esquerda e pousa com “Amontada…” vazado em vinho. **1,75 s:** a faixa recolhe para a direita e deixa o nome em rosa | Sopro curto (1,0 s), toque de madeira no “em” (1,25 s), deslize lateral + pouso (1,5 s; harmonia vai para Ré7M9), “zíper” (1,75 s) |
+| 1,10–1,85 s | 30–57 | O bloco sobe e abre espaço. O contorno do mapa fecha em 1,5 s e o território se preenche da esquerda para a direita junto com o nome; o fio vira a régua do “em”, que sai de trás da ponta do fio. **1,5 s:** a faixa rosa corre da esquerda e pousa com “Amontada…” vazado em vinho. **1,75 s:** a faixa recolhe para a direita e deixa o nome em rosa | Sopro curto (1,0 s), toque de madeira no “em” (1,25 s), deslize lateral + pouso (1,5 s; harmonia vai para Ré7M9), “zíper” (1,75 s) |
 | 1,85–2,95 s | 55–88 | Composição final legível por mais de 1 s. O batom entra e pinta o lábio de cima (**2,0 s**) e o de baixo (**2,25 s**), depois sai. **2,5 s:** a boca dá um beijo e ganha um reflexo. **2,625 / 2,75 / 2,875 s:** os três pontos da reticência pulam | Dois traços cerosos de batom, com panorâmica acompanhando a ponta; “beijinho” em 2,5 s; chimbal em semicolcheias; Mi sus. Motivo de resposta Dó#–Mi–Lá nos três pulos |
 | 2,95–3,50 s | 85–104 | O título e a boca se inclinam para a direita (cada camada numa velocidade). A cortina varre da esquerda para a direita: faixa vermelha fina, painel rosa cobrindo o quadro no acerto, saída pela direita com o vermelho fechando | Whoosh para a cortina, **respiro de 40 ms** e **acento final em 3,0 s**: acorde Lá 6/9, sino, bumbo; o rastro acompanha a cortina e o som soa até o fim com fade-out |
 
@@ -51,6 +53,7 @@ Tudo é desenhado a partir da própria fonte. Os pontos da abertura são retâng
   - vermelho escuro `#A9142B`: lábio de cima e sombra do batom.
 - **Tipografia:** uma fonte de título, **Archivo** variável em peso 900 e largura 62,5 % (extracondensada), com kerning medido letra a letra. Uma fonte de interface, **Space Grotesk** 500, só no “em”.
 - **Hierarquia:** “Enquanto / Isso” em branco, 188 px · “em” discreto, 66 px, preso ao fio · “Amontada…” em rosa, 215 px, a linha mais larga · a boca (480 px de largura) centralizada acima do título.
+- **Mapa:** contorno rosa (5 px, 70 %) de 860 px de largura atrás do título, descendo até a área de baixo da tela, que antes ficava vazia. Ele é decorativo, então pode passar sob a interface do Instagram; o texto não passa.
 - **Zona segura:** título e boca ficam entre x = 75–1004 e y = 312–1189. Isso é dentro da área livre dos Reels (250 px no alto, 670 px embaixo, 65 px nos lados) e do recorte 4:5 do feed. Conferido automaticamente.
 
 ### Trilha (`audio/gerar_trilha.py`)
@@ -74,7 +77,7 @@ node render.mjs --so-alfa    # só as versões ProRes 4444
 node render.mjs --tira=40-58 # todos os quadros de um intervalo, para conferir movimento
 ```
 
-Requisitos: Node 18+, Python 3.10+ com `numpy scipy pyloudnorm` (e `matplotlib` só para `tools/espectrograma.py`), ffmpeg/ffprobe para a conferência. A folha de contato usa o Playwright se estiver instalado; sem ele, os quadros ficam soltos em `qa/quadros/`.
+Requisitos: Node 18+, Python 3.10+ com `numpy scipy pyloudnorm` (`matplotlib` para `tools/espectrograma.py`; `pillow` e `contourpy` para `tools/extrair_mapa.py`), ffmpeg/ffprobe para a conferência. A folha de contato usa o Playwright se estiver instalado; sem ele, os quadros ficam soltos em `qa/quadros/`.
 
 ## Como editar
 
@@ -82,6 +85,8 @@ Requisitos: Node 18+, Python 3.10+ com `numpy scipy pyloudnorm` (e `matplotlib` 
 |---|---|
 | Cores, fontes, tamanhos, posições das linhas e da boca | `src/config/brand.ts` |
 | Forma dos lábios, desenho do batom, trajeto da pintura | `src/components/Boca.tsx` |
+| Posição, tamanho, espessura e opacidade do mapa | `LAYOUT.mapa` em `src/config/brand.ts` |
+| Silhueta do mapa (outra imagem de referência) | troque `assets/referencia/mapa-amontada-enviado.png` e rode `python3 tools/extrair_mapa.py` |
 | Andamento, acertos (em batidas), quadro da capa | `src/config/timeline.json`. Vídeo **e** áudio leem daqui: rode `npm run audio` e `npm run render` |
 | Duração de cada movimento em relação ao acerto | `src/config/coreografia.ts` |
 | Curvas e molas | `src/lib/motion.ts` |
@@ -96,7 +101,8 @@ src/
                layout.ts (geometria) · motion.ts (curvas, molas, mulberry32)
   components/  Fundo.tsx (fundo, linhas, grão) · Fio.tsx (pontos → fio → régua)
                Linhas.tsx (“Enquanto Isso”, “em”) · Cidade.tsx (faixa e “Amontada…”)
-               Boca.tsx (lábios, batom e beijo)
+               Boca.tsx (lábios, batom e beijo) · Mapa.tsx (contorno de Amontada)
+  config/mapaAmontada.ts   silhueta do município (gerada por tools/extrair_mapa.py)
                Cortina.tsx (saída)
   Vinheta.tsx  composição (modos: completo, alfaElementos, alfaTransicao)
   Root.tsx     composições registradas no Remotion
@@ -131,4 +137,4 @@ Notas do ciclo de revisão (regra do estúdio: tudo ≥ 8 antes do render final)
 
 - **Archivo** (Omnibus-Type) e **Space Grotesk** (Florian Karsten): SIL Open Font License 1.1. Os textos estão em `public/fonts/OFL-*.txt`.
 - **Trilha e efeitos:** originais, gerados por `audio/gerar_trilha.py` neste projeto. Não há amostras, loops ou música de terceiros.
-- **Elementos gráficos:** boca, batom e formas abstratas desenhados em código (sem mapas, monumentos nem imagens de terceiros).
+- **Elementos gráficos:** boca, batom e formas abstratas desenhados em código. O contorno do município foi extraído automaticamente (`tools/extrair_mapa.py`) do mapa enviado pela cliente, guardado em `assets/referencia/`. A vinheta usa só a silhueta, sem nenhum texto ou marcador do mapa original.

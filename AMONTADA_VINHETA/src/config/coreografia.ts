@@ -24,6 +24,12 @@ export const T = {
   // a faixa recolhe para a direita e revela “Amontada…” (acerto “revela”, 1,75 s)
   blocoSai: [cue('revela') - 4, cue('revela') + 4],
   cidadeDesliza: [cue('bloco') - 3, cue('revela') + 7],
+  // o mapa se desenha desde a abertura e fecha o traço quando “Amontada…” pousa;
+  // o território se preenche junto com a revelação do nome
+  mapa: {
+    traco: [-2, cueExact('bloco')],
+    preenche: [cueExact('revela') - 4, cueExact('revela') + 6],
+  },
   // CENA 2 — o contorno da boca se desenha no alto enquanto “Enquanto Isso” assenta
   contorno: [cueExact('contorno') - 1, cueExact('contorno') + 11],
   // CENA 4 — o batom entra, pinta o lábio de cima (direita → esquerda, acerto “batom1”),

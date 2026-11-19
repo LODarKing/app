@@ -48,26 +48,26 @@ Gerado por `tools/verificar.py`.
 - ✅ som: acerto `fimPonto2` em 2.750 s → ataque medido a 4 ms
 - ✅ som: acerto `fimPonto3` em 2.875 s → ataque medido a 4 ms
 - ✅ som: acerto `resolucao` em 3.000 s → ataque medido a 4 ms
-- ✅ imagem: há movimento no acerto `ponto1` (quadro 3.75; 0.14 % da tela muda)
-- ✅ imagem: há movimento no acerto `ponto2` (quadro 7.50; 0.22 % da tela muda)
-- ✅ imagem: há movimento no acerto `ponto3` (quadro 11.25; 1.23 % da tela muda)
-- ✅ imagem: há movimento no acerto `enquanto` (quadro 15.00; 2.53 % da tela muda)
-- ✅ imagem: há movimento no acerto `contorno` (quadro 18.75; 2.74 % da tela muda)
-- ✅ imagem: há movimento no acerto `sobe` (quadro 30.00; 1.43 % da tela muda)
-- ✅ imagem: há movimento no acerto `em` (quadro 37.50; 1.93 % da tela muda)
-- ✅ imagem: há movimento no acerto `bloco` (quadro 45.00; 2.03 % da tela muda)
+- ✅ imagem: há movimento no acerto `ponto1` (quadro 3.75; 0.18 % da tela muda)
+- ✅ imagem: há movimento no acerto `ponto2` (quadro 7.50; 0.26 % da tela muda)
+- ✅ imagem: há movimento no acerto `ponto3` (quadro 11.25; 1.29 % da tela muda)
+- ✅ imagem: há movimento no acerto `enquanto` (quadro 15.00; 2.60 % da tela muda)
+- ✅ imagem: há movimento no acerto `contorno` (quadro 18.75; 2.83 % da tela muda)
+- ✅ imagem: há movimento no acerto `sobe` (quadro 30.00; 1.47 % da tela muda)
+- ✅ imagem: há movimento no acerto `em` (quadro 37.50; 1.96 % da tela muda)
+- ✅ imagem: há movimento no acerto `bloco` (quadro 45.00; 2.05 % da tela muda)
 - ✅ imagem: há movimento no acerto `revela` (quadro 52.50; 3.97 % da tela muda)
 - ✅ imagem: há movimento no acerto `batom1` (quadro 60.00; 0.74 % da tela muda)
 - ✅ imagem: há movimento no acerto `batom2` (quadro 67.50; 1.40 % da tela muda)
-- ✅ imagem: há movimento no acerto `beijo` (quadro 75.00; 1.72 % da tela muda)
+- ✅ imagem: há movimento no acerto `beijo` (quadro 75.00; 1.71 % da tela muda)
 - ✅ imagem: há movimento no acerto `fimPonto1` (quadro 78.75; 1.31 % da tela muda)
 - ✅ imagem: há movimento no acerto `fimPonto2` (quadro 82.50; 0.25 % da tela muda)
-- ✅ imagem: há movimento no acerto `fimPonto3` (quadro 86.25; 41.43 % da tela muda)
+- ✅ imagem: há movimento no acerto `fimPonto3` (quadro 86.25; 41.44 % da tela muda)
 - ✅ imagem: há movimento no acerto `resolucao` (quadro 90.00; 20.54 % da tela muda)
 
 ### Composição
 
 - ✅ nenhum quadro vazio entre a 1ª batida visual e a saída
 - ✅ título e boca entre x=75 e x=1004 (margens laterais ≥ 65 px)
-- ✅ título e boca entre y=312 e y=1189 (livre dos 250 px do topo e 670 px de baixo dos Reels)
+- ✅ título e boca entre y=312 e y=1191 (livre dos 250 px do topo e 670 px de baixo dos Reels)
 - ✅ composição inteira dentro do recorte 4:5 do feed
