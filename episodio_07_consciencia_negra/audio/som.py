@@ -307,8 +307,8 @@ def trilha_episodio(dur, fala):
     for i, k in enumerate(np.arange(72.0, 74.25, 0.25)):
         por(mono, tique(730 + i, 0.08 + 0.02 * i), b(k))
     A('suspense: sopro + semicolcheias até 2024', b(71.5))
-    por(mono, sub(29, 3.5, 0.7), b(74.25)); S(89, b(74.25), 0.09, 4.5); por(mono, papel(740, 0.4), b(74.25), 0.25)
-    for nt in (41, 48, 53, 57, 60, 67): P(nt, b(74.25), 0.4, 4.5)
+    por(mono, sub(29, 3.5, 0.45), b(74.25)); S(89, b(74.25), 0.07, 4.5); por(mono, papel(740, 0.4), b(74.25), 0.2)
+    for nt in (41, 48, 53, 57, 60, 67): P(nt, b(74.25), 0.26, 4.5)
     A('REVELAÇÃO 2024: grave Fá + acorde aberto + sino', b(74.25))
     # ---------- CENA 06 · presente: harmonia aberta (Fá maior), arpejo mais claro ----------
     blocos = [(76.5, [41, 48, 53, 57, 60, 67]), (80.0, [46, 53, 57, 62, 65]), (83.5, [50, 57, 60, 65]), (86.5, [40, 48, 55, 60, 64])]
@@ -328,9 +328,9 @@ def trilha_episodio(dur, fala):
     S(84, b(92), 0.07); A('20 dourado', b(92))
     tp = grade16(fala['presente']); P(72, tp, 0.3); A('NOVEMBRO (presente)', tp)
     ta = grade16(fala['alem']); te = grade16(fala['extra'])
-    por(mono, pad([41, 48, 53, 57, 60, 67, 72], dur - ta, 70), ta, 0.17)
-    por(mono, sub(29, 5.0, 0.55), ta)
-    for nt in (41, 53, 57, 60, 64, 67): P(nt, ta, 0.38, 6)
+    por(mono, pad([41, 48, 53, 57, 60, 67, 72], dur - ta, 70), ta, 0.13)
+    por(mono, sub(29, 5.0, 0.32), ta)
+    for nt in (41, 53, 57, 60, 64, 67): P(nt, ta, 0.22, 6)
     S(89, ta, 0.08, 6); A('marca AV — acorde final', ta)
     S(84, te, 0.06, 5); P(77, te, 0.22, 5); A('O EXTRAORDINÁRIO ESTÁ NOS DETALHES', te)
     mono = reverb(mono, 901, 2.6, 0.3)
@@ -361,9 +361,16 @@ def mix(voz, mus, dur, nome):
     # a voz termina antes de "durante" (11,94 s): rampa de 20 ms no silêncio para não cortar nada
     # duck: envelope da voz (RMS 50 ms) abaixa a trilha ~6 dB sob a fala, com ataque/soltura suaves
     k = int(0.05 * SR); e = np.sqrt(np.convolve(v ** 2, np.ones(k) / k, 'same')); e = e / (e.max() + 1e-9)
-    g = 1 - 0.5 * np.clip(e * 4, 0, 1); g = np.convolve(g, np.ones(int(0.25 * SR)) / int(0.25 * SR), 'same')
-    M = mus[:n] * g[:, None]
-    out = np.stack([v, v], 1) * 1.0 + M * 0.55
+    g = 1 - 0.66 * np.clip(e * 4, 0, 1); g = np.convolve(g, np.ones(int(0.25 * SR)) / int(0.25 * SR), 'same')
+    M = mus[:n] * g[:, None] * 0.45
+    V = np.stack([v, v], 1)
+    # relatório: voz × trilha (já com ducking), em LUFS de curto prazo, nos trechos com fala (alvo: voz ≥ 8 LU acima)
+    met0 = pyln.Meter(SR, block_size=0.4); rel = []
+    for a in np.arange(0, n / SR - 3, 3.0):
+        i, j = int(a * SR), int((a + 3) * SR); lv = met0.integrated_loudness(V[i:j])
+        if lv > -40: rel.append((round(a, 1), round(lv - met0.integrated_loudness(M[i:j] + 1e-9), 1)))
+    print('voz − trilha (LU) por janela de 3 s:', rel, '| mínimo', min(r[1] for r in rel))
+    out = V * 1.0 + M
     # loudness -14 LUFS integrado, depois limitador de pico verdadeiro (-1 dBTP, sobreamostragem 4×)
     met = pyln.Meter(SR); lu = met.integrated_loudness(out); out *= 10 ** ((-14 - lu) / 20)
     for _ in range(6):
@@ -394,7 +401,7 @@ if __name__ == '__main__':
         print('beats:', {k: v for k, v in bt.items() if k != 'batidas'}, '| mix:', lu, 'LUFS', tp, 'dBTP')
     elif modo == 'episodio':
         fala = json.load(open('remotion/src/data/fala.json'))
-        DUR = round((fala['fimFala'] + 5.1) * 30) / 30
+        DUR = round((fala['fimFala'] + 5.6) * 30) / 30
         if fala.get('corteVoz'):   # arquivo truncado: a voz para no fim da última palavra completa (sem o fragmento cortado)
             c = int(fala['corteVoz'] * SR); r = int(0.012 * SR); voz = voz.copy(); voz[c - r:c] *= np.linspace(1, 0, r); voz[c:] = 0
         mus, ac = trilha_episodio(DUR, fala)

@@ -13,8 +13,8 @@ import { Cena06 } from './cenas/Cena06';
 import { Cena07 } from './cenas/Cena07';
 import fala from './data/fala.json';
 
-// duração: fim da fala + 5,1 s de encerramento (marca + respiro da trilha)
-export const EPISODIO_QUADROS = Math.round((fala.fimFala + 5.1) * FPS);
+// duração: fim da fala + 5,6 s de encerramento (marca + respiro da trilha; total ≥ 70 s)
+export const EPISODIO_QUADROS = Math.round((fala.fimFala + 5.6) * FPS);
 export const FIM_CENA01 = 356 / FPS; // a cena 01 é exatamente o piloto aprovado
 
 /** registro histórico (papel quente) de 1971 até Palmares; volta ao azul contemporâneo em "Hoje" */

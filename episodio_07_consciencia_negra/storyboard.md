@@ -69,14 +69,14 @@ A linha do tempo dourada vira a moldura de 4 quadros, sob "HOJE · 20 DE NOVEMBR
 | IGUALDADE | b86.25 "igualdade racial" | Formatura: duas pessoas de beca com diploma |
 Cada quadro "acende" na sua palavra. Nenhum símbolo de escravidão; nenhum instrumento ou traje usado como decoração.
 
-## CENA 07 — Encerramento (56,9 s → fim, 70,5 s) · `Cena07.tsx`
+## CENA 07 — Encerramento (56,9 s → fim, 70,07 s) · `Cena07.tsx`
 | t | Fala | Imagem |
 |---|---|---|
 | 56,93 (b88.25) | "Porque conhecer o passado" | Os quadros se juntam. |
 | 58,55 (b90.75) | "também **transforma**" | Só o que está **dentro do número 20** permanece: as ilustrações viram o "20", que se enche de dourado. |
-| 60,34 | "o presente" | NOVEMBRO. |
-| 61,0–61,7 | — | A câmera se afasta: DIA NACIONAL DE ZUMBI / E DA CONSCIÊNCIA NEGRA. |
-| 61,70 | "Além do Visível" | **Logo AV original** (arquivo do canal, sem alteração), revelada por íris + ALÉM DO VISÍVEL. |
-| 63,25 | "O extraordinário está nos detalhes" | O EXTRAORDINÁRIO ESTÁ NOS DETALHES. |
-| 66,0–67,8 | — | Fontes (Agência Senado · Agência Brasil · Fundação Palmares · MDH · Lei nº 14.759/2023 · UFRGS) e "ANIMAÇÃO ORIGINAL · NARRAÇÃO EM VOZ SINTÉTICA". |
-⚠️ Os tempos a partir de 60,34 s são **estimados** (arquivo de narração truncado) e são recalculados automaticamente com o áudio completo (`refazer_com_audio_completo.sh`).
+| 59,95 | "…o presente" | NOVEMBRO. |
+| 60,6–61,4 | — | A câmera se afasta: DIA NACIONAL DE ZUMBI / E DA CONSCIÊNCIA NEGRA. |
+| 61,38 | "Além do Visível" | **Logo AV original** (arquivo do canal, sem alteração), revelada por íris + ALÉM DO VISÍVEL. |
+| 62,88 | "O extraordinário está nos detalhes" | O EXTRAORDINÁRIO ESTÁ NOS DETALHES. |
+| 65,1–66,9 | — | Fontes (Agência Senado · Agência Brasil · Fundação Palmares · MDH · Lei nº 14.759/2023 · UFRGS) e "ANIMAÇÃO ORIGINAL · NARRAÇÃO EM VOZ SINTÉTICA". |
+Tempos do fim (fala real): "presente" 60,52 s · "Além do Visível" 61,38 s · "extraordinário" 62,88 s · fim da fala 64,48 s · fim do vídeo 70,07 s. NOVEMBRO entra em 59,95 s, logo depois do 20 dourado.

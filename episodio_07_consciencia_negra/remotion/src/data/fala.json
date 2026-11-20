@@ -1,8 +1,8 @@
 {
- "estimado": true,
- "corteVoz": 60.3,
- "presente": 60.34,
- "alem": 61.7,
- "extra": 63.25,
- "fimFala": 65.4
+ "estimado": false,
+ "corteVoz": null,
+ "presente": 60.52,
+ "alem": 61.38,
+ "extra": 62.88,
+ "fimFala": 64.48
 }

@@ -3,10 +3,10 @@
 | Arquivo | Conteúdo |
 |---|---|
 | `piloto_10s.mp4` | Piloto aprovado (11,87 s) |
-| `video_final_PREVIA.mp4` | Episódio completo (70,5 s) com a narração disponível — **prévia**: o arquivo de voz recebido termina em 60,3 s |
-| `refazer_com_audio_completo.sh` | Um comando: recebe o MP3 íntegro e refaz transcrição, legendas, tempos do fim, trilha, mix e `video_final.mp4` |
+| `video_final.mp4` | **Episódio final** (70,07 s), narração íntegra |
+| `refazer_com_audio_completo.sh` | Um comando: recebe um MP3 de narração e refaz transcrição, legendas, tempos do fim, trilha, mix e `video_final.mp4` |
 | `marca/Logo_AV.png` | Logo AV original enviada pelo canal (usada sem alteração) |
-| `narracao/narracao_original_recuperada_60s.mp3` | Narração enviada, **recuperada de zip truncado** (60,37 s) |
+| `narracao/narracao_original.mp3` | Narração original (ElevenLabs), íntegra, 64,52 s |
 | `narracao/narracao_tratada.wav` | Mesma voz: EQ suave, de-esser, compressão leve, tempos idênticos |
 | `roteiro_final.txt` · `storyboard.md` · `fontes_historicas.md` · `relatorio_qualidade.md` · `titulo_descricao_tags.txt` | Documentação |
 | `mapa_sincronizacao.json` · `legendas.srt` · `legendas_piloto.srt` | Tempos da fala real e legendas |

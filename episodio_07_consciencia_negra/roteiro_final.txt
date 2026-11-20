@@ -1,6 +1,6 @@
 ALÉM DO VISÍVEL — EPISÓDIO 07 | 20 DE NOVEMBRO: A HISTÓRIA POR TRÁS DA DATA
 Roteiro final = transcrição da narração real enviada (ElevenLabs), conferida palavra a palavra com o roteiro oficial.
-Tempos (s) medidos na fala. O arquivo recebido está TRUNCADO em 60,37 s (ver relatorio_qualidade.md).
+Tempos (s) medidos na fala (arquivo íntegro, 64,52 s).
 
 [00.00–05.88] Você sabe por que o Brasil celebra a Consciência Negra no dia vinte de novembro… e não no dia treze de maio?
 [06.58–09.88] A resposta começa muito antes de essa data virar feriado!
@@ -13,7 +13,8 @@ Tempos (s) medidos na fala. O arquivo recebido está TRUNCADO em 60,37 s (ver re
 [39.18–45.32] A proposta se espalhou, ganhou força com o movimento negro e, em dois mil e onze, a data foi oficializada nacionalmente.
 [45.68–48.74] Mas o feriado em todo o Brasil só chegou em dois mil e vinte e quatro!
 [49.42–56.40] Hoje, o vinte de novembro é um convite para lembrar a história, valorizar a cultura afro-brasileira e refletir sobre a igualdade racial.
-[56.40–60.37…] Porque conhecer o passado também transforma a maneira como enxergamos o pr— [ÁUDIO CORTADO NO ARQUIVO RECEBIDO]
-[ausente] …presente. / Além do Visível. / O extraordinário está nos detalhes.
+[56.40–60.82] Porque conhecer o passado também transforma a maneira como enxergamos o presente.
+[61.38–62.24] Além do Visível.
+[62.62–64.48] O extraordinário está nos detalhes.
 
-Diferenças roteiro × áudio: nenhuma no trecho recebido. O final falta por truncamento do arquivo, não por diferença de leitura.
+Diferenças roteiro × áudio: nenhuma.

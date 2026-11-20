@@ -52,46 +52,59 @@ Folhas: `documentacao/folha_piloto_v1.png`, `documentacao/folha_piloto_v3_final.
 
 ---
 
-# Episódio completo — `video_final_PREVIA.mp4` (após aprovação do piloto)
+# Episódio completo — `video_final.mp4`
 
-## ⚠️ Status: PRÉVIA, não é o vídeo final
-O segundo envio (`2c27810e-…zip`) é **idêntico byte a byte** ao primeiro (SHA-256 `2841caef…fada07`, 969.539 bytes), ou seja, continua truncado.
-A prévia usa a voz até **60,30 s** ("…como enxergamos"), com corte limpo no fim da última palavra completa, sem o fragmento "o pr…".
-**Não foram ouvidos na prévia:** "o presente. Além do Visível. O extraordinário está nos detalhes." Os gráficos dessas falas estão no lugar, com **tempos estimados** (marcados `"estimado": true` em `mapa_sincronizacao.json` e `remotion/src/data/fala.json`).
-Com o MP3 íntegro, `./refazer_com_audio_completo.sh Narração.mp3` refaz transcrição, legendas, tempos do encerramento, trilha, mixagem e gera `video_final.mp4`. **Só então o vídeo estará concluído.**
+## Status: CONCLUÍDO com a narração íntegra
+- Terceiro envio (`…negra__2.zip`, SHA-256 `75e8ea6a…58622a`): zip íntegro, MP3 de 1.049.296 bytes (igual ao declarado no cabeçalho), **64,52 s**, decodifica sem erros.
+- É a **mesma gravação** do arquivo recuperado antes: os primeiros 982.826 bytes são idênticos. Por isso toda a sincronia de 0 a 60,3 s continuou válida.
+- A transcrição nova bate palavra a palavra com o roteiro até o fim: "…como enxergamos o presente. Além do Visível, o extraordinário está nos detalhes." Nenhum tempo estimado ficou no projeto (`fala.json`: `"estimado": false`).
+- O encerramento agora segue a fala real: "presente" em 60,52 s, "Além do Visível" em 61,38 s (logo AV), "extraordinário" em 62,88 s (slogan) e fim da fala em 64,48 s.
+- Duração: fim da fala + 5,6 s = **70,07 s**. Antes eram 5,1 s, o que daria 69,6 s, abaixo do mínimo pedido de 70 s.
+- O arquivo recuperado do zip truncado foi removido; vale só `narracao/narracao_original.mp3`.
 
-## Especificações (medidas no arquivo)
+## Especificações (medidas em `video_final.mp4`)
 | Item | Resultado |
 |---|---|
-| Duração | 70,5 s (2.115 quadros): fala até 65,4 s (estimado) + 5,1 s de encerramento. Dentro da faixa pedida (70–85 s). |
-| Vídeo | 1080×1920, H.264, yuv420p, CRF 16, 30 q/s |
+| Vídeo | 1080×1920, H.264, yuv420p, CRF 16, 30 q/s, 2.102 quadros |
 | Áudio | AAC 48 kHz estéreo 256 kb/s · **−14,0 LUFS** integrado · pico verdadeiro **−1,6 dBTP** |
+| Voz × trilha | Voz de **7,4 a 18,8 LU acima da trilha** em todas as janelas de 3 s com fala (medido nas trilhas separadas, já com ducking) |
 | Decodificação | completa, sem erros |
-| Grade sonora | 93 BPM; 80 acertos; 63 inícios medidos, 100% na grade (resíduo máx. 8,7 ms) — `audio/beats.json`, `audio/acertos.json` |
-| Legendas | 43 blocos casados palavra a palavra com a fala (`legendas.srt`); os 2 blocos do fim (marca) aparecem só como texto de tela |
+| Grade sonora | 93 BPM; 80 acertos; 61 inícios medidos, 100% na grade (resíduo máx. 8,4 ms) |
+| Legendas | 45 blocos casados com a fala (`legendas.srt`, até 64,48 s); os 2 do fim aparecem como texto de tela da marca |
+| Voz | arquivo do ElevenLabs sem mudança de velocidade nem de timbre: EQ suave, de-esser e compressão leve (`narracao/narracao_tratada.wav`) |
+
+## Correção de mixagem feita nesta etapa
+Ao medir voz × trilha, os dois grandes acertos ("2024" e "Além do Visível") ficavam 6–9 dB acima da voz antes do ducking. A voz poderia ficar mascarada.
+Correções:
+- acordes desses dois momentos mais leves;
+- trilha geral −1,7 dB;
+- ducking sob a fala de −6 para até −9,5 dB.
+
+Resultado: a voz fica no mínimo 7,4 LU acima da trilha. Isso também deixa a trilha um pouco mais baixa no trecho do piloto que você aprovou.
 
 ## Ciclo de notas (folhas por batida + tiras de transição)
 | Critério | 1ª folha | final | O que mudou |
 |---|---|---|---|
 | Gancho (2 s) | 8 | 8 | Igual ao piloto aprovado |
-| Leitura no celular | 6 | 8 | Linha do tempo da cena 05 refeita: espaçamento uniforme, anos em 60 px, rótulos em 34 px. Contorno escuro nos algarismos e rótulos que ficam sobre o mapa (sem degradê atrás de título). |
-| Movimento | 7 | 8 | A ficha sai antes da cena 03 (havia sobreposição); o litoral de Alagoas não aparece mais como risco solto no zoom (30,9–31,5 s). Transições conferidas em 9 tiras. |
-| Variedade | 7 | 8 | O encerramento ficava 6 s parado; agora entram as fontes e o aviso de voz sintética. |
-| Marca | 8 | 8 | Logo AV original, sem alteração; paleta do briefing (dourado = 20 de novembro, ciano = presente, bege/terracota = histórico) |
-| Som | 8 | 8 | Acertos nas batidas casadas às palavras-chave (vinte, treze, Porto Alegre, Lei Áurea, protagonismo, 1695, Zumbi, 1978, 2011, 2024, palavras da cena 06) |
-Arquivos: `documentacao/folha_episodio_11-33s.png`, `folha_episodio_33-71s.png`, `folha_episodio_39-50s_v2.png`, `tiras_transicoes_episodio.png`.
+| Leitura no celular | 6 | 8 | Linha do tempo da cena 05 refeita (espaçamento uniforme, anos em 60 px, rótulos em 34 px); contorno escuro nos algarismos e rótulos sobre o mapa |
+| Movimento | 7 | 8 | A ficha sai antes da cena 03; o litoral de Alagoas não aparece mais solto no zoom; "NOVEMBRO" entra logo depois do 20 dourado (tem tempo de leitura) |
+| Variedade | 7 | 8 | Encerramento com fontes e aviso de voz sintética |
+| Marca | 8 | 8 | Logo AV original sem alteração (`marca/Logo_AV.png`); paleta do briefing |
+| Som | 7 | 8 | Acertos nas palavras-chave; voz sempre à frente (medido) |
+Arquivos: `documentacao/folha_episodio_11-33s.png`, `folha_episodio_33-71s.png`, `folha_episodio_39-50s_v2.png`, `folha_encerramento_audio_completo.png`, `tiras_transicoes_episodio.png`.
 
 ## Conferência final (item 15 do briefing)
 | Pergunta | Resposta |
 |---|---|
-| Fatos e datas corretos? | Sim: 1695, 1971 (julho; 1º ato em 20/11/1971, Clube Marcílio Dias), 1978 (MNU, Salvador), 2011 (Lei 12.519), Lei 14.759/2023 e feriado em 2024. 1971 − 1695 = 276 anos. Ver `fontes_historicas.md`. |
-| Marcos legais separados? | Sim: 2011 = oficialização (Lei 12.519); 2023 = lei do feriado (14.759); 2024 = primeiro feriado. 2003 (Lei 10.639) não aparece como oficialização. |
-| Mapas corretos? | Contorno e estados: Natural Earth (domínio público). Pontos reais: Porto Alegre, Salvador (MNU 1978), Serra da Barriga/União dos Palmares (AL, aprox.). A malha de pontos da cena 05 vem marcada "OS PONTOS NÃO SÃO CIDADES"; o relevo, "RELEVO SIMPLIFICADO · REPRESENTAÇÃO". |
-| Documento ou retrato inventado? | Não. A "ficha de pesquisa" é identificada como do canal; a Lei Áurea aparece como "REPRESENTAÇÃO GRÁFICA" (só número e ano, sem texto ou assinatura). Nenhum retrato de Zumbi ou de Oliveira Silveira; nenhuma fala atribuída. |
-| Representações respeitosas? | Sem violência, sem cena de morte, sem símbolos de escravidão no presente. As figuras da cena 06 são editoriais, sem rosto (evita caricatura), com diversidade de pele, cabelo e atividade (leitura, arte, organização coletiva, formatura). |
+| Fatos e datas corretos? | Sim: 1695; 1971 (julho; 1º ato em 20/11/1971, Clube Marcílio Dias); 1978 (MNU, Salvador); 2011 (Lei 12.519); Lei 14.759/2023 e feriado em 2024; 1971 − 1695 = 276 anos. Ver `fontes_historicas.md`. |
+| Marcos legais separados? | Sim: 2011 = oficialização; 2023 = lei do feriado; 2024 = primeiro feriado. 2003 (Lei 10.639) não aparece como oficialização. |
+| Mapas corretos? | Contorno e estados: Natural Earth (domínio público). Pontos reais: Porto Alegre, Salvador (MNU 1978), Serra da Barriga/União dos Palmares (AL, aprox.). A malha da cena 05 vem marcada "OS PONTOS NÃO SÃO CIDADES"; o relevo, "RELEVO SIMPLIFICADO · REPRESENTAÇÃO". |
+| Documento ou retrato inventado? | Não. A "ficha de pesquisa" é identificada como do canal; a Lei Áurea aparece como "REPRESENTAÇÃO GRÁFICA" (só número e ano). Nenhum retrato de Zumbi ou de Oliveira Silveira; nenhuma fala atribuída. |
+| Representações respeitosas? | Sem violência nem cena de morte. As figuras da cena 06 são editoriais, sem rosto, com diversidade de pele, cabelo e atividade (leitura, arte, organização coletiva, formatura). |
 | "Liberdade também é resistência"? | Síntese editorial, sem aspas e sem autoria. |
+| Narração sincronizada? | Sim, pela transcrição da fala real, palavra a palavra. |
 | Legendas corretas? | Ortografia revisada; números em algarismos; destaques do briefing em dourado e ciano. |
-| Licenças? | Fontes Playfair Display e IBM Plex Mono (OFL); Natural Earth (domínio público); datamaps (MIT); trilha e efeitos sintetizados em código; logo do canal fornecida pelo usuário. |
+| Licenças? | Playfair Display e IBM Plex Mono (OFL); Natural Earth (domínio público); datamaps (MIT); trilha e efeitos sintetizados em código; logo e narração fornecidas pelo canal. |
 | Transparência? | O fim do vídeo diz "ANIMAÇÃO ORIGINAL · NARRAÇÃO EM VOZ SINTÉTICA". |
-| Reprodução completa conferida? | Decodificação completa e tiras de 9 transições, mais folhas por batida. **A audição humana não foi feita**: ouça com fone. |
-| Pronto para publicar? | **Não**: falta o áudio íntegro dos últimos ~5 s. |
+| Arquivo final em 1080×1920? | Sim. |
+| Reprodução conferida? | Decodificação completa, tiras de 9 transições, folhas por batida e medições de áudio. **A audição humana não foi feita**: ouça com fone antes de publicar. |

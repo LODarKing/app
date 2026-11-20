@@ -25,7 +25,7 @@ export const Cena07: React.FC<{ t: number }> = ({ t }) => {
         <defs><clipPath id="ouro20"><rect x={0} y={lerp(1060, 480, ouro)} width={1080} height={700} /></clipPath></defs>
         <g transform={`translate(${tx},${ty}) scale(${s})`}>
           <text x={540} y={1060} textAnchor="middle" fontFamily={FONTE.titulo} fontWeight={900} fontSize={760} fill={COR.dourado} clipPath="url(#ouro20)">20</text>
-          <text x={540} y={1200} textAnchor="middle" fontFamily={FONTE.titulo} fontWeight={900} fontSize={104} letterSpacing={10} fill={COR.branco}>{typed('NOVEMBRO', t, fala.presente, 22)}</text>
+          <text x={540} y={1200} textAnchor="middle" fontFamily={FONTE.titulo} fontWeight={900} fontSize={104} letterSpacing={10} fill={COR.branco}>{typed('NOVEMBRO', t, T_MASCARA + 1.4, 22)}</text>
         </g>
         <text x={540} y={538} textAnchor="middle" fontFamily={FONTE.ui} fontWeight={600} fontSize={34} letterSpacing={1} fill={COR.branco}>{typed('DIA NACIONAL DE ZUMBI', t, fala.alem - 0.4, 40)}</text>
         <text x={540} y={582} textAnchor="middle" fontFamily={FONTE.ui} fontWeight={600} fontSize={34} letterSpacing={1} fill={COR.branco}>{typed('E DA CONSCIÊNCIA NEGRA', t, fala.alem - 0.05, 40)}</text>
