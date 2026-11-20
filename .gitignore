@@ -60,3 +60,7 @@ NOS_AMARRAS_EPISODIO/audio/*.wav
 NOS_AMARRAS_EPISODIO/narracao/
 NOS_AMARRAS_EPISODIO/node_modules/
 NOS_AMARRAS_EPISODIO/*.mp3
+# Ep. 07 Consciência Negra: dependências, quadros de conferência e cópia da mix
+episodio_07_consciencia_negra/remotion/node_modules/
+episodio_07_consciencia_negra/out/
+episodio_07_consciencia_negra/remotion/public/mix_piloto.wav

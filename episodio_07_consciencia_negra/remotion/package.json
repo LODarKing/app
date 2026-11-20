@@ -1,0 +1,25 @@
+{
+  "name": "ep07-consciencia-negra",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "5.2.5",
+    "@fontsource/playfair-display": "5.2.5",
+    "@remotion/bundler": "4.0.538",
+    "@remotion/cli": "4.0.538",
+    "@remotion/renderer": "4.0.538",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.538",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}

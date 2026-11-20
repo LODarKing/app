@@ -1,0 +1,19 @@
+ALÉM DO VISÍVEL — EPISÓDIO 07 | 20 DE NOVEMBRO: A HISTÓRIA POR TRÁS DA DATA
+Roteiro final = transcrição da narração real enviada (ElevenLabs), conferida palavra a palavra com o roteiro oficial.
+Tempos (s) medidos na fala. O arquivo recebido está TRUNCADO em 60,37 s (ver relatorio_qualidade.md).
+
+[00.00–05.88] Você sabe por que o Brasil celebra a Consciência Negra no dia vinte de novembro… e não no dia treze de maio?
+[06.58–09.88] A resposta começa muito antes de essa data virar feriado!
+[10.26–19.18] Em mil novecentos e setenta e um, durante a ditadura militar, um grupo de jovens negros de Porto Alegre decidiu valorizar outra forma de contar a história da liberdade no Brasil.
+[19.68–22.04] Entre eles estava o poeta Oliveira Silveira.
+[22.28–28.82] O Grupo Palmares queria lembrar não apenas a assinatura da Lei Áurea, mas também o protagonismo de quem resistiu à escravidão.
+[28.82–30.80] E encontrou uma data simbólica.
+[31.04–33.50] Vinte de novembro de mil seiscentos e noventa e cinco.
+[33.82–38.84] O dia da morte de Zumbi dos Palmares, uma das maiores referências da resistência negra no Brasil.
+[39.18–45.32] A proposta se espalhou, ganhou força com o movimento negro e, em dois mil e onze, a data foi oficializada nacionalmente.
+[45.68–48.74] Mas o feriado em todo o Brasil só chegou em dois mil e vinte e quatro!
+[49.42–56.40] Hoje, o vinte de novembro é um convite para lembrar a história, valorizar a cultura afro-brasileira e refletir sobre a igualdade racial.
+[56.40–60.37…] Porque conhecer o passado também transforma a maneira como enxergamos o pr— [ÁUDIO CORTADO NO ARQUIVO RECEBIDO]
+[ausente] …presente. / Além do Visível. / O extraordinário está nos detalhes.
+
+Diferenças roteiro × áudio: nenhuma no trecho recebido. O final falta por truncamento do arquivo, não por diferença de leitura.
