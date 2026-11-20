@@ -5,6 +5,7 @@
 | `piloto_10s.mp4` | Piloto aprovado (11,87 s) |
 | `video_final.mp4` | **Episódio final** (70,07 s), narração íntegra |
 | `refazer_com_audio_completo.sh` | Um comando: recebe um MP3 de narração e refaz transcrição, legendas, tempos do fim, trilha, mix e `video_final.mp4` |
+| `capa/CAPA_EP07_CONSCIENCIA_NEGRA.png` | Capa 9:16 (essencial na faixa 4:5, y 285–1635) + `_recorte4x5.png` (perfil) + `_guia4x5.png` (conferência). Gerada pela composição `Capa` do Remotion: `node render.mjs --frame capa/CAPA_EP07_CONSCIENCIA_NEGRA.png 0 Capa` |
 | `marca/Logo_AV.png` | Logo AV original enviada pelo canal (usada sem alteração) |
 | `narracao/narracao_original.mp3` | Narração original (ElevenLabs), íntegra, 64,52 s |
 | `narracao/narracao_tratada.wav` | Mesma voz: EQ suave, de-esser, compressão leve, tempos idênticos |
