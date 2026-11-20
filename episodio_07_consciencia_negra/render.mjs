@@ -1,5 +1,5 @@
 // Render do episódio 07 (Remotion + FFmpeg). Contrato: cada quadro é função pura de t (frame/30) — sem estado entre quadros.
-//   node render.mjs --sheet [saida.png] [composicao]   um quadro por batida medida (audio/beats.json) numa folha de contato
+//   node render.mjs --sheet [saida.png] [composicao] [de] [ate]   um quadro por batida medida (audio/beats.json) numa folha de contato
 //   node render.mjs --frame saida.png T [composicao]   um quadro no instante T
 //   node render.mjs --video saida.mp4 [composicao]     imagem muda, H.264 yuv420p CRF 16, 30 q/s
 //   node render.mjs --mux video.mp4 audio.wav saida.mp4   junta imagem e som (AAC 48 kHz 256k, +faststart)
@@ -10,7 +10,7 @@ import { execFileSync } from 'node:child_process';
 import { createRequire } from 'node:module';
 const require = createRequire(path.resolve('remotion/package.json'));
 const { bundle } = require('@remotion/bundler');
-const { selectComposition, renderStill, renderMedia } = require('@remotion/renderer');
+const { selectComposition, renderStill, renderMedia, openBrowser } = require('@remotion/renderer');
 const CHROME = '/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell';
 const args = process.argv.slice(2);
 fs.mkdirSync('out', { recursive: true });
@@ -35,13 +35,15 @@ function sheet(files, labels, out, cols) {
 if (args[0] === '--sheet' || args[0] === '--frame') {
   const id = (args[0] === '--sheet' ? args[2] : args[3]) || 'Piloto';
   const { serveUrl, composition } = await prep(id);
-  const ts = args[0] === '--frame' ? [Number(args[2])] : JSON.parse(fs.readFileSync('audio/beats.json', 'utf8')).batidas.filter((x) => x * 30 < composition.durationInFrames);
-  const files = [];
+  const de = Number(args[3] ?? 0), ate = Number(args[4] ?? 1e9);
+  const ts = args[0] === '--frame' ? [Number(args[2])] : JSON.parse(fs.readFileSync('audio/beats.json', 'utf8')).batidas.filter((x) => x * 30 < composition.durationInFrames && x >= de && x < ate);
+  const files = [], browser = await openBrowser('chrome', { browserExecutable: CHROME });
   for (const t of ts) {
     const f = args[0] === '--frame' ? args[1] : `out/_b_${t.toFixed(3)}.png`;
-    await renderStill({ composition, serveUrl, output: path.resolve(f), frame: Math.min(composition.durationInFrames - 1, Math.round(t * 30) + 1), browserExecutable: CHROME, imageFormat: 'png' });
+    await renderStill({ composition, serveUrl, output: path.resolve(f), frame: Math.min(composition.durationInFrames - 1, Math.round(t * 30) + 1), browserExecutable: CHROME, imageFormat: 'png', puppeteerInstance: browser });
     files.push(f);
   }
+  await browser.close({ silent: true });
   if (args[0] === '--sheet') { const out = args[1] || 'out/folha.png'; sheet(files, ts.map((t) => t.toFixed(2) + 's'), out, 6); console.log(out, files.length, 'batidas'); }
 } else if (args[0] === '--video') {
   const { serveUrl, composition } = await prep(args[2] || 'Piloto'); const t0 = Date.now();

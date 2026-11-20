@@ -15,7 +15,9 @@ from scipy.signal import butter, sosfilt, resample_poly
 SR = 48000
 BPM = 93.0
 B = 60.0 / BPM
-VOZ_ORIG = 'narracao/narracao_original_recuperada_60s.mp3'
+import os
+# o arquivo íntegro (quando chegar) substitui o recuperado do zip truncado
+VOZ_ORIG = 'narracao/narracao_original.mp3' if os.path.exists('narracao/narracao_original.mp3') else 'narracao/narracao_original_recuperada_60s.mp3'
 VOZ_TRAT = 'narracao/narracao_tratada.wav'
 
 
@@ -156,14 +158,14 @@ def tratar_voz():
     return v
 
 
-def trilha_piloto(dur):
-    n = int(dur * SR); L = np.zeros(n); R = np.zeros(n); ac = []
+def trilha_piloto(dur, n_total=None, fim_pad=None, cauda=True, so_mono=False):
+    n = int((n_total or dur) * SR); L = np.zeros(n); R = np.zeros(n); ac = []
     b = lambda k: k * B
     # pad em Ré menor com 9ª; a partir da batida 12 abre para Si bemol (memória); 1971 cai em Sol menor/Ré
     mono = np.zeros(n)
     por(mono, pad([50, 57, 62, 64, 65], b(12) + 1.5, 11), 0.0, 0.16)
     por(mono, pad([46, 53, 58, 62, 65], b(17) - b(11.5) + 1.0, 12), b(11.5), 0.15)
-    por(mono, pad([43, 50, 55, 58, 62], dur - b(16.5), 13), b(16.5), 0.17)
+    por(mono, pad([43, 50, 55, 58, 62], (fim_pad or dur) - b(16.5), 13), b(16.5), 0.17)
     # tiques do cursor do calendário (semicolcheias da grade) até a batida 5, diminuindo
     for i in range(0, 20):
         t = i * B / 4; v = 0.22 * (1 - i / 22)
@@ -200,12 +202,141 @@ def trilha_piloto(dur):
     ac.append(['pouso em 1971: grave Sol + acorde + papel', round(b(17), 3)])
     # batida 18: ponto de Porto Alegre (nota alta e curta)
     por(mono, sino(86, 1.8, 0.07), b(18)); ac.append(['ponto de Porto Alegre', round(b(18), 3)])
+    if so_mono:
+        return mono, ac
     mono = reverb(mono, 900, 2.4, 0.28)
     # estéreo discreto: pad ligeiramente alargado por atraso curto
     d = int(0.011 * SR)
     L = mono.copy(); R = np.concatenate([np.zeros(d), mono[:-d]]) * 0.96 + mono * 0.04
     # cauda: desce nos últimos 0,35 s (sem corte brusco)
-    f = int(0.35 * SR); w = np.linspace(1, 0, f) ** 2; L[-f:] *= w; R[-f:] *= w
+    if cauda:
+        f = int(0.35 * SR); w = np.linspace(1, 0, f) ** 2; L[-f:] *= w; R[-f:] *= w
+    return np.stack([L, R], 1), ac
+
+
+def marcador(seed, dur=0.3):
+    """Marca-texto passando no papel: ruído em banda que sobe."""
+    n = int(dur * SR); t = np.arange(n) / n
+    return bp(ruido(n, seed), 1500, 6000) * np.sin(np.pi * t) * (0.5 + 0.5 * t)
+
+
+def carimbo(seed):
+    """Carimbo/selo: batida grave curta + papel."""
+    n = int(0.5 * SR); t = np.arange(n) / SR
+    y = np.sin(2 * np.pi * 70 * t * (1 - 0.3 * t)) * np.exp(-t * 18) * 0.9 + 0.5 * papel(seed, 0.5)[:n]
+    return y
+
+
+def grade16(t):
+    """encaixa um instante na semicolcheia mais próxima da grade (para tempos estimados do fim)."""
+    q = B / 4
+    return round(t / q) * q
+
+
+def trilha_episodio(dur, fala):
+    b = lambda k: k * B
+    mono, ac = trilha_piloto(356 / 30, n_total=dur, fim_pad=b(35), cauda=False, so_mono=True)
+    n = len(mono)
+    def P(nt, t, v=0.4, d=3.0): por(mono, piano(nt, d, v), t)
+    def S(nt, t, v=0.08, d=3.0): por(mono, sino(nt, d, v), t)
+    def A(nome, t): ac.append([nome, round(t, 3)])
+    # ---------- CENA 02 · 1971: atmosfera documental (Sol menor), ostinato de piano abafado em colcheias ----------
+    padrao = [55, 62, 58, 62]
+    for i, k in enumerate(np.arange(18.5, 34.0, 0.5)):
+        P(padrao[i % 4], b(k), 0.11 + 0.03 * (i % 4 == 0), 1.6)
+    for k in (20, 24, 28, 32):
+        por(mono, sub(31 if k != 28 else 27, 2.4, 0.3), b(k))
+    for k in (19.25, 19.5):
+        por(mono, tecla(600 + int(k * 4), 0.2), b(k))
+    A('teclas — DITADURA MILITAR · 1964–1985', b(19.25))
+    S(86, b(23), 0.07); P(74, b(23), 0.35); A('sino + piano — PORTO ALEGRE', b(23))
+    por(mono, papel(610, 0.45), b(24), 0.4); por(mono, sopro(b(1), 400, 2200, 611), b(23.25), 0.6); A('papel — entra a ficha de pesquisa', b(24))
+    for i, k in enumerate([24.75, 25.25]):
+        por(mono, tecla(620 + i, 0.36), b(k)); A('tecla forte — GRUPO / PALMARES', b(k))
+    for i, k in enumerate([25.75, 26.5, 27.75, 29, 30.5]):
+        por(mono, tecla(630 + i, 0.22), b(k)); A('tecla — linha da ficha', b(k))
+    for i in range(6):
+        por(mono, tecla(640 + i, 0.14), b(30.75 + i * 0.25))
+    A('teclas — integrantes', b(30.75))
+    por(mono, marcador(650), b(32.75), 0.25); A('marca-texto — Oliveira Silveira', b(32.75))
+    P(67, b(33.5), 0.35); P(74, b(33.5), 0.2); A('piano — POETA', b(33.5))
+    # ---------- CENA 03 · contraponto: Mi♭ maj7 → Dó menor ----------
+    por(mono, pad([51, 55, 58, 62], b(41.5) - b(34) + 1.2, 21), b(34), 0.14)
+    por(mono, pad([48, 55, 60, 63, 62], b(48) - b(41.25) + 1.2, 22), b(41.25), 0.14)
+    S(72, b(34.5), 0.07); A('sino Dó5 — divisória', b(34.5))
+    por(mono, papel(660, 0.45), b(35), 0.35); A('papel — documento', b(35))
+    por(mono, carimbo(661), b(39.5), 0.55); P(51, b(39.5), 0.3); A('carimbo — LEI ÁUREA', b(39.5))
+    P(63, b(40.75), 0.28); P(67, b(40.75), 0.22)
+    por(mono, sopro(b(1.5), 300, 2200, 662), b(41.5), 0.7); P(48, b(41.5), 0.35); P(60, b(41.5), 0.3); A('sopro + acorde — documento vira relevo', b(41.5))
+    for nt in (56, 60, 63): P(nt, b(43), 0.34, 3.5)
+    S(79, b(43), 0.07); A('acorde Lá♭ + sino — LIBERDADE TAMBÉM É RESISTÊNCIA', b(43))
+    for i, k in enumerate(np.arange(42.0, 49.75, 0.5)):
+        por(mono, tique(680 + i, 0.09 * (1 - i / 18)), b(k))
+    A('tiques — contador recua 1971 → 1695', b(42))
+    por(mono, sopro(b(1.0), 2000, 300, 663, sobe=False), b(46.5), 0.4)
+    # ---------- CENA 04 · 1695: solene, sem dramatizar (Ré menor → Si♭ → Fá) ----------
+    por(mono, pad([38, 45, 50, 53, 57], b(54) - b(47.5) + 1.2, 31), b(47.5), 0.17)
+    por(mono, pad([34, 46, 50, 53, 58], b(57) - b(53.75) + 1.2, 32), b(53.75), 0.16)
+    por(mono, pad([41, 48, 53, 57, 60], b(61) - b(56.75) + 1.2, 33), b(56.75), 0.15)
+    P(50, b(48), 0.3); P(57, b(48), 0.25); A('piano — "vinte de novembro de"', b(48))
+    por(mono, sub(26, 3.0, 0.6), b(49.75)); por(mono, papel(670, 0.4), b(49.75), 0.3)
+    for nt in (50, 53, 57): P(nt, b(49.75), 0.42, 4)
+    S(74, b(49.75), 0.06); A('pouso em 1695: grave Ré + acorde + papel', b(49.75))
+    por(mono, sub(22, 3.0, 0.45), b(54))
+    for nt in (46, 50, 53, 58): P(nt, b(54), 0.3, 4)
+    A('acorde Si♭ — ZUMBI DOS PALMARES', b(54))
+    for nt, k in ((77, 57.5), (81, 58), (84, 58.5)): S(nt, b(k), 0.05)
+    P(65, b(58.5), 0.32); P(72, b(58.5), 0.24); A('arpejo — fio 1695 → 1971 / 276 ANOS', b(57.5))
+    # ---------- CENA 05 · a ideia se espalha: pulso crescente ----------
+    acordes = [(60.75, [46, 53, 57, 60, 62]), (64.25, [48, 55, 60, 64, 67]), (68.0, [50, 57, 62, 65]), (71.5, [46, 53, 58, 62])]
+    for i, (k, nts) in enumerate(acordes):
+        fim = acordes[i + 1][0] if i + 1 < len(acordes) else 74.25
+        por(mono, pad(nts, b(fim) - b(k) + 1.0, 40 + i), b(k), 0.13 + 0.01 * i)
+    for i, k in enumerate(np.arange(60.75, 74.25, 0.5)):
+        por(mono, tique(700 + i, 0.05 + 0.06 * (k - 60.75) / 13.5), b(k))
+        if (k * 2) % 2 == 0: por(mono, sub(34 if k < 64.25 else 36 if k < 68 else 38 if k < 71.5 else 34, 0.5, 0.18), b(k))
+    A('pulso em colcheias (crescente)', b(60.75))
+    r = mulberry32(77); notas = [77, 79, 81, 84, 86]
+    for i in range(14):
+        k = 60.75 + int(r() * 14) * 0.25; S(notas[int(r() * 5)], b(k), 0.025, 1.2)
+    A('notas leves — pontos acendendo', b(60.75))
+    S(81, b(64.25), 0.08); for_ = [P(nt, b(64.25), 0.3) for nt in (60, 64, 67)]; A('sino + acorde — 1978 MNU', b(64.25))
+    S(84, b(66), 0.08); P(72, b(66), 0.3); A('sino Dó6 — 2011', b(66))
+    por(mono, tecla(720, 0.24), b(68.25)); A('tecla — LEI Nº 12.519', b(68.25))
+    por(mono, sopro(b(2.75), 300, 3000, 721), b(71.5), 0.55)
+    for i, k in enumerate(np.arange(72.0, 74.25, 0.25)):
+        por(mono, tique(730 + i, 0.08 + 0.02 * i), b(k))
+    A('suspense: sopro + semicolcheias até 2024', b(71.5))
+    por(mono, sub(29, 3.5, 0.7), b(74.25)); S(89, b(74.25), 0.09, 4.5); por(mono, papel(740, 0.4), b(74.25), 0.25)
+    for nt in (41, 48, 53, 57, 60, 67): P(nt, b(74.25), 0.4, 4.5)
+    A('REVELAÇÃO 2024: grave Fá + acorde aberto + sino', b(74.25))
+    # ---------- CENA 06 · presente: harmonia aberta (Fá maior), arpejo mais claro ----------
+    blocos = [(76.5, [41, 48, 53, 57, 60, 67]), (80.0, [46, 53, 57, 62, 65]), (83.5, [50, 57, 60, 65]), (86.5, [40, 48, 55, 60, 64])]
+    for i, (k, nts) in enumerate(blocos):
+        fim = blocos[i + 1][0] if i + 1 < len(blocos) else 88.5
+        por(mono, pad(nts, b(fim) - b(k) + 1.2, 50 + i), b(k), 0.13)
+    arp = [65, 69, 72, 76, 72, 69]
+    for i, k in enumerate(np.arange(77.0, 88.25, 0.5)):
+        P(arp[i % 6], b(k), 0.12, 1.4)
+    por(mono, sopro(b(1), 2500, 600, 750, sobe=False), b(76.25), 0.4); A('virada para o presente (Hoje)', b(76.5))
+    for nome, k, nt in (('MEMÓRIA', 79.75, 81), ('CULTURA', 82.5, 84), ('RESISTÊNCIA', 84.75, 86), ('IGUALDADE', 86.25, 89)):
+        S(nt, b(k), 0.07); P(nt - 12, b(k), 0.3); A(f'sino — {nome}', b(k))
+    # ---------- CENA 07 · encerramento ----------
+    por(mono, sopro(b(1.5), 400, 2600, 760), b(88.25), 0.45); A('quadros se juntam', b(88.25))
+    por(mono, pad([41, 48, 53, 57, 60, 64], 4.0, 61), b(90.75), 0.14); por(mono, sopro(b(1.25), 300, 3000, 761), b(90.75), 0.5); A('transforma → 20', b(90.75))
+    for nt in (53, 57, 60, 65): P(nt, b(92), 0.36, 4)
+    S(84, b(92), 0.07); A('20 dourado', b(92))
+    tp = grade16(fala['presente']); P(72, tp, 0.3); A('NOVEMBRO (presente)', tp)
+    ta = grade16(fala['alem']); te = grade16(fala['extra'])
+    por(mono, pad([41, 48, 53, 57, 60, 67, 72], dur - ta, 70), ta, 0.17)
+    por(mono, sub(29, 5.0, 0.55), ta)
+    for nt in (41, 53, 57, 60, 64, 67): P(nt, ta, 0.38, 6)
+    S(89, ta, 0.08, 6); A('marca AV — acorde final', ta)
+    S(84, te, 0.06, 5); P(77, te, 0.22, 5); A('O EXTRAORDINÁRIO ESTÁ NOS DETALHES', te)
+    mono = reverb(mono, 901, 2.6, 0.3)
+    d = int(0.011 * SR)
+    L = mono.copy(); R = np.concatenate([np.zeros(d), mono[:-d]]) * 0.96 + mono * 0.04
+    f = int(1.6 * SR); w = np.linspace(1, 0, f) ** 2; L[-f:] *= w; R[-f:] *= w
     return np.stack([L, R], 1), ac
 
 
@@ -237,9 +368,9 @@ def mix(voz, mus, dur, nome):
     met = pyln.Meter(SR); lu = met.integrated_loudness(out); out *= 10 ** ((-14 - lu) / 20)
     for _ in range(6):
         tp = 20 * np.log10(np.max(np.abs(resample_poly(out, 4, 1, axis=0))) + 1e-12)
-        if tp <= -1.05: break
+        if tp <= -1.5: break
         # limitador suave: ganho que só atua nos picos, com soltura de 60 ms
-        a = np.abs(out).max(1); lim = 10 ** (-1.2 / 20)
+        a = np.abs(out).max(1); lim = 10 ** (-1.8 / 20)
         from scipy.ndimage import minimum_filter1d, uniform_filter1d
         gr = np.minimum(1, lim / np.maximum(a, 1e-9)); w = int(0.06 * SR)
         gr = uniform_filter1d(minimum_filter1d(gr, w), w)   # mínimo à frente + suavização: sem distorção nos picos
@@ -261,3 +392,14 @@ if __name__ == '__main__':
         json.dump({'grade': 'beats.json', 'acertos': ac}, open('audio/acertos.json', 'w'), ensure_ascii=False, indent=1)
         lu, tp = mix(voz, mus, DUR, 'audio/mix_piloto.wav')
         print('beats:', {k: v for k, v in bt.items() if k != 'batidas'}, '| mix:', lu, 'LUFS', tp, 'dBTP')
+    elif modo == 'episodio':
+        fala = json.load(open('remotion/src/data/fala.json'))
+        DUR = round((fala['fimFala'] + 5.1) * 30) / 30
+        if fala.get('corteVoz'):   # arquivo truncado: a voz para no fim da última palavra completa (sem o fragmento cortado)
+            c = int(fala['corteVoz'] * SR); r = int(0.012 * SR); voz = voz.copy(); voz[c - r:c] *= np.linspace(1, 0, r); voz[c:] = 0
+        mus, ac = trilha_episodio(DUR, fala)
+        sf.write('audio/trilha_episodio.wav', mus, SR, subtype='PCM_24')
+        bt = medir_batidas(mus, DUR); json.dump(bt, open('audio/beats.json', 'w'), indent=1)
+        json.dump({'grade': 'beats.json', 'acertos': ac}, open('audio/acertos.json', 'w'), ensure_ascii=False, indent=1)
+        lu, tp = mix(voz, mus, DUR, 'audio/mix_episodio.wav')
+        print('dur', DUR, 'beats:', {k: v for k, v in bt.items() if k != 'batidas'}, '| mix:', lu, 'LUFS', tp, 'dBTP', '| acertos', len(ac))

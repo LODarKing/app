@@ -4,12 +4,12 @@ import { COR, FONTE, clamp, easeOut } from '../tema';
 import blocos from '../data/legendas.json';
 
 type Pal = { t: string; cor: string | null; ini: number | null; fim: number | null };
-type Bloco = { texto: string; ini: number | null; fim: number | null; sai: number | null; palavras: Pal[] };
+type Bloco = { texto: string; ini: number | null; fim: number | null; sai: number | null; palavras: Pal[]; naTela?: boolean };
 
 /** Legenda dinâmica: o bloco sobe da linha de base (máscara) e cada palavra acende quando é falada.
  *  Branco predominante; dourado e ciano só nos termos-chave. Faixa segura de Shorts: centro em y≈1390. */
 export const Legenda: React.FC<{ t: number; y?: number }> = ({ t, y = 1390 }) => {
-  const bl = (blocos as Bloco[]).find((b) => b.ini !== null && t >= b.ini - 0.05 && t < (b.sai ?? 1e9));
+  const bl = (blocos as Bloco[]).find((b) => b.ini !== null && !b.naTela && t >= b.ini - 0.05 && t < (b.sai ?? 1e9));
   if (!bl) return null;
   const u = easeOut(clamp((t - (bl.ini! - 0.05)) / 0.22));
   return (

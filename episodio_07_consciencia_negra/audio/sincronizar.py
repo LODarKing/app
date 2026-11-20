@@ -18,9 +18,14 @@ BLOCOS = [
  ('Mas o [d]feriado nacional[/d]', 5), ('em todo o Brasil', 5), ('só chegou em [d]2024[/d]!', 5),
  ('Hoje, o [d]20 de novembro[/d]', 6), ('é um convite para lembrar a história,', 6), ('valorizar a cultura afro-brasileira', 6),
  ('e refletir sobre a igualdade racial.', 6), ('Porque conhecer o passado', 6), ('também transforma a maneira', 6), ('como enxergamos o presente.', 6),
+ ('Além do Visível.', 7), ('O extraordinário está nos detalhes.', 7),
 ]
+# Tempos ESTIMADOS só para palavras que faltam no arquivo recebido (truncado em 60,37 s). Com o áudio completo, a
+# transcrição cobre tudo e esta tabela deixa de ser usada.
+ESTIMADO = {'presente.': (60.34, 60.95), 'Além': (61.70, 61.98), 'do': (61.98, 62.10), 'Visível.': (62.10, 62.75),
+            'O': (63.15, 63.25), 'extraordinário': (63.25, 64.05), 'está': (64.05, 64.30), 'nos': (64.30, 64.50), 'detalhes.': (64.50, 65.40)}
 # palavras faladas que a tela escreve de outro jeito (fala -> tokens exibidos)
-FALA = {'20': ['vinte'], '13': ['treze'], 'nacional': [], 'presente.': ['país.']}
+FALA = {'20': ['vinte'], '13': ['treze'], 'nacional': []}
 def norm(s):
     s = unicodedata.normalize('NFD', s.lower()); s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
     return re.sub(r'[^a-z0-9]', '', s)
@@ -38,25 +43,34 @@ for texto, cena in BLOCOS:
         alvo = FALA.get(w, None)
         if w == 'nacional' and cor == 'dourado':  # "feriado nacional" na tela; a fala diz só "feriado"
             pal.append({'t': w, 'cor': cor, 'ini': pal[-1]['ini'], 'fim': pal[-1]['fim']}); continue
-        if w == 'presente.' and k >= len(P):  # fim do arquivo truncado
-            pal.append({'t': w, 'cor': cor, 'ini': None, 'fim': None}); continue
-        if k >= len(P): pal.append({'t': w, 'cor': cor, 'ini': None, 'fim': None}); continue
+        if k >= len(P):  # além do fim do arquivo recebido: tempo estimado, marcado
+            e = ESTIMADO[w]; pal.append({'t': w, 'cor': cor, 'ini': e[0], 'fim': e[1], 'estimado': True}); continue
+        if w == 'presente.' and norm(P[k][0]) != 'presente' and P[k][1] > 60:  # palavra cortada no fim do arquivo truncado
+            e = ESTIMADO[w]; pal.append({'t': w, 'cor': cor, 'ini': e[0], 'fim': e[1], 'estimado': True}); k += 1; continue
         if w == 'afro-brasileira' and norm(P[k][0]) == 'afro':  # a transcrição separa em "afro" + "-brasileira"
             pal.append({'t': w, 'cor': cor, 'ini': P[k][1], 'fim': P[k + 1][2]}); k += 2; continue
         fala = P[k]; esperado = norm(alvo[0]) if alvo else norm(w)
-        if norm(fala[0]) != esperado and not (w == 'presente.' and norm(fala[0]).startswith('pa')):
+        if norm(fala[0]) != esperado:
             raise SystemExit(f'diferença: tela "{w}" x fala "{fala[0]}" em {fala[1]}s')
         pal.append({'t': w, 'cor': cor, 'ini': fala[1], 'fim': fala[2]}); k += 1
     ini = next((p['ini'] for p in pal if p['ini'] is not None), None); fim = next((p['fim'] for p in reversed(pal) if p['fim'] is not None), None)
-    out_blocos.append({'texto': limpo, 'cena': cena, 'ini': ini, 'fim': fim, 'palavras': pal})
+    out_blocos.append({'texto': limpo, 'cena': cena, 'ini': ini, 'fim': fim, 'palavras': pal, 'estimado': any(p.get('estimado') for p in pal),
+                       'naTela': cena == 7})  # cena 7: o texto já está na tela (marca), sem legenda dinâmica
 assert k == len(P), (k, len(P))
 # legenda some no início do próximo bloco ou 0,45 s depois da última palavra
 for i, b in enumerate(out_blocos):
     nxt = out_blocos[i + 1]['ini'] if i + 1 < len(out_blocos) and out_blocos[i + 1]['ini'] is not None else None
     b['sai'] = None if b['fim'] is None else round(min(nxt, b['fim'] + 0.6) if nxt else b['fim'] + 0.6, 3)
 frases = [[s[0], s[1], s[2]] for s in T['segmentos']]
+truncado = T['dur'] < 63
+palavra = lambda txt: next(p for b in out_blocos for p in b['palavras'] if p['t'] == txt)
+fala = {'estimado': truncado, 'corteVoz': 60.30 if truncado else None,
+        'presente': palavra('presente.')['ini'], 'alem': palavra('Além')['ini'], 'extra': palavra('extraordinário')['ini'],
+        'fimFala': out_blocos[-1]['fim']}
+json.dump(fala, open('remotion/src/data/fala.json', 'w'), indent=1)
+print('fala:', fala)
 mapa = {'fonte_tempo': 'narração real (ElevenLabs, arquivo enviado), transcrita por faster-whisper medium com tempos por palavra',
-        'aviso': 'arquivo recebido truncado em 60,37 s (zip incompleto): fala corta em "enxergamos o pr…"; faltam "presente. Além do Visível. O extraordinário está nos detalhes."',
+        'aviso': ('arquivo recebido truncado em 60,37 s (zip incompleto): fala corta em "enxergamos o pr…"; tempos de "presente. Além do Visível. O extraordinário está nos detalhes." são ESTIMADOS (marcados "estimado")') if T['dur'] < 63 else None,
         'duracao_audio_recebido_s': T['dur'], 'fps': 30, 'frases': frases, 'legendas': out_blocos}
 json.dump(mapa, open('mapa_sincronizacao.json', 'w'), ensure_ascii=False, indent=1)
 json.dump(out_blocos, open('remotion/src/data/legendas.json', 'w'), ensure_ascii=False)

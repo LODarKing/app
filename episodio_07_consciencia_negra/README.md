@@ -2,12 +2,15 @@
 
 | Arquivo | Conteúdo |
 |---|---|
-| `piloto_10s.mp4` | Piloto (11,87 s): calendário, 13 de maio × 20 de novembro, transição até 1971 |
+| `piloto_10s.mp4` | Piloto aprovado (11,87 s) |
+| `video_final_PREVIA.mp4` | Episódio completo (70,5 s) com a narração disponível — **prévia**: o arquivo de voz recebido termina em 60,3 s |
+| `refazer_com_audio_completo.sh` | Um comando: recebe o MP3 íntegro e refaz transcrição, legendas, tempos do fim, trilha, mix e `video_final.mp4` |
+| `marca/Logo_AV.png` | Logo AV original enviada pelo canal (usada sem alteração) |
 | `narracao/narracao_original_recuperada_60s.mp3` | Narração enviada, **recuperada de zip truncado** (60,37 s) |
 | `narracao/narracao_tratada.wav` | Mesma voz: EQ suave, de-esser, compressão leve, tempos idênticos |
 | `roteiro_final.txt` · `storyboard.md` · `fontes_historicas.md` · `relatorio_qualidade.md` · `titulo_descricao_tags.txt` | Documentação |
 | `mapa_sincronizacao.json` · `legendas.srt` · `legendas_piloto.srt` | Tempos da fala real e legendas |
-| `remotion/` | Projeto Remotion editável (React + TS). `src/tema.ts` reúne cores, fontes e grade; `src/cenas/Cena01.tsx` é a cena do piloto |
+| `remotion/` | Projeto Remotion editável (React + TS). `src/tema.ts` reúne cores, fontes e grade; `src/cenas/Cena01..07.tsx` são as cenas; `src/comp/Pessoa.tsx` desenha as figuras da cena 06; `src/geo.ts` faz a projeção dos mapas |
 | `audio/` | `som.py` (trilha, efeitos e mixagem), `sincronizar.py`, `transcrever.py`, `beats.json`, `acertos.json` |
 
 ## Comandos (a partir desta pasta)
@@ -19,6 +22,13 @@ python3 audio/som.py piloto && cp audio/mix_piloto.wav remotion/public/   # tril
 node render.mjs --sheet out/folha.png           # um quadro por batida (folha de contato)
 node render.mjs --video out/piloto_video.mp4    # imagem: H.264 yuv420p CRF 16
 node render.mjs --mux out/piloto_video.mp4 audio/mix_piloto.wav piloto_10s.mp4
+
+# episódio completo
+python3 audio/som.py episodio && cp audio/mix_episodio.wav remotion/public/
+node render.mjs --sheet out/folha.png Episodio 39 50   # folha de contato de um trecho
+node render.mjs --video out/episodio_video.mp4 Episodio  # (EpisodioSemLegenda = versão limpa)
+node render.mjs --mux out/episodio_video.mp4 audio/mix_episodio.wav video_final.mp4
+./refazer_com_audio_completo.sh Narração.mp3            # tudo de novo com o áudio íntegro
 (cd remotion && npm run studio)                 # edição no Remotion Studio
 ```
 Dependências: Node 22, Chromium do ambiente, FFmpeg, Python 3 com numpy, scipy, soundfile, pyloudnorm e faster-whisper.
